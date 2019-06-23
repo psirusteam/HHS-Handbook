@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html  lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Anexo: Software | Diseño y análisis estadístico de las encuestas de hogares en América Latina</title>
+  <meta name="description" content="Anexo: Software | Diseño y análisis estadístico de las encuestas de hogares en América Latina">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="Anexo: Software | Diseño y análisis estadístico de las encuestas de hogares en América Latina" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Anexo: Software | Diseño y análisis estadístico de las encuestas de hogares en América Latina" />
+  
+  
+  
+
+<meta name="author" content="Andrés Gutiérrez">
+
+
+<meta name="date" content="2019-03-06">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="desafios-futuros.html">
+<link rel="next" href="anexo-algunas-encuestas-de-hogares-en-la-region.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="resumen.html"><a href="resumen.html"><i class="fa fa-check"></i>Resumen</a></li>
+<li class="chapter" data-level="1" data-path="introduccion.html"><a href="introduccion.html"><i class="fa fa-check"></i><b>1</b> Introducción</a></li>
+<li class="chapter" data-level="2" data-path="elementos-basicos-y-planeacion.html"><a href="elementos-basicos-y-planeacion.html"><i class="fa fa-check"></i><b>2</b> Elementos básicos y planeación</a><ul>
+<li class="chapter" data-level="2.1" data-path="elementos-basicos-y-planeacion.html"><a href="elementos-basicos-y-planeacion.html#universo-de-estudio"><i class="fa fa-check"></i><b>2.1</b> Universo de estudio</a></li>
+<li class="chapter" data-level="2.2" data-path="elementos-basicos-y-planeacion.html"><a href="elementos-basicos-y-planeacion.html#periodicidad-en-el-tiempo"><i class="fa fa-check"></i><b>2.2</b> Periodicidad en el tiempo</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="elementos-basicos-y-planeacion.html"><a href="elementos-basicos-y-planeacion.html#encuestas-transversales"><i class="fa fa-check"></i><b>2.2.1</b> Encuestas transversales</a></li>
+<li class="chapter" data-level="2.2.2" data-path="elementos-basicos-y-planeacion.html"><a href="elementos-basicos-y-planeacion.html#encuestas-repetidas"><i class="fa fa-check"></i><b>2.2.2</b> Encuestas repetidas</a></li>
+<li class="chapter" data-level="2.2.3" data-path="elementos-basicos-y-planeacion.html"><a href="elementos-basicos-y-planeacion.html#encuestas-panel"><i class="fa fa-check"></i><b>2.2.3</b> Encuestas panel</a></li>
+<li class="chapter" data-level="2.2.4" data-path="elementos-basicos-y-planeacion.html"><a href="elementos-basicos-y-planeacion.html#encuestas-de-panel-dividido"><i class="fa fa-check"></i><b>2.2.4</b> Encuestas de panel dividido</a></li>
+<li class="chapter" data-level="2.2.5" data-path="elementos-basicos-y-planeacion.html"><a href="elementos-basicos-y-planeacion.html#encuestas-de-panel-rotativo"><i class="fa fa-check"></i><b>2.2.5</b> Encuestas de panel rotativo</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="elementos-basicos-y-planeacion.html"><a href="elementos-basicos-y-planeacion.html#rotacion-de-paneles"><i class="fa fa-check"></i><b>2.3</b> Rotación de páneles</a></li>
+<li class="chapter" data-level="2.4" data-path="elementos-basicos-y-planeacion.html"><a href="elementos-basicos-y-planeacion.html#parametros-de-interes"><i class="fa fa-check"></i><b>2.4</b> Parámetros de interés</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="elementos-basicos-y-planeacion.html"><a href="elementos-basicos-y-planeacion.html#ejemplos-de-indicadores-de-interes-y-su-relacion-con-los-tipos-de-encuestas"><i class="fa fa-check"></i><b>2.4.1</b> Ejemplos de indicadores de interés y su relación con los tipos de encuestas</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="elementos-basicos-y-planeacion.html"><a href="elementos-basicos-y-planeacion.html#marcos-de-muestreo"><i class="fa fa-check"></i><b>2.5</b> Marcos de muestreo</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="elementos-basicos-y-planeacion.html"><a href="elementos-basicos-y-planeacion.html#estratificacion"><i class="fa fa-check"></i><b>2.5.1</b> Estratificación</a></li>
+<li class="chapter" data-level="2.5.2" data-path="elementos-basicos-y-planeacion.html"><a href="elementos-basicos-y-planeacion.html#unidades-de-muestreo"><i class="fa fa-check"></i><b>2.5.2</b> Unidades de muestreo</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="muestreo.html"><a href="muestreo.html"><i class="fa fa-check"></i><b>3</b> Muestreo</a><ul>
+<li class="chapter" data-level="3.1" data-path="muestreo.html"><a href="muestreo.html#disenos-de-muestreo"><i class="fa fa-check"></i><b>3.1</b> Diseños de muestreo</a><ul>
+<li class="chapter" data-level="" data-path="muestreo.html"><a href="muestreo.html#muestreo-aleatorio-simple"><i class="fa fa-check"></i>Muestreo aleatorio simple</a></li>
+<li class="chapter" data-level="" data-path="muestreo.html"><a href="muestreo.html#muestreo-proporcional-al-tamano"><i class="fa fa-check"></i>Muestreo proporcional al tamaño</a></li>
+<li class="chapter" data-level="" data-path="muestreo.html"><a href="muestreo.html#muestreo-de-conglomerados"><i class="fa fa-check"></i>Muestreo de conglomerados</a></li>
+<li class="chapter" data-level="" data-path="muestreo.html"><a href="muestreo.html#muestreo-estratificado"><i class="fa fa-check"></i>Muestreo estratificado</a></li>
+<li class="chapter" data-level="" data-path="muestreo.html"><a href="muestreo.html#muestreo-en-varias-etapas"><i class="fa fa-check"></i>Muestreo en varias etapas</a></li>
+<li class="chapter" data-level="" data-path="muestreo.html"><a href="muestreo.html#muestreo-en-dos-fases"><i class="fa fa-check"></i>Muestreo en dos fases</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="muestreo.html"><a href="muestreo.html#el-diseno-de-muestreo-estandar-en-una-encuesta-de-hogares"><i class="fa fa-check"></i><b>3.2</b> El diseño de muestreo estándar en una encuesta de hogares</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="tamano-de-muestra.html"><a href="tamano-de-muestra.html"><i class="fa fa-check"></i><b>4</b> Tamaño de muestra</a><ul>
+<li class="chapter" data-level="4.1" data-path="tamano-de-muestra.html"><a href="tamano-de-muestra.html#primer-escenario-tamano-de-muestra-para-upm---hogar---persona"><i class="fa fa-check"></i><b>4.1</b> Primer escenario: tamaño de muestra para UPM - Hogar - Persona</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="tamano-de-muestra.html"><a href="tamano-de-muestra.html#ejemplo-proporcion-de-personas-pobres"><i class="fa fa-check"></i><b>4.1.1</b> Ejemplo: proporción de personas pobres</a></li>
+<li class="chapter" data-level="4.1.2" data-path="tamano-de-muestra.html"><a href="tamano-de-muestra.html#ejemplo-ingreso-promedio-por-persona"><i class="fa fa-check"></i><b>4.1.2</b> Ejemplo: ingreso promedio por persona</a></li>
+<li class="chapter" data-level="4.1.3" data-path="tamano-de-muestra.html"><a href="tamano-de-muestra.html#ejemplo-proporcion-de-adultos-mayores-en-condicion-de-discriminacion"><i class="fa fa-check"></i><b>4.1.3</b> Ejemplo: proporción de adultos mayores en condición de discriminación</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="tamano-de-muestra.html"><a href="tamano-de-muestra.html#segundo-escenario-tamano-de-muestra-para-upm---hogar"><i class="fa fa-check"></i><b>4.2</b> Segundo escenario: tamaño de muestra para UPM - Hogar</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="tamano-de-muestra.html"><a href="tamano-de-muestra.html#ejemplo-gasto-promedio-del-hogar"><i class="fa fa-check"></i><b>4.2.1</b> Ejemplo: gasto promedio del hogar</a></li>
+<li class="chapter" data-level="4.2.2" data-path="tamano-de-muestra.html"><a href="tamano-de-muestra.html#ejemplo-proporcion-de-hogares-sin-agua-potable"><i class="fa fa-check"></i><b>4.2.2</b> Ejemplo: proporción de hogares sin agua potable</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="tamano-de-muestra.html"><a href="tamano-de-muestra.html#tercer-escenario-tamano-de-muestra-para-upm---persona"><i class="fa fa-check"></i><b>4.3</b> Tercer escenario: tamaño de muestra para UPM - Persona</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="tamano-de-muestra.html"><a href="tamano-de-muestra.html#ejemplo-ingreso-promedio-en-personas-empleadas"><i class="fa fa-check"></i><b>4.3.1</b> Ejemplo: ingreso promedio en personas empleadas</a></li>
+<li class="chapter" data-level="4.3.2" data-path="tamano-de-muestra.html"><a href="tamano-de-muestra.html#ejemplo-proporcion-de-analfabetas-pobres"><i class="fa fa-check"></i><b>4.3.2</b> Ejemplo: proporción de analfabetas pobres</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="tamano-de-muestra.html"><a href="tamano-de-muestra.html#acerca-del-efecto-de-diseno"><i class="fa fa-check"></i><b>4.4</b> Acerca del efecto de diseño</a></li>
+<li class="chapter" data-level="4.5" data-path="tamano-de-muestra.html"><a href="tamano-de-muestra.html#ajuste-de-subcobertura"><i class="fa fa-check"></i><b>4.5</b> Ajuste de subcobertura</a></li>
+<li class="chapter" data-level="4.6" data-path="tamano-de-muestra.html"><a href="tamano-de-muestra.html#sustituciones-y-reemplazos"><i class="fa fa-check"></i><b>4.6</b> Sustituciones y reemplazos</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="ausencia-de-respuesta-reponderacion-e-imputacion.html"><a href="ausencia-de-respuesta-reponderacion-e-imputacion.html"><i class="fa fa-check"></i><b>5</b> Ausencia de respuesta: reponderación e imputación</a><ul>
+<li class="chapter" data-level="5.1" data-path="ausencia-de-respuesta-reponderacion-e-imputacion.html"><a href="ausencia-de-respuesta-reponderacion-e-imputacion.html#imputacion"><i class="fa fa-check"></i><b>5.1</b> Imputación</a><ul>
+<li class="chapter" data-level="" data-path="ausencia-de-respuesta-reponderacion-e-imputacion.html"><a href="ausencia-de-respuesta-reponderacion-e-imputacion.html#imputacion-por-regresion"><i class="fa fa-check"></i>Imputación por regresión</a></li>
+<li class="chapter" data-level="" data-path="ausencia-de-respuesta-reponderacion-e-imputacion.html"><a href="ausencia-de-respuesta-reponderacion-e-imputacion.html#imputacion-de-razon"><i class="fa fa-check"></i>Imputación de razón</a></li>
+<li class="chapter" data-level="" data-path="ausencia-de-respuesta-reponderacion-e-imputacion.html"><a href="ausencia-de-respuesta-reponderacion-e-imputacion.html#imputacion-de-promedio"><i class="fa fa-check"></i>Imputación de promedio</a></li>
+<li class="chapter" data-level="" data-path="ausencia-de-respuesta-reponderacion-e-imputacion.html"><a href="ausencia-de-respuesta-reponderacion-e-imputacion.html#el-vecino-mas-cercano"><i class="fa fa-check"></i>El vecino más cercano</a></li>
+<li class="chapter" data-level="" data-path="ausencia-de-respuesta-reponderacion-e-imputacion.html"><a href="ausencia-de-respuesta-reponderacion-e-imputacion.html#imputacion-hot-deck"><i class="fa fa-check"></i>Imputación Hot Deck</a></li>
+<li class="chapter" data-level="" data-path="ausencia-de-respuesta-reponderacion-e-imputacion.html"><a href="ausencia-de-respuesta-reponderacion-e-imputacion.html#imputacion-multiple"><i class="fa fa-check"></i>Imputación múltiple</a></li>
+<li class="chapter" data-level="5.1.1" data-path="ausencia-de-respuesta-reponderacion-e-imputacion.html"><a href="ausencia-de-respuesta-reponderacion-e-imputacion.html#ejemplo-imputacion-en-una-encuesta-de-ingresos-y-gastos"><i class="fa fa-check"></i><b>5.1.1</b> Ejemplo: imputación en una encuesta de ingresos y gastos</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="ausencia-de-respuesta-reponderacion-e-imputacion.html"><a href="ausencia-de-respuesta-reponderacion-e-imputacion.html#pesos-de-muestreo"><i class="fa fa-check"></i><b>5.2</b> Pesos de muestreo</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="ausencia-de-respuesta-reponderacion-e-imputacion.html"><a href="ausencia-de-respuesta-reponderacion-e-imputacion.html#creacion-de-los-pesos-basicos"><i class="fa fa-check"></i><b>5.2.1</b> Creación de los pesos básicos</a></li>
+<li class="chapter" data-level="5.2.2" data-path="ausencia-de-respuesta-reponderacion-e-imputacion.html"><a href="ausencia-de-respuesta-reponderacion-e-imputacion.html#descarte-de-las-unidades-no-elegibles."><i class="fa fa-check"></i><b>5.2.2</b> Descarte de las unidades no elegibles.</a></li>
+<li class="chapter" data-level="5.2.3" data-path="ausencia-de-respuesta-reponderacion-e-imputacion.html"><a href="ausencia-de-respuesta-reponderacion-e-imputacion.html#ajuste-por-elegibilidad-desconocida."><i class="fa fa-check"></i><b>5.2.3</b> Ajuste por elegibilidad desconocida.</a></li>
+<li class="chapter" data-level="5.2.4" data-path="ausencia-de-respuesta-reponderacion-e-imputacion.html"><a href="ausencia-de-respuesta-reponderacion-e-imputacion.html#ajuste-por-ausencia-de-respuesta"><i class="fa fa-check"></i><b>5.2.4</b> Ajuste por ausencia de respuesta</a></li>
+<li class="chapter" data-level="5.2.5" data-path="ausencia-de-respuesta-reponderacion-e-imputacion.html"><a href="ausencia-de-respuesta-reponderacion-e-imputacion.html#calibracion-de-los-pesos"><i class="fa fa-check"></i><b>5.2.5</b> Calibración de los pesos</a></li>
+<li class="chapter" data-level="5.2.6" data-path="ausencia-de-respuesta-reponderacion-e-imputacion.html"><a href="ausencia-de-respuesta-reponderacion-e-imputacion.html#calibracion-de-personas-con-bases-de-datos-de-hogares"><i class="fa fa-check"></i><b>5.2.6</b> Calibración de personas con bases de datos de hogares</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="estimadores-y-error-de-muestreo.html"><a href="estimadores-y-error-de-muestreo.html"><i class="fa fa-check"></i><b>6</b> Estimadores y error de muestreo</a><ul>
+<li class="chapter" data-level="6.1" data-path="estimadores-y-error-de-muestreo.html"><a href="estimadores-y-error-de-muestreo.html#estimadores-puntuales"><i class="fa fa-check"></i><b>6.1</b> Estimadores puntuales</a></li>
+<li class="chapter" data-level="6.2" data-path="estimadores-y-error-de-muestreo.html"><a href="estimadores-y-error-de-muestreo.html#estimacion-del-error-de-muestreo"><i class="fa fa-check"></i><b>6.2</b> Estimación del error de muestreo</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="estimadores-y-error-de-muestreo.html"><a href="estimadores-y-error-de-muestreo.html#la-tecnica-del-ultimo-conglomerado"><i class="fa fa-check"></i><b>6.2.1</b> La técnica del último conglomerado</a></li>
+<li class="chapter" data-level="6.2.2" data-path="estimadores-y-error-de-muestreo.html"><a href="estimadores-y-error-de-muestreo.html#linealizacion-de-taylor"><i class="fa fa-check"></i><b>6.2.2</b> Linealización de Taylor</a></li>
+<li class="chapter" data-level="6.2.3" data-path="estimadores-y-error-de-muestreo.html"><a href="estimadores-y-error-de-muestreo.html#replicas"><i class="fa fa-check"></i><b>6.2.3</b> Réplicas</a></li>
+<li class="chapter" data-level="" data-path="estimadores-y-error-de-muestreo.html"><a href="estimadores-y-error-de-muestreo.html#error-de-muestreo-utilizando-imputacion-multiple"><i class="fa fa-check"></i>Error de muestreo utilizando imputación múltiple</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="estimadores-y-error-de-muestreo.html"><a href="estimadores-y-error-de-muestreo.html#criterios-de-calidad"><i class="fa fa-check"></i><b>6.3</b> Criterios de calidad</a><ul>
+<li class="chapter" data-level="" data-path="estimadores-y-error-de-muestreo.html"><a href="estimadores-y-error-de-muestreo.html#tamano-de-muestra-1"><i class="fa fa-check"></i>Tamaño de muestra</a></li>
+<li class="chapter" data-level="" data-path="estimadores-y-error-de-muestreo.html"><a href="estimadores-y-error-de-muestreo.html#tamano-de-muestra-efectivo"><i class="fa fa-check"></i>Tamaño de muestra efectivo</a></li>
+<li class="chapter" data-level="" data-path="estimadores-y-error-de-muestreo.html"><a href="estimadores-y-error-de-muestreo.html#grados-de-libertad"><i class="fa fa-check"></i>Grados de libertad</a></li>
+<li class="chapter" data-level="6.3.1" data-path="estimadores-y-error-de-muestreo.html"><a href="estimadores-y-error-de-muestreo.html#secuencia-logica-para-crear-reglas-de-supresion"><i class="fa fa-check"></i><b>6.3.1</b> Secuencia lógica para crear reglas de supresión</a></li>
+<li class="chapter" data-level="6.3.2" data-path="estimadores-y-error-de-muestreo.html"><a href="estimadores-y-error-de-muestreo.html#aplicacion-en-las-encuestas-de-hogares-de-la-region"><i class="fa fa-check"></i><b>6.3.2</b> Aplicación en las encuestas de hogares de la región</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="agregacion-de-encuestas-y-analisis-longitudinal.html"><a href="agregacion-de-encuestas-y-analisis-longitudinal.html"><i class="fa fa-check"></i><b>7</b> Agregación de encuestas y análisis longitudinal</a><ul>
+<li class="chapter" data-level="7.1" data-path="agregacion-de-encuestas-y-analisis-longitudinal.html"><a href="agregacion-de-encuestas-y-analisis-longitudinal.html#esquemas-de-acumulacion-de-muestras"><i class="fa fa-check"></i><b>7.1</b> Esquemas de acumulación de muestras</a></li>
+<li class="chapter" data-level="7.2" data-path="agregacion-de-encuestas-y-analisis-longitudinal.html"><a href="agregacion-de-encuestas-y-analisis-longitudinal.html#factores-de-expansion-y-estimadores-de-muestreo"><i class="fa fa-check"></i><b>7.2</b> Factores de expansión y estimadores de muestreo</a></li>
+<li class="chapter" data-level="7.3" data-path="agregacion-de-encuestas-y-analisis-longitudinal.html"><a href="agregacion-de-encuestas-y-analisis-longitudinal.html#efecto-del-tipo-de-encuesta-en-la-eficiencia-de-los-indicadores"><i class="fa fa-check"></i><b>7.3</b> Efecto del tipo de encuesta en la eficiencia de los indicadores</a><ul>
+<li class="chapter" data-level="" data-path="agregacion-de-encuestas-y-analisis-longitudinal.html"><a href="agregacion-de-encuestas-y-analisis-longitudinal.html#cambios-netos"><i class="fa fa-check"></i>Cambios netos</a></li>
+<li class="chapter" data-level="" data-path="agregacion-de-encuestas-y-analisis-longitudinal.html"><a href="agregacion-de-encuestas-y-analisis-longitudinal.html#promedio-trimestral"><i class="fa fa-check"></i>Promedio trimestral</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="agregacion-de-encuestas-y-analisis-longitudinal.html"><a href="agregacion-de-encuestas-y-analisis-longitudinal.html#pruebas-de-hipotesis-sobre-indicadores-longitudinales"><i class="fa fa-check"></i><b>7.4</b> Pruebas de hipótesis sobre indicadores longitudinales</a><ul>
+<li class="chapter" data-level="7.4.1" data-path="agregacion-de-encuestas-y-analisis-longitudinal.html"><a href="agregacion-de-encuestas-y-analisis-longitudinal.html#ejemplos"><i class="fa fa-check"></i><b>7.4.1</b> Ejemplos</a></li>
+<li class="chapter" data-level="7.4.2" data-path="agregacion-de-encuestas-y-analisis-longitudinal.html"><a href="agregacion-de-encuestas-y-analisis-longitudinal.html#estadistico-de-prueba"><i class="fa fa-check"></i><b>7.4.2</b> Estadístico de prueba</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="desafios-futuros.html"><a href="desafios-futuros.html"><i class="fa fa-check"></i><b>8</b> Desafios futuros</a></li>
+<li class="chapter" data-level="" data-path="anexo-software.html"><a href="anexo-software.html"><i class="fa fa-check"></i>Anexo: Software</a><ul>
+<li class="chapter" data-level="" data-path="anexo-software.html"><a href="anexo-software.html#r"><i class="fa fa-check"></i>R</a></li>
+<li class="chapter" data-level="" data-path="anexo-software.html"><a href="anexo-software.html#spss"><i class="fa fa-check"></i>SPSS</a></li>
+<li class="chapter" data-level="" data-path="anexo-software.html"><a href="anexo-software.html#sas"><i class="fa fa-check"></i>SAS</a></li>
+<li class="chapter" data-level="" data-path="anexo-software.html"><a href="anexo-software.html#stata"><i class="fa fa-check"></i>STATA</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="anexo-algunas-encuestas-de-hogares-en-la-region.html"><a href="anexo-algunas-encuestas-de-hogares-en-la-region.html"><i class="fa fa-check"></i>Anexo: algunas encuestas de hogares en la región</a><ul>
+<li class="chapter" data-level="" data-path="anexo-algunas-encuestas-de-hogares-en-la-region.html"><a href="anexo-algunas-encuestas-de-hogares-en-la-region.html#argentina"><i class="fa fa-check"></i>Argentina</a></li>
+<li class="chapter" data-level="" data-path="anexo-algunas-encuestas-de-hogares-en-la-region.html"><a href="anexo-algunas-encuestas-de-hogares-en-la-region.html#bolivia"><i class="fa fa-check"></i>Bolivia</a></li>
+<li class="chapter" data-level="" data-path="anexo-algunas-encuestas-de-hogares-en-la-region.html"><a href="anexo-algunas-encuestas-de-hogares-en-la-region.html#brasil"><i class="fa fa-check"></i>Brasil</a></li>
+<li class="chapter" data-level="" data-path="anexo-algunas-encuestas-de-hogares-en-la-region.html"><a href="anexo-algunas-encuestas-de-hogares-en-la-region.html#chile"><i class="fa fa-check"></i>Chile</a></li>
+<li class="chapter" data-level="" data-path="anexo-algunas-encuestas-de-hogares-en-la-region.html"><a href="anexo-algunas-encuestas-de-hogares-en-la-region.html#colombia"><i class="fa fa-check"></i>Colombia</a></li>
+<li class="chapter" data-level="" data-path="anexo-algunas-encuestas-de-hogares-en-la-region.html"><a href="anexo-algunas-encuestas-de-hogares-en-la-region.html#costa-rica"><i class="fa fa-check"></i>Costa Rica</a></li>
+<li class="chapter" data-level="" data-path="anexo-algunas-encuestas-de-hogares-en-la-region.html"><a href="anexo-algunas-encuestas-de-hogares-en-la-region.html#cuba"><i class="fa fa-check"></i>Cuba</a></li>
+<li class="chapter" data-level="" data-path="anexo-algunas-encuestas-de-hogares-en-la-region.html"><a href="anexo-algunas-encuestas-de-hogares-en-la-region.html#ecuador"><i class="fa fa-check"></i>Ecuador</a></li>
+<li class="chapter" data-level="" data-path="anexo-algunas-encuestas-de-hogares-en-la-region.html"><a href="anexo-algunas-encuestas-de-hogares-en-la-region.html#el-salvador"><i class="fa fa-check"></i>El Salvador</a></li>
+<li class="chapter" data-level="" data-path="anexo-algunas-encuestas-de-hogares-en-la-region.html"><a href="anexo-algunas-encuestas-de-hogares-en-la-region.html#guatemala"><i class="fa fa-check"></i>Guatemala</a></li>
+<li class="chapter" data-level="" data-path="anexo-algunas-encuestas-de-hogares-en-la-region.html"><a href="anexo-algunas-encuestas-de-hogares-en-la-region.html#honduras"><i class="fa fa-check"></i>Honduras</a></li>
+<li class="chapter" data-level="" data-path="anexo-algunas-encuestas-de-hogares-en-la-region.html"><a href="anexo-algunas-encuestas-de-hogares-en-la-region.html#mexico"><i class="fa fa-check"></i>México</a></li>
+<li class="chapter" data-level="" data-path="anexo-algunas-encuestas-de-hogares-en-la-region.html"><a href="anexo-algunas-encuestas-de-hogares-en-la-region.html#nicaragua"><i class="fa fa-check"></i>Nicaragua</a></li>
+<li class="chapter" data-level="" data-path="anexo-algunas-encuestas-de-hogares-en-la-region.html"><a href="anexo-algunas-encuestas-de-hogares-en-la-region.html#panama"><i class="fa fa-check"></i>Panamá</a></li>
+<li class="chapter" data-level="" data-path="anexo-algunas-encuestas-de-hogares-en-la-region.html"><a href="anexo-algunas-encuestas-de-hogares-en-la-region.html#paraguay"><i class="fa fa-check"></i>Paraguay</a></li>
+<li class="chapter" data-level="" data-path="anexo-algunas-encuestas-de-hogares-en-la-region.html"><a href="anexo-algunas-encuestas-de-hogares-en-la-region.html#peru"><i class="fa fa-check"></i>Perú</a></li>
+<li class="chapter" data-level="" data-path="anexo-algunas-encuestas-de-hogares-en-la-region.html"><a href="anexo-algunas-encuestas-de-hogares-en-la-region.html#republica-dominicana"><i class="fa fa-check"></i>República Dominicana</a></li>
+<li class="chapter" data-level="" data-path="anexo-algunas-encuestas-de-hogares-en-la-region.html"><a href="anexo-algunas-encuestas-de-hogares-en-la-region.html#uruguay"><i class="fa fa-check"></i>Uruguay</a></li>
+<li class="chapter" data-level="" data-path="anexo-algunas-encuestas-de-hogares-en-la-region.html"><a href="anexo-algunas-encuestas-de-hogares-en-la-region.html#venezuela"><i class="fa fa-check"></i>Venezuela</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="anexo-directrices-tecnicas-para-la-elaboracion-de-los-disenos-de-muestreo-en-las-encuestas-de-hogares.html"><a href="anexo-directrices-tecnicas-para-la-elaboracion-de-los-disenos-de-muestreo-en-las-encuestas-de-hogares.html"><i class="fa fa-check"></i>Anexo: directrices técnicas para la elaboración de los diseños de muestreo en las encuestas de hogares</a><ul>
+<li class="chapter" data-level="8.1" data-path="anexo-directrices-tecnicas-para-la-elaboracion-de-los-disenos-de-muestreo-en-las-encuestas-de-hogares.html"><a href="anexo-directrices-tecnicas-para-la-elaboracion-de-los-disenos-de-muestreo-en-las-encuestas-de-hogares.html#caracteristicas-y-objetivos-de-la-encuesta"><i class="fa fa-check"></i><b>8.1</b> Características y objetivos de la encuesta</a></li>
+<li class="chapter" data-level="8.2" data-path="anexo-directrices-tecnicas-para-la-elaboracion-de-los-disenos-de-muestreo-en-las-encuestas-de-hogares.html"><a href="anexo-directrices-tecnicas-para-la-elaboracion-de-los-disenos-de-muestreo-en-las-encuestas-de-hogares.html#definicion-de-la-poblacion-objetivo"><i class="fa fa-check"></i><b>8.2</b> Definición de la población objetivo</a></li>
+<li class="chapter" data-level="8.3" data-path="anexo-directrices-tecnicas-para-la-elaboracion-de-los-disenos-de-muestreo-en-las-encuestas-de-hogares.html"><a href="anexo-directrices-tecnicas-para-la-elaboracion-de-los-disenos-de-muestreo-en-las-encuestas-de-hogares.html#definicion-de-los-parametros-y-variables-de-diseno"><i class="fa fa-check"></i><b>8.3</b> Definición de los parámetros y variables de diseño</a></li>
+<li class="chapter" data-level="8.4" data-path="anexo-directrices-tecnicas-para-la-elaboracion-de-los-disenos-de-muestreo-en-las-encuestas-de-hogares.html"><a href="anexo-directrices-tecnicas-para-la-elaboracion-de-los-disenos-de-muestreo-en-las-encuestas-de-hogares.html#consolidacion-del-marco-de-muestreo"><i class="fa fa-check"></i><b>8.4</b> Consolidación del marco de muestreo</a></li>
+<li class="chapter" data-level="8.5" data-path="anexo-directrices-tecnicas-para-la-elaboracion-de-los-disenos-de-muestreo-en-las-encuestas-de-hogares.html"><a href="anexo-directrices-tecnicas-para-la-elaboracion-de-los-disenos-de-muestreo-en-las-encuestas-de-hogares.html#diseno-de-muestreo"><i class="fa fa-check"></i><b>8.5</b> Diseño de muestreo</a></li>
+<li class="chapter" data-level="8.6" data-path="anexo-directrices-tecnicas-para-la-elaboracion-de-los-disenos-de-muestreo-en-las-encuestas-de-hogares.html"><a href="anexo-directrices-tecnicas-para-la-elaboracion-de-los-disenos-de-muestreo-en-las-encuestas-de-hogares.html#calculo-del-tamano-de-muestra"><i class="fa fa-check"></i><b>8.6</b> Cálculo del tamaño de muestra</a></li>
+<li class="chapter" data-level="8.7" data-path="anexo-directrices-tecnicas-para-la-elaboracion-de-los-disenos-de-muestreo-en-las-encuestas-de-hogares.html"><a href="anexo-directrices-tecnicas-para-la-elaboracion-de-los-disenos-de-muestreo-en-las-encuestas-de-hogares.html#definicion-de-los-factores-de-expansion"><i class="fa fa-check"></i><b>8.7</b> Definición de los factores de expansión</a></li>
+<li class="chapter" data-level="8.8" data-path="anexo-directrices-tecnicas-para-la-elaboracion-de-los-disenos-de-muestreo-en-las-encuestas-de-hogares.html"><a href="anexo-directrices-tecnicas-para-la-elaboracion-de-los-disenos-de-muestreo-en-las-encuestas-de-hogares.html#esquema-de-rotacion-si-aplica"><i class="fa fa-check"></i><b>8.8</b> Esquema de rotación (si aplica)</a><ul>
+<li class="chapter" data-level="8.8.1" data-path="anexo-directrices-tecnicas-para-la-elaboracion-de-los-disenos-de-muestreo-en-las-encuestas-de-hogares.html"><a href="anexo-directrices-tecnicas-para-la-elaboracion-de-los-disenos-de-muestreo-en-las-encuestas-de-hogares.html#definicion-de-los-estimadores"><i class="fa fa-check"></i><b>8.8.1</b> Definición de los estimadores</a></li>
+<li class="chapter" data-level="8.8.2" data-path="anexo-directrices-tecnicas-para-la-elaboracion-de-los-disenos-de-muestreo-en-las-encuestas-de-hogares.html"><a href="anexo-directrices-tecnicas-para-la-elaboracion-de-los-disenos-de-muestreo-en-las-encuestas-de-hogares.html#calculo-del-error-de-muestreo"><i class="fa fa-check"></i><b>8.8.2</b> Cálculo del error de muestreo</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>9</b> References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Diseño y análisis estadístico de las encuestas de hogares en América Latina</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="anexo-software" class="section level1 unnumbered">
+<h1>Anexo: Software</h1>
+<p>El diseño y análisis de la información proveniente de las encuestas de hogares debe contemplar el uso exhaustivo de las herramientas computacionales existentes. Esta sección revisa con detalle las aproximaciones computacionales del software estadístico utilizado para realizar cada uno de los procesos estadísticos que se necesitan para lograr el cometido de la publicación de cifras oficiales con altos niveles de precisión y confiabilidad. En particular, para los siguientes procesos:</p>
+<ol style="list-style-type: decimal">
+<li>Selección de muestras acorde al diseño de muestreo definido</li>
+<li>Generación de pesos de muestreo para cada individuo y hogar.</li>
+<li>Modelación de la ausencia de respuesta e imputación estadística.</li>
+<li>Calibración de los pesos de muestreo y ajustes por ausencia de respuesta.</li>
+<li>Estimación de los errores de muestreo para cada indicador de interés en los cuadros de producción estadística.</li>
+<li>Análisis de las relaciones multivariantes entre las variables de la encuesta.</li>
+<li>Modelación de las estimaciones para la predicción del parámetro de interés en dominios pequeños.</li>
+</ol>
+<p><span class="citation">UN (<a href="#ref-United_Nations_2005">2005</a>, sec. 7.8)</span> muestra la importancia de incluir la estructura del diseño de muestreo complejo en la inferencia que se realiza para la estimación de estadísticas oficiales a partir de encuestas de hogares y advierten con un ejemplo empírico que de no hacerlo, es posible que las estimaciones resultantes sean sesgadas y además sus errores de muestreo se vean subestimados. A continuación se muestran algunos de las características más importantes que los paquetes estadísticos computacionales incorporan en el manejo de datos que provienen de estructuras de muestreo complejas como las encontradas en las encuestas de hogares. Una revisión más exhaustiva y detallada que adjunta sintaxis y código computacional puede encontrarse en <span class="citation">Heeringa, West, y Berglund (<a href="#ref-Heeringa_West_Berglund_2010">2010</a> Apéndice A)</span>.</p>
+<p>En general, estas herramientas computacionales están pensadas para hacer más eficiente el uso de las aproximaciones de varianza en muestras complejas, así como las técnicas de replicación para obtener los estimativos de varianza inducidos por el diseño de muestreo <span class="citation">(Westat <a href="#ref-Westat_2007">2007</a>)</span>. Algunos de estos softwares son de uso libre, aunque la mayoría corresponde a productos licenciados cuya licencia debe ser pagada. En general estos productos, además de proveer estadísticas descriptivas (como medias, totales, proporciones, percentiles y razones), permiten ajustar modelos de regresión lineales y logísticos. Todas las estadísticas resultantes están basadas en el diseño de muestreo de la encuesta.</p>
+<div id="r" class="section level2 unnumbered">
+<h2>R</h2>
+<p>R es un software de uso libre cuyo uso es cada vez más frecuente en la investigación social, puesto que es muy probable encontrar los más recientes hallazgos científicos programados en este software <span class="citation">(R Core Team <a href="#ref-R_2017">2017</a>)</span>. Al ser de uso libre, los investigadores pueden subir sus propias colecciones de funciones computacionales al repositorio oficial (<code>CRAN</code>) y ponerlas a disposición de la comunidad. El paquete <code>samplesize4surveys</code> <span class="citation">(Gutiérrez <a href="#ref-ss4s">2016</a><a href="#ref-ss4s">b</a>)</span> permite determinar el tamaño de muestra de individuos y hogares en encuestas de hogares repetidas, tipo panel y con rotación. Los paquetes <code>sampling</code> <span class="citation">(Tillé y Matei <a href="#ref-Yves">2016</a>)</span> y <code>TeachingSampling</code> <span class="citation">(Gutiérrez <a href="#ref-TS">2015</a>)</span> permiten seleccionar muestras probabilísticas desde los marcos de muestreo bajo un gran variedad de diseños y algoritmos de muestreo. El paquete <code>survey</code> <span class="citation">(Lumley <a href="#ref-TL">2016</a>)</span>, una vez que el diseño de muestreo ha sido predefinido mediante la función <code>svydesign()</code>, permite analizar datos provenientes de encuestas de hogares y obtener estimaciones apropiadas de los errores estándar.</p>
+</div>
+<div id="spss" class="section level2 unnumbered">
+<h2>SPSS</h2>
+<p>El módulo <code>complex samples</code> de <code>SPSS</code> <span class="citation">(IBM <a href="#ref-IBM_2017">2017</a>)</span> incorpora la selección de muestras complejas mediante la definición de un esquema de muestreo establecido por el usuario. Luego, es necesario crear un plan de análisis mediante la asignación de variables de diseño, métodos de estimación y tamaños de las unidades de muestreo. Una vez definido el plan de muestreo, el módulo integra la posibilidad de estimar conteos, estadísticas descriptivas y celdas de tablas cruzadas. También es posible realizar estimaciones de razones y de coeficientes de regresión en modelos lineales, junto con las respectivas estadísticas de pruebas de hipótesis. Por último el módulo permite estimar modelos no lineales, como regresiones logísticas, regresiones ordinales o regresiones de Cox.</p>
+</div>
+<div id="sas" class="section level2 unnumbered">
+<h2>SAS</h2>
+<p>Este software estadístico incluye un procedimiento para la selección de muestras probabilísticas llamado <code>SURVEYSELECT</code> que integra los métodos de selección más comunes como muestreo aleatorio simple, muestreo sistemático, muestreo con probabilidad proporcional al tamaño, y algunas herramientas de afijación en los estratos. Para analizar los datos provenientes de muestras complejas se han programado algunos procedimientos <span class="citation">(SAS <a href="#ref-SAS_2017">2010</a>)</span>. <code>SURVEYMEANS</code>, que estima totales, medias, proporciones, y percentiles, junto con sus respectivos errores estándar, límites de los intervalos de confianza y pruebas de hipótesis. <code>SURVEYFREQ</code>, estima las estadísticas descriptivas (como totales y proporciones) de interés en tablas de una y dos vías, brinda las estimaciones del error de muestreo, y realiza un análisis de la bondad del ajuste de las estimaciones, independencia, riesgos y razones de <em>odds</em>. <code>SURVEYREG</code> y <code>SURVEYLOGISTIC</code> ajustan modelos de regresión lineal y logísticas, respectivamente. Estos procedimientos estiman los coeficientes de regresión, con sus respectivos errores, y adjunta un análisis exhaustivo de las propiedades de los modelos. Por último, <code>SURVEYPHREG</code> ajusta modelos de riesgos utilizando técnicas de máxima-pseudo verosimilitud.</p>
+</div>
+<div id="stata" class="section level2 unnumbered">
+<h2>STATA</h2>
+<p>El entorno <code>svy</code> provee un conjunto de herramientas para hacer una inferencia apropiada de las estadísticas oficiales provenientes de encuestas de hogares <span class="citation">(STATA <a href="#ref-STATA_2017">2013</a>)</span>. El comando <code>svyset</code> permite especificar las variables que identifican las características del diseño de muestreo de la encuesta, como los pesos de muestreo, los conglomerados y los estratos. El comando <code>svydescribe</code> proporciona tablas que describen los estratos y las unidades de muestra para una determinada etapa de la encuesta. Una vez cargadas las definiciones del diseño de muestreo, cualquier modelo puede ser estimado y sus estadísticos resultantes estarán basados en el diseño de muestreo de la encuesta. El entorno <code>svy</code> también permite la ejecución de algunos comandos predictivos.</p>
+
+</div>
+</div>
+<h3> References</h3>
+<div id="refs" class="references">
+<div id="ref-United_Nations_2005">
+<p>UN. 2005. <em>Household surveys in developing and transition countries</em>. Studies in methods / United Nations, Department of Economic and Social Affairs, Statistics Division Series F.</p>
+</div>
+<div id="ref-Heeringa_West_Berglund_2010">
+<p>Heeringa, Steven G., Brady T. West, y Patricia A. Berglund. 2010. <em>Applied survey data analysis</em>. Chapman and Hall/CRC statistics in the social and behavioral sciences series. CRC Press.</p>
+</div>
+<div id="ref-Westat_2007">
+<p>Westat. 2007. <em>WesVar 4.3. Users guide.</em> <a href="http://users.nber.org/~jroth/chap1.pdf" class="uri">http://users.nber.org/~jroth/chap1.pdf</a>.</p>
+</div>
+<div id="ref-R_2017">
+<p>R Core Team. 2017. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/" class="uri">https://www.R-project.org/</a>.</p>
+</div>
+<div id="ref-ss4s">
+<p>Gutiérrez, Hugo Andrés. 2016b. <em>samplesize4surveys: Sample Size Calculations for Complex Surveys</em>. <a href="https://CRAN.R-project.org/package=samplesize4surveys" class="uri">https://CRAN.R-project.org/package=samplesize4surveys</a>.</p>
+</div>
+<div id="ref-Yves">
+<p>Tillé, Yves, y Alina Matei. 2016. <em>sampling: Survey Sampling</em>. <a href="https://CRAN.R-project.org/package=sampling" class="uri">https://CRAN.R-project.org/package=sampling</a>.</p>
+</div>
+<div id="ref-TS">
+<p>Gutiérrez, Hugo Andrés. 2015. <em>TeachingSampling: Selection of Samples and Parameter Estimation in Finite Population</em>. <a href="https://CRAN.R-project.org/package=TeachingSampling" class="uri">https://CRAN.R-project.org/package=TeachingSampling</a>.</p>
+</div>
+<div id="ref-TL">
+<p>Lumley, Thomas. 2016. «survey: analysis of complex survey samples».</p>
+</div>
+<div id="ref-IBM_2017">
+<p>IBM. 2017. <em>IBM SPSS Complex Samples</em>. <a href="ftp://public.dhe.ibm.com/software/analytics/spss/documentation/statistics/23.0/en/client/Manuals/IBM_SPSS_Complex_Samples.pdf" class="uri">ftp://public.dhe.ibm.com/software/analytics/spss/documentation/statistics/23.0/en/client/Manuals/IBM_SPSS_Complex_Samples.pdf</a>.</p>
+</div>
+<div id="ref-SAS_2017">
+<p>SAS. 2010. <em>SAS/STAT 9.22 User’s Guide - Survey Sampling and Analysis Procedures</em>. <a href="https://support.sas.com/documentation/cdl/en/statugsurveysamp/63778/PDF/default/statugsurveysamp.pdf" class="uri">https://support.sas.com/documentation/cdl/en/statugsurveysamp/63778/PDF/default/statugsurveysamp.pdf</a>.</p>
+</div>
+<div id="ref-STATA_2017">
+<p>STATA. 2013. <em>STATA Survey Data</em>. <a href="https://www.stata.com/manuals13/svy.pdf" class="uri">https://www.stata.com/manuals13/svy.pdf</a>.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="desafios-futuros.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="anexo-algunas-encuestas-de-hogares-en-la-region.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/10.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["EH-CEPAL.pdf", "EH-CEPAL.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

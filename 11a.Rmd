@@ -1,0 +1,33 @@
+# Anexos {-}
+
+## Software  {-}
+
+El diseño y análisis de la información proveniente de las encuestas de hogares debe contemplar el uso exhaustivo de las herramientas computacionales existentes. Esta sección revisa con detalle las aproximaciones computacionales del software estadístico utilizado para realizar cada uno de los procesos estadísticos que se necesitan para lograr el cometido de la publicación de cifras oficiales con altos niveles de precisión y confiabilidad. En particular, para los siguientes procesos:
+
+1. Selección de muestras acorde al diseño de muestreo definido
+2. Generación de pesos de muestreo para cada individuo y hogar.
+3. Modelación de la ausencia de respuesta e imputación estadística.
+4. Calibración de los pesos de muestreo y ajustes por ausencia de respuesta.
+5. Estimación de los errores de muestreo para cada indicador de interés en los cuadros de producción estadística.
+6. Análisis de las relaciones multivariantes entre las variables de la encuesta.
+7. Modelación de las estimaciones para la predicción del parámetro de interés en dominios pequeños. 
+
+@United_Nations_2005[sección 7.8] muestra la importancia de incluir la estructura del diseño de muestreo complejo en la inferencia que se realiza para la estimación de estadísticas oficiales a partir de encuestas de hogares y advierten con un ejemplo empírico que de no hacerlo, es posible que las estimaciones resultantes sean sesgadas y además sus errores de muestreo se vean subestimados. A continuación se muestran algunos de las características más importantes que los paquetes estadísticos computacionales incorporan en el manejo de datos que provienen de estructuras de muestreo complejas como las encontradas en las encuestas de hogares. Una revisión más exhaustiva y detallada que adjunta sintaxis y código computacional puede encontrarse en @Heeringa_West_Berglund_2010[Apéndice A].
+
+En general, estas herramientas computacionales están pensadas para hacer más eficiente el uso de las aproximaciones de varianza en muestras complejas, así como las técnicas de replicación para obtener los estimativos de varianza inducidos por el diseño de muestreo [@Westat_2007]. Algunos de estos softwares son de uso libre, aunque la mayoría corresponde a productos licenciados cuya licencia debe ser pagada. En general estos productos, además de proveer estadísticas descriptivas (como medias, totales, proporciones, percentiles y razones), permiten ajustar modelos de regresión lineales y logísticos. Todas las estadísticas resultantes están basadas en el diseño de muestreo de la encuesta. 
+
+### R{-}
+
+R es un software de uso libre cuyo uso es cada vez más frecuente en la investigación social, puesto que es muy probable encontrar los más recientes hallazgos científicos programados en este software [@R_2017]. Al ser de uso libre, los investigadores pueden subir sus propias colecciones de funciones computacionales al repositorio oficial (`CRAN`) y ponerlas a disposición de la comunidad. El paquete `samplesize4surveys` [@ss4s] permite determinar el tamaño de muestra de individuos y hogares en encuestas de hogares repetidas, tipo panel y con rotación. Los paquetes `sampling` [@Yves] y `TeachingSampling` [@TS] permiten seleccionar muestras probabilísticas desde los marcos de muestreo bajo un gran variedad de diseños y algoritmos de muestreo. El paquete `survey` [@TL], una vez que el diseño de muestreo ha sido predefinido mediante la función `svydesign()`, permite analizar datos provenientes de encuestas de hogares y obtener estimaciones apropiadas de los errores estándar. 
+
+### SPSS{-}
+
+El módulo `complex samples` de `SPSS` [@IBM_2017] incorpora la selección de muestras complejas mediante la definición de un esquema de muestreo establecido por el usuario. Luego, es necesario crear un plan de análisis mediante la asignación de variables de diseño, métodos de estimación y tamaños de las unidades de muestreo. Una vez definido el plan de muestreo, el módulo integra la posibilidad de estimar conteos, estadísticas descriptivas y celdas de tablas cruzadas. También es posible realizar estimaciones de razones y de coeficientes de regresión en modelos lineales, junto con las respectivas estadísticas de pruebas de hipótesis. Por último el módulo permite estimar modelos no lineales, como regresiones logísticas, regresiones ordinales o regresiones de Cox.
+
+### SAS{-}
+
+Este software estadístico incluye un procedimiento para la selección de muestras probabilísticas llamado `SURVEYSELECT` que integra los métodos de selección más comunes como muestreo aleatorio simple, muestreo sistemático, muestreo con probabilidad proporcional al tamaño, y algunas herramientas de afijación en los estratos. Para analizar los datos provenientes de muestras complejas se han programado algunos procedimientos [@SAS_2017]. `SURVEYMEANS`, que estima totales, medias, proporciones, y percentiles, junto con sus respectivos errores estándar, límites de los intervalos de confianza y pruebas de hipótesis. `SURVEYFREQ`, estima las estadísticas descriptivas (como totales y proporciones) de interés en tablas de una y dos vías, brinda las estimaciones del error de muestreo, y realiza un análisis de la bondad del ajuste de las estimaciones, independencia, riesgos y razones de *odds*. `SURVEYREG` y `SURVEYLOGISTIC` ajustan modelos de regresión lineal y logísticas, respectivamente. Estos procedimientos estiman los coeficientes de regresión, con sus respectivos errores, y adjunta un análisis exhaustivo de las propiedades de los modelos. Por último, `SURVEYPHREG` ajusta modelos de riesgos utilizando técnicas de máxima-pseudo verosimilitud. 
+
+### STATA{-}
+
+El entorno `svy` provee un conjunto de herramientas para hacer una inferencia apropiada de las estadísticas oficiales provenientes de encuestas de hogares [@STATA_2017]. El comando `svyset` permite especificar las variables que identifican las características del diseño de muestreo de la encuesta, como los pesos de muestreo, los conglomerados y los estratos. El comando `svydescribe` proporciona tablas que describen los estratos y las unidades de muestra para una determinada etapa de la encuesta. Una vez cargadas las definiciones del diseño de muestreo, cualquier modelo puede ser estimado y sus estadísticos resultantes estarán basados en el diseño de muestreo de la encuesta. El entorno `svy` también permite la ejecución de algunos comandos predictivos.

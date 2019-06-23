@@ -1,0 +1,206 @@
+# Criterios de calidad
+
+Los equipos encargados del muestreo en las Oficinas Nacinoales de Estadística (ONEs) en Latinoamérica y el Caribe han adelantado un extenso trabajo en cuanto a los criterios de supresión de cifras para determinar si una estadística debe ser considerada como precisa y confiable en cuanto a su utilización para la toma de decisiones de política pública. El trabajo de socialización interna con los diferentes analistas de la infomración ha sido riguroso y debe continuar en la misma dirección apropiada hasta lograr interiorizar en las ONEs una visión más exhaustiva y amplia en cuanto a la confiabilidad de una cifra resultante de la encuesta. 
+
+En este contexto, mucho se ha discutido acerca del uso del coeficiente de varaición en la validación de la confiabilidad y precisión de las cifras que provienen de estudios por muestreo. Se realizó una revisión de las experiencias internacionales, para determinar si a nivel internacional se usan criterios de supresión de información y los umbrales que los Institutos Nacionales de Estadística utilizan para la validación de las cifras, tanto en encuestas de hogares como en encuestas de negocios. A continuación se muestra el resumen de lo encontrado.
+
+> *En encuentas de hogares, se encontró que Sudáfrica utiliza el umbral del 35% sobre el coeficiente de variación, Estado Unidos y los países del Mercosur utilizan un umbral del 30%, Australia, Canadá y México usan como referencia un umbral del 25%, Chile, Costa Rica, Eslovaquia, Holanda, Islandia y Portugal utilizan un umbrla del 20%, Ecuador y Perú utilizan un umbral del 15%, Alemania, Colombia, Eslovenia y Suiza utilizan un umbral del 10%. De esta forma, cualquier cifra estimada cuyo coeficiente de variación sea mayor al umbral predefinido será suprimida o marcada como una cifra poco confiable.*
+
+Sarndal et. al. (2003) expresa que "un estadístico puede expresar su opinión de que un valor del coeficiente de variación del 2% es bueno, considerando las restricciones de la encuesta, mientras que un valor del coeficiente de variación de 9% puede ser considerado inaceptable". Cuando se sobrepasa el umbral del coeficiente de variación algunas ONE publican las cifras y junta a ellas algunas alertas, como las siguientes:
+
+- No se publica
+- Usar con precaución.
+- Los coeficientes de variación mayores a 20, significan que los ingresos estimados están sujetos a una alta variabilidad, lo que limita su alcance para fines analíticos.
+- Las estimaciones requieren revisiones, no son precisas y se deben usar con precaución.
+- Poco confiable, menos preciso. Se usa la letra M o () para que se use con cuidado. 
+- Con reserva, referencial, cuestionable. 
+- Valores muy aleatorios, estimación pobre. 
+
+Una encuesta se planea con el fin de generar información precisa y confiable en los dominios de estudio que se han predefinido. Sin embargo, existen subgrupos poblacionales que la encuesta no abordó en su diseño, y sobre los cuales se quisiera una mayor precisión. 
+
+- Incidencia de la pobreza desagregado por departamento o provincia (tamaño de muestra conocido y planificado).
+- Tasa de desocupación desagregada por sexo (tamaño de muestra aleatorio, pero planificado).
+- Tasa de asistencia neta estudiantil en primaria desagregada por quintiles de ingreso (tamaño de muestra aleatorio).
+
+Debido a que la encuesta es una investigación parcial sobre una población finita, es necesario saber que a partir de una encuesta, no se calculan indicadores, sino que se estiman con ayuda de los datos de la encuesta y, por ende, es necesario calcular el grado de error que se comete al no poder realizar una investigación exhaustiva. Este error es conocido como el error de muestreo. 
+
+La precisión de un estimador está supeditada al intervalo de confianza. Entre más angosto sea el intervalo, más precisión se genera y por ende se tiene un menor error de muestreo. 
+De esta forma, muchos institutos nacionales de estadística alrededor del mundo han considerado que las precisiones de las estadísticas resultantes de una encuesta estén supeditadas al comportamiento de su coeficiente de variación.
+Sin embargo, en la discusión se encontró que el uso del coeficiente de variación como indicador de la confiabilidad de las estadísticas provenientes de encuestas de hogares debería ser complementado con algunas otras medidas que permitan crear reglas de confiabilidad y precisión. En general, la precisión de una estadística se debe estudiar a la luz del intervalo de confianza generado por la medida de probabilidad asociada al diseño de muestreo de la encuesta. Por ejemplo, si el parámetro de interés sobre el cual se busca realizar la inferencia es $\theta$, y se ha definido una subpoblación de interés $U_d$, entonces un intervalo del 95% de confianza sobre esa subpoblación está dado por la siguiente expresión [@Heeringa_West_Berglund_2010]:
+
+$$
+(\hat\theta - t_{0.975, df} * se(\hat\theta), \ \ \hat\theta + t_{0.975, df} * se(\hat\theta))
+$$
+
+En donde $\hat\theta$ es un estimador por muestreo para el parámetro de interés $\theta$, $t_{0.975, df}$ es el percentil 0.975 de una distribución *t-student* con $df$ grados de libertad, que están dados por la resta entre el número de UPMs seleccionadas menos el número de estratos de muestreo considerados y $se(\hat\theta)$ es el error estándar de la estimación. Nótese que los grados de libertad son determinantes a la hora de hacer inferencias dentro de subpoblaciones de interés. En este caso los grados de libertad no se consideran fijos sino variables. @Korn_Graubard_1999 proponen el siguiente método de cálculo sobre los grados de libertad en subpoblaciones:
+
+$$
+df_{subpoblación} = \sum_{h=1}^H v_h*(n_{Ih} - 1)
+$$
+
+En donde $v_h$ es una variable indicadora que toma el valor uno si el estrato $h$ contiene uno o mas casos de la subpoblación de interés y toma el valor cero en otro caso, $n_{Ih}$ es el número de unidades primarias de muestreo (UPMs) en el estrato $h$ $(h=1, \ldots, H)$. Nótese que en el caso más general en donde la subpoblación sea toda la población objetivo, entonces $v_h = 1 \ \ \forall h=1, \ldots, H$ y en este caso los grados de libertad se reducen a la siguiente expresión:
+
+$$
+df = \# UPMs - \# Estratos
+$$
+
+Por lo tanto, vale la pena revisar con detalle los elementos que intervienen en la definición de los intervalos de confianza para poder tener una lectura más detallada del panorama de inferencia. Nótese que la longitud de los intervalos de confianza induce la seguridad de que un estimador es preciso:
+
+- La incidencia de la pobreza en el departamento del país se estimó en 5.2%, con un intervalo de confianza de (5.15%, 5.25%).
+- La tasa de desocupación en el país para los hombres se ubicó en en 7.5%, con un intervalo de confianza de (7.1%, 7.9%); mientras que para las mujeres se ubicó en 9.2%, con intervalo de confianza de (8.8%, 9.6%). 
+- La tasa de asistencia neta estudiantil en primaria para el último quintil de ingreso se estimó en 85%, con un intervalo de confianza de (48.2%, 100.0%).
+
+## Más allá del coeficiente de variación
+
+### Tamaño de muestra {-}
+
+El tamaño de muestra afecta de manera indirecta la amplitud del intervalo de confianza, a través del error estándar que generalmente decrece a medida que el tamaño de muestra se hace más grande. Por otra parte, un adecuado tamaño de muestra garantiza la convergencia en distribución de los estimadores a la distribución teórica de donde se calculan los percentiles en el cálculo del intervalo de confianza. Por ejemplo, @Barnett_Walker_Chromy_Davis_Emrich_Odom_Packer_2003 proponen que todas las estimaciones basadas en un tamaño de muestra menor a 100 unidades deberían ser suprimidas o marcadas como no confiables. 
+
+### Tamaño de muestra efectivo {-}
+
+En la inferencia propia de las encuestas de hogares con diseños de muestreo complejos no existe una sucesión de variables que sean independientes e identicamente distribuidas, por tanto si se piensa en la muestra $(y_1, \ldots, y_n)$ como un vector en el espacio $n$-dimensional, el estándar clásico de la teoría estadística asume que cada componente del vector puede variar por sí mismo. Sin embargo, debido a la forma jerárquica de la selección de los hogares y a la interrelación de la variable de interés con las UPMs, la variabilidad de la inferencia en las encuestas complejas tiene un fuerte componente asociados al mismo conglomerado, por lo que la dimensión final del vector $(y_1, \ldots, y_n)$ es mucho menor que $n$. De esta forma, se ha definido el tamaño de muestra efectivo como sigue
+$$
+n_{efectivo} = \frac{n}{Deff}
+$$
+En donde $Deff$ es el efecto de diseño que depende del número de encuestas promedio que se realizaron en cada UPM y de la correlación existente entre la variable de interés y las mismas UPMs. Por ejemplo, @Hornik_Maklan_Cadell_Prado_Barmada_Jacobsohn_Orwin_Sridharan_Zador_Southwell_etal consideran que si el tamaño de muestra efectivo no es mayor a 140, entonces la cifra no debería ser considerada para publicación. 
+
+### Grados de libertad {-}
+
+Son una medida de cuántas unidades independientes de información se tienen en la inferencia. Nótese que, en el caso extremo de realizar un censo en cada UPMs, sin importar el número de individuos que componen el conglomerado, el número de unidades independientes será únicamente el número de UPMs seleccionadas en al primera etapa de muestreo puesto que la UPM es la unidad de muestreo que contribuye en mayor medida a la variabilidad de las estimaciones. En las aplicaciones relaes de encuestas de hogares, en donde se realiza un submuestreo dentro de la UPM, la variabilidad de la estimación puede verse como la contribución del conglomerado a la gran media más una contribución (considerada insignificante) de la segunda etapa de muestreo. De esta forma, los grados de libertad inducidos por una subpoblación. Por ejemplo, @Parker_Talih_Malec_2017 consideran que si los grados de libertad inducidos por la subpoblación son menos de ocho, la cifra debería ser suprimida. 
+
+Por ejemplo, considere por ejemplo el percentil 0.975 para el cual los valores críticos de la distribución t varían con respecto a sus grados de libertad
+
+- $t-student_{gl = 1} = 12.7$
+- $t-student_{gl = 2} = 4.30$
+- $t-student_{gl = 2} = 4.30$
+- $t-student_{gl = 5} = 2.57$
+- $t-student_{gl = 40} = 2.02$
+- $t-student_{gl = \infty} = Z = 1.96$
+
+Es posible considerar que si los grados de libertad inducidos por la subpoblación son menores a un umbral predefinido, la cifra debería ser suprimida. 
+
+### Coeficiente variación {-}
+
+Esta medida configura un acercamiento al error de muestreo que permite verificar si la inferencia es válida, su defnición es como sigue:
+$$
+cve = \frac{ee(\hat\theta)}{\hat\theta}
+$$
+Sin embargo,  cuando se están estimando proporciones, esta medida tiene algunas desventajas: no se trata de una medida simétrica y, cuando la proporción es pequeña, el coeficiente de variación tiende a ser muy grande. Es posible realizar una transformación logaritmica sobre la proporción y utilizar su coeficiente de variación como una medida robusta del error de muestreo en las proporciones cercanas a cero. 
+
+@Sarndal_Swensson_Wretman_2003 expresan que un estadístico puede expresar su opinión de "que un valor del coeficiente de variación del 2% es bueno, considerando las restricciones de la encuesta, mientras que un valor del coeficiente de variación de 9% puede ser considerado inaceptable." De esta forma, muchos institutos nacionales de estadística alrededor del mundo han considerado que las precisiones de las estadísticas resultantes de una encuesta estén supeditadas al comportamiento de su coeficiente de variación.
+
+Por otro lado, fijar un umbral para el coeficiente de varaición tiene una interpretación directa sobre la amplitud relativa del intervalo de confianza. Por ejemplo, si la ONE decide fijar como umbral para el coefcicente de variación un 30%, esto implica que la amplitud relativa (AR) del intervalo de confianza se fija de forma automática alrededor de 130%, puesto que:
+
+$$
+AR = \frac{2*t_{0.975, df} * se(\hat\theta)}{\hat\theta} > 130\% \Rightarrow cve > 30\%
+$$
+
+
+## Secuencia lógica para crear reglas de supresión 
+
+En este documento se ha querido enfatizar que la precisión de una estimación recae únicamente en los intervalos de confianza, que pueden ser descompuestos en elementos que pueden ser revisados para crear una secuencia lógica de supresción o publicación de cifras. Nótese que lo anterior tiene cabida puesto que la longitud de los intervalos de confianza induce la seguridad de que un estimador es preciso. Considere los siguientes ejemplos:
+
+- La incidencia de la pobreza en el departamento del país se estimó en 5.2%, con un intervalo de confianza de (5.15%, 5.25%). 
+- La tasa de desocupación en el país para los hombres se ubicó en en 7.5%, con un intervalo de confianza de (7.1%, 7.9%); mientras que para las mujeres se ubicó en 9.2%, con intervalo de confianza de (8.8%, 9.6%). 
+- La tasa de asistencia neta estudiantil en primaria para el último quintil de ingreso se estimó en 85%, con un intervalo de confianza de (48.2%, 100.0%). 
+
+Cláramente en la última situación ejemplificada el intervalo de confianza no brinda la precisión adecuada para que una ONE publique esta cifra. Nótese además que los criterios mencionados en este docuemnto deberían seguir una secuencia lógica, puesto que es posible, por ejemplo, que se tenga un tamaño de muestra de $n=90$, pero que junto a un $DEFF=0.5$ implique $n_{efectivo}=180$, lo cual puede llevar a malas interpretaciones por parte de los usuarios. Además, utilizar únicamente el coeficiente de variación como estándar para la supresión de cifras es un criterio que no tiene en cuenta toda las variantes asociadas a la inferencia en un muestreo complejo. En la revisión de la docuemntación de la literatura de las encuestas se ha encontrado que recientemente se están incorporando otros criterios adicionales a este. 
+
+De manera generla, se recomienda que las ONEs estudien a profundidad sus políticas de supresión de cifras en cada una de las enceustas que realiza y, de manera independiente, defina las reglas apropiadas para cada caso y que los criterios de supresión sean plasmados en forma de diagrama de flujo en la docuemntación de las encuestas. 
+
+A continuación se muestra una propuesta para las ONEs en cuanto a los criterios de supresión de cifras. Cada Oficina debería tener un plan de discusiones internas para cada encuesta, de tal manera que este algortimo sea considerado de manera particular en cada encuesta que se realice. Es decir, este algoritmo no necesariamente debe coincidir para cada operación estadística de la ONEs.
+
+![Ejemplo de diagramna de flujo para publicar/suprimir estimaciones en encuestas de hogares](Pics/14.pdf)
+
+## Aplicación
+
+País grande: desocupación urbana - Quintiles de ingreso - Sexo
+
+| Quintil Urbano 	| sexo   	| n     	| Deff 	| n.eff 	| gl   	| Desocupación% 	| Li % 	| Ls % 	| cv % 	| Alerta 	|
+|----------------	|--------	|-------	|------	|-------	|------	|---------------	|------	|------	|------	|--------	|
+| Quinto         	| Hombre 	| 29158 	| 1.2  	| 24293 	| 4275 	| 1.4           	| 1.3  	| 1.6  	| 5.7  	|        	|
+| Quinto         	| Mujer  	| 30848 	| 1.3  	| 24639 	| 4215 	| 1.8           	| 1.7  	| 2.0  	| 4.9  	|        	|
+| Cuarto         	| Hombre 	| 29245 	| 1.4  	| 21654 	| 4584 	| 2.3           	| 2.1  	| 2.5  	| 4.8  	|        	|
+| Cuarto         	| Mujer  	| 30094 	| 1.3  	| 22583 	| 4574 	| 2.7           	| 2.4  	| 2.9  	| 4.3  	|        	|
+| Tercero        	| Hombre 	| 29359 	| 1.4  	| 21385 	| 4413 	| 3.2           	| 3.0  	| 3.5  	| 4.1  	|        	|
+| Tercero        	| Mujer  	| 32121 	| 1.5  	| 21757 	| 4542 	| 4.0           	| 3.7  	| 4.3  	| 3.6  	|        	|
+| Segundo        	| Hombre 	| 30419 	| 1.4  	| 21806 	| 4053 	| 6.3           	| 5.9  	| 6.7  	| 3.1  	|        	|
+| Segundo        	| Mujer  	| 33619 	| 1.4  	| 23275 	| 4169 	| 7.6           	| 7.2  	| 8.0  	| 2.6  	|        	|
+| Primer         	| Hombre 	| 30381 	| 1.5  	| 20245 	| 3531 	| 12.7          	| 12.1 	| 13.3 	| 2.4  	|        	|
+| Primer         	| Mujer  	| 35233 	| 1.5  	| 23360 	| 3700 	| 12.5          	| 12.0 	| 13.0 	| 2.1  	|        	|
+
+
+País pequeño: desocupación urbana - Quintiles de ingreso - Sexo
+
+| Quintil Urbano 	| sexo   	| n    	| Deff 	| n.eff 	| gl  	| Desocupación% 	| Li % 	| Ls % 	| cv % 	| Alerta 	|
+|----------------	|--------	|------	|------	|-------	|-----	|---------------	|------	|------	|------	|--------	|
+| Quinto         	| Mujer  	| 2055 	| 1.2  	| 1757  	| 309 	| 1.0           	| 0.4  	| 1.6  	| 30.6 	| *      	|
+| Quinto         	| Hombre 	| 1969 	| 1.1  	| 1738  	| 335 	| 1.1           	| 0.5  	| 1.7  	| 26.3 	| *      	|
+| Cuarto         	| Hombre 	| 2245 	| 1.2  	| 1807  	| 347 	| 2.2           	| 1.4  	| 3.0  	| 19.3 	|        	|
+| Cuarto         	| Mujer  	| 2301 	| 1.6  	| 1466  	| 357 	| 4.1           	| 2.7  	| 5.5  	| 17.5 	|        	|
+| Tercero        	| Mujer  	| 2421 	| 1.5  	| 1646  	| 336 	| 6.1           	| 4.3  	| 7.9  	| 15.1 	|        	|
+| Segundo        	| Hombre 	| 2280 	| 1.4  	| 1654  	| 295 	| 5.9           	| 4.3  	| 7.5  	| 13.8 	|        	|
+| Tercero        	| Hombre 	| 2351 	| 1.2  	| 2025  	| 331 	| 4.6           	| 3.4  	| 5.8  	| 13.3 	|        	|
+| Segundo        	| Mujer  	| 2541 	| 1.6  	| 1547  	| 310 	| 10.8          	| 8.0  	| 13.6 	| 13.1 	|        	|
+| Primero        	| Mujer  	| 2862 	| 2.0  	| 1466  	| 266 	| 20.0          	| 15.4 	| 24.6 	| 11.8 	|        	|
+| Primero        	| Hombre 	| 2562 	| 1.6  	| 1610  	| 263 	| 11.9          	| 9.4  	| 14.5 	| 10.9 	|        	|
+
+País grande: desocupación rural - Quintiles de ingreso - Sexo
+
+
+| Quintil Rural 	| sexo   	| n    	| Deff 	| n.eff 	| gl  	| Desocupación% 	| Li % 	| Ls % 	| cv % 	| Alerta 	|
+|---------------	|--------	|------	|------	|-------	|-----	|---------------	|------	|------	|------	|--------	|
+| Quinto        	| Hombre 	| 5615 	| 1.7  	| 3279  	| 282 	| 0.7           	| 0.4  	| 1.0  	| 22.1 	| *      	|
+| Quinto        	| Mujer  	| 4637 	| 1.6  	| 2812  	| 268 	| 1.0           	| 0.6  	| 1.3  	| 20.2 	| *      	|
+| Cuarto        	| Hombre 	| 5506 	| 1.3  	| 4197  	| 299 	| 1.1           	| 0.8  	| 1.5  	| 15.5 	|        	|
+| Segundo       	| Hombre 	| 5328 	| 1.3  	| 4040  	| 238 	| 2.1           	| 1.6  	| 2.7  	| 13.3 	|        	|
+| Cuarto        	| Mujer  	| 4892 	| 0.9  	| 5176  	| 291 	| 1.4           	| 1.1  	| 1.8  	| 12.5 	|        	|
+| Tercero       	| Hombre 	| 5436 	| 1.1  	| 4946  	| 284 	| 2.1           	| 1.7  	| 2.6  	| 11.2 	|        	|
+| Primer        	| Mujer  	| 5100 	| 1.3  	| 4039  	| 196 	| 3.3           	| 2.6  	| 4.0  	| 11.2 	|        	|
+| Tercero       	| Mujer  	| 5145 	| 1.3  	| 4051  	| 277 	| 2.9           	| 2.3  	| 3.5  	| 10.6 	|        	|
+| Primer        	| Hombre 	| 5301 	| 1.2  	| 4292  	| 193 	| 4.2           	| 3.4  	| 5.0  	| 9.7  	|        	|
+| Segundo       	| Mujer  	| 5190 	| 1.3  	| 4101  	| 238 	| 3.9           	| 3.2  	| 4.7  	| 9.6  	|        	|
+
+País pequeño: desocupación rural - Quintiles de ingreso - Sexo
+
+
+| Quintil Rural 	| sexo   	| n    	| Deff 	| n.eff 	| gl  	| Desocupación% 	| Li % 	| Ls % 	| cv % 	| Alerta 	|
+|---------------	|--------	|------	|------	|-------	|-----	|---------------	|------	|------	|------	|--------	|
+| Primer        	| Mujer  	| 1788 	| 0.6  	| 2754  	| 140 	| 0.8           	| 0.1  	| 1.5  	| 44.5 	| *      	|
+| Cuarto        	| Hombre 	| 2112 	| 1.7  	| 1223  	| 178 	| 1.8           	| 0.8  	| 2.7  	| 26.7 	| *      	|
+| Segundo       	| Hombre 	| 2281 	| 1.8  	| 1236  	| 156 	| 2.6           	| 1.3  	| 3.9  	| 25.7 	| *      	|
+| Primer        	| Hombre 	| 1704 	| 1.3  	| 1324  	| 137 	| 2.8           	| 1.4  	| 4.2  	| 25.5 	| *      	|
+| Quinto        	| Mujer  	| 1780 	| 1.3  	| 1391  	| 166 	| 2.6           	| 1.4  	| 3.9  	| 23.7 	| *      	|
+| Segundo       	| Mujer  	| 2195 	| 1.4  	| 1579  	| 158 	| 5.3           	| 2.9  	| 7.6  	| 22.7 	| *      	|
+| Quinto        	| Hombre 	| 2127 	| 1.4  	| 1553  	| 171 	| 1.8           	| 1.0  	| 2.6  	| 22.1 	| *      	|
+| Tercero       	| Hombre 	| 2180 	| 2.0  	| 1068  	| 169 	| 3.7           	| 2.1  	| 5.2  	| 21.4 	| *      	|
+| Tercero       	| Mujer  	| 2023 	| 1.4  	| 1411  	| 164 	| 6.5           	| 3.8  	| 9.2  	| 20.8 	| *      	|
+| Cuarto        	| Mujer  	| 1942 	| 1.6  	| 1225  	| 174 	| 7.3           	| 4.6  	| 10.0 	| 19.1 	|        	|
+
+Las encuestas son instrumentos valiosos que permiten obtener información desagregada y precisa por los dominios de diseño.
+
+A veces es posible obtener información desagregada y precisa en dominios que no fueron considerados en el diseño.
+
+Muchas veces no es posible obtener información desagregada y precisa en dominios de interés para el seguimiento de los ODS.
+
+Algunas Oficinas Nacionales de Estadística utilizan el coeficiente de variación como una medida única de información sobre la precisión de la cifra. 
+
+Existen otros elementos adicionales al coeficiente de variación que permiten tener una mejor panorámica de la precisión de las cifras.
+
+Es posible extender el criterio de publicación y/o supresión de cifras a otras medidas que complementan el coeficiente de variación.
+
+El coeficiente de variación no es simétrico con respecto a las proporciones. 
+
+Cuando las proporciones estimadas son muy pequeñas, es posible que el intervalo de confianza sea angosto y aún así tener coeficientes de variación que se salgan del umbral predefinido para publicación. 
+
+Es posible realizar una transformación sobre el coeficiente de variación que permita obtener mejores resultados en proporciones cercanas a cero.
+
+Para las mismas desagregaciones y los mismos indicadores, las muestras de los países grandes tienen un mayor potencial de precisión en las estimaciones. 
+
+Para aumentar la precisión de los estimadores en las desagregaciones, los países podrían aumentar el tamaño de muestra de la encuesta.
+
+Para aumentar la precisión de los estimadores en las desagregaciones, los países podrían apoyarse en información auxiliar externa a la encuesta.
+
+Ante las limitaciones de las encuestas, los métodos de estimación en áreas pequeñas son una excelente opción para hacer frente a este reto. 
+
+
