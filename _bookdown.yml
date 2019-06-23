@@ -1,5 +1,1 @@
-book_filename: "EH-CEPAL"
-language:
-  ui:
-    chapter_name: "Capítulo "
-delete_merged_file: true
+book_filename: classic

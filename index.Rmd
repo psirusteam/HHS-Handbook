@@ -1,20 +1,31 @@
 --- 
 title: "Diseño y análisis estadístico en las encuestas de hogares de América Latina"
-author: "Andrés Gutiérrez^[Experto regional en estadísticas sociales - Unidad de Estadística Social - Comisión Económica para América Latina y el Caribe (CEPAL) -  andres.gutierrez@cepal.org]"
+author: "Andrés Gutiérrez"
 date: "`r Sys.Date()`"
-site: bookdown::bookdown_site
-output: bookdown::gitbook
-documentclass: book
-fontsize: 12pt
-#geometry: margin = 3cm
-lang: es
-bibliography: CEPAL.bib
-biblio-style: authoryear
+output:
+  bookdown::pdf_book:
+    template: tex/template_thesis_classic.tex
+    keep_tex: yes
+    citation_package: natbib
+#    latex_engine: xelatex
+    toc_depth: 3
+    toc_unnumbered: no
+    toc_appendix: yes
+    pandoc_args:  --top-level-division=chapter
+    quote_footer: ["\\begin{flushright}", "\\end{flushright}"]
+bibliography: [bib/CEPAL.bib]
+biblio-style: apalike
 link-citations: yes
-urlcolor: red
-lot: true
-lof: true
-
-# Compilar así:
-# bookdown::render_book("index.Rmd", "bookdown::pdf_book")
+colorlinks: no  
+# toc: no
+lot: no
+lof: no
+site: bookdown::bookdown_site
+logo: Pics/logo-cepal.jpg
 ---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(out.width = '90%', fig.align = 'center')
+#bookdown::render_book("index.Rmd", "bookdown::pdf_book")
+```
+
