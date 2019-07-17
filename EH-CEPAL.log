@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2017.5.23)  17 JUL 2019 12:20
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2017.5.23)  17 JUL 2019 12:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -875,42 +875,71 @@ Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/biblatex/biblatex.cfg
 File: biblatex.cfg 
-)) (/usr/local/texlive/2017/texmf-dist/tex/latex/tools/longtable.sty
+)) (/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: xetex.def on input line 147.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-def/xetex.def
+File: xetex.def 2016/07/11 v4.10 LaTeX color/graphics driver for XeTeX (L3/RRM/
+JK)
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+)) (/usr/local/texlive/2017/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2008/02/07
+
+Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
+<2008/02/07> (tvz)
+\FV@CodeLineNo=\count349
+\FV@InFile=\read3
+\FV@TabBox=\box45
+\c@FancyVerbLine=\count350
+\FV@StepNumber=\count351
+\FV@OutFile=\write5
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip67
+\fb@frw=\dimen151
+\fb@frh=\dimen152
+\FrameRule=\dimen153
+\FrameSep=\dimen154
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
-\LTleft=\skip67
-\LTright=\skip68
-\LTpre=\skip69
-\LTpost=\skip70
-\LTchunksize=\count349
-\LTcapwidth=\dimen151
-\LT@head=\box45
-\LT@firsthead=\box46
-\LT@foot=\box47
-\LT@lastfoot=\box48
-\LT@cols=\count350
-\LT@rows=\count351
-\c@LT@tables=\count352
-\c@LT@chunks=\count353
+\LTleft=\skip68
+\LTright=\skip69
+\LTpre=\skip70
+\LTpost=\skip71
+\LTchunksize=\count352
+\LTcapwidth=\dimen155
+\LT@head=\box46
+\LT@firsthead=\box47
+\LT@foot=\box48
+\LT@lastfoot=\box49
+\LT@cols=\count353
+\LT@rows=\count354
+\c@LT@tables=\count355
+\c@LT@chunks=\count356
 \LT@p@ftn=\toks23
 ) (/usr/local/texlive/2017/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2016/04/27 v1.618033 publication quality tables
-\heavyrulewidth=\dimen152
-\lightrulewidth=\dimen153
-\cmidrulewidth=\dimen154
-\belowrulesep=\dimen155
-\belowbottomsep=\dimen156
-\aboverulesep=\dimen157
-\abovetopsep=\dimen158
-\cmidrulesep=\dimen159
-\cmidrulekern=\dimen160
-\defaultaddspace=\dimen161
-\@cmidla=\count354
-\@cmidlb=\count355
-\@aboverulesep=\dimen162
-\@belowrulesep=\dimen163
-\@thisruleclass=\count356
-\@lastruleclass=\count357
-\@thisrulewidth=\dimen164
+\heavyrulewidth=\dimen156
+\lightrulewidth=\dimen157
+\cmidrulewidth=\dimen158
+\belowrulesep=\dimen159
+\belowbottomsep=\dimen160
+\aboverulesep=\dimen161
+\abovetopsep=\dimen162
+\cmidrulesep=\dimen163
+\cmidrulekern=\dimen164
+\defaultaddspace=\dimen165
+\@cmidla=\count357
+\@cmidlb=\count358
+\@aboverulesep=\dimen166
+\@belowrulesep=\dimen167
+\@thisruleclass=\count359
+\@lastruleclass=\count360
+\@thisrulewidth=\dimen168
 ) (/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 (/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphics.sty
@@ -921,12 +950,9 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: xetex.def on input line 99.
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-def/xetex.def
-File: xetex.def 2016/07/11 v4.10 LaTeX color/graphics driver for XeTeX (L3/RRM/
-JK)
-))
-\Gin@req@height=\dimen165
-\Gin@req@width=\dimen166
+)
+\Gin@req@height=\dimen169
+\Gin@req@width=\dimen170
 ) (/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/grffile.sty
 Package: grffile 2016/05/16 v1.17 Extended file name support for graphics (HO)
 Package grffile Info: \Gread@QTm patched on input line 253.
@@ -939,9 +965,9 @@ Package grffile Info: \Gin@ii of package `graphicx' fixed on input line 486.
 Package: parskip 2001/04/09 non-zero parskip adjustments
 ) (/usr/local/texlive/2017/texmf-dist/tex/latex/titling/titling.sty
 Package: titling 2009/09/04 v2.1d maketitle typesetting
-\thanksmarkwidth=\skip71
-\thanksmargin=\skip72
-\droptitle=\skip73
+\thanksmarkwidth=\skip72
+\thanksmargin=\skip73
+\droptitle=\skip74
 ) (/usr/local/texlive/2017/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 ) (/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/pdflscape.sty
@@ -958,9 +984,9 @@ Package: amsthm 2015/03/04 v2.20.2
 \thm@headfont=\toks26
 \thm@notefont=\toks27
 \thm@headpunct=\toks28
-\thm@preskip=\skip74
-\thm@postskip=\skip75
-\thm@headsep=\skip76
+\thm@preskip=\skip75
+\thm@postskip=\skip76
+\thm@headsep=\skip77
 \dth@everypar=\toks29
 )
 Package biblatex Info: Trying to load language 'spanish'...
@@ -972,37 +998,37 @@ File: spanish.lbx 2016/12/05 v3.7 biblatex localization (PK/JW/AB)
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count358
-\@quotereset=\count359
+\@quotelevel=\count361
+\@quotereset=\count362
 (./EH-CEPAL.aux)
 \openout1 = `EH-CEPAL.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 116.
-LaTeX Font Info:    ... okay on input line 116.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 116.
-LaTeX Font Info:    ... okay on input line 116.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 116.
-LaTeX Font Info:    ... okay on input line 116.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 116.
-LaTeX Font Info:    ... okay on input line 116.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 116.
-LaTeX Font Info:    ... okay on input line 116.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 116.
-LaTeX Font Info:    ... okay on input line 116.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 116.
-LaTeX Font Info:    ... okay on input line 116.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 116.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 116.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 156.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 156.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 116.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 116.
-LaTeX Font Info:    ... okay on input line 116.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 116.
-LaTeX Font Info:    ... okay on input line 116.
-LaTeX Info: Redefining \microtypecontext on input line 116.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Info: Redefining \microtypecontext on input line 156.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
 Package microtype Info: No adjustment of tracking.
@@ -1013,31 +1039,21 @@ Package microtype Info: No adjustment of kerning.
 File: mt-LatinModernRoman.cfg 2013/03/13 v1.0 microtype config. file: Latin Mod
 ern Roman (RS)
 )
-\AtBeginShipoutBox=\box49
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
-LaTeX Info: Redefining \color on input line 86.
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/color.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package color Info: Driver file: xetex.def on input line 147.
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/dvipsnam.def
-File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
-))
-Package hyperref Info: Link coloring ON on input line 116.
+\AtBeginShipoutBox=\box50
+Package hyperref Info: Link coloring ON on input line 156.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count360
+\c@section@level=\count363
 )
-LaTeX Info: Redefining \ref on input line 116.
-LaTeX Info: Redefining \pageref on input line 116.
-LaTeX Info: Redefining \nameref on input line 116.
+LaTeX Info: Redefining \ref on input line 156.
+LaTeX Info: Redefining \pageref on input line 156.
+LaTeX Info: Redefining \nameref on input line 156.
 (./EH-CEPAL.out) (./EH-CEPAL.out)
-\@outlinefile=\write5
-\openout5 = `EH-CEPAL.out'.
+\@outlinefile=\write6
+\openout6 = `EH-CEPAL.out'.
 
 Package biblatex Info: XeTeX detected.
 (biblatex)             Assuming input encoding 'utf8'.
@@ -1051,14 +1067,14 @@ Package biblatex Info: ... file 'EH-CEPAL.bbl' found.
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                SSW_2003
+(biblatex)                Train_Cahoon_Makens_1978
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                Caceres_2015
+(biblatex)                Fuller_1990
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
@@ -1079,21 +1095,21 @@ Package biblatex Warning: The following entry could not be found
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                Fuller_1990
+(biblatex)                SSW_2003
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                Train_Cahoon_Makens_1978
+(biblatex)                Caceres_2015
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
 )
-Package biblatex Info: Reference section=0 on input line 116.
-Package biblatex Info: Reference segment=0 on input line 116.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 117.
+Package biblatex Info: Reference section=0 on input line 156.
+Package biblatex Info: Reference segment=0 on input line 156.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 157.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1102,45 +1118,45 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `lmr' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 117.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 157.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 117
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 157
 .
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 117
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 157
 .
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 117.
+(Font)              <14.4> on input line 157.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 117.
+(Font)              <10> on input line 157.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 117.
-LaTeX Font Info:    Try loading font information for U+msa on input line 117.
+(Font)              <7> on input line 157.
+LaTeX Font Info:    Try loading font information for U+msa on input line 157.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/local/texlive/2017/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 117.
+LaTeX Font Info:    Try loading font information for U+msb on input line 157.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/local/texlive/2017/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 117.
+(Font)              <10.95> on input line 157.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 117.
+(Font)              <8> on input line 157.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 117.
+(Font)              <6> on input line 157.
 [1
 
 
@@ -1150,23 +1166,20 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <12> on input line 11.
 [3])
-\tf@toc=\write6
-\openout6 = `EH-CEPAL.toc'.
+\tf@toc=\write7
+\openout7 = `EH-CEPAL.toc'.
 
 [4] (./EH-CEPAL.lot)
-\tf@lot=\write7
-\openout7 = `EH-CEPAL.lot'.
+\tf@lot=\write8
+\openout8 = `EH-CEPAL.lot'.
 
 [5
 
 ] [6
 
-] (./EH-CEPAL.lof
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[7])
-\tf@lof=\write8
-\openout8 = `EH-CEPAL.lof'.
+] (./EH-CEPAL.lof [7])
+\tf@lof=\write9
+\openout9 = `EH-CEPAL.lof'.
 
 [8] [9
 
@@ -1178,59 +1191,59 @@ Capítulo 1.
 File: Pics/1.pdf Graphic file (type QTm)
 <use  "Pics/1.pdf" >
 
-LaTeX Warning: Float too large for page by 41.48062pt on input line 187.
+LaTeX Warning: Float too large for page by 41.48062pt on input line 227.
 
 [16] [17] [18]
 Capítulo 2.
 [19
 
 ] [20] [21]
-Overfull \hbox (19.87207pt too wide) in alignment at lines 223--227
+Overfull \hbox (19.87207pt too wide) in alignment at lines 263--267
  [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (19.87207pt too wide) in alignment at lines 227--235
+Overfull \hbox (19.87207pt too wide) in alignment at lines 267--275
  [] [] [] [] [] [] [] 
  []
 
 [22]
-Overfull \hbox (19.87207pt too wide) in alignment at lines 242--246
+Overfull \hbox (19.87207pt too wide) in alignment at lines 282--286
  [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (19.87207pt too wide) in alignment at lines 246--254
+Overfull \hbox (19.87207pt too wide) in alignment at lines 286--294
  [] [] [] [] [] [] [] 
  []
 
 [23]
-Overfull \hbox (19.87207pt too wide) in alignment at lines 261--265
+Overfull \hbox (19.87207pt too wide) in alignment at lines 301--305
  [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (19.87207pt too wide) in alignment at lines 265--273
+Overfull \hbox (19.87207pt too wide) in alignment at lines 305--313
  [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (19.87207pt too wide) in alignment at lines 280--284
+Overfull \hbox (19.87207pt too wide) in alignment at lines 320--324
  [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (19.87207pt too wide) in alignment at lines 284--293
+Overfull \hbox (19.87207pt too wide) in alignment at lines 324--333
  [] [] [] [] [] [] [] 
  []
 
 [24]
-Overfull \hbox (19.87207pt too wide) in alignment at lines 300--304
+Overfull \hbox (19.87207pt too wide) in alignment at lines 340--344
  [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (19.87207pt too wide) in alignment at lines 304--314
+Overfull \hbox (19.87207pt too wide) in alignment at lines 344--354
  [] [] [] [] [] [] [] 
  []
 
@@ -1239,329 +1252,501 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [25]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 321.
+(Font)              <5> on input line 361.
 [26] [27] [28] [29] [30] [31] [32] [33] [34] [35] [36
 
 ]
 Capítulo 3.
-[37] [38]
-Overfull \hbox (9.46683pt too wide) has occurred while \output is active
-\TU/lmr/m/sl/12 I.  MARCOS DE MUESTREO: ESTRATIFICACIÓN Y AGLOMERACIÓN \TU/lmr/
-m/n/12 39
+
+Underfull \vbox (badness 7888) has occurred while \output is active []
+
+[37] [38] [39] [40] [41] [42] [43] [44] [45]
+File: EH-CEPAL_files/figure-latex/unnamed-chunk-1-1.pdf Graphic file (type QTm)
+
+<use  "EH-CEPAL_files/figure-latex/unnamed-chunk-1-1.pdf" > [46] [47]
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <12> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 634.
+[48]
+Overfull \hbox (14.48424pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/12 IV.  EVALUACIÓN Y ESCOGENCIA DE LA MEJOR ESTRATIFICACIÓN \TU/lm
+r/m/n/12 49
  []
 
-[39]
-Underfull \vbox (badness 4752) has occurred while \output is active []
-
-[40]
-Overfull \hbox (9.46683pt too wide) has occurred while \output is active
-\TU/lmr/m/sl/12 I.  MARCOS DE MUESTREO: ESTRATIFICACIÓN Y AGLOMERACIÓN \TU/lmr/
-m/n/12 41
+[49] [50]
+Overfull \hbox (8.0088pt too wide) in paragraph at lines 674--675
+ []\TU/lmr/m/n/10 DEFF|
  []
 
-[41] [42] [43] [44] [45] [46] [47] [48] [49] [50]
-Overfull \hbox (63.41634pt too wide) has occurred while \output is active
-\TU/lmr/m/sl/12 III.  EL DISEÑO DE MUESTREO ESTÁNDAR EN UNA ENCUESTA DE HOGARES
- \TU/lmr/m/n/12 51
+
+Overfull \hbox (7.38881pt too wide) in paragraph at lines 676--677
+ \TU/lmr/m/n/10 (H=3)|
+ []
+
+
+Overfull \hbox (3.49095pt too wide) in paragraph at lines 678--679
+ \TU/lmr/m/n/10 (H=3)|
+ []
+
+
+Overfull \hbox (7.38881pt too wide) in paragraph at lines 680--681
+ \TU/lmr/m/n/10 (H=3)|
+ []
+
+
+Overfull \hbox (7.38881pt too wide) in paragraph at lines 682--683
+ \TU/lmr/m/n/10 (H=3)|
+ []
+
+
+Overfull \hbox (3.49095pt too wide) in paragraph at lines 684--685
+ \TU/lmr/m/n/10 (H=3)|
+ []
+
+
+Overfull \hbox (7.38881pt too wide) in paragraph at lines 686--687
+ \TU/lmr/m/n/10 (H=3)|
+ []
+
+
+Overfull \hbox (7.38881pt too wide) in paragraph at lines 688--689
+ \TU/lmr/m/n/10 (H=4)|
+ []
+
+
+Overfull \hbox (3.49095pt too wide) in paragraph at lines 690--691
+ \TU/lmr/m/n/10 (H=4)|
+ []
+
+
+Overfull \hbox (7.38881pt too wide) in paragraph at lines 692--693
+ \TU/lmr/m/n/10 (H=4)|
+ []
+
+
+Overfull \hbox (7.38881pt too wide) in paragraph at lines 694--695
+ \TU/lmr/m/n/10 (H=4)|
+ []
+
+
+Overfull \hbox (3.49095pt too wide) in paragraph at lines 696--697
+ \TU/lmr/m/n/10 (H=4)|
+ []
+
+
+Overfull \hbox (7.38881pt too wide) in paragraph at lines 698--699
+ \TU/lmr/m/n/10 (H=4)|
+ []
+
+
+Overfull \hbox (23.1071pt too wide) in alignment at lines 670--701
+ [] [] [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (8.0088pt too wide) in paragraph at lines 704--705
+ []\TU/lmr/m/n/10 DEFF|
+ []
+
+
+Overfull \hbox (7.38881pt too wide) in paragraph at lines 706--707
+ \TU/lmr/m/n/10 (H=3)|
+ []
+
+
+Overfull \hbox (3.49095pt too wide) in paragraph at lines 708--709
+ \TU/lmr/m/n/10 (H=3)|
+ []
+
+
+Overfull \hbox (7.38881pt too wide) in paragraph at lines 710--711
+ \TU/lmr/m/n/10 (H=3)|
+ []
+
+
+Overfull \hbox (7.38881pt too wide) in paragraph at lines 712--713
+ \TU/lmr/m/n/10 (H=3)|
+ []
+
+
+Overfull \hbox (3.49095pt too wide) in paragraph at lines 714--715
+ \TU/lmr/m/n/10 (H=3)|
+ []
+
+
+Overfull \hbox (7.38881pt too wide) in paragraph at lines 716--717
+ \TU/lmr/m/n/10 (H=3)|
+ []
+
+
+Overfull \hbox (7.38881pt too wide) in paragraph at lines 718--719
+ \TU/lmr/m/n/10 (H=4)|
+ []
+
+
+Overfull \hbox (3.49095pt too wide) in paragraph at lines 720--721
+ \TU/lmr/m/n/10 (H=4)|
+ []
+
+
+Overfull \hbox (7.38881pt too wide) in paragraph at lines 722--723
+ \TU/lmr/m/n/10 (H=4)|
+ []
+
+
+Overfull \hbox (7.38881pt too wide) in paragraph at lines 724--725
+ \TU/lmr/m/n/10 (H=4)|
+ []
+
+
+Overfull \hbox (3.49095pt too wide) in paragraph at lines 726--727
+ \TU/lmr/m/n/10 (H=4)|
+ []
+
+
+Overfull \hbox (7.38881pt too wide) in paragraph at lines 728--729
+ \TU/lmr/m/n/10 (H=4)|
+ []
+
+
+Overfull \hbox (23.1071pt too wide) in alignment at lines 701--731
+ [] [] [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (1.68881pt too wide) in paragraph at lines 949--950
+ []\TU/lmr/m/n/10 G(S)|
+ []
+
+
+Overfull \hbox (23.1071pt too wide) in alignment at lines 731--976
+ [] [] [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (14.48424pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/12 IV.  EVALUACIÓN Y ESCOGENCIA DE LA MEJOR ESTRATIFICACIÓN \TU/lm
+r/m/n/12 51
  []
 
 [51] [52]
-Overfull \hbox (63.41634pt too wide) has occurred while \output is active
-\TU/lmr/m/sl/12 III.  EL DISEÑO DE MUESTREO ESTÁNDAR EN UNA ENCUESTA DE HOGARES
- \TU/lmr/m/n/12 53
+Overfull \hbox (14.48424pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/12 IV.  EVALUACIÓN Y ESCOGENCIA DE LA MEJOR ESTRATIFICACIÓN \TU/lm
+r/m/n/12 53
  []
 
 [53] [54
 
 ]
 Capítulo 4.
-[55] [56] [57] [58]
-Overfull \hbox (107.48294pt too wide) has occurred while \output is active
-\TU/lmr/m/sl/12 I.  PRIMER ESCENARIO: TAMAÑO DE MUESTRA PARA UPM, HOGARES Y PER
-SONAS \TU/lmr/m/n/12 59
+[55] [56] [57] [58] [59]
+Underfull \vbox (badness 8000) has occurred while \output is active []
+
+[60]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[61] [62] [63] [64]
+Overfull \hbox (58.85634pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/12 II.  EL DISEÑO DE MUESTREO ESTÁNDAR EN UNA ENCUESTA DE HOGARES 
+\TU/lmr/m/n/12 65
  []
 
-[59] [60]
-Overfull \hbox (107.48294pt too wide) has occurred while \output is active
-\TU/lmr/m/sl/12 I.  PRIMER ESCENARIO: TAMAÑO DE MUESTRA PARA UPM, HOGARES Y PER
-SONAS \TU/lmr/m/n/12 61
+[65] [66]
+Overfull \hbox (58.85634pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/12 II.  EL DISEÑO DE MUESTREO ESTÁNDAR EN UNA ENCUESTA DE HOGARES 
+\TU/lmr/m/n/12 67
  []
 
-[61] [62]
-Overfull \hbox (107.48294pt too wide) has occurred while \output is active
-\TU/lmr/m/sl/12 I.  PRIMER ESCENARIO: TAMAÑO DE MUESTRA PARA UPM, HOGARES Y PER
-SONAS \TU/lmr/m/n/12 63
- []
-
-[63] [64]
-Overfull \hbox (52.90292pt too wide) has occurred while \output is active
-\TU/lmr/m/sl/12 II.  SEGUNDO ESCENARIO: TAMAÑO DE MUESTRA PARA UPM Y HOGARES \T
-U/lmr/m/n/12 65
- []
-
-[65]
-Overfull \hbox (13.08002pt too wide) in alignment at lines 1294--1298
- [] [] [] [] 
- []
-
-
-Overfull \hbox (13.08002pt too wide) in alignment at lines 1298--1301
- [] [] [] [] 
- []
-
-
-Overfull \hbox (13.08002pt too wide) in alignment at lines 1305--1309
- [] [] [] [] 
- []
-
-
-Overfull \hbox (13.08002pt too wide) in alignment at lines 1309--1321
- [] [] [] [] 
- []
-
-[66]
-Overfull \hbox (13.08002pt too wide) in alignment at lines 1330--1334
- [] [] [] [] 
- []
-
-
-Overfull \hbox (13.08002pt too wide) in alignment at lines 1334--1337
- [] [] [] [] 
- []
-
-
-Overfull \hbox (13.08002pt too wide) in alignment at lines 1341--1345
- [] [] [] [] 
- []
-
-
-Overfull \hbox (13.08002pt too wide) in alignment at lines 1345--1356
- [] [] [] [] 
- []
-
-
-Overfull \hbox (52.90292pt too wide) has occurred while \output is active
-\TU/lmr/m/sl/12 II.  SEGUNDO ESCENARIO: TAMAÑO DE MUESTRA PARA UPM Y HOGARES \T
-U/lmr/m/n/12 67
- []
-
-[67] [68]
-Overfull \hbox (53.22694pt too wide) has occurred while \output is active
-\TU/lmr/m/sl/12 III.  TERCER ESCENARIO: TAMAÑO DE MUESTRA PARA UPM Y PERSONAS \
-TU/lmr/m/n/12 69
- []
-
-[69]
-Overfull \hbox (1.10329pt too wide) in paragraph at lines 1413--1414
- []\TU/lmr/m/n/12 DEFF| 
- []
-
-
-Overfull \hbox (1.10329pt too wide) in paragraph at lines 1448--1449
- []\TU/lmr/m/n/12 DEFF| 
- []
-
-[70]
-Overfull \hbox (1.10329pt too wide) in paragraph at lines 1540--1541
- []\TU/lmr/m/n/12 DEFF| 
- []
-
-
-Overfull \hbox (1.10329pt too wide) in paragraph at lines 1575--1576
- []\TU/lmr/m/n/12 DEFF| 
- []
-
-[71] [72] [73] [74] [75] [76]
-Capítulo 5.
-[77
+[67] [68
 
 ]
-File: EH-CEPAL_files/figure-latex/unnamed-chunk-1-1.pdf Graphic file (type QTm)
+Capítulo 5.
+[69] [70] [71] [72]
+Overfull \hbox (107.48294pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/12 I.  PRIMER ESCENARIO: TAMAÑO DE MUESTRA PARA UPM, HOGARES Y PER
+SONAS \TU/lmr/m/n/12 73
+ []
 
-<use  "EH-CEPAL_files/figure-latex/unnamed-chunk-1-1.pdf" >
-File: EH-CEPAL_files/figure-latex/unnamed-chunk-2-1.pdf Graphic file (type QTm)
+[73] [74]
+Overfull \hbox (107.48294pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/12 I.  PRIMER ESCENARIO: TAMAÑO DE MUESTRA PARA UPM, HOGARES Y PER
+SONAS \TU/lmr/m/n/12 75
+ []
 
-<use  "EH-CEPAL_files/figure-latex/unnamed-chunk-2-1.pdf" >
+[75] [76]
+Overfull \hbox (107.48294pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/12 I.  PRIMER ESCENARIO: TAMAÑO DE MUESTRA PARA UPM, HOGARES Y PER
+SONAS \TU/lmr/m/n/12 77
+ []
+
+[77] [78]
+Overfull \hbox (52.90292pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/12 II.  SEGUNDO ESCENARIO: TAMAÑO DE MUESTRA PARA UPM Y HOGARES \T
+U/lmr/m/n/12 79
+ []
+
+[79]
+Overfull \hbox (13.08002pt too wide) in alignment at lines 1802--1806
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (13.08002pt too wide) in alignment at lines 1806--1809
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (13.08002pt too wide) in alignment at lines 1813--1817
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (13.08002pt too wide) in alignment at lines 1817--1829
+ [] [] [] [] 
+ []
+
+[80]
+Overfull \hbox (13.08002pt too wide) in alignment at lines 1838--1842
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (13.08002pt too wide) in alignment at lines 1842--1845
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (13.08002pt too wide) in alignment at lines 1849--1853
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (13.08002pt too wide) in alignment at lines 1853--1864
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (52.90292pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/12 II.  SEGUNDO ESCENARIO: TAMAÑO DE MUESTRA PARA UPM Y HOGARES \T
+U/lmr/m/n/12 81
+ []
+
+[81] [82]
+Overfull \hbox (53.22694pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/12 III.  TERCER ESCENARIO: TAMAÑO DE MUESTRA PARA UPM Y PERSONAS \
+TU/lmr/m/n/12 83
+ []
+
+[83]
+Overfull \hbox (1.10329pt too wide) in paragraph at lines 1921--1922
+ []\TU/lmr/m/n/12 DEFF| 
+ []
+
+
+Overfull \hbox (1.10329pt too wide) in paragraph at lines 1956--1957
+ []\TU/lmr/m/n/12 DEFF| 
+ []
+
+[84]
+Overfull \hbox (1.10329pt too wide) in paragraph at lines 2048--2049
+ []\TU/lmr/m/n/12 DEFF| 
+ []
+
+
+Overfull \hbox (1.10329pt too wide) in paragraph at lines 2083--2084
+ []\TU/lmr/m/n/12 DEFF| 
+ []
+
+[85] [86] [87] [88] [89] [90]
+Capítulo 6.
+[91
+
+]
+File: EH-CEPAL_files/figure-latex/unnamed-chunk-3-1.pdf Graphic file (type QTm)
+
+<use  "EH-CEPAL_files/figure-latex/unnamed-chunk-3-1.pdf" >
+File: EH-CEPAL_files/figure-latex/unnamed-chunk-4-1.pdf Graphic file (type QTm)
+
+<use  "EH-CEPAL_files/figure-latex/unnamed-chunk-4-1.pdf" >
 Underfull \vbox (badness 5417) has occurred while \output is active []
 
 
 Overfull \hbox (65.04417pt too wide) has occurred while \output is active
-\TU/lmr/m/n/12 78 \TU/lmr/m/sl/12 CAPÍTULO 5.  AUSENCIA DE RESPUESTA: IMPUTACIÓ
+\TU/lmr/m/n/12 92 \TU/lmr/m/sl/12 CAPÍTULO 6.  AUSENCIA DE RESPUESTA: IMPUTACIÓ
 N Y REPONDERACIÓN
  []
 
-[78]
-File: EH-CEPAL_files/figure-latex/unnamed-chunk-3-1.pdf Graphic file (type QTm)
+[92]
+File: EH-CEPAL_files/figure-latex/unnamed-chunk-5-1.pdf Graphic file (type QTm)
 
-<use  "EH-CEPAL_files/figure-latex/unnamed-chunk-3-1.pdf" > [79]
+<use  "EH-CEPAL_files/figure-latex/unnamed-chunk-5-1.pdf" > [93]
 Missing character: There is no − in font rm-lmr12!
 
 Overfull \hbox (65.04417pt too wide) has occurred while \output is active
-\TU/lmr/m/n/12 80 \TU/lmr/m/sl/12 CAPÍTULO 5.  AUSENCIA DE RESPUESTA: IMPUTACIÓ
+\TU/lmr/m/n/12 94 \TU/lmr/m/sl/12 CAPÍTULO 6.  AUSENCIA DE RESPUESTA: IMPUTACIÓ
 N Y REPONDERACIÓN
  []
 
-[80]
+[94]
 File: Pics/j1.png Graphic file (type QTm)
-<use  "Pics/j1.png" > [81]
+<use  "Pics/j1.png" > [95]
 File: Pics/j2.png Graphic file (type QTm)
 <use  "Pics/j2.png" >
 Underfull \vbox (badness 2042) has occurred while \output is active []
 
 
 Overfull \hbox (65.04417pt too wide) has occurred while \output is active
-\TU/lmr/m/n/12 82 \TU/lmr/m/sl/12 CAPÍTULO 5.  AUSENCIA DE RESPUESTA: IMPUTACIÓ
-N Y REPONDERACIÓN
- []
-
-[82]
-File: Pics/j3.png Graphic file (type QTm)
-<use  "Pics/j3.png" > [83]
-File: Pics/j4.png Graphic file (type QTm)
-<use  "Pics/j4.png" >
-Overfull \hbox (65.04417pt too wide) has occurred while \output is active
-\TU/lmr/m/n/12 84 \TU/lmr/m/sl/12 CAPÍTULO 5.  AUSENCIA DE RESPUESTA: IMPUTACIÓ
-N Y REPONDERACIÓN
- []
-
-[84]
-File: Pics/j5.png Graphic file (type QTm)
-<use  "Pics/j5.png" > [85]
-Underfull \vbox (badness 4752) has occurred while \output is active []
-
-
-Overfull \hbox (65.04417pt too wide) has occurred while \output is active
-\TU/lmr/m/n/12 86 \TU/lmr/m/sl/12 CAPÍTULO 5.  AUSENCIA DE RESPUESTA: IMPUTACIÓ
-N Y REPONDERACIÓN
- []
-
-[86] [87]
-Overfull \hbox (65.04417pt too wide) has occurred while \output is active
-\TU/lmr/m/n/12 88 \TU/lmr/m/sl/12 CAPÍTULO 5.  AUSENCIA DE RESPUESTA: IMPUTACIÓ
-N Y REPONDERACIÓN
- []
-
-[88] [89]
-Overfull \hbox (65.04417pt too wide) has occurred while \output is active
-\TU/lmr/m/n/12 90 \TU/lmr/m/sl/12 CAPÍTULO 5.  AUSENCIA DE RESPUESTA: IMPUTACIÓ
-N Y REPONDERACIÓN
- []
-
-[90] [91]
-Overfull \hbox (65.04417pt too wide) has occurred while \output is active
-\TU/lmr/m/n/12 92 \TU/lmr/m/sl/12 CAPÍTULO 5.  AUSENCIA DE RESPUESTA: IMPUTACIÓ
-N Y REPONDERACIÓN
- []
-
-[92] [93]
-File: Pics/10.png Graphic file (type QTm)
-<use  "Pics/10.png" >
-Overfull \hbox (65.04417pt too wide) has occurred while \output is active
-\TU/lmr/m/n/12 94 \TU/lmr/m/sl/12 CAPÍTULO 5.  AUSENCIA DE RESPUESTA: IMPUTACIÓ
-N Y REPONDERACIÓN
- []
-
-[94] [95]
-File: Pics/11.png Graphic file (type QTm)
-<use  "Pics/11.png" >
-Overfull \hbox (65.04417pt too wide) has occurred while \output is active
-\TU/lmr/m/n/12 96 \TU/lmr/m/sl/12 CAPÍTULO 5.  AUSENCIA DE RESPUESTA: IMPUTACIÓ
+\TU/lmr/m/n/12 96 \TU/lmr/m/sl/12 CAPÍTULO 6.  AUSENCIA DE RESPUESTA: IMPUTACIÓ
 N Y REPONDERACIÓN
  []
 
 [96]
+File: Pics/j3.png Graphic file (type QTm)
+<use  "Pics/j3.png" > [97]
+File: Pics/j4.png Graphic file (type QTm)
+<use  "Pics/j4.png" >
+Overfull \hbox (65.04417pt too wide) has occurred while \output is active
+\TU/lmr/m/n/12 98 \TU/lmr/m/sl/12 CAPÍTULO 6.  AUSENCIA DE RESPUESTA: IMPUTACIÓ
+N Y REPONDERACIÓN
+ []
+
+[98]
+File: Pics/j5.png Graphic file (type QTm)
+<use  "Pics/j5.png" > [99]
+Underfull \vbox (badness 4752) has occurred while \output is active []
+
+
+Overfull \hbox (70.92418pt too wide) has occurred while \output is active
+\TU/lmr/m/n/12 100 \TU/lmr/m/sl/12 CAPÍTULO 6.  AUSENCIA DE RESPUESTA: IMPUTACI
+ÓN Y REPONDERACIÓN
+ []
+
+[100] [101]
+Overfull \hbox (70.92418pt too wide) has occurred while \output is active
+\TU/lmr/m/n/12 102 \TU/lmr/m/sl/12 CAPÍTULO 6.  AUSENCIA DE RESPUESTA: IMPUTACI
+ÓN Y REPONDERACIÓN
+ []
+
+[102] [103]
+Overfull \hbox (70.92418pt too wide) has occurred while \output is active
+\TU/lmr/m/n/12 104 \TU/lmr/m/sl/12 CAPÍTULO 6.  AUSENCIA DE RESPUESTA: IMPUTACI
+ÓN Y REPONDERACIÓN
+ []
+
+[104] [105]
+Overfull \hbox (70.92418pt too wide) has occurred while \output is active
+\TU/lmr/m/n/12 106 \TU/lmr/m/sl/12 CAPÍTULO 6.  AUSENCIA DE RESPUESTA: IMPUTACI
+ÓN Y REPONDERACIÓN
+ []
+
+[106] [107]
+File: Pics/10.png Graphic file (type QTm)
+<use  "Pics/10.png" >
+Overfull \hbox (70.92418pt too wide) has occurred while \output is active
+\TU/lmr/m/n/12 108 \TU/lmr/m/sl/12 CAPÍTULO 6.  AUSENCIA DE RESPUESTA: IMPUTACI
+ÓN Y REPONDERACIÓN
+ []
+
+[108] [109]
+File: Pics/11.png Graphic file (type QTm)
+<use  "Pics/11.png" >
+Overfull \hbox (70.92418pt too wide) has occurred while \output is active
+\TU/lmr/m/n/12 110 \TU/lmr/m/sl/12 CAPÍTULO 6.  AUSENCIA DE RESPUESTA: IMPUTACI
+ÓN Y REPONDERACIÓN
+ []
+
+[110]
 File: Pics/12.png Graphic file (type QTm)
-<use  "Pics/12.png" > [97]
+<use  "Pics/12.png" > [111]
 File: Pics/13.png Graphic file (type QTm)
 <use  "Pics/13.png" >
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Overfull \hbox (65.04417pt too wide) has occurred while \output is active
-\TU/lmr/m/n/12 98 \TU/lmr/m/sl/12 CAPÍTULO 5.  AUSENCIA DE RESPUESTA: IMPUTACIÓ
-N Y REPONDERACIÓN
- []
-
-[98] [99]
 Overfull \hbox (70.92418pt too wide) has occurred while \output is active
-\TU/lmr/m/n/12 100 \TU/lmr/m/sl/12 CAPÍTULO 5.  AUSENCIA DE RESPUESTA: IMPUTACI
+\TU/lmr/m/n/12 112 \TU/lmr/m/sl/12 CAPÍTULO 6.  AUSENCIA DE RESPUESTA: IMPUTACI
 ÓN Y REPONDERACIÓN
  []
 
-[100] [101]
+[112] [113]
+Overfull \hbox (70.92418pt too wide) has occurred while \output is active
+\TU/lmr/m/n/12 114 \TU/lmr/m/sl/12 CAPÍTULO 6.  AUSENCIA DE RESPUESTA: IMPUTACI
+ÓN Y REPONDERACIÓN
+ []
+
+[114] [115]
 File: Pics/15.png Graphic file (type QTm)
 <use  "Pics/15.png" >
 Underfull \vbox (badness 8056) has occurred while \output is active []
 
 
 Overfull \hbox (70.92418pt too wide) has occurred while \output is active
-\TU/lmr/m/n/12 102 \TU/lmr/m/sl/12 CAPÍTULO 5.  AUSENCIA DE RESPUESTA: IMPUTACI
-ÓN Y REPONDERACIÓN
- []
-
-[102]
-File: Pics/16.png Graphic file (type QTm)
-<use  "Pics/16.png" > [103]
-Overfull \hbox (70.92418pt too wide) has occurred while \output is active
-\TU/lmr/m/n/12 104 \TU/lmr/m/sl/12 CAPÍTULO 5.  AUSENCIA DE RESPUESTA: IMPUTACI
-ÓN Y REPONDERACIÓN
- []
-
-[104] [105]
-File: Pics/17.png Graphic file (type QTm)
-<use  "Pics/17.png" >
-Overfull \hbox (70.92418pt too wide) has occurred while \output is active
-\TU/lmr/m/n/12 106 \TU/lmr/m/sl/12 CAPÍTULO 5.  AUSENCIA DE RESPUESTA: IMPUTACI
-ÓN Y REPONDERACIÓN
- []
-
-[106] [107]
-Overfull \hbox (70.92418pt too wide) has occurred while \output is active
-\TU/lmr/m/n/12 108 \TU/lmr/m/sl/12 CAPÍTULO 5.  AUSENCIA DE RESPUESTA: IMPUTACI
-ÓN Y REPONDERACIÓN
- []
-
-[108] [109]
-File: Pics/18.png Graphic file (type QTm)
-<use  "Pics/18.png" >
-Overfull \hbox (70.92418pt too wide) has occurred while \output is active
-\TU/lmr/m/n/12 110 \TU/lmr/m/sl/12 CAPÍTULO 5.  AUSENCIA DE RESPUESTA: IMPUTACI
-ÓN Y REPONDERACIÓN
- []
-
-[110] [111]
-Overfull \hbox (70.92418pt too wide) has occurred while \output is active
-\TU/lmr/m/n/12 112 \TU/lmr/m/sl/12 CAPÍTULO 5.  AUSENCIA DE RESPUESTA: IMPUTACI
-ÓN Y REPONDERACIÓN
- []
-
-[112] [113]
-Overfull \hbox (70.92418pt too wide) has occurred while \output is active
-\TU/lmr/m/n/12 114 \TU/lmr/m/sl/12 CAPÍTULO 5.  AUSENCIA DE RESPUESTA: IMPUTACI
-ÓN Y REPONDERACIÓN
- []
-
-[114] [115]
-Overfull \hbox (70.92418pt too wide) has occurred while \output is active
-\TU/lmr/m/n/12 116 \TU/lmr/m/sl/12 CAPÍTULO 5.  AUSENCIA DE RESPUESTA: IMPUTACI
+\TU/lmr/m/n/12 116 \TU/lmr/m/sl/12 CAPÍTULO 6.  AUSENCIA DE RESPUESTA: IMPUTACI
 ÓN Y REPONDERACIÓN
  []
 
 [116]
-Capítulo 6.
-[117
+File: Pics/16.png Graphic file (type QTm)
+<use  "Pics/16.png" > [117]
+Overfull \hbox (70.92418pt too wide) has occurred while \output is active
+\TU/lmr/m/n/12 118 \TU/lmr/m/sl/12 CAPÍTULO 6.  AUSENCIA DE RESPUESTA: IMPUTACI
+ÓN Y REPONDERACIÓN
+ []
 
-] [118] [119] [120] [121] [122] [123] [124] [125] [126] [127]
-Underfull \vbox (badness 4752) has occurred while \output is active []
+[118] [119]
+File: Pics/17.png Graphic file (type QTm)
+<use  "Pics/17.png" >
+Overfull \hbox (70.92418pt too wide) has occurred while \output is active
+\TU/lmr/m/n/12 120 \TU/lmr/m/sl/12 CAPÍTULO 6.  AUSENCIA DE RESPUESTA: IMPUTACI
+ÓN Y REPONDERACIÓN
+ []
+
+[120] [121]
+Overfull \hbox (70.92418pt too wide) has occurred while \output is active
+\TU/lmr/m/n/12 122 \TU/lmr/m/sl/12 CAPÍTULO 6.  AUSENCIA DE RESPUESTA: IMPUTACI
+ÓN Y REPONDERACIÓN
+ []
+
+[122] [123]
+File: Pics/18.png Graphic file (type QTm)
+<use  "Pics/18.png" >
+Overfull \hbox (70.92418pt too wide) has occurred while \output is active
+\TU/lmr/m/n/12 124 \TU/lmr/m/sl/12 CAPÍTULO 6.  AUSENCIA DE RESPUESTA: IMPUTACI
+ÓN Y REPONDERACIÓN
+ []
+
+[124] [125]
+Overfull \hbox (70.92418pt too wide) has occurred while \output is active
+\TU/lmr/m/n/12 126 \TU/lmr/m/sl/12 CAPÍTULO 6.  AUSENCIA DE RESPUESTA: IMPUTACI
+ÓN Y REPONDERACIÓN
+ []
+
+[126] [127]
+Overfull \hbox (70.92418pt too wide) has occurred while \output is active
+\TU/lmr/m/n/12 128 \TU/lmr/m/sl/12 CAPÍTULO 6.  AUSENCIA DE RESPUESTA: IMPUTACI
+ÓN Y REPONDERACIÓN
+ []
 
 [128] [129]
+Overfull \hbox (70.92418pt too wide) has occurred while \output is active
+\TU/lmr/m/n/12 130 \TU/lmr/m/sl/12 CAPÍTULO 6.  AUSENCIA DE RESPUESTA: IMPUTACI
+ÓN Y REPONDERACIÓN
+ []
+
+[130]
+Capítulo 7.
+[131
+
+] [132] [133] [134] [135] [136] [137] [138] [139] [140] [141]
+Underfull \vbox (badness 4752) has occurred while \output is active []
+
+[142] [143]
 File: Pics/20.png Graphic file (type QTm)
-<use  "Pics/20.png" > [130]
+<use  "Pics/20.png" > [144]
 File: Pics/21.png Graphic file (type QTm)
-<use  "Pics/21.png" > [131]
+<use  "Pics/21.png" > [145]
 File: Pics/22.png Graphic file (type QTm)
-<use  "Pics/22.png" > [132]
-Overfull \hbox (0.11334pt too wide) in paragraph at lines 2790--2791
+<use  "Pics/22.png" > [146]
+Overfull \hbox (0.11334pt too wide) in paragraph at lines 3298--3299
 \TU/lmr/m/n/12 tra solo una escuela, por lo que el método de las réplicas repet
 idas balanceadas
  []
@@ -1569,345 +1754,345 @@ idas balanceadas
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[133]
-Underfull \hbox (badness 2221) in paragraph at lines 2800--2801
+[147]
+Underfull \hbox (badness 2221) in paragraph at lines 3308--3309
 []\TU/lmr/m/n/12 En resumen, para la $\OML/lmm/m/it/12 i$\TU/lmr/m/n/12 -ésima 
 réplica, se tiene los pesos muestrales
  []
 
-[134]
+[148]
 File: Pics/23.png Graphic file (type QTm)
-<use  "Pics/23.png" > [135] [136] [137] [138] [139] [140
+<use  "Pics/23.png" > [149] [150] [151] [152] [153] [154
 
 ]
-Capítulo 7.
-[141]
-Overfull \hbox (52.56288pt too wide) has occurred while \output is active
-\TU/lmr/m/n/12 142 \TU/lmr/m/sl/12 CAPÍTULO 7.  AGREGACIÓN DE ENCUESTAS Y ANÁLI
-SIS LONGITUDINAL
- []
-
-[142]
-Overfull \hbox (32.72382pt too wide) in paragraph at lines 2930--2931
-\TU/lmr/m/n/12 los analíticos se tornan mucho más complicados. []
- []
-
-[143]
-Overfull \hbox (52.56288pt too wide) has occurred while \output is active
-\TU/lmr/m/n/12 144 \TU/lmr/m/sl/12 CAPÍTULO 7.  AGREGACIÓN DE ENCUESTAS Y ANÁLI
-SIS LONGITUDINAL
- []
-
-[144] [145]
-Overfull \hbox (52.56288pt too wide) has occurred while \output is active
-\TU/lmr/m/n/12 146 \TU/lmr/m/sl/12 CAPÍTULO 7.  AGREGACIÓN DE ENCUESTAS Y ANÁLI
-SIS LONGITUDINAL
- []
-
-[146] [147]
-Overfull \hbox (52.56288pt too wide) has occurred while \output is active
-\TU/lmr/m/n/12 148 \TU/lmr/m/sl/12 CAPÍTULO 7.  AGREGACIÓN DE ENCUESTAS Y ANÁLI
-SIS LONGITUDINAL
- []
-
-[148]
-Overfull \hbox (90.08307pt too wide) has occurred while \output is active
-\TU/lmr/m/sl/12 III.  EFECTO DEL TIPO DE ENCUESTA EN LA EFICIENCIA DE LOS INDIC
-ADORES \TU/lmr/m/n/12 149
- []
-
-[149]
-Overfull \hbox (52.56288pt too wide) has occurred while \output is active
-\TU/lmr/m/n/12 150 \TU/lmr/m/sl/12 CAPÍTULO 7.  AGREGACIÓN DE ENCUESTAS Y ANÁLI
-SIS LONGITUDINAL
- []
-
-[150]
-Overfull \hbox (90.08307pt too wide) has occurred while \output is active
-\TU/lmr/m/sl/12 III.  EFECTO DEL TIPO DE ENCUESTA EN LA EFICIENCIA DE LOS INDIC
-ADORES \TU/lmr/m/n/12 151
- []
-
-[151]
-Overfull \hbox (52.56288pt too wide) has occurred while \output is active
-\TU/lmr/m/n/12 152 \TU/lmr/m/sl/12 CAPÍTULO 7.  AGREGACIÓN DE ENCUESTAS Y ANÁLI
-SIS LONGITUDINAL
- []
-
-[152]
-Overfull \hbox (34.08954pt too wide) has occurred while \output is active
-\TU/lmr/m/sl/12 IV.  PRUEBAS DE HIPÓTESIS SOBRE INDICADORES LONGITUDINALES \TU/
-lmr/m/n/12 153
- []
-
-[153]
-Overfull \hbox (52.56288pt too wide) has occurred while \output is active
-\TU/lmr/m/n/12 154 \TU/lmr/m/sl/12 CAPÍTULO 7.  AGREGACIÓN DE ENCUESTAS Y ANÁLI
-SIS LONGITUDINAL
- []
-
-[154]
-Overfull \hbox (34.08954pt too wide) has occurred while \output is active
-\TU/lmr/m/sl/12 IV.  PRUEBAS DE HIPÓTESIS SOBRE INDICADORES LONGITUDINALES \TU/
-lmr/m/n/12 155
- []
-
+Capítulo 8.
 [155]
-Missing character: There is no ó in font lmmi8!
-
 Overfull \hbox (52.56288pt too wide) has occurred while \output is active
-\TU/lmr/m/n/12 156 \TU/lmr/m/sl/12 CAPÍTULO 7.  AGREGACIÓN DE ENCUESTAS Y ANÁLI
+\TU/lmr/m/n/12 156 \TU/lmr/m/sl/12 CAPÍTULO 8.  AGREGACIÓN DE ENCUESTAS Y ANÁLI
 SIS LONGITUDINAL
  []
 
 [156]
-Capítulo 8.
-[157
-
-] [158]
-Missing character: There is no ó in font lmmi8!
-[159] [160] [161] [162] [163]
-File: Pics/14.pdf Graphic file (type QTm)
-<use  "Pics/14.pdf" >
-Overfull \hbox (139.50021pt too wide) in alignment at lines 3458--3462
- [] [] [] [] [] [] [] [] [] [] [] 
+Overfull \hbox (32.72382pt too wide) in paragraph at lines 3438--3439
+\TU/lmr/m/n/12 los analíticos se tornan mucho más complicados. []
  []
 
-
-Overfull \hbox (139.50021pt too wide) in alignment at lines 3462--3474
- [] [] [] [] [] [] [] [] [] [] [] 
+[157]
+Overfull \hbox (52.56288pt too wide) has occurred while \output is active
+\TU/lmr/m/n/12 158 \TU/lmr/m/sl/12 CAPÍTULO 8.  AGREGACIÓN DE ENCUESTAS Y ANÁLI
+SIS LONGITUDINAL
  []
 
-
-Overfull \hbox (121.86023pt too wide) in alignment at lines 3478--3482
- [] [] [] [] [] [] [] [] [] [] [] 
+[158] [159]
+Overfull \hbox (52.56288pt too wide) has occurred while \output is active
+\TU/lmr/m/n/12 160 \TU/lmr/m/sl/12 CAPÍTULO 8.  AGREGACIÓN DE ENCUESTAS Y ANÁLI
+SIS LONGITUDINAL
  []
 
+[160] [161]
+Overfull \hbox (52.56288pt too wide) has occurred while \output is active
+\TU/lmr/m/n/12 162 \TU/lmr/m/sl/12 CAPÍTULO 8.  AGREGACIÓN DE ENCUESTAS Y ANÁLI
+SIS LONGITUDINAL
+ []
 
-Overfull \hbox (121.86023pt too wide) in alignment at lines 3482--3494
- [] [] [] [] [] [] [] [] [] [] [] 
+[162]
+Overfull \hbox (90.08307pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/12 III.  EFECTO DEL TIPO DE ENCUESTA EN LA EFICIENCIA DE LOS INDIC
+ADORES \TU/lmr/m/n/12 163
+ []
+
+[163]
+Overfull \hbox (52.56288pt too wide) has occurred while \output is active
+\TU/lmr/m/n/12 164 \TU/lmr/m/sl/12 CAPÍTULO 8.  AGREGACIÓN DE ENCUESTAS Y ANÁLI
+SIS LONGITUDINAL
  []
 
 [164]
-Overfull \hbox (112.23624pt too wide) in alignment at lines 3498--3502
- [] [] [] [] [] [] [] [] [] [] [] 
+Overfull \hbox (90.08307pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/12 III.  EFECTO DEL TIPO DE ENCUESTA EN LA EFICIENCIA DE LOS INDIC
+ADORES \TU/lmr/m/n/12 165
  []
 
-
-Overfull \hbox (112.23624pt too wide) in alignment at lines 3502--3514
- [] [] [] [] [] [] [] [] [] [] [] 
+[165]
+Overfull \hbox (52.56288pt too wide) has occurred while \output is active
+\TU/lmr/m/n/12 166 \TU/lmr/m/sl/12 CAPÍTULO 8.  AGREGACIÓN DE ENCUESTAS Y ANÁLI
+SIS LONGITUDINAL
  []
 
-
-Overfull \hbox (112.23624pt too wide) in alignment at lines 3518--3522
- [] [] [] [] [] [] [] [] [] [] [] 
+[166]
+Overfull \hbox (34.08954pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/12 IV.  PRUEBAS DE HIPÓTESIS SOBRE INDICADORES LONGITUDINALES \TU/
+lmr/m/n/12 167
  []
 
-
-Overfull \hbox (112.23624pt too wide) in alignment at lines 3522--3534
- [] [] [] [] [] [] [] [] [] [] [] 
+[167]
+Overfull \hbox (52.56288pt too wide) has occurred while \output is active
+\TU/lmr/m/n/12 168 \TU/lmr/m/sl/12 CAPÍTULO 8.  AGREGACIÓN DE ENCUESTAS Y ANÁLI
+SIS LONGITUDINAL
  []
 
-[165] [166] [167] [168
+[168]
+Overfull \hbox (34.08954pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/12 IV.  PRUEBAS DE HIPÓTESIS SOBRE INDICADORES LONGITUDINALES \TU/
+lmr/m/n/12 169
+ []
 
-]
+[169]
+Missing character: There is no ó in font lmmi8!
+
+Overfull \hbox (52.56288pt too wide) has occurred while \output is active
+\TU/lmr/m/n/12 170 \TU/lmr/m/sl/12 CAPÍTULO 8.  AGREGACIÓN DE ENCUESTAS Y ANÁLI
+SIS LONGITUDINAL
+ []
+
+[170]
 Capítulo 9.
-[169] [170] [171] [172] [173
+[171
+
+] [172]
+Missing character: There is no ó in font lmmi8!
+[173] [174] [175] [176] [177]
+File: Pics/14.pdf Graphic file (type QTm)
+<use  "Pics/14.pdf" >
+Overfull \hbox (139.50021pt too wide) in alignment at lines 3966--3970
+ [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (139.50021pt too wide) in alignment at lines 3970--3982
+ [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (121.86023pt too wide) in alignment at lines 3986--3990
+ [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (121.86023pt too wide) in alignment at lines 3990--4002
+ [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+[178]
+Overfull \hbox (112.23624pt too wide) in alignment at lines 4006--4010
+ [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (112.23624pt too wide) in alignment at lines 4010--4022
+ [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (112.23624pt too wide) in alignment at lines 4026--4030
+ [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (112.23624pt too wide) in alignment at lines 4030--4042
+ [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+[179] [180] [181] [182
+
+]
+Capítulo 10.
+[183] [184] [185] [186] [187
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[174]
+[188]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[175] [176] [177] [178]
+[189] [190] [191] [192]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[179] [180] [181] [182] [183]
+[193] [194] [195] [196] [197]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[184]
+[198]
 Underfull \vbox (badness 1389) has occurred while \output is active []
 
-[185] [186] [187]
-Overfull \hbox (20.259pt too wide) in paragraph at lines 3807--3808
+[199] [200] [201]
+Overfull \hbox (20.259pt too wide) in paragraph at lines 4315--4316
 []\TU/lmr/m/n/12 Periodicidad|  
  []
 
 
-Overfull \hbox (12.96735pt too wide) in paragraph at lines 3809--3810
+Overfull \hbox (12.96735pt too wide) in paragraph at lines 4317--4318
 []\TU/lmr/m/n/12 Rotación|  
  []
 
 
-Overfull \hbox (20.259pt too wide) in paragraph at lines 3823--3824
+Overfull \hbox (20.259pt too wide) in paragraph at lines 4331--4332
 []\TU/lmr/m/n/12 Periodicidad|  
  []
 
 
-Overfull \hbox (12.96735pt too wide) in paragraph at lines 3825--3826
+Overfull \hbox (12.96735pt too wide) in paragraph at lines 4333--4334
 []\TU/lmr/m/n/12 Rotación|  
  []
 
 
-Overfull \hbox (8.96701pt too wide) in paragraph at lines 3838--3839
+Overfull \hbox (8.96701pt too wide) in paragraph at lines 4346--4347
 []\TU/lmr/m/n/12 Trimestral|  
  []
 
 
-Overfull \hbox (13.27934pt too wide) in paragraph at lines 3862--3863
+Overfull \hbox (13.27934pt too wide) in paragraph at lines 4370--4371
 []\TU/lmr/m/n/12 Repetida|  
  []
 
 
-Overfull \hbox (13.27934pt too wide) in paragraph at lines 3888--3889
+Overfull \hbox (13.27934pt too wide) in paragraph at lines 4396--4397
 []\TU/lmr/m/n/12 Repetida|  
  []
 
 
-Overfull \hbox (13.27934pt too wide) in paragraph at lines 3901--3902
+Overfull \hbox (13.27934pt too wide) in paragraph at lines 4409--4410
 []\TU/lmr/m/n/12 Repetida|  
  []
 
 
-Overfull \hbox (13.27934pt too wide) in paragraph at lines 3914--3915
+Overfull \hbox (13.27934pt too wide) in paragraph at lines 4422--4423
 []\TU/lmr/m/n/12 Repetida|  
  []
 
 
-Overfull \hbox (8.96701pt too wide) in paragraph at lines 3942--3943
+Overfull \hbox (8.96701pt too wide) in paragraph at lines 4450--4451
 []\TU/lmr/m/n/12 Trimestral|  
  []
 
 
-Overfull \hbox (13.27934pt too wide) in paragraph at lines 3953--3954
+Overfull \hbox (13.27934pt too wide) in paragraph at lines 4461--4462
 []\TU/lmr/m/n/12 Repetida|  
  []
 
 
-Overfull \hbox (13.27934pt too wide) in paragraph at lines 3966--3967
+Overfull \hbox (13.27934pt too wide) in paragraph at lines 4474--4475
 []\TU/lmr/m/n/12 Repetida|  
  []
 
 
-Overfull \hbox (5.79901pt too wide) in paragraph at lines 3968--3969
+Overfull \hbox (5.79901pt too wide) in paragraph at lines 4476--4477
 []\TU/lmr/m/n/12 Semestral|  
  []
 
 
-Overfull \hbox (13.27934pt too wide) in paragraph at lines 3979--3980
+Overfull \hbox (13.27934pt too wide) in paragraph at lines 4487--4488
 []\TU/lmr/m/n/12 Repetida|  
  []
 
 
-Overfull \hbox (5.79901pt too wide) in paragraph at lines 3981--3982
+Overfull \hbox (5.79901pt too wide) in paragraph at lines 4489--4490
 []\TU/lmr/m/n/12 Semestral|  
  []
 
 
-Overfull \hbox (13.27934pt too wide) in paragraph at lines 3992--3993
+Overfull \hbox (13.27934pt too wide) in paragraph at lines 4500--4501
 []\TU/lmr/m/n/12 Repetida|  
  []
 
 
-Overfull \hbox (8.96701pt too wide) in paragraph at lines 4007--4008
+Overfull \hbox (8.96701pt too wide) in paragraph at lines 4515--4516
 []\TU/lmr/m/n/12 Trimestral|  
  []
 
 
-Overfull \hbox (13.27934pt too wide) in paragraph at lines 4018--4019
+Overfull \hbox (13.27934pt too wide) in paragraph at lines 4526--4527
 []\TU/lmr/m/n/12 Repetida|  
  []
 
 
-Overfull \hbox (13.27934pt too wide) in paragraph at lines 4031--4032
+Overfull \hbox (13.27934pt too wide) in paragraph at lines 4539--4540
 []\TU/lmr/m/n/12 Repetida|  
  []
 
 
-Overfull \hbox (13.27934pt too wide) in paragraph at lines 4057--4058
+Overfull \hbox (13.27934pt too wide) in paragraph at lines 4565--4566
 []\TU/lmr/m/n/12 Repetida|  
  []
 
 
-Overfull \hbox (5.79901pt too wide) in paragraph at lines 4072--4073
+Overfull \hbox (5.79901pt too wide) in paragraph at lines 4580--4581
 []\TU/lmr/m/n/12 Semestral|  
  []
 
 
-Overfull \hbox (13.27934pt too wide) in paragraph at lines 4083--4084
+Overfull \hbox (13.27934pt too wide) in paragraph at lines 4591--4592
 []\TU/lmr/m/n/12 Repetida|  
  []
 
 
-Overfull \hbox (13.27934pt too wide) in paragraph at lines 4096--4097
+Overfull \hbox (13.27934pt too wide) in paragraph at lines 4604--4605
 []\TU/lmr/m/n/12 Repetida|  
  []
 
 
-Overfull \hbox (5.79901pt too wide) in paragraph at lines 4098--4099
+Overfull \hbox (5.79901pt too wide) in paragraph at lines 4606--4607
 []\TU/lmr/m/n/12 Semestral|  
  []
 
-[188
+[202
 
-] [189] [190] [191] [192
+] [203] [204] [205] [206
 
-] [193] [194] [195] [196] [197] [198] [199]
-Underfull \hbox (badness 2393) in paragraph at lines 4750--4754
+] [207] [208] [209] [210] [211] [212] [213]
+Underfull \hbox (badness 2393) in paragraph at lines 5258--5262
 []\TU/lmr/m/n/12 Presentación del método escogido para calibrar (postestra-
  []
 
 
-Underfull \hbox (badness 1953) in paragraph at lines 4750--4754
+Underfull \hbox (badness 1953) in paragraph at lines 5258--5262
 \TU/lmr/m/n/12 tificación, raking, calibración mixta) + Descripción de las
  []
 
-[200] [201] [202] [203
+[214] [215] [216] [217
 
-]
-Underfull \hbox (badness 1997) in paragraph at lines 4868--4868
+] [218]
+Underfull \hbox (badness 1997) in paragraph at lines 5376--5376
 \TU/lmr/m/n/12 flows in labour force participation”. En: \TU/lmr/m/it/12 Survey
  Methodology \TU/lmr/m/n/12 9.1,
  []
 
-[204] [205] [206] [207]
-Underfull \hbox (badness 2512) in paragraph at lines 4868--4868
+[219] [220] [221] [222]
+Underfull \hbox (badness 2512) in paragraph at lines 5376--5376
 [][]\TU/lmr/m/n/12 OIT (1982). \TU/lmr/m/it/12 Resolución sobre estadísticas de
  la población económi-
  []
 
 
-Underfull \hbox (badness 1389) in paragraph at lines 4868--4868
+Underfull \hbox (badness 1389) in paragraph at lines 5376--5376
 \TU/lmr/m/it/12 camente activa, del empleo, del desempleo y del subempleo\TU/lm
 r/m/n/12 . \TU/lmr/m/sc/12 url\TU/lmr/m/n/12 :
  []
 
-[208]
-Underfull \hbox (badness 1383) in paragraph at lines 4868--4868
+
+Underfull \hbox (badness 1383) in paragraph at lines 5376--5376
 [][][]\TU/lmr/m/n/12 (2016). \TU/lmr/m/it/12 Global Sustainable Development Rep
 ort 2016\TU/lmr/m/n/12 . \TU/lmr/m/sc/12 url\TU/lmr/m/n/12 : [][]$[][][][][] []
 
  []
 
-[209] [210]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 4870.
-[211]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 4870.
+[223] [224]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5378.
+[225]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 5378.
 (./EH-CEPAL.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 4870.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 4870.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 5378.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 5378.
 Package logreq Info: Writing requests to 'EH-CEPAL.run.xml'.
 \openout1 = `EH-CEPAL.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 28000 strings out of 493005
- 521680 string characters out of 6134596
- 1024892 words of memory out of 5000000
- 31625 multiletter control sequences out of 15000+600000
- 56104 words of font info for 88 fonts, out of 8000000 for 9000
+ 28513 strings out of 493005
+ 530105 string characters out of 6134596
+ 1037404 words of memory out of 5000000
+ 32125 multiletter control sequences out of 15000+600000
+ 56120 words of font info for 90 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  45i,19n,58p,10406b,6590s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on EH-CEPAL.pdf (211 pages).
+Output written on EH-CEPAL.pdf (225 pages).

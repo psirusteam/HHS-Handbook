@@ -41,6 +41,46 @@
 \usepackage[style=authoryear]{biblatex}
 
 \addbibresource{CEPAL.bib}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \usepackage{longtable,booktabs}
 \usepackage{graphicx,grffile}
 \makeatletter
@@ -469,6 +509,491 @@ En esta sección se relacionan algunos de los parámetros anteriormente menciona
 
 Estos últimos ejemplos muestran la importancia de contar con procedimientos adecuados de acumulación de datos y encuestas a lo largo de un periodo de interés, por ejemplo de forma anual o semestral. La acumulación de datos genera todo tipo de parámetros en una ventana más amplia del tiempo. Es posible acumular datos eficientemente por medio de la agregación de encuestas repetidas. De esta forma se definiría una agregación de datos vertical que añade filas, puesto que en cada levantamiento aparecen nuevos individuos, dado que el diseño de las encuestas repetidas selecciona diferentes individuos en cada punto del tiempo. Este es el caso de la \emph{Gran Encuesta Integrada de Hogares de Colombia} que está diseñada para tener representatividad a niveles de desagregación mayores, juntando los individuos observados en los doce levantamientos continuos en un año. Por otro lado, las encuestas de panel permiten un tipo diferente de agregación, no basado en individuos, sino en variables en el tiempo. A diferencia de las encuestas repetidas, las encuestas de panel, panel rotativo o panel dividido permiten observar a los individuos en diferentes periodos de tiempo y la agregación puede hacerse de forma horizontal, manteniendo a los individuos en las filas y añadiendo columnas cada vez que se observe una nueva medición en un periodo de tiempo diferente.
 
+\hypertarget{marcos-de-muestreo}{%
+\chapter{Marcos de muestreo}\label{marcos-de-muestreo}}
+
+Para realizar el proceso de selección sistemática de los hogares es necesario contar con un marco de muestreo que sirva de vínculo entre los hogares y las unidades de muestreo y que permita tener acceso a la población de interés. Como regla general, el marco de muestreo debe permitir \emph{identificar} y \emph{ubicar} a todos los hogares que conforman la población objetivo. Como lo afirma \textcite{Gutierrez_2016}, el marco de muestreo más utilizado en este tipo de encuestas es de áreas geográficas que vinculan directamente a los hogares o personas. Por esta razón, los diseños de muestreo de estas encuestas se apoyan en la aglomeración natural de los hogares en segmentos cartográficos, que a su vez están contenidos en agrupaciones mayores. ¿Cómo se aglomeran las personas y cómo podemos realizar un diseño de muestreo con base en esta forma de aglomeración? Pues bien, las personas se aglomeran en hogares, los cuales a su vez se aglomeran en comunidades más grandes: barrios, comunas, segmentos. Estas comunidades forman ciudades y la reunión de estas divisiones es el país. Por lo tanto, a pesar de que ningún país tiene a disposición una lista actualizada de todos los hogares junto con su ubicación e identificación, sí existe en todos los países una lista actualizada de los segmentos cartográficos presentes en las zonas urbanas y rurales. De esta forma, si se selecciona de forma probabilística una muestra de sectores y dentro de cada sector se selecciona de forma probabilística una muestra de hogares, entonces de forma indirecta estaremos seleccionando una muestra de hogares que puede representar la realidad de todo un país.
+
+\hypertarget{conceptos-basicos}{%
+\section{Conceptos básicos}\label{conceptos-basicos}}
+
+Como se mencionó anteriormente, una característica esencial de los diseños de las encuestas de hogares es que la selección de las unidades finales de muestreo debe surtir varias etapas, de acuerdo a las agrupaciones definidas en los marcos de muestreo, que usualmente son marcos de área obtenidos de la división geográfica del país, región o municipio en áreas menores mutuamente excluyentes. Los institutos de estadística en América Latina hacen grandes esfuerzos para mantener actualizados sus marcos de muestreo. Por ejemplo, la \emph{Encuesta Nacional de Hogares} de Costa Rica utiliza un marco muestral construido a partir de los censos nacionales de población y vivienda de 2011 y corresponde a un marco de áreas en donde sus unidades son superficies geográficas asociadas con las viviendas. Este marco en particular permite la definición de UPM con 150 viviendas en las zonas urbanas y 100 viviendas en las zonas rurales. En general, el marco está conformado por 10461 UPM (64.5\% urbanas y 35.5\% rurales). \textcite{Gambino_Silva_2009} mencionan que, en la práctica, la consecución de los marcos de lista de lo hogares en la última etapa del muestreo puede tornarse difícil puesto que dentro del conglomerado no es obvio observar de manera exhaustiva los hogares, especialmente cuando la frontera del conglomerado es una línea imaginaria. Por ejemplo en lo urbano, la distinción entre dos conglomerados está demarcada claramente por las calles que conforman la ciudad; sin embargo, en la ruralidad, difícilmente existen caminos que puedan servir para delimitar los conglomerados. De la misma manera, esta delimitación se torna compleja cuando han ocurrido cambios en la infraestructura del área y aparecen nuevas construcciones.
+
+Observe que en general, ante el estudio de un fenómeno social, las desagregaciones geográficas más amplias constituyen un interés natural para los usuarios de las encuestas; es así como los investigadores que planean las encuestas quisieran poder desagregar la información por las regiones geográficas más grandes, que a su vez tienen cierta independencia política y administra. Las estadísticas nacionales que se publican a partir de las encuestas de hogares, cobran mayor relevancia a nivel de regiones, estados o departamentos. Este tipo de desagregaciones geográficas se conocen con el nombre de estratos. Inclusive los diseños de las encuestas de hogares han ido evolucionando para permitir que este tipo de agregaciones tenga representatividad en la encuesta. Aunado a lo anterior, si la característica de interés con la cual se planea la encuesta hace que la distribución de la población sea altamente sesgada, como en el caso de los ingresos o gastos, es recomendable crear un estrato de inclusión forzosa con las unidades más importantes en la población. Esta práctica asegura que el error de muestreo sea más bajo. Algunos países hacen uso de la información censal para definir una estratificación socio económica sobre los segmentos cartográficos del marco de muestreo utilizando para tal fin algunas preguntas del censo de población más reciente. Esta práctica representa una ventaja metodológica porque, en la mayoría de encuestas, los parámetros de interés tienen un comportamiento estructural diferente en cada uno de los subgrupos poblacionales creados, tendiendo a tener una mayor precisión en la estimación de los parámetros de interés. Por ejemplo, utilizando las preguntas del censo, es posible crear un índice de condiciones de vivienda y con este definir algunos grupos de viviendas mutuamente excluyentes que contengan viviendas parecidas dentro de ellos, pero que entre ellos sean muy disimiles. De esta forma, es posible estratificar los sectores cartográficos de todo un país y generar estimaciones más precisas de los indicadores sociales (como pobreza, ingreso medio, etc.) si el diseño de muestreo contempla este tipo de estratificación.
+
+Para el caso de la \emph{Gran Encuesta Integrada de Hogares} en Colombia, los criterios de estratificación forman dos grupos: el primero correspondiente a las 24 capitales junto con sus correspondientes áreas metropolitanas y el segundo correspondiente al resto de cabeceras municipales, centros poblados y la ruralidad dispersa. Además, la encuesta también contempla criterios de estratificacion económica a nivel municipal como nivel de urbanización y estructura de la población, basada en la proporción de habitantes con necesidades básicas insatisfechas. De la misma manera, el diseño de la muestra maestra del Instituto Nacional de Estadística y Geografía de México contempla este tipo de estratificación basada en los indicadores generados con la información del Censo de Población y Vivienda 2010. Previo al proceso de estratificación sociodemográfica, fue necesario construir y seleccionar una serie de variables que lograran, en conjunto, separar el universo de UPM en agrupaciones que mejoraran las principales estimaciones de las diferentes encuestas usuarias del Marco de Muestreo \autocite{INEGI_MX_2012}.
+
+De la misma manera, ante la ausencia de un marco de muestreo de hogares y personas en los países de la región, el diseño de las encuestas de hogares se dice complejo puesto que involucra varias etapas de selección y estratificación. Por ende, los marcos de muestreo están conformados por unidades primarias de muestreo (UPM) que se definen como segmentos cartográficos individuales, como una agrupación de segmentos o incluso como una división de segmentos masivos. Por ejemplo, tomemos en consideración el estrato urbana, en donde las UPM corresponden a manzanas (o agregaciones o particiones de manzanas), mientras que en el caso rural, las UPM corresponden a comunidades (o agregaciones o particiones de comunidades). En cualquier caso, la unidad de observación está constituida por las viviendas ocupadas particulares donde residen personas. En general, salvo en algunos países, las UPM no tienen el mismo tamaño dentro de los estratos; es decir no están constituidas por un número igual de viviendas. El caso es más evidente es la ruralidad, en donde podría ocurrir que una única UPM agrupe un conjunto de viviendas con demasiada heterogeneidad y una alta dispersión geográfica. Es así como es posible encontrar UPM con pocas viviendas o UPM con demasiadas viviendas. Esto constituye una desventaja técnica a la hora de establecer metodologías apropiadas para la recolección de la información primaria y además para la estimación de los errores de muestreo que se derivan de la encuestas de hogares y por esto algunos países están considerando la re-definición de las UPM como unidades con un número uniforme de viviendas.
+
+Es usual que tras el levantamiento de un nuevo censo se actualice el marco de muestreo con el que se seleccionarán las viviendas y hogares para todas las encuestas subsiguientes. Por la naturaleza de los censos, los INE deben recorrer la geografía de los países produciendo una nueva cartografía que derivará en la actualización de los marcos de muestreo. Por ejemplo, considere un país que cuente con un marco de muestreo que consta de cien mil UPM y, para cada una de estas, se ha logrado construir una estratificación socioeconómica que estuvo basada en la información recolectada en el último censo de población y vivienda. \textcite[pág. 183]{Kish_1965} afirma que la selección de UPM con tamaño desigual acarrea algunos problemas técnicos como que el tamaño de muestra final se convierte en una variable aleatoria, que depende de la probabilidad de selección de las UPM más grandes o más pequeñas. Lo anterior aumenta la incertidumbre en el costo final del operativo, pues si se seleccionan UPM con pocas viviendas, se deberán seleccionar nuevas UPM para cumplir con la cuota de viviendas o bien colapsar algunas otras UPM para mantener la selección inicial.
+
+Con base en lo anterior, se esperaría que la actualización de la cartografía y de los marcos de muestreo se realizara cada diez años. Es importante que estas actualizaciones conlleven a una definición de los marcos de muestreo que permitan tener mayor fluidez en los procesos logísticos de selección de hogares y que induzcan una mejora en la precisión de las estimaciones de los parámetros de interés. Por ejemplo, una forma muy conveniente de abordar este desafío es creando UPM que contengan, en la medida de lo posible, un mismo número de viviendas y, de esta manera, mantener una distribución uniforme en cada estrato. Siguiendo el consejo de \textcite[pág. 212]{Valliant_Dever_Kreuter_2013}, si el equipo de planeación de la encuesta tiene la flexibilidad de definir las UPM, como usualmente es el caso en las encuestas de hogares, entonces las UPM definitivamente deberían estar conformadas por una cantidad igual de viviendas.
+
+Los censos de población y vivienda se constituyen en el primer insumo principal de las encuestas de hogares. En promedio, los países de la región realizan los censos cada diez años, y en este levantamiento masivo de información se enlistan todos los hogares del país, se enumeran todos los habitantes del país y se observan algunas variables de interés que servirán a su vez para asentar las bases de comparación de las cifras en los siguientes diez años. El periodo que existe entre la realización de dos censos se denomina \emph{periodo intercensal} y en este se realizan encuestas de hogares de diferentes constructos económicos y sociales. Los Institutos Nacionales de Estadística (INE) utilizan las particiones geográficas y cartográficas generadas en el levantamiento del censo con el fin de seleccionar, mediante diseños en varias etapas, muestras de hogares. Comúnmente, estas particiones reciben el nombre de secciones cartográficas y están formadas por un número determinado de hogares contiguos. En adelante nos referiremos a estas particiones como Unidades Primarias de Muestreo (UPM), la cuales en el área urbana, pueden ser manzanas o agregaciones de manzanas, y en área rural pueden ser veredas o sectores censales definidos de antemano.
+
+Para aumentar la eficiencia de la inferencia en las encuestas de hogares, es de particular interés que el marco de muestreo permita clasificar a las UPM de acuerdo con su nivel socio-económico con el fin de poder realizar selecciones independientes en cada categoría de la clasificación. De esta forma se garantiza la homogeneidad entre grupos y se disminuye la incertidumbre de la estimación. Este proceso se conoce con el nombre de estratificación. En la literatura especializada, es posible encontrar varias metodologías que pretenden clasificar las UPM. Este documento realiza un resumen no exhaustivo de las principales técnicas utilizadas por los INE de la región, propone un algoritmo para encontrar la mejor estratificación basada en los datos de los censos e ilustra los procedimientos computacionales necesarios para implementar esta metodología en el software estadístico \texttt{R}.
+
+Esta sección recoge algunas metodologías de estratificación vigentes en la literatura y aplicadas por otros institutos de estadística de la región, así como el seguimiento a la ejecución de la partición del marco por parte de los funcionarios del INE. Luego de un breve introducción, la sección dos establece las diferencias entre la estratificación de las bases de datos a nivel personas y UPMs; la sección tres resume de forma no exhaustiva algunas de las metodologías más usadas para la estratificación de marcos de muestreo, con dos enfoques: univariados sobre medidas de resumen, y multivariados sobre toda la matriz de clasificación; la sección cuatro presenta los criterios de evaluación de los métodos de estratificación; la sección cinco presenta un pequeño resumen de los resultados finales de la estratificación del marco realizada por el INE; finalmente, la sección seis expone algunas conclusiones y recomendaciones en el corto plazo.
+
+\hypertarget{informacion-a-nivel-de-upm}{%
+\section{Información a nivel de UPM}\label{informacion-a-nivel-de-upm}}
+
+En primer lugar, es necesario tomar en consideración que la estratificación que se pretende realizar es a nivel de las UPM. Esto implica que una vez que la UPM esté categorizada en algún estrato, todos sus componentes también estarán clasificados en la misma categoría; por consiguiente las personas y los hogares de la UPM pertenecerán al estrato en el cual la UPM fue clasificado. Cabe resaltar que, tomando en consideración la información recolectada en el censo, es posible también clasificar a las personas o a los hogares en una primera instancia y después agregarlos hasta llegar al nivel de la UPM; sin embargo, en la práctica este proceso puede resultar un poco más complejo y no son claras sus ventajas. Por lo anteriormente mencionado, este documento estará enfocado en la clasificación de las UPM a partir de una matriz de información a nivel de esta misma agregación.
+
+Con la información del censo se deben seleccionar o crear las variables estén relacionadas directamente con los fenómenos que se estudiarán por las diferentes encuestas de hogares a lo largo del periodo intercensal. En general, es posible clasificar estas variables en los siguientes constructos:
+
+\begin{itemize}
+\tightlist
+\item
+  \emph{Demografía y estructura de la población}: sexo, edad, parentesco, origen extranjero, pertenencia a grupos indígenas, número de hijos, número de dependientes, etc.
+\item
+  \emph{Educación}: analfabetismo, asistencia, años de estudios, grado de escolaridad, etc.
+\item
+  \emph{Mercado de trabajo}: población en edad de trabajar, pertenencia a la fuerza de trabajo por sexo, condición de ocupación por sexo, rama de actividad, etc.
+\item
+  \emph{Características de la vivienda}: tipo de vivienda, materiales de construcción, hacinamiento, equipamiento, etc.
+\item
+  \emph{Acceso a servicios básicos}: fuente de agua, alcantarillado, acceso a salud, acceso a seguridad social, etc.
+\end{itemize}
+
+Debido a que las UPM tienen, en estricto rigor, tamaños diferentes, la escala y el nivel en el que se midan los indicadores puede afectar los procesos de clasificación. Luego, si la matriz de información con la cual se realiza la estratificación se construye con base en el número de personas (con determinadas características) dentro de la UPM, al no tener en cuenta el tamaño de esta, es muy probable que las metodologías de estratificación no logren agrupar de forma homogénea a las UPM. Por ejemplo, asuma que hay dos UPM con tamaño 100 y 300 hogares, que agrupan a 200 y 400 personas en la fuerza de trabajo, y además suponga que una de las variables de la matriz de información se define como el número de personas ocupadas. A su vez, asuma que la primera UPM pertenece a un sector acaudalado y la segunda UPM pertenece a un sector marginal. Es posible que el número de personas ocupadas en ambas UPM sea de 150 y que por esta razón queden erróneamente clasificadas en el mismo grupo. Por ende, definir la matriz de información en términos relativos (porcentaje de ocurrencia de cada variable) es una mejor alternativa para que el agrupamiento esté controlado por el tamaño de la UPM y supeditado únicamente a cambios estructurales en los constructos de medición del censo.
+
+Por último, una vez que se ha definido el conjunto de variables que entrarán en la matriz de información, es necesario verificar que todos los indicadores de esta matriz apunten hacia el mismo horizonte del constructo censal. Es decir, que \textbf{todos} los indicadores estén expresados en términos de acceso al bienestar de cada uno de los constructos. Además, es necesario realizar un proceso de refinamiento sobre esta matriz para eliminar aquellas variables que puedan estar altamente correlacionadas con el resto de las variables o que puedan expresarse como combinación lineal de otras variables. De esta manera, se evitan los problemas de multicolinealidad y se asegura una estratificación parsimoniosa. Al final se supone que se debe contar con una matriz de información \(\mathbf{X}\) compuesta por \(P\) variables, y \(n_I\) filas; en donde cada fila de la matriz de información representará la observación de las UPM a novel censal para cada una de las \(P\) variables.
+
+\hypertarget{metodologias-de-estratificacion}{%
+\section{Metodologías de estratificación}\label{metodologias-de-estratificacion}}
+
+La teoría estadística ha definido que la mejor estratificación es aquella que minimice los errores de muestreo de los estimadores, expresados en forma de varianzas o errores estándar. Además, una particularidad de los procesos de estratificación es que las varianzas de estos estimadores dependen a su vez de la variación de los microdatos a nivel poblacional, que se han observado en el censo. Sin embargo, lo que podría resultar ser una estratificación óptima para una variable tal vez sea, al mismo tiempo, una estratificación pésima para otras variables. Más aun, sabiendo que no todas las variables de interés que se observarán en las encuestas durante el periodo intercensal han sido medidas y observadas en el censo, se debe estudiar muy bien, por medio del estudio de numerosos escenarios, qué estratificación utilizar.
+
+Todos los INE de la región tienen, en mayor o menor grado, evidencia empírica de que la mayoría de los fenómenos que se observan en las encuestas de hogares están supeditados a la distribución de la población en las UPM. Por ejemplo, si lo que se quiere medir es la informalidad en el mercado de trabajo, seguramente nos encontraremos con que este fenómeno está mucho más presente en aquellas UPM marginales, en donde también estarán presenten otros fenómenos como menos años de educación, menores tasas de acceso a la salud, menores ingresos y gastos, mayores tasas de embarazo adolescente, entre otros. Lo anterior conlleva a afirmar que existe una alta correlación entre la UPM que se habita y la incidencia de fenómenos sociales y económicos. Por lo tanto, los ejercicios de estratificación que se deben estudiar tendrán una alta consistencia interna, de tal manera que al escoger la mejor estratificación se garantiza que el INE dispondrá de una clasificación óptima en el periodo intercensal para todas las encuestas de hogares que se ejecuten.
+
+En general, hay dos grandes escenarios que deben ser revisados al momento de proponer una estratificación: univariados (sobre una medida de resumen de la matriz de información) y multivariados (sobre todas las variables de la matriz de información). Para cualquiera de estas, se recalca que el objetivo es encontrar la mejor partición que asegure que la varianza de los estimadores de muestreo sea mínima. A continuación se presentan algunas técnicas que se pueden considerar. Estas técnicas están disponibles en el software estadístico \texttt{R} mediante las librerías \texttt{stratification} \autocite{Baillargeon_Rivest_2011} y \texttt{SamplingStrata} \autocite{Barcaroli_2014}. En ambos casos existe documentación disponible acerca de cómo utilizar las funciones de estratificación.
+
+\hypertarget{univariadas-sobre-medidas-de-resumen}{%
+\subsection{Univariadas sobre medidas de resumen}\label{univariadas-sobre-medidas-de-resumen}}
+
+Es bien sabido que la mejor estratificación para una variable de interés es aquella que nace de su propia variación. Durante muchos años, se desarrollaron técnicas de estratificación sobre una sola variable de interés que dejaban de lado el carácter multipropósito de cualquier encuesta de hogares. Por esta razón, se sugiere partir de la matriz de información y resumir la variación y las correlaciones entre variables mediante alguna técnica multivariada de reducción de datos, como componentes principales, análisis factorial, o modelos no lineales. Como la matriz de información está en escala de porcentajes, es posible que la variabilidad recogida por la medida de resumen sea alta.
+
+Por ejemplo, si se utiliza la técnica de componentes principales, entonces se tomaría como medida de resumen el primer componente, que resulta ser función del vector propio asociado al mayor valor propio de la matriz de covarianzas asociada a la matriz de información. Por otro lado, si se utilizara un análisis factorial confirmatorio, la medida de resumen podría ser el eje principal con la carga factorial más alta. La interpretación de estas medidas de resumen es una parte importante en la aplicación de las técnicas de estratificación. Nótese que la matriz de información está construida por cinco constructos censales (\emph{demografía y estructura de la población}, \emph{educación}, \emph{mercado de trabajo}, \emph{características de la vivienda} y \emph{acceso a servicios básicos}) que deberían ser resumidos en una medida de bienestar de la UPM, que a su vez debe tener sentido en cuanto a la relación (o contribución) de las variables al componente o factor. En adelante, se utilizará la siguiente notación para referirse a la medida de resumen como función de todas las variables incorporadas en la matriz de información:
+
+\[
+y = f(x_1,\ldots, x_P)
+\]
+
+Nótese que se esperaría que esta variable de resumen, al estar definida como una medida de bienestar sobre las UPM, tuviera un comportamiento sesgado, tal como se puede observar en la siguiente figura.
+
+\begin{figure}
+\centering
+\includegraphics{EH-CEPAL_files/figure-latex/unnamed-chunk-1-1.pdf}
+\caption{\label{fig:unnamed-chunk-1}\emph{Histograma de la medida de resumen (y) sobre las UPM}}
+\end{figure}
+
+En particular, el INE de Chile ha realizado un valioso estudio de modelación del \emph{ingreso autónomo} con algunos indicadores homologados, disponibles en la encuesta CASEN y haciendo uso de la técnica de \emph{random forest}. Con base en este modelo, es posible determinar una predicción del ingreso total de los hogares en el censo. Es posible considerar a este \emph{ingreso autónomo imputado} como una medida de resumen del bienestar de la UPM y realizar los mismos análisis de estratificación sobre esta predicción. Para que este escenario sea comparable con los demás, este modelo debe volver a ajustarse teniendo en cuenta exactamente las mismas variables incluidas en la matriz de información. Además, valdría la pena volver a preguntarse si esta componente del ingreso es la que mejor resumiría el bienestar de las UPM.
+
+\textbf{Partición en cuantiles (Q)}
+
+Este método divide la población de UPM en grupos creados a partir de la división en intervalos regulares de la distribución de la medida de resumen. Los cuantiles más usados son los cuartiles (que dividen la población en cuatro grupos), los quintiles (que dividen la población en cinco grupos) y los deciles (que dividen la población en 10 grupos); sin embargo, con los propósitos de estratificación, también es útil considerar la partición en terciles (que dividen la población en tres grupos).
+
+\textbf{Método de raíz de frecuencia acumulada (DH)}
+
+\textcite{Dalenius_Hodges_1959} propusieron esta técnica de estratificación basada en la acumulación de la raíz cuadrada de las frecuencias acumuladas de la medida de resumen sobre las UPM. Esta técnica es exacta y no requiere de algún procedimiento iterativo. La idea principal de esta técnica es encontrar grupos que minimicen la siguiente función:
+
+\[
+D = \sum_{h=1}^H W_h \sqrt{S^2_{y_{h}}}
+\]
+
+En donde \(W_h = N_h/N\) (\(h = 1, \ldots, H\)) es el tamaño relativo del estrato \(h\) y \(S^2_{y_{h}}\) es la varianza de la medida de resumen en el estrato \(h\).
+
+\textbf{Estratificación óptima (LH)}
+
+\textcite{Lavallee_Hidiroglou_1988} propusieron por primera vez la construcción de una estratificación óptima para poblaciones de encuestas reales, basada en la minimización de una expresión ligada al tamaño de muestra. Más adelante \textcite{Kozak_2004} definió un algoritmo iterativo mediante arranques aleatorios para optimizar el proceso de minimización.
+
+\textbf{Estratificación geométrica (GH)}
+
+\textcite{Gunning_Horgan_2004} desarrollaron este método con el objetivo de que los coeficientes de variación de la medida de resumen tiendan a ser iguales dentro de los estratos y, de esta forma, encontraron que los límites que definían estos grupos estaban conformados en progresión geométrica.
+
+\hypertarget{multivariadas-sobre-la-matriz-de-informacion}{%
+\subsection{Multivariadas sobre la matriz de información}\label{multivariadas-sobre-la-matriz-de-informacion}}
+
+Partiendo de la matriz de información \(\mathbf{X}\) a nivel de las UPM, es posible considerar algunos procedimientos que no necesitan de la reducción a una sola dimensión, sino que admiten tantas dimensiones como indicadores definidos en las columnas de la matriz \(\mathbf{X}\). Teniendo en cuenta que en el periodo intercensal se realizarán encuestas que miden variables que están fuertemente ligadas a las observadas en el censo, entonces encontrar una estratificación que sea óptima para todo el conjunto de variables de la matriz de información asegurará una partición óptima para todas las encuestas realizadas en el periodo intercensal. Las siguientes metodologías permiten minimizar conjuntamente la varianza de los \(P\) estimadores de muestreo en un diseño estratificado.
+
+\textbf{K-medias (KmJ)}
+
+\textcite{Jarque_1981} propone utilizar una versión modificada del algoritmo de K-medias \autocite{Macqueen_1967}, cuya objetivo es la minimización de la siguiente función de distancia:
+
+\[
+\sum_{h=1}^H \sum_{k\in U_h}(\mathbf x_k - \bar {\mathbf x}_h)'\boldsymbol \Lambda^{-1}(\mathbf x_k - \bar {\mathbf x}_h)
+\]
+
+En donde \(\mathbf x_j\) corresponde a la medición de las \(P\) variables de la matriz de información en la \(k\)-ésima UPM, \(\bar {\mathbf x}_h\) es el vector de medias de la matriz de información en el estrato \(h\) y \(\boldsymbol \Lambda\) es una matriz diagonal de tamaño \(P \times P\) cuyas entradas se definen como la varianza de las \(P\) variables de la matriz \(\mathbf X\), es decir \(\boldsymbol \Lambda [p,p]=S^2_{x_p}\). Esta modificación tiene como objetivo minimizar la relación entre la varianza de un estimador de muestreo estratificado con asignación proporcional y la de un muestreo aleatorio simple. Como se puede ver en el anexo, cuando \(\boldsymbol \Lambda = \mathbf I\), el algoritmo resultante es idéntico al algoritmo clásico de K-medias.
+
+Para realizar la ejecución de este procedimiento en \texttt{R}, simplemente basta con dividir cada una de las columnas de la matriz de información por la desviación estándar de la variable asociada. Es posible implementar este algoritmo mediante el siguiente código computacional.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x1 =}\StringTok{ }\KeywordTok{scale}\NormalTok{(X, }\DataTypeTok{center =}\NormalTok{ F, }\DataTypeTok{scale =} \KeywordTok{apply}\NormalTok{(X, }\DecValTok{2}\NormalTok{, sd))}
+\KeywordTok{kmeans}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ x1, }\DataTypeTok{centers =}\NormalTok{ H)}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Partición genética (BB)}
+
+\textcite{Ballin_Barcaroli_2013} argumentan que la mejor estratificación es aquella partición del marco de muestreo que asegura el mínimo costo muestral que satisfaga algunas restricciones de precisión; o, que maximice la precisión de los indicadores de interés bajo las restricciones. Haciendo uso de algoritmos genéticos evolutivos, esta la estratificación multivariada del marco de muestreo parte de la consideración de estratificaciones univariadas independientes (una para cada variable de la matriz de información) y de la definición del producto cartesiano resultante de todas estas particiones (estratos atómicos). Este universo de posibles estratificaciones evoluciona, sujeto a las restricciones de precisión sobre cada variable de la matriz de información, hasta converger en el número de estratos definidos de antemano \(H\).
+
+\hypertarget{evaluacion-y-escogencia-de-la-mejor-estratificacion}{%
+\section{Evaluación y escogencia de la mejor estratificación}\label{evaluacion-y-escogencia-de-la-mejor-estratificacion}}
+
+En la evaluación de los escenarios de estratificación entran las técnicas univariadas y multivariadas. Al final, el resultado de aplicar una u otra técnica es simplemente una clasificación de las UPM. Por lo tanto, cada una de las posibles estratificaciones debe ser evaluada con base en la reducción de la varianza para todos los indicadores considerados en la matriz de clasificación. La medida clásica con la que se juzgan las bondades de una estrategia de muestreo es el efecto de diseño (DEFF). Por lo tanto, la evaluación de la estratificación debe estar supeditada también a esta medida, que para la variable \(p = 1, \ldots, P\), está dada por:
+
+\[
+DEFF_p = \frac{Var_{ST}(\bar x _p)}{Var_{SI}(\bar x _p)} \ \ \ \ \ \ \ \ \ p = 1, \ldots, P.
+\]
+
+En donde, \(Var_{ST}(\bar x _p)\) y \(Var_{SI}(\bar x _p)\) denotan la varianza del diseño estratificado y la varianza de un muestreo aleatorio simple para la media poblacional (porcentaje) de la \(p\)-ésima variable de la matriz de información. Por otro lado, \textcite[página 184]{Gutierrez_2016} demuestra que, cuando la asignación es proporcional, esta relación se puede escribir de la siguiente manera:
+
+\[
+DEFF_p = \frac{ \sum_{h=1}^H W_h S^2_{x_{hp}} }{S^2_{x_p}} \ \ \ \ \ \ \ \ \ p = 1, \ldots, P.
+\]
+
+En donde, para cada estrato \(h = 1, \ldots, H\), se tiene que \(S^2_{x_p}\) es la varianza de la variable \(x_p\) en la población y \(S^2_{x_{hp}}\) es la varianza de la variable \(x_p\) supeditada al estrato \(h\). Nótese que una ventaja de expresar el efecto de diseño como en la ecuación anterior es que no dependerá del tamaño de muestra. Una vez definido el criterio de evaluación de la estratificación sobre una variable \(x_p\), es necesario definir un criterio de estratificación multivariante que contemple cada una de las \(P\) variables. Siguiendo las ideas de \textcite{Jarque_1981}, se propone la siguiente medida de calidad, definida como el \emph{efecto de diseño generalizado} (\(G(S)\)) sobre todas las variables de la matriz de información:
+
+\[
+G(S) = \sum_{p=1}^P DEFF_p = \sum_{p=1}^P \frac{1}{S^2_{x_p}}\sum_{h=1}^H W_h S^2_{x_{hp}}
+\]
+
+Ante una estratificación pertinente, se esperaría que \(Var_{ST}(\bar x _p) < Var_{SI}(\bar x _p)\), por lo tanto \(0 < DEFF_p < 1\), lo que conlleva a que \(0 < F(S) < P\). Luego, se debería escoger el escenario para el cual \(F(S)\) fuera mínimo. Nótese que, para cada uno de los escenarios en estudio, es necesario fijar el número de estratos; en general se propende porque el número de grupos esté entre tres y cinco. Esta escogencia del número de grupos debe ser discutida al interior del INE con los equipos que determinan la rotación de las UPM en cada periodo de levantamiento de las encuestas de hogares. Escoger un número alto de estratos reducirá la varianza, pero a su vez puede tener repercusiones negativas en la logística de rotación del diseño de muestreo de las encuestas, haciendo que se agoten rápidamente las UPM dentro de los estratos geográficos y socioeconómicos. Por lo anterior, se recomienda restringir los escenarios de evaluación a la consideración de \(H=3\) y \(H=4\) estratos.
+
+El siguiente cuadro ejemplifica la evaluación de estas técnicas para dos escenarios de estratificación (tres y cuatro estratos) en una matriz de información que contiene 8 variables. De la tabla se puede deducir varias conclusiones interesantes. Por ejemplo, para el primer indicador, la mejor estratificación es DH con cuatro estratos; para el segundo indicador, la mejor estratificación es BB con cuatro estratos; mientras que para el último indicador, la mejor estratificación es LH con cuatro estratos. Como se puede notar, para cada indicador existirá un método que induzca una mayor eficiencia, pero que para otros indicadores puede ser deficiente. Esto claramente muestra que la estratificación con respecto a un solo indicador puede ser un procedimiento inadecuado. Por lo tanto, basados en este ejemplo, el mejor método sería DH con cuatro estratos puesto que induce una mayor eficiencia conjunta al reducir el efecto de diseño generalizado.
+
+\footnotesize
+
+\begin{longtable}[]{@{}rrrrrrrrrrrrr@{}}
+\caption{\emph{Efectos de diseño \(DEFF_p\) y efecto de diseño generalizado \(G(S)\) considerando tres (\(H=3\)) y cuatro (\(H=4\)) estratos para ocho variables.}}\tabularnewline
+\toprule
+\begin{minipage}[b]{0.05\columnwidth}\raggedleft
+DEFF\strut
+\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedleft
+Q (H=3)\strut
+\end{minipage} & \begin{minipage}[b]{0.06\columnwidth}\raggedleft
+DH (H=3)\strut
+\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedleft
+LH (H=3)\strut
+\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedleft
+GH (H=3)\strut
+\end{minipage} & \begin{minipage}[b]{0.06\columnwidth}\raggedleft
+KmJ (H=3)\strut
+\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedleft
+BB (H=3)\strut
+\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedleft
+Q (H=4)\strut
+\end{minipage} & \begin{minipage}[b]{0.06\columnwidth}\raggedleft
+DH (H=4)\strut
+\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedleft
+LH (H=4)\strut
+\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedleft
+GH (H=4)\strut
+\end{minipage} & \begin{minipage}[b]{0.06\columnwidth}\raggedleft
+KmJ (H=4)\strut
+\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedleft
+BB (H=4)\strut
+\end{minipage}\tabularnewline
+\midrule
+\endfirsthead
+\toprule
+\begin{minipage}[b]{0.05\columnwidth}\raggedleft
+DEFF\strut
+\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedleft
+Q (H=3)\strut
+\end{minipage} & \begin{minipage}[b]{0.06\columnwidth}\raggedleft
+DH (H=3)\strut
+\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedleft
+LH (H=3)\strut
+\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedleft
+GH (H=3)\strut
+\end{minipage} & \begin{minipage}[b]{0.06\columnwidth}\raggedleft
+KmJ (H=3)\strut
+\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedleft
+BB (H=3)\strut
+\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedleft
+Q (H=4)\strut
+\end{minipage} & \begin{minipage}[b]{0.06\columnwidth}\raggedleft
+DH (H=4)\strut
+\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedleft
+LH (H=4)\strut
+\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedleft
+GH (H=4)\strut
+\end{minipage} & \begin{minipage}[b]{0.06\columnwidth}\raggedleft
+KmJ (H=4)\strut
+\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedleft
+BB (H=4)\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.05\columnwidth}\raggedleft
+\(\bar x_1\)\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.87\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+0.85\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.81\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.82\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.88\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.8\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+0.70\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.76\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.72\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+0.71\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.77\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.05\columnwidth}\raggedleft
+\(\bar x_2\)\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.89\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+0.82\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.95\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.97\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+0.94\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.88\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.79\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+0.74\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.75\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.77\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+0.75\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.71\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.05\columnwidth}\raggedleft
+\(\bar x_3\)\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.87\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+0.97\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.83\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.96\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+0.89\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.95\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.74\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+0.75\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.79\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.7\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+0.79\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.71\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.05\columnwidth}\raggedleft
+\(\bar x_4\)\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.92\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+0.89\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.81\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.94\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+0.96\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.77\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+0.73\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.73\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.7\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+0.71\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.74\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.05\columnwidth}\raggedleft
+\(\bar x_5\)\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.85\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+0.83\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.96\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.96\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+0.83\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.81\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.8\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+0.73\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.8\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.78\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+0.8\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.79\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.05\columnwidth}\raggedleft
+\(\bar x_6\)\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.87\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+0.88\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.9\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.88\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+0.86\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.81\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.8\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+0.72\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.76\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.7\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+0.74\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.73\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.05\columnwidth}\raggedleft
+\(\bar x_7\)\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.87\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+0.95\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.99\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.83\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+0.86\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.84\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.75\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+0.7\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.77\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.72\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+0.77\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.77\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.05\columnwidth}\raggedleft
+\(\bar x_8\)\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.93\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+0.82\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.91\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.99\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+0.93\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.88\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.77\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+0.74\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.72\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.78\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+0.76\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+0.75\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.05\columnwidth}\raggedleft
+G(S)\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+7.07\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+7.01\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+7.16\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+7.35\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+7.27\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+7.05\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+6.22\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+5.81\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+6.08\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+5.87\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+6.03\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+5.97\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+\normalsize
+
+XXXXXXXXXXX
+XXXXXXXXXXX
+
+El INE de Chile culminó satisfactoriamente la estratificación del marco de muestreo 2017. Durante este proceso se consideraron más de 180 escenarios de estratificación junto con varias metodologías apropiadas y acordes tanto a la experiencia internacional como a la literatura especializada. Es importante aclarar que el proceso de estratificación del marco de muestreo tiene por objetivo coadyuvar a los equipos responsables de las estrategias de muestreo en la consecución de diseños de muestreo que induzcan una mayor eficiencia y precisión a la hora de la estimación de las estadísticas oficiales.
+
+De hecho, la propuesta de \textcite{Park_2003} apunta en este mismo sentido, pues propone que el efecto de diseño de cualquier encuesta se puede descomponer en tres partes que se relacionan entre sí de forma multiplicativa. En primer lugar está el efecto debido a la ponderación desigual, \(deff^W\); en segundo lugar se encuentra el efecto debido a la estratificación, \(deff^S\); y por último se tiene el efecto debido al muestreo en varias etapas, \(deff^C\). Por lo tanto:
+
+\[
+DEFF = deff^W \times deff^S \times deff^C
+\]
+
+Al encontrar la mejor estratificación, el equipo del INE ha permitido que la segunda componente de esta descomposición sea mínima, en cuanto se han seguido los pasos necesarios para ello y se ha escogido la estratificación en tres particiones que aseguró un menor \(deff^S\) para los indicadores estudiados. Ahora, cuando el marco se entregue al área de producción estadísticas, será tarea del INE asegurar que los efectos de diseño dados por el efecto de conglomeración y el uso del muestreo en varias etapas \(deff^C\) sea mínimo, así como el efecto debido al uso de factores de ponderación desiguales, \(deff^W\). En el primer caso, se deberá estudiar, para cada encuesta y operación estadística que haga uso del marco de muestreo estratificado, la relación entre UPMs y hogares a la luz de los indicadores de interés; en particular, es necesario decidir cuántos hogares serán seleccionados en cada UPM y cuántas UPMs serán seleccionadas dentro de cada estrato. De la mima manera, en el segundo caso, también se debe decidir, a la luz de la correlación entre los indicadores particulares de cada encuesta de hogares, cuáles variables de control serán utilizadas en la calibración de los estimadores. De esta forma, en esta estrategia tripartita, se asegura que el efecto de diseño de una encuesta levantada por el INE sea pequeño.
+
+Por otro lado, los escenarios de estratificación que se consideraron tuvieron en cuenta la correlación con el ingreso modelado mediante una técnica de predicción que hizo uso de información auxiliar externa. Los resultados encontrados resaltan la congruencia de la estratificación con el comportamiento de esta variable ilustrativa. Por consiguiente, cabe resaltar esta innovación que seguramente redundará en mejores prácticas de validación, tanto para el INE como para la región. En este sentido, y tendiendo en cuenta que la predicción del ingreso no estuvo presente en la estratificación final, se puede concluir que la estrategia de partición es apropiada para resumir un constructo de poder adquisitivo sobre las UPMs, que al final está altamente correlacionado con la incidencia de los fenómenos sociales de interés, como la pobreza, las necesidades básicas insatisfechas, los patrones de consumo, el ingreso medio, la condición de ocupación, la incidencia de criminalidad y de violencia, los indicadores educativos, entre mucho otros.
+
+Finalmente, ante la rápida y evidente expansión demográfica, resulta apropiado que se realicen pruebas internas acerca del impacto de la actualización del marco de muestreo con el uso de registros administrativos (por ejemplo, de avalúos catastrales). En particular, se debe establecer la existencia de una relación incontrovertible entre el registro administrativo y las categorías de estratificación. Se alienta a los funcionarios del INE a que realicen las pruebas y ejercicios que permitan establecer la eventual viabilidad de estas estrategias de actualización, y su posterior utilización en el siguiente censo de población y vivienda. Asimismo, se aconseja que este marco se establezca en el corto plazo sin ninguna modificación y que los cambios y hallazgos que se evidencien en el levantamiento de las encuestas sean incorporados en los procesos de adjudicación de pesos de muestreo y no en la modificación de las probabilidades de inclusión de las UPMs dentro del marco.
+
 \hypertarget{seleccion-de-la-muestra}{%
 \chapter{Selección de la muestra}\label{seleccion-de-la-muestra}}
 
@@ -483,23 +1008,6 @@ Todas las encuestas de hogares en la región comparten el mismo principio infere
 \end{itemize}
 
 Por supuesto, para que los anteriores principios se cumplan a cabalidad, es necesario contar con un instrumento que permita seleccionar a los hogares del país de forma exhaustiva y completa; esto quiere decir que el instrumento debería contener todos y cada uno de los hogares de la población. Dado que no existe una lista que permita identificar y ubicar cada uno de los hogares de la población, entonces se deben contemplar otras posibilidades que permitan lograr el objetivo. Debido al principio natural de la aglomeración social de las poblaciones humanas, es posible lograr este cometido de manera indirecta a través de la definición de marcos de muestreo de áreas.
-
-\hypertarget{marcos-de-muestreo-estratificacion-y-aglomeracion}{%
-\section{Marcos de muestreo: estratificación y aglomeración}\label{marcos-de-muestreo-estratificacion-y-aglomeracion}}
-
-Para realizar el proceso de selección sistemática de los hogares es necesario contar con un marco de muestreo que sirva de vínculo entre los hogares y las unidades de muestreo y que permita tener acceso a la población de interés. Como regla general, el marco de muestreo debe permitir \emph{identificar} y \emph{ubicar} a todos los hogares que conforman la población objetivo. Como lo afirma \textcite{Gutierrez_2016}, el marco de muestreo más utilizado en este tipo de encuestas es de áreas geográficas que vinculan directamente a los hogares o personas. Por esta razón, los diseños de muestreo de estas encuestas se apoyan en la aglomeración natural de los hogares en segmentos cartográficos, que a su vez están contenidos en agrupaciones mayores. ¿Cómo se aglomeran las personas y cómo podemos realizar un diseño de muestreo con base en esta forma de aglomeración? Pues bien, las personas se aglomeran en hogares, los cuales a su vez se aglomeran en comunidades más grandes: barrios, comunas, segmentos. Estas comunidades forman ciudades y la reunión de estas divisiones es el país. Por lo tanto, a pesar de que ningún país tiene a disposición una lista actualizada de todos los hogares junto con su ubicación e identificación, sí existe en todos los países una lista actualizada de los segmentos cartográficos presentes en las zonas urbanas y rurales. De esta forma, si se selecciona de forma probabilística una muestra de sectores y dentro de cada sector se selecciona de forma probabilística una muestra de hogares, entonces de forma indirecta estaremos seleccionando una muestra de hogares que puede representar la realidad de todo un país.
-
-Como se mencionó anteriormente, una característica esencial de los diseños de las encuestas de hogares es que la selección de las unidades finales de muestreo debe surtir varias etapas, de acuerdo a las agrupaciones definidas en los marcos de muestreo, que usualmente son marcos de área obtenidos de la división geográfica del país, región o municipio en áreas menores mutuamente excluyentes. Los institutos de estadística en América Latina hacen grandes esfuerzos para mantener actualizados sus marcos de muestreo. Por ejemplo, la \emph{Encuesta Nacional de Hogares} de Costa Rica utiliza un marco muestral construido a partir de los censos nacionales de población y vivienda de 2011 y corresponde a un marco de áreas en donde sus unidades son superficies geográficas asociadas con las viviendas. Este marco en particular permite la definición de UPM con 150 viviendas en las zonas urbanas y 100 viviendas en las zonas rurales. En general, el marco está conformado por 10461 UPM (64.5\% urbanas y 35.5\% rurales). \textcite{Gambino_Silva_2009} mencionan que, en la práctica, la consecución de los marcos de lista de lo hogares en la última etapa del muestreo puede tornarse difícil puesto que dentro del conglomerado no es obvio observar de manera exhaustiva los hogares, especialmente cuando la frontera del conglomerado es una línea imaginaria. Por ejemplo en lo urbano, la distinción entre dos conglomerados está demarcada claramente por las calles que conforman la ciudad; sin embargo, en la ruralidad, difícilmente existen caminos que puedan servir para delimitar los conglomerados. De la misma manera, esta delimitación se torna compleja cuando han ocurrido cambios en la infraestructura del área y aparecen nuevas construcciones.
-
-Observe que en general, ante el estudio de un fenómeno social, las desagregaciones geográficas más amplias constituyen un interés natural para los usuarios de las encuestas; es así como los investigadores que planean las encuestas quisieran poder desagregar la información por las regiones geográficas más grandes, que a su vez tienen cierta independencia política y administra. Las estadísticas nacionales que se publican a partir de las encuestas de hogares, cobran mayor relevancia a nivel de regiones, estados o departamentos. Este tipo de desagregaciones geográficas se conocen con el nombre de estratos. Inclusive los diseños de las encuestas de hogares han ido evolucionando para permitir que este tipo de agregaciones tenga representatividad en la encuesta. Aunado a lo anterior, si la característica de interés con la cual se planea la encuesta hace que la distribución de la población sea altamente sesgada, como en el caso de los ingresos o gastos, es recomendable crear un estrato de inclusión forzosa con las unidades más importantes en la población. Esta práctica asegura que el error de muestreo sea más bajo. Algunos países hacen uso de la información censal para definir una estratificación socio económica sobre los segmentos cartográficos del marco de muestreo utilizando para tal fin algunas preguntas del censo de población más reciente. Esta práctica representa una ventaja metodológica porque, en la mayoría de encuestas, los parámetros de interés tienen un comportamiento estructural diferente en cada uno de los subgrupos poblacionales creados, tendiendo a tener una mayor precisión en la estimación de los parámetros de interés. Por ejemplo, utilizando las preguntas del censo, es posible crear un índice de condiciones de vivienda y con este definir algunos grupos de viviendas mutuamente excluyentes que contengan viviendas parecidas dentro de ellos, pero que entre ellos sean muy disimiles. De esta forma, es posible estratificar los sectores cartográficos de todo un país y generar estimaciones más precisas de los indicadores sociales (como pobreza, ingreso medio, etc.) si el diseño de muestreo contempla este tipo de estratificación.
-
-Para el caso de la \emph{Gran Encuesta Integrada de Hogares} en Colombia, los criterios de estratificación forman dos grupos: el primero correspondiente a las 24 capitales junto con sus correspondientes áreas metropolitanas y el segundo correspondiente al resto de cabeceras municipales, centros poblados y la ruralidad dispersa. Además, la encuesta también contempla criterios de estratificacion económica a nivel municipal como nivel de urbanización y estructura de la población, basada en la proporción de habitantes con necesidades básicas insatisfechas. De la misma manera, el diseño de la muestra maestra del Instituto Nacional de Estadística y Geografía de México contempla este tipo de estratificación basada en los indicadores generados con la información del Censo de Población y Vivienda 2010. Previo al proceso de estratificación sociodemográfica, fue necesario construir y seleccionar una serie de variables que lograran, en conjunto, separar el universo de UPM en agrupaciones que mejoraran las principales estimaciones de las diferentes encuestas usuarias del Marco de Muestreo \autocite{INEGI_MX_2012}.
-
-De la misma manera, ante la ausencia de un marco de muestreo de hogares y personas en los países de la región, el diseño de las encuestas de hogares se dice complejo puesto que involucra varias etapas de selección y estratificación. Por ende, los marcos de muestreo están conformados por unidades primarias de muestreo (UPM) que se definen como segmentos cartográficos individuales, como una agrupación de segmentos o incluso como una división de segmentos masivos. Por ejemplo, tomemos en consideración el estrato urbana, en donde las UPM corresponden a manzanas (o agregaciones o particiones de manzanas), mientras que en el caso rural, las UPM corresponden a comunidades (o agregaciones o particiones de comunidades). En cualquier caso, la unidad de observación está constituida por las viviendas ocupadas particulares donde residen personas. En general, salvo en algunos países, las UPM no tienen el mismo tamaño dentro de los estratos; es decir no están constituidas por un número igual de viviendas. El caso es más evidente es la ruralidad, en donde podría ocurrir que una única UPM agrupe un conjunto de viviendas con demasiada heterogeneidad y una alta dispersión geográfica. Es así como es posible encontrar UPM con pocas viviendas o UPM con demasiadas viviendas. Esto constituye una desventaja técnica a la hora de establecer metodologías apropiadas para la recolección de la información primaria y además para la estimación de los errores de muestreo que se derivan de la encuestas de hogares y por esto algunos países están considerando la re-definición de las UPM como unidades con un número uniforme de viviendas.
-
-Es usual que tras el levantamiento de un nuevo censo se actualice el marco de muestreo con el que se seleccionarán las viviendas y hogares para todas las encuestas subsiguientes. Por la naturaleza de los censos, los INE deben recorrer la geografía de los países produciendo una nueva cartografía que derivará en la actualización de los marcos de muestreo. Por ejemplo, considere un país que cuente con un marco de muestreo que consta de cien mil UPM y, para cada una de estas, se ha logrado construir una estratificación socioeconómica que estuvo basada en la información recolectada en el último censo de población y vivienda. \textcite[pág. 183]{Kish_1965} afirma que la selección de UPM con tamaño desigual acarrea algunos problemas técnicos como que el tamaño de muestra final se convierte en una variable aleatoria, que depende de la probabilidad de selección de las UPM más grandes o más pequeñas. Lo anterior aumenta la incertidumbre en el costo final del operativo, pues si se seleccionan UPM con pocas viviendas, se deberán seleccionar nuevas UPM para cumplir con la cuota de viviendas o bien colapsar algunas otras UPM para mantener la selección inicial.
-
-Con base en lo anterior, se esperaría que la actualización de la cartografía y de los marcos de muestreo se realizara cada diez años. Es importante que estas actualizaciones conlleven a una definición de los marcos de muestreo que permitan tener mayor fluidez en los procesos logísticos de selección de hogares y que induzcan una mejora en la precisión de las estimaciones de los parámetros de interés. Por ejemplo, una forma muy conveniente de abordar este desafío es creando UPM que contengan, en la medida de lo posible, un mismo número de viviendas y, de esta manera, mantener una distribución uniforme en cada estrato. Siguiendo el consejo de \textcite[pág. 212]{Valliant_Dever_Kreuter_2013}, si el equipo de planeación de la encuesta tiene la flexibilidad de definir las UPM, como usualmente es el caso en las encuestas de hogares, entonces las UPM definitivamente deberían estar conformadas por una cantidad igual de viviendas.
 
 \hypertarget{disenos-de-muestreo}{%
 \section{Diseños de muestreo}\label{disenos-de-muestreo}}
@@ -1705,8 +2213,8 @@ Todas las encuestas de hogares sufren del fenómeno de la ausencia de respuesta 
 
 \begin{figure}
 \centering
-\includegraphics{EH-CEPAL_files/figure-latex/unnamed-chunk-1-1.pdf}
-\caption{\label{fig:unnamed-chunk-1}Patrón de respuesta MCAR}
+\includegraphics{EH-CEPAL_files/figure-latex/unnamed-chunk-3-1.pdf}
+\caption{\label{fig:unnamed-chunk-3}Patrón de respuesta MCAR}
 \end{figure}
 
 \begin{itemize}
@@ -1717,8 +2225,8 @@ Todas las encuestas de hogares sufren del fenómeno de la ausencia de respuesta 
 
 \begin{figure}
 \centering
-\includegraphics{EH-CEPAL_files/figure-latex/unnamed-chunk-2-1.pdf}
-\caption{\label{fig:unnamed-chunk-2}Patrón de respuesta MAR}
+\includegraphics{EH-CEPAL_files/figure-latex/unnamed-chunk-4-1.pdf}
+\caption{\label{fig:unnamed-chunk-4}Patrón de respuesta MAR}
 \end{figure}
 
 \begin{itemize}
@@ -1729,8 +2237,8 @@ Todas las encuestas de hogares sufren del fenómeno de la ausencia de respuesta 
 
 \begin{figure}
 \centering
-\includegraphics{EH-CEPAL_files/figure-latex/unnamed-chunk-3-1.pdf}
-\caption{\label{fig:unnamed-chunk-3}Patrón de respuesta MNAR}
+\includegraphics{EH-CEPAL_files/figure-latex/unnamed-chunk-5-1.pdf}
+\caption{\label{fig:unnamed-chunk-5}Patrón de respuesta MNAR}
 \end{figure}
 
 Nótese que a pesar de que se hayan tomado las medidas de ajuste necesarias en el diseño de la encuesta, cuando ya ha terminado el proceso de recolleción de infomración, se debe lidiar con la ausencia de respuesta para evitar sesgos y aumentar la precisión de la encuesta. La literatura especializada examina dos metodologías diferentes pero complementarias en el ejercicio de una encuesta: la prevención de la ausencia de respuesta (antes de que ocurra) y las técnicas de estimación necesarias para tener en cuenta la ausencia de respuesta de manera apropiada en el proceso de inferencia, después de la recolección de los datos. Si el mecanismo de ausencia de respuesta se asume MCAR, es posible contemplar en el proceso de inferencia únicamente a aquellas unidades que tienen registros completos y eliminar de la base de datos a aquellas unidades que no contestaron (\emph{list-wise deletion}). A pesar de que este tipo de análisis es simple, para evitar subestimaciones de los parámetros de interés, se debe realizar un ajuste de los factores de expansión inducidos por el diseño muestral, que originalmente fue planeado con un tamaño de muestra más grande que el efectivo. De esta forma, es posible suponer que la muestra de respondientes corresponde a una submuestra completamente aleatoria de la población y utilizar los principios de los diseños en dos fases. \textcite[capítulo 11]{Heeringa_West_Berglund_2010} afirman que este tipo de análisis, además de inducir posibles sesgos si el supuesto MCAR no se cumple, reduce la eficiencia de la inferencia debido al decremento del tamaño de muestra efectivo. Por lo tanto, en la mayoría de encuestas, este supuesto no se asume y se realiza un ajuste adicional después de que ha ocurrido la ausencia de respuesta. Es por esto que \textcite[sección 15.5]{Sarndal_Swensson_Wretman_2003} afirman que las principales técnicas para tratar la ausencia de respuesta son el ajuste a los pesos de muestreo y la imputación. El ajuste por ponderación implica aumentar los pesos aplicados en la estimación de los valores y de los encuestados para compensar los valores que se pierden debido a la ausencia de respuesta, mientras que la imputación implica la sustitución de los valores faltantes por valores artificiales.
