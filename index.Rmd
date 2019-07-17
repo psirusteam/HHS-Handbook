@@ -8,7 +8,7 @@ output:
   bookdown::word_document2
 documentclass: book
 fontsize: 12pt
-#geometry: margin = 3cm
+geometry: margin = 3cm
 lang: es
 bibliography: CEPAL.bib
 biblio-style: authoryear
@@ -22,3 +22,4 @@ lof: true
 # bookdown::render_book("index.Rmd", "bookdown::word_document2")
 # bookdown::preview_chapter("01.Rmd", "bookdown::word_document2")
 ---
+

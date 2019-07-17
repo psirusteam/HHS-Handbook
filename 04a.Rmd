@@ -1,5 +1,54 @@
 # Marcos de muestreo
 
+Todo procedimiento de muestreo probabilístico requiere de un dis\-po\-si\-ti\-vo que permita identificar, seleccionar y ubicar a todos y cada uno de los objetos per\-te\-ne\-cien\-tes a la población objetivo y que participarán en la selección aleatoria. Este dispositivo se conoce con el nombre de \textbf{marco de muestreo}.
+
+Cuando se dispone de un marco de elementos, se puede aplicar un diseño de muestreo de elementos; en muchas ocasiones se utilizan diseños de muestreo de conglomerados aunque se disponga de un marco de elementos. Si no se dispone de un marco de elementos (o es muy costoso construirlo) se debe recurrir a diseños de muestreo en conglomerados; es decir, que se utilizan marcos de conglomerados. Por ejemplo, al realizar una encuesta cuya unidad de observación sean las personas que viven en una ciudad, es muy difícil poder acceder a un marco de muestreo de las personas. Sin embargo, se puede tener acceso a la división sociodemográfica de la ciudad y así seleccionar algunos barrios de la ciudad, en una primera instancia y luego, seleccionar a las personas de los barrios en una segunda instancia. En el ejemplo anterior, los barrios son un ejemplo claro de conglomerados. Estas agrupaciones de elementos tienen la características de aparecer en el estado de la naturaleza. De esta forma, si se dispone de un marco de elementos, por ejemplo, el listado de empleados de una entidad, es posible aplicar un diseño de muestreo de elementos, realizar la selección aleatoria y de acuerdo a ese mismo diseño realizar las estimaciones necesarias. Cuando no existe un marco de muestreo disponible es necesario construirlo. Existen dos tipos de marcos de muestreo, a saber: 
+
+\begin{itemize}
+\item \textbf{De Lista:} listados físicos o magnéticos, ficheros, archivos de ex\-pe\-dien\-tes, historias clínicas que permiten identificar y ubicar a los objetos que participarán en el sorteo aleatorio.
+\item \textbf{De Área:} mapas de ciudades y regiones en formato físico o magnético, fotografías aéreas, imágenes de satélite o similares que permiten delimitar regiones o unidades geográficas en forma tal que su identificación y su ubicación sobre el terreno sea posible.
+\end{itemize}
+
+Es una virtud del marco si contiene \textbf{información auxiliar} que permite aplicar diseños muestrales y/o estimadores que conduzcan a estrategias más eficientes con respecto a la precisión de los resultados. O también si la información auxiliar\footnote{Toda información disponible a nivel poblacional o para todos y cada uno de los elementos del universo afecta directamente la estrategia empleada para obtener los objetivos de la investigación. Con respecto a la información auxiliar que pueda existir para cada elemento de la población es deseable que esté bien correlacionada con la variable de interés.} está organizada por órdenes deseables. Se llama información auxiliar \textbf{discreta}, si el marco de muestreo permite la desagregación de la población objetivo en ca\-te\-go\-rías o grupos poblacionales más pequeños. Por ejemplo nivel socioeconómico, grupo industrial, etc. Se llama información auxiliar \textbf{continua} si existe una o varias características de interés de tipo continuo y positivas. Es deseable que la información auxiliar continua esté altamente relacionada con la característica de interés. Por otra parte, un marco de muestreo es defectuoso si presenta alguno o varios de los siguientes casos:
+
+\begin{itemize}
+\item \textbf{Sobre-cobertura:} se presenta si en el dispositivo aparecen objetos que no pertenecen a la población objetivo. \textit{No son todos los que están.}
+\item \textbf{Sub-cobertura:} se da cuando algunos elementos de la población objetivo no aparecen en el marco de muestreo o cuando no se ha actualizado la entrada de nuevos integrantes. \textit{No están todos los que son.}
+\item \textbf{Duplicación:} Ll duplicación en un marco de muestreo se presenta si en el dispositivo aparecen varios registros para un mismo objeto. La razón más frecuente para la presencia de este defecto es la construcción no cuidadosa del marco a partir de la unión de registros administrativos de dos o más fuentes de información.
+\end{itemize}
+
+Estos defectos ocasionan errores en el cálculo de las expresiones que se utilizarán para generar las correspondientes estimaciones, generando sesgo, pérdida de precisión y, en algunos casos, que los resultados del estudio pierdan toda validez.
+
+En resumen, el marco de muestreo es cualquier dispositivo o mecanismo usado para obtener acceso observacional a la población de interés.
+\begin{itemize}
+\item Identificar y seleccionar una muestra de manera que respete un esquema de muestreo
+probabilístico.
+\item Establecer contacto con los elementos seleccionados (mail, CAPI, CATI, personal)
+\end{itemize}
+
+Recuerde que la población objetivo constituye el conjunto de elementos sobre la cual se desea información y se requieren estimaciones de parámetros. La población del marco es el conjunto de todos los elementos que son enlistados directamente como unidades en el marco o identificados mediante un marco más complejo, tal como un marco para selección en varias etapas. Además, los elementos son las entidades que componen la población y las unidades de muestreo son las entidades del marco muestral. Cuando no hay uno disponible, es posible construirlo. Luego, las siguientes características son deseables para un marco de muestreo son:
+
+\begin{itemize}
+\item Las unidades en el marco son identificados con un serial
+\item Cualquier unidad puede ser ubicada (dirección, teléfono)
+\item Está ordenado sistemáticamente (geografía, tamaño)
+\item Puede contener información adicional para cada unidad
+\item El marco especifica el dominio a donde pertenece cada unidad
+\item Cada elemento de la población está presente sólo una vez
+\item No contiene elementos que no estén en la población
+\item Todos los elementos de la población de interés están en el marco muestral
+\end{itemize}
+
+La calidad del marco puede ser medida mediante la relación que existe entre la población objetivo y la población del marco. Algunas imperfecciones comunes de los marcos de muestreo son:
+
+\begin{itemize}
+\item Subcobertura: Cuando algunos elementos de la población objetivo no están en la población del marco
+\item Sobrecobertura: Cuando los elementos que no
+están en la población objetivo están en la
+población del marco
+\item Duplicación: Cuando un elemento de la población objetivo se encuentra listado dentro del marco en más de una ocasión
+\end{itemize}
+
 Para realizar el proceso de selección sistemática de los hogares es necesario contar con un marco de muestreo que sirva de vínculo entre los hogares y las unidades de muestreo y que permita tener acceso a la población de interés. Como regla general, el marco de muestreo debe permitir *identificar* y *ubicar* a todos los hogares que conforman la población objetivo. Como lo afirma @Gutierrez_2016, el marco de muestreo más utilizado en este tipo de encuestas es de áreas geográficas que vinculan directamente a los hogares o personas. Por esta razón, los diseños de muestreo de estas encuestas se apoyan en la aglomeración natural de los hogares en segmentos cartográficos, que a su vez están contenidos en agrupaciones mayores. ¿Cómo se aglomeran las personas y cómo podemos realizar un diseño de muestreo con base en esta forma de aglomeración? Pues bien, las personas se aglomeran en hogares, los cuales a su vez se aglomeran en comunidades más grandes: barrios, comunas, segmentos. Estas comunidades forman ciudades y la reunión de estas divisiones es el país. Por lo tanto, a pesar de que ningún país tiene a disposición una lista actualizada de todos los hogares junto con su ubicación e identificación, sí existe en todos los países una lista actualizada de los segmentos cartográficos presentes en las zonas urbanas y rurales. De esta forma, si se selecciona de forma probabilística una muestra de sectores y dentro de cada sector se selecciona de forma probabilística una muestra de hogares, entonces de forma indirecta estaremos seleccionando una muestra de hogares que puede representar la realidad de todo un país. 
 
 ## Conceptos básicos
@@ -22,7 +71,10 @@ Para aumentar la eficiencia de la inferencia en las encuestas de hogares, es de 
 
 Esta sección recoge algunas metodologías de estratificación vigentes en la literatura y aplicadas por otros institutos de estadística de la región, así como el seguimiento a la ejecución de la partición del marco por parte de los funcionarios del INE. Luego de un breve introducción, la sección dos establece las diferencias entre la estratificación de las bases de datos a nivel personas y UPMs; la sección tres resume de forma no exhaustiva algunas de las metodologías más usadas para la estratificación de marcos de muestreo, con dos enfoques: univariados sobre medidas de resumen, y multivariados sobre toda la matriz de clasificación; la sección cuatro presenta los criterios de evaluación de los métodos de estratificación; la sección cinco presenta un pequeño resumen de los resultados finales de la estratificación del marco realizada por el INE; finalmente, la sección seis expone algunas conclusiones y recomendaciones en el corto plazo. 
 
-## Información a nivel de UPM
+
+## Metodologías de estratificación
+
+### Información a nivel de UPM
 
 En primer lugar, es necesario tomar en consideración que la estratificación que se pretende realizar es a nivel de las UPM. Esto implica que una vez que la UPM esté categorizada en algún estrato, todos sus componentes también estarán clasificados en la misma categoría; por consiguiente las personas y los hogares de la UPM pertenecerán al estrato en el cual la UPM fue clasificado. Cabe resaltar que,  tomando en consideración la información recolectada en el censo, es posible también clasificar a las personas o a los hogares en una primera instancia y después agregarlos hasta llegar al nivel de la UPM; sin embargo, en la práctica este proceso puede resultar un poco más complejo y no son claras sus ventajas. Por lo anteriormente mencionado, este documento estará enfocado en la clasificación de las UPM a partir de una matriz de información a nivel de esta misma agregación.
 
@@ -37,8 +89,6 @@ Con la información del censo se deben seleccionar o crear las variables estén 
 Debido a que las UPM tienen, en estricto rigor, tamaños diferentes, la escala y el nivel en el que se midan los indicadores puede afectar los procesos de clasificación. Luego, si la matriz de información con la cual se realiza la estratificación se construye con base en el número de personas (con determinadas características) dentro de la UPM, al no tener en cuenta el tamaño de esta, es muy probable que las metodologías de estratificación no logren agrupar de forma homogénea a las UPM. Por ejemplo, asuma que hay dos UPM con tamaño 100 y 300 hogares, que agrupan a 200 y 400 personas en la fuerza de trabajo, y además suponga que una de las variables de la matriz de información se define como el número de personas ocupadas. A su vez, asuma que la primera UPM pertenece a un sector acaudalado y la segunda UPM pertenece a un sector marginal. Es posible que el número de personas ocupadas en ambas UPM sea de 150 y que por esta razón queden erróneamente clasificadas en el mismo grupo. Por ende, definir la matriz de información en términos relativos (porcentaje de ocurrencia de cada variable) es una mejor alternativa para que el agrupamiento esté controlado por el tamaño de la UPM y supeditado únicamente a cambios estructurales en los constructos de medición del censo.
 
 Por último, una vez que se ha definido el conjunto de variables que entrarán en la matriz de información, es necesario verificar que todos los indicadores de esta matriz apunten hacia el mismo horizonte del constructo censal. Es decir, que **todos** los indicadores estén expresados en términos de acceso al bienestar de cada uno de los constructos. Además, es necesario realizar un proceso de refinamiento sobre esta matriz para eliminar aquellas variables que puedan estar altamente correlacionadas con el resto de las variables o que puedan expresarse como combinación lineal de otras variables. De esta manera, se evitan los problemas de multicolinealidad y se asegura una estratificación parsimoniosa. Al final se supone que se debe contar con una matriz de información $\mathbf{X}$ compuesta por $P$ variables, y $n_I$ filas; en donde cada fila de la matriz de información representará la observación de las UPM a novel censal para cada una de las $P$ variables. 
-
-## Metodologías de estratificación
 
 La teoría estadística ha definido que la mejor estratificación es aquella que minimice los errores de muestreo de los estimadores, expresados en forma de varianzas o errores estándar. Además, una particularidad de los procesos de estratificación es que las varianzas de estos estimadores dependen a su vez de la variación de los microdatos a nivel poblacional, que se han observado en el censo. Sin embargo, lo que podría resultar ser una estratificación óptima para una variable tal vez sea, al mismo tiempo, una estratificación pésima para otras variables. Más aun, sabiendo que no todas las variables de interés que se observarán en las encuestas durante el periodo intercensal han sido medidas y observadas en el censo, se debe estudiar muy bien, por medio del estudio de numerosos escenarios, qué estratificación utilizar. 
 
@@ -102,13 +152,6 @@ $$
 $$
 
 En donde $\mathbf x_j$ corresponde a la medición de las $P$ variables de la matriz de información en la $k$-ésima UPM, $\bar {\mathbf x}_h$ es el vector de medias de la matriz de información en el estrato $h$ y $\boldsymbol \Lambda$ es una matriz diagonal de tamaño $P \times P$ cuyas entradas se definen como la varianza de las $P$ variables de la matriz $\mathbf X$, es decir $\boldsymbol \Lambda [p,p]=S^2_{x_p}$. Esta modificación tiene como objetivo minimizar la relación entre la varianza de un estimador de muestreo estratificado con asignación proporcional y la de un muestreo aleatorio simple. Como se puede ver en el anexo, cuando $\boldsymbol \Lambda = \mathbf I$, el algoritmo resultante es idéntico al algoritmo clásico de K-medias.
-
-Para realizar la ejecución de este procedimiento en `R`, simplemente basta con dividir cada una de las columnas de la matriz de información por la desviación estándar de la variable asociada. Es posible implementar este algoritmo mediante el siguiente código computacional.
-
-```{r eval=FALSE}
-x1 = scale(X, center = F, scale = apply(X, 2, sd))
-kmeans(x = x1, centers = H)
-```
 
 **Partición genética (BB)**
 

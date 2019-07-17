@@ -1,202 +1,33 @@
-## Documentación de los diseños de muestreo en las encuestas de hogares {-}
+# Software
 
-El presente documento presenta las acciones que se deben tomar por parte de los técnicos dentro de las oficinas nacionales de estadística para el diseño de una encuesta de hogares. Se trata de una guía que recoje las experiencias internacionales encontradas por el asesor regional que puede ser mejorada o complementada con otras experiencias o actualizaciones teóricas. Este documento pretende definir un proceso que debe ser seguido en estricto orden para documentar correctamente el diseño de muestreo de las encuestas de hogares. Por su naturaleza, el docuemnto no pretende abordar detalles teóricos, ni tampoco discusiones epistemológicas de los métodos. 
+El diseño y análisis de la información proveniente de las encuestas de hogares debe contemplar el uso exhaustivo de las herramientas computacionales existentes. Esta sección revisa con detalle las aproximaciones computacionales del software estadístico utilizado para realizar cada uno de los procesos estadísticos que se necesitan para lograr el cometido de la publicación de cifras oficiales con altos niveles de precisión y confiabilidad. En particular, para los siguientes procesos:
 
-### Características y objetivos de la encuesta {-}
+1. Selección de muestras acorde al diseño de muestreo definido
+2. Generación de pesos de muestreo para cada individuo y hogar.
+3. Modelación de la ausencia de respuesta e imputación estadística.
+4. Calibración de los pesos de muestreo y ajustes por ausencia de respuesta.
+5. Estimación de los errores de muestreo para cada indicador de interés en los cuadros de producción estadística.
+6. Análisis de las relaciones multivariantes entre las variables de la encuesta.
+7. Modelación de las estimaciones para la predicción del parámetro de interés en dominios pequeños. 
 
-Una de las tareas más importantes en una encuesta es formular sus objetivos. Esto establece no solo las necesidades de información de la encuesta, sino también las definiciones operativas que se utilizarán, los temas específicos que se abordarán y el plan de análisis. Este paso de la encuesta determina qué se debe incluir en la encuesta y qué debe excluirse. 
+@United_Nations_2005[sección 7.8] muestra la importancia de incluir la estructura del diseño de muestreo complejo en la inferencia que se realiza para la estimación de estadísticas oficiales a partir de encuestas de hogares y advierten con un ejemplo empírico que de no hacerlo, es posible que las estimaciones resultantes sean sesgadas y además sus errores de muestreo se vean subestimados. A continuación se muestran algunos de las características más importantes que los paquetes estadísticos computacionales incorporan en el manejo de datos que provienen de estructuras de muestreo complejas como las encontradas en las encuestas de hogares. Una revisión más exhaustiva y detallada que adjunta sintaxis y código computacional puede encontrarse en @Heeringa_West_Berglund_2010[Apéndice A].
 
-1. Especificar los objetivos de la encuesta tan minuciosa y claramente como sea posible.
-    + Detallar el objetivo general y los objetivos específicos.
-1. Defina los principales conceptos (pobreza, ingreso, empleo, ocupación, consumo, hogar, vivienda, etc.).
-1. Hacer una breve descripción de los módulos de la encuesta.
-1. Establezca el período de referencia y la cobertura geográfica para la encuesta.
-    + Es posible que la encuesta esté compuesta por módulos que resultan ser representativos para algunas desagregaciones geográficas y para otras no.
-1. Determine los usuarios y usos de la información que producirá la encuesta.
-1. Determine el periodo de levantamiento de la encuesta y el método de recolección que se quiere utilizar.
+En general, estas herramientas computacionales están pensadas para hacer más eficiente el uso de las aproximaciones de varianza en muestras complejas, así como las técnicas de replicación para obtener los estimativos de varianza inducidos por el diseño de muestreo [@Westat_2007]. Algunos de estos softwares son de uso libre, aunque la mayoría corresponde a productos licenciados cuya licencia debe ser pagada. En general estos productos, además de proveer estadísticas descriptivas (como medias, totales, proporciones, percentiles y razones), permiten ajustar modelos de regresión lineales y logísticos. Todas las estadísticas resultantes están basadas en el diseño de muestreo de la encuesta. 
 
+### R{-}
 
-### Definición de la población objetivo {-}
+R es un software de uso libre cuyo uso es cada vez más frecuente en la investigación social, puesto que es muy probable encontrar los más recientes hallazgos científicos programados en este software [@R_2017]. Al ser de uso libre, los investigadores pueden subir sus propias colecciones de funciones computacionales al repositorio oficial (`CRAN`) y ponerlas a disposición de la comunidad. El paquete `samplesize4surveys` [@ss4s] permite determinar el tamaño de muestra de individuos y hogares en encuestas de hogares repetidas, tipo panel y con rotación. Los paquetes `sampling` [@Yves] y `TeachingSampling` [@TS] permiten seleccionar muestras probabilísticas desde los marcos de muestreo bajo un gran variedad de diseños y algoritmos de muestreo. El paquete `survey` [@TL], una vez que el diseño de muestreo ha sido predefinido mediante la función `svydesign()`, permite analizar datos provenientes de encuestas de hogares y obtener estimaciones apropiadas de los errores estándar. 
 
-La población objetivo debe ser definida de forma clara, concisa y escueta en función de los objetivos de la encuesta. Se deben establecer las definiciones pertinentes que estén involucradas en la medición y observación de las unidades de interés. En este sentido es pertinente definir quiénes son los sujetos objeto de medición. Una primera definición que vale la pena aclarar es la de **subpoblaciones de interés** que denota aquellos subconjuntos de la población objetivo para los que se quiere una cierta representatividad. Por ejemplo, @INE_ES_2002 define como subpoblaciones de interés a los subestratos definidos por condición de ocpuàción y sector (agricultores, trabajadores cuenta propia, directivos y profesionales, etc).
+### SPSS{-}
 
-1. Describa la población objetivo.
-    + En algunas encuestas la unidad objetivo es el hogar, en otras, como encuestas de empleo la población objetivo son las personas mayores de 15 años.
-1. Defina las unidades de observación y su ubicación geográfica. 
-1. Establezca quién contestará la encuesta en el hogar
-    En algunas enceustas se usa un informante adecuado que cumple ciertas características.
-1. Descripción de las subpoblaciones de interés en donde se quiere representatividad estadística.
-    + las subpoblaciones generalmente son geográficos (estados, departamentos, ciudades grandes), de zona (urbano, rural), aunque también pueden depender de la definición de la variable de interés (porcentaje de pobreza, gasto promedio del hogar en vestimenta, alimentos, licor, etc.). 
-    + Definir las áreas en términos del número de habitantes. 
-    + Es de interés tener representatividad en los cruces o sólo en los marginales de las subpoblaciones.
-    + Enumerar los municipios (o agregacioenes geográficas) que deben ser autorrepresentados (siempre deben ser parte de) en la enceusta.
+El módulo `complex samples` de `SPSS` [@IBM_2017] incorpora la selección de muestras complejas mediante la definición de un esquema de muestreo establecido por el usuario. Luego, es necesario crear un plan de análisis mediante la asignación de variables de diseño, métodos de estimación y tamaños de las unidades de muestreo. Una vez definido el plan de muestreo, el módulo integra la posibilidad de estimar conteos, estadísticas descriptivas y celdas de tablas cruzadas. También es posible realizar estimaciones de razones y de coeficientes de regresión en modelos lineales, junto con las respectivas estadísticas de pruebas de hipótesis. Por último el módulo permite estimar modelos no lineales, como regresiones logísticas, regresiones ordinales o regresiones de Cox.
 
-### Definición de los parámetros y variables de diseño {-}
+### SAS{-}
 
-1. Descripción de las variables de interés que serán medidas en la encuesta.
-1. Definición de los parámetros claves que resuelven el objetivo general de la encuesta.
-    + Definir si los parámetros de interés son de nivel o de cambio, o ambos.
-1. Descripción y presentación de las expresiones matemáticas de los parámetros de interés.
-1. Haga un primer resumen de los cruces necesarios para establecer el plan de tabulación de la encuesta.
+Este software estadístico incluye un procedimiento para la selección de muestras probabilísticas llamado `SURVEYSELECT` que integra los métodos de selección más comunes como muestreo aleatorio simple, muestreo sistemático, muestreo con probabilidad proporcional al tamaño, y algunas herramientas de afijación en los estratos. Para analizar los datos provenientes de muestras complejas se han programado algunos procedimientos [@SAS_2017]. `SURVEYMEANS`, que estima totales, medias, proporciones, y percentiles, junto con sus respectivos errores estándar, límites de los intervalos de confianza y pruebas de hipótesis. `SURVEYFREQ`, estima las estadísticas descriptivas (como totales y proporciones) de interés en tablas de una y dos vías, brinda las estimaciones del error de muestreo, y realiza un análisis de la bondad del ajuste de las estimaciones, independencia, riesgos y razones de *odds*. `SURVEYREG` y `SURVEYLOGISTIC` ajustan modelos de regresión lineal y logísticas, respectivamente. Estos procedimientos estiman los coeficientes de regresión, con sus respectivos errores, y adjunta un análisis exhaustivo de las propiedades de los modelos. Por último, `SURVEYPHREG` ajusta modelos de riesgos utilizando técnicas de máxima-pseudo verosimilitud. 
 
-### Consolidación del marco de muestreo {-}
+### STATA{-}
 
-En esta etapa viene a colación la definición de **estrato** que representa un subconjunto de la población de interés para el cual se ha decidido realizar un muestreo independiente de los otros estratos. En algunas ocasiones los estratos coinciden con las subpoblaciones de interés. Sin embargo, la creación de los estratos no necesariamente garantiza representativad, mientras que las subpoblaciones de interés sí lo hacen. 
-
-1. Descripción general del plan de recolección de información.
-    + Dependiendo de los parámetros de interés los hogares se visitarían sólo una vez o podría haber algún tipo de rotación en la muestra.
-1. Descripción de las unidades de muestreo en cada etapa del plan. 
-    + Conformación de las UPMs en las subpoblaciones de interés. Por ejemplo, en el sector urbano una UPM contiene entre 80 y 160 viviendas; en el complemento urbano, entre 80 y 160 viviendas; en el sector rural entre 160 y 300 viviendas.
-1. Identificación de las áreas que serán excluidas de la población objetivo.
-    + Áreas de dificil acceso, UPMs con un número de viviendas o hbaitantes muy pequeño (por ejemplo, menos de 10 viviendas), UPMs que estén siendo visitadas por otros operativos de campo, zonas de conflicto, etc.
-    + Presentar una tabla en donde se nombre la zona, su ubicación geográfica (en qué departamento o estado se encuentra), enumerar el número de hogares descartados y el porcentaje poblacional.
-1. Definición y descripción de los marcos de muestreo que se utilizarán para la selección de todas las unidades de muestreo.
-    + Para los marcos de áreas cartográficas hacer un resumen de cómo fue construido, asociado a qué levantamiento censal y la última vez que fue actualizado.
-    + Calcular la cobertura del marco de muestreo (diferencia porcentual entre la población de interés y la población enmarcada).
-    + Recuento del número de unidades primarias de muestreo, viviendas, hogares y personas a nivel nacional.
-    + Recuento del número total y proporción de unidades primarias de muestreo, viviendas, hogares y personas por cada subpoblación de interés. 
-        + La suma de las proporciones debería ser igual a 100% si las subpoblaciones son mutuamente excluyentes.
-        + En caso contrario, cuando las subpoblaciones no están anidados, presentar tablas separadas y en cada tabla la suma porcentual debe ser 100%.
-1. Descripción de las medidas de tamaño en cada marco de muestreo.
-    + En general las medidas de tamaño están asociadas al número de habitantes por UPM, pero también pueden estar definidas como el número de viviendas por UPM.
-    + En el caso de que la medida de tamaño se el número de vivienda, es necesario verificar que la vivienda se encuentre habitada.
-    + Es necesario justificar la creación de la medida de tamaño si resulta ser función de dos o más variables del marco.
-1. Descripción de la metodología de estratificación explícita de las unidades primarias de muestreo (por nivel socioeconómico, zona, etc.).
-    + Verificar que todas las subpoblaciones sean estratos (pero no todos los estratos son subpoblaciones).
-    + Docuemntar la creación de estratos de UPMs que no coinciden necesariamente con las subpoblaciones de interés, pero para los que se hace un muestreo independiente para reducir la varianza. 
-    + Definición de las agregaciones geográficas (ciudad, centro poblado, rural, resto rural) en términos del número de habitantes por zona.
-        + Definición de zona (generalmente rural está supeditada a activades de autoconsumo).
-        + Cuando el presupuesto es limitado, es posible estratificar implícitamente por el tamaño de la localidad (por ejemplo, localidades con más de 10mil habitantes, entre 15mil y 99mil, entre 2.5mil y 15mil, menos de 2.5mil habitantes).
-        + Delimitación del área urbana (por ejemplo, centros poblados con más de 2mil habitantes)
-        + Presentación de las variables de estratificaión socioeconómica (habitualmente de tenencia de bienes muebles y de necesidades básicas).
-        + Presentación del método utilzado (Dalenius, Jarque, *k-means*, etc) y de las medidas de distancia utilizadas para la creación de estratos estadísticos (generalmente son función del número de viviendas en las UPM, agregaciones sociodemosgráficas y de otras variables de interés)
-            + La estratificación de las UPMs debe llevarse a cabo para todo el país.
-            + Presentación de escenarios de estratificación (varaindo el núemro de estratos) y justificación del escenario escogido.
-            + Presentación de tabla con el número de estratos diferentes en el cruce de subpoblación de interés (Departamento) con tamaño de localidad. 
-            + Presentación de tablas con el número de UPM por estrato socioeconómico y subpoblación de interés (Departamento).
-            + Presentación de tablas con el número de viviendas por estrato socioeconómico, subpoblación de interés (Departamento) y tamaño de localidad.
-    + Presentación de un gráfico (ver Figura 1) que muestre la división del país en términos de zona,  agregaciones geográficas y UPMs.
-1. Descripción de la metodología de estratificación implícita
-
-### Diseño de muestreo {-}
-
-1. Definición del diseño de muestreo probabilístico general.
-1. Definición del diseño de muestreo en cada una de las etapas o fases de la encuesta.
-    + En caso de que existan variables auxiliares en el marco de muestreo de las UPMs, es posible utilizar un muestreo balanceado para equilibrar la muestra.
-        + Descripción de las variables de balanceo o de las medidas de tamaño (usualmente la medida de tamaño es el número de hogares, pero las varaibles de balanceo pueden ser número de hombres, mujeres y edades por grupos quinquenales).
-    + El esquema de Pareto ($\pi$PT, sin reemplazo y de tamaño de muestra fijo) induce buenas propiedades logísticas (coordinación de muestras) cuando hay varios opertaivos de campo, es óptimo y produce estimaciones de varianza válidas (a diferencia del muestreo sistemático $\pi$PT).
-1. Definición de los algoritmos de selección que serán utilizados en todas las etapas, estratos o fases.
-    + Citar la bibliografía de los algoritmos de muestreo y hacer un esquema general del algoritmo presentando el proceso de selección.
-    + En cada etapa de selección el esquema deberá contextualizar al lector acerca del proceso de muestreo de las unidades que se están seleccionando. 
-
-### Cálculo del tamaño de muestra {-}
-
-**A nivel nacional**
-
-1. Definición del nivel de precisión a nivel nacional en términos de la variable de diseño, el parámetro de interés, su margen de error relativo, el margen de error absoluto, nivel de confianza y de los correspondientes intervalos de confianza.
-    + En algunas ocasiones, dependiendo del comportamiento del parámetro de interés en las subpoblaciones, es necesario definir diferentes niveles de precisión. Por ejemplo, @Caceres_2015 considera cuatro categorias de pobreza (<2%, 2%-5%, 5%-10%, >10%) con diferentes errores relativos en cada caso (80%, 65%, 50%, 36%).
-1. Definición y justificación del efecto de diseño (DEFF) y del coeficiente de correlación intraclase de la variable de diseño con las UPM del marco de áreas.
-    + Por lo general, las encuestas demográficas y de migraciones normalmente
-requieren muestras más grandes dentro de cada UPM, ya que las características demográficas tienen una correlación intraclase más baja que las económicas.
-1. Cálculo y justificación del tamaño de muestra de las unidades de observación, hogares, viviendas y unidades primarias de muestreo a nivel nacional.
-1. Presentación de escenarios de muestreo variando el número promedio de hogares a nivel nacional
-    + Escogencia y justificación del escenario de muestreo que mejor se ajuste a los intereses de la encuesta
-
-
-**A nivel de subpoblación**
-
-1. Definición del nivel de precisión a nivel nacional en términos de la variable de diseño, el margen de error relativo, el margen de error absoluto, nivel de confianza y de los correspondientes intervalos de confianza.
-1. Definición y justificación del efecto de diseño (DEFF) y del coeficiente de correlación intraclase de la variable de diseño con las UPM del marco de áreas.
-1. Cálculo y justificación del tamaño de muestra de las unidades de observación, hogares, viviendas y unidades primarias de muestreo por subpoblación.
-    + Presentar de manera clara y exhaustiva todas las expresiones matemáticas involucradas en este cálculo.
-1. Presentación de escenarios de muestreo variando el número promedio de hogares a nivel nacional
-    + Incluir la fracción de muestreo esperada en cada subpoblación de interés.
-    + La fracción de muestreo no debería superar el 10% o 20%.
-
-
-**Asignación de la muestra final**
-
-El insumo más importante para el cálculo del tamaño de muestra es el número promedio de hogares por UPM. Sin emabrgo, no todas las UPM tienen el mismo número de hogares.
-
-1. Definir el porcentaje de sobremuestra sobre el tamaño de muestra inicial.
-    + Este ajuste debería ser diferenciado cuando hay información auxiliar a nivel de subpoblación.
-1. Estratificación de las UPMs por composición en términos del número de hogares.
-    + Presentación de una tabla que indique el número promedio de viviendas en la población y en la muestra de las agregaciones geográficas (urbano alto, complemento urbano, rural).
-    + En la tabla anterior verificar que el promedio ponderado de hogares seleccionados coincida con la cifra usada para la determinación del tamaño de muestra nacional. 
-1. Para los estratos que no coinciden con las subpoblaciones de interés docuemntar la asignación de tamaño de muestra que se utilizó (Neyman, proporcional, potencia, Lavallée-Hidiroglou, Kish, etc.)
-    + El número de UPMs $n_{Ih}$ que se deben seleccionar en cada estrato $h$ está dado por la siguiente relación entre el número de hogares $n_{IIh}$ que se debn seleccionar en el estrato $h$ y el núemro promedio de hogares que se seleccionan en cada UPM $\bar{n}_{IIh}$
-    $$n_{Ih} = \frac{n_{IIh}}{\bar{n}_{IIh}}$$
-        + El número de hogares $n_{IIh}$ que se debn seleccionar en el estrato $h$ se calcula de manera proporcional al número de hogares $N_{IIh}$ resportados en el marco de muestreo.
-    + Incluir una tabla de resumen de los estratos de interés que presente el número de UPMs en el marco y el porcentaje, el núemro de UPMs seleccionadas y el porcentaje, el total de viviendas u hogares y su porcentaje.
-        + Para garantizar que no haya problemas posteriores en la estimación de los errores de muestreo, es necesario que por cada estrato hayan mínimo dos UPMs.
-        + En los casos en que sólo se puede seleccionar una UPM por estrato, es necesario colapsar.
-    + Incluir una tabla de resumen de las subpoblaciones de interés que presente el valor esperado del estimador, el tamaño de muestra de hogares y personas, el efecto de diseño, el error absoluto, el error relativo, el coeficiente de variación, el margen de error y los límites de los intervalos de confianza
-1. Verificar que la ditribución (de habitantes y viviendas) en la muestra a nivel de estratos (o subpoblaciones) coincida con la distribución poblacional.
-    + En algunas ocasiones las distruibuciones poblacionales y muestrales no necesariamente coincidirán. En este caso es necesario argumentar por qué. 
-        + La principal razón debiera ser que las subpoblaciones requieren un tamaño de muestra mínimo e independiente para garantizar la representatividad. 
-
-### Definición de los factores de expansión {-}
-
-El siguiente diagrama presenta una visión general de la creación, tratamiento, ajuste y corrección de los factores de expansión a través del levantamiento de la ifnroación. 
-
-1. Presentación de los factores de expansión básicos inducidos por el diseño de muestreo en cada etapa y estrato.
-    + Presentar los ponderadores con la notación anidada $hi$ que quiere decir que la vivienda (o individuo) está presente en la UPM $i$ del estrato $h$.
-    + Presentar una tabla con la información poblacional del marco de muestreo del número de UPMs y número de viviendas por subpoblación de interés junto con la suma de los factores de expansión de UPMs y viviendas.
-    + Para cada etapa, verificar que la suma de los factores de expansión coincida con su contraparte poblacional.
-    + Presentar una tabla con suma, mínimo, máximo, media, mediana y desviación estandar de los ponderadores finales en cada subpoblación de interés.
-1. Ajuste por exclusión
-    + Si se ha definido que algunas áreas geográficas no serán encuestadas (o algunas UPM con un número de viviendas muy bajo) es necesario calcular un ajuste a los ponderadores de la segunda etapa de muestreo (selección de viviendas). 
-    + Este ajuste se realiza por estratos dividiendo el número de viviendas en el marco de muestreo para el estrato $h$ sobre la suma ponderada por el factor de expansión de la primera etapa del número de viviendas seleccionadas en el estrato $h$.
-1. Corrección por elegibilidad
-    + Identificación de viviendas no elegibles
-    + Identificación de viviendas con estatus de elegibilidad desconocida
-1. Ajuste por la ausencia de respuesta
-    + Creación de modelos que expliquen la probabilidad de respuesta.
-    + Creación de subgrupos que expliquen el fenómeno de ausencia de respuesta (deciles a pertir de las probabilidades de predicción o clases a partir de árboles de clasificación).
-1. Presentación de las variables de calibración de los factores de expansión.
-    + Presentación del método escogido para calibrar (postestratificación, raking, calibración mixta)
-          + Descripción de las pseudo-distancias de calibración y de los umbrales L y U utilizados para acotar los pesos de muestreo.
-          + El factor de expansión calibrado $w_k*$ se puede ver como $w_k* = w_k g_k$. Es pertinente revisar el comportamiento de los factores $g_k$ con los mínimos, máximos, medias y medianas. 
-    + Descripción de las proyecciones poblacionales utilizadas para calibrar.
-          + Presentación de las tablas con las correspondientes proyecciones demográficas en los post-estratos de interés.
-    + Descripción de las variables continuas utilizadas para calibrar (por ejemplo en encuestas panel para la creación de pesos compuestos longitudinales).
-1. Compilado de los factores de expansión 
-        + Presentar gráficos de boxplot para las subpoblaciones de interés de los factores de expansión en cada etapa.
-        + Presentar histogramas suavizados de los factores de expansión nacionales.
-        
-### Esquema de rotación (si aplica) {-}
-
-Para las encuestas que han sido planeadas de forma que sigan a los hogares a lo largo del tiempo (panel, split panel, rotativas). Ver por ejemplo @IBGE_2014
-
-1. Descripción y justificación del esquema de rotación
-    + Definir el número de veces que un hogar es encuestado en el ciclo de vida de la encuesta.
-    + Describir el porcentaje traslape de la encuesta en los diferntes levantamientos del año (mensual, trimestral, semestral y anual).
-    + Incluir el esquema de rotación de forma gráfica.
-1. Selección de las UPMs y hogares en los turnos de rotación
-    + Descripción del algortimo que respalda el proceso de selección rotativa en línea con el esquema de rotación propuesta para la encuesta.
-    + Tabla que indique el número de UPMs a visitar por semana en un trimestre agrupada para las subpoblaciones (geográficas) de interés.
-1. Construcción de pesos longitudinales
-1. Agregación de bases periódicamente
-    + Construcción de factores de expansión agregados
-
-### Definición de los estimadores {-}
-
-1. Definición de expresiones teóricas de estimadores de nivel.
-1. Definición de expresiones teóricas de estimadores para cambios (en encuestas rotativas).
-
-### Cálculo del error de muestreo {-}
-
-1. Definición de expresiones teóricas para estimar insesgadamente la
-varianza de los estimadores presentados en la sección anterior.
-    + Escribir las fórmulas del último conglomerado para totaltes y medias.
-        + Si la fracción de muestreo es significativa, utilizar la aproximación con el factor de corrección por finitud. 
-    + Adecuar las fórmulas del último conglomerado para variables linealizadas de razones o estimadores no lineales.
-1. Descripción de los detalles computacionales para métodos de remuestreo
-    + Descripción de la creación de estratos de varianza (*varstrat*) y unidades de varianza (*varunits*) en la aplicación de Jackknife o BRR.
-        + Por ejemplo, optar por hacer *varstrat* agrupando UPMs en las mismas subpoblaciones de interés.
-        + Por ejemplo, optar por hacer *varunits* agrupando hasta 30 viviendas en rural y hasta 50 viviendas en urbano.
-    + Si se opta por BRR con ajuste de Fay, presentar la matriz de Hadamard que se utilizará y el coeficiente de Fay. 
-    + Presentar tabla con resumen por subpoblaciones de interés del número de estratos y UPMs originales y del número de *varstrat* y *varunits* creados.
-
+El entorno `svy` provee un conjunto de herramientas para hacer una inferencia apropiada de las estadísticas oficiales provenientes de encuestas de hogares [@STATA_2017]. El comando `svyset` permite especificar las variables que identifican las características del diseño de muestreo de la encuesta, como los pesos de muestreo, los conglomerados y los estratos. El comando `svydescribe` proporciona tablas que describen los estratos y las unidades de muestra para una determinada etapa de la encuesta. Una vez cargadas las definiciones del diseño de muestreo, cualquier modelo puede ser estimado y sus estadísticos resultantes estarán basados en el diseño de muestreo de la encuesta. El entorno `svy` también permite la ejecución de algunos comandos predictivos.
 
 

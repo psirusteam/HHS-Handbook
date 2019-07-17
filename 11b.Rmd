@@ -1,4 +1,4 @@
-## Algunas encuestas de hogares en la región  {-}
+# Algunas encuestas de hogares en la región 
 
 Esta sección presenta una breve descripción del estado de la situación de las encuestas de hogares en la región. Aunque no se pretende hacer un resumen exhaustivo de cada encuesta y de sus componentes metodológicos, con seguridad el lector podrá enterarse de las características principales de la encuestas de hogares y sus condiciones de aplicación. 
 

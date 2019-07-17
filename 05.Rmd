@@ -2,7 +2,63 @@
 
 Uno de los tópicos que a menudo se dan por sentado en la literatura del diseño y análisis de encuestas de hogares es el tamaño de muestra. De hecho, en los libros de estadística y muestreo se establecen las características principales de los esquemas de muestreo y las propiedades estocásticas de los estimadores sin profundizar en que la muestra debe seleccionarse y que esta selección depende de cuántos hogares se necesiten en el estudio. De hecho, al hablar del tamaño de muestra en una encuesta de hogares, no solo se debe hacer referencia a los hogares, sino también a las personas. En efecto, la determinación del tamaño de muestra también depende del propósito de la encuesta. Por ejemplo, considere una encuesta de propósito múltiples que se levanta cada año con el fin de indagar acerca de múltiples fenómenos demográficos, sociales, educativos, y de condiciones de vida; en este contexto, se debe tener en cuenta que el tamaño de muestra definido debe ser útil, pertinente y apropiado para todas los indicadores que se desean medir. En este capítulo, el lector podrá encontrar una guía útil para identificar la mejor ruta a la hora de abordar el cálculo del tamaño de muestra en las encuestas de hogares. 
 
+### Confiabilidad y precisión {-}
+
+Antes de introducir las metodologías básicas para el cálculo del tamaño de muestra mínimo, es necesario definir los diferentes tipos de error muestral que se definen en una encuesta. En principio, se define un intervalo de confianza para el parámetro $\theta$, inducido por su estimador insesgado $\hat{\theta}$ (que se supone con distribución normal de media $\theta$ y varianza $Var(\hat{\theta})$), como 
+
+\begin{equation}\label{ICtheta}
+IC(1-\alpha)=\left[\hat{\theta}-z_{1-\alpha / 2}\sqrt{ Var(\hat{\theta})},\hat{\theta}+z_{1-\alpha / 2}\sqrt{Var(\hat{\theta})}\right]
+\end{equation}
+
+donde $z_{1-\alpha / 2}$ se refiere al cuantil $(1-\alpha / 2)$ de una variable aleatoria con distribución normal estándar. Cuando el diseño de muestreo es complejo, es necesario reemplazar el presentir de la distribución normal estándar por el presentir de una distribución $t-student$ con $N_I - H$ grados de libertad, suponiendo que hay $N_I$ unidades primarias de muestreo y $H$ estratos. En este orden de ideas, nótese que
+
+\begin{equation*}
+1-\alpha=\sum_{Q_0 \supset s}p(s),
+\end{equation*}
+
+donde $Q_0$ es el conjunto de todas las posible muestras cuyo intervalo de confianza contiene al total poblacional $t_y$. Desde la expresión del intervalo de confianza, se define el \emph{margen de error}, como aquella cantidad que se suma y se resta al estimador insesgado. En este caso, se define como 
+
+\begin{equation}
+ME = z_{1-\alpha / 2}\sqrt{ Var(\hat{\theta})}
+\end{equation}
+
+Desde esta expresión también es posible definir el \emph{error estándar}, dado por
+
+\begin{equation}
+EE = \sqrt{ Var(\hat{\theta})}
+\end{equation}
+
+Las anteriores medidas sólo tienen en cuenta la precisión del estimador. Una medida que tiene en cuenta la precisión y el sesgo del estimador es el \emph{margen de error relativo}, que se define como 
+
+\begin{equation}
+MER = z_{1-\alpha / 2}\frac{\sqrt{ Var(\hat{\theta})}}{E(\hat{\theta})}
+\end{equation}
+
+De la misma manera, también se define el \emph{coeficiente de variación} o \emph{error estándar relativo} definido por 
+
+\begin{equation}
+CV =  \frac{\sqrt{ Var(\hat{\theta})}}{E(\hat{\theta})}
+\end{equation}
+
+El tamaño de muestra dependerá del tipo de error que se quiera minimizar. Por ejemplo, para una población particular, el tamaño de muestra requerido para minimizar el margen de error, no será el mismo que el que se necesitara para minimizar el coeficiente de variación. 
+
+
 Uno de los primeros paradigmas con el que se debe lidiar es el de la independencia entre las observaciones. Este es un supuesto que gobierna gran parte de la teoría de análisis estadístico, pero que infortunadamente no se aplica en el contexto de las encuestas de hogares. Evidentemente, ante los retos que se debe enfrentar y las diversas estrategias de recolección de información, las fórmulas que se desprenden del supuesto de que los observaciones corresponden a una muestra de variables independientes e idénticamente distribuidas no son plausibles. La estratificación, las múltiples etapas y la aglomeración de las unidades de muestreo hacen que este supuesto no se cumpla en la práctica y por tanto, utilizar las expresiones tradicionales que se encuentran en los libros introductorios de estadística guiará a tamaños de muestra insuficientes. El problema del tamaño de muestra en encuestas de hogares ha sido abordado por diferentes autores con diferentes enfoques. Quizás uno de los más aceptados es aquel que define un factor de ajuste, llamado efecto de diseño (DEFF), en función de la correlación que hay entre la variable de interés con las unidades primarias de muestreo. A partir de este efecto de diseño se calcula el número de personas que deben ser encuestadas para minimizar un error de muestreo predefinido. 
+
+Cuando para la población de interés, se selecciona una muestra utilizando un diseño de muestreo de conglomerados o en varias etapas, entonces es imposible afirmar que existe independencia entre las observaciones. Lo anterior hace que no sea posible utilizar las fórmulas clásicas para la determinación de un tamaño de muestra, al considerar un diseño de muestreo aleatorio simple. Sin embargo, una forma sencilla de incorporar este efecto de aglomeración en las expresiones clásicas del muestreo aleatorio simple la da la siguiente relación, denotada como efecto de diseño:
+
+\begin{equation}
+DEFF(\hat{\theta})=\frac{Var_p(\hat{\theta})}{Var_{MAS}(\hat{\theta})}
+\end{equation}
+
+Esta cifra da cuenta del efecto de aglomeración causado por la utilización de un diseño de muestreo cualquiera $(p)$, frente a un diseño de muestreo aleatorio simple (MAS) en la inferencia de un parámetro de la población finita $\theta$ (que puede ser un total, una proporción, una razón, un coeficiente de regresión, etc.). Por lo anterior, es posible escribir la varianza del estimador bajo el diseño de muestreo complejo como 
+
+\begin{align}
+Var_p(\hat{\theta}) & = DEFF(\hat{\theta}) \ Var_{MAS}(\hat{\theta}) \\
+& = DEFF(\hat{\theta}) \ \frac{N^2}{n}\left(1-\frac{n}{N}\right)S^2_{y_U}
+\end{align}
+
+En este orden de ideas, dado que en evaluación de políticas públicas es muy factible encontrar información relacionada con las características de interés puesto que, dado que el gobierno debe cumplir con su obligación legal de evaluar las intervenciones, hay encuestas pasadas similares que están disponibles. Por lo tanto, si al implementar un muestreo aleatorio simple y, para un tamaño de muestra $n_0$, es posible conseguir la precisión deseada, entonces, el valor del tamaño de muestra que tendrá en cuenta el efecto de aglomeración para un diseño complejo estará cercano  a $n=n_0*DEFF$. 
 
 En general, en encuestas de hogares se parte de un marco de muestreo de áreas que agrupa a toda la población de un país. Estas áreas están definidas como agregaciones cartográficas o UPM y contienen a su vez a los hogares en donde se encuentran las personas que son susceptibles de ser entrevistadas. Sin embargo, debido a la agrupación natural de las personas en hogares, a veces los cálculos se hacen complejos, máxime conociendo que la población de interés es un subconjunto de los habitantes de los hogares. Por otro lado, debido a que el marco de muestreo comúnmente usado por las Oficinas Nacionales de Estadística (ONE) es una lista de UPM que agrupa a toda la población del país, se hace necesario más allá de calcular el tamaño de muestra de las personas, también calcular el tamaño de muestra de UPM y hogares en la muestra. Por lo tanto, en este documento se pretende sintetizar los mecanismos de asignación de muestra en tres escenarios que son comunes en la práctica estadística del diseño de encuestas de hogares: 
 
@@ -29,7 +85,7 @@ En general, al definir las expresiones de tamaño de muestra, es menester ser cu
 
 Para introducir las metodologías apropiadas, junto con las  expresiones adecuadas, en cada escenario se definirán las cantidades de interés, se dará una breve introducción al problema y se realizarán los cálculos detenidamente con muchos ejemplos de encuestas reales. Para mantener la uniformidad en los cálculos, todos los ejemplos suponen una población de tamaño $N=50$ millones, con $N_{II} = 12$ millones de hogares, para el cual se desea obtener una muestra con una confianza del 90%. En cada escenario se supone que el país está dividido en $N_{I} =30$ mil UPM, conformadas por segmentos cartográficos (agregaciones de manzanas).
 
-## Primer escenario: tamaño de muestra para UPM, hogares y personas
+## Tamaño de muestra para UPM, hogares y personas
 
 Cuando la unidad de observación sean las personas, sin importar que la variable de interés esté a nivel de hogar, será necesario siempre basar nuestros cálculos en el tamaño de muestra de las personas. Por ejemplo, para tener una inferencia apropiada al estimar el ingreso medio percápita, el porcentaje de personas pobres o el porcentaje de personas con una característica particular es necesario definir a la población objetivo como todas las personas que componen un hogar para posteriormente medir la variable de interés que será observada para todas ellas.
 
@@ -145,7 +201,7 @@ Nótese que en este caso la muestra en los 31617 hogares induce un operativo muy
 |         100|        23.0| 16.4| 1472|  147222|    33861|
 
 
-## Segundo escenario: tamaño de muestra para UPM y hogares
+## Tamaño de muestra para UPM y hogares
 
 En algunas ocasiones la variable de interés y la unidad de observación están a nivel de hogar. Por ejemplo, cuando todas las variables de interés se miden en la vivienda. En este caso es posible modificar el algoritmo de la sección anterior para seleccionar únicamente a los hogares en la muestra, sin necesidad de realizar un submuestreo de personas. En este caso algunas cantidades desaparecen porque no son objeto de la población de hogares, por ejemplo $r$ y $b$; algunas otras expresiones deben ser redefinidas al contexto de los hogares, como por ejemplo, el coeficiente de correlación intraclase $\rho$, el efecto de diseño y todas las expresiones de tamaños de muestra. En todo caso, la adaptación del algoritmo se describe a continuación.
 
@@ -220,7 +276,7 @@ A continuación se muestran algunos resultados que permiten establecer otros esc
 |          40|  2.3|  194|    7757|
 |          45|  2.5|  185|    8323|
 
-## Tercer escenario: tamaño de muestra para UPM y personas
+## Tamaño de muestra para UPM y personas
 
 En algunos casos en donde la variable de interés esté a nivel de persona y el cuestionario de la encuesta no induzca preguntas acerca del hogar, y además exista un inventario detallado de las personas que residen en cada UPM, es posible evadir la selección de los hogares e ir directamente a la selección de personas. En este caso, la lógica del cálculo del tamaño de muestra se mantiene modificando en cierta manera el algoritmo de las secciones anteriores, tal como se ilustra a continuación. 
 
@@ -298,6 +354,140 @@ Es posible plantear otros escenarios a medida que se evalúe el efecto que conll
 |          75|          10.5|  1.4|  392|       4120|    29429|
 |         100|          14.0|  1.6|  327|       4574|    32671|
 |         125|          17.5|  1.7|  287|       5029|    35921|
+
+
+## Otros escenarios de interés
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+### Tamaño de muestra para la estimación de la diferencia de proporciones
+
+
+Suponga una población $U$, que se encuentra particionada en dos subpoblaciones $U_1$ de tamaño $N_1$ y $U_2$, de tamaño $N_2$. En el levantamiento de una línea de base, una subpoblación corresponde al grupo que no recibe la intervención (grupo control) y la otra al grupo susceptible de recibir la intervención (grupo tratamiento). El interés del investigador está en conocer la diferencia de algunas proporciones entre estos grupos. 
+
+Por ejemplo, suponga que se quiere conocer la diferencia entre las proporciones de niños desnutridos. Se espera que la proporción de niños desnutridos del  grupo tratamiento no supere la proporción de niños desnutridos en el grupo control. Por lo tanto, el parámetro de interés se escribe como:
+\begin{equation}
+\theta=P_1-P_2=\frac{N_{d1}}{N_1}-\frac{N_{d2}}{N_2}
+\end{equation}
+
+En donde $N_{di}=\sum_{k\in U_i}Z_{dik}$, para $i=1,2.$ Ahora, $Z_{dik}$ es una característica dicotómica que indica si el niño $k$-ésimo de la subpoblación $U_i$ está en estado de desnutrición.
+
+Por supuesto, bajo muestreo aleatorio simple, un estimador insesgado para $\theta$ es
+\begin{align}
+\hat{\theta}=\hat{P}_1-\hat{P}_2=\frac{\hat{N}_{d1}}{N_1}-\frac{\hat{N}_{d2}}{N_2}
+\end{align}
+
+En donde, $\hat{N}_{di}=\frac{N_i}{n_i}\sum_{k\in S_i}Z_{dik}$, para $i=1,2.$ La varianza del anterior estimador es:
+
+\begin{align*}
+Var(\hat{P}_1-\hat{P}_2)&=Var\left(\frac{\hat{N}_{d1}}{N_1}\right)+Var\left(\frac{\hat{N}_{d2}}{N_2}\right)\\
+&=\frac{1}{n_1}\left(1-\frac{n_1}{N_1}\right)P_1Q_1+\frac{1}{n_2}\left(1-\frac{n_2}{N_2}\right)P_2Q_2
+\end{align*}
+
+Nótese que no hay covarianzas puesto que las selecciones son independientes en cada subgrupo. Ahora, para encontrar el tamaño de muestra óptimo, es útil realizar los \textbf{siguientes supuestos}:
+
+\begin{enumerate}
+\item Asumir que las subpoblaciones son grandes y por ende $N_1=N_2=N$
+\item Por lo anterior, asumir que los tamaños de muestra pueden ser iguales y tales que $n_1=n_2=n$. 
+\item Esto conlleva a que el tamaño de toda la población es $2N$ y el tamaño de la muestra total (para el grupo tratamiento y el control) es de $2n$.
+\end{enumerate}
+
+Luego, la varianza se simplifica de la siguiente manera:
+
+\begin{align}
+Var(\hat{P}_1-\hat{P}_2)=\frac{1}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)
+\end{align}
+
+Nótese a su vez que, si el levantamiento de las observaciones no puede ser realizado utilizando muestreo aleatorio simple, sino que por el contrario, la muestra aleatoria fue seleccionada mediante un diseño de muestreo complejo con un efecto de diseño\footnote{Recuerde que si el muestreo es aleatorio simple, el efecto de diseño es $DEFF=1$.} $(DEFF)$ no ignorable y mayor a uno, entonces la varianza tomaría la siguiente forma 
+
+\begin{align}
+Var(\hat{P}_1-\hat{P}_2)=\frac{DEFF}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)
+\end{align}
+
+De esta manera, un intervalo de confianza del 95\% para la diferencia de proporciones está dado por
+\begin{align}
+IC(95\%)_{P_1-P_2}&=(\hat{P}_1-\hat{P}_2) \pm Z_{1-\alpha/2} \sqrt{\frac{DEFF}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)}
+\end{align}
+
+Lo anterior quiere decir que el margen de error, $e$, de la encuesta debe ser tal que:
+\begin{align}
+e< Z_{1-\alpha/2}\sqrt{\frac{DEFF}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)}
+\end{align}
+
+Por lo tanto, despejando $n$, se tiene que la muestra en cada subgrupo debe mayor que:
+\begin{align}
+ n> \dfrac{DEFF(P_1Q_1+P_2Q_2)}{\dfrac{e^2}{Z_{1-\alpha/2}^2}+\dfrac{DEFF(P_1Q_1+P_2Q_2)}{N}}
+ \end{align}
+ 
+ Para el levantamiento de una línea de base, que quiera estimar una diferencia de proporciones $P_1-P_2$ (donde $Q_1=1-P_1$ y $Q_2=1-P_2$), entonces el tamaño de muestra mínimo\footnote{Note que el tamaño de muestra de toda la evaluación es $2n$, puesto que se debe seleccionar $n$ elementos en el grupo control y $n$ elementos en el grupo tratamiento.} necesario para lograr una estimación confiable de esta diferencia, con menos de $\varepsilon\%$ de error, es:
+ 
+\begin{equation} 
+n \geq \dfrac{(P_1Q_1+P_2Q_2)DEFF}{\dfrac{\varepsilon^2}{z_{\alpha}^2}+\dfrac{(P_1Q_1+P_2Q_2)DEFF}{N}}
+\end{equation} 
+
+Por ejemplo, en una encuesta de fuerza laboral que quiera estimar la diferencia entre el porcentaje de personas desocupadas en dos periodos diferentes CITAR CPS del Census Bureau.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+### Diferencia de proporciones para contraste de hipótesis
+
+Suponga que el investigador desea realizar el contraste de una hipótesis de interés. En particular, suponga que hay dos grupos de interés en la población finita\footnote{En este apartado, se deben considerar los mismos tres supuestos de la sección 5.3.1.} y que la hipótesis está inducida por la diferencia de las proporciones en las dos poblaciones. el investigador considera que la diferencia es significativa para el fenómeno en cuestión si es mayor que un valor $D$ definido de antemano y conocido como tamaño del efecto que el investigador desea detectar.
+
+Nótese que la significación estadística, inducida por un valor-p, no siempre tiene la misma connotación de significación científica o económica, que puede presentarse en fenómenos raros, para los cuales no necesariamente se gozaría de significación estadística. Por lo tanto el sistema de hipótesis que se quiere contrastar es el siguiente:
+\begin{equation*}
+H_o: P_1-P_2=0 \ \ \ \ \ vs.  \ \ \ \ \ H_a: P_1 -P_2 =D > 0 
+\end{equation*}
+
+Nótese que, acudiendo a la distribución normal de los estimadores de las proporciones, la regla de decisión en este caso induce el rechazo de la hipótesis nula cuando 
+\begin{align*}
+\dfrac{\hat{P}_1-\hat{P}_2}{\sqrt{Var(\hat{P}_1-\hat{P}_2)}} > Z_{1-\alpha}
+\end{align*}
+
+Si las características del estudio implican que el diseño de muestreo es complejo con un $DEFF > 1$, entonces esta regla de decisión rechaza la hipótesis nula si
+\begin{align*}
+\dfrac{\hat{P}_1-\hat{P}_2}{\sqrt{\frac{DEFF}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)}} > Z_{1-\alpha}
+\end{align*}
+
+En este caso, es necesario controlar la probabilidad de cometer el error tipo 2 (aceptar una hipótesis nula, dado que ésta es falsa). A esta probabilidad se le conoce como \emph{potencia} y, suponiendo que nuestro interés está en $P_1 -P_2 =D$, está dada por
+
+\begin{align*}
+\beta &\leq Pr\left(\dfrac{\hat{P}_1-\hat{P}_2}{\sqrt{\frac{DEFF}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)}} > Z_{1-\alpha} \left. | \right. P_1 -P_2 =D \right)\\
+&= Pr\left(\dfrac{(\hat{P}_1-\hat{P}_2)-D}{\sqrt{\frac{DEFF}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)}} > Z_{1-\alpha} - \dfrac{D}{\sqrt{\frac{DEFF}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)}} \right)\\
+&= 1-\Phi\left(Z_{1-\alpha} - \dfrac{D}{\sqrt{\frac{DEFF}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)}} \right)
+\end{align*}
+
+Por lo anterior, se tiene que 
+\begin{align*}
+1-\beta \geq \Phi\left(Z_{1-\alpha} - \dfrac{D}{\sqrt{\frac{DEFF}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)}} \right)
+\end{align*}
+
+Entonces, 
+\begin{align*}
+Z_{1-\beta}& \leq Z_{1-\alpha} - \dfrac{D}{\sqrt{\frac{DEFF}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)}} 
+\end{align*}
+
+En consecuencia, al despejar $n$, se tiene que la muestra en cada subgrupo debe mayor que:
+\begin{align}
+n \geq \dfrac{DEFF(P_1Q_1+P_2Q_2)}{\dfrac{D^2}{(Z_{1-\alpha}+Z_{\beta})^2}+\dfrac{DEFF(P_1Q_1+P_2Q_2)}{N}}
+ \end{align}
+ 
+### Tamaño de muestra para la estimación del impacto en dos mediciones longitudinales
+
+Para el seguimiento respectivo en una segunda oleada (SO) evaluación de impacto, que quiera estimar el impacto de la intervención, definido como la diferencia en diferencias de las proporciones de interés teniendo en cuenta el grupo y el tiempo en el cual fue realizada la encuesta. De esta forma, el impacto se define como:
+
+\begin{equation}
+Imp=(P_{1,SO}-P_{1,LB})-(P_{2,SO}-P_{2,LB})
+\end{equation}
+
+En donde $Q_{1,SO}=1-P_{1,SO}$, $Q_{1,LB}=1-P_{1,LB}$, $Q_{2,SO}=1-P_{2,SO}$, $Q_{2,LB}=1-P_{2,LB}$). Nótese que el índice 1 denota el grupo tratamiento y el índice 2 denota el grupo control, el índice $SO$ denota la segunda oleada y el índice $LB$ denota la línea de base. En este caso, $P_{1,SO}$ describe la proporción de interés en el grupo tratamiento para la segunda oleada y $P_{2,LB}$ denota la proporción de interés en el grupo control para la línea de base, y así sucesivamente. Entonces el tamaño de muestra mínimo\footnote{Note que el tamaño de muestra de toda la evaluación es $4n$, en las dos oleadas, puesto que se debe seleccionar $n$ elementos en el grupo control para la línea base, $n$ elementos en el grupo control para la segunda oleada, $n$ elementos en el grupo tratamiento para la línea de base y, finalmente, $n$ elementos en el grupo tratamiento para la segunda oleada.}  necesario para lograr una estimación confiable de esta diferencia, con menos de $\varepsilon\%$ de error, es:
+ 
+\begin{equation} 
+n \geq \dfrac{(P_{1,SO}Q_{1,SO}+P_{1,LB}Q_{1,LB}+P_{2,SO}Q_{2,SO}+P_{2,LB}Q_{2,LB})(1-TR)DEFF}{\dfrac{\varepsilon^2}{z_{\alpha}^2}+\dfrac{(P_{1,SO}Q_{1,SO}+P_{1,LB}Q_{1,LB}+P_{2,SO}Q_{2,SO}+P_{2,LB}Q_{2,LB})(1-TR)DEFF}{N}}
+\end{equation} 
+
+En donde $T$ corresponde a la tasa de traslape ($T=1$ corresponde a un panel completo, $T=0.5$ a un semi-panel con traslape del 50\% y el caso extremo $T=0$ a una encuesta en donde no hay traslape) y $R$ se define como la correlación entre las dos mediciones - línea de base y segunda oleada - ($R=0$ implica que no hay correlación entre los dos momentos, $R=-1$ implica una máxima correlación negativa entre los dos momentos y $R=1$ implica una correlación positiva máxima entre los dos momentos). Por ejemplo, en una evaluación de impacto de a una política de asistencia laboral a la población por debajo de la línea de pobreza, esta expresión se utilizaría para estimar la diferencia en diferencias de la proporción de desempleados entre los grupos control y tratamiento y en dos periodos de tiempo. 
+
 
 ## Algunas consideraciones adicionales
 
