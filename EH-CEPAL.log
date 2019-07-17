@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2017.5.23)  17 JUL 2019 12:44
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2017.5.23)  17 JUL 2019 13:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -968,7 +968,377 @@ Package: titling 2009/09/04 v2.1d maketitle typesetting
 \thanksmarkwidth=\skip72
 \thanksmargin=\skip73
 \droptitle=\skip74
-) (/usr/local/texlive/2017/texmf-dist/tex/latex/setspace/setspace.sty
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/us
+r/local/texlive/2017/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/local/te
+xlive/2017/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x
+\pgfutil@everybye=\toks24
+\pgfutil@tempdima=\dimen171
+\pgfutil@tempdimb=\dimen172
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-li
+sts.tex))
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box50
+(/usr/local/texlive/2017/texmf-dist/tex/latex/ms/everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+)) (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.te
+x
+Package: pgfrcs 2015/08/07 v3.0.1a (rcs-revision 1.31)
+))
+Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/
+local/texlive/2017/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks25
+\pgfkeys@temptoks=\toks26
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.c
+ode.tex
+\pgfkeys@tmptoks=\toks27
+))
+\pgf@x=\dimen173
+\pgf@y=\dimen174
+\pgf@xa=\dimen175
+\pgf@ya=\dimen176
+\pgf@xb=\dimen177
+\pgf@yb=\dimen178
+\pgf@xc=\dimen179
+\pgf@yc=\dimen180
+\w@pgf@writea=\write6
+\r@pgf@reada=\read4
+\c@pgf@counta=\count361
+\c@pgf@countb=\count362
+\c@pgf@countc=\count363
+\c@pgf@countd=\count364
+\t@pgf@toka=\toks28
+\t@pgf@tokb=\toks29
+\t@pgf@tokc=\toks30
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
+)
+Driver file for pgf: pgfsys-xetex.def
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.de
+f
+File: pgfsys-xetex.def 2014/07/09  (rcs-revision 1.11)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx
+.def
+File: pgfsys-dvipdfmx.def 2014/07/09  (rcs-revision 1.14)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def
+File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
+)
+\pgfsys@objnum=\count365
+)))
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex
+File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
+\pgfsyssoftpath@smallbuffer@items=\count366
+\pgfsyssoftpath@bigbuffer@items=\count367
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+)) (/usr/local/texlive/2017/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: xetex.def on input line 225.
+LaTeX Info: Redefining \color on input line 709.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr
+/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex (/usr/
+local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen181
+\pgfmath@count=\count368
+\pgfmath@box=\box51
+\pgfmath@toks=\toks31
+\pgfmath@stack@operand=\toks32
+\pgfmath@stack@operation=\toks33
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex))) (/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/m
+ath/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count369
+))
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex
+File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
+\pgf@picminx=\dimen182
+\pgf@picmaxx=\dimen183
+\pgf@picminy=\dimen184
+\pgf@picmaxy=\dimen185
+\pgf@pathminx=\dimen186
+\pgf@pathmaxx=\dimen187
+\pgf@pathminy=\dimen188
+\pgf@pathmaxy=\dimen189
+\pgf@xx=\dimen190
+\pgf@xy=\dimen191
+\pgf@yx=\dimen192
+\pgf@yy=\dimen193
+\pgf@zx=\dimen194
+\pgf@zy=\dimen195
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex
+File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
+\pgf@path@lastx=\dimen196
+\pgf@path@lasty=\dimen197
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex
+File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
+\pgf@shorten@end@additional=\dimen198
+\pgf@shorten@start@additional=\dimen199
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex
+File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
+\pgfpic=\box52
+\pgf@hbox=\box53
+\pgf@layerbox@main=\box54
+\pgf@picture@serial@count=\count370
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex
+File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
+\pgflinewidth=\dimen256
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex
+File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
+\pgf@pt@x=\dimen257
+\pgf@pt@y=\dimen258
+\pgf@pt@temp=\dimen259
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex
+File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex
+File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex
+File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
+\pgfarrowsep=\dimen260
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex
+File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
+\pgf@max=\dimen261
+\pgf@sys@shading@range@num=\count371
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex
+File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex
+File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
+\pgfexternal@startupbox=\box55
+))
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex
+File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex
+File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex
+File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
+)))
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex
+File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
+\pgfnodeparttextbox=\box56
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex
+File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty
+Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen262
+\pgf@nodesepend=\dimen263
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty
+Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
+)) (/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr
+/local/texlive/2017/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/local/
+texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/loca
+l/texlive/2017/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/local/texlive/20
+17/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/local/texlive/2017/
+texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen264
+\pgffor@skip=\dimen265
+\pgffor@stack=\toks34
+\pgffor@toks=\toks35
+))
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
+Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex
+File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
+\pgf@plot@mark@count=\count372
+\pgfplotmarksize=\dimen266
+)
+\tikz@lastx=\dimen267
+\tikz@lasty=\dimen268
+\tikz@lastxsaved=\dimen269
+\tikz@lastysaved=\dimen270
+\tikzleveldistance=\dimen271
+\tikzsiblingdistance=\dimen272
+\tikz@figbox=\box57
+\tikz@figbox@bg=\box58
+\tikz@tempbox=\box59
+\tikz@tempbox@bg=\box60
+\tikztreelevel=\count373
+\tikznumberofchildren=\count374
+\tikznumberofcurrentchild=\count375
+\tikz@fig@count=\count376
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex
+File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
+\pgfmatrixcurrentrow=\count377
+\pgfmatrixcurrentcolumn=\count378
+\pgf@matrix@numberofcolumns=\count379
+)
+\tikz@expandcount=\count380
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
+)))
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.code.tex
+File: tikzlibraryshapes.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1
+)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.geometric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2008/06/26 v3.0.1a (rcs-revision 1.1)
+
+))
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.misc.code.tex
+File: tikzlibraryshapes.misc.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.misc.code.tex
+File: pgflibraryshapes.misc.code.tex 2013/07/18 v3.0.1a (rcs-revision 1.5)
+))
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.symbols.code.tex
+File: tikzlibraryshapes.symbols.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.symbols.code.tex
+File: pgflibraryshapes.symbols.code.tex 2013/09/11 v3.0.1a (rcs-revision 1.6)
+))
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.arrows.code.tex
+File: tikzlibraryshapes.arrows.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.arrows.code.tex
+File: pgflibraryshapes.arrows.code.tex 2008/06/26 v3.0.1a (rcs-revision 1.1)
+))
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.callouts.code.tex
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.callouts.code.tex))
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.multipart.code.tex
+File: tikzlibraryshapes.multipart.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1
+)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.multipart.code.tex
+File: pgflibraryshapes.multipart.code.tex 2010/01/07 v3.0.1a (rcs-revision 1.2)
+
+\pgfnodepartlowerbox=\box61
+\pgfnodeparttwobox=\box62
+\pgfnodepartthreebox=\box63
+\pgfnodepartfourbox=\box64
+\pgfnodeparttwentybox=\box65
+\pgfnodepartnineteenbox=\box66
+\pgfnodeparteighteenbox=\box67
+\pgfnodepartseventeenbox=\box68
+\pgfnodepartsixteenbox=\box69
+\pgfnodepartfifteenbox=\box70
+\pgfnodepartfourteenbox=\box71
+\pgfnodepartthirteenbox=\box72
+\pgfnodeparttwelvebox=\box73
+\pgfnodepartelevenbox=\box74
+\pgfnodeparttenbox=\box75
+\pgfnodepartninebox=\box76
+\pgfnodeparteightbox=\box77
+\pgfnodepartsevenbox=\box78
+\pgfnodepartsixbox=\box79
+\pgfnodepartfivebox=\box80
+)))
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+code.tex
+File: pgflibraryarrows.code.tex 2013/09/23 v3.0.1a (rcs-revision 1.16)
+\arrowsize=\dimen273
+)) (/usr/local/texlive/2017/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 ) (/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/pdflscape.sty
 Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
@@ -979,15 +1349,15 @@ Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 99.
 
 ) (/usr/local/texlive/2017/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2015/03/04 v2.20.2
-\thm@style=\toks24
-\thm@bodyfont=\toks25
-\thm@headfont=\toks26
-\thm@notefont=\toks27
-\thm@headpunct=\toks28
+\thm@style=\toks36
+\thm@bodyfont=\toks37
+\thm@headfont=\toks38
+\thm@notefont=\toks39
+\thm@headpunct=\toks40
 \thm@preskip=\skip75
 \thm@postskip=\skip76
 \thm@headsep=\skip77
-\dth@everypar=\toks29
+\dth@everypar=\toks41
 )
 Package biblatex Info: Trying to load language 'spanish'...
 Package biblatex Info: ... file 'spanish.lbx' found.
@@ -998,37 +1368,53 @@ File: spanish.lbx 2016/12/05 v3.7 biblatex localization (PK/JW/AB)
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count361
-\@quotereset=\count362
-(./EH-CEPAL.aux)
+\@quotelevel=\count381
+\@quotereset=\count382
+(./EH-CEPAL.aux
+
+LaTeX Warning: Label `est' multiply defined.
+
+
+LaTeX Warning: Label `HH' multiply defined.
+
+
+LaTeX Warning: Label `var' multiply defined.
+
+
+LaTeX Warning: Label `cons' multiply defined.
+
+
+LaTeX Warning: Label `UC' multiply defined.
+
+)
 \openout1 = `EH-CEPAL.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 156.
-LaTeX Font Info:    ... okay on input line 156.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 156.
-LaTeX Font Info:    ... okay on input line 156.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 156.
-LaTeX Font Info:    ... okay on input line 156.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 156.
-LaTeX Font Info:    ... okay on input line 156.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 156.
-LaTeX Font Info:    ... okay on input line 156.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 156.
-LaTeX Font Info:    ... okay on input line 156.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 156.
-LaTeX Font Info:    ... okay on input line 156.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 156.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 156.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 158.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 158.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 156.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 156.
-LaTeX Font Info:    ... okay on input line 156.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 156.
-LaTeX Font Info:    ... okay on input line 156.
-LaTeX Info: Redefining \microtypecontext on input line 156.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Info: Redefining \microtypecontext on input line 158.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
 Package microtype Info: No adjustment of tracking.
@@ -1039,21 +1425,21 @@ Package microtype Info: No adjustment of kerning.
 File: mt-LatinModernRoman.cfg 2013/03/13 v1.0 microtype config. file: Latin Mod
 ern Roman (RS)
 )
-\AtBeginShipoutBox=\box50
-Package hyperref Info: Link coloring ON on input line 156.
+\AtBeginShipoutBox=\box81
+Package hyperref Info: Link coloring ON on input line 158.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count363
+\c@section@level=\count383
 )
-LaTeX Info: Redefining \ref on input line 156.
-LaTeX Info: Redefining \pageref on input line 156.
-LaTeX Info: Redefining \nameref on input line 156.
+LaTeX Info: Redefining \ref on input line 158.
+LaTeX Info: Redefining \pageref on input line 158.
+LaTeX Info: Redefining \nameref on input line 158.
 (./EH-CEPAL.out) (./EH-CEPAL.out)
-\@outlinefile=\write6
-\openout6 = `EH-CEPAL.out'.
+\@outlinefile=\write7
+\openout7 = `EH-CEPAL.out'.
 
 Package biblatex Info: XeTeX detected.
 (biblatex)             Assuming input encoding 'utf8'.
@@ -1067,14 +1453,14 @@ Package biblatex Info: ... file 'EH-CEPAL.bbl' found.
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                Train_Cahoon_Makens_1978
+(biblatex)                Caceres_2015
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                Fuller_1990
+(biblatex)                SSW_2003
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
@@ -1095,21 +1481,25 @@ Package biblatex Warning: The following entry could not be found
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                SSW_2003
+(biblatex)                Train_Cahoon_Makens_1978
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                Caceres_2015
+(biblatex)                Fuller_1990
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
 )
-Package biblatex Info: Reference section=0 on input line 156.
-Package biblatex Info: Reference segment=0 on input line 156.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 157.
+Package biblatex Info: Reference section=0 on input line 158.
+Package biblatex Info: Reference segment=0 on input line 158.
+ABD: EveryShipout initializing macros
+
+Package xcolor Warning: Incompatible color definition on input line 159.
+
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 159.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1118,45 +1508,45 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `lmr' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 157.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 159.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 157
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 159
 .
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 157
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 159
 .
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 157.
+(Font)              <14.4> on input line 159.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 157.
+(Font)              <10> on input line 159.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 157.
-LaTeX Font Info:    Try loading font information for U+msa on input line 157.
+(Font)              <7> on input line 159.
+LaTeX Font Info:    Try loading font information for U+msa on input line 159.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/local/texlive/2017/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 157.
+LaTeX Font Info:    Try loading font information for U+msb on input line 159.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/local/texlive/2017/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 157.
+(Font)              <10.95> on input line 159.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 157.
+(Font)              <8> on input line 159.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 157.
+(Font)              <6> on input line 159.
 [1
 
 
@@ -1166,20 +1556,119 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <12> on input line 11.
 [3])
-\tf@toc=\write7
-\openout7 = `EH-CEPAL.toc'.
+\tf@toc=\write8
+\openout8 = `EH-CEPAL.toc'.
 
-[4] (./EH-CEPAL.lot)
-\tf@lot=\write8
-\openout8 = `EH-CEPAL.lot'.
+[4] (./EH-CEPAL.lot
+
+Package xcolor Warning: Incompatible color definition on input line 9.
+
+
+Package xcolor Warning: Incompatible color definition on input line 11.
+
+
+Package xcolor Warning: Incompatible color definition on input line 13.
+
+
+Package xcolor Warning: Incompatible color definition on input line 17.
+
+
+Package xcolor Warning: Incompatible color definition on input line 31.
+
+
+Package xcolor Warning: Incompatible color definition on input line 33.
+
+
+Package xcolor Warning: Incompatible color definition on input line 37.
+
+
+Package xcolor Warning: Incompatible color definition on input line 39.
+
+)
+\tf@lot=\write9
+\openout9 = `EH-CEPAL.lot'.
 
 [5
 
 ] [6
 
-] (./EH-CEPAL.lof [7])
-\tf@lof=\write9
-\openout9 = `EH-CEPAL.lof'.
+] (./EH-CEPAL.lof
+
+Package xcolor Warning: Incompatible color definition on input line 7.
+
+
+Package xcolor Warning: Incompatible color definition on input line 13.
+
+
+Package xcolor Warning: Incompatible color definition on input line 21.
+
+
+Package xcolor Warning: Incompatible color definition on input line 23.
+
+
+Package xcolor Warning: Incompatible color definition on input line 25.
+
+
+Package xcolor Warning: Incompatible color definition on input line 27.
+
+
+Package xcolor Warning: Incompatible color definition on input line 29.
+
+
+Package xcolor Warning: Incompatible color definition on input line 31.
+
+
+Package xcolor Warning: Incompatible color definition on input line 33.
+
+
+Package xcolor Warning: Incompatible color definition on input line 35.
+
+
+Package xcolor Warning: Incompatible color definition on input line 37.
+
+
+Package xcolor Warning: Incompatible color definition on input line 39.
+
+
+Package xcolor Warning: Incompatible color definition on input line 41.
+
+
+Package xcolor Warning: Incompatible color definition on input line 43.
+
+[7]
+
+Package xcolor Warning: Incompatible color definition on input line 45.
+
+
+Package xcolor Warning: Incompatible color definition on input line 47.
+
+
+Package xcolor Warning: Incompatible color definition on input line 49.
+
+
+Package xcolor Warning: Incompatible color definition on input line 51.
+
+
+Package xcolor Warning: Incompatible color definition on input line 55.
+
+
+Package xcolor Warning: Incompatible color definition on input line 57.
+
+
+Package xcolor Warning: Incompatible color definition on input line 59.
+
+
+Package xcolor Warning: Incompatible color definition on input line 61.
+
+
+Package xcolor Warning: Incompatible color definition on input line 67.
+
+
+Package xcolor Warning: Incompatible color definition on input line 69.
+
+)
+\tf@lof=\write10
+\openout10 = `EH-CEPAL.lof'.
 
 [8] [9
 
@@ -1187,63 +1676,111 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 ]
 Capítulo 1.
-[11] [12] [13] [14] [15]
+
+Package xcolor Warning: Incompatible color definition on input line 181.
+
+[11]
+
+Package xcolor Warning: Incompatible color definition on input line 194.
+
+
+Package xcolor Warning: Incompatible color definition on input line 196.
+
+
+Package xcolor Warning: Incompatible color definition on input line 196.
+
+[12]
+
+Package xcolor Warning: Incompatible color definition on input line 198.
+
+
+Package xcolor Warning: Incompatible color definition on input line 198.
+
+
+Package xcolor Warning: Incompatible color definition on input line 200.
+
+[13]
+
+Package xcolor Warning: Incompatible color definition on input line 213.
+
+
+Package xcolor Warning: Incompatible color definition on input line 215.
+
+[14]
+
+Package xcolor Warning: Incompatible color definition on input line 221.
+
+
+Package xcolor Warning: Incompatible color definition on input line 221.
+
+
+Package xcolor Warning: Incompatible color definition on input line 221.
+
+[15]
 File: Pics/1.pdf Graphic file (type QTm)
 <use  "Pics/1.pdf" >
 
-LaTeX Warning: Float too large for page by 41.48062pt on input line 227.
+LaTeX Warning: Float too large for page by 41.48062pt on input line 229.
 
 [16] [17] [18]
 Capítulo 2.
 [19
 
-] [20] [21]
-Overfull \hbox (19.87207pt too wide) in alignment at lines 263--267
+]
+
+Package xcolor Warning: Incompatible color definition on input line 249.
+
+[20]
+
+Package xcolor Warning: Incompatible color definition on input line 256.
+
+[21]
+Overfull \hbox (19.87207pt too wide) in alignment at lines 265--269
  [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (19.87207pt too wide) in alignment at lines 267--275
+Overfull \hbox (19.87207pt too wide) in alignment at lines 269--277
  [] [] [] [] [] [] [] 
  []
 
 [22]
-Overfull \hbox (19.87207pt too wide) in alignment at lines 282--286
+Overfull \hbox (19.87207pt too wide) in alignment at lines 284--288
  [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (19.87207pt too wide) in alignment at lines 286--294
+Overfull \hbox (19.87207pt too wide) in alignment at lines 288--296
  [] [] [] [] [] [] [] 
  []
 
 [23]
-Overfull \hbox (19.87207pt too wide) in alignment at lines 301--305
+Overfull \hbox (19.87207pt too wide) in alignment at lines 303--307
  [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (19.87207pt too wide) in alignment at lines 305--313
+Overfull \hbox (19.87207pt too wide) in alignment at lines 307--315
  [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (19.87207pt too wide) in alignment at lines 320--324
+Overfull \hbox (19.87207pt too wide) in alignment at lines 322--326
  [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (19.87207pt too wide) in alignment at lines 324--333
+Overfull \hbox (19.87207pt too wide) in alignment at lines 326--335
  [] [] [] [] [] [] [] 
  []
 
 [24]
-Overfull \hbox (19.87207pt too wide) in alignment at lines 340--344
+Overfull \hbox (19.87207pt too wide) in alignment at lines 342--346
  [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (19.87207pt too wide) in alignment at lines 344--354
+Overfull \hbox (19.87207pt too wide) in alignment at lines 346--356
  [] [] [] [] [] [] [] 
  []
 
@@ -1251,44 +1788,119 @@ Overfull \hbox (19.87207pt too wide) in alignment at lines 344--354
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [25]
+
+Package xcolor Warning: Incompatible color definition on input line 363.
+
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 361.
-[26] [27] [28] [29] [30] [31] [32] [33] [34] [35] [36
+(Font)              <5> on input line 363.
+[26] [27] [28]
+
+Package xcolor Warning: Incompatible color definition on input line 435.
+
+[29] [30]
+
+Package xcolor Warning: Incompatible color definition on input line 457.
+
+
+Package xcolor Warning: Incompatible color definition on input line 461.
+
+[31] [32]
+
+Package xcolor Warning: Incompatible color definition on input line 497.
+
+[33] [34] [35] [36
 
 ]
 Capítulo 3.
 
+Package xcolor Warning: Incompatible color definition on input line 517.
+
+
+Package xcolor Warning: Incompatible color definition on input line 522.
+
+
 Underfull \vbox (badness 7888) has occurred while \output is active []
 
-[37] [38] [39] [40] [41] [42] [43] [44] [45]
+[37] [38]
+
+Package xcolor Warning: Incompatible color definition on input line 526.
+
+[39]
+
+Package xcolor Warning: Incompatible color definition on input line 530.
+
+
+Package xcolor Warning: Incompatible color definition on input line 532.
+
+[40] [41] [42] [43]
+
+Package xcolor Warning: Incompatible color definition on input line 572.
+
+
+Package xcolor Warning: Incompatible color definition on input line 572.
+
+[44] [45]
 File: EH-CEPAL_files/figure-latex/unnamed-chunk-1-1.pdf Graphic file (type QTm)
 
-<use  "EH-CEPAL_files/figure-latex/unnamed-chunk-1-1.pdf" > [46] [47]
+<use  "EH-CEPAL_files/figure-latex/unnamed-chunk-1-1.pdf" > [46]
+
+Package xcolor Warning: Incompatible color definition on input line 601.
+
+
+Package xcolor Warning: Incompatible color definition on input line 611.
+
+
+Package xcolor Warning: Incompatible color definition on input line 611.
+
+
+Package xcolor Warning: Incompatible color definition on input line 615.
+
+[47]
+
+Package xcolor Warning: Incompatible color definition on input line 624.
+
+
+Package xcolor Warning: Incompatible color definition on input line 624.
+
+
+Package xcolor Warning: Incompatible color definition on input line 634.
+
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <12> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 634.
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 636.
+
+Package xcolor Warning: Incompatible color definition on input line 639.
+
+
+Package xcolor Warning: Incompatible color definition on input line 639.
+
+
+Package xcolor Warning: Incompatible color definition on input line 643.
+
 [48]
+
+Package xcolor Warning: Incompatible color definition on input line 654.
+
+
+Package xcolor Warning: Incompatible color definition on input line 660.
+
+
 Overfull \hbox (14.48424pt too wide) has occurred while \output is active
 \TU/lmr/m/sl/12 IV.  EVALUACIÓN Y ESCOGENCIA DE LA MEJOR ESTRATIFICACIÓN \TU/lm
 r/m/n/12 49
  []
 
 [49] [50]
-Overfull \hbox (8.0088pt too wide) in paragraph at lines 674--675
+Overfull \hbox (8.0088pt too wide) in paragraph at lines 676--677
  []\TU/lmr/m/n/10 DEFF|
  []
 
 
-Overfull \hbox (7.38881pt too wide) in paragraph at lines 676--677
+Overfull \hbox (7.38881pt too wide) in paragraph at lines 678--679
  \TU/lmr/m/n/10 (H=3)|
  []
 
 
-Overfull \hbox (3.49095pt too wide) in paragraph at lines 678--679
- \TU/lmr/m/n/10 (H=3)|
- []
-
-
-Overfull \hbox (7.38881pt too wide) in paragraph at lines 680--681
+Overfull \hbox (3.49095pt too wide) in paragraph at lines 680--681
  \TU/lmr/m/n/10 (H=3)|
  []
 
@@ -1298,27 +1910,27 @@ Overfull \hbox (7.38881pt too wide) in paragraph at lines 682--683
  []
 
 
-Overfull \hbox (3.49095pt too wide) in paragraph at lines 684--685
+Overfull \hbox (7.38881pt too wide) in paragraph at lines 684--685
  \TU/lmr/m/n/10 (H=3)|
  []
 
 
-Overfull \hbox (7.38881pt too wide) in paragraph at lines 686--687
+Overfull \hbox (3.49095pt too wide) in paragraph at lines 686--687
  \TU/lmr/m/n/10 (H=3)|
  []
 
 
 Overfull \hbox (7.38881pt too wide) in paragraph at lines 688--689
+ \TU/lmr/m/n/10 (H=3)|
+ []
+
+
+Overfull \hbox (7.38881pt too wide) in paragraph at lines 690--691
  \TU/lmr/m/n/10 (H=4)|
  []
 
 
-Overfull \hbox (3.49095pt too wide) in paragraph at lines 690--691
- \TU/lmr/m/n/10 (H=4)|
- []
-
-
-Overfull \hbox (7.38881pt too wide) in paragraph at lines 692--693
+Overfull \hbox (3.49095pt too wide) in paragraph at lines 692--693
  \TU/lmr/m/n/10 (H=4)|
  []
 
@@ -1328,37 +1940,37 @@ Overfull \hbox (7.38881pt too wide) in paragraph at lines 694--695
  []
 
 
-Overfull \hbox (3.49095pt too wide) in paragraph at lines 696--697
+Overfull \hbox (7.38881pt too wide) in paragraph at lines 696--697
  \TU/lmr/m/n/10 (H=4)|
  []
 
 
-Overfull \hbox (7.38881pt too wide) in paragraph at lines 698--699
+Overfull \hbox (3.49095pt too wide) in paragraph at lines 698--699
  \TU/lmr/m/n/10 (H=4)|
  []
 
 
-Overfull \hbox (23.1071pt too wide) in alignment at lines 670--701
+Overfull \hbox (7.38881pt too wide) in paragraph at lines 700--701
+ \TU/lmr/m/n/10 (H=4)|
+ []
+
+
+Overfull \hbox (23.1071pt too wide) in alignment at lines 672--703
  [] [] [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (8.0088pt too wide) in paragraph at lines 704--705
+Overfull \hbox (8.0088pt too wide) in paragraph at lines 706--707
  []\TU/lmr/m/n/10 DEFF|
  []
 
 
-Overfull \hbox (7.38881pt too wide) in paragraph at lines 706--707
+Overfull \hbox (7.38881pt too wide) in paragraph at lines 708--709
  \TU/lmr/m/n/10 (H=3)|
  []
 
 
-Overfull \hbox (3.49095pt too wide) in paragraph at lines 708--709
- \TU/lmr/m/n/10 (H=3)|
- []
-
-
-Overfull \hbox (7.38881pt too wide) in paragraph at lines 710--711
+Overfull \hbox (3.49095pt too wide) in paragraph at lines 710--711
  \TU/lmr/m/n/10 (H=3)|
  []
 
@@ -1368,27 +1980,27 @@ Overfull \hbox (7.38881pt too wide) in paragraph at lines 712--713
  []
 
 
-Overfull \hbox (3.49095pt too wide) in paragraph at lines 714--715
+Overfull \hbox (7.38881pt too wide) in paragraph at lines 714--715
  \TU/lmr/m/n/10 (H=3)|
  []
 
 
-Overfull \hbox (7.38881pt too wide) in paragraph at lines 716--717
+Overfull \hbox (3.49095pt too wide) in paragraph at lines 716--717
  \TU/lmr/m/n/10 (H=3)|
  []
 
 
 Overfull \hbox (7.38881pt too wide) in paragraph at lines 718--719
+ \TU/lmr/m/n/10 (H=3)|
+ []
+
+
+Overfull \hbox (7.38881pt too wide) in paragraph at lines 720--721
  \TU/lmr/m/n/10 (H=4)|
  []
 
 
-Overfull \hbox (3.49095pt too wide) in paragraph at lines 720--721
- \TU/lmr/m/n/10 (H=4)|
- []
-
-
-Overfull \hbox (7.38881pt too wide) in paragraph at lines 722--723
+Overfull \hbox (3.49095pt too wide) in paragraph at lines 722--723
  \TU/lmr/m/n/10 (H=4)|
  []
 
@@ -1398,29 +2010,37 @@ Overfull \hbox (7.38881pt too wide) in paragraph at lines 724--725
  []
 
 
-Overfull \hbox (3.49095pt too wide) in paragraph at lines 726--727
+Overfull \hbox (7.38881pt too wide) in paragraph at lines 726--727
  \TU/lmr/m/n/10 (H=4)|
  []
 
 
-Overfull \hbox (7.38881pt too wide) in paragraph at lines 728--729
+Overfull \hbox (3.49095pt too wide) in paragraph at lines 728--729
  \TU/lmr/m/n/10 (H=4)|
  []
 
 
-Overfull \hbox (23.1071pt too wide) in alignment at lines 701--731
+Overfull \hbox (7.38881pt too wide) in paragraph at lines 730--731
+ \TU/lmr/m/n/10 (H=4)|
+ []
+
+
+Overfull \hbox (23.1071pt too wide) in alignment at lines 703--733
  [] [] [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (1.68881pt too wide) in paragraph at lines 949--950
+Overfull \hbox (1.68881pt too wide) in paragraph at lines 951--952
  []\TU/lmr/m/n/10 G(S)|
  []
 
 
-Overfull \hbox (23.1071pt too wide) in alignment at lines 731--976
+Overfull \hbox (23.1071pt too wide) in alignment at lines 733--978
  [] [] [] [] [] [] [] [] [] [] [] [] [] 
  []
+
+
+Package xcolor Warning: Incompatible color definition on input line 987.
 
 
 Overfull \hbox (14.48424pt too wide) has occurred while \output is active
@@ -1438,13 +2058,28 @@ r/m/n/12 53
 
 ]
 Capítulo 4.
-[55] [56] [57] [58] [59]
+
+Package xcolor Warning: Incompatible color definition on input line 1002.
+
+[55]
+
+Package xcolor Warning: Incompatible color definition on input line 1017.
+
+[56] [57] [58] [59]
 Underfull \vbox (badness 8000) has occurred while \output is active []
 
 [60]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[61] [62] [63] [64]
+[61]
+
+Package xcolor Warning: Incompatible color definition on input line 1084.
+
+[62] [63]
+
+Package xcolor Warning: Incompatible color definition on input line 1119.
+
+[64]
 Overfull \hbox (58.85634pt too wide) has occurred while \output is active
 \TU/lmr/m/sl/12 II.  EL DISEÑO DE MUESTREO ESTÁNDAR EN UNA ENCUESTA DE HOGARES 
 \TU/lmr/m/n/12 65
@@ -1485,42 +2120,42 @@ U/lmr/m/n/12 79
  []
 
 [79]
-Overfull \hbox (13.08002pt too wide) in alignment at lines 1802--1806
+Overfull \hbox (13.08002pt too wide) in alignment at lines 1804--1808
  [] [] [] [] 
  []
 
 
-Overfull \hbox (13.08002pt too wide) in alignment at lines 1806--1809
+Overfull \hbox (13.08002pt too wide) in alignment at lines 1808--1811
  [] [] [] [] 
  []
 
 
-Overfull \hbox (13.08002pt too wide) in alignment at lines 1813--1817
+Overfull \hbox (13.08002pt too wide) in alignment at lines 1815--1819
  [] [] [] [] 
  []
 
 
-Overfull \hbox (13.08002pt too wide) in alignment at lines 1817--1829
+Overfull \hbox (13.08002pt too wide) in alignment at lines 1819--1831
  [] [] [] [] 
  []
 
 [80]
-Overfull \hbox (13.08002pt too wide) in alignment at lines 1838--1842
+Overfull \hbox (13.08002pt too wide) in alignment at lines 1840--1844
  [] [] [] [] 
  []
 
 
-Overfull \hbox (13.08002pt too wide) in alignment at lines 1842--1845
+Overfull \hbox (13.08002pt too wide) in alignment at lines 1844--1847
  [] [] [] [] 
  []
 
 
-Overfull \hbox (13.08002pt too wide) in alignment at lines 1849--1853
+Overfull \hbox (13.08002pt too wide) in alignment at lines 1851--1855
  [] [] [] [] 
  []
 
 
-Overfull \hbox (13.08002pt too wide) in alignment at lines 1853--1864
+Overfull \hbox (13.08002pt too wide) in alignment at lines 1855--1866
  [] [] [] [] 
  []
 
@@ -1537,27 +2172,48 @@ TU/lmr/m/n/12 83
  []
 
 [83]
-Overfull \hbox (1.10329pt too wide) in paragraph at lines 1921--1922
+Overfull \hbox (1.10329pt too wide) in paragraph at lines 1923--1924
  []\TU/lmr/m/n/12 DEFF| 
  []
 
 
-Overfull \hbox (1.10329pt too wide) in paragraph at lines 1956--1957
+Overfull \hbox (1.10329pt too wide) in paragraph at lines 1958--1959
  []\TU/lmr/m/n/12 DEFF| 
  []
 
 [84]
-Overfull \hbox (1.10329pt too wide) in paragraph at lines 2048--2049
+Overfull \hbox (1.10329pt too wide) in paragraph at lines 2050--2051
  []\TU/lmr/m/n/12 DEFF| 
  []
 
 
-Overfull \hbox (1.10329pt too wide) in paragraph at lines 2083--2084
+Overfull \hbox (1.10329pt too wide) in paragraph at lines 2085--2086
  []\TU/lmr/m/n/12 DEFF| 
  []
 
-[85] [86] [87] [88] [89] [90]
+
+Package xcolor Warning: Incompatible color definition on input line 2171.
+
+[85]
+
+Package xcolor Warning: Incompatible color definition on input line 2177.
+
+[86] [87]
+
+Package xcolor Warning: Incompatible color definition on input line 2190.
+
+[88]
+
+Package xcolor Warning: Incompatible color definition on input line 2201.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2203.
+
+[89] [90]
 Capítulo 6.
+
+Package xcolor Warning: Incompatible color definition on input line 2208.
+
 [91
 
 ]
@@ -1578,7 +2234,17 @@ N Y REPONDERACIÓN
 [92]
 File: EH-CEPAL_files/figure-latex/unnamed-chunk-5-1.pdf Graphic file (type QTm)
 
-<use  "EH-CEPAL_files/figure-latex/unnamed-chunk-5-1.pdf" > [93]
+<use  "EH-CEPAL_files/figure-latex/unnamed-chunk-5-1.pdf" >
+
+Package xcolor Warning: Incompatible color definition on input line 2246.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2246.
+
+[93]
+
+Package xcolor Warning: Incompatible color definition on input line 2248.
+
 Missing character: There is no − in font rm-lmr12!
 
 Overfull \hbox (65.04417pt too wide) has occurred while \output is active
@@ -1620,19 +2286,37 @@ Overfull \hbox (70.92418pt too wide) has occurred while \output is active
 ÓN Y REPONDERACIÓN
  []
 
-[100] [101]
+[100]
+
+Package xcolor Warning: Incompatible color definition on input line 2333.
+
+[101]
 Overfull \hbox (70.92418pt too wide) has occurred while \output is active
 \TU/lmr/m/n/12 102 \TU/lmr/m/sl/12 CAPÍTULO 6.  AUSENCIA DE RESPUESTA: IMPUTACI
 ÓN Y REPONDERACIÓN
  []
 
 [102] [103]
+
+Package xcolor Warning: Incompatible color definition on input line 2410.
+
+
 Overfull \hbox (70.92418pt too wide) has occurred while \output is active
 \TU/lmr/m/n/12 104 \TU/lmr/m/sl/12 CAPÍTULO 6.  AUSENCIA DE RESPUESTA: IMPUTACI
 ÓN Y REPONDERACIÓN
  []
 
 [104] [105]
+
+Package xcolor Warning: Incompatible color definition on input line 2442.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2442.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2448.
+
+
 Overfull \hbox (70.92418pt too wide) has occurred while \output is active
 \TU/lmr/m/n/12 106 \TU/lmr/m/sl/12 CAPÍTULO 6.  AUSENCIA DE RESPUESTA: IMPUTACI
 ÓN Y REPONDERACIÓN
@@ -1667,7 +2351,15 @@ Overfull \hbox (70.92418pt too wide) has occurred while \output is active
 ÓN Y REPONDERACIÓN
  []
 
-[112] [113]
+[112]
+
+Package xcolor Warning: Incompatible color definition on input line 2555.
+
+[113]
+
+Package xcolor Warning: Incompatible color definition on input line 2557.
+
+
 Overfull \hbox (70.92418pt too wide) has occurred while \output is active
 \TU/lmr/m/n/12 114 \TU/lmr/m/sl/12 CAPÍTULO 6.  AUSENCIA DE RESPUESTA: IMPUTACI
 ÓN Y REPONDERACIÓN
@@ -1685,6 +2377,9 @@ Overfull \hbox (70.92418pt too wide) has occurred while \output is active
  []
 
 [116]
+
+Package xcolor Warning: Incompatible color definition on input line 2637.
+
 File: Pics/16.png Graphic file (type QTm)
 <use  "Pics/16.png" > [117]
 Overfull \hbox (70.92418pt too wide) has occurred while \output is active
@@ -1692,21 +2387,44 @@ Overfull \hbox (70.92418pt too wide) has occurred while \output is active
 ÓN Y REPONDERACIÓN
  []
 
-[118] [119]
+[118]
+
+Package xcolor Warning: Incompatible color definition on input line 2720.
+
+[119]
 File: Pics/17.png Graphic file (type QTm)
 <use  "Pics/17.png" >
+
+Package xcolor Warning: Incompatible color definition on input line 2744.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2754.
+
+
 Overfull \hbox (70.92418pt too wide) has occurred while \output is active
 \TU/lmr/m/n/12 120 \TU/lmr/m/sl/12 CAPÍTULO 6.  AUSENCIA DE RESPUESTA: IMPUTACI
 ÓN Y REPONDERACIÓN
  []
 
-[120] [121]
+[120]
+
+Package xcolor Warning: Incompatible color definition on input line 2765.
+
+[121]
+
+Package xcolor Warning: Incompatible color definition on input line 2781.
+
+
 Overfull \hbox (70.92418pt too wide) has occurred while \output is active
 \TU/lmr/m/n/12 122 \TU/lmr/m/sl/12 CAPÍTULO 6.  AUSENCIA DE RESPUESTA: IMPUTACI
 ÓN Y REPONDERACIÓN
  []
 
-[122] [123]
+[122]
+
+Package xcolor Warning: Incompatible color definition on input line 2796.
+
+[123]
 File: Pics/18.png Graphic file (type QTm)
 <use  "Pics/18.png" >
 Overfull \hbox (70.92418pt too wide) has occurred while \output is active
@@ -1714,19 +2432,31 @@ Overfull \hbox (70.92418pt too wide) has occurred while \output is active
 ÓN Y REPONDERACIÓN
  []
 
-[124] [125]
+[124]
+
+Package xcolor Warning: Incompatible color definition on input line 2822.
+
+[125]
 Overfull \hbox (70.92418pt too wide) has occurred while \output is active
 \TU/lmr/m/n/12 126 \TU/lmr/m/sl/12 CAPÍTULO 6.  AUSENCIA DE RESPUESTA: IMPUTACI
 ÓN Y REPONDERACIÓN
  []
 
-[126] [127]
+[126]
+
+Package xcolor Warning: Incompatible color definition on input line 2864.
+
+[127]
 Overfull \hbox (70.92418pt too wide) has occurred while \output is active
 \TU/lmr/m/n/12 128 \TU/lmr/m/sl/12 CAPÍTULO 6.  AUSENCIA DE RESPUESTA: IMPUTACI
 ÓN Y REPONDERACIÓN
  []
 
-[128] [129]
+[128]
+
+Package xcolor Warning: Incompatible color definition on input line 2920.
+
+[129]
 Overfull \hbox (70.92418pt too wide) has occurred while \output is active
 \TU/lmr/m/n/12 130 \TU/lmr/m/sl/12 CAPÍTULO 6.  AUSENCIA DE RESPUESTA: IMPUTACI
 ÓN Y REPONDERACIÓN
@@ -1736,7 +2466,58 @@ Overfull \hbox (70.92418pt too wide) has occurred while \output is active
 Capítulo 7.
 [131
 
-] [132] [133] [134] [135] [136] [137] [138] [139] [140] [141]
+] [132]
+
+Package xcolor Warning: Incompatible color definition on input line 2982.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2984.
+
+[133] [134] [135]
+
+Package xcolor Warning: Incompatible color definition on input line 3068.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3068.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3076.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3086.
+
+[136]
+
+Package xcolor Warning: Incompatible color definition on input line 3096.
+
+[137]
+
+Package xcolor Warning: Incompatible color definition on input line 3112.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3114.
+
+[138]
+
+Package xcolor Warning: Incompatible color definition on input line 3141.
+
+[139]
+
+Package xcolor Warning: Incompatible color definition on input line 3171.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3171.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3171.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3171.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3171.
+
+[140] [141]
 Underfull \vbox (badness 4752) has occurred while \output is active []
 
 [142] [143]
@@ -1746,7 +2527,7 @@ File: Pics/21.png Graphic file (type QTm)
 <use  "Pics/21.png" > [145]
 File: Pics/22.png Graphic file (type QTm)
 <use  "Pics/22.png" > [146]
-Overfull \hbox (0.11334pt too wide) in paragraph at lines 3298--3299
+Overfull \hbox (0.11334pt too wide) in paragraph at lines 3300--3301
 \TU/lmr/m/n/12 tra solo una escuela, por lo que el método de las réplicas repet
 idas balanceadas
  []
@@ -1755,25 +2536,49 @@ idas balanceadas
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [147]
-Underfull \hbox (badness 2221) in paragraph at lines 3308--3309
+Underfull \hbox (badness 2221) in paragraph at lines 3310--3311
 []\TU/lmr/m/n/12 En resumen, para la $\OML/lmm/m/it/12 i$\TU/lmr/m/n/12 -ésima 
 réplica, se tiene los pesos muestrales
  []
 
 [148]
 File: Pics/23.png Graphic file (type QTm)
-<use  "Pics/23.png" > [149] [150] [151] [152] [153] [154
+<use  "Pics/23.png" > [149]
+
+Package xcolor Warning: Incompatible color definition on input line 3358.
+
+[150] [151] [152] [153] [154
 
 ]
 Capítulo 8.
+
+Package xcolor Warning: Incompatible color definition on input line 3419.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3419.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3419.
+
 [155]
+
+Package xcolor Warning: Incompatible color definition on input line 3421.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3421.
+
+
 Overfull \hbox (52.56288pt too wide) has occurred while \output is active
 \TU/lmr/m/n/12 156 \TU/lmr/m/sl/12 CAPÍTULO 8.  AGREGACIÓN DE ENCUESTAS Y ANÁLI
 SIS LONGITUDINAL
  []
 
 [156]
-Overfull \hbox (32.72382pt too wide) in paragraph at lines 3438--3439
+
+Package xcolor Warning: Incompatible color definition on input line 3430.
+
+
+Overfull \hbox (32.72382pt too wide) in paragraph at lines 3440--3441
 \TU/lmr/m/n/12 los analíticos se tornan mucho más complicados. []
  []
 
@@ -1783,7 +2588,17 @@ Overfull \hbox (52.56288pt too wide) has occurred while \output is active
 SIS LONGITUDINAL
  []
 
-[158] [159]
+[158]
+
+Package xcolor Warning: Incompatible color definition on input line 3472.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3472.
+
+
+Package xcolor Warning: Incompatible color definition on input line 3472.
+
+[159]
 Overfull \hbox (52.56288pt too wide) has occurred while \output is active
 \TU/lmr/m/n/12 160 \TU/lmr/m/sl/12 CAPÍTULO 8.  AGREGACIÓN DE ENCUESTAS Y ANÁLI
 SIS LONGITUDINAL
@@ -1838,6 +2653,9 @@ lmr/m/n/12 169
  []
 
 [169]
+
+Package xcolor Warning: Incompatible color definition on input line 3788.
+
 Missing character: There is no ó in font lmmi8!
 
 Overfull \hbox (52.56288pt too wide) has occurred while \output is active
@@ -1847,252 +2665,1101 @@ SIS LONGITUDINAL
 
 [170]
 Capítulo 9.
+
+Overfull \hbox (5.47198pt too wide) in paragraph at lines 3799--3800
+[]\TU/lmr/m/n/12 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX 
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 3803.
+
 [171
 
 ] [172]
-Missing character: There is no ó in font lmmi8!
-[173] [174] [175] [176] [177]
-File: Pics/14.pdf Graphic file (type QTm)
-<use  "Pics/14.pdf" >
-Overfull \hbox (139.50021pt too wide) in alignment at lines 3966--3970
+
+Package xcolor Warning: Incompatible color definition on input line 3849.
+
+[173]
+Overfull \hbox (27.43929pt too wide) in paragraph at lines 3858--3859
+ []\TU/lmr/m/n/10 Subpoblación| 
+ []
+
+
+Overfull \hbox (24.87096pt too wide) in paragraph at lines 3860--3861
+ []\TU/lmr/m/n/10 Proporción 
+ []
+
+
+Overfull \hbox (15.54095pt too wide) in paragraph at lines 3860--3861
+ \TU/lmr/m/n/10 estimada| 
+ []
+
+
+Overfull \hbox (12.87262pt too wide) in paragraph at lines 3862--3863
+ []\TU/lmr/m/n/10 Límite 
+ []
+
+
+Overfull \hbox (15.86263pt too wide) in paragraph at lines 3862--3863
+ \TU/lmr/m/n/10 inferior| 
+ []
+
+
+Overfull \hbox (12.87262pt too wide) in paragraph at lines 3864--3865
+ []\TU/lmr/m/n/10 Límite 
+ []
+
+
+Overfull \hbox (19.80263pt too wide) in paragraph at lines 3864--3865
+ \TU/lmr/m/n/10 superior| 
+ []
+
+
+Overfull \hbox (24.37096pt too wide) in paragraph at lines 3866--3867
+ []\TU/lmr/m/n/10 Coeficiente 
+ []
+
+
+Overfull \hbox (15.54095pt too wide) in paragraph at lines 3866--3867
+ \TU/lmr/m/n/10 variación| 
+ []
+
+
+Overfull \hbox (12.04262pt too wide) in paragraph at lines 3868--3869
+ []\TU/lmr/m/n/10 Efecto 
+ []
+
+
+Overfull \hbox (11.68262pt too wide) in paragraph at lines 3868--3869
+ \TU/lmr/m/n/10 diseño| 
+ []
+
+
+Overfull \hbox (15.41881pt too wide) in paragraph at lines 3870--3871
+ []\TU/lmr/m/n/10 Tamaño 
+ []
+
+
+Overfull \hbox (15.29881pt too wide) in paragraph at lines 3870--3871
+ \TU/lmr/m/n/10 muestra| 
+ []
+
+
+Overfull \hbox (11.76881pt too wide) in paragraph at lines 3874--3875
+ []\TU/lmr/m/n/10 Grados 
+ []
+
+
+Overfull \hbox (14.70882pt too wide) in paragraph at lines 3874--3875
+ \TU/lmr/m/n/10 libertad| 
+ []
+
+
+Overfull \hbox (19.15262pt too wide) in paragraph at lines 3876--3877
+ []\TU/lmr/m/n/10 Número 
+ []
+
+
+Overfull \hbox (6.72263pt too wide) in paragraph at lines 3876--3877
+ \TU/lmr/m/n/10 casos| 
+ []
+
+
+Overfull \hbox (4.86977pt too wide) in paragraph at lines 3878--3879
+ []\TU/lmr/m/n/10 Coeficiente 
+ []
+
+
+Overfull \hbox (6.01976pt too wide) in paragraph at lines 3878--3879
+ \TU/lmr/m/n/10 logarítmico| 
+ []
+
+
+Overfull \hbox (23.25214pt too wide) in paragraph at lines 3880--3881
+[]\TU/lmr/m/n/10 Alerta|  
+ []
+
+
+Overfull \hbox (7.19121pt too wide) in alignment at lines 3853--3883
+ [] [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (27.43929pt too wide) in paragraph at lines 3886--3887
+ []\TU/lmr/m/n/10 Subpoblación| 
+ []
+
+
+Overfull \hbox (24.87096pt too wide) in paragraph at lines 3888--3889
+ []\TU/lmr/m/n/10 Proporción 
+ []
+
+
+Overfull \hbox (15.54095pt too wide) in paragraph at lines 3888--3889
+ \TU/lmr/m/n/10 estimada| 
+ []
+
+
+Overfull \hbox (12.87262pt too wide) in paragraph at lines 3890--3891
+ []\TU/lmr/m/n/10 Límite 
+ []
+
+
+Overfull \hbox (15.86263pt too wide) in paragraph at lines 3890--3891
+ \TU/lmr/m/n/10 inferior| 
+ []
+
+
+Overfull \hbox (12.87262pt too wide) in paragraph at lines 3892--3893
+ []\TU/lmr/m/n/10 Límite 
+ []
+
+
+Overfull \hbox (19.80263pt too wide) in paragraph at lines 3892--3893
+ \TU/lmr/m/n/10 superior| 
+ []
+
+
+Overfull \hbox (24.37096pt too wide) in paragraph at lines 3894--3895
+ []\TU/lmr/m/n/10 Coeficiente 
+ []
+
+
+Overfull \hbox (15.54095pt too wide) in paragraph at lines 3894--3895
+ \TU/lmr/m/n/10 variación| 
+ []
+
+
+Overfull \hbox (12.04262pt too wide) in paragraph at lines 3896--3897
+ []\TU/lmr/m/n/10 Efecto 
+ []
+
+
+Overfull \hbox (11.68262pt too wide) in paragraph at lines 3896--3897
+ \TU/lmr/m/n/10 diseño| 
+ []
+
+
+Overfull \hbox (15.41881pt too wide) in paragraph at lines 3898--3899
+ []\TU/lmr/m/n/10 Tamaño 
+ []
+
+
+Overfull \hbox (15.29881pt too wide) in paragraph at lines 3898--3899
+ \TU/lmr/m/n/10 muestra| 
+ []
+
+
+Overfull \hbox (11.76881pt too wide) in paragraph at lines 3902--3903
+ []\TU/lmr/m/n/10 Grados 
+ []
+
+
+Overfull \hbox (14.70882pt too wide) in paragraph at lines 3902--3903
+ \TU/lmr/m/n/10 libertad| 
+ []
+
+
+Overfull \hbox (19.15262pt too wide) in paragraph at lines 3904--3905
+ []\TU/lmr/m/n/10 Número 
+ []
+
+
+Overfull \hbox (6.72263pt too wide) in paragraph at lines 3904--3905
+ \TU/lmr/m/n/10 casos| 
+ []
+
+
+Overfull \hbox (4.86977pt too wide) in paragraph at lines 3906--3907
+ []\TU/lmr/m/n/10 Coeficiente 
+ []
+
+
+Overfull \hbox (6.01976pt too wide) in paragraph at lines 3906--3907
+ \TU/lmr/m/n/10 logarítmico| 
+ []
+
+
+Overfull \hbox (23.25214pt too wide) in paragraph at lines 3908--3909
+[]\TU/lmr/m/n/10 Alerta|  
+ []
+
+
+Overfull \hbox (7.19121pt too wide) in alignment at lines 3883--3911
+ [] [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (8.27928pt too wide) in paragraph at lines 3913--3914
+ []\TU/lmr/m/n/10 Migrante| 
+ []
+
+
+Overfull \hbox (2.18262pt too wide) in paragraph at lines 3917--3918
+ []\TU/lmr/m/n/10 0.06| 
+ []
+
+
+Overfull \hbox (2.18262pt too wide) in paragraph at lines 3919--3920
+ []\TU/lmr/m/n/10 0.30| 
+ []
+
+
+Overfull \hbox (7.43929pt too wide) in paragraph at lines 3938--3939
+ \TU/lmr/m/n/10 migrante| 
+ []
+
+
+Overfull \hbox (2.18262pt too wide) in paragraph at lines 3942--3943
+ []\TU/lmr/m/n/10 0.33| 
+ []
+
+
+Overfull \hbox (2.18262pt too wide) in paragraph at lines 3944--3945
+ []\TU/lmr/m/n/10 0.37| 
+ []
+
+
+Overfull \hbox (1.68262pt too wide) in paragraph at lines 3948--3949
+ []\TU/lmr/m/n/10 14.5| 
+ []
+
+
+Overfull \hbox (5.24881pt too wide) in paragraph at lines 3950--3951
+ []\TU/lmr/m/n/10 38074| 
+ []
+
+
+Overfull \hbox (8.90262pt too wide) in paragraph at lines 3956--3957
+ []\TU/lmr/m/n/10 12698| 
+ []
+
+
+Overfull \hbox (2.18262pt too wide) in paragraph at lines 3967--3968
+ []\TU/lmr/m/n/10 0.33| 
+ []
+
+
+Overfull \hbox (2.18262pt too wide) in paragraph at lines 3969--3970
+ []\TU/lmr/m/n/10 0.37| 
+ []
+
+
+Overfull \hbox (1.68262pt too wide) in paragraph at lines 3973--3974
+ []\TU/lmr/m/n/10 14.5| 
+ []
+
+
+Overfull \hbox (5.24881pt too wide) in paragraph at lines 3975--3976
+ []\TU/lmr/m/n/10 38201| 
+ []
+
+
+Overfull \hbox (8.90262pt too wide) in paragraph at lines 3981--3982
+ []\TU/lmr/m/n/10 12721| 
+ []
+
+
+Overfull \hbox (7.19121pt too wide) in alignment at lines 3911--3988
+ [] [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 3999.
+
+
+Underfull \vbox (badness 2865) has occurred while \output is active []
+
+[174] [175] [176]
+
+Package xcolor Warning: Incompatible color definition on input line 4026.
+
+[177] [178]
+
+Package xcolor Warning: Incompatible color definition on input line 4087.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4089.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4089.
+
+[179] [180] [181]
+
+Package xcolor Warning: Incompatible color definition on input line 4184.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4184.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4192.
+
+[182]
+Overfull \hbox (60.57619pt too wide) in paragraph at lines 4200--4200
+[] 
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 4202.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4202.
+
+
+Overfull \hbox (2.20308pt too wide) in paragraph at lines 4209--4209
+[] 
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 4211.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4211.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4211.
+
+[183]
+
+Package xcolor Warning: Incompatible color definition on input line 4225.
+
+[184]
+
+Package xcolor Warning: Incompatible color definition on input line 4242.
+
+
+Overfull \hbox (23.54143pt too wide) in paragraph at lines 4251--4252
+ []\TU/lmr/m/n/10 Subpoblación| 
+ []
+
+
+Overfull \hbox (20.96715pt too wide) in paragraph at lines 4253--4254
+ []\TU/lmr/m/n/10 Proporción 
+ []
+
+
+Overfull \hbox (11.63715pt too wide) in paragraph at lines 4253--4254
+ \TU/lmr/m/n/10 estimada| 
+ []
+
+
+Overfull \hbox (12.87262pt too wide) in paragraph at lines 4255--4256
+ []\TU/lmr/m/n/10 Límite 
+ []
+
+
+Overfull \hbox (15.86263pt too wide) in paragraph at lines 4255--4256
+ \TU/lmr/m/n/10 inferior| 
+ []
+
+
+Overfull \hbox (12.87262pt too wide) in paragraph at lines 4257--4258
+ []\TU/lmr/m/n/10 Límite 
+ []
+
+
+Overfull \hbox (19.80263pt too wide) in paragraph at lines 4257--4258
+ \TU/lmr/m/n/10 superior| 
+ []
+
+
+Overfull \hbox (20.46715pt too wide) in paragraph at lines 4259--4260
+ []\TU/lmr/m/n/10 Coeficiente 
+ []
+
+
+Overfull \hbox (11.63715pt too wide) in paragraph at lines 4259--4260
+ \TU/lmr/m/n/10 variación| 
+ []
+
+
+Overfull \hbox (8.13881pt too wide) in paragraph at lines 4261--4262
+ []\TU/lmr/m/n/10 Efecto 
+ []
+
+
+Overfull \hbox (7.77881pt too wide) in paragraph at lines 4261--4262
+ \TU/lmr/m/n/10 diseño| 
+ []
+
+
+Overfull \hbox (15.41881pt too wide) in paragraph at lines 4263--4264
+ []\TU/lmr/m/n/10 Tamaño 
+ []
+
+
+Overfull \hbox (15.29881pt too wide) in paragraph at lines 4263--4264
+ \TU/lmr/m/n/10 muestra| 
+ []
+
+
+Overfull \hbox (11.76881pt too wide) in paragraph at lines 4267--4268
+ []\TU/lmr/m/n/10 Grados 
+ []
+
+
+Overfull \hbox (14.70882pt too wide) in paragraph at lines 4267--4268
+ \TU/lmr/m/n/10 libertad| 
+ []
+
+
+Overfull \hbox (19.15262pt too wide) in paragraph at lines 4269--4270
+ []\TU/lmr/m/n/10 Número 
+ []
+
+
+Overfull \hbox (6.72263pt too wide) in paragraph at lines 4269--4270
+ \TU/lmr/m/n/10 casos| 
+ []
+
+
+Overfull \hbox (4.86977pt too wide) in paragraph at lines 4271--4272
+ []\TU/lmr/m/n/10 Coeficiente 
+ []
+
+
+Overfull \hbox (6.01976pt too wide) in paragraph at lines 4271--4272
+ \TU/lmr/m/n/10 logarítmico| 
+ []
+
+
+Overfull \hbox (10.80048pt too wide) in alignment at lines 4246--4274
  [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (139.50021pt too wide) in alignment at lines 3970--3982
+Overfull \hbox (23.54143pt too wide) in paragraph at lines 4277--4278
+ []\TU/lmr/m/n/10 Subpoblación| 
+ []
+
+
+Overfull \hbox (20.96715pt too wide) in paragraph at lines 4279--4280
+ []\TU/lmr/m/n/10 Proporción 
+ []
+
+
+Overfull \hbox (11.63715pt too wide) in paragraph at lines 4279--4280
+ \TU/lmr/m/n/10 estimada| 
+ []
+
+
+Overfull \hbox (12.87262pt too wide) in paragraph at lines 4281--4282
+ []\TU/lmr/m/n/10 Límite 
+ []
+
+
+Overfull \hbox (15.86263pt too wide) in paragraph at lines 4281--4282
+ \TU/lmr/m/n/10 inferior| 
+ []
+
+
+Overfull \hbox (12.87262pt too wide) in paragraph at lines 4283--4284
+ []\TU/lmr/m/n/10 Límite 
+ []
+
+
+Overfull \hbox (19.80263pt too wide) in paragraph at lines 4283--4284
+ \TU/lmr/m/n/10 superior| 
+ []
+
+
+Overfull \hbox (20.46715pt too wide) in paragraph at lines 4285--4286
+ []\TU/lmr/m/n/10 Coeficiente 
+ []
+
+
+Overfull \hbox (11.63715pt too wide) in paragraph at lines 4285--4286
+ \TU/lmr/m/n/10 variación| 
+ []
+
+
+Overfull \hbox (8.13881pt too wide) in paragraph at lines 4287--4288
+ []\TU/lmr/m/n/10 Efecto 
+ []
+
+
+Overfull \hbox (7.77881pt too wide) in paragraph at lines 4287--4288
+ \TU/lmr/m/n/10 diseño| 
+ []
+
+
+Overfull \hbox (15.41881pt too wide) in paragraph at lines 4289--4290
+ []\TU/lmr/m/n/10 Tamaño 
+ []
+
+
+Overfull \hbox (15.29881pt too wide) in paragraph at lines 4289--4290
+ \TU/lmr/m/n/10 muestra| 
+ []
+
+
+Overfull \hbox (11.76881pt too wide) in paragraph at lines 4293--4294
+ []\TU/lmr/m/n/10 Grados 
+ []
+
+
+Overfull \hbox (14.70882pt too wide) in paragraph at lines 4293--4294
+ \TU/lmr/m/n/10 libertad| 
+ []
+
+
+Overfull \hbox (19.15262pt too wide) in paragraph at lines 4295--4296
+ []\TU/lmr/m/n/10 Número 
+ []
+
+
+Overfull \hbox (6.72263pt too wide) in paragraph at lines 4295--4296
+ \TU/lmr/m/n/10 casos| 
+ []
+
+
+Overfull \hbox (4.86977pt too wide) in paragraph at lines 4297--4298
+ []\TU/lmr/m/n/10 Coeficiente 
+ []
+
+
+Overfull \hbox (6.01976pt too wide) in paragraph at lines 4297--4298
+ \TU/lmr/m/n/10 logarítmico| 
+ []
+
+
+Overfull \hbox (10.80048pt too wide) in alignment at lines 4274--4300
  [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (121.86023pt too wide) in alignment at lines 3986--3990
- [] [] [] [] [] [] [] [] [] [] [] 
+Overfull \hbox (1.82613pt too wide) in paragraph at lines 4308--4309
+ []$\OML/lmm/m/it/10 LS[]$| 
  []
 
 
-Overfull \hbox (121.86023pt too wide) in alignment at lines 3990--4002
- [] [] [] [] [] [] [] [] [] [] [] 
- []
-
-[178]
-Overfull \hbox (112.23624pt too wide) in alignment at lines 4006--4010
- [] [] [] [] [] [] [] [] [] [] [] 
+Overfull \hbox (15.75008pt too wide) in paragraph at lines 4312--4313
+ []$\OML/lmm/m/it/10 DEFF[]$| 
  []
 
 
-Overfull \hbox (112.23624pt too wide) in alignment at lines 4010--4022
- [] [] [] [] [] [] [] [] [] [] [] 
+Overfull \hbox (1.82613pt too wide) in paragraph at lines 4331--4332
+ []$\OML/lmm/m/it/10 LS[]$| 
  []
 
 
-Overfull \hbox (112.23624pt too wide) in alignment at lines 4026--4030
- [] [] [] [] [] [] [] [] [] [] [] 
+Overfull \hbox (15.75008pt too wide) in paragraph at lines 4335--4336
+ []$\OML/lmm/m/it/10 DEFF[]$| 
  []
 
 
-Overfull \hbox (112.23624pt too wide) in alignment at lines 4030--4042
+Overfull \hbox (2.33002pt too wide) in paragraph at lines 4375--4376
+ []$\OML/lmm/m/it/10 LI[]$| 
+ []
+
+
+Overfull \hbox (4.06612pt too wide) in paragraph at lines 4377--4378
+ []$\OML/lmm/m/it/10 LS[]$| 
+ []
+
+
+Overfull \hbox (17.99007pt too wide) in paragraph at lines 4381--4382
+ []$\OML/lmm/m/it/10 DEFF[]$| 
+ []
+
+
+Overfull \hbox (12.65298pt too wide) in paragraph at lines 4404--4405
+ []$\OML/lmm/m/it/10 DEFF$| 
+ []
+
+
+Overfull \hbox (10.80048pt too wide) in alignment at lines 4300--4417
  [] [] [] [] [] [] [] [] [] [] [] 
  []
 
-[179] [180] [181] [182
+[185]
 
-]
-Capítulo 10.
-[183] [184] [185] [186] [187
+Package xcolor Warning: Incompatible color definition on input line 4424.
 
-]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[186]
+
+Package xcolor Warning: Incompatible color definition on input line 4461.
+
+[187]
+
+Package xcolor Warning: Incompatible color definition on input line 4489.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4489.
 
 [188]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[189] [190] [191] [192]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Package xcolor Warning: Incompatible color definition on input line 4504.
 
-[193] [194] [195] [196] [197]
+[189] [190] [191]
+
+Package xcolor Warning: Incompatible color definition on input line 4561.
+
+[192] [193]
+
+Package xcolor Warning: Incompatible color definition on input line 4593.
+
+[194]
+
+Package xcolor Warning: Incompatible color definition on input line 4611.
+
+[195]
+
+Package xcolor Warning: Incompatible color definition on input line 4624.
+
+[196]
+File: EH-CEPAL_files/figure-latex/unnamed-chunk-6-1.pdf Graphic file (type QTm)
+
+<use  "EH-CEPAL_files/figure-latex/unnamed-chunk-6-1.pdf" >
+
+Package xcolor Warning: Incompatible color definition on input line 4650.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4657.
+
+[197]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [198]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[199] [200] [201] [202]
+Overfull \hbox (55.88538pt too wide) detected at line 4778
+\OML/lmm/m/it/12 y[] \OT1/lmr/m/n/12 = []
+ []
+
+[203]
+Overfull \hbox (55.59058pt too wide) detected at line 4848
+\OML/lmm/m/it/12 z[] \OT1/lmr/m/n/12 = []
+ []
+
+[204] [205]
+
+Package xcolor Warning: Incompatible color definition on input line 4872.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4874.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4876.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4876.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4876.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4876.
+
+
+Underfull \vbox (badness 4752) has occurred while \output is active []
+
+[206]
+
+Package xcolor Warning: Incompatible color definition on input line 4878.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4880.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4882.
+
+[207]
+
+Package xcolor Warning: Incompatible color definition on input line 4889.
+
+
+LaTeX Warning: Float too large for page by 37.82867pt on input line 4926.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[208] [209] [210
+
+]
+Capítulo 10.
+
+Package xcolor Warning: Incompatible color definition on input line 4935.
+
+[211]
+
+Package xcolor Warning: Incompatible color definition on input line 4941.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4943.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4943.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4943.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4943.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4943.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4943.
+
+[212]
+
+Package xcolor Warning: Incompatible color definition on input line 4951.
+
+[213] [214]
+
+Package xcolor Warning: Incompatible color definition on input line 4982.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4982.
+
+[215
+
+]
+
+Package xcolor Warning: Incompatible color definition on input line 4984.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4990.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4990.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4990.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4990.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4990.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4996.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[216]
+
+Package xcolor Warning: Incompatible color definition on input line 5002.
+
+
+Package xcolor Warning: Incompatible color definition on input line 5008.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[217]
+
+Package xcolor Warning: Incompatible color definition on input line 5020.
+
+
+Package xcolor Warning: Incompatible color definition on input line 5022.
+
+[218]
+
+Package xcolor Warning: Incompatible color definition on input line 5028.
+
+
+Package xcolor Warning: Incompatible color definition on input line 5034.
+
+[219]
+
+Package xcolor Warning: Incompatible color definition on input line 5036.
+
+
+Package xcolor Warning: Incompatible color definition on input line 5042.
+
+
+Package xcolor Warning: Incompatible color definition on input line 5044.
+
+[220]
+
+Package xcolor Warning: Incompatible color definition on input line 5050.
+
+
+Package xcolor Warning: Incompatible color definition on input line 5052.
+
+
+Package xcolor Warning: Incompatible color definition on input line 5058.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[221]
+
+Package xcolor Warning: Incompatible color definition on input line 5060.
+
+
+Package xcolor Warning: Incompatible color definition on input line 5066.
+
+
+Package xcolor Warning: Incompatible color definition on input line 5074.
+
+[222]
+
+Package xcolor Warning: Incompatible color definition on input line 5076.
+
+
+Package xcolor Warning: Incompatible color definition on input line 5082.
+
+
+Package xcolor Warning: Incompatible color definition on input line 5084.
+
+[223]
+
+Package xcolor Warning: Incompatible color definition on input line 5090.
+
+
+Package xcolor Warning: Incompatible color definition on input line 5092.
+
+
+Package xcolor Warning: Incompatible color definition on input line 5098.
+
+
+Package xcolor Warning: Incompatible color definition on input line 5100.
+
+[224]
+
+Package xcolor Warning: Incompatible color definition on input line 5106.
+
+
+Package xcolor Warning: Incompatible color definition on input line 5108.
+
+
+Package xcolor Warning: Incompatible color definition on input line 5114.
+
+[225]
+
+Package xcolor Warning: Incompatible color definition on input line 5120.
+
+
+Package xcolor Warning: Incompatible color definition on input line 5122.
+
+
+Package xcolor Warning: Incompatible color definition on input line 5128.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[226]
+
+Package xcolor Warning: Incompatible color definition on input line 5130.
+
+
+Package xcolor Warning: Incompatible color definition on input line 5136.
+
+
+Package xcolor Warning: Incompatible color definition on input line 5142.
+
+
 Underfull \vbox (badness 1389) has occurred while \output is active []
 
-[199] [200] [201]
-Overfull \hbox (20.259pt too wide) in paragraph at lines 4315--4316
+[227]
+
+Package xcolor Warning: Incompatible color definition on input line 5144.
+
+
+Package xcolor Warning: Incompatible color definition on input line 5150.
+
+[228]
+
+Package xcolor Warning: Incompatible color definition on input line 5152.
+
+
+Package xcolor Warning: Incompatible color definition on input line 5158.
+
+[229]
+Overfull \hbox (20.259pt too wide) in paragraph at lines 5173--5174
 []\TU/lmr/m/n/12 Periodicidad|  
  []
 
 
-Overfull \hbox (12.96735pt too wide) in paragraph at lines 4317--4318
+Overfull \hbox (12.96735pt too wide) in paragraph at lines 5175--5176
 []\TU/lmr/m/n/12 Rotación|  
  []
 
 
-Overfull \hbox (20.259pt too wide) in paragraph at lines 4331--4332
+Overfull \hbox (20.259pt too wide) in paragraph at lines 5189--5190
 []\TU/lmr/m/n/12 Periodicidad|  
  []
 
 
-Overfull \hbox (12.96735pt too wide) in paragraph at lines 4333--4334
+Overfull \hbox (12.96735pt too wide) in paragraph at lines 5191--5192
 []\TU/lmr/m/n/12 Rotación|  
  []
 
 
-Overfull \hbox (8.96701pt too wide) in paragraph at lines 4346--4347
+Overfull \hbox (8.96701pt too wide) in paragraph at lines 5204--5205
 []\TU/lmr/m/n/12 Trimestral|  
  []
 
 
-Overfull \hbox (13.27934pt too wide) in paragraph at lines 4370--4371
+Overfull \hbox (13.27934pt too wide) in paragraph at lines 5228--5229
 []\TU/lmr/m/n/12 Repetida|  
  []
 
 
-Overfull \hbox (13.27934pt too wide) in paragraph at lines 4396--4397
+Overfull \hbox (13.27934pt too wide) in paragraph at lines 5254--5255
 []\TU/lmr/m/n/12 Repetida|  
  []
 
 
-Overfull \hbox (13.27934pt too wide) in paragraph at lines 4409--4410
+Overfull \hbox (13.27934pt too wide) in paragraph at lines 5267--5268
 []\TU/lmr/m/n/12 Repetida|  
  []
 
 
-Overfull \hbox (13.27934pt too wide) in paragraph at lines 4422--4423
+Overfull \hbox (13.27934pt too wide) in paragraph at lines 5280--5281
 []\TU/lmr/m/n/12 Repetida|  
  []
 
 
-Overfull \hbox (8.96701pt too wide) in paragraph at lines 4450--4451
+Overfull \hbox (8.96701pt too wide) in paragraph at lines 5308--5309
 []\TU/lmr/m/n/12 Trimestral|  
  []
 
 
-Overfull \hbox (13.27934pt too wide) in paragraph at lines 4461--4462
+Overfull \hbox (13.27934pt too wide) in paragraph at lines 5319--5320
 []\TU/lmr/m/n/12 Repetida|  
  []
 
 
-Overfull \hbox (13.27934pt too wide) in paragraph at lines 4474--4475
+Overfull \hbox (13.27934pt too wide) in paragraph at lines 5332--5333
 []\TU/lmr/m/n/12 Repetida|  
  []
 
 
-Overfull \hbox (5.79901pt too wide) in paragraph at lines 4476--4477
+Overfull \hbox (5.79901pt too wide) in paragraph at lines 5334--5335
 []\TU/lmr/m/n/12 Semestral|  
  []
 
 
-Overfull \hbox (13.27934pt too wide) in paragraph at lines 4487--4488
+Overfull \hbox (13.27934pt too wide) in paragraph at lines 5345--5346
 []\TU/lmr/m/n/12 Repetida|  
  []
 
 
-Overfull \hbox (5.79901pt too wide) in paragraph at lines 4489--4490
+Overfull \hbox (5.79901pt too wide) in paragraph at lines 5347--5348
 []\TU/lmr/m/n/12 Semestral|  
  []
 
 
-Overfull \hbox (13.27934pt too wide) in paragraph at lines 4500--4501
+Overfull \hbox (13.27934pt too wide) in paragraph at lines 5358--5359
 []\TU/lmr/m/n/12 Repetida|  
  []
 
 
-Overfull \hbox (8.96701pt too wide) in paragraph at lines 4515--4516
+Overfull \hbox (8.96701pt too wide) in paragraph at lines 5373--5374
 []\TU/lmr/m/n/12 Trimestral|  
  []
 
 
-Overfull \hbox (13.27934pt too wide) in paragraph at lines 4526--4527
+Overfull \hbox (13.27934pt too wide) in paragraph at lines 5384--5385
 []\TU/lmr/m/n/12 Repetida|  
  []
 
 
-Overfull \hbox (13.27934pt too wide) in paragraph at lines 4539--4540
+Overfull \hbox (13.27934pt too wide) in paragraph at lines 5397--5398
 []\TU/lmr/m/n/12 Repetida|  
  []
 
 
-Overfull \hbox (13.27934pt too wide) in paragraph at lines 4565--4566
+Overfull \hbox (13.27934pt too wide) in paragraph at lines 5423--5424
 []\TU/lmr/m/n/12 Repetida|  
  []
 
 
-Overfull \hbox (5.79901pt too wide) in paragraph at lines 4580--4581
+Overfull \hbox (5.79901pt too wide) in paragraph at lines 5438--5439
 []\TU/lmr/m/n/12 Semestral|  
  []
 
 
-Overfull \hbox (13.27934pt too wide) in paragraph at lines 4591--4592
+Overfull \hbox (13.27934pt too wide) in paragraph at lines 5449--5450
 []\TU/lmr/m/n/12 Repetida|  
  []
 
 
-Overfull \hbox (13.27934pt too wide) in paragraph at lines 4604--4605
+Overfull \hbox (13.27934pt too wide) in paragraph at lines 5462--5463
 []\TU/lmr/m/n/12 Repetida|  
  []
 
 
-Overfull \hbox (5.79901pt too wide) in paragraph at lines 4606--4607
+Overfull \hbox (5.79901pt too wide) in paragraph at lines 5464--5465
 []\TU/lmr/m/n/12 Semestral|  
  []
 
-[202
+[230
 
-] [203] [204] [205] [206
+] [231] [232] [233] [234
 
-] [207] [208] [209] [210] [211] [212] [213]
-Underfull \hbox (badness 2393) in paragraph at lines 5258--5262
+] [235] [236] [237] [238] [239] [240] [241]
+Underfull \hbox (badness 2393) in paragraph at lines 6116--6120
 []\TU/lmr/m/n/12 Presentación del método escogido para calibrar (postestra-
  []
 
 
-Underfull \hbox (badness 1953) in paragraph at lines 5258--5262
+Underfull \hbox (badness 1953) in paragraph at lines 6116--6120
 \TU/lmr/m/n/12 tificación, raking, calibración mixta) + Descripción de las
  []
 
-[214] [215] [216] [217
+[242] [243] [244] [245
 
-] [218]
-Underfull \hbox (badness 1997) in paragraph at lines 5376--5376
+] [246]
+Underfull \hbox (badness 1997) in paragraph at lines 6234--6234
 \TU/lmr/m/n/12 flows in labour force participation”. En: \TU/lmr/m/it/12 Survey
  Methodology \TU/lmr/m/n/12 9.1,
  []
 
-[219] [220] [221] [222]
-Underfull \hbox (badness 2512) in paragraph at lines 5376--5376
+[247] [248] [249] [250]
+Underfull \hbox (badness 2512) in paragraph at lines 6234--6234
 [][]\TU/lmr/m/n/12 OIT (1982). \TU/lmr/m/it/12 Resolución sobre estadísticas de
  la población económi-
  []
 
 
-Underfull \hbox (badness 1389) in paragraph at lines 5376--5376
+Underfull \hbox (badness 1389) in paragraph at lines 6234--6234
 \TU/lmr/m/it/12 camente activa, del empleo, del desempleo y del subempleo\TU/lm
 r/m/n/12 . \TU/lmr/m/sc/12 url\TU/lmr/m/n/12 :
  []
 
-
-Underfull \hbox (badness 1383) in paragraph at lines 5376--5376
+[251]
+Underfull \hbox (badness 1383) in paragraph at lines 6234--6234
 [][][]\TU/lmr/m/n/12 (2016). \TU/lmr/m/it/12 Global Sustainable Development Rep
 ort 2016\TU/lmr/m/n/12 . \TU/lmr/m/sc/12 url\TU/lmr/m/n/12 : [][]$[][][][][] []
 
  []
 
-[223] [224]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5378.
-[225]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 5378.
+[252] [253] [254]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 6236.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 6236.
 (./EH-CEPAL.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 5378.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 5378.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 6236.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 6236.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+
+Package biblatex Warning: Please rerun LaTeX.
+(biblatex)                Page breaks have changed.
+
 Package logreq Info: Writing requests to 'EH-CEPAL.run.xml'.
 \openout1 = `EH-CEPAL.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 28513 strings out of 493005
- 530105 string characters out of 6134596
- 1037404 words of memory out of 5000000
- 32125 multiletter control sequences out of 15000+600000
+ 40567 strings out of 493005
+ 810422 string characters out of 6134596
+ 1312958 words of memory out of 5000000
+ 43922 multiletter control sequences out of 15000+600000
  56120 words of font info for 90 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 45i,19n,58p,10406b,6590s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,19n,67p,10406b,6590s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on EH-CEPAL.pdf (225 pages).
+Output written on EH-CEPAL.pdf (254 pages).
