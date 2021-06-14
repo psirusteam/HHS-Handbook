@@ -25,6 +25,7 @@ output:
     css: "style.css"
 # Compilar así:
 # bookdown::render_book("index.Rmd", "bookdown::pdf_book")
+# bookdown::render_book("index.Rmd", "bookdown::epub_book")
 # bookdown::render_book("index.Rmd", "bookdown::word_document2")
 # bookdown::preview_chapter("01.Rmd", "bookdown::word_document2")
 ---
