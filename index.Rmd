@@ -53,4 +53,4 @@ thematic_on(
 
 ![Creative Commons License](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.png)
 
-La versión online de este libro estáa licenciaada bajo una [Licencia Internacinal de Creative Commons para compartir con atribución no comercial 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/). 
+La versión online de este libro está licenciada bajo una [Licencia Internacional de Creative Commons para compartir con atribución no comercial 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/). 
