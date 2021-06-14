@@ -1,0 +1,22 @@
+h1:criterios-de-calidad-y-difusión Criterios de calidad y difusión
+h2:introducción Introducción
+h2:principios-básicos-de-estimación Principios básicos de estimación
+h3:análisis-en-subpoblaciones Análisis en subpoblaciones
+h3:estimación-puntual-de-promedios-y-proporciones Estimación puntual de promedios y proporciones
+h3:aproximación-de-la-varianza Aproximación de la varianza
+h3:razonamiento-probabilístico Razonamiento probabilístico
+h3:aproximación-de-la-varianza-en-las-subpoblaciones Aproximación de la varianza en las subpoblaciones
+h2:criterios-de-calidad Criterios de calidad
+h3:intervalos-de-confianza Intervalos de confianza
+h3:coeficientes-de-variación Coeficientes de variación
+h3:el-efecto-de-diseño-deff El efecto de diseño DEFF
+h3:tamaño-de-muestra Tamaño de muestra
+h3:tamaño-de-muestra-efectivo Tamaño de muestra efectivo
+h3:grados-de-libertad Grados de libertad
+h3:coeficiente-de-variación-logarítmico Coeficiente de variación logarítmico
+fig:echo \\label{fig1}*Relación entre el tamaño de muestra y la precisión de un indicador utilizando la transformación Logit*.
+h3:conteo-de-casos-no-ponderado Conteo de casos no ponderado
+h2:consideraciones-adicionales Consideraciones adicionales
+h3:variables-y-subpoblaciones Variables y subpoblaciones
+h3:secuencia-lógica-para-crear-reglas-de-supresión Secuencia lógica para crear reglas de supresión
+

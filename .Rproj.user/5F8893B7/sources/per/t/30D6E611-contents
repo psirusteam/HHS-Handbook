@@ -1,0 +1,31 @@
+--- 
+title: "Diseño y análisis estadístico en las encuestas de hogares de América Latina"
+author: "Andrés Gutiérrez"
+date: "`r Sys.Date()`"
+output:
+  bookdown::pdf_book:
+    template: tex/template_thesis_classic.tex
+    keep_tex: yes
+    citation_package: natbib
+#    latex_engine: xelatex
+    toc_depth: 3
+    toc_unnumbered: no
+    toc_appendix: yes
+    pandoc_args:  --top-level-division=chapter
+    quote_footer: ["\\begin{flushright}", "\\end{flushright}"]
+bibliography: [bib/CEPAL.bib]
+biblio-style: apalike
+link-citations: yes
+colorlinks: no  
+# toc: no
+lot: no
+lof: no
+site: bookdown::bookdown_site
+logo: Pics/logo-cepal.jpg
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(out.width = '90%', fig.align = 'center')
+#bookdown::render_book("index.Rmd", "bookdown::pdf_book")
+```
+

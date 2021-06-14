@@ -1,7 +1,7 @@
 --- 
 title: "Diseño y análisis estadístico en las encuestas de hogares de América Latina"
 author: "Andrés Gutiérrez^[Experto regional en estadísticas sociales - Unidad de Estadística Social - Comisión Económica para América Latina y el Caribe (CEPAL) -  andres.gutierrez@cepal.org]"
-date: "`r Sys.Date()`"
+date: "2021-06-14"
 site: bookdown::bookdown_site
 output:
   pdf_document:
@@ -32,22 +32,7 @@ knit: "bookdown::render_book"
 # bookdown::preview_chapter("01.Rmd", "bookdown::word_document2")
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(warning = FALSE, 
-                      message = FALSE,
-                      cache = TRUE)
-library(rstan)
-library(printr)
-library(knitr)
-rstan_options (javascript = FALSE)
-library(thematic)
-library(ggplot2) 
-theme_set(theme_bw())
-thematic_on(
-  bg = "white", fg = "black", accent = "red",
-  font = font_spec("Oxanium", scale = 1.25)
-)
-```
+
 
 # Prefacio {-}
 

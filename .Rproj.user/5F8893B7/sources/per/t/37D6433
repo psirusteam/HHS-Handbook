@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1561327996109.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1234346238",
+    "id" : "37D6433",
+    "lastKnownWriteTime" : 1561327833,
+    "last_content_update" : 1561327833,
+    "path" : "~/Desktop/Dropbox/CEPAL/git ECLAC/HHS-Handbook/_book/EH-CEPAL.tex",
+    "project_path" : null,
+    "properties" : {
+        "cursorPosition" : "0,17",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "tex"
+}

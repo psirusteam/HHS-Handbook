@@ -1,0 +1,4046 @@
+{
+    "sources": [
+        {
+            "author": [
+                {
+                    "family": "Potter",
+                    "given": "Frank J"
+                }
+            ],
+            "container-title": "Procedings of the survey research methods section",
+            "id": "Potter_1993",
+            "issued": {
+                "date-parts": [
+                    [
+                        1993
+                    ]
+                ]
+            },
+            "page": "758-763",
+            "publisher": "American Statistical Association",
+            "title": "The effect of weight trimming on nonlinear survey estimates",
+            "type": "paper-conference"
+        },
+        {
+            "DOI": "10.1007/978-3-319-93632-1",
+            "ISBN": "978-3-319-93631-4",
+            "URL": "http://link.springer.com/10.1007/978-3-319-93632-1",
+            "author": [
+                {
+                    "family": "Valliant",
+                    "given": "Richard"
+                },
+                {
+                    "family": "Dever",
+                    "given": "Jill A."
+                },
+                {
+                    "family": "Kreuter",
+                    "given": "Frauke"
+                }
+            ],
+            "collection-title": "Statistics for social and behavioral sciences",
+            "id": "Valliant_Dever_Kreuter_2018",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "publisher": "Springer International Publishing",
+            "title": "Practical tools for designing and weighting survey samples",
+            "type": "book"
+        },
+        {
+            "ISBN": "978-0-387-32917-8",
+            "author": [
+                {
+                    "family": "Wolter",
+                    "given": "Kirk M."
+                }
+            ],
+            "collection-title": "Statistics for social and behavioral sciences",
+            "edition": "2nd ed",
+            "id": "Wolter_2007",
+            "issued": {
+                "date-parts": [
+                    [
+                        2007
+                    ]
+                ]
+            },
+            "publisher": "Springer",
+            "title": "Introduction to variance estimation",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Kish",
+                    "given": "Leslie"
+                }
+            ],
+            "id": "Kish_1965",
+            "issued": {
+                "date-parts": [
+                    [
+                        1965
+                    ]
+                ]
+            },
+            "publisher": "John Wiley; Sons",
+            "title": "Survey sampling",
+            "type": "book"
+        },
+        {
+            "DOI": "10.1198/tast.2009.0028",
+            "ISSN": "0003-1305, 1537-2731",
+            "author": [
+                {
+                    "family": "Gambino",
+                    "given": "Jack G."
+                }
+            ],
+            "container-title": "The American Statistician",
+            "id": "Gambino_2009",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2009,
+                        5
+                    ]
+                ]
+            },
+            "page": "141-146",
+            "title": "Design effect caveats",
+            "type": "article-journal",
+            "volume": "63"
+        },
+        {
+            "ISBN": "978-0-387-40620-6",
+            "author": [
+                {
+                    "family": "Särndal",
+                    "given": "Carl-Erik"
+                },
+                {
+                    "family": "Swensson",
+                    "given": "Bengt"
+                },
+                {
+                    "family": "Wretman",
+                    "given": "Jan"
+                }
+            ],
+            "id": "Sarndal_Swensson_Wretman_2003",
+            "issued": {
+                "date-parts": [
+                    [
+                        2003,
+                        10
+                    ]
+                ]
+            },
+            "note": "Google-Books-ID: ufdONK3E1TcC",
+            "publisher": "Springer Science; Business Media",
+            "title": "Model assisted survey sampling",
+            "type": "book"
+        },
+        {
+            "DOI": "10.15332/s2027-3355.2016.0001.06",
+            "ISSN": "2027-3355",
+            "author": [
+                {
+                    "family": "Gutiérrez",
+                    "given": "Andrés"
+                },
+                {
+                    "family": "Zhang",
+                    "given": "Hanwen"
+                },
+                {
+                    "family": "Montaño",
+                    "given": "Cristian"
+                }
+            ],
+            "container-title": "Comunicaciones en Estadística",
+            "id": "Gutierrez_Zhang_Montano_2016",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016,
+                        6
+                    ]
+                ]
+            },
+            "page": "109",
+            "title": "Calculo del tamaño de muestra para la estimación de una varianza en poblaciones finitas con funciones en r",
+            "type": "article-journal",
+            "volume": "9"
+        },
+        {
+            "author": [
+                {
+                    "family": "Valliant",
+                    "given": "Richard"
+                },
+                {
+                    "family": "Dever",
+                    "given": "Jill A."
+                }
+            ],
+            "edition": "1 edition",
+            "id": "Valliant_Dever_2017",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017,
+                        12
+                    ]
+                ]
+            },
+            "publisher": "Stata Press",
+            "title": "Survey weights: A step-by-step guide to calculation",
+            "title-short": "Survey weights",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Potter",
+                    "given": "Frank J"
+                }
+            ],
+            "container-title": "Procedings of the survey research methods section",
+            "id": "Potter_1993",
+            "issued": {
+                "date-parts": [
+                    [
+                        1993
+                    ]
+                ]
+            },
+            "page": "758-763",
+            "publisher": "American Statistical Association",
+            "title": "The effect of weight trimming on nonlinear survey estimates",
+            "type": "paper-conference"
+        },
+        {
+            "DOI": "10.1007/978-3-319-93632-1",
+            "ISBN": "978-3-319-93631-4",
+            "URL": "http://link.springer.com/10.1007/978-3-319-93632-1",
+            "author": [
+                {
+                    "family": "Valliant",
+                    "given": "Richard"
+                },
+                {
+                    "family": "Dever",
+                    "given": "Jill A."
+                },
+                {
+                    "family": "Kreuter",
+                    "given": "Frauke"
+                }
+            ],
+            "collection-title": "Statistics for social and behavioral sciences",
+            "id": "Valliant_Dever_Kreuter_2018",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "publisher": "Springer International Publishing",
+            "title": "Practical tools for designing and weighting survey samples",
+            "type": "book"
+        },
+        {
+            "ISBN": "978-0-387-32917-8",
+            "author": [
+                {
+                    "family": "Wolter",
+                    "given": "Kirk M."
+                }
+            ],
+            "collection-title": "Statistics for social and behavioral sciences",
+            "edition": "2nd ed",
+            "id": "Wolter_2007",
+            "issued": {
+                "date-parts": [
+                    [
+                        2007
+                    ]
+                ]
+            },
+            "publisher": "Springer",
+            "title": "Introduction to variance estimation",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Kish",
+                    "given": "Leslie"
+                }
+            ],
+            "id": "Kish_1965",
+            "issued": {
+                "date-parts": [
+                    [
+                        1965
+                    ]
+                ]
+            },
+            "publisher": "John Wiley; Sons",
+            "title": "Survey sampling",
+            "type": "book"
+        },
+        {
+            "DOI": "10.1198/tast.2009.0028",
+            "ISSN": "0003-1305, 1537-2731",
+            "author": [
+                {
+                    "family": "Gambino",
+                    "given": "Jack G."
+                }
+            ],
+            "container-title": "The American Statistician",
+            "id": "Gambino_2009",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2009,
+                        5
+                    ]
+                ]
+            },
+            "page": "141-146",
+            "title": "Design effect caveats",
+            "type": "article-journal",
+            "volume": "63"
+        },
+        {
+            "ISBN": "978-0-387-40620-6",
+            "author": [
+                {
+                    "family": "Särndal",
+                    "given": "Carl-Erik"
+                },
+                {
+                    "family": "Swensson",
+                    "given": "Bengt"
+                },
+                {
+                    "family": "Wretman",
+                    "given": "Jan"
+                }
+            ],
+            "id": "Sarndal_Swensson_Wretman_2003",
+            "issued": {
+                "date-parts": [
+                    [
+                        2003,
+                        10
+                    ]
+                ]
+            },
+            "note": "Google-Books-ID: ufdONK3E1TcC",
+            "publisher": "Springer Science; Business Media",
+            "title": "Model assisted survey sampling",
+            "type": "book"
+        },
+        {
+            "DOI": "10.15332/s2027-3355.2016.0001.06",
+            "ISSN": "2027-3355",
+            "author": [
+                {
+                    "family": "Gutiérrez",
+                    "given": "Andrés"
+                },
+                {
+                    "family": "Zhang",
+                    "given": "Hanwen"
+                },
+                {
+                    "family": "Montaño",
+                    "given": "Cristian"
+                }
+            ],
+            "container-title": "Comunicaciones en Estadística",
+            "id": "Gutierrez_Zhang_Montano_2016",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016,
+                        6
+                    ]
+                ]
+            },
+            "page": "109",
+            "title": "Calculo del tamaño de muestra para la estimación de una varianza en poblaciones finitas con funciones en r",
+            "type": "article-journal",
+            "volume": "9"
+        },
+        {
+            "author": [
+                {
+                    "family": "Valliant",
+                    "given": "Richard"
+                },
+                {
+                    "family": "Dever",
+                    "given": "Jill A."
+                }
+            ],
+            "edition": "1 edition",
+            "id": "Valliant_Dever_2017",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017,
+                        12
+                    ]
+                ]
+            },
+            "publisher": "Stata Press",
+            "title": "Survey weights: A step-by-step guide to calculation",
+            "title-short": "Survey weights",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Gutiérrez",
+                    "given": "H. A."
+                }
+            ],
+            "container-title": "Survey Methodology",
+            "id": "Gutierrez_2014",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2014
+                    ]
+                ]
+            },
+            "page": "285-321",
+            "title": "The estimation of gross flows in complex surveys with random nonresponse",
+            "type": "article-journal",
+            "volume": "40"
+        },
+        {
+            "author": [
+                {
+                    "family": "Lohr",
+                    "given": "Sharon L"
+                }
+            ],
+            "id": "Lohr_2019",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "publisher": "Duxbury Press",
+            "title": "Sampling: Design and analysis",
+            "title-short": "Sampling",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Jacob",
+                    "given": "Guilherme"
+                }
+            ],
+            "id": "Jacob_2020",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "title": "Surf: Survey-based gross-flow estimation.",
+            "title-short": "Surf",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Feinberg",
+                    "given": "Stephen"
+                },
+                {
+                    "family": "Stasny",
+                    "given": "Elizabeth"
+                }
+            ],
+            "container-title": "Survey Methodology",
+            "id": "Feinberg_Stasny_1983",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        1983
+                    ]
+                ]
+            },
+            "page": "77-102",
+            "title": "Estimating monthly gross flows in labour force participation",
+            "type": "article-journal",
+            "volume": "9"
+        },
+        {
+            "ISBN": "978-0-471-19375-3",
+            "author": [
+                {
+                    "family": "Biemer",
+                    "given": "Paul P."
+                },
+                {
+                    "family": "Lyberg",
+                    "given": "Lars E."
+                }
+            ],
+            "collection-title": "Wiley series in survey methodology",
+            "id": "Biemer_Lyberg_2003",
+            "issued": {
+                "date-parts": [
+                    [
+                        2003
+                    ]
+                ]
+            },
+            "publisher": "Wiley-Interscience",
+            "title": "Introduction to survey quality",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Presser",
+                    "given": "Stanley"
+                },
+                {
+                    "family": "Rothgeb",
+                    "given": "Jennifer"
+                },
+                {
+                    "family": "Couper",
+                    "given": "Mick"
+                },
+                {
+                    "family": "Lessler",
+                    "given": "Judith"
+                },
+                {
+                    "family": "Martin",
+                    "given": "Elizabeth"
+                },
+                {
+                    "family": "Martin",
+                    "given": "Jean"
+                },
+                {
+                    "family": "Singer",
+                    "given": "Eleanor"
+                }
+            ],
+            "id": "Presser_Rothgeb_Couper_Lessler_Martin_Martin_Singer_2004",
+            "issued": {
+                "date-parts": [
+                    [
+                        2004
+                    ]
+                ]
+            },
+            "publisher": "John Wiley; Sons",
+            "title": "Methods for testing and evaluating survey questionnaires",
+            "type": "book"
+        },
+        {
+            "DOI": "10.2307/1913475",
+            "ISSN": "0012-9682",
+            "author": [
+                {
+                    "family": "Foster",
+                    "given": "James"
+                },
+                {
+                    "family": "Greer",
+                    "given": "Joel"
+                },
+                {
+                    "family": "Thorbecke",
+                    "given": "Erik"
+                }
+            ],
+            "container-title": "Econometrica",
+            "id": "Foster_Greer_Thorbecke_1984",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        1984
+                    ]
+                ]
+            },
+            "page": "761-766",
+            "title": "A class of decomposable poverty measures",
+            "type": "article-journal",
+            "volume": "52"
+        },
+        {
+            "author": [
+                {
+                    "family": "Groves",
+                    "given": "Robert"
+                },
+                {
+                    "family": "Fowler",
+                    "given": "Floyd"
+                },
+                {
+                    "family": "Couper",
+                    "given": "Mick"
+                },
+                {
+                    "family": "Lepkowski",
+                    "given": "James"
+                },
+                {
+                    "family": "Singer",
+                    "given": "Eleanor"
+                },
+                {
+                    "family": "Tourangeau",
+                    "given": "Roger"
+                }
+            ],
+            "id": "Groves_Fowler_Couper_Lepkowski_Singer_Tourangeau_2009",
+            "issued": {
+                "date-parts": [
+                    [
+                        2009
+                    ]
+                ]
+            },
+            "publisher": "John Wiley; Sons",
+            "title": "Survey methodology",
+            "type": "book"
+        },
+        {
+            "URL": "http://repositorio.cepal.org/bitstream/handle/11362/44314/1/S1800852_es.pdf",
+            "author": [
+                {
+                    "family": "CEPAL"
+                }
+            ],
+            "collection-title": "Metodologías de la CEPAL",
+            "id": "CEPAL_2018",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "title": "Medición de la pobreza por ingresos - actualización metodológica y resultados",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "McLaren",
+                    "given": "C."
+                },
+                {
+                    "family": "Steel",
+                    "given": "D. G."
+                }
+            ],
+            "container-title": "Statistica Neerlandica",
+            "id": "McLaren_Steel_2001",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2001
+                    ]
+                ]
+            },
+            "page": "221-238",
+            "title": "Rotation patterns and trend estimation for repeated surveys using rotation group estimates",
+            "type": "article-journal",
+            "volume": "55"
+        },
+        {
+            "author": [
+                {
+                    "family": "Béland",
+                    "given": "Y."
+                },
+                {
+                    "family": "Dale",
+                    "given": "Vincent"
+                },
+                {
+                    "family": "Dufour",
+                    "given": "Johane"
+                },
+                {
+                    "family": "Hamel",
+                    "given": "Marc"
+                }
+            ],
+            "container-title": "Proceedings of the american statistical association joint statistical meetings 2005, section on survey research methods, august 2005",
+            "id": "Beland_Dale_Dufour_Hamel_2005",
+            "issued": {
+                "date-parts": [
+                    [
+                        2005
+                    ]
+                ]
+            },
+            "title": "The canadian community health survey: Building on the success from the past",
+            "title-short": "The canadian community health survey",
+            "type": "chapter"
+        },
+        {
+            "author": [
+                {
+                    "family": "Clark",
+                    "given": "R. G."
+                },
+                {
+                    "family": "Steel",
+                    "given": "D. G."
+                }
+            ],
+            "container-title": "Journal of the Royal Statistical Society: Series A (Statistics in Society)",
+            "id": "Clark_Steel_2007",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2007
+                    ]
+                ]
+            },
+            "page": "63-82",
+            "title": "Sampling within households in household surveys",
+            "type": "article-journal",
+            "volume": "170"
+        },
+        {
+            "author": [
+                {
+                    "family": "Lohr",
+                    "given": "S."
+                }
+            ],
+            "id": "Loh",
+            "issued": {
+                "date-parts": [
+                    [
+                        2000
+                    ]
+                ]
+            },
+            "publisher": "Thompson",
+            "title": "Sampling: Design and analysis",
+            "title-short": "Sampling",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "LaRoche",
+                    "given": "Silvia"
+                }
+            ],
+            "id": "LaRoche_2003",
+            "issued": {
+                "date-parts": [
+                    [
+                        2003
+                    ]
+                ]
+            },
+            "publisher": "Statistics Canada",
+            "title": "Longitudinal and cross-sectional weighting of the survey of labour and income dynamics",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Vehovar",
+                    "given": "Vasja"
+                }
+            ],
+            "container-title": "Journal of Official Statistics",
+            "id": "Vehovar_1999",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        1999
+                    ]
+                ]
+            },
+            "page": "335-350",
+            "title": "Field substitution and unit nonresponse",
+            "type": "article-journal",
+            "volume": "15"
+        },
+        {
+            "ISBN": "978-0-471-13773-3",
+            "author": [
+                {
+                    "family": "Korn",
+                    "given": "Edward Lee"
+                },
+                {
+                    "family": "Graubard",
+                    "given": "Barry I."
+                }
+            ],
+            "id": "Korn_Graubard_1999",
+            "issued": {
+                "date-parts": [
+                    [
+                        1999
+                    ]
+                ]
+            },
+            "publisher": "Wiley",
+            "title": "Analysis of health surveys",
+            "type": "book"
+        },
+        {
+            "ISBN": "978-1-4200-8066-7",
+            "author": [
+                {
+                    "family": "Heeringa",
+                    "given": "Steven G."
+                },
+                {
+                    "family": "West",
+                    "given": "Brady T."
+                },
+                {
+                    "family": "Berglund",
+                    "given": "Patricia A."
+                }
+            ],
+            "collection-title": "Chapman and hall/CRC statistics in the social and behavioral sciences series",
+            "id": "Heeringa_West_Berglund_2010",
+            "issued": {
+                "date-parts": [
+                    [
+                        2010
+                    ]
+                ]
+            },
+            "publisher": "CRC Press",
+            "title": "Applied survey data analysis",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Barnett-Walker",
+                    "given": "Kortnee C."
+                },
+                {
+                    "family": "Chromy",
+                    "given": "James R."
+                },
+                {
+                    "family": "Davis",
+                    "given": "Teresa R."
+                },
+                {
+                    "family": "Emrich",
+                    "given": "Steven L."
+                },
+                {
+                    "family": "Odom",
+                    "given": "Dawn M."
+                },
+                {
+                    "family": "Packer",
+                    "given": "Lisa E."
+                }
+            ],
+            "id": "Barnett_Walker_Chromy_Davis_Emrich_Odom_Packer_2003",
+            "issued": {
+                "date-parts": [
+                    [
+                        2003
+                    ]
+                ]
+            },
+            "title": "2001 national household survey on drug abuse",
+            "type": "article-journal"
+        },
+        {
+            "author": [
+                {
+                    "family": "Parker",
+                    "given": "JD"
+                },
+                {
+                    "family": "Talih",
+                    "given": "M"
+                },
+                {
+                    "family": "Malec",
+                    "given": "DJ"
+                }
+            ],
+            "container-title": "Vital Health Stat",
+            "id": "Parker_Talih_Malec_2017",
+            "issue": "175",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "title": "National center for health statistics data presentation standards for proportions",
+            "type": "article-journal",
+            "volume": "2"
+        },
+        {
+            "author": [
+                {
+                    "family": "Hornik",
+                    "given": "Robert"
+                },
+                {
+                    "family": "Maklan",
+                    "given": "David"
+                },
+                {
+                    "family": "Cadell",
+                    "given": "Diane"
+                },
+                {
+                    "family": "Prado",
+                    "given": "Amalia"
+                },
+                {
+                    "family": "Barmada",
+                    "given": "Carlin"
+                },
+                {
+                    "family": "Jacobsohn",
+                    "given": "Lela"
+                },
+                {
+                    "family": "Orwin",
+                    "given": "Robert"
+                },
+                {
+                    "family": "Sridharan",
+                    "given": "Sanjeev"
+                },
+                {
+                    "family": "Zador",
+                    "given": "Paul"
+                },
+                {
+                    "family": "Southwell",
+                    "given": "Brian"
+                },
+                {
+                    "dropping-particle": "et",
+                    "family": "al."
+                }
+            ],
+            "id": "Hornik_Maklan_Cadell_Prado_Barmada_Jacobsohn_Orwin_Sridharan_Zador_Southwell_etal",
+            "issued": {
+                "date-parts": [
+                    [
+                        2002
+                    ]
+                ]
+            },
+            "page": "740",
+            "title": "Evaluation of the national youth anti-drug media campaign: Fourth semi-annual report of findings",
+            "title-short": "Evaluation of the national youth anti-drug media campaign",
+            "type": "article-journal"
+        },
+        {
+            "author": [
+                {
+                    "family": "Naud",
+                    "given": "Jean-Francois"
+                }
+            ],
+            "id": "Naud_2002",
+            "issued": {
+                "date-parts": [
+                    [
+                        2002
+                    ]
+                ]
+            },
+            "publisher": "Statistics Canada",
+            "title": "Combined-panel longitudinal weighting - survey of labour and income dynamics",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Hansen",
+                    "given": "Morris H."
+                },
+                {
+                    "family": "Hurwitz",
+                    "given": "William N."
+                },
+                {
+                    "family": "Madow",
+                    "given": "William G."
+                }
+            ],
+            "id": "Hansen_Hurwitz_Madow_1953",
+            "issued": {
+                "date-parts": [
+                    [
+                        1953
+                    ]
+                ]
+            },
+            "title": "Sample survey methods and theory",
+            "type": "book"
+        },
+        {
+            "ISBN": "978-0-387-40620-6",
+            "author": [
+                {
+                    "family": "Särndal",
+                    "given": "Carl-Erik"
+                },
+                {
+                    "family": "Swensson",
+                    "given": "Bengt"
+                },
+                {
+                    "family": "Wretman",
+                    "given": "Jan"
+                }
+            ],
+            "id": "Sarndal_Swensson_Wretman_2003",
+            "issued": {
+                "date-parts": [
+                    [
+                        2003,
+                        10
+                    ]
+                ]
+            },
+            "note": "Google-Books-ID: ufdONK3E1TcC",
+            "publisher": "Springer Science; Business Media",
+            "title": "Model assisted survey sampling",
+            "type": "book"
+        },
+        {
+            "DOI": "10.2307/1403273",
+            "ISSN": "03067734",
+            "author": [
+                {
+                    "family": "Duncan",
+                    "given": "G. J."
+                },
+                {
+                    "family": "Kalton",
+                    "given": "G."
+                }
+            ],
+            "container-title": "International Statistical Review / Revue Internationale de Statistique",
+            "id": "Duncan_Kalton_1987",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        1987,
+                        4
+                    ]
+                ]
+            },
+            "page": "97",
+            "title": "Issues of design and analysis of surveys across time",
+            "type": "article-journal",
+            "volume": "55"
+        },
+        {
+            "DOI": "10.1016/S0169-7161(08)00016-3",
+            "author": [
+                {
+                    "family": "Gambino",
+                    "given": "J. G."
+                },
+                {
+                    "family": "Silva",
+                    "given": "PL. d N."
+                }
+            ],
+            "collection-title": "Handbook of statistics",
+            "container-title": "Handbook of statistics",
+            "id": "Gambino_Silva_2009",
+            "issued": {
+                "date-parts": [
+                    [
+                        2009,
+                        1
+                    ]
+                ]
+            },
+            "page": "407-439",
+            "publisher": "Elsevier",
+            "title": "Chapter 16 - sampling and estimation in household surveys",
+            "type": "chapter",
+            "volume": "29"
+        },
+        {
+            "author": [
+                {
+                    "family": "Kalton",
+                    "given": "G."
+                }
+            ],
+            "id": "Kalton_2009",
+            "issued": {
+                "date-parts": [
+                    [
+                        2009
+                    ]
+                ]
+            },
+            "title": "Some issues in the design and analysis of longitudinal surveys",
+            "type": "paper-conference"
+        },
+        {
+            "author": [
+                {
+                    "family": "Kalton",
+                    "given": "G."
+                },
+                {
+                    "family": "Citro",
+                    "given": "C. F."
+                }
+            ],
+            "container-title": "Survey Methodology",
+            "id": "Kalton_Citro_1993",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        1993
+                    ]
+                ]
+            },
+            "page": "205-215",
+            "title": "Panel surveys: Adding the fourth dimension",
+            "title-short": "Panel surveys",
+            "type": "article-journal",
+            "volume": "19"
+        },
+        {
+            "author": [
+                {
+                    "family": "Park",
+                    "given": "I."
+                },
+                {
+                    "family": "Lee",
+                    "given": "H."
+                }
+            ],
+            "container-title": "Quality control and applied statistics",
+            "id": "Park_Lee_2006",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        2006
+                    ]
+                ]
+            },
+            "page": "381",
+            "title": "Design effects for the weighted mean and total estimators under complex survey sampling",
+            "type": "article-journal",
+            "volume": "51"
+        },
+        {
+            "ISBN": "978-0-444-53124-7",
+            "author": [
+                {
+                    "family": "Pfeffermann",
+                    "given": "D."
+                },
+                {
+                    "family": "Rao",
+                    "given": "C. R."
+                }
+            ],
+            "edition": "digital printing",
+            "id": "Pfeffermann_Rao_2010",
+            "issued": {
+                "date-parts": [
+                    [
+                        2010
+                    ]
+                ]
+            },
+            "publisher": "Elsevier",
+            "title": "Handbook of statistics. Vol. 29 a: Sample surveys sample surveys: Design, methods and applications",
+            "title-short": "Handbook of statistics. Vol. 29 a",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Silva",
+                    "given": "PL. d N."
+                }
+            ],
+            "container-title": "Rio de Janeiro: Instituto Brasileiro de Geografia e Estatística",
+            "id": "Silva_2004",
+            "issued": {
+                "date-parts": [
+                    [
+                        2004
+                    ]
+                ]
+            },
+            "title": "Calibration estimation: When and why, how much and how",
+            "title-short": "Calibration estimation",
+            "type": "article-journal"
+        },
+        {
+            "author": [
+                {
+                    "family": "Sinngh",
+                    "given": "M. P."
+                },
+                {
+                    "family": "Gambino",
+                    "given": "J. G."
+                },
+                {
+                    "family": "Mantel",
+                    "given": "H. J."
+                }
+            ],
+            "container-title": "Survey Methodology",
+            "id": "Sinngh_Gambino_Mantel_1994",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        1994
+                    ]
+                ]
+            },
+            "page": "3-22",
+            "title": "Issues and strategies for small area data",
+            "type": "article-journal",
+            "volume": "20"
+        },
+        {
+            "author": [
+                {
+                    "family": "Canada",
+                    "given": "Statistics"
+                }
+            ],
+            "id": "Statistics_Canada_2003",
+            "issued": {
+                "date-parts": [
+                    [
+                        2003
+                    ]
+                ]
+            },
+            "publisher": "Statistics Canada",
+            "title": "Survey methods and practices",
+            "type": "book"
+        },
+        {
+            "ISBN": "978-92-1-161481-7",
+            "author": [
+                {
+                    "family": "UN"
+                }
+            ],
+            "collection-title": "Studies in methods / united nations, department of economic and social affairs, statistics division series f",
+            "id": "United_Nations_2005",
+            "issued": {
+                "date-parts": [
+                    [
+                        2005
+                    ]
+                ]
+            },
+            "title": "Household surveys in developing and transition countries",
+            "type": "book"
+        },
+        {
+            "ISBN": "978-92-1-161495-4",
+            "author": [
+                {
+                    "family": "UN"
+                }
+            ],
+            "collection-title": "Studies in methods / united nations, department of economic and social affairs, statistics division series f",
+            "id": "United_Nations_2008",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "publisher": "United Nations",
+            "title": "Designing household survey samples: Practical guidelines",
+            "title-short": "Designing household survey samples",
+            "type": "book"
+        },
+        {
+            "ISBN": "978-0-470-01871-2",
+            "collection-title": "Wiley series in survey methodology",
+            "id": "Lynn_2009",
+            "issued": {
+                "date-parts": [
+                    [
+                        2009
+                    ]
+                ]
+            },
+            "publisher": "Wiley",
+            "title": "Methodology of longitudinal surveys",
+            "type": "book"
+        },
+        {
+            "URL": "https://www.contraloria.gob.pa/inec/Publicaciones/Publicaciones.aspx?ID_SUBCATEGORIA=38andID_PUBLICACION=91andID_IDIOMA=1andID_CATEGORIA=5",
+            "author": [
+                {
+                    "family": "INEC"
+                }
+            ],
+            "id": "INEC-PA",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "title": "Instituto nacional de estadística y censo - panamá",
+            "type": ""
+        },
+        {
+            "URL": "http://www.contraloria.gob.pa/inec/Aplicaciones/EIGH2008/intro.html",
+            "author": [
+                {
+                    "family": "INEC"
+                }
+            ],
+            "id": "INEC2-PA",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "title": "Encuesta de ingresos y gastos de los hogares - instituto nacional de estadística y censo - panamá",
+            "type": ""
+        },
+        {
+            "URL": "https://www.ine.gob.gt/index.php/encuestas/empleo-e-ingresos",
+            "author": [
+                {
+                    "family": "INE"
+                }
+            ],
+            "id": "INE-GT",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "title": "Empleo e ingresos - instituto nacional de estadística - guatemala",
+            "type": ""
+        },
+        {
+            "URL": "https://www.ine.gob.gt/index.php/encuestas-de-hogares-y-personas/condiciones-de-vida",
+            "author": [
+                {
+                    "family": "INE"
+                }
+            ],
+            "id": "INE2-GT",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "title": "Encuesta nacional de condiciones de vida - instituto nacional de estadística - guatemala",
+            "type": ""
+        },
+        {
+            "URL": "http://www.inide.gob.ni/",
+            "author": [
+                {
+                    "family": "INIDE"
+                }
+            ],
+            "id": "INIDE-NI",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "title": "Instituto nacional de información de desarrollo- INIDE de nicaragua",
+            "type": ""
+        },
+        {
+            "URL": "http://www.one.cu/sitioone2006.asp",
+            "author": [
+                {
+                    "family": "ONE"
+                }
+            ],
+            "id": "ONE-CU",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "title": "Oficina nacional de estadísticas. cuba",
+            "type": ""
+        },
+        {
+            "URL": "https://www.one.gob.do/enhogar",
+            "author": [
+                {
+                    "family": "ONE"
+                }
+            ],
+            "id": "ONE-DO",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "title": "Encuesta nacional de ingresos y gastos de los hogares (ENIGH) - oficina nacional de estadística",
+            "type": ""
+        },
+        {
+            "URL": "https://www.one.gob.do/encuestas/enigh",
+            "author": [
+                {
+                    "family": "ONE"
+                }
+            ],
+            "id": "ONE2-DO",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "title": "Oficina nacional de estadística (ONE)",
+            "type": ""
+        },
+        {
+            "URL": "http://formularios.dane.gov.co/Anda_4_1/index.php/catalog/458",
+            "author": [
+                {
+                    "family": "DANE"
+                }
+            ],
+            "id": "DANE-COL_2017",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "title": "Gran encuesta integrada de hogares - - departamento administrativo nacional de estadística",
+            "type": ""
+        },
+        {
+            "URL": "https://www.dane.gov.co/index.php/estadisticas-por-tema/pobreza-y-condiciones-de-vida/encuesta-nacional-de-presupuestos-de-los-hogares-enph",
+            "author": [
+                {
+                    "family": "DANE"
+                }
+            ],
+            "id": "DANE-COL_2018",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "title": "Encuesta nacional de presupuestos de los hogares (ENPH) - departamento administrativo nacional de estadística",
+            "type": ""
+        },
+        {
+            "URL": "https://sustainabledevelopment.un.org/globalsdreport/2016",
+            "author": [
+                {
+                    "family": "ONU"
+                }
+            ],
+            "id": "United_Nations_2016",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "publisher": "Department of Economic and Social Affairs",
+            "title": "Global sustainable development report 2016",
+            "type": ""
+        },
+        {
+            "author": [
+                {
+                    "family": "ONU"
+                }
+            ],
+            "collection-title": "Report of the secretary general",
+            "id": "United_Nations_2017",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "publisher": "Ecnomic; Social Council",
+            "title": "Progress towards the sustainable development goals",
+            "type": ""
+        },
+        {
+            "URL": "http://unctad.org/meetings/es/SessionalDocuments/ares70d1_es.pdf",
+            "author": [
+                {
+                    "family": "ONU"
+                }
+            ],
+            "id": "United_Nations_2015",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "publisher": "Asamblea General",
+            "title": "Transformar nuestro mundo: La agenda 2030 para el desarrollo sostenible",
+            "title-short": "Transformar nuestro mundo",
+            "type": ""
+        },
+        {
+            "URL": "http://www.ilo.org/surveydata/index.php/catalog/1393/study-description",
+            "author": [
+                {
+                    "family": "INEC"
+                }
+            ],
+            "id": "INEC-EC",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "title": "Instituto nacional de estadística y censos",
+            "type": ""
+        },
+        {
+            "author": [
+                {
+                    "family": "Sun",
+                    "given": "Claire"
+                }
+            ],
+            "container-title": "Working paper",
+            "id": "Sun_2010",
+            "issued": {
+                "date-parts": [
+                    [
+                        2010
+                    ]
+                ]
+            },
+            "title": "HILDA expenditure imputation",
+            "type": "article-journal"
+        },
+        {
+            "author": [
+                {
+                    "family": "Starick",
+                    "given": "Rosslyn"
+                },
+                {
+                    "family": "Watson",
+                    "given": "Nicole"
+                }
+            ],
+            "container-title": "Working paper",
+            "id": "Starick_Watson_2011",
+            "issued": {
+                "date-parts": [
+                    [
+                        2011
+                    ]
+                ]
+            },
+            "page": "38",
+            "title": "Evaluation of alternative income imputation methods for the HILDA survey",
+            "type": "article-journal"
+        },
+        {
+            "author": [
+                {
+                    "family": "Hayes",
+                    "given": "Clinton"
+                },
+                {
+                    "family": "Watson",
+                    "given": "Nicole"
+                }
+            ],
+            "container-title": "Working paper",
+            "id": "Hayes_Watson_2009",
+            "issued": {
+                "date-parts": [
+                    [
+                        2009
+                    ]
+                ]
+            },
+            "title": "HILDA imputation methods",
+            "type": "article-journal"
+        },
+        {
+            "URL": "http://www.ecuadorencifras.gob.ec/encuesta-de-condiciones-de-vida-ecv/",
+            "author": [
+                {
+                    "family": "INEC"
+                }
+            ],
+            "id": "INEC2-EC",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "title": "Encuesta de condiciones de vida (ECV) - instituto nacional de estadística y censos",
+            "type": ""
+        },
+        {
+            "author": [
+                {
+                    "family": "INE"
+                }
+            ],
+            "id": "INE-HN",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "note": "http://www.ine.gob.hn",
+            "title": "Instituto nacional de estadística",
+            "type": ""
+        },
+        {
+            "URL": "http://170.238.108.229/index.php/catalog/76/overview",
+            "author": [
+                {
+                    "family": "INE"
+                }
+            ],
+            "id": "INE2-HN",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "title": "Honduras - encuesta de condiciones de vida de los hogares",
+            "type": ""
+        },
+        {
+            "URL": "http://www.ine.gov.ve/index.php?option=com_contentandid=333andItemid=103",
+            "author": [
+                {
+                    "family": "INE"
+                }
+            ],
+            "id": "INE-VE",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "title": "Ficha técnica de encuesta de hogares por muestreo - instituto nacional de estadística",
+            "type": ""
+        },
+        {
+            "URL": "https://www.ibge.gov.br/estatisticas-novoportal/sociais/trabalho/9173-pesquisa-nacional-por-amostra-de-domicilios-continua-trimestral.html?redirect=1",
+            "author": [
+                {
+                    "family": "IBGE"
+                }
+            ],
+            "id": "IBGE-BR_2017",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "title": "Pesquisa nacional por amostra de domicílios contínua - instituto brasileiro de geografia e estatística",
+            "type": ""
+        },
+        {
+            "URL": "https://ww2.ibge.gov.br/home/estatistica/pesquisas/pesquisa_resultados.php?id_pesquisa=25",
+            "author": [
+                {
+                    "family": "IBGE"
+                }
+            ],
+            "id": "IBGE-BR2018",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "title": "Pesquisa de orçamentos familiares - instituto brasileiro de geografia e estatística",
+            "type": ""
+        },
+        {
+            "author": [
+                {
+                    "family": "INEGI"
+                }
+            ],
+            "id": "INEGI_MX_2012",
+            "issued": {
+                "date-parts": [
+                    [
+                        2012
+                    ]
+                ]
+            },
+            "title": "Metodología de la construcción del marco maestro de muestreo 2012 y del diseño de la muestra maestra 2012",
+            "type": "article-journal"
+        },
+        {
+            "URL": "https://www.inegi.org.mx/programas/enoe/15ymas/",
+            "author": [
+                {
+                    "family": "INEGI"
+                }
+            ],
+            "id": "INEGI-MX",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "title": "Encuesta nacional de ocupación y empleo (ENOE), población de 15 años y más de edad",
+            "type": ""
+        },
+        {
+            "URL": "https://www.inegi.org.mx/programas/enigh/nc/2016/",
+            "author": [
+                {
+                    "family": "INEGI"
+                }
+            ],
+            "id": "INEGI2-MX",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "title": "Encuesta nacional de ingresos y gastos de los hogares 2016 nueva serie",
+            "type": ""
+        },
+        {
+            "URL": "http://www.inec.go.cr/encuestas/encuesta-nacional-de-hogares",
+            "author": [
+                {
+                    "family": "INEC"
+                }
+            ],
+            "id": "INEC-CR_2017",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "title": "Encuesta nacional de hogares - instituto nacional de estadística y censos",
+            "type": ""
+        },
+        {
+            "URL": "http://www.inec.go.cr/encuestas/encuesta-nacional-de-ingresos-y-gastos-de-los-hogares",
+            "author": [
+                {
+                    "family": "INEC"
+                }
+            ],
+            "id": "INEC-CR_2018",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "title": "Encuesta nacional de ingresos y gastos de los hogares - instituto nacional de estadística y censos",
+            "type": ""
+        },
+        {
+            "URL": "http://ine.gub.uy/encuesta-continua-de-hogares1",
+            "author": [
+                {
+                    "family": "INE"
+                }
+            ],
+            "id": "INE-UY_2016",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "title": "Encuesta continua de hogares (ECH) - instituto nacional de estadística",
+            "type": ""
+        },
+        {
+            "URL": "http://www.ine.gub.uy/engih2016",
+            "author": [
+                {
+                    "family": "INE"
+                }
+            ],
+            "id": "INE2-UY",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "title": "Encuesta de gastos e ingresos de los hogares - ENGIH 2016/2017 - instituto nacional de estadística",
+            "type": ""
+        },
+        {
+            "URL": "http://observatorio.ministeriodesarrollosocial.gob.cl/casen/casen_obj.php",
+            "author": [
+                {
+                    "family": "MDS"
+                }
+            ],
+            "id": "MDS-CL_2015",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "title": "Observatorio social - ministerio de desarrollo social - gobierno de chile",
+            "type": ""
+        },
+        {
+            "URL": "https://www.ine.cl/estadisticas/ingresos-y-gastos/epf",
+            "author": [
+                {
+                    "family": "INE"
+                }
+            ],
+            "id": "INE_CL",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "title": "Encuesta de presupuestos familiares (EPF) - instituto nacional de estadística - chile",
+            "type": ""
+        },
+        {
+            "URL": "http://www.ilo.org/wcmsp5/groups/public/---dgreports/---stat/documents/normativeinstrument/wcms_087483.pdf",
+            "author": [
+                {
+                    "family": "OIT"
+                }
+            ],
+            "collection-title": "13 conferencia internacional de estadísticos del trabajo",
+            "id": "OIT_1982",
+            "issued": {
+                "date-parts": [
+                    [
+                        1982
+                    ]
+                ]
+            },
+            "publisher": "Organización Internacional del Trabajo",
+            "title": "Resolución sobre estadísticas de la población económicamente activa, del empleo, del desempleo y del subempleo",
+            "type": ""
+        },
+        {
+            "URL": "http://www.digestyc.gob.sv/index.php/temas/des/ehpm.html",
+            "author": [
+                {
+                    "family": "DIGESTYC"
+                }
+            ],
+            "id": "DIGESTYC-SV",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "title": "Encuesta de hogares de propósitos múltiples - dirección general de estadística y censos",
+            "type": ""
+        },
+        {
+            "URL": "http://www.censos.gob.sv/enigh/descargas/ENIGH_Publicacion.pdf",
+            "author": [
+                {
+                    "family": "DIGESTYC"
+                }
+            ],
+            "id": "DIGESTYC2-SV",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "title": "Encuesta de ingresos y gastos de los hogares - dirección general de estadística y censos",
+            "type": ""
+        },
+        {
+            "URL": "http://www.ine.gob.bo/sitio_EH/Encuesta_Hogares.html",
+            "author": [
+                {
+                    "family": "INE"
+                }
+            ],
+            "id": "INE-BO",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "title": "Encuesta de hogares - INE",
+            "type": ""
+        },
+        {
+            "URL": "http://webinei.inei.gob.pe/anda_inei/index.php/catalog/543",
+            "author": [
+                {
+                    "family": "INEI"
+                }
+            ],
+            "id": "INEI-PE_2016",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "title": "Encuesta nacional de hogares sobre condiciones de vida y pobreza - instituto nacional de estadística e informática",
+            "type": ""
+        },
+        {
+            "URL": "http://www.dgeec.gov.py/Publicaciones/Biblioteca/eph2016/Boletin-de-pobreza-2016.pdf",
+            "author": [
+                {
+                    "family": "DGEEC"
+                }
+            ],
+            "id": "DGEEC-PY",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "title": "Encuesta permanente de hogares - dirección general de estadística, encuestas y censos",
+            "type": ""
+        },
+        {
+            "URL": "http://www.dgeec.gov.py/microdatos/register/eig/Metodologia%20EIG%20y%20CV.pdf",
+            "author": [
+                {
+                    "family": "DGEEC"
+                }
+            ],
+            "id": "DGEEC2-PY",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "title": "Aspectos metodológicos de la encuesta de ingresos y gastos y de condiciones de vida (EIGyCV)",
+            "type": ""
+        },
+        {
+            "URL": "https://www.indec.gov.ar/bases-de-datos.asp",
+            "author": [
+                {
+                    "family": "INDEC"
+                }
+            ],
+            "id": "INDEC-AR",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "title": "Encuesta permanente de hogares - instituto nacional de estadística y censos",
+            "type": ""
+        },
+        {
+            "URL": "https://www.indec.gob.ar/engho/",
+            "author": [
+                {
+                    "family": "INDEC"
+                }
+            ],
+            "id": "INDEC-AR2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "title": "Encuesta nacional de gastos de los hogares - instituto nacional de estadística y censos",
+            "type": ""
+        },
+        {
+            "URL": "http://www.ilo.org/wcmsp5/groups/public/---dgreports/---stat/documents/publication/wcms_220537.pdf",
+            "author": [
+                {
+                    "family": "OIT"
+                }
+            ],
+            "collection-title": "19 conferencia internacional de estadísticos del trabajo",
+            "id": "OIT_2013",
+            "issued": {
+                "date-parts": [
+                    [
+                        2013
+                    ]
+                ]
+            },
+            "publisher": "Organización Internacional del Trabajo",
+            "title": "Estadísticas del trabajo, el empleo y la subutilización de la fuerza de trabajo",
+            "type": ""
+        },
+        {
+            "URL": "https://www.unece.org/fileadmin/DAM/stats/groups/cgh/Canbera_Handbook_2011_WEB.pdf",
+            "author": [
+                {
+                    "family": "ONU"
+                }
+            ],
+            "edition": "Second edition",
+            "id": "United-Nations_2011",
+            "issued": {
+                "date-parts": [
+                    [
+                        2011
+                    ]
+                ]
+            },
+            "publisher": "United Nations Economic Comission for Europe",
+            "title": "Canberra group handbook on household income statistics",
+            "type": "book"
+        },
+        {
+            "ISBN": "978-958-762-586-8",
+            "author": [
+                {
+                    "family": "Gutiérrez",
+                    "given": "Hugo Andrés"
+                }
+            ],
+            "edition": "Segunda edición",
+            "id": "Gutierrez_2016",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "note": "Google-Books-ID: UlVmE5pkRwIC",
+            "publisher": "Ediciones de la U",
+            "title": "Estrategias de muestreo: Diseño de encuestas y estimación de parámetros",
+            "title-short": "Estrategias de muestreo",
+            "type": "book"
+        },
+        {
+            "URL": "ftp://public.dhe.ibm.com/software/analytics/spss/documentation/statistics/23.0/en/client/Manuals/IBM_SPSS_Complex_Samples.pdf",
+            "author": [
+                {
+                    "family": "IBM"
+                }
+            ],
+            "id": "IBM_2017",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "title": "IBM SPSS complex samples",
+            "type": "book"
+        },
+        {
+            "URL": "https://support.sas.com/documentation/cdl/en/statugsurveysamp/63778/PDF/default/statugsurveysamp.pdf",
+            "author": [
+                {
+                    "family": "SAS"
+                }
+            ],
+            "id": "SAS_2017",
+            "issued": {
+                "date-parts": [
+                    [
+                        2010
+                    ]
+                ]
+            },
+            "title": "SAS/STAT 9.22 user’s guide - survey sampling and analysis procedures",
+            "type": "book"
+        },
+        {
+            "URL": "https://www.stata.com/manuals13/svy.pdf",
+            "author": [
+                {
+                    "family": "STATA"
+                }
+            ],
+            "id": "STATA_2017",
+            "issued": {
+                "date-parts": [
+                    [
+                        2013
+                    ]
+                ]
+            },
+            "title": "STATA survey data",
+            "type": "book"
+        },
+        {
+            "URL": "http://sudaansupport.rti.org/Sudaan/onlinehelp/SUDAAN10/Default.htm",
+            "author": [
+                {
+                    "literal": "RTI International"
+                }
+            ],
+            "id": "RTI_International_2012",
+            "issued": {
+                "date-parts": [
+                    [
+                        2012
+                    ]
+                ]
+            },
+            "title": "SUDAAN statistical analysis software package - language manual",
+            "type": "book"
+        },
+        {
+            "URL": "http://users.nber.org/~jroth/chap1.pdf",
+            "author": [
+                {
+                    "family": "Westat"
+                }
+            ],
+            "id": "Westat_2007",
+            "issued": {
+                "date-parts": [
+                    [
+                        2007
+                    ]
+                ]
+            },
+            "title": "WesVar 4.3. Users guide.",
+            "type": "book"
+        },
+        {
+            "URL": "https://www.R-project.org/",
+            "author": [
+                {
+                    "literal": "R Core Team"
+                }
+            ],
+            "id": "R_2017",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "publisher": "R Foundation for Statistical Computing",
+            "publisher-place": "Vienna, Austria",
+            "title": "R: A language and environment for statistical computing",
+            "title-short": "R",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Lumley",
+                    "given": "Thomas"
+                }
+            ],
+            "id": "TL",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "note": "R package version 3.32",
+            "title": "Survey: Analysis of complex survey samples",
+            "title-short": "Survey",
+            "type": ""
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=samplesize4surveys",
+            "author": [
+                {
+                    "family": "Gutiérrez",
+                    "given": "Hugo Andrés"
+                }
+            ],
+            "id": "ss4s",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "note": "R package version 3.1.2.400",
+            "title": "samplesize4surveys: Sample size calculations for complex surveys",
+            "title-short": "samplesize4surveys",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=TeachingSampling",
+            "author": [
+                {
+                    "family": "Gutiérrez",
+                    "given": "Hugo Andrés"
+                }
+            ],
+            "id": "TS",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "note": "R package version 3.2.2",
+            "title": "TeachingSampling: Selection of samples and parameter estimation in finite population",
+            "title-short": "TeachingSampling",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=sampling",
+            "author": [
+                {
+                    "family": "Tillé",
+                    "given": "Yves"
+                },
+                {
+                    "family": "Matei",
+                    "given": "Alina"
+                }
+            ],
+            "id": "Yves",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "note": "R package version 2.8",
+            "title": "Sampling: Survey sampling",
+            "title-short": "Sampling",
+            "type": "book"
+        },
+        {
+            "ISBN": "978-0-470-01133-1",
+            "author": [
+                {
+                    "family": "Särndal",
+                    "given": "Carl-Erik"
+                },
+                {
+                    "family": "Lundström",
+                    "given": "Sixten"
+                }
+            ],
+            "collection-title": "Wiley series in survey methodology",
+            "edition": "Repr",
+            "id": "Sarndal_Lundstrom_2006",
+            "issued": {
+                "date-parts": [
+                    [
+                        2006
+                    ]
+                ]
+            },
+            "publisher": "Wiley",
+            "title": "Estimation in surveys with nonresponse",
+            "type": "book"
+        },
+        {
+            "DOI": "10.1007/978-1-4614-6449-5",
+            "ISBN": "978-1-4614-6448-8",
+            "URL": "http://link.springer.com/10.1007/978-1-4614-6449-5",
+            "author": [
+                {
+                    "family": "Valliant",
+                    "given": "Richard"
+                },
+                {
+                    "family": "Dever",
+                    "given": "Jill A."
+                },
+                {
+                    "family": "Kreuter",
+                    "given": "Frauke"
+                }
+            ],
+            "id": "Valliant_Dever_Kreuter_2013",
+            "issued": {
+                "date-parts": [
+                    [
+                        2013
+                    ]
+                ]
+            },
+            "publisher": "Springer New York",
+            "title": "Practical tools for designing and weighting survey samples",
+            "type": "book"
+        },
+        {
+            "DOI": "10.1080/01621459.1992.10475217",
+            "ISSN": "0162-1459",
+            "author": [
+                {
+                    "family": "Deville",
+                    "given": "Jean-Claude"
+                },
+                {
+                    "family": "Särndal",
+                    "given": "Carl-Erik"
+                }
+            ],
+            "container-title": "Journal of the American Statistical Association",
+            "id": "Deville_Sarndal_1992",
+            "issue": "418",
+            "issued": {
+                "date-parts": [
+                    [
+                        1992,
+                        6
+                    ]
+                ]
+            },
+            "page": "376-382",
+            "title": "Calibration estimators in survey sampling",
+            "type": "article-journal",
+            "volume": "87"
+        },
+        {
+            "author": [
+                {
+                    "family": "Cochran",
+                    "given": "W. G."
+                }
+            ],
+            "edition": "Third Edition",
+            "id": "Cochran_1977",
+            "issued": {
+                "date-parts": [
+                    [
+                        1977
+                    ]
+                ]
+            },
+            "publisher": "Wiley",
+            "title": "Sampling techniques",
+            "type": "book"
+        },
+        {
+            "DOI": "10.2307/1402116",
+            "ISSN": "0373-1138",
+            "author": [
+                {
+                    "family": "McCarthy",
+                    "given": "P. J."
+                }
+            ],
+            "container-title": "Revue de l’Institut International de Statistique / Review of the International Statistical Institute",
+            "id": "McCarthy_1969",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        1969
+                    ]
+                ]
+            },
+            "page": "239-264",
+            "title": "Pseudo-replication: Half samples",
+            "title-short": "Pseudo-replication",
+            "type": "article-journal",
+            "volume": "37"
+        },
+        {
+            "ISSN": "0282423X",
+            "author": [
+                {
+                    "family": "Judkins",
+                    "given": "David R."
+                }
+            ],
+            "container-title": "Journal of Official Statistics; Stockholm",
+            "id": "Judkins_1990",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        1990,
+                        9
+                    ]
+                ]
+            },
+            "page": "223",
+            "title": "Fay’s method for variance estimation",
+            "type": "article-journal",
+            "volume": "6"
+        },
+        {
+            "ISSN": "0090-5364",
+            "author": [
+                {
+                    "family": "Krewski",
+                    "given": "D."
+                },
+                {
+                    "family": "Rao",
+                    "given": "J. N. K."
+                }
+            ],
+            "container-title": "The Annals of Statistics",
+            "id": "Krewski_Rao_1981",
+            "issue": "5",
+            "issued": {
+                "date-parts": [
+                    [
+                        1981
+                    ]
+                ]
+            },
+            "page": "1010-1019",
+            "title": "Inference from stratified samples: Properties of the linearization, jackknife and balanced repeated replication methods",
+            "title-short": "Inference from stratified samples",
+            "type": "article-journal",
+            "volume": "9"
+        },
+        {
+            "DOI": "10.1080/01621459.1988.10478591",
+            "ISSN": "0162-1459",
+            "author": [
+                {
+                    "family": "Rao",
+                    "given": "J. N. K."
+                },
+                {
+                    "family": "Wu",
+                    "given": "C. F. J."
+                }
+            ],
+            "container-title": "Journal of the American Statistical Association",
+            "id": "Rao_Wu_1988",
+            "issue": "401",
+            "issued": {
+                "date-parts": [
+                    [
+                        1988,
+                        3
+                    ]
+                ]
+            },
+            "page": "231-241",
+            "title": "Resampling inference with complex survey data",
+            "type": "article-journal",
+            "volume": "83"
+        },
+        {
+            "ISBN": "978-0-387-35099-8",
+            "author": [
+                {
+                    "family": "Wolter",
+                    "given": "Kirk"
+                }
+            ],
+            "id": "Wolter_2007",
+            "issued": {
+                "date-parts": [
+                    [
+                        2007
+                    ]
+                ]
+            },
+            "publisher": "Springer Science; Business Media",
+            "title": "Introduction to variance estimation",
+            "type": "book"
+        },
+        {
+            "ISBN": "978-0-471-18386-0",
+            "author": [
+                {
+                    "family": "Little",
+                    "given": "Roderick J. A."
+                },
+                {
+                    "family": "Rubin",
+                    "given": "Donald B."
+                }
+            ],
+            "collection-title": "Wiley series in probability and statistics",
+            "edition": "2. ed",
+            "id": "Little_Rubin_2002",
+            "issued": {
+                "date-parts": [
+                    [
+                        2002
+                    ]
+                ]
+            },
+            "publisher": "Wiley",
+            "title": "Statistical analysis with missing data",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Kim",
+                    "given": "Jae Kwang"
+                },
+                {
+                    "family": "Riddles",
+                    "given": "Minsun Kim"
+                }
+            ],
+            "container-title": "Survey Methodology",
+            "id": "Kim_Riddles_2012",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2012
+                    ]
+                ]
+            },
+            "page": "157-165",
+            "title": "Some theory for propensity-score-adjustment estimators in survey sampling",
+            "type": "article-journal",
+            "volume": "38"
+        },
+        {
+            "ISBN": "978-0-471-08705-2",
+            "author": [
+                {
+                    "family": "Rubin",
+                    "given": "Donald B."
+                }
+            ],
+            "collection-title": "Wiley series in probability and mathematical statistics applied probability and statistics",
+            "id": "Rubin_1987",
+            "issued": {
+                "date-parts": [
+                    [
+                        1987
+                    ]
+                ]
+            },
+            "publisher": "Wiley",
+            "title": "Multiple imputation for nonresponse in surveys",
+            "type": "book"
+        },
+        {
+            "DOI": "10.1002/9781118445112.stat03310.pub2",
+            "ISBN": "978-1-118-44511-2",
+            "URL": "http://onlinelibrary.wiley.com/doi/10.1002/9781118445112.stat03310.pub2/abstract",
+            "author": [
+                {
+                    "family": "Rao",
+                    "given": "J. N. K."
+                },
+                {
+                    "family": "Molina",
+                    "given": "Isabel"
+                }
+            ],
+            "id": "Rao_Molina_2014",
+            "issued": {
+                "date-parts": [
+                    [
+                        2014
+                    ]
+                ]
+            },
+            "publisher": "John Wiley; Sons, Ltd",
+            "title": "Small-area estimation",
+            "type": "book"
+        },
+        {
+            "DOI": "10.1002/9781118814963.ch20",
+            "ISBN": "978-1-118-81496-3",
+            "URL": "http://onlinelibrary.wiley.com/doi/10.1002/9781118814963.ch20/summary",
+            "author": [
+                {
+                    "family": "Casas-Cordero Valencia",
+                    "given": "Carolina"
+                },
+                {
+                    "family": "Encina",
+                    "given": "Jenny"
+                },
+                {
+                    "family": "Lahiri",
+                    "given": "Partha"
+                }
+            ],
+            "container-title": "Analysis of poverty data by small area estimation",
+            "editor": [
+                {
+                    "family": "Pratesi",
+                    "given": "MonicaEditor"
+                }
+            ],
+            "id": "Casas_Cordero_Valencia_Encina_Lahiri_2016",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "page": "379-404",
+            "publisher": "John Wiley; Sons, Ltd",
+            "title": "Poverty mapping for the chilean comunas",
+            "type": "chapter"
+        },
+        {
+            "author": [
+                {
+                    "family": "Arias",
+                    "given": "Omar"
+                },
+                {
+                    "family": "Robles",
+                    "given": "Marcos"
+                }
+            ],
+            "container-title": "More Than A",
+            "id": "arias2007geography",
+            "issued": {
+                "date-parts": [
+                    [
+                        2007
+                    ]
+                ]
+            },
+            "title": "The geography of monetary poverty in bolivia",
+            "type": "article-journal"
+        },
+        {
+            "author": [
+                {
+                    "family": "Araujo",
+                    "given": "Maria Caridad"
+                }
+            ],
+            "container-title": "More Than A Prety Picture: Using Poverty Maps to Design Beter Policies and Interventions, Washington DC: The World Bank",
+            "id": "araujo20071990",
+            "issued": {
+                "date-parts": [
+                    [
+                        2007
+                    ]
+                ]
+            },
+            "title": "The 1990 and 2001 ecuador poverty maps",
+            "type": "article-journal"
+        },
+        {
+            "author": [
+                {
+                    "family": "Lopez-Calva",
+                    "given": "Luis F"
+                },
+                {
+                    "family": "Rodrı́guez-Chamussy",
+                    "given": "Lourdes"
+                },
+                {
+                    "family": "Székely",
+                    "given": "Miguel"
+                }
+            ],
+            "container-title": "More than a pretty picture. Using poverty maps to design better policies and interventions. Washington DC: WorldBank",
+            "id": "lopez2007poverty",
+            "issued": {
+                "date-parts": [
+                    [
+                        2007
+                    ]
+                ]
+            },
+            "publisher": "Citeseer",
+            "title": "Poverty maps and public policy in mexico",
+            "type": "paper-conference"
+        },
+        {
+            "author": [
+                {
+                    "family": "Feinberg",
+                    "given": "Stephen"
+                },
+                {
+                    "family": "Stasny",
+                    "given": "Elizabeth"
+                }
+            ],
+            "container-title": "Survey Methodology",
+            "id": "Feinberg_Stasny_1983",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        1983
+                    ]
+                ]
+            },
+            "page": "77-102",
+            "title": "Estimating monthly gross flows in labour force participation",
+            "type": "article-journal",
+            "volume": "9"
+        },
+        {
+            "author": [
+                {
+                    "family": "Hansen",
+                    "given": "Morris H"
+                },
+                {
+                    "family": "Hurwitz",
+                    "given": "William N"
+                },
+                {
+                    "family": "Madow",
+                    "given": "William G"
+                }
+            ],
+            "id": "hansen1953sample",
+            "issued": {
+                "date-parts": [
+                    [
+                        1953
+                    ]
+                ]
+            },
+            "publisher": "Wiley New York",
+            "title": "Sample survey methods and theory",
+            "type": "book",
+            "volume": "1"
+        },
+        {
+            "author": [
+                {
+                    "family": "Kish",
+                    "given": "Leslie"
+                }
+            ],
+            "id": "Kish_1965",
+            "issued": {
+                "date-parts": [
+                    [
+                        1965
+                    ]
+                ]
+            },
+            "publisher": "John Wiley; Sons",
+            "title": "Survey sampling",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Estevao",
+                    "given": "Victor"
+                },
+                {
+                    "family": "Särndal",
+                    "given": "Carl-Erik"
+                }
+            ],
+            "container-title": "International Statistical Review / Revue Internationale de Statistique",
+            "id": "Estevao_Sarndal_2006",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2006
+                    ]
+                ]
+            },
+            "page": "127-147",
+            "title": "Survey estimates by calibration on complex auxiliary information",
+            "type": "article-journal",
+            "volume": "74"
+        },
+        {
+            "id": "DIGESTYC_SV_2017",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "publisher": "Dirección General de Estadística y Censos DIGESTYC",
+            "title": "Encuesta de hogares de propósitos múltiples",
+            "type": "article-journal"
+        },
+        {
+            "ISBN": "978-92-1-161495-4",
+            "author": [
+                {
+                    "family": "UN"
+                }
+            ],
+            "collection-title": "Studies in methods / united nations, department of economic and social affairs, statistics division series f",
+            "id": "UN_2008",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "publisher": "United Nations",
+            "title": "Designing household survey samples: Practical guidelines",
+            "title-short": "Designing household survey samples",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Valliant",
+                    "given": "Richard"
+                },
+                {
+                    "family": "Dever",
+                    "given": "Jill A."
+                }
+            ],
+            "edition": "1 edition",
+            "id": "Valliant_Dever_2017",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017,
+                        12
+                    ]
+                ]
+            },
+            "publisher": "Stata Press",
+            "title": "Survey weights: A step-by-step guide to calculation",
+            "title-short": "Survey weights",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Gurney",
+                    "given": "M."
+                },
+                {
+                    "family": "Daly",
+                    "given": "J."
+                }
+            ],
+            "container-title": "Proceedings of the social statistics section, american statistical association",
+            "id": "Gurney_Daly_1965",
+            "issued": {
+                "date-parts": [
+                    [
+                        1965
+                    ]
+                ]
+            },
+            "page": "242-257",
+            "title": "A multivariate approach to estimation in periodic sample surveys",
+            "type": "chapter"
+        },
+        {
+            "ISSN": "0282423X",
+            "author": [
+                {
+                    "family": "Lent",
+                    "given": "Janice"
+                },
+                {
+                    "family": "Miller",
+                    "given": "Stephen M."
+                },
+                {
+                    "family": "Duff",
+                    "given": "Martha"
+                }
+            ],
+            "container-title": "Journal of Official Statistics; Stockholm",
+            "id": "Lent_Miller_Duff_1999",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        1999,
+                        9
+                    ]
+                ]
+            },
+            "page": "431",
+            "title": "Effects of composite weights on some estimates from the current population survey",
+            "type": "article-journal",
+            "volume": "15"
+        },
+        {
+            "author": [
+                {
+                    "family": "Bell",
+                    "given": "Phillip"
+                }
+            ],
+            "container-title": "Survey Methodology",
+            "id": "Bell_2001",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2001
+                    ]
+                ]
+            },
+            "page": "53-63",
+            "title": "Comparison of alternative labour force survey estimators",
+            "type": "article-journal",
+            "volume": "27"
+        },
+        {
+            "author": [
+                {
+                    "family": "Steel",
+                    "given": "D."
+                },
+                {
+                    "family": "McLaren",
+                    "given": "C."
+                }
+            ],
+            "id": "Steel_McLaren_2008",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "title": "Design and analysis of repeated surveys",
+            "type": "article-journal"
+        },
+        {
+            "author": [
+                {
+                    "family": "Lewis",
+                    "given": "Taylor"
+                }
+            ],
+            "container-title": "SAS global forum",
+            "id": "Lewis_2017",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "title": "Estimation strategies involving pooled survey data",
+            "type": "chapter"
+        },
+        {
+            "author": [
+                {
+                    "family": "Baillargeon",
+                    "given": "Sophie"
+                },
+                {
+                    "family": "Rivest",
+                    "given": "Louis-Paul"
+                }
+            ],
+            "id": "Baillargeon_Rivest_2011",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2011
+                    ]
+                ]
+            },
+            "page": "53 - 65",
+            "title": "The construction of stratified designs in r with the package stratification",
+            "type": "article-journal",
+            "volume": "37"
+        },
+        {
+            "author": [
+                {
+                    "family": "Ballin",
+                    "given": "Marco"
+                },
+                {
+                    "family": "Barcaroli",
+                    "given": "Giulio"
+                }
+            ],
+            "container-title": "Survey Methodology",
+            "id": "Ballin_Barcaroli_2013",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2013
+                    ]
+                ]
+            },
+            "page": "369-393",
+            "title": "Joint determination of optimal stratification and sample allocation using genetic algorithm",
+            "type": "article-journal",
+            "volume": "39"
+        },
+        {
+            "DOI": "10.18637/jss.v061.i04",
+            "ISSN": "1548-7660",
+            "author": [
+                {
+                    "family": "Barcaroli",
+                    "given": "Giulio"
+                }
+            ],
+            "container-title": "Journal of Statistical Software",
+            "id": "Barcaroli_2014",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2014,
+                        11
+                    ]
+                ]
+            },
+            "page": "1-24",
+            "title": "SamplingStrata: An r package for the optimization of stratified sampling",
+            "title-short": "SamplingStrata",
+            "type": "article-journal",
+            "volume": "61"
+        },
+        {
+            "author": [
+                {
+                    "family": "Barcaroli",
+                    "given": "Giulio"
+                }
+            ],
+            "id": "Barcaroli_2019",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "page": "40",
+            "title": "Optimization of sampling strata with the SamplingStrata package",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "INEGI-MX"
+                }
+            ],
+            "id": "INEGI-MX_2010",
+            "issued": {
+                "date-parts": [
+                    [
+                        2010
+                    ]
+                ]
+            },
+            "title": "Nota técnica estratificación multivariada",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "INEGI-MX"
+                }
+            ],
+            "id": "INEGI-MX_2012",
+            "issued": {
+                "date-parts": [
+                    [
+                        2012
+                    ]
+                ]
+            },
+            "title": "Metodología de la construcción del marco maestro de muestreo 2012 y del diseño de la muestra maestra 2012",
+            "type": "article-journal"
+        },
+        {
+            "DOI": "10.2307/2346387",
+            "ISSN": "0035-9254",
+            "author": [
+                {
+                    "family": "Jarque",
+                    "given": "Carlos M."
+                }
+            ],
+            "container-title": "Journal of the Royal Statistical Society. Series C (Applied Statistics)",
+            "id": "Jarque_1981",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        1981
+                    ]
+                ]
+            },
+            "page": "163-169",
+            "title": "A solution to the problem of optimum stratification in multivariate sampling",
+            "type": "article-journal",
+            "volume": "30"
+        },
+        {
+            "author": [
+                {
+                    "family": "Dalenius",
+                    "given": "Tore"
+                },
+                {
+                    "family": "Hodges",
+                    "given": "JosrEPH L"
+                }
+            ],
+            "container-title": "Journal of the American Statistical Association",
+            "id": "Dalenius_Hodges_1959",
+            "issue": "285",
+            "issued": {
+                "date-parts": [
+                    [
+                        1959
+                    ]
+                ]
+            },
+            "page": "15",
+            "title": "Minimum variance stratification",
+            "type": "article-journal",
+            "volume": "54"
+        },
+        {
+            "author": [
+                {
+                    "family": "Gunning",
+                    "given": "Patricia"
+                },
+                {
+                    "family": "Horgan",
+                    "given": "Jane M"
+                }
+            ],
+            "container-title": "Survey Methodology",
+            "id": "Gunning_Horgan_2004",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2004
+                    ]
+                ]
+            },
+            "page": "159-166",
+            "title": "A new algorithm for the construction of stratum boundaries in skewed populations",
+            "type": "article-journal",
+            "volume": "30"
+        },
+        {
+            "author": [
+                {
+                    "family": "Lavallée",
+                    "given": "Pierre"
+                },
+                {
+                    "family": "Hidiroglou",
+                    "given": "Michael A."
+                }
+            ],
+            "container-title": "Survey Methodology",
+            "id": "Lavallee_Hidiroglou_1988",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        1988
+                    ]
+                ]
+            },
+            "page": "33-43",
+            "title": "On the stratification of skewed populations",
+            "type": "article-journal",
+            "volume": "14"
+        },
+        {
+            "ISBN": "978-958-762-586-8",
+            "author": [
+                {
+                    "family": "Gutiérrez",
+                    "given": "Hugo Andrés"
+                }
+            ],
+            "edition": "Segunda edición",
+            "id": "Gutierrez_2016",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "note": "Google-Books-ID: UlVmE5pkRwIC",
+            "publisher": "Ediciones de la U",
+            "title": "Estrategias de muestreo: Diseño de encuestas y estimación de parámetros",
+            "title-short": "Estrategias de muestreo",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Kozak",
+                    "given": "Marcin"
+                }
+            ],
+            "container-title": "Statistic in Transition",
+            "id": "Kozak_2004",
+            "issue": "5",
+            "issued": {
+                "date-parts": [
+                    [
+                        2004
+                    ]
+                ]
+            },
+            "page": "797-806",
+            "title": "Optimal stratification using random search method in agricultural surveys",
+            "type": "article-journal",
+            "volume": "6"
+        },
+        {
+            "author": [
+                {
+                    "family": "Macqueen",
+                    "given": "J"
+                }
+            ],
+            "container-title": "Proceedings of the fifth berkeley symposium on mathematical statistics and probability",
+            "id": "Macqueen_1967",
+            "issued": {
+                "date-parts": [
+                    [
+                        1967
+                    ]
+                ]
+            },
+            "page": "281-297",
+            "publisher": "University of California Press",
+            "title": "Some methods for classification and analysis of multivariate observations",
+            "type": "paper-conference"
+        },
+        {
+            "author": [
+                {
+                    "family": "Park",
+                    "given": "Inho"
+                }
+            ],
+            "id": "Park_2003",
+            "issued": {
+                "date-parts": [
+                    [
+                        2003
+                    ]
+                ]
+            },
+            "page": "8",
+            "title": "Design effects and survey planning",
+            "type": "article-journal"
+        },
+        {
+            "ISBN": "978-92-1-161481-7",
+            "author": [
+                {
+                    "family": "UN"
+                }
+            ],
+            "collection-title": "Studies in methods / united nations, department of economic and social affairs, statistics division series f",
+            "id": "United_Nations_2005",
+            "issued": {
+                "date-parts": [
+                    [
+                        2005
+                    ]
+                ]
+            },
+            "title": "Household surveys in developing and transition countries",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Singh",
+                    "given": "A. C."
+                },
+                {
+                    "family": "Westlake",
+                    "given": "M."
+                },
+                {
+                    "family": "Feder",
+                    "given": "M."
+                }
+            ],
+            "id": "Singh_Westlake_Feder_2004",
+            "issued": {
+                "date-parts": [
+                    [
+                        2004
+                    ]
+                ]
+            },
+            "title": "A generalization of the coefficient of variation with application to suppression of imprecise estimates",
+            "type": "paper-conference"
+        },
+        {
+            "ISBN": "978-0-471-13773-3",
+            "author": [
+                {
+                    "family": "Korn",
+                    "given": "Edward Lee"
+                },
+                {
+                    "family": "Graubard",
+                    "given": "Barry I."
+                }
+            ],
+            "id": "Korn_Graubard_1999",
+            "issued": {
+                "date-parts": [
+                    [
+                        1999
+                    ]
+                ]
+            },
+            "publisher": "Wiley",
+            "title": "Analysis of health surveys",
+            "type": "book"
+        },
+        {
+            "URL": "https://www.R-project.org/",
+            "author": [
+                {
+                    "literal": "R Core Team"
+                }
+            ],
+            "id": "R_2019",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "publisher": "R Foundation for Statistical Computing",
+            "publisher-place": "Vienna, Austria",
+            "title": "R: A language and environment for statistical computing",
+            "title-short": "R",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Lumley",
+                    "given": "Thomas"
+                }
+            ],
+            "id": "TL",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "note": "R package version 3.32",
+            "title": "Survey: Analysis of complex survey samples",
+            "title-short": "Survey",
+            "type": ""
+        },
+        {
+            "ISBN": "978-0-471-13773-3",
+            "author": [
+                {
+                    "family": "Korn",
+                    "given": "Edward Lee"
+                },
+                {
+                    "family": "Graubard",
+                    "given": "Barry I."
+                }
+            ],
+            "id": "Korn_Graubard_1999",
+            "issued": {
+                "date-parts": [
+                    [
+                        1999
+                    ]
+                ]
+            },
+            "publisher": "Wiley",
+            "title": "Analysis of health surveys",
+            "type": "book"
+        },
+        {
+            "URL": "https://www.R-project.org/",
+            "author": [
+                {
+                    "literal": "R Core Team"
+                }
+            ],
+            "id": "R_2019",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "publisher": "R Foundation for Statistical Computing",
+            "publisher-place": "Vienna, Austria",
+            "title": "R: A language and environment for statistical computing",
+            "title-short": "R",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Lumley",
+                    "given": "Thomas"
+                }
+            ],
+            "id": "TL",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "note": "R package version 3.32",
+            "title": "Survey: Analysis of complex survey samples",
+            "title-short": "Survey",
+            "type": ""
+        },
+        {
+            "URL": "https://www.stata.com/manuals13/svy.pdf",
+            "author": [
+                {
+                    "family": "Stata"
+                }
+            ],
+            "id": "STATA_2017",
+            "issued": {
+                "date-parts": [
+                    [
+                        2013
+                    ]
+                ]
+            },
+            "title": "STATA survey data",
+            "type": "book"
+        },
+        {
+            "ISBN": "978-1-4200-8066-7",
+            "author": [
+                {
+                    "family": "Heeringa",
+                    "given": "Steven G."
+                },
+                {
+                    "family": "West",
+                    "given": "Brady T."
+                },
+                {
+                    "family": "Berglund",
+                    "given": "Patricia A."
+                }
+            ],
+            "collection-title": "Chapman and hall/CRC statistics in the social and behavioral sciences series",
+            "id": "Heeringa_West_Berglund_2010",
+            "issued": {
+                "date-parts": [
+                    [
+                        2010
+                    ]
+                ]
+            },
+            "publisher": "CRC Press",
+            "title": "Applied survey data analysis",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Barnett-Walker",
+                    "given": "Kortnee C."
+                },
+                {
+                    "family": "Chromy",
+                    "given": "James R."
+                },
+                {
+                    "family": "Davis",
+                    "given": "Teresa R."
+                },
+                {
+                    "family": "Emrich",
+                    "given": "Steven L."
+                },
+                {
+                    "family": "Odom",
+                    "given": "Dawn M."
+                },
+                {
+                    "family": "Packer",
+                    "given": "Lisa E."
+                }
+            ],
+            "id": "Barnett_Walker_Chromy_Davis_Emrich_Odom_Packer_2003",
+            "issued": {
+                "date-parts": [
+                    [
+                        2003
+                    ]
+                ]
+            },
+            "title": "2001 national household survey on drug abuse",
+            "type": "article-journal"
+        },
+        {
+            "author": [
+                {
+                    "family": "Parker",
+                    "given": "JD"
+                },
+                {
+                    "family": "Talih",
+                    "given": "M"
+                },
+                {
+                    "family": "Malec",
+                    "given": "DJ"
+                }
+            ],
+            "container-title": "Vital Health Stat",
+            "id": "Parker_Talih_Malec_2017",
+            "issue": "175",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "title": "National center for health statistics data presentation standards for proportions",
+            "type": "article-journal",
+            "volume": "2"
+        },
+        {
+            "author": [
+                {
+                    "family": "Hornik",
+                    "given": "Robert"
+                },
+                {
+                    "family": "Maklan",
+                    "given": "David"
+                },
+                {
+                    "family": "Cadell",
+                    "given": "Diane"
+                },
+                {
+                    "family": "Prado",
+                    "given": "Amalia"
+                },
+                {
+                    "family": "Barmada",
+                    "given": "Carlin"
+                },
+                {
+                    "family": "Jacobsohn",
+                    "given": "Lela"
+                },
+                {
+                    "family": "Orwin",
+                    "given": "Robert"
+                },
+                {
+                    "family": "Sridharan",
+                    "given": "Sanjeev"
+                },
+                {
+                    "family": "Zador",
+                    "given": "Paul"
+                },
+                {
+                    "family": "Southwell",
+                    "given": "Brian"
+                },
+                {
+                    "dropping-particle": "et",
+                    "family": "al."
+                }
+            ],
+            "id": "Hornik_Maklan_Cadell_Prado_Barmada_Jacobsohn_Orwin_Sridharan_Zador_Southwell_etal",
+            "issued": {
+                "date-parts": [
+                    [
+                        2002
+                    ]
+                ]
+            },
+            "page": "740",
+            "title": "Evaluation of the national youth anti-drug media campaign: Fourth semi-annual report of findings",
+            "title-short": "Evaluation of the national youth anti-drug media campaign",
+            "type": "article-journal"
+        },
+        {
+            "author": [
+                {
+                    "family": "Naud",
+                    "given": "Jean-Francois"
+                }
+            ],
+            "id": "Naud_2002",
+            "issued": {
+                "date-parts": [
+                    [
+                        2002
+                    ]
+                ]
+            },
+            "publisher": "Statistics Canada",
+            "title": "Combined-panel longitudinal weighting - survey of labour and income dynamics",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "LaRoche",
+                    "given": "Silvia"
+                }
+            ],
+            "id": "LaRoche_2003",
+            "issued": {
+                "date-parts": [
+                    [
+                        2003
+                    ]
+                ]
+            },
+            "publisher": "Statistics Canada",
+            "title": "Longitudinal and cross-sectional weighting of the survey of labour and income dynamics",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Hansen",
+                    "given": "Morris H."
+                },
+                {
+                    "family": "Hurwitz",
+                    "given": "William N."
+                },
+                {
+                    "family": "Madow",
+                    "given": "William G."
+                }
+            ],
+            "id": "Hansen_Hurwitz_Madow_1953",
+            "issued": {
+                "date-parts": [
+                    [
+                        1953
+                    ]
+                ]
+            },
+            "publisher": "Wiley",
+            "title": "Sample survey methods and theory",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Park",
+                    "given": "Inho"
+                }
+            ],
+            "id": "Park_2003",
+            "issued": {
+                "date-parts": [
+                    [
+                        2003
+                    ]
+                ]
+            },
+            "page": "8",
+            "title": "Design effects and survey planning",
+            "type": "article-journal"
+        },
+        {
+            "author": [
+                {
+                    "family": "West",
+                    "given": "Brady T."
+                }
+            ],
+            "id": "West2012AccountingFM",
+            "issued": {
+                "date-parts": [
+                    [
+                        2012
+                    ]
+                ]
+            },
+            "title": "Accounting for multi-stage sample designs in complex sample variance estimation",
+            "type": "paper-conference"
+        },
+        {
+            "ISBN": "978-0-387-40620-6",
+            "author": [
+                {
+                    "family": "Särndal",
+                    "given": "Carl-Erik"
+                },
+                {
+                    "family": "Swensson",
+                    "given": "Bengt"
+                },
+                {
+                    "family": "Wretman",
+                    "given": "Jan"
+                }
+            ],
+            "id": "Sarndal_Swensson_Wretman_2003",
+            "issued": {
+                "date-parts": [
+                    [
+                        2003,
+                        10
+                    ]
+                ]
+            },
+            "note": "Google-Books-ID: ufdONK3E1TcC",
+            "publisher": "Springer Science; Business Media",
+            "title": "Model assisted survey sampling",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "CEPAL"
+                }
+            ],
+            "id": "CepalSAe2018",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "title": "Taller regional sobre desagregación de estadísticas sociales mediante metodologías de estimación en áreas pequeñas",
+            "type": ""
+        },
+        {
+            "DOI": "10.17226/21653",
+            "ISBN": "978-0-309-36678-6",
+            "URL": "http://www.nap.edu/catalog/21653",
+            "author": [
+                {
+                    "literal": "National Research Council"
+                }
+            ],
+            "id": "AmericanCommunitySurvey",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "publisher": "National Academies Press",
+            "title": "Realizing the potential of the american community survey: Challenges, tradeoffs, and opportunities",
+            "title-short": "Realizing the potential of the american community survey",
+            "type": "book"
+        },
+        {
+            "ISBN": "978-0-470-28430-8",
+            "author": [
+                {
+                    "family": "Lumley",
+                    "given": "Thomas"
+                }
+            ],
+            "collection-title": "Wiley series in survey methodology",
+            "id": "Lumley_2010",
+            "issued": {
+                "date-parts": [
+                    [
+                        2010
+                    ]
+                ]
+            },
+            "publisher": "Wiley",
+            "title": "Complex surveys: A guide to analysis using r",
+            "title-short": "Complex surveys",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Kish",
+                    "given": "Leslie"
+                }
+            ],
+            "id": "Kish_1965",
+            "issued": {
+                "date-parts": [
+                    [
+                        1965
+                    ]
+                ]
+            },
+            "publisher": "John Wiley; Sons",
+            "title": "Survey sampling",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "West",
+                    "given": "Brady T."
+                },
+                {
+                    "family": "McCabe",
+                    "given": "Sean Esteban"
+                }
+            ],
+            "container-title": "The Stata Journal",
+            "id": "West_McCabe_2012",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        2012
+                    ]
+                ]
+            },
+            "page": "718-725",
+            "title": "Incorporating complex sample design effects when only final survey weights are available",
+            "type": "article-journal",
+            "volume": "12"
+        },
+        {
+            "ISBN": "978-958-762-586-8",
+            "author": [
+                {
+                    "family": "Gutiérrez",
+                    "given": "Hugo Andrés"
+                }
+            ],
+            "edition": "Segunda edición",
+            "id": "Gutierrez_2016",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "note": "Google-Books-ID: UlVmE5pkRwIC",
+            "publisher": "Ediciones de la U",
+            "title": "Estrategias de muestreo: Diseño de encuestas y estimación de parámetros",
+            "title-short": "Estrategias de muestreo",
+            "type": "book"
+        },
+        {
+            "ISBN": "978-0-387-35099-8",
+            "author": [
+                {
+                    "family": "Wolter",
+                    "given": "Kirk"
+                }
+            ],
+            "id": "Wolter_2007",
+            "issued": {
+                "date-parts": [
+                    [
+                        2007
+                    ]
+                ]
+            },
+            "note": "Google-Books-ID: Cf8CUMB0vUsC",
+            "publisher": "Springer Science; Business Media",
+            "title": "Introduction to variance estimation",
+            "type": "book"
+        },
+        {
+            "ISBN": "978-92-1-161481-7",
+            "author": [
+                {
+                    "family": "Nations",
+                    "given": "United"
+                }
+            ],
+            "collection-title": "Studies in methods / united nations, department of economic and social affairs, statistics division series f",
+            "id": "United_Nations_2005",
+            "issued": {
+                "date-parts": [
+                    [
+                        2005
+                    ]
+                ]
+            },
+            "publisher": "United Nations",
+            "title": "Household surveys in developing and transition countries",
+            "type": "book"
+        }
+    ],
+    "project_biblios": [
+        "CEPAL.bib"
+    ]
+}

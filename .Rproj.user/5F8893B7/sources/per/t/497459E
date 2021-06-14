@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1561331067207.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1981413883",
+    "id" : "497459E",
+    "lastKnownWriteTime" : 1552064058,
+    "last_content_update" : 1552064058,
+    "path" : "~/Desktop/Dropbox/CEPAL/AG_git/HHS-Handbook/01.Rmd",
+    "project_path" : "01.Rmd",
+    "properties" : {
+        "cursorPosition" : "5,0",
+        "scrollLine" : "3"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
