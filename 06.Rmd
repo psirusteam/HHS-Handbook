@@ -1,608 +1,234 @@
-# Ausencia de respuesta: imputación y reponderación
+# (PART) Procesamiento transversal de las encuestas de hogares {-}
 
-En el diseño y puesta en marcha de una encuesta puede ocurrir cierto tipo de situaciones que pueden sesgar las estimaciones finales. Este tipo de sesgos puede ocurrir antes, durante y después de la recolección de los datos. Es tarea del estadístico advertir ante todas las posibles instancias de los problemas que causan los sesgos y procurar que, en todas las etapas de la encuesta, se minimice el error humano y el error estadístico para que al final los resultados del estudio sean tan confiables como sea posible.
+# Estimación de parámetros
 
-## Sesgos generados en las encuestas
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+## Estimadores puntuales
 
-**Sesgo de selección**
-
-Este tipo de sesgo ocurre cuando parte de la población objetivo no está en el marco de muestreo. Una muestra a conveniencia\footnote{A pesar de que las muestras por conveniencia o por juicio no pueden ser utilizadas para estimar parámetros de la población, éstas sí pueden proporcionar información valiosa en las primeras etapas de una investigación o cuando no es necesario generalizar los resultados a la población.} es sesgada pues las unidades más fáciles de elegir o las que más probablemente respondan a la encuesta no son representativas de las unidades más difíciles de elegir. @Loh afirma que se presenta este tipo de sesgo si:
-
-\begin{enumerate}
-\item La selección de la muestra depende de cierta característica asociada a las propiedades de interés. Por ejemplo: Frecuencia con que los adolescentes hablan con los padres acerca del SIDA.
-\item La muestra se realiza mediante elección deliberada o mediante un juicio subjetivo. Por ejemplo, si el parámetro de interés es la cantidad promedio de gastos en compras en un centro comercial y el encuestador elige a las personas que salen con muchos paquetes, entonces la información estaría sesgada puesto que no está reflejando el comportamiento promedio de las compras.
-\item Existen errores en la especificación de la población objetivo. Por ejemplo, en encuestas electorales, cuando la población objetivo contiene a personas que no están registradas como votantes ante la organización electoral de su país.
-\item Existe sustitución deliberada de unidades no disponibles en la muestra. Si, por alguna razón, no fue posible obtener la medición y consecuente observación de la característica de interés para algún individuo en la población, la sustitución de este elemento debe hacerse bajo estrictos procedimientos estadísticos y no debe ser subjetiva en ningún modo.
-\item Existe ausencia de respuesta. Este fenómeno puede causar distorsión de los resultados cuando los que no responden a la encuesta difieren críticamente de los que si respondieron.
-\item La muestra está compuesta por respondientes voluntarios. Los foros radiales, las encuestas de televisión y los estudios de portales de internet no proporcionan información confiable.
-\end{enumerate}
-
-**Sesgo de medición**
-
-Este tipo de sesgo ocurre cuando el instrumento con el que se realiza la medición tiene una tendencia a diferir del valor verdadero que se desea averiguar. Éste sesgo debe ser considerado y minimizado en la etapa de diseñó de la encuesta. Nótese que ningún análisis estadístico puede revelar que una pesa añadió a cada persona 2Kg de más en un estudio de salud. @Loh cita algunas situaciones en donde se presenta este sesgo de medición:
-
-\begin{enumerate}
-\item Cuando el respondiente miente. Esta situación se presenta a menudo en encuestas que pregunta acerca del ingreso salarial, alcoholismo y drogadicción, nivel socioeconómico e incluso edad.
-\item Difícil comprensión de las preguntas. Por ejemplo: ¿No cree que no este es un buen momento para invertir? La doble negación en la pregunta es muy confusa para el respondiente.
-\item Las personas tienden a olvidar. Es bien sabido que las malas experiencias suelen ser olvidadas; esta situación debe acotarse si se está trabajando en una encuesta de criminalidad.
-\item Distintas respuestas a distintos entrevistadores. En algunas regiones es muy probable que la raza, edad o género del encuestador afecte directamente la respuesta del entrevistado.
-\item Leer mal las preguntas o polemizar con el respondiente. El encuestador puede influir notablemente en las respuestas. Por lo anterior, es muy importante que el proceso de entrenamiento del entrevistador sea riguroso y completo.
-\item La muestra está compuesta por respondientes voluntarios. Los foros radiales, las encuestas de televisión y los estudios de portales de internet no proporcionan información confiable.
-\end{enumerate}
-
-## Tipos de ausencia de respuesta
-
-Todas las encuestas de hogares sufren del fenómeno de la ausencia de respuesta en algunas de las variables de interés. En algunas ocasiones y aún después de un diseño cuidadoso y una planificación logística exhaustiva, esta problemática puede ser tan grande que los resultados de la encuesta pueden quedar en entredicho. Por esta razón, este problema debe ser considerado como una faceta normal, si bien no deseable, en el desarrollo de este tipo de estudios y la planificación y el diseño de todos los levantamientos de información a través de encuestas debe contemplar varios ajustes que prevean las consecuencias de este fenómeno. Es por esto que la última sección del capítulo cuatro abordó el tema del ajuste de subcobertura, que garantiza que el tamaño de muestra efectivo sea el adecuado para realizar un inferencia precisa. De otra forma, si el diseño de la enceusta no tiene en cuenta estos ajustes, el tamaño de muestra final se verá reducido puesto que muchos hogares no contestarán algunas preguntas del cuestionarios, y en algunos casos, muchos hogares no contestarán la totalidad del cuestionario. Existe un consenso completo de que la ausencia de respuesta puede perjudicar severamente la calidad de las estadísticas calculadas y publicadas en una encuesta. @Little_Rubin_2002 establecen tres tipos de mecanismos de ausencia de respuesta.
-
-- **Completamente aleatoria** *(Missing At Random - MAR)*: cuando la probabilidad de que un individuo responda no depende de la característica de interés, ni de alguna otra covariable auxiliar. Por ejemplo, en una encuesta del mercado de trabajo, podría existir ausencia de respuesta que no dependa del estado actual de ocupación del respondiente, ni de su edad, ni de la UPM en donde está la vivienda, ni de su género, ni de su nivel educativo, ni de ninguna otra característica auxiliar. De esta forma, se puede considerar que esta ausencia de respuesta está dispersa de manera uniforme sobre toda la población. Es decir que cuando el investigador produzca estadísticas descriptivas sobre las personas que respondieron la encuestas, ese procentaje de personas sea muy similar y tenga un comportamiento uniforme sobre todas las posibles covariables que afecten al individuo. El siguiente gráfico podría mostrar algunos indicios de que el patrón de ausencia de respuesta podría ser MCAR puesto que el porcentaje de respuesta es similar en las variables auxiliares.
-
-```{r, echo=FALSE, fig.height = 3, fig.cap="Patrón de respuesta MCAR"}
-par(mfrow=c(1, 3))
-counts.G <- c(Hombre = 95, Mujer = 94)
-barplot(counts.G, xlab = "Sexo", ylab = "Porcentaje de respuesta")
-counts.Z <- c(Urbano = 93, Rural = 95)
-barplot(counts.Z, xlab = "Zona", ylab = "Porcentaje de respuesta")
-counts.T <- c(Inactivo = 95, Ocupado = 96, Desocupado = 94)
-barplot(counts.T, xlab = "Condición de ocupación", ylab = "Porcentaje de respuesta")
-```
-
-- **Aleatoria dependiente de covariables** *(Missing At Random - MAR)*: cuando la probabilidad de que un individuo responda depende de algunas covariables auxiliares, pero no depende de la característica de interés.  Por ejemplo, en una encuesta de fuerza laboral, la ausencia de respuesta puede depender de la edad del respondientes, o del sexo, o incluso del nivel económico del individuo, pero no depende de su clasificación laboral. El siguiente gráfico muestra que el patrón de ausencia de respuesta podría ser MAR puesto que el sexo y la zona del respondiente están influenciando el porcentaje de respuesta, aunque no el estado de ocupación. 
-
-```{r, echo=FALSE, fig.height = 3, fig.cap="Patrón de respuesta MAR"}
-par(mfrow=c(1, 3))
-counts.G <- c(Hombre = 70, Mujer = 95)
-barplot(counts.G, xlab = "Sexo", ylab = "Porcentaje de respuesta")
-counts.Z <- c(Urbano = 98, Rural = 62)
-barplot(counts.Z, xlab = "Zona", ylab = "Porcentaje de respuesta")
-counts.T <- c(Inactivo = 95, Ocupado = 96, Desocupado = 94)
-barplot(counts.T, xlab = "Condición de ocupación", ylab = "Porcentaje de respuesta")
-```
-
-- **No aleatoria** *(Missing Not At Random - MNAR)*: cuando la ausencia de respuesta depende de la característica de interés. Por ejemplo, en la encuesta de fuerza laboral, es posible que los no respondientes dependan de su clasificación laboral. En este caso puede suceder que los desocupados sean los que sistemáticamente no respondan la encuesta. El siguiente gráfico muestra indicios de que el patrón de respuesta es MNAR puesto que la condición de ocupación es la que influencia el porcentaje de respuesta. 
-
-```{r, echo=FALSE, fig.height = 3, fig.cap="Patrón de respuesta MNAR"}
-par(mfrow=c(1, 3))
-counts.G <- c(Hombre = 80, Mujer = 82)
-barplot(counts.G, xlab = "Sexo", ylab = "Porcentaje de respuesta")
-counts.Z <- c(Urbano = 83, Rural = 79)
-barplot(counts.Z, xlab = "Zona", ylab = "Porcentaje de respuesta")
-counts.T <- c(Inactivo = 50, Ocupado = 20, Desocupado = 94)
-barplot(counts.T, xlab = "Condición de ocupación", ylab = "Porcentaje de respuesta")
-```
-
-Nótese que a pesar de que se hayan tomado las medidas de ajuste necesarias en el diseño de la encuesta, cuando ya ha terminado el proceso de recolleción de infomración, se debe lidiar con la ausencia de respuesta para evitar sesgos y aumentar la precisión de la encuesta. La literatura especializada examina dos metodologías diferentes pero complementarias en el ejercicio de una encuesta: la prevención de la ausencia de respuesta (antes de que ocurra) y las técnicas de estimación necesarias para tener en cuenta la ausencia de respuesta de manera apropiada en el proceso de inferencia, después de la recolección de los datos. Si el mecanismo de ausencia de respuesta se asume MCAR, es posible contemplar en el proceso de inferencia únicamente a aquellas unidades que tienen registros completos y eliminar de la base de datos a aquellas unidades que no contestaron (*list-wise deletion*). A pesar de que este tipo de análisis es simple, para evitar subestimaciones de los parámetros de interés, se debe realizar un ajuste de los factores de expansión inducidos por el diseño muestral, que originalmente fue planeado con un tamaño de muestra más grande que el efectivo. De esta forma, es posible suponer que la muestra de respondientes corresponde a una submuestra completamente aleatoria de la población y utilizar los principios de los diseños en dos fases. @Heeringa_West_Berglund_2010[capítulo 11] afirman que este tipo de análisis, además de inducir posibles sesgos si el supuesto MCAR no se cumple, reduce la eficiencia de la inferencia debido al decremento del tamaño de muestra efectivo. Por lo tanto, en la mayoría de encuestas, este supuesto no se asume y se realiza un ajuste adicional después de que ha ocurrido la ausencia de respuesta. Es por esto que @Sarndal_Swensson_Wretman_2003[sección 15.5] afirman que las principales técnicas para tratar la ausencia de respuesta son el ajuste a los pesos de muestreo y la imputación. El ajuste por ponderación implica aumentar los pesos aplicados en la estimación de los valores y de los encuestados para compensar los valores que se pierden debido a la ausencia de respuesta, mientras que la imputación implica la sustitución de los valores faltantes por valores artificiales.
-
-Siguiendo la notación en @Sarndal_Lundstrom_2006, consideramos una muestra seleccionada $s$ de unidades de interés; como resultado del proceso de observación se denota a $r$ como el conjunto de unidades que respondieron a uno o más de los $I$ variables de interés. Una unidad que no respondió a ninguna de las variables del estudio pertenecerá entonces al conjunto $s−r$. Así mismo, el conjunto de unidades que respondieron a una variable particular es denotado por $r_i$. Observe que, en general, todos los $r_i$ tendrán tamaños diferentes y además estarán contenidos en $r$; de esta forma, se tiene que:
+La mayoría de indicadores sociales a nivel nacional pueden verse como funciones de totales de una o más variables de interés. Por ejemplo, si el interés está en estimar un total $t_y=\sum_U y_k$, el estimador de expansión provee una metodología que induce insesgamiento.
 
 $$
-r_i\subseteq r \subseteq s
+\hat{t}_y = \sum_s w_k y_k
 $$
 
-La siguiente figura ilustra cómo, después de la recolección de datos, hay individuos que no respondieron a una o todas las variables de la encuesta. En esta ilustración, las unidades están representadas por las filas y las variables por las columnas. Observe que lo primeros tres individuos contestaron a todas las preguntas del cuestionario; el cuarto individuo no contestó las últimas dos preguntas; el quinto individuo no contestó ni la primera ni la última pregunta; el sexto individuo no contesto a la tercera pregunta; y así sucesivamente, hasta llegar a los últimos dos individuos quienes no contestaron a ninguna pregunta del cuestionario. Para este ejemplo particular, se observa que $I=8$, $n=\#(s)=14$, $\#(r_1)=10$, $\#(r_1)=10$, $\#(r_2)=9$, $\#(r_3)=10$, $\#(r_4)=10$, $\#(r_5)=11$, $\#(r_6)=10$, $\#(r_7)=10$, $\#(r_8)=8$ y $\#(r_8)=12$.
+En donde la muestra $s$ hace referencia al subconjunto de la población que fue seleccionado siguiendo un diseño de muestreo probabilístico que induce los pesos de muestreo $w_k$ que expanden el valor de la variable de interés $y_k$ para el $k$-ésimo individuo. Nótese que $w_k$ es función de la probabilidad de inclusión de $k$-ésimo individuo en la muestra $\pi_k=Pr(k\in s)$. En presencia de esquemas de estratificación y selección de conglomerados y varias etapas, esta probabilidad resulta ser el producto de las probabilidades condicionales que surgen en los subsecuentes procesos de selección probabilística. Por tanto, el peso final de muestreo resulta ser por lo general una multiplicación de factores de expansión en cada etapa del esquema de muestreo. 
 
-![*Un conjunto de datos después del proceso de observación.*](Pics/j1.png){width=300px}
-
-Al lidiar con la ausencia de respuesta podemos distinguir varios enfoques para la estimación. El más extremo se conoce como el **enfoque de eliminación**, en donde se conservan para el análisis únicamente aquellas unidades que han respondido a todas y cada una de las pregutnas del cuestionario; es decir que aqueelas unidades que no respondierona al menos una pregunta serán eliminadas del análisis. Note que en este enfoque sólo las unidades del conjunto $r$ se consideran para el análisis posterior. Por supuesto, en general, esto no es aconsejable puesto que trae problemas de sesgo, dado que las unidades que contestaron todo el cuestionario generalmente difieren de forma estructural de las unidades que no contestaron; además trae problemas de eficiencia estadística, puesto que el tamaño de la muestra efectiva, después de la eliminación de unidades, será insuficiente para garantizar los mínimos requeridos en la inferencia. La siguiente figura muestra que, teneindo en cuenta el ejemplo anterior, solo tres unidades serían tenidas en cuenta para el análisis de la información, mientras que nueve unidades, que no contestaron al menos una pregunta, más las tres unidades que no contestaron ninguna pregunta, serían eliminadas del análisis estadístico. Es decir, la mayoría de unidades de la muestra incial serían descartadas. 
-
-![*Enfoque de eliminación: todas las unidades que no pertencen a $r$ con eliminadas.*](Pics/j2.png){width=300px}
-
-El segundo enfoque se denomina **imputación total**, y se trata de imputar todos los valores faltantes del conjunto de observaciones. Es decir, los valores de las personas que no respondieron al menos a una variable en todo el cuestionario serán imputados. En este enfoque, la imputación se utiliza para tratar la ausencia de respuesta del ítem y la ausencia de respuesta de la unidad al mismo tiempo. La siguiente figura muestra un ejemplo de las unidades que serían consideradas para el análisis después de la imputación. Nótese entonces que las tres unidades que respondieron todas las preguntas del cuestionario entran al análisis sin nigun ajuste; mientras que las nueve unidades que no respondieron a todo el cuestionario entran al análisis habiendose imputado las celdas correspondientes a la ausencia de respuesta; además, las dos unidades que no respondieron ninguna pregunta del cuestionario también entran al análisis puesto que todas sus respuestas fueron imputadas. Luego, en este enfoque todas las unidades en el conjunto $s$ se consideran para el análisis posterior. 
-
-Observe que si $y_k$ es una observación faltante y es imputada, entonces $\hat{y}_k$ denotará el valor imputado obtenido por cualquiera de los métodos de imputación que se describirán más adelante. Luego, como en este enfoque se imputan valores para todas las observaciones faltantes, ya sea por unidad o por no respuesta del ítem, se tendrá un conjunto de datos completos con los valores 
+Por ejemplo, si el diseño de la encuesta es estratificado por regiones $h$ (agrupaciones de municipios), con tres etapas de selección dentro de cada estrato (la primera etapa con selección de municipios $i$ dentro del estrato, la segunda con selección de segmentos cartográficos $j$ y la última con selección de hogares $k$), entonces el peso de muestreo final y el estimador del total estará dado por la siguiente expresión
 
 $$
-y_{\circ \  k} = 
-\begin{cases}
-y_k, \ \text{for $k \in r_i$} \\
-\hat{y}_k, \ \text{for $k \in s - r_i$}
-\end{cases}
+\hat{t}_y = \sum_s w_j y_k = \sum_h \sum_{i \in s_h} \sum_{j \in s_{hi}} \sum_{k \in s_{hij}} w_{hijk} y_{hijk}
 $$
 
-![*Imputation total: todas las unidades que no están en $s-r$ son imputadas (las celdas en gris indican los valores que fueron imputados).*](Pics/j3.png){width=300px}
-
-El tercer enfoque se denomina **ponderación total** y se utiliza para cada variable de interés en el estudio, una a la vez. En este enfoque nunca se utiliza la imputación, puesto que existirán tantos conjuntos de pesos y ponderaciones como variables con valores faltantes. Para este esquema, se utilizan pesos $w_k^{(i)}$ para cada variable $i \in I$ que compensan la ausencia de respuesta de la unidad. Si todos los $r_i$ son diferentes, cada variable de estudio requirá un peso diferente. Siguiendo con los ejemplos de las ilustraciones, se nota que la primera variable del cuestionario fue respondida por 10 personas, y cuatro personas no respondieron esta pregunta. Por lo tanto, en este enfoque se crearán pesos $w_k^{(1)}$ para cada $k\in s$ que ponderen satisfactoriamente la información recolectada en esta variable. Sin emabrgo, este conjunto de pesos no será único, puesto que, en particular, la segunda variable del cuestionario fue respondida por nueve personas, y tres personas no respondieron esta pregunta. Por lo tanto, en este enfoque se crearán pesos $w_k^{(2)}$ para cada $k\in s$ que ponderen esta información recolectada en esta variable. Nótese que en general $w_k^{(1)} \neq w_k^{(2)}$ y, por ende, cada una de las $I=8$ variables del estudio tendrá su propio conjunto de ponderadores. 
-
-![*Ponderación total: cada variable tendrá un conjunto de pesos diferente. No se utiliza ningún método de imputación.*](Pics/j4.png){width=300px}
-
-Por último, el enfoque recomendado es una combinación de los procediemintos de imputación y ponderación y se conoce como **enfoque combinado** que imputa los valores de las celdas ausentes para los individuos que tienen al menos un valor faltante, exceptuando a aquellos que tienen todos los valores faltantes. De esta forma, los individuos que no contestaron ninguna pregunta del cuestionario son eliminados del análisis, mientras que los restantes serán considerado en el análisis con sus respuestas originales o con la imputación de las celdas vacías. En resumen, este enfoque implica que la imputación se utilice para tratar sólo la ausencia de respuesta del ítem, mientras que la ponderación se utilice únicamente para tratar la ausencia de respuesta del individuo. Retomando el ejemplo, el siguiente gráfico permite observar que los dos últimos individuos de la muestra fueron totalmente descartados puesto que no contestaron ninguna pregunta del cuestionario; además, para la primera variable, los valores del quinto y noveno individuo fueron imputados. De la misma manera, para la segunda variable, los valores de lso individuos 10, 11 y 12, fueron imputados; y así sucesivamente, hasta llegar a la última variable en donde los valores de los indivioduos tres, cuatro, seis y ocho fueron imputados. 
-
-![*Enfoque combinado: las unidades que no respondieron a ningún ítem son eliminadas del análisis y los respondientes parciales son imputados.*](Pics/j5.png){width=300px}
-
-En la realidad de las encuestas de hogares, lo más común es encontrar que se presente ausencia de respuesta tanto de unidad como de ítem. En estos casos, se aconseja imputar primero y luego descartar los individuos que no contestaron a niguna pregunta, de esta forma al final se obtendrá una matriz de datos rectangular completa. Por tanto, el conjunto de datos completados (originales o imputados) para la variable $y$ es $\{y_{\circ \  k}: k\in r\}$, en donde
+En presencia de información auxiliar es posible mejorar la eficiencia de la estimación acudiendo a diferentes formas funcionales que estiman el total, por ejemplo, con el estimador de Hájek:
 
 $$
-y_{\circ \  k} = 
-\begin{cases}
-y_k, \ \text{for $k \in r_i$} \\
-\hat{y}_k, \ \text{for $k \in r - r_i$}
-\end{cases}
+\hat{t}_y = t_x \frac{\sum_s w_k y_k}{\sum_s w_k x_k}
 $$
 
-
-## Imputación
-
-El término imputación se refiere al conjunto de técnicas por las cuales los valores faltantes en una o más variables se reemplazan con infrmación plausible con el objetivo de lograr valores sustitutivos en una base de datos que pueda ser analizada posteriormente. Este proceso introduce un nuevo elemento de error, conocido como el error de imputación, debido a la incertidumbre que introducen los valores no observados. Cuando se tiene ausencia de respuesta por ítem, las técnicas de imputación se prefieren antes que la utilización de los esquemas de ponderación en la muestra. De esta manera, es posible crear un conjunto completo y rectangular de datos mediante la imputación de los valores faltantes, puesto que después de realizar la imputación, se espera que todos los valores del cuestionario de un individuo contengan información y no exista ningún vacío. Para lograr la sutitución de los valores faltantes con infomración plausible, es posible encontrar donantes apropiados, en la misma muestra que se ha conseguido, definidos como respondientes que comparten características demográficas similares con el individuo que no respondió. Por lo tanto, la información del respondiente donante (o una función de estos valores) se copiará en las celdas vacías del no respondiente. Para encontrar los donantes es posible realizar un análisis estadístico con base en métodos de clasificación. Dentro de los métodos de imputación más usados en encuestas de hogares se encuentran los siguientes:
-
-- Imputación promedio (*mean value imputation*) que utiliza la media de la variable (dentro de las UPM o en un subconjunto apropiado de datos). En este caso, si se encuentra un valor faltante, inmediantamente será reemplazado por el promedio de los datos de los respondientes en esta variable. 
-- Imputación por paquete caliente (*hot deck imputation*) que reemplaza los valores faltantes por los valores de un donante que es un respondiente de la encuesta en el mismo levantamiento. En este caso, el valor faltante es reemplazado por la información del individuo escogido de antemano. 
-- Imputación por paquete frío (*cold deck imputation*) que reemplaza los valores faltantes por los valores de un donante que es un respondiente de encuesta en un levantamiento anterior. En este caso, el valor faltante es reemplazado por la información auxiliar de un individuo escogido de encuestas anteriores. 
-- Imputación estadística que se apoya en un modelo (de regresión, generalmente) en donde la variable dependiente es aquella que se quiere imputar y las covariables se derivan del restante conjunto de datos. En este caso, el valor faltante es reemplazado por la predicción (o una función) del modelo ajustado con la información en la muestra. 
-
-Como se mencionó anteriormente, cuando se trata de imputación, se pueden definir dos tipos de métodos. La imputación de la unidad completa, que se produce cuando toda la información de un individuo es imputada, y la imputación del ítem, que se da cuando un único valor de un individuo es imputado. Observe que la imputación de la unidad se utiliza para hacerle frente a la ausencia de respuesta de la unidad, cuando no hay datos para el individuo, mientras que la imputación del ítem se utiliza para la no respuesta del ítem, cuando no todos los valores se proporcionan para un individuo, pero algunos sí. 
-
-La imputación se realiza a menudo en grupos no traslapados $g= 1, \ldots, G$, donde la unión de $s_1, \ldots, s_G$ equivale a la muestra completa $s$. Se pueden utilizar diferentes métodos para cada grupo, pero dentro de cada grupo se debe utilizar el mismo método de imputación. Esto se debe a que pueden existir diferentes covariables disponibles para cada grupo. Cuando la disponibilidad de las variables auxiliares (covariables) es limitada, es posible considerar una jerarquía de métodos de imputación. De esta forma, para los grupos con más información disponible, es posible utilizar métodos más sofisticados de imputación; mientras que para grupos con menos información auxiliar disponbible, se deben usar métodos de imputación más simples. @Sarndal_Lundstrom_2006 presentan una discusión acerca del uso de esta técnica en combinación con los estimadores utilizados en las encuestas de hogares que proveen estadísticas oficiales. A continuación, se presenta una compilación no exhaustiva de algunos de los principales métodos de imputación que se utilizan en las encuestas de hogares.
-
-#### Imputación por regresión {-}
-
-En este método determinístico, el valor imputado para el valor faltate $y_k$ se calcula utilizando una regresión lineal.
-$$\hat{y}_k = \mathbf{x}_k \hat{\boldsymbol{\beta}}_i$$
-Donde,
-$$
-\hat{\boldsymbol{\beta}}_i = (\sum_{r_i} a_k\mathbf{x}_k\mathbf{x}_k')^{-1}
-\sum_{r_i} a_k\mathbf{x}_ky_k
-$$
-El vector de coeficientes de regresión  $\hat{\boldsymbol{\beta}}_i$ se produce a partir de un ajuste de regresión múltiple utilizando los datos $(y_k, \mathbf{x}_k)$ disponibles para cada unidad  $k \in r_i$ con pesos $a_k$ especificados adecuadamente. Nótese que, en general, las predicciones del modelo de regresión no necesariamente serán valores observados en algún otro individuo de la muestra. Por lo tanto, este método inducirá valores imputados que no han sido observados en la encuesta. Además, se deberán generar tantos modelos de regresión como variables con valores faltantes existan. 
-
-#### Imputación de razón {-}
-
-Un caso especial del anterior método se da cuando solo se tiene acceso a una sola covariable (positiva)  $\mathbf{x}_k = x_k$, y definiendo $a_k = \frac{1}{x_k}$. En este caso, la estimación del coeficiente de regresión será
+En donde $t_x$ denota el total poblacional, que se supone conocido para toda la población, de una variable auxiliar $x$ que es preguntada en la encuesta de hogares. Por supuesto, en el análisis de este tipo de encuestas es común realizar inferencias sobre parámetros que tienen una forma no lineal. Uno de los más básicos es la razón poblacional $R_U = t_{y_1} / t_{y_2}$ cuya estimación se lleva a cabo estimando ambos componentes de la fracción 
 
 $$
-\hat{{\beta}}_i = \frac{\sum_{r_i}y_k}{\sum_{r_i}x_k} = R_i
+\hat{R}= \frac{\hat{t}_{y_1}}{\hat{t}_{y_2}}
+= \frac{\sum_s w_k y_{1k}} {\sum_s w_k y_{2k}}
 $$
 
-Y por tanto, la imputación para el valor faltante se convierte en
-
-$$\hat{y}_k = x_k \hat{\beta}_i = x_k \frac{\sum_{r_i}y_k}{\sum_{r_i}x_k} = x_k R_i$$
-
-Este método se utiliza a menudo cuando la misma variable se mide en dos momentos diferentes en la misma encuesta. Por ejemplo, si $y$ indica la variable de estudio en el momento actual, $x$ indica la variable en el punto de tiempo anterior, entonces el coeficiente utilizado para la imputación es la relación entre los dos puntos en el tiempo.
-
-#### Imputación de promedio  {-}
-
-El caso más sencillo de la imputación por regresión se da cuando $a_k = x_k = 1$ para todo $k \in r_i$. En este escenario, el valor imputado se convierte en
-
-$$\hat{y}_k  = \frac{\sum_{r_i}y_k}{\sum_{r_i}1}= \bar{y}_{r_i}$$
-
-Por lo tanto, todos los valores faltantes recibirán el mismo valor imputado, que es justamente el promedio de la variable en el conjunto de respondientes. Nótese que no se requiere de ninguna información adicional en este método.
-
-#### El vecino más cercano  {-}
-
-Si asumimos que valores similares de $x$ producirán valores similares de $y$, podemos "pedir prestado" un valor de $y$ para imputar el valor faltante de un "vecino" con valores similares en $x$. En este caso, el valor imputado para la unidad $k$ está dado por
-
-$$\hat{y}_k = y_{l(k)}$$
-
-Dónde $l(k)$ es el "elemento donante", determinado al minimizar una ecuación de distancia. Enn el caso más simple, para una sola covariable de imputación $x_k$, la distancia entre los posibles donantes $l$ a la unidad $k$ es:
+La estimación de un promedio poblacional $\bar{y}_U = t_y / N$, se lleva a cabo de forma eficiente estimando el tamaño de la población y se puede ver como un caso particular de la estimación de una razón
 
 $$
-D_{lk} = |x_k - x_l|
+\hat{\bar{y}}_s= \frac{\hat{t}_y}{\hat{N}} 
+= \frac{\sum_s w_k y_k}{\sum_s w_k}
 $$
 
-El donante $l$ al elemento $k$ es aquel individuo en el conjunto $r$ con la menor distancia $D_{lk}$ entre todos los posibles elementos $l\in r$. Para el caso en donde se contemple más de una covariable de imputación, es posible considerar la siguiente distancia 
+Las encuestas de hogares con diseños panel o rotativos, tienen un mayor interés en la estimación del cambio de indicadores en dos periodos tiempo $\Delta = t_y^{(t)} - t_y^{(t-1)}$. Nótese que un estimador de este parámetro está dado por
 
 $$
-D_{lk} = \left( \sum_{j=1}^J h_j (x_{jk} - x_{jl})^2 \right)
+\hat{\Delta} = \hat{t}_{y^{(t)}} - \hat{t}_{y^{(t-1)}}
 $$
 
-En donde $h_j$ se utiliza para ponderar adecuadamente cada una de las $J$ covariables de la matriz de imputación.
-
-#### Imputación Hot Deck  {-}
-
-La imputación por regresión y el vécino más cercano son métodos que asumen una fuerte relación entre la variable de interés $y$ y las covariables $\mathbf{x}$. Sin embargo, en algunas aplicaciones esta relación no se puede establecer fácilmente, y no es plausible validar los supuestos de modelación que otros métodos requieren. Por lo tanto, en este tipo de técnica, el valor imputado para el individuo $k$ está dado por: 
-
-$$\hat{y}_k = y_{l(k)}$$
-
-Donde el valor imputado $y_{l(k)}$ es proporcionado por un donante seleccionado aleatoriamente del conjunto de datos de la variable de interés. Este método no se recomienda cuando existen mejores opciones, ya que no se cuenta con información auxiliar para determinar un buen sustituto.
-
-#### Imputación múltiple  {-}
-
-Cuando existe información auxiliar que permita relacionar las covariables con la variable de interés, es posible establecer mejores modelos que no solo mantienen el insesgamiento de la inferencia, sino que estiman con bastante precisión el error de muestreo. Con respecto a esta última categoría de imputación, es posible completar el conjunto de datos utilizando información auxiliar de los respondientes en la encuesta (o encuestas anteriores, si se trata de un diseño rotativo) y la información disponible a nivel de la población para predecir los valores faltantes usando un modelo de regresión. Una de las técnicas más robustas es la imputación múltiple que consiste en formular un modelo probabilístico entre la variable de interés y las covariables disponibles en la encuesta [@Rubin_1987]. Suponga que este modelo es de la forma 
-
-$$y_k = f(\mathbf{x_k},\boldsymbol{\beta}) + \varepsilon_k $$
-En donde $\varepsilon_k$ es un término de error aleatorio. Una vez formulado el modelo, y debido a la naturaleza estocástica de $\varepsilon_k$, es posible generar $Q>1$ realizaciones de la variable de interés para los registros faltantes; esto se logra de manera muy sencilla, simulando $Q$ valores del término de error. De esta forma, se generan $Q$ conjuntos de datos completos. Para cada conjunto de datos, se generarán $Q$ estimaciones de interés que luego se promedian para obtener una estimación puntual. 
-
-### Ejemplo: imputación en una encuesta de ingresos y gastos
-
-Una vez que se ha discutido acerca de los propósitos de la imputación en una encuesta de hogares, se debe escoger un método (o métodos) de imputación y una vez establecido el mecanismo de imputación, generar el conjunto de datos rectangular y completo. En esta sección analizaremos, a la luz de las particularidades de una encuesta de hogares de ingresos y gastos, los pasos que se deben surtir para completar un proceso de imputación. Por sus características, este tipo de encuestas presenta tasas elevadas de ausencia de respuesta de ítem, aunque también de individuo. 
-
-En general, el levantamiento común de este tipo de encuestas se centra en un trabajo de campo masivo que visita al hogar en varias ocasiones, pidiéndole al respondiente que diligencie sendos cuestionarios, y registre toda la información asociada al gasto y a los ingresos del hogar, durante un periodo de al menos dos semanas. Por supuesto, para que esto pueda realizarse, es necesario contar con la colaboración activa de todos los miembros del hogar. En el mejor de los casos, el encuestador habrá visitado varias veces el domicilio del hogar en el periodo de observación y tendrá un formulario totalmente diligenciado. Sin embargo, en muchas otras ocasiones, a pesar del seguimiento exhaustivo del encuestados, no se obtendrá el gasto de la totalidad de las categorías de la encuesta, sino que se obtendrá infomración parcial que se transformará en celdas vacías por la ausencia de respuesta. En el peor de los casos se obtendrán cuestionarios diligenciados en porcentaje tan bajo, que al final serán declarados como faltantes, lo cual se transforma en ausencia de respuesta de ese hogar. 
-
-El siguiente ejemplo trata de ilustrar de manera escueta cómo se debería realizar el procedimiento de imputación en una encuesta de ingresos y gastos. El lector encontrará varios pasos en esta metodología, puesto que antes de imputar las variables de interés, es ncesario conocer qué covariables se relacionan fuertemente con las variables que se quieren imputar. Además de eso, es necesario primero imputar todas las covariables en primer lugar y reemplazar sus valores faltantes con información plausible que pueda ser utilziada en los modelos que se ajusten. Suponga que, para el conjunto de hogares que se consideró con fines de imputación, se observaron al menos las siguientes variables:
-
-- Tamaño del hogar.
-- Número de hombres y mujeres dentro del hogar.
--	Número de niños y adultos en el hogar.
-- Edad del jefe de hogar.
-- Estado de ocupación del jefe de hogar.
-- Grado educativo más alto del jefe de hogar.
-- Número de personas empleadas en el hogar.
-
-El camino que se seguirá en este ejemplo será primero la imputación de los ingresos, como principal covariable del gasto y del consumo. Una vez que se imputaron las covariables, el segundo paso de este proceso se relaciona con la imputación de los filtros, que son las preguntas que se realizan para conocer si un hogar ha adquirido un bien o servicio específico.  El resultado de este paso produjo el tercer paso dedicado a la imputación de los valores de gasto anualizados en cada unidad. Esta serie de pasos metodológicos ha sido recomendados por diferentes agencias de estadística, incluyendo institutos y oficinas nacinoales de estadística. Por ejemplo, @Hayes_Watson_2009 y @Sun_2010 siguen esta metodología en el *Australian Bureau of Statistics* para imputación en la encuesta *Household, Income and Labour Dynamics in Australia (HILDA)*
-
-#### Imputación del ingreso {-}
-
-En primer lugar, debe ser notado que tanto teórica como empíricamente, los ingresos han demostrado ser un potente predictor de los gastos [@Starick_Watson_2011]. Si la base de datos contiene hogares que reportaron un ingreso nulo en todo el año, es posible que esos valores se consideren como faltantes porque se asume que los hogares no deben tener ingresos nulos durante todo un año. Además, los hogares con ingresos superiores a un límite también pueden ser considerados como valores atípicos y luego ser imputados. 
-
-La imputación del ingreso está basada en un enfoque de modelos predictivos y la técnica que se podría utilizar para imputar esta covariable es la del vecino más cercano con regresión. De esta forma, se define un modelo lineal para las unidades encuestadas y luego se estiman los coeficientes de regresión para obtener un valor pronosticado que se computa para las unidades que faltan. Así, para cada unidad con información faltante en el ingreso, se identifica un solo donante que corresponderá al hogar cuyo ingreso disponible es más cercano a la predicción del modelo de regresión. Por ende, todos los componentes de los ingresos son imputados por el donante. El modelo lineal se describe como se indica a continuación y la predicción de los ingresos para los hogares faltantes se calcula utilizando una regresión lineal.
-
-$$\tilde{y}_k = \mathbf{x}_k \hat{\boldsymbol{\beta}}_i$$
-
-Donde, $\tilde{y}_k$ es el valor pronosticado del ingreso disponible para el hogar $k$, $\mathbf{x}_k$ es el vector de las covariables del modelo, y los coeficientes de regresión estimados están dados por:
+Además, es posible mejorar la estimación del total actual $t_y^{(t)}$ al tener en cuenta la información inducida por el traslape de la encuesta en el segundo periodo, así:
 
 $$
-\hat{\boldsymbol{\beta}}_i = (\sum_{r_i} a_k\mathbf{x}_k\mathbf{x}_k')^{-1}
-\sum_{r_i} a_k\mathbf{x}_ky_k
+\tilde{t}_{y^{(t)}} = \alpha \hat{t}_{y^{(t)}} 
++ (1 -\alpha) (\tilde{t}_{y^{(t-1)}} - \hat{\Delta})
 $$
 
-Este vector de coeficiente de regresión $\hat{\boldsymbol{\beta}}_i$ se produce a partir de un ajuste de regresión múltiple utilizando los datos $(y_k, \mathbf{x}_k)$ disponibles para cada unidad $k \in r_i$ con pesos $a_k$ especificados adecuadamente. De aquí en adelante, esta covariable fue imputada a nivel de hogar y la información necesaria (incluida en $\mathbf{x}_k$) para hacerlo se resume de la siguiente manera:
-
-- **Composición del hogar**: número de adultos, número de niños, número de hombres, número de mujeres, edad adulta media, edad media de los niños, edad de la persona más joven, edad de la persona mayor, edad del jefe de hogar, grado educativo más alto del jefe de hogar.
-- **Ocupación y fuerza de trabajo**: situación laboral del jefe de hogar, número de personas empleadas, número de desempleados en el hogar.
-- **Calidad de la vivienda**: creada creado a partir de la sección de calidad de la vivienda, incluye por ejemplo, un índice de hacinamiento (como la relación entre número de habitaciones utilizadas principalmente para dormir y el número de personas en el hogar), el material de las paredes, y la principal fuente de agua potable en el hogar.
-- **Ubicación del hogar**: municipalidad y provincia, como primera y segunda desagregación cartográfica del país.
-
-Asumiendo que valores similares de las predicciones del modelo lineal $\tilde y$ producirán valores similares en las observaciones del ingreso $y$, podríamos pedir prestado un valor real de ingreso $y$ para imputar el valor faltante con la infmración de este vecino que tiene valores similares en las predicciones $\tilde y$ del modelo lineal. Así, el valor imputado para la unidad $k$ es dada por
-
-$$\hat{y}_k = y_{l(k)}$$
-
-Donde $l(k)$ es el "elemento donante", determinado por minimizar una medida simple de distancia entre todos  posibles donantes $l$ a la unidad $k$. Esta distancia está dada por:
+En donde $0 < \alpha < 1$. Por otro lado, si el interés está en estimar algunas características asociadas con la pobreza, es posible utilizar estimadores más complejos. Siendo $y_k$ el ingreso del individuo $k$ y $l$ el umbral de pobreza, entonces el siguiente estimador puede ser utilizado 
 
 $$
-D_{lk} = |\tilde y_k - y_l|
+\hat{F}_{\alpha}=\frac{1}{N}\sum_{k\in s} w_k 
+\left(\frac{l-y_k}{l}\right)^{\alpha}I(y_k<l)
 $$
 
-El donante $l$ al elemento $k$ será aquel hogar en el conjunto $r_i$ con la menor distancia $D_{lk}$ entre todos los posibles hogares $l\in r_i$. Como regla general, todo los donantes deben estar ubicados en la misma provincia que la unidad faltante. La siguiente figura muestra un diagrame de caja junto con el histograma de los ingresos (antes de la imputación), así como la relación lineal entre los valores pronosticados derivados del modelo y los valores imputados tomados de los donantes. 
+En donde $I(y_k<l)$ es una variable indicadora que toma el valor uno si $y_k<l$ o cero, en cualquier otro caso. Note que si $\alpha = 0$, se tiene una estimación de la incidencia de la pobreza y si $\alpha = 1$, se obtiene un estimación de la brecha de la pobreza [@Foster_Greer_Thorbecke_1984].
 
-![*Distribución de los ingresos (izquierda y centro) y Relación entre los valores predichos e imputados para los hogares con datos de ingresos faltantes (derecha).*](Pics/10.png){width=350px, height=500px}
+La selección del estimador está altamente relacionada con el diseño de la encuesta. Por ejemplo, si se pretende estimar un indicador para un periodo de tiempo definido, el diseño de la encuesta no debería inducir un esquema de rotación que tenga traslape de hogares, puesto que la correlación del indicador induciría un aumento de su varianza y por ende pérdida de eficiencia. Sin embargo, si se desea estimar el cambio del indicador entre dos periodos de tiempos, es necesario contar con un esquema de rotación que asegure un tamaño de muestra suficiente para estimar con precisión este cambio. @Cochran_1977[sección 12.13] afirma que, cuando el interés se centra tanto en la estimación del indicador en el periodo actual como en la estimación del cambio entre periodos, es recomendable tener una tasa de traslape de 2/3, 3/4 o 4/5 de una ronda a otra.
 
+## Estimación de las varianzas y del efecto de diseño (DEFF)
 
-#### Imputación del filtro {-}
-
-El siguiente paso, luego de haber logrado imputar con éxito las covariables determinantes del gasto es precisamente utilizarlas para lograr imputar el gasto en bienes o servicios. Por lo general, las encuestas de ingresos y gastos preguntan si el hogar consumió o adquirió cierto bien o servicio específico. En caso de responder afirmativamente, se pregunta por la cantidad de dinero gastado en el bien o servicio y por la cantidad de artículos adquiridos en el periodo de referencia; en caso de responder negativamente, se procede a preguntar por el siguiente bien o servicio. Por supuesto, diferentes artículos tiene diferentes  tasas de respuesta en sus filtros. De aquí en adelante, el valor a ser imputado en esta etapa es dicotóminco: sí o no. Si el valor imputado hubiera sido no, eso significaría que el hogar no debería tener ningún gasto asociado a ese ítem. Debido a la naturaleza del filtro, un modelo de regresión logística es conveniente para modelar la ausencia de respuesta en el filtro. De esta manera, la probabilidad de consumo (o compra)a un artículo $i$ en particular es $p_k = Pr(Filter_i = 1)$ y puede ser estimada por medio del siguiente modelo:
-
-$$
-\tilde{p}_k = logit^{-1}(\mathbf{x}_k \hat{\boldsymbol{\beta}}_i) =
-\frac{exp(\mathbf{x}_k \hat{\boldsymbol{\beta}}_i)}{1+exp(\mathbf{x}_k \hat{\boldsymbol{\beta}}_i)}
+Denotando como $y_k$ al resultado de la observación de la variable de interés (pobreza) en el individuo $k$, la estimación de la proporción de personas en condición de pobreza a nivel nacional está dada por la siguiente expresión:
 $$ 
-
-Las covariables incluidas en la matriz $\mathbf{x}$ podrían ser las mismas utilizados para la imputación de los ingresos y, por supuesto, los ingresos en sí. Es decir, las covariables incluidas serían la composición del hogar, el estado ocupación y fuerza de trabajo de los miembros del hogar, la calidad de la vivienda, la ubicación del hogar y los ingresos del hogar. Asumiendo que los similares valores de $\tilde p$  producirán valores de filtro similares, podemos "pedir prestado" un valor de filtro para imputar el que falta de un vecino con un valor similar de $\tilde p$. Por lo tanto, el valor imputado del filtro para la unidad $k$ es dada por
-
-$$\hat{y}_k = y_{l(k)}$$
-
-Donde $l(k)$ es el "elemento donante", determinado por la minimización de una distancia simple entre los posibles donantes $l$ a la unidad $k$, dada por:
-
-$$
-D_{lk} = |\tilde p_k - p_l|
+\hat \theta =\frac{\sum_h\sum_i\sum_{k \in s} w_{k}\ y_{k}}{\sum_h\sum_i\sum_{k \in s} w_k} =
+\frac{\hat t_{y}}{\hat N}
 $$
 
-Nótese que el donante $l$ al elemento $k$ es el elemento en el conjunto $r_i$ con el valor más pequeño de la distancia $D_{lk}$ entre todos los posibles $l \in r_i$. Por regla general, todo los donantes deben estar en la misma provincia que la unidad con el valor faltante. Por ejemplo, considere el artículo arroz, para el cual algunos hogares no proveyeron ninguna respuesta asociada al filtro de compra. Como este es un artículo de consumo masivo en nuestra región, se supondría que la mayoría de hogares respondiera que efectivamente ha comprado arroz en el periodo de refernecia. De esta manera, al utilizar la regresión logística como modelo para la ausencia de respuesta del filtro del arroz, es posible encontrar que la distribución de las probabilidades estimadas de compra de arroz esté sesgada hacia el valor uno y alejada del valor cero, como lo muestra la siguiente figura. Está claro que la distribución de estas los valores imputados también debería estar cargada hacia el uno, reflejando la realidad de la compra de un artículo esencial como el arroz.
-
-![*Distribución de las probabilidades estimadas de compra de arroz (izquierda) y valores imputados para los hogares con valores faltantes en el filtro (derecha).*](Pics/11.png){width=350px, height=500px}
-
-Por otro lado, el filtro para algunos artículos de bajo consumo estará más sesgado hacia el valor cero. La siguiente figura muestra la distribución de las probabilidades estimadas de compra de un artículo de bajo consumo, así como los valores imputados.
-
-![*Distribución de la probabilidad estimada de compra de un artículo de bajo consumo (izquierda) y sus valores imputados para los hogares que no respondieron el filtro (derecha).*](Pics/12.png){width=350px, height=500px}
-
-#### Imputación del gasto {-}
-
-Éste es el paso final del proceso de imputación y está fuertemente influenciado por los resultados de la imputación de la pregunta de filtro. En este paso, los hogares cuyo valor imputado de filtro es cero automáticamente tendrá un cero imputado como la cantidad de dinero gastado en ese artículo. Es decir, si el resultado de la imputación en el filtro es cero, esto implica directamente que el hogar no compró (o produjo) el artículo en el periodo de referencia, y por tanto la frecuencia de compra, la cantidad que ítems comprados y la cantidad de dinero gastado en ese artículo debe ser cero. Las unidades restantes deben tener un valor observado o imputado de uno en el filtro, y por lo tanto los valores faltantes del gasto deben ser imputados.
-
-Observe que el grupo de donantes está restringido a los que tienen un valor de gasto distinto de cero en el artículo específico. Es decir, para aquellas unidades con un valor de filtro distinto de cero, un donante debe ser identificado. Para la imputación del gasto, la técnica del vecino más cercano con el método de regresión puede considerarse en el mismo sentido que fue implementado en la imputación de los ingresos. Por lo tanto, se considera un modelo lineal en donde las covariables incluidas en la matriz $\mathbf{x}$ son la composición del hogar, el estado de ocupación y fuerza de trabajo, la calidad de la vivienda, la ubicación del hogar y los ingresos.
-
-Volviendo a los ejemplos anteriores,la siguiente figura muestra la distribución de los gastos imputados sobre el arroz. Se nota que la cantidad de dinero gastado en este artículo es baja y que la relación entre los valores pronosticados del modelo y los valores imputados es fuertemente lineal. 
-
-![*Distribución de los gastos imputados sobre el arroz (izquierda) y relación entre los valores predichos e imputados para los hogares con valores faltantes en el gasto (derecha).*](Pics/13.png){width=350px, height=500px}
-
-## Reponderación de los pesos de muestreo
-
-Los procesos de inferencia estadistica establecidos en cualquier encuesta de hogares descansan sobre el principio de representatividad que afirma que es posible seleccionar una muestra y representar con bastante precisión y exactitud la realidad de la población de interés. A su vez, las propiedades estadísticas de la inferencia en encuestas de hogares descansan sobre las probabilidades de inclusión generadas por el diseño de muestreo que se implementó en la encuesta. En general el peso de muestreo $w_k$ asociado a un individuo $k$ en la muestra $s$ es una función del inverso de la probabilidad de inclusión del individuo, así
+Nótese que las tres sumatorias corresponden a los estratos de muestreo ($h=1\ldots, H$), las unidades primarias de muestreo ($i= 1, \ldots, n_{Ih}$) y los individuos ($k= 1, \ldots, n_i$). Este estimador corresponde a una razón, puesto que, tanto el numerador como el denominador son aleatorios, y el ponderador $w_k$ corresponde al peso de muestreo óptimo. La estimación para la proporción en subgrupo de interés $U_d$ es:
 
 $$
-w_k \propto \frac{1}{Pr(k\in s)}
+\hat \theta_d = 
+\frac{\sum_h\sum_i\sum_{k \in s_d} w_k\ y_{k}}
+{\sum_h\sum_i\sum_{k \in s_d} w_k}
+=
+\frac{\hat t_{y_d}}{\hat N_d}
 $$
 
-Como se mencionó anteriormente, para conservar estabilidad en los pesos de muestreo, es posible definir diseños de muestreo auto-ponderados, en donde las unidades finales de muestreo tengan las misma probabilidad de inclusión, sin importar el tamaño de la unidad primaria de muestreo que la contiene. Este tipo de diseños es útil porque induce mayor control sobre las estimaciones finales. Es de notar que la conformación de los pesos de muestreo se transforma en un reto metodológico para el investigador, puesto que debe ajustarse a la realidad de la región en donde las poblaciones de los municipios se expanden cada vez más en el sector urbano y los marcos de muestreo de las áreas geográficas se desactualizan con rapidez. Varias soluciones a este problema han sido planteadas [@Gambino_Silva_2009] y todas ellas requieren de esfuerzos económicos, logísticos y técnicos. Por ende, los equipos de los INE (a todo nivel) deben ser flexibles y adecuarse a esta realidad cambiante de la movilidad de las poblaciones, sobre todo en las áreas urbanas. 
-
-En condiciones ideales el marco de muestreo debería coincidir plenamente con la población finita. Sin emabargo, en general, no es posible contar con una lista de todos los elementos de la población y, en el contexto de las encuestas a hogares, no existe una lista que enumere todos los hogares de un país de manera actualizada, por lo que la práctica estándar es construir el marco de muestreo en varias etapas, seleccionando una muestra de áreas geográficas, realizando un empadronamiento exhaustivo de todos los hogares en las áreas seleccionadas y luego seleccionando hogares. Este esquema de muestreo hace que el marco de muestreo de las encuestas a hogares presente imperfecciones. El siguiente gráfico, adaptado de  @Valliant_Dever_2017, describe los problemas inferenciales que se deben surtir al trabajar con marcos de muestreo imperfectos y su relación con los pesos de muestreo originales.
-
-XXXXXX incluir gráfico acá XXXXXXXXX
-
-Para hacerle frente a las imperfeccciones del marco, la AsociacEl esquema de ponderación *American Association for Public Opinion Research* (AAPOR) recomienda tratar la ausencia de respuesta de manera diferenciada y clasificar a cada unidad en la muestra en algunas de las siguientes categorías:
-
-1. ER (*unidades elegibles que fueron respondientes efectivos*): casos elegibles para los cuales se ha recolectado una cantidad suficiente de información.
-2. ENR (*unidades eligibles no respondientes*): casos elegibles para los cuales no se recolectó ningún dato o la información fue parcialmente recolectada. 
-3. IN (*unidades no elegibles*): casos de miembros no elegibles que no hacen parte de la población de interés. 
-4. UNK (*unidades con elegibilidad desconocida*): casos en donde no se puede conocer si la unidad es elegible o no.
-
-Para construir los factores de expansión de una encuesta se recomienda seguir en este orden los siguientes procesos:
-
-1. Creación de los pesos básicos.
-1. Descarte de las unidades no elegibles.
-1. Ajuste por elegibilidad desconocida.
-1. Ajuste por ausencia de respuesta.
-1. Calibración por proyecciones poblacionales y variables auxiliares.
-1. Preparación de la base de datos de respondientes. 
-
-#### Creación de los pesos básicos {-}
-
-Este primer paso ya ha sido explicado de forma detallada en la sección dedicada a la selección de la muestra. Observe que, asociado a cada esquema particular de muestreo, existe una única función que víncula a cada elemento con una probabilidad de inclusión en la muestra. De esta forma:
-
-$$\pi_k = Pr (k \in s)$$
-
-Por lo tanto, el primer paso, en la reponderación de los pesos de muestreo, es justamente la creación de los pesos básicos $d_{1k}$ que se definen como el inverso multiplicativo de la probabilidad de inclusión
-
-$$d_{1k} = \frac{1}{\pi_k}$$
-
-Estos pesos son creados incluso para aquellas unidades que serán excluidas de la muestra porque son no elegibles o porque no proveyeron ninguna información y luego serán modificados convenientemente. La siguiente figura muestra la distribución típica de los pesos originales en una encuesta de hogares. A través de las modificaciones posteriores, esta distribución irá sufriendo algunos cambios. Si la distribución original de los pesos básicos difiere estructuralmente con la distribución final de los ponderadores, resultante de todos los ajustes debidos a las imperfecciones del marco, entonces las propiedades estadísticas de insesgamiento, consistencia y precisión podrían desvanecerse. Lo anterior implica que el nivel de desactaulización del marco de muestreo tiene implicaciones directas en la calidad de la inferencia. Por tanto, si el marco de meustreo es muy imperfecto, los ponderadores finales no inducirán una inferecnia precisa. 
-
-
-![*Distribución de los pesos básicos de muestreo en una encuesta de hogares.*](Pics/15.png){width=350px, height=500px}
-
-
-#### Descarte de las unidades no elegibles  {-}
-
-Si hay viviendas seleccionadas desde el marco de muestreo que han cambiado su estado de ocupación y ahora no contienen ningún hogar, entonces el segundo paso consiste en ajustar su peso básico de la siguiente manera:
+En donde $s_d$ hace referencia a la muestra observada en el dominio. El efecto de diseño fue definido por @Kish_1965[página 258] como *la relación entre la varianza real de una muestra y la varianza real de una muestra aleatoria simple del mismo número de elementos* y toma la siguiente expresión
 
 $$
-d_{2k} = 
-\begin{cases}
-0, \ \ \ \ \ \text{si la unidad $k$ no pertenece a la población objetivo}\\
-d_{1k},\ \ \ \text{en otro caso }
-\end{cases}
+DEFF = \frac{Var(\hat{\theta})}{Var_{MAS}(\hat{\theta})}
 $$
 
-#### Ajuste por elegibilidad desconocida  {-}
-
-El tercer paso consiste en redistribuir el peso de las unidades cuyo estado de elegibilidad es desconocido. Por ejemplo, si la encuesta está enfocada en la población mayor de 15 años y hay personas que no proveen ninguna información acerca de su edad, entonces es necesario distribuir estos pesos. Esta situación también se puede presentar a nivel de hogar cuando no puede ser contactado porque nadie nunca atendió el llamado del encuestador (*nadie en casa*). Se acostumbra a redistribuir los pesos de los UNK entre las unidades que sí disponen de su estatus de elegibilidad (ER, ENR, IN). 
-
-Luego, si no es posible determinar la elegibilidad de algunas unidades que aparecen en el marco de muestreo, se tendrá una muestra $s$ que contendrá el conjunto de las unidades *elegibles* en la muestra $s_{e}$, el conjunto de las unidades *no elegibles* en la muestra $s_{n}$ y el conjunto de las unidades con *elegibilidad desconocidad* $s_{u}$. En este último caso, la elegibilidad de estos casos es desconocida, a no ser que de manera arbitraria sean clasificadas como ENR (elegibles no respondientes), o se tenga información auxiliar en el marco de muestreo que permita imputar su estado de elegibilidad. 
-
-Se recomienda formar $B$ $(b = 1,  \ldots, B)$ categorías^[Se acostumbra a formar categorías con al menos 50 casos.] basadas en la información del marco de muestreo. Estas categorías pueden ser estratos o cruces de subpoblaciones. Siendo $s_b$ la muestra de unidades en la categoría $b$ (que incluye a ER, ENR y UNK), se define el factor de ajuste por elegibilidad como:
+En donde $Var(\hat{\theta})$ es la varianza del diseño de muestreo complejo con el estimador $\tilde{\theta}$, mientras que $Var_{MAS}(\hat{\theta})$ es el estimador de la varianza bajo un muestreo aleatorio simple sin reemplazo para el estimador $\tilde{\theta}$. En particular, bajo muestreo aleatorio simple, se tiene que
 
 $$
-a_b = \frac{\sum_{s_b}d_{2k}}{\sum_{s_b \cap s_e}d_{2k}}
-$$
-Para la categoría $b$, los pesos ajustados por elegibilidad desconocida para aquellas unidades cuya elegibilidad si pudo ser establecida (independientemente de su estado de respuesta) estarán dados por la siguiente expresión:
-
-$$
-d_{3k} = a_b * d_{2k}
+{Var}_{MAS}(\hat{\theta}) = \frac{1}{n} \left(1-\frac{n}{N}\right)  S^2_U
 $$
 
-![*Comparación de la distribución de los pesos básicos de muestreo (izquierda) con los pesos ajustados por el estado de elegibilidad (derecha) en una encuesta de hogares.*](Pics/16.png){width=350px, height=500px}
-
-
-#### Ajuste por ausencia de respuesta  {-}
-
-En este paso los pesos básicos de los ER se ajustan para tener en cuenta a los ENR. Al final del proceso, los pesos de los ER se incrementan para compensar el hecho de que algunas unidades elegibles no proveyeron información. Para el manejo efectivo de la ausencia de respuesta se consideran las siguientes variables aleatorias:
+En donde $N$ es el número de elementos en la población,  $n$ es el tamaño de muestra efectivo y $S^2_U$ es la varianza poblacional de la variable de interés, dada por
 
 $$
-I_k=
-\begin{cases}
-1,  &\text{si $k$ pertenece a la muestra $s$}\\
-0,  &\text{en otro caso.}
-\end{cases}
+S^2_U = 
+\frac{\sum_U{  ( y_k - \theta)^2}}{N-1}
 $$
 
+Nótese que ninguno de los componentes del efecto de diseño se conoce y por ende deben ser estimados. Un estimador aproximadamente insesgado de esta varianza $S^2_U$ es la varianza muestral ponderada, la cual está dada por la siguiente expresión:
 
 $$
-D_k=
-\begin{cases}
-1,  &\text{si $k$ pertenece al conjunto de respondientes $s_r$}\\
-0,  &\text{en otro caso.}
-\end{cases}
+\hat{S}^2_U = \left(\frac{n}{n-1}\right)
+\frac{\sum_s{ w_k ( y_k - \hat{\theta})^2}}{\sum_s{w_k} -1 }
 $$
 
-Al suponer que la distribución de las respuestas puede ser estimada, entonces la probabilidad de respuesta (*propensity score*) está dada por
-$$
-Pr(k\in s_r|k\in s)=Pr(D_k = 1|I_k = 1)=\phi_k 
-$$
-
-Si el patrón de ausencia de respuesta es completamente aleatorio (en donde la no respuesta no sigue ningún patrón específico) o aleatorio (en donde el patrón de la no respuesta puede ser explicado por covariables $\mathbf{x}$ de la encuesta), entonces 
+De esta forma, una estimación de la varianza ${Var}_{MAS}(\hat{\theta})$ bajo muestreo aleatorio simple está dada por la siguiente expresión:
 
 $$
-\phi_k = f(\mathbf{x}_k, \boldsymbol{\beta})
+\widehat{Var}_{MAS}(\hat{\theta}) = \frac{1}{n} \left(1-\frac{n}{\hat N}\right)  \hat S^2_U
 $$
 
-Ahora, si es posible tener acceso a las covariables $\mathbf{x}$, entonces es posible estimar el patrón de ausencia de respuesta mediante 
+En donde $\hat N = \sum_s w_k$. Por lo tanto, la estimación del efecto de diseño DEFF está dada por
 
 $$
-\hat{\phi}_k = f(\mathbf{x}_k, \hat{\boldsymbol{\beta}})
+\widehat{DEFF} = \frac{\widehat{Var}(\hat\theta)}{\widehat{Var}_{MAS}(\hat{\theta})}
 $$
 
-Por otro lado, si el patrón de ausencia de respuesta es no aleatorio (en donde el patrón de la no respuesta es explicado por la variable de interés; por ejemplo cuando los desempleados son los que no responden), entonces 
+La idea del efecto de diseño trata de evaluar el mismo estimador bajo diferentes escenarios de muestreo. Como el estimador que se está estudiando $\hat \theta$ viene ponderado por los factores de expansión de la encuesta, entonces lo más conveniente es utilizar el mismo rasero para evaluar ambas estrategias de muestreo. Es posible encontrar una discusión más profunda sobre el efecto de diseño en @Gambino_2009[sección 4.],  @Sarndal_Swensson_Wretman_2003[página 188] y @Gutierrez_Zhang_Montano_2016[página 101].
+
+## Estimación estratificada
+
+La estimación del efecto de diseño es un problema común cuando se trabaja con estimaciones desagregadas en subpoblaciones de interés. Cuando las subpoblaciones constituyen estratos (o agregaciones de estratos) planeados de antemano, para los cuales se conoce previamente su tamaño poblacional, el efecto de diseño toma laa siguiente forma:
 
 $$
-\phi_k = f(\mathbf{y}_k, \beta)
-$$ 
-
-Luego, como no es posible tener acceso a la variables de interés para todos los individuos en la muestra (porque no todos respondieron), entonces no es posible estimar el patrón de ausencia de respuesta y por ende hay sesgo. Bajo los dos primeros escenarios, es posible definir el siguiente estimador insesgado
-$$
-\hat{t}_y=\sum_{k\in s_r}d_{4k}y_k
+DEFF_h= \frac{Var_p (\hat\theta_h) }{Var_{MAS}^h(\hat\theta_h) }
 $$
 
-En donde
-
+En donde $Var_{MAS}^h(\hat\theta_h)$ es la varianza restringida al estrato $h (h=1,\ldots, H)$, cuyo valor es el siguiente:
 $$
-d_{4k} = \frac{d_{3k}}{\hat{\phi_k}}
-$$
-
-Nótese que el sesgo se anula puesto que
-
-$$
-E(I_kD_k) 
-= EE(I_kD_k|I_k) 
-= E(I_k)E(D_k|I_k) = \pi_k \phi_k
+Var_{MAS}^h(\hat\theta_h)=\frac{1}{n_h}\left(1-\frac{n_h}{N_h}\right)S_{y_h}^2
 $$
 
-XXXXXXXX
-
-
-Si se tiene acceso a información auxiliar (contenida en el marco de muestreo o en otras preguntas de la encuesta), y si se considera que el mecanismo que genera la ausencia de respuesta en la encuesta de hogares es MAR, es posible ajustar un modelo para la ausencia de respuesta (en donde la variable dependiente es una variable indicadora de la respuesta del individuo por lo general supeditado a una distribución Bernoulli o Binomial). @Kim_Riddles_2012 muestran que es posible utilizar un modelo basado en el *propensity score* de las respuestas. Si la muestra de los respondientes se denota como $s_r$ entonces la probabilidad de que un individuo conteste es $\phi_k = Pr(k \in s_r)$. Al suponer que existe un vector de información auxiliar $\mathbf{z}_k$ conocido  para todo $k\in s$ es posible estimarla por medio de un modelo de regresión logística; esto es, 
+Siendo $n_h$ el tamaño de la muestra en el estrato $h$, $N_h$ el tamaño poblacional del estrato $h$ y $S_{y_h}^2$ la varianza muestral de la variable de interés restringida al subgrupo $h$. Por otro lado, cuando la subpoblación de interés no es un estrato sino un subgrupo aleatorio, no planeado en el diseño de la encuesta, cuyo tamaño de muestra es aleatorio, entonces la estimación correcta del efecto de diseño es la siguiente:
 
 $$
-\hat{\phi}_k = \frac{\exp\{\mathbf{z}_k'\hat{\boldsymbol{\beta}}\}}{1 + \exp\{\mathbf{z}_k'\hat{\boldsymbol{\beta}}\}}
+DEFF_U= \frac{Var_p (\hat\theta_h) }{Var_{MAS}^U(\hat\theta_h) }
 $$
 
-donde $\hat{\mathbf{\beta}}$ es el vector de coeficientes estimado de la regresión logística. Finalmente, el nuevo peso  estimador para un total poblacional, con el ajuste debido a la ausencia de respuesta no ignorable, queda expresado como
+En donde $Var_{MAS}^U(\hat\theta_h)$ es la varianza poblacional del estimador de interés, cuyo valor es el siguiente:
 
 $$
-\hat{t}_{y}^{(adj)}= \sum_{k\in s_r} \frac{w_k}{\hat{\phi}_k}y_k
+Var_{MAS}^U(\hat\theta_h)=\frac{1}{n}\left(1-\frac{n}{N}\right)S_{y_{hU}}^2
 $$
 
-XXXXXX
+En donde $S_{y_{hU}}^2$ es la varianza muestral de la variable de interés calculada en toda la población. Por lo tanto, en ambos casos el denominador cambia dependiendo de si el subgrupo es un estrato o no. Es por esta razón que en los softwares considerados (STATA y R) las cifras relacionadas con la estimación puntual, errores estándar, intervalos de confianza y coeficientes de variación coinciden plenamente.
 
-![*Comparación de la distribución de los pesos básicos de muestreo (izquierda) con los pesos ajustados por ausencia de respuesta (derecha) en una encuesta de hogares.*](Pics/17.png){width=350px, height=500px}
+Para solventar este inconveniente es posible utilizar la opción srssubpop, la cual calcula el DEFF usando una estimación de la varianza bajo muestreo aleatorio simple dentro de la subpoblación. Por defecto, el DEFF se calcula utilizando una estimación de la varianza bajo muestreo aleatorio simple en toda la población. Normalmente, se debería utilizar esta opción al calcular las estimaciones de subpoblación en estratos o en grupos de estratos [@STATA].
 
-#### Calibración de los pesos  {-}
+## Comparabilidad entre los softwares `R` y `STATA`
 
-Después de conformar el sistema de ponderación de pesos de muestreo en la encuesta, es posible calibrar estos pesos con la información auxiliar disponible para cada país, a nivel nacional, por estratos de interés, e incluso por variable continuas sobre las que se tenga interés. @Sarndal_Lundstrom_2006 afirman que cuando los estudios por muestreo están afectados por la ausencia de respuesta, es deseable tener las siguientes propiedades en la estructura inferencial que sustenta el muestreo:
+1. La forma en la que STATA calcula la estimación de la varianza por defecto está definida bajo un esquema de aproximación con reemplazo. Lo cual quiere decir que todas las expresiones de varianza omiten el factor de corrección para poblaciones finitas dado por $\left(1-\frac{n}{N}\right)$. Por ende, los resultados en poblaciones grandes, no diferirán significativamente; sin embargo, en las áreas pequeñas, los resultados pueden diferir de forma importante.
 
-1. Sesgo pequeño o nulo.
-2. Errores estándares pequeños.
-3. Un sistema de ponderación que reproduzca la información auxiliar disponible^[Por ejemplo, el número de hogares o habitantes en el país.].
-4. Un sistema de ponderación que sea eficiente al momento de estimar cualquier característica de interés en un estudio multipropósito.
-
-A pesar de que cada vez es más extendido el uso de los pesos calibrados en las encuestas de América Latina, es necesario que se disemine más esta práctica metodológica que induce estimadores muestrales que reproducen exactamente la información auxiliar conocida a nivel poblacional. Debido a la construcción teórica de los estimadores de calibración, los pesos finales responden a la siguiente restricción
-
-$$
-\sum_{s}w^*_{k}\boldsymbol{x}_k = \sum_{U}\boldsymbol{x}_{k} = \boldsymbol{t}_{\boldsymbol{x}}
-$$
-
-El ejemplo más básico se encuentra cuando se desea que los pesos de muestreo deberían reproducir con exactitud el tamaño de las regiones $N_h$ y el tamaño del país $N$. Es así como, utilizar la metodología de calibración [@Deville_Sarndal_1992] hace que se cumpla la siguiente ecuación de calibración sobre los nuevos pesos calibrados $w_k^*$ para todos lo estratos explícitos
-
-$$
-\sum_{s_h} w_k^* = N_h
-$$
-
-Esta coherencia entre las cifras oficiales y las que la encuesta puede producir hace que sea preferible el uso de los estimadores de calibración. Las anteriores características son satisfechas al usar el enfoque de calibración que induce una estructura inferencial robusta en presencia de información disponible puesto que reduce tanto el error de muestreo como el error debido a la ausencia de respuesta. Los estimadores de calibración son **aproximandamente insesgados**, pero la magnitud del sesgo está dada por la siguiente expresión:
-
-$$
-Bias(\hat{t}_{y, cal}) = E_p \left[ \sum_{k \in s} (w_k - d_k) y_k \right]
-$$
-
-Si los nuevos pesos calibrados son cercanos a los pesos originales en todas las posibles muestras, entonces el sesgo será insignificante. Ahora, si el tamaño de muestra es insuficiente no conviene utilizar este tipo de estimadores. Además, se sugiere que el coeficiente de variación del estimador de Horvitz-Thompson para las covariables (inducidas por todos los cruces y celdas considerados) sea menor del 10% para asegurar que el sesgo de los estimadores de calibración sea despreciable.
-
-Por otro lado, cuando se tienen múltiples variables discretas es posible que el cruce de categorías contenga muy pocas unidades para las cuales se deba ajustar los pesos originales. Esto induce sesgo en cada subgrupo ajustado. Si aún así se decide optar por múltiples aumentar las variables de calibración, es necesario hacer un chequeo empírico del ajuste que cada modelo pueda tener con todas las variables de la encuesta, aunque se advierte que este chequeo a veces puede ser demorado e ir en contravía de las apretadas agendas de producción estadísticas que se manejan en el INE.
-
-@Silva_2004 presenta algunas consideraciones al respecto del sesgo que puede generarse al usar esta metodología en las encuestas de hogares y aborda algunos criterios para evaluar la calidad de la calibración. 
-
-La idea general del proceso de calibración es encontrar un número de restricciones parsimonioso que permita tener estimaciones aproximadamente insesgadas con una varianza menor a la generada con los factores de expansión originales. En general los INE podrán clasificar sus procesos de calibración en una de las siguientes tres categorías:
-
-1. Calibración con variables continuas, que es el caso en donde la calibración se realiza con los totales de variables continuas como ingreso, gasto, entre otras. 
-2. Post-estratificación con variables categóricas, que representa el caso en donde la calibración se realiza con los tamaños poblacionales (basados en proyecciones demográficas o registros administrativos) de subgrupos de interés. 
-3. *Raking* con variables categóricas, que se define como una calibración sobre los tamaños marginales de tablas de contingencia de subgrupos de interés. A diferencia del caso anterior, esta calibración no tiene en cuenta los tamaños de los cruces, sino solo los tamaños marginales; por ende, este método induce menos restricciones.
-
-En un encuesta de hogares las restricciones de calibración pueden establecerse sobre características de hogares y características de personas al mismo tiempo. De esta forma, por ejemplo, es posible calibrar sobre las proyecciones demográficas de personas y al mismo tiempo controlar las estimaciones del número de hogares en el país de manera conjunta. @Estevao_Sarndal_2006 discuten una amplia variedad de casos en donde se calibra conjuntamente en distintos niveles de desagregación sobre diferentes esquema de muestreo. Por ejemplo, para la *Encuesta Continua de Empleo* de Bolivia la calibración está inducida por una post-estratificación sobre los tamaños poblacionales de los cruces resultantes entre las variable Departamento (hay 9 departamentos), Zona (rural y urbano) y PET (con dos categorías: mayor o igual a 10 años y menor de 10 años).
-
-El asesor regional dio una charla acerca de la metodología de calibración al equipo del Departamento de Investigación y Desarrollo, en donde se presentaron algunas medidas de calidad como protección en contra del sesgo generado por considerar demasiadas restricciones y se resaltó la importancia de que las variables utilizadas para la calibración sean estimadas de manera precisa por los estimadores clásicos de muestreo. Por ejemplo, si el número de personas por hogar es utilizada como una variable de calibración (utilizando como total auxiliar las proyecciones demográficas), entonces el coeficiente de variación del estimador de Horvitz-Thompson sobre esta variable debería ser menor al 10%. 
-
-![*Comparación de la distribución de los pesos básicos de muestreo (izquierda) con los pesos ajustados por ausencia de respuesta (derecha) en una encuesta de hogares.*](Pics/18.png){width=350px, height=500px}
+2. Por otro lado, el software Stata estima por defecto el $DEFF_U$. Nótese que, en este caso, las estimaciones de $Var_{MAS}^U(\hat\theta_h)$ y $Var_{MAS}^h(\hat\theta_h)$  serán diferentes, puesto que la primera involucra a toda la muestra, mientras que la segunda involucra únicamente a la muestra del estrato. Retomando el ejemplo, debido a que los subgrupos de interés son agregaciones de los estratos de diseño, no es correcto utilizar el enfoque que Stata trae por defecto y debe ser corregido mediante la incorporación de la sentencia `deff srssubpop`, tal como se ejemplifica más adelante. 
 
 
-La teoría afirma que entre más variables de calibración se tengan menor será la varianza asociada a las estimaciones (no así el sesgo). Sin embargo, existen problemas computacionales cuando crecen las restricciones que se deben satisfacer son demasiadas. Una primera opción es verificar que no se tengan variables que puedan tener codependencia lineal con otras. Al descartar estas variables es posible conservar una varianza pequeña puesto que se descartan combinaciones lineales de otras variables.
+## Expresiones para el efecto de diseño en subpoblaciones
 
-Si los pesos de calibración resultan ser menores que uno su interpretación puede tornarse difícil (aunque no reviste un problema teórico). El usuario común entiende al factor de expansión como un factor de representatividad: *es la cantidad de veces que una persona se represnta a sí misma y a algunas otras más en la población*. Por ende, los pesos negativos o menores que uno no resisten esta interpretación intuitiva y natural. Además, los pesos negativos pueden conllevar a estimaciones negativas para algunos dominios en donde el tamaño de muestra es pequeño, lo cual resulta ser problemático en un contexto en donde todas las variables de estudio son no negativas. 
+### DEFF poblacional
 
-Para garantizar que los pesos se ubiquen en un intervalo determinado, se debe minimizar una distancia que a su vez debe inducir pesos restringidos a este intervalo y que respete las ecuaciones de calibración. Es posible que no se tenga una solución exacta para todas las restricciones de calibración e incluso que el algoritmo de calibración no converja. Nótese que los estimadores de calibración se pueden escribir como 
+Interesa calcular el efecto de diseño para la estimación de $\bar{y}_s$ definida como $\hat{\bar{y}}_s = \frac{\sum_{k \in S}w_ky_k}{\sum_{k \in S}w_k}$ donde $w_k$ corresponde al factor de expansión del individuo $k$.
 
-$$
-w_k = g_k * d_k
-$$
+El efecto de diseño se define como
 
-Con base en lo anterior, es necesario analizar los pesos $g_k$ en perspectiva en cada dominio, estrato y postestrato de interés. Una buena idea puede ser identificar aquellos $g_k$ que resulten potencialmente grandes o influyentes. Se recomienda postestratificar la muestra, y aplicar la calibración a aquellas unidades en los que los $g_k$ sean estables y usar los pesos originales en el restante conjunto. 
+$$DEFF = \frac{V_p(\hat{\bar{y}}_s)}{V_{\text{MAS}}(\hat{\bar{y}}_s)}$$
+$V_{\text{MAS}}(\hat{\bar{y}}_s)$ corresponde a la varianza de $\hat{\bar{y}}_s$ bajo un muestreo aleatorio simple la cuál puede ser expresada como 
 
-Es posible hacer que los pesos de calibración estén restringidos a un espacio predefinido por el usuario, mediante límites $(L, U)$ sobre los $g_k$. De esta forma, si $w_k \geq 1$ implica $g_k \geq 1$ y por tanto $L=1$. Se acostumbra a tomar $U > Q_3 + 1.5 * (Q_3 - Q_1)$ en donde $Q_3$ y $Q_1$ están dados en términos de la distribución de $g_k$ y corresponden al tercer y primer cuartil, respectivamente.
+$$V_{\text{MAS}}(\hat{\bar{y}}_s) = \frac{1}{n}\left(1-\frac{n}{N}\right)S^2_{y_E} = \frac{1}{n}\left(1-\frac{n}{N}\right)\frac{1}{N-1}\sum_{k \in U}(y_k - \bar{y}_U)^2$$
+sändat et al indican que dicha varianza puede ser estimada como
 
-Si el mecanismo que genera la ausencia de respuesta no es aleatorio (MAR) o completamente aleatorio (MCAR), es posible que los ponderadores de calibración induzcan sesgo en las estimaciones finales. En general, cuando hay ausencia de respuesta es más probable que aparezcan pesos de calibración negativos y que los pesos de calibración no convergieran a los pesos originales. Además, la varianza de los estimadores de calibración no convergerá a los resultados usuales de los estimadores de regresión. 
+$$\hat{V}_{\text{MAS}}(\hat{\bar{y}}_s) = \frac{1}{n}\left(1-\frac{n}{N}\right)\hat{S}^2_{y_e}$$
+donde $\hat{S}^2_{y_e} = \frac{\sum_{k \in S}w_k(y_k-\hat{\bar{y}}_s)^2}{\sum_{k \in S}w_k - 1}$
 
-@Silva_2004 presenta algunas medidas que permiten decidir cuáles escenarios de calibración son los mejores. A continuación se citan tales medidas.
+### DEFF en estratos 
 
-- Error relativo promedio sobre las variables auxiliares
-$$
-M1= \frac{1}{p} \sum_{j=1}^p \frac{|\hat{t}_{xc} - t_x|}{t_x}
-$$
+Para cada estrato $h = 1,...,H$, se considera un DEFF distinto asociado a la estimación de $\bar{y}_{s_h}$ definida como $\hat{\bar{y}}_{s_h} = \frac{\sum_{k \in S_h}w_ky_k}{\sum_{k \in S_h}w_k}$-
+Definimos el efecto de diseño para el estrato $h$ como 
 
-- Coeficiente de variación HT relativo promedio
-$$M2= \frac{1}{p} \sum_{j=1}^p \frac{(Var(\hat{t}_{x\pi}))^{1/2}}{t_x} $$
+$$DEFF_h = \frac{V_p(\hat{\bar{y}}_{s_h})}{V_{\text{MAS}}(\hat{\bar{y}}_{s_h})}$$
+Para el caso de un muestreo aleatorio simple se tiene que 
+$$V_{\text{MAS}}(\hat{\bar{y}}_{s_h}) = \frac{N_h^2}{n_h}\left(1-\frac{n_h}{N_h}\right)S^2_{y_{E_h}} = \frac{1}{n_h}\left(1-\frac{n_h}{N_h}\right)\frac{1}{N_h-1}\sum_{k \in U}(y_k - \bar{y}_U)^2$$
+donde la varianza puede ser estimada como
 
-- Proporción de pesos extremos (límite inferior)
-$$M3 = \frac{1}{n} \sum_{k \in s}I(g_k<L)$$
-- Proporción de pesos extremos (límite superior)
-$$M4= \frac{1}{n} \sum_{k \in s}I(g_k>U)$$
-- Coeficiente de variación de los $g_k$
-$$M5= \frac{\sigma(g)}{\bar{g}}$$
+$$\hat{V}_{\text{MAS}}(\hat{\bar{y}}_{s_h}) = \frac{N_h^2}{n_h}\left(1-\frac{n_h}{N_h}\right)\hat{S}^2_{y_{e_h}}$$
+donde $\hat{S}^2_{y_{e_h}} = \frac{\sum_{k \in S_h}w_k(y_k-\hat{\bar{y}}_{s_h})^2}{\sum_{k \in S_h}w_k - 1}$
 
-- Distancia entre los pesos de calibración y los pesos originales
-$$M6 = \frac{1}{n}\sum_{k \in s} \frac{(w_k - d_k)^2}{d_k}
-= \frac{1}{n}\sum_{k \in s} d_k(g_k - 1)^2$$
+### DEFF en dominios
 
-- Eficiencia de los estimadores de calibración sobre la estimación del diseño de muestreo
-$$M7 = \frac{1}{J}\sum_{j=1}^J \frac{Var(\hat{t}_{y_jc})}{Var(\hat{t}_{y_j\pi})} $$
+En el caso de dominios, la estimación de $\bar{y}_{s_d}$ está dada por $\hat{\bar{y}}_{s_d} = \frac{\sum_{k \in S}w_kI_{k_d}y_k}{\sum_{k \in S}w_kI_{k_d}}$ donde $I_{k_d}$ es una indicatriz que vale uno cuando el individuo $k$ se encuentra en el dominio $d$ y cero en otro caso.
 
-- Efecto de la calibración sobre la dispersión de los ponderadores (DEFFk)
-$$M8 = 1+\frac{\sigma^2_w}{\bar{w}^2}$$
+Definimos el efecto de diseño para el dominio $d$ como 
+
+$$DEFF_d = \frac{V_p(\hat{\bar{y}}_{s_d})}{V_{\text{MAS}}(\hat{\bar{y}}_{s_d})}$$
+En el caso del DEFF poblacional Gutierrez indica que:
+
+$$\hat{B} = f(\hat{t}_y,\hat{N}) = \hat{t}_y/\hat{N}$$
+De aquí, tenemos que 
+
+$$E_k = \sum_{q = 1}^Qa_qy_{qk} = \frac{y_k}{N}-\frac{t_y}{N^2} = \frac{1}{N}(y_k - B)$$
+$$e_k = \frac{1}{\hat{N}}(y_k - \hat{\bar{y}}_s)$$
+Note que $\sum_{k\in S} w_ke_k= 0$
+
+De aquí, es posible calcular $\hat{V}_{\text{MAS}}(\hat{\bar{y}}_s)$ como
+
+\begin{align*}
+\hat{V}_{\text{MAS}}(\hat{\bar{y}}_s) & = \frac{N^2}{n}(1-\frac{n}{N})\hat{S}^2_{e_s} \\
+& = \frac{N^2}{n}(1-\frac{n}{N})\frac{1}{N-1}\sum_{k \in S}w_k(\frac{1}{\hat{N}}(y_k - \hat{\bar{y}}_s))^2 \\
+& \approx \frac{N}{n}(1-\frac{n}{N})\sum_{k \in S}w_k(y_k - \hat{\bar{y}}_s)^2/(\sum_{k \in S}w_k)^2 \\
+& \approx \frac{1}{n}(1-\frac{n}{N})\sum_{k \in S}w_k(y_k - \hat{\bar{y}}_s)^2/\sum_{k \in S}w_k
+\end{align*}
+
+Este razonamiento es válido dentro de los estratos, para el caso de los dominios, debemos considerar una variable adicional:
+
+$$\hat{B}_d = f(\hat{t}_{y_d},\hat{N}_d) = \hat{t}_{y_d}/\hat{N}_d$$
+De aquí, tenemos que 
+
+$$E_{k_d} = \frac{y_{k_d}}{N_d}-\frac{t_{y_d}}{N^2_d} = \frac{I_{k_d}}{N_d}(y_{k_d} - B_d)$$
+$$e_{k_d} = \frac{I_{k_d}}{\hat{N}_d}(y_{k_d} - \hat{\bar{y}}_{s_d})$$
+Por tanto, podemos escribir la varianza $\hat{V}_\text{MAS}(\hat{\bar{y}}_{s_d})$ como
+
+\begin{align*}
+\hat{V}_{\text{MAS}}(\hat{\bar{y}}_{s_d}) & = \frac{N^2}{n}(1-\frac{n}{N})\hat{S}^2_{e_{s_d}} \\
+& = \frac{N^2}{n}(1-\frac{n}{N})\frac{1}{N-1}\sum_{k \in S_d}w_k e_{s_d}^2 \\
+& = \frac{N^2}{n}(1-\frac{n}{N})\frac{1}{N-1}\sum_{k \in S_d}w_k\left(\frac{1}{\hat{N}_d}(y_k - \hat{\bar{y}}_{s_d})\right)^2 \\
+& = \frac{N^2}{n}(1-\frac{n}{N})\sum_{k \in S_d}w_k(y_k - \hat{\bar{y}}_{s_d})^2/\hat{N}^2_d 
+\end{align*}
 
 
-#### Calibración de personas con bases de datos de hogares  {-}
-
-Una de las preguntas recurrentes en la calibración de encuestas de hogares es el nivel al cual se debería realizar este ajuste. En prinicpio, es posible realizar la calibración al nivel de las personas, o al nivel de los hogares. Cada una de estas opciones trae algunas ventajas y consideraciones que se deben tener en cuenta. 
-
-Calibrar al nivel de los hogares implica que el hogar tendrá unos nuevos pesos que cumplen con las restricciones de calibración, y esos pesos los heredará a las personas que habitan el hogar. De esta forma todas las personas pertenecientes a un mismo hogar tendrán el mismo peso de muestreo, sin importar sus diferencias en composición demográfica. Es decir que, hombres, mujeres, menores y mayores de 15 años tendrán el mismo peso de muestreo. Esta propiedad es atractiva puesto que emula el diseño de muestreo que se definió en la fase de planeación. Por otro lado, realizar la calibración a nivel de los hogares hace que dentro de las unidades primarias de muestreo (UPMs) los hogares no tengan un peso homogeneo, lo que se distancia de las propiedades del diseño sistemático simple que se usa para la selección de los hogares dentro de las UPMs.
-
-Por otro lado, calibrar a nivel de personas implica que los pesos de muestreo de los hogares también pueden verse alterados, y que los pesos finales de muestreo de las personas sean diferentes dentro de los hogares. De esta forma, de acuerdo a las características de las personas se tendrá un peso diferente. Es decir que hombres, mujeres, menores y mayores de 15 años **no** tendrían el mismo peso de muestreo. Por consiguiente cuando se calibra por personas y se utiliza un filtro sobre esa base de personas para crear una base de hogares, las características observadas de los jefes de hogares influenciarían los pesos d emuestreo resultantes en dicha base de datos de hogares.  
-
-En principio, se supone que se selecciona una muestra de unidades de una población finita $U = \lbrace 1,2,\ldots,k,\ldots,M\rbrace$ la cual está agrupada en conglomerados $U_I = \lbrace 1, 2,\ldots, i, \ldots, N_I \rbrace$. El proceso de selección se puede resumir de la siguiente manera [@Gutierrez_2016]:
-
-- Se selecciona una muestra $S_I$ de conglomerados de $U_I$ con probabilidades de inclusión $\pi_{I_i}$ para $i\in U_I$. Los pesos muestrales de la primera etapa son $d_{I_i} = \frac{1}{\pi_{I_i}}$
-- En la segunda etapa se seleccionan unidades para $i\in S_I$. Se enumeran las unidades en $U_i$ y se selecciona una muestra $S_i$ con probabilidades de inclusión condicionales $\pi_{k|i}$.
-- De esta forma, $d_{k|i} = \frac{1}{\pi_{k|i}}$ son los pesos condicionales y $d_k = d_{I_i}d_{k|i}$ es el peso de muestreo general para la k-ésima unidad, siendo $s =\bigcup_{i\in s_I}S_i$ la muestra de unidades.
-
-Para calibrar sobre la información auxiliar a nivel de hogar, se deben satisfacer las siguientes ecuaciones:
-
-$$
-\sum_{i \in S_I}w_{I_i}x_{ci} = \sum_{i \in U_I}x_{ci} = t_{x_c}
-$$
-
-En donde $x_{ci}$ denota el vector de variables auxiliares a nivel del hogar, que siempre será definido como un conteo de individuos con cierta característica en el hogar. Por ejemplo, en su caso más básico $x_{ci}$ puede ser el número de individuos en el hogar, mientras que el total auxiliar $t_{x_c} = \sum_{i \in U_I}x_{ci}$ será el número de individuos en todos los hogares de Chile Luego de que se ha calibrado la base de hogares, se construyen los pesos a nivel de persona recurriendo a la siguiente expresión:
-
-$$
-w_k = d_{k|i}w_{I_i} \quad \forall k \in S_i
-$$
-
-Y además, se preserva la siguiente propiedad
-$$
-\frac{w_k}{w_{I_i}}=d_{k|i}
-$$
-
-Lo anterior imita la propiedad del muestreo en dos etapas de que 
-
-$$
-\frac{d_k}{d_{I_i}}=d_{k|i}
-$$
-
-Como todos los individuos pertenecientes a un hogar son seleccionados para que respondan la encuesta de hogares, se tiene que $d_{k|i} = 1$, por definición. Por lo tanto, el peso del individuo (en la base de datos de la muestra de personas) será idéntico al peso calibrado del hogar; es decir $w_k = w_{I_i} \quad \forall k \in S_i$. Por lo anterior, dado que el muestreo es de conglomerados en la última etapa y todos los individuos del hogar son seleccionados, entonces el peso de muestreo del hogar será el promedio de los pesos individuales.
-
-$$
-w_{I_i}=\sum_{k\in S_i}\frac{w_k}{N_i}=\sum_{k\in U_i}\frac{w_k}{N_i}=\bar{w}_i
-$$
-
-Por último, nótese que la matriz de calibración toma la siguiente forma:
-
-$$
-X_{[i]}=X=
-\begin{bmatrix}
-x_{c11} & x_{c12} & \cdots & x_{c1p}\\
-x_{c21} & x_{c22} & \cdots & x_{c2p}\\
-x_{c31} & x_{c32} & \cdots & x_{c3p}\\
-\vdots  & \vdots & \ddots &\\
-x_{cN_I1} & x_{cN_I2} & \cdots & x_{cN_Ip}
-\end{bmatrix}
-$$
-
-Por otro lado, la calibracion se puede realizar a nivel de las personas o a nivel de los hogares. Por ejemplo, si la calibración se realiza a nivel de personas y se calibra sobre la población en edad de trabajar, esto traerá como consecuencia que los factores de expansión sean diferentes para los miembros de un mismo hogar, puesto que la metodología buscará ajustar los totales de las personas en edad de trabajar y las personas que no están en la fuerza de trabajo de manera independiente. Por esta razón en la mayoría de hogares, en donde hay personas que son parte de la fuerza de trabajo y personas que no lo son, los pesos de muestreo no serán equivalentes. En principio, y debido al diseño de las encuesta, los pesos de muestreo originales son idénticos para todos los miembros de un mismo hogar. Sin embargo, cuando la calibración trata de ajustar los totales de las restricciones, y debido a que la población no está equitativamente distribuida, entonces de igual manera se presenta un reajuste en los factores de calibración. Por otro lado, calibrar a nivel de hogar hace que se cree un único factor de expansión para el hogar, que será heredado por todos sus miembros. Sin embargo, en este acercamiento y debido a que la composición de los hogares es diferente, entonces dentro de una misma UPM se tendrán hogares con diferentes pesos de muestreo. 
-
-En el caso particular en que haya información auxiliar disponible a nivel de personas y hogares (al mismo tiempo), es posible calibrar conjuntamente ambas variables en un sólo procedieminto de calibración. @Estevao_Sarndal_2006[sec. 5] recrea la calibración conjunta para hogares y personas, en donde se genera una variable indicadora para el jefe de hogar y sobre esta se crea una nueva restricción de calibración que utilice los totales auxiliares de los hogares. Con esta nueva calibración, se generan unos nuevos pesos de calibración en la base de datos de personas. Al filtrar esta base de datos por el jefe de hogar, se crea inmediatamente una base de hogares (puesto que solo hay un único jefe de hogar) que puede ser utilizada para combinarla con la información de los hogares. De esta forma, los pesos que venían de la base de datos de personas serán los que se utilicen en la base de datos de hogares obteniendo estimaciones consistentes. 
 
 
 
