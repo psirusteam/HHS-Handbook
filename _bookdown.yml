@@ -5,14 +5,17 @@ new_session: yes
 
 rmd_files: [
   "index.Rmd",
-  "01Intro.Rmd"
+  
+  "01Intro.Rmd",
+  
+  "99Referencias.Rmd",
   ]
 
 language:
   label:
     fig: 'Figura '
     tab: 'Tabla '
-    eq: 'Ecuación '
+    eq: 'Equación '
     thm: 'Teorema '
     lem: 'Lema '
     cor: 'Corolario '

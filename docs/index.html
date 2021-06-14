@@ -73,8 +73,9 @@
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefacio</a></li>
 <li class="chapter" data-level="" data-path="resumen.html"><a href="resumen.html"><i class="fa fa-check"></i>Resumen</a></li>
 <li class="chapter" data-level="1" data-path="introducción.html"><a href="introducción.html"><i class="fa fa-check"></i><b>1</b> Introducción</a></li>
+<li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
 <li class="divider"></li>
-<li><a href="./">Diseño y análisis de encuestas de hogares</a></li>
+<li><a Diseño y análisis de encuestas de hogares</a></li>
 
 </ul>
 
@@ -100,9 +101,11 @@
 </div>
 <div id="prefacio" class="section level1 unnumbered">
 <h1>Prefacio</h1>
-<div class="figure">
-<img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.png" alt="" />
-<p class="caption">Creative Commons License</p>
+<div class="figure"><span id="fig:unnamed-chunk-1"></span>
+<img src="Pics/CClicence.png" alt="Licencia de Creative Commons" width="100px" />
+<p class="caption">
+Figura 0.1: Licencia de Creative Commons
+</p>
 </div>
 <p>La versión online de este libro está licenciada bajo una <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Internacional de Creative Commons para compartir con atribución no comercial 4.0</a>.</p>
 
@@ -136,7 +139,7 @@ gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
 "github": true,
-"facebook": true,
+"facebook": false,
 "twitter": true,
 "linkedin": false,
 "weibo": false,
@@ -163,8 +166,9 @@ gitbook.start({
 },
 "download": ["Diseño y análisis de encuestas de hogares.pdf", "Diseño y análisis de encuestas de hogares.epub", "Diseño y análisis de encuestas de hogares.mobi"],
 "toc": {
-"collapse": "subsection"
-}
+"collapse": "section"
+},
+"tconfig": null
 });
 });
 </script>

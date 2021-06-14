@@ -1,20 +1,25 @@
 bookdown::gitbook:
+  split_by: chapter
+  split_bib: yes
+  dev: svglite
   css: style.css
   config:
+    tconfig:
     toc:
+      collapse: section
       before: |
         <li><a href="./">Diseño y análisis de encuestas de hogares</a></li>
       after: |
-        <li><a href="./">Diseño y análisis de encuestas de hogares</a></li>
-    edit: https://github.com/psirusteam/HHS-Handbook/%s
+        <li><a Diseño y análisis de encuestas de hogares</a></li>
     download: [pdf, epub, mobi]
+    edit: https://github.com/psirusteam/HHS-Handbook/%s
     sharing:
       github: yes
-      facebook: yes
+      facebook: no
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex
-  latex_engine: xelatex
-  citation_package: biblatex
+  latex_engine: pdflatex
+  citation_package: natbib
   keep_tex: yes
 bookdown::epub_book: default
