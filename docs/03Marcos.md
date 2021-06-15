@@ -1,55 +1,42 @@
 # Definición y estratificación del marco muestral
 
-Todo procedimiento de muestreo probabilístico requiere de un dis\-po\-si\-ti\-vo que permita identificar, seleccionar y ubicar a todos y cada uno de los objetos per\-te\-ne\-cien\-tes a la población objetivo y que participarán en la selección aleatoria. Este dispositivo se conoce con el nombre de \textbf{marco de muestreo}.
+Todo procedimiento de muestreo probabilístico requiere de un dispositivo que permita identificar, seleccionar y ubicar a todos y cada uno de las unidades pertenecientes a la población objetivo, las cuales posteriormente participarán en el proceso de selección aleatoria que definirá la muestra. Este dispositivo se conoce con el nombre de **marco de muestreo**. En general, sin esta herramienta no es posible realizar ningún procedimiento de muestreo probabilístico, y es por esto que la etapa de definir y alistar un buen marco de muestreo es tomada con bastante rigurosidad en las ONE.
 
-Cuando se dispone de un marco de elementos, se puede aplicar un diseño de muestreo de elementos; en muchas ocasiones se utilizan diseños de muestreo de conglomerados aunque se disponga de un marco de elementos. Si no se dispone de un marco de elementos (o es muy costoso construirlo) se debe recurrir a diseños de muestreo en conglomerados; es decir, que se utilizan marcos de conglomerados. Por ejemplo, al realizar una encuesta cuya unidad de observación sean las personas que viven en una ciudad, es muy difícil poder acceder a un marco de muestreo de las personas. Sin embargo, se puede tener acceso a la división sociodemográfica de la ciudad y así seleccionar algunos barrios de la ciudad, en una primera instancia y luego, seleccionar a las personas de los barrios en una segunda instancia. En el ejemplo anterior, los barrios son un ejemplo claro de conglomerados. Estas agrupaciones de elementos tienen la características de aparecer en el estado de la naturaleza. De esta forma, si se dispone de un marco de elementos, por ejemplo, el listado de empleados de una entidad, es posible aplicar un diseño de muestreo de elementos, realizar la selección aleatoria y de acuerdo a ese mismo diseño realizar las estimaciones necesarias. Cuando no existe un marco de muestreo disponible es necesario construirlo. Existen dos tipos de marcos de muestreo, a saber: 
+## El marco de muestreo
 
-\begin{itemize}
-\item \textbf{De Lista:} listados físicos o magnéticos, ficheros, archivos de ex\-pe\-dien\-tes, historias clínicas que permiten identificar y ubicar a los objetos que participarán en el sorteo aleatorio.
-\item \textbf{De Área:} mapas de ciudades y regiones en formato físico o magnético, fotografías aéreas, imágenes de satélite o similares que permiten delimitar regiones o unidades geográficas en forma tal que su identificación y su ubicación sobre el terreno sea posible.
-\end{itemize}
+Cuando se dispone de un marco de elementos, se puede aplicar un diseño de muestreo de elementos; en muchas ocasiones se utilizan diseños de muestreo de conglomerados aunque se disponga de un marco de elementos. Si no se dispone de un marco de elementos (o es muy costoso construirlo) se debe recurrir a diseños de muestreo en conglomerados; es decir, que se utilizan marcos de conglomerados. Por ejemplo, al realizar una encuesta cuya unidad de observación sean las personas que viven en una ciudad, es muy difícil poder acceder a un marco de muestreo de las personas. Sin embargo, se puede tener acceso a la división cartográfica de la ciudad y así seleccionar algunas comunas, localidades, o barrios de la ciudad, en una primera instancia, para luego, seleccionar a las personas en una segunda o tercera instancia. En el ejemplo anterior, las comunas, localidades, o barrios son un ejemplo claro de conglomerados. Estas agrupaciones de elementos tienen la característica de aparecer naturalmente.
 
-Es una virtud del marco si contiene \textbf{información auxiliar} que permite aplicar diseños muestrales y/o estimadores que conduzcan a estrategias más eficientes con respecto a la precisión de los resultados. O también si la información auxiliar\footnote{Toda información disponible a nivel poblacional o para todos y cada uno de los elementos del universo afecta directamente la estrategia empleada para obtener los objetivos de la investigación. Con respecto a la información auxiliar que pueda existir para cada elemento de la población es deseable que esté bien correlacionada con la variable de interés.} está organizada por órdenes deseables. Se llama información auxiliar \textbf{discreta}, si el marco de muestreo permite la desagregación de la población objetivo en ca\-te\-go\-rías o grupos poblacionales más pequeños. Por ejemplo nivel socioeconómico, grupo industrial, etc. Se llama información auxiliar \textbf{continua} si existe una o varias características de interés de tipo continuo y positivas. Es deseable que la información auxiliar continua esté altamente relacionada con la característica de interés. Por otra parte, un marco de muestreo es defectuoso si presenta alguno o varios de los siguientes casos:
+Cuando se dispone de listados de unidades, por ejemplo, el listado de empleados de una entidad, es posible aplicar un diseño de muestreo de elementos, realizar la correspondiente selección aleatoria y de acuerdo a ese mismo diseño realizar las estimaciones necesarias. Sin embargo, al realizar la planeación de una encuesta de hogares, es muy poco probable que se utilicen marcos de elementos, a no ser que el muestreo definido sea en dos fases: con una primera fase de selección de hogares y enlistamiento de personas o unidades, y una segunda fase de selección de personas o unidades. Por ejemplo, El INEC de Costa Rica realiza la Encuesta Nacional de Microempresas de los Hogares con base en la muestra de la Encuesta Nacional de Hogares (primera fase), en donde se identifican las actividades económicas de los respondientes y se enlistan los trabajadores autónomos. En una segunda fase se selecciona una submuestra con base en este marco de elementos. Cuando no existe un marco de muestreo disponible es necesario construirlo. Existen dos tipos de marcos de muestreo, a saber: 
 
-\begin{itemize}
-\item \textbf{Sobre-cobertura:} se presenta si en el dispositivo aparecen objetos que no pertenecen a la población objetivo. \textit{No son todos los que están.}
-\item \textbf{Sub-cobertura:} se da cuando algunos elementos de la población objetivo no aparecen en el marco de muestreo o cuando no se ha actualizado la entrada de nuevos integrantes. \textit{No están todos los que son.}
-\item \textbf{Duplicación:} Ll duplicación en un marco de muestreo se presenta si en el dispositivo aparecen varios registros para un mismo objeto. La razón más frecuente para la presencia de este defecto es la construcción no cuidadosa del marco a partir de la unión de registros administrativos de dos o más fuentes de información.
-\end{itemize}
+1. **De Lista**: listados físicos o magnéticos, ficheros o archivos de expedientes que permiten identificar y ubicar a los objetos que participarán en el sorteo aleatorio.
+2. **De Área**: mapas de ciudades y regiones en formato físico o magnético, fotografías aéreas, imágenes de satélite o similares que permiten delimitar regiones o unidades geográficas en forma tal que su identificación y su ubicación sobre el terreno sea posible.
 
-Estos defectos ocasionan errores en el cálculo de las expresiones que se utilizarán para generar las correspondientes estimaciones, generando sesgo, pérdida de precisión y, en algunos casos, que los resultados del estudio pierdan toda validez.
+Es una virtud del marco si contiene *información auxiliar* que permita aplicar diseños muestrales y/o estimadores que conduzcan a estrategias de muestreo más eficientes con respecto a la precisión de los resultados. O también si la información auxiliar^[Toda información disponible a nivel poblacional o para todos y cada uno de los elementos del universo afecta directamente la estrategia empleada para obtener los objetivos de la investigación. Con respecto a la información auxiliar que pueda existir para cada elemento de la población es deseable que esté bien correlacionada con la variable de interés.] está organizada por órdenes deseables. La información auxiliar *discreta* en el marco de muestreo permite la desagregación de la población objetivo en categorías o grupos poblacionales más pequeños. Por ejemplo, nivel socioeconómico, región, departamento, etc. Por otro lado, la información auxiliar *continua*, en forma de una o varias características de interés de tipo continuo y positivas, que esté altamente relacionada con la característica de interés permitirá mejorar la eficiencia de la estrategia de muestreo. Por otra parte, un marco de muestreo es defectuoso si presenta alguno o varios de los siguientes casos:
 
-En resumen, el marco de muestreo es cualquier dispositivo o mecanismo usado para obtener acceso observacional a la población de interés.
-\begin{itemize}
-\item Identificar y seleccionar una muestra de manera que respete un esquema de muestreo
-probabilístico.
-\item Establecer contacto con los elementos seleccionados (mail, CAPI, CATI, personal)
-\end{itemize}
+1. **Sobre-cobertura**: se presenta si en el dispositivo aparecen objetos que no pertenecen a la población objetivo. *No son todos los que están.*
+2. **Sub-cobertura**: se da cuando algunos elementos de la población objetivo no aparecen en el marco de muestreo o cuando no se ha actualizado la entrada de nuevos integrantes. *No están todos los que son.*
+3. **Duplicación**: se presenta si en el dispositivo aparecen varios registros para un mismo objeto. La razón más frecuente para la presencia de este defecto es la construcción no cuidadosa del marco a partir de la unión de registros administrativos de dos o más fuentes de información.
 
-Recuerde que la población objetivo constituye el conjunto de elementos sobre la cual se desea información y se requieren estimaciones de parámetros. La población del marco es el conjunto de todos los elementos que son enlistados directamente como unidades en el marco o identificados mediante un marco más complejo, tal como un marco para selección en varias etapas. Además, los elementos son las entidades que componen la población y las unidades de muestreo son las entidades del marco muestral. Cuando no hay uno disponible, es posible construirlo. Luego, las siguientes características son deseables para un marco de muestreo son:
+Estos defectos ocasionan errores en el cálculo de las expresiones que se utilizarán para generar las correspondientes estimaciones, generando sesgo, pérdida de precisión y, en algunos casos, que los resultados del estudio se pongan en entredicho. No obstante, una vez que se ha definido el marco de muestreo, este empieza un periodo de decaimiento de su calidad y envejecimiento, conllevando dificultades en la realización de las encuestas de hogares que lo utilizan. Es por esta razón que, a partir de la realización de los censos de población y vivienda, las ONE actualizarán sus marcos de muestreo. 
 
-\begin{itemize}
-\item Las unidades en el marco son identificados con un serial
-\item Cualquier unidad puede ser ubicada (dirección, teléfono)
-\item Está ordenado sistemáticamente (geografía, tamaño)
-\item Puede contener información adicional para cada unidad
-\item El marco especifica el dominio a donde pertenece cada unidad
-\item Cada elemento de la población está presente sólo una vez
-\item No contiene elementos que no estén en la población
-\item Todos los elementos de la población de interés están en el marco muestral
-\end{itemize}
+En resumen, el marco de muestreo es cualquier dispositivo o mecanismo usado para obtener acceso observacional a la población de interés, para identificar y seleccionar una muestra, de manera que respete el esquema de muestreo probabilístico y para establecer contacto con los elementos seleccionados, de manera presencial, por correo postal, por correo electrónico, o mediante procedimientos automatizados como los sistemas de captura CAPI o CATI. 
 
-La calidad del marco puede ser medida mediante la relación que existe entre la población objetivo y la población del marco. Algunas imperfecciones comunes de los marcos de muestreo son:
+Por otro lado, recordando que la población objetivo constituye el conjunto de elementos sobre la cual se desea información y se requieren estimaciones exactas y precisas acerca de sus parámetros, entonces la población del marco es el conjunto de todos los elementos que son enlistados directamente como unidades en el marco o identificados mediante un marco más complejo, tal como un marco para selección en varias etapas. Además, los elementos son las entidades que componen la población y las unidades de muestreo son las entidades del marco muestral. Cuando no hay uno disponible, es posible construirlo. Luego, las siguientes características son deseables para un marco de muestreo:
 
-\begin{itemize}
-\item Subcobertura: Cuando algunos elementos de la población objetivo no están en la población del marco
-\item Sobrecobertura: Cuando los elementos que no
-están en la población objetivo están en la
-población del marco
-\item Duplicación: Cuando un elemento de la población objetivo se encuentra listado dentro del marco en más de una ocasión
-\end{itemize}
+* Que las unidades en el marco son identificados con un serial.
+* Que cualquier unidad puede ser ubicada (dirección, teléfono).
+* Que se pueda ordenar sistemáticamente (geografía, tamaño).
+* Que contenga información adicional para cada unidad.
+* Que especifique el dominio geográfico o socioeconómico al cual pertenece cada unidad.
+* Que cada elemento de la población está presente sólo una vez.
+* Que no contenga elementos que no estén en la población.
+* Que todos los elementos de la población de interés estén en el marco muestral.
 
-Para realizar el proceso de selección sistemática de los hogares es necesario contar con un marco de muestreo que sirva de vínculo entre los hogares y las unidades de muestreo y que permita tener acceso a la población de interés. Como regla general, el marco de muestreo debe permitir *identificar* y *ubicar* a todos los hogares que conforman la población objetivo. Como lo afirma @Gutierrez_2016, el marco de muestreo más utilizado en este tipo de encuestas es de áreas geográficas que vinculan directamente a los hogares o personas. Por esta razón, los diseños de muestreo de estas encuestas se apoyan en la aglomeración natural de los hogares en segmentos cartográficos, que a su vez están contenidos en agrupaciones mayores. ¿Cómo se aglomeran las personas y cómo podemos realizar un diseño de muestreo con base en esta forma de aglomeración? Pues bien, las personas se aglomeran en hogares, los cuales a su vez se aglomeran en comunidades más grandes: barrios, comunas, segmentos. Estas comunidades forman ciudades y la reunión de estas divisiones es el país. Por lo tanto, a pesar de que ningún país tiene a disposición una lista actualizada de todos los hogares junto con su ubicación e identificación, sí existe en todos los países una lista actualizada de los segmentos cartográficos presentes en las zonas urbanas y rurales. De esta forma, si se selecciona de forma probabilística una muestra de sectores y dentro de cada sector se selecciona de forma probabilística una muestra de hogares, entonces de forma indirecta estaremos seleccionando una muestra de hogares que puede representar la realidad de todo un país. 
+La calidad del marco puede ser medida mediante la relación que existe entre la población objetivo y la población del marco. Esto quiere decir que la población enmarcada y la población de interés no siempre van a coincidir plenamente. 
+
+En las encuestas de hogares que precisan de un marco de áreas para su realización, el proceso de selección sistemática de los hogares necesita contar con un marco de muestreo que sirva de vínculo entre los hogares y las unidades de muestreo de las primeras etapas y que permita tener acceso a la población de interés. Como lo afirma @Gutierrez_2016, el marco de muestreo más utilizado en este tipo de encuestas es de áreas geográficas que vinculan directamente a los hogares o personas con un listado de divisiones cartográficas completamente exhaustivas. Por esta razón, los diseños de muestreo de estas encuestas se apoyan en la aglomeración natural de los hogares en segmentos cartográficos, que a su vez están contenidos en agrupaciones mayores. ¿Cómo se aglomeran las personas y cómo podemos realizar un diseño de muestreo con base en esta forma de aglomeración? Pues bien, las personas se aglomeran en hogares, los cuales a su vez se aglomeran en comunidades más grandes: barrios, comunas, segmentos. Estas comunidades forman ciudades, veredas, centro poblados, etc. y la reunión de estas divisiones da como resultado el conjunto completo de unidades de interés en el país. 
+
+Por lo tanto, a pesar de que ningún país tiene a disposición una lista actualizada de todos los hogares junto con su ubicación e identificación, sí existe en todos los países listas de los segmentos cartográficos presentes en las zonas urbanas y rurales, que son actualizadas en cada censo. De esta forma, si se selecciona de forma probabilística una muestra de sectores y dentro de cada sector se selecciona de forma probabilística una muestra de hogares, entonces de forma indirecta estaremos seleccionando una muestra de hogares que puede representar la realidad de todo un país. 
 
 ## Conceptos básicos
 
@@ -108,12 +95,10 @@ $$
 
 Nótese que se esperaría que esta variable de resumen, al estar definida como una medida de bienestar sobre las UPM, tuviera un comportamiento sesgado, tal como se puede observar en la siguiente figura.
 
-```{r, echo=FALSE, fig.height=3.5, fig.cap="*Histograma de la medida de resumen (y) sobre las UPM*"}
-hist(rchisq(1000, 4), breaks = 20,
-     main = "",
-     xlab ="Medida de resumen (y)", 
-     ylab = "Frecuencia")
-```
+<div class="figure">
+<img src="03Marcos_files/figure-html/unnamed-chunk-1-1.svg" alt="*Histograma de la medida de resumen (y) sobre las UPM*" width="672" />
+<p class="caption">(\#fig:unnamed-chunk-1)*Histograma de la medida de resumen (y) sobre las UPM*</p>
+</div>
 
 En particular, el INE de Chile ha realizado un valioso estudio de modelación del *ingreso autónomo* con algunos indicadores homologados, disponibles en la encuesta CASEN y haciendo uso de la técnica de *random forest*. Con base en este modelo, es posible determinar una predicción del ingreso total de los hogares en el censo. Es posible considerar a este *ingreso autónomo imputado* como una medida de resumen del bienestar de la UPM y realizar los mismos análisis de estratificación sobre esta predicción. Para que este escenario sea comparable con los demás, este modelo debe volver a ajustarse teniendo en cuenta exactamente las mismas variables incluidas en la matriz de información. Además, valdría la pena volver a preguntarse si esta componente del ingreso es la que mejor resumiría el bienestar de las UPM. 
 

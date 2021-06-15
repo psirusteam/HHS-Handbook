@@ -12,3 +12,11 @@ encuestas-de-panel-rotativo
 rotación-de-paneles
 parámetros-de-interés
 ejemplos-de-indicadores-de-interés-y-su-relación-con-los-tipos-de-encuestas
+definición-y-estratificación-del-marco-muestral
+el-marco-de-muestreo
+conceptos-básicos
+metodologías-de-estratificación
+información-a-nivel-de-upm
+univariadas-sobre-medidas-de-resumen
+multivariadas-sobre-la-matriz-de-información
+evaluación-y-escogencia-de-la-mejor-estratificación

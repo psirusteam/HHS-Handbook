@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="es" xml:lang="es">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>3.4 Evaluación y escogencia de la mejor estratificación | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
+  <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="3.4 Evaluación y escogencia de la mejor estratificación | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
+  <meta name="github-repo" content="psirusteam/HHS-Handbook" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3.4 Evaluación y escogencia de la mejor estratificación | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
+  
+  <meta name="twitter:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
+  
+
+<meta name="author" content="Andrés Gutiérrez" />
+
+
+<meta name="date" content="2021-06-15" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="metodologías-de-estratificación.html"/>
+<link rel="next" href="referencias.html"/>
+<script src="libs/header-attrs-2.8/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Diseño y análisis de encuestas de hogares</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefacio</a></li>
+<li class="chapter" data-level="" data-path="resumen.html"><a href="resumen.html"><i class="fa fa-check"></i>Resumen</a></li>
+<li class="chapter" data-level="1" data-path="introducción.html"><a href="introducción.html"><i class="fa fa-check"></i><b>1</b> Introducción</a>
+<ul>
+<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html#objetivos-de-desarrollo-sostenible"><i class="fa fa-check"></i>Objetivos de Desarrollo Sostenible</a></li>
+<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html#mercado-de-trabajo"><i class="fa fa-check"></i>Mercado de Trabajo</a></li>
+<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html#ingresos-y-gastos"><i class="fa fa-check"></i>Ingresos y gastos</a></li>
+<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html#esquema-del-documento"><i class="fa fa-check"></i>Esquema del documento</a></li>
+</ul></li>
+<li class="part"><span><b>I Diseño estadístico de las encuestas de hogares</b></span></li>
+<li class="chapter" data-level="2" data-path="elementos-básicos-y-planeación.html"><a href="elementos-básicos-y-planeación.html"><i class="fa fa-check"></i><b>2</b> Elementos básicos y planeación</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="universo-muestra-y-unidades.html"><a href="universo-muestra-y-unidades.html"><i class="fa fa-check"></i><b>2.1</b> Universo, muestra y unidades</a></li>
+<li class="chapter" data-level="2.2" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html"><i class="fa fa-check"></i><b>2.2</b> Periodicidad en el tiempo</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-transversales"><i class="fa fa-check"></i><b>2.2.1</b> Encuestas transversales</a></li>
+<li class="chapter" data-level="2.2.2" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-repetidas"><i class="fa fa-check"></i><b>2.2.2</b> Encuestas repetidas</a></li>
+<li class="chapter" data-level="2.2.3" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-panel"><i class="fa fa-check"></i><b>2.2.3</b> Encuestas panel</a></li>
+<li class="chapter" data-level="2.2.4" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-de-panel-dividido"><i class="fa fa-check"></i><b>2.2.4</b> Encuestas de panel dividido</a></li>
+<li class="chapter" data-level="2.2.5" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-de-panel-rotativo"><i class="fa fa-check"></i><b>2.2.5</b> Encuestas de panel rotativo</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="rotación-de-paneles.html"><a href="rotación-de-paneles.html"><i class="fa fa-check"></i><b>2.3</b> Rotación de paneles</a></li>
+<li class="chapter" data-level="2.4" data-path="parámetros-de-interés.html"><a href="parámetros-de-interés.html"><i class="fa fa-check"></i><b>2.4</b> Parámetros de interés</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="parámetros-de-interés.html"><a href="parámetros-de-interés.html#ejemplos-de-indicadores-de-interés-y-su-relación-con-los-tipos-de-encuestas"><i class="fa fa-check"></i><b>2.4.1</b> Ejemplos de indicadores de interés y su relación con los tipos de encuestas</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="definición-y-estratificación-del-marco-muestral.html"><a href="definición-y-estratificación-del-marco-muestral.html"><i class="fa fa-check"></i><b>3</b> Definición y estratificación del marco muestral</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="el-marco-de-muestreo.html"><a href="el-marco-de-muestreo.html"><i class="fa fa-check"></i><b>3.1</b> El marco de muestreo</a></li>
+<li class="chapter" data-level="3.2" data-path="conceptos-básicos.html"><a href="conceptos-básicos.html"><i class="fa fa-check"></i><b>3.2</b> Conceptos básicos</a></li>
+<li class="chapter" data-level="3.3" data-path="metodologías-de-estratificación.html"><a href="metodologías-de-estratificación.html"><i class="fa fa-check"></i><b>3.3</b> Metodologías de estratificación</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="metodologías-de-estratificación.html"><a href="metodologías-de-estratificación.html#información-a-nivel-de-upm"><i class="fa fa-check"></i><b>3.3.1</b> Información a nivel de UPM</a></li>
+<li class="chapter" data-level="3.3.2" data-path="metodologías-de-estratificación.html"><a href="metodologías-de-estratificación.html#univariadas-sobre-medidas-de-resumen"><i class="fa fa-check"></i><b>3.3.2</b> Univariadas sobre medidas de resumen</a></li>
+<li class="chapter" data-level="3.3.3" data-path="metodologías-de-estratificación.html"><a href="metodologías-de-estratificación.html#multivariadas-sobre-la-matriz-de-información"><i class="fa fa-check"></i><b>3.3.3</b> Multivariadas sobre la matriz de información</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="evaluación-y-escogencia-de-la-mejor-estratificación.html"><a href="evaluación-y-escogencia-de-la-mejor-estratificación.html"><i class="fa fa-check"></i><b>3.4</b> Evaluación y escogencia de la mejor estratificación</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
+<li class="divider"></li>
+<li><a Diseño y análisis de encuestas de hogares</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Diseño y análisis estadístico en las encuestas de hogares de América Latina</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="evaluación-y-escogencia-de-la-mejor-estratificación" class="section level2" number="3.4">
+<h2><span class="header-section-number">3.4</span> Evaluación y escogencia de la mejor estratificación</h2>
+<p>En la evaluación de los escenarios de estratificación entran las técnicas univariadas y multivariadas. Al final, el resultado de aplicar una u otra técnica es simplemente una clasificación de las UPM. Por lo tanto, cada una de las posibles estratificaciones debe ser evaluada con base en la reducción de la varianza para todos los indicadores considerados en la matriz de clasificación. La medida clásica con la que se juzgan las bondades de una estrategia de muestreo es el efecto de diseño (DEFF). Por lo tanto, la evaluación de la estratificación debe estar supeditada también a esta medida, que para la variable <span class="math inline">\(p = 1, \ldots, P\)</span>, está dada por:</p>
+<p><span class="math display">\[
+DEFF_p = \frac{Var_{ST}(\bar x _p)}{Var_{SI}(\bar x _p)} \ \ \ \ \ \ \ \ \ p = 1, \ldots, P.
+\]</span></p>
+<p>En donde, <span class="math inline">\(Var_{ST}(\bar x _p)\)</span> y <span class="math inline">\(Var_{SI}(\bar x _p)\)</span> denotan la varianza del diseño estratificado y la varianza de un muestreo aleatorio simple para la media poblacional (porcentaje) de la <span class="math inline">\(p\)</span>-ésima variable de la matriz de información. Por otro lado, <span class="citation"><a href="#ref-Gutierrez_2016" role="doc-biblioref">Gutiérrez</a> (<a href="#ref-Gutierrez_2016" role="doc-biblioref">2016, 184</a>)</span> demuestra que, cuando la asignación es proporcional, esta relación se puede escribir de la siguiente manera:</p>
+<p><span class="math display">\[
+DEFF_p = \frac{ \sum_{h=1}^H W_h S^2_{x_{hp}} }{S^2_{x_p}} \ \ \ \ \ \ \ \ \ p = 1, \ldots, P.
+\]</span></p>
+<p>En donde, para cada estrato <span class="math inline">\(h = 1, \ldots, H\)</span>, se tiene que <span class="math inline">\(S^2_{x_p}\)</span> es la varianza de la variable <span class="math inline">\(x_p\)</span> en la población y <span class="math inline">\(S^2_{x_{hp}}\)</span> es la varianza de la variable <span class="math inline">\(x_p\)</span> supeditada al estrato <span class="math inline">\(h\)</span>. Nótese que una ventaja de expresar el efecto de diseño como en la ecuación anterior es que no dependerá del tamaño de muestra. Una vez definido el criterio de evaluación de la estratificación sobre una variable <span class="math inline">\(x_p\)</span>, es necesario definir un criterio de estratificación multivariante que contemple cada una de las <span class="math inline">\(P\)</span> variables. Siguiendo las ideas de <span class="citation"><a href="#ref-Jarque_1981" role="doc-biblioref">Jarque</a> (<a href="#ref-Jarque_1981" role="doc-biblioref">1981</a>)</span>, se propone la siguiente medida de calidad, definida como el <em>efecto de diseño generalizado</em> (<span class="math inline">\(G(S)\)</span>) sobre todas las variables de la matriz de información:</p>
+<p><span class="math display">\[
+G(S) = \sum_{p=1}^P DEFF_p = \sum_{p=1}^P \frac{1}{S^2_{x_p}}\sum_{h=1}^H W_h S^2_{x_{hp}}
+\]</span></p>
+<p>Ante una estratificación pertinente, se esperaría que <span class="math inline">\(Var_{ST}(\bar x _p) &lt; Var_{SI}(\bar x _p)\)</span>, por lo tanto <span class="math inline">\(0 &lt; DEFF_p &lt; 1\)</span>, lo que conlleva a que <span class="math inline">\(0 &lt; F(S) &lt; P\)</span>. Luego, se debería escoger el escenario para el cual <span class="math inline">\(F(S)\)</span> fuera mínimo. Nótese que, para cada uno de los escenarios en estudio, es necesario fijar el número de estratos; en general se propende porque el número de grupos esté entre tres y cinco. Esta escogencia del número de grupos debe ser discutida al interior del INE con los equipos que determinan la rotación de las UPM en cada periodo de levantamiento de las encuestas de hogares. Escoger un número alto de estratos reducirá la varianza, pero a su vez puede tener repercusiones negativas en la logística de rotación del diseño de muestreo de las encuestas, haciendo que se agoten rápidamente las UPM dentro de los estratos geográficos y socioeconómicos. Por lo anterior, se recomienda restringir los escenarios de evaluación a la consideración de <span class="math inline">\(H=3\)</span> y <span class="math inline">\(H=4\)</span> estratos.</p>
+<p>El siguiente cuadro ejemplifica la evaluación de estas técnicas para dos escenarios de estratificación (tres y cuatro estratos) en una matriz de información que contiene 8 variables. De la tabla se puede deducir varias conclusiones interesantes. Por ejemplo, para el primer indicador, la mejor estratificación es DH con cuatro estratos; para el segundo indicador, la mejor estratificación es BB con cuatro estratos; mientras que para el último indicador, la mejor estratificación es LH con cuatro estratos. Como se puede notar, para cada indicador existirá un método que induzca una mayor eficiencia, pero que para otros indicadores puede ser deficiente. Esto claramente muestra que la estratificación con respecto a un solo indicador puede ser un procedimiento inadecuado. Por lo tanto, basados en este ejemplo, el mejor método sería DH con cuatro estratos puesto que induce una mayor eficiencia conjunta al reducir el efecto de diseño generalizado.</p>
+<table>
+<caption><em>Efectos de diseño <span class="math inline">\(DEFF_p\)</span> y efecto de diseño generalizado <span class="math inline">\(G(S)\)</span> considerando tres (<span class="math inline">\(H=3\)</span>) y cuatro (<span class="math inline">\(H=4\)</span>) estratos para ocho variables.</em></caption>
+<colgroup>
+<col width="7%" />
+<col width="6%" />
+<col width="8%" />
+<col width="7%" />
+<col width="7%" />
+<col width="8%" />
+<col width="7%" />
+<col width="6%" />
+<col width="8%" />
+<col width="7%" />
+<col width="7%" />
+<col width="8%" />
+<col width="7%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="right">DEFF</th>
+<th align="right">Q (H=3)</th>
+<th align="right">DH (H=3)</th>
+<th align="right">LH (H=3)</th>
+<th align="right">GH (H=3)</th>
+<th align="right">KmJ (H=3)</th>
+<th align="right">BB (H=3)</th>
+<th align="right">Q (H=4)</th>
+<th align="right">DH (H=4)</th>
+<th align="right">LH (H=4)</th>
+<th align="right">GH (H=4)</th>
+<th align="right">KmJ (H=4)</th>
+<th align="right">BB (H=4)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right"><span class="math inline">\(\bar x_1\)</span></td>
+<td align="right">0.87</td>
+<td align="right">0.85</td>
+<td align="right">0.81</td>
+<td align="right">0.82</td>
+<td align="right">1</td>
+<td align="right">0.88</td>
+<td align="right">0.8</td>
+<td align="right">0.70</td>
+<td align="right">0.76</td>
+<td align="right">0.72</td>
+<td align="right">0.71</td>
+<td align="right">0.77</td>
+</tr>
+<tr class="even">
+<td align="right"><span class="math inline">\(\bar x_2\)</span></td>
+<td align="right">0.89</td>
+<td align="right">0.82</td>
+<td align="right">0.95</td>
+<td align="right">0.97</td>
+<td align="right">0.94</td>
+<td align="right">0.88</td>
+<td align="right">0.79</td>
+<td align="right">0.74</td>
+<td align="right">0.75</td>
+<td align="right">0.77</td>
+<td align="right">0.75</td>
+<td align="right">0.71</td>
+</tr>
+<tr class="odd">
+<td align="right"><span class="math inline">\(\bar x_3\)</span></td>
+<td align="right">0.87</td>
+<td align="right">0.97</td>
+<td align="right">0.83</td>
+<td align="right">0.96</td>
+<td align="right">0.89</td>
+<td align="right">0.95</td>
+<td align="right">0.74</td>
+<td align="right">0.75</td>
+<td align="right">0.79</td>
+<td align="right">0.7</td>
+<td align="right">0.79</td>
+<td align="right">0.71</td>
+</tr>
+<tr class="even">
+<td align="right"><span class="math inline">\(\bar x_4\)</span></td>
+<td align="right">0.92</td>
+<td align="right">0.89</td>
+<td align="right">0.81</td>
+<td align="right">0.94</td>
+<td align="right">0.96</td>
+<td align="right">1</td>
+<td align="right">0.77</td>
+<td align="right">0.73</td>
+<td align="right">0.73</td>
+<td align="right">0.7</td>
+<td align="right">0.71</td>
+<td align="right">0.74</td>
+</tr>
+<tr class="odd">
+<td align="right"><span class="math inline">\(\bar x_5\)</span></td>
+<td align="right">0.85</td>
+<td align="right">0.83</td>
+<td align="right">0.96</td>
+<td align="right">0.96</td>
+<td align="right">0.83</td>
+<td align="right">0.81</td>
+<td align="right">0.8</td>
+<td align="right">0.73</td>
+<td align="right">0.8</td>
+<td align="right">0.78</td>
+<td align="right">0.8</td>
+<td align="right">0.79</td>
+</tr>
+<tr class="even">
+<td align="right"><span class="math inline">\(\bar x_6\)</span></td>
+<td align="right">0.87</td>
+<td align="right">0.88</td>
+<td align="right">0.9</td>
+<td align="right">0.88</td>
+<td align="right">0.86</td>
+<td align="right">0.81</td>
+<td align="right">0.8</td>
+<td align="right">0.72</td>
+<td align="right">0.76</td>
+<td align="right">0.7</td>
+<td align="right">0.74</td>
+<td align="right">0.73</td>
+</tr>
+<tr class="odd">
+<td align="right"><span class="math inline">\(\bar x_7\)</span></td>
+<td align="right">0.87</td>
+<td align="right">0.95</td>
+<td align="right">0.99</td>
+<td align="right">0.83</td>
+<td align="right">0.86</td>
+<td align="right">0.84</td>
+<td align="right">0.75</td>
+<td align="right">0.7</td>
+<td align="right">0.77</td>
+<td align="right">0.72</td>
+<td align="right">0.77</td>
+<td align="right">0.77</td>
+</tr>
+<tr class="even">
+<td align="right"><span class="math inline">\(\bar x_8\)</span></td>
+<td align="right">0.93</td>
+<td align="right">0.82</td>
+<td align="right">0.91</td>
+<td align="right">0.99</td>
+<td align="right">0.93</td>
+<td align="right">0.88</td>
+<td align="right">0.77</td>
+<td align="right">0.74</td>
+<td align="right">0.72</td>
+<td align="right">0.78</td>
+<td align="right">0.76</td>
+<td align="right">0.75</td>
+</tr>
+<tr class="odd">
+<td align="right">G(S)</td>
+<td align="right">7.07</td>
+<td align="right">7.01</td>
+<td align="right">7.16</td>
+<td align="right">7.35</td>
+<td align="right">7.27</td>
+<td align="right">7.05</td>
+<td align="right">6.22</td>
+<td align="right">5.81</td>
+<td align="right">6.08</td>
+<td align="right">5.87</td>
+<td align="right">6.03</td>
+<td align="right">5.97</td>
+</tr>
+</tbody>
+</table>
+<p>XXXXXXXXXXX
+XXXXXXXXXXX</p>
+<p>El INE de Chile culminó satisfactoriamente la estratificación del marco de muestreo 2017. Durante este proceso se consideraron más de 180 escenarios de estratificación junto con varias metodologías apropiadas y acordes tanto a la experiencia internacional como a la literatura especializada. Es importante aclarar que el proceso de estratificación del marco de muestreo tiene por objetivo coadyuvar a los equipos responsables de las estrategias de muestreo en la consecución de diseños de muestreo que induzcan una mayor eficiencia y precisión a la hora de la estimación de las estadísticas oficiales.</p>
+<p>De hecho, la propuesta de <span class="citation"><a href="#ref-Park_2003" role="doc-biblioref">Park</a> (<a href="#ref-Park_2003" role="doc-biblioref">2003</a>)</span> apunta en este mismo sentido, pues propone que el efecto de diseño de cualquier encuesta se puede descomponer en tres partes que se relacionan entre sí de forma multiplicativa. En primer lugar está el efecto debido a la ponderación desigual, <span class="math inline">\(deff^W\)</span>; en segundo lugar se encuentra el efecto debido a la estratificación, <span class="math inline">\(deff^S\)</span>; y por último se tiene el efecto debido al muestreo en varias etapas, <span class="math inline">\(deff^C\)</span>. Por lo tanto:</p>
+<p><span class="math display">\[
+DEFF = deff^W \times deff^S \times deff^C
+\]</span></p>
+<p>Al encontrar la mejor estratificación, el equipo del INE ha permitido que la segunda componente de esta descomposición sea mínima, en cuanto se han seguido los pasos necesarios para ello y se ha escogido la estratificación en tres particiones que aseguró un menor <span class="math inline">\(deff^S\)</span> para los indicadores estudiados. Ahora, cuando el marco se entregue al área de producción estadísticas, será tarea del INE asegurar que los efectos de diseño dados por el efecto de conglomeración y el uso del muestreo en varias etapas <span class="math inline">\(deff^C\)</span> sea mínimo, así como el efecto debido al uso de factores de ponderación desiguales, <span class="math inline">\(deff^W\)</span>. En el primer caso, se deberá estudiar, para cada encuesta y operación estadística que haga uso del marco de muestreo estratificado, la relación entre UPMs y hogares a la luz de los indicadores de interés; en particular, es necesario decidir cuántos hogares serán seleccionados en cada UPM y cuántas UPMs serán seleccionadas dentro de cada estrato. De la mima manera, en el segundo caso, también se debe decidir, a la luz de la correlación entre los indicadores particulares de cada encuesta de hogares, cuáles variables de control serán utilizadas en la calibración de los estimadores. De esta forma, en esta estrategia tripartita, se asegura que el efecto de diseño de una encuesta levantada por el INE sea pequeño.</p>
+<p>Por otro lado, los escenarios de estratificación que se consideraron tuvieron en cuenta la correlación con el ingreso modelado mediante una técnica de predicción que hizo uso de información auxiliar externa. Los resultados encontrados resaltan la congruencia de la estratificación con el comportamiento de esta variable ilustrativa. Por consiguiente, cabe resaltar esta innovación que seguramente redundará en mejores prácticas de validación, tanto para el INE como para la región. En este sentido, y tendiendo en cuenta que la predicción del ingreso no estuvo presente en la estratificación final, se puede concluir que la estrategia de partición es apropiada para resumir un constructo de poder adquisitivo sobre las UPMs, que al final está altamente correlacionado con la incidencia de los fenómenos sociales de interés, como la pobreza, las necesidades básicas insatisfechas, los patrones de consumo, el ingreso medio, la condición de ocupación, la incidencia de criminalidad y de violencia, los indicadores educativos, entre mucho otros.</p>
+<p>Finalmente, ante la rápida y evidente expansión demográfica, resulta apropiado que se realicen pruebas internas acerca del impacto de la actualización del marco de muestreo con el uso de registros administrativos (por ejemplo, de avalúos catastrales). En particular, se debe establecer la existencia de una relación incontrovertible entre el registro administrativo y las categorías de estratificación. Se alienta a los funcionarios del INE a que realicen las pruebas y ejercicios que permitan establecer la eventual viabilidad de estas estrategias de actualización, y su posterior utilización en el siguiente censo de población y vivienda. Asimismo, se aconseja que este marco se establezca en el corto plazo sin ninguna modificación y que los cambios y hallazgos que se evidencien en el levantamiento de las encuestas sean incorporados en los procesos de adjudicación de pesos de muestreo y no en la modificación de las probabilidades de inclusión de las UPMs dentro del marco.</p>
+
+</div>
+<!-- </div> -->
+<h3>Referencias</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-Gutierrez_2016" class="csl-entry">
+Gutiérrez, Hugo Andrés. 2016. <em>Estrategias de muestreo: diseño de encuestas y estimación de parámetros</em>. Segunda edición. Ediciones de la U.
+</div>
+<div id="ref-Jarque_1981" class="csl-entry">
+Jarque, Carlos M. 1981. <span>«A Solution to the Problem of Optimum Stratification in Multivariate Sampling»</span>. <em>Journal of the Royal Statistical Society. Series C (Applied Statistics)</em> 30 (2): 163-69. <a href="https://doi.org/10.2307/2346387">https://doi.org/10.2307/2346387</a>.
+</div>
+<div id="ref-Park_2003" class="csl-entry">
+Park, Inho. 2003. <span>«Design Effects and Survey Planning»</span>, 8.
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="metodologías-de-estratificación.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="referencias.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/psirusteam/HHS-Handbook/03Marcos.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Diseño y análisis de encuestas de hogares.pdf", "Diseño y análisis de encuestas de hogares.epub", "Diseño y análisis de encuestas de hogares.mobi"],
+"toc": {
+"collapse": "section"
+},
+"tconfig": null
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

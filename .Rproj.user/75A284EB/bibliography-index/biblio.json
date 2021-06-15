@@ -282,25 +282,6 @@
             "type": "book"
         },
         {
-            "author": [
-                {
-                    "family": "Kish",
-                    "given": "Leslie"
-                }
-            ],
-            "id": "Kish_1965",
-            "issued": {
-                "date-parts": [
-                    [
-                        1965
-                    ]
-                ]
-            },
-            "publisher": "John Wiley; Sons",
-            "title": "Survey sampling",
-            "type": "book"
-        },
-        {
             "DOI": "10.1198/tast.2009.0028",
             "ISSN": "0003-1305, 1537-2731",
             "author": [
@@ -2849,25 +2830,6 @@
         {
             "author": [
                 {
-                    "family": "Kish",
-                    "given": "Leslie"
-                }
-            ],
-            "id": "Kish_1965",
-            "issued": {
-                "date-parts": [
-                    [
-                        1965
-                    ]
-                ]
-            },
-            "publisher": "John Wiley; Sons",
-            "title": "Survey sampling",
-            "type": "book"
-        },
-        {
-            "author": [
-                {
                     "family": "Estevao",
                     "given": "Victor"
                 },
@@ -3301,29 +3263,6 @@
             "title": "On the stratification of skewed populations",
             "type": "article-journal",
             "volume": "14"
-        },
-        {
-            "ISBN": "978-958-762-586-8",
-            "author": [
-                {
-                    "family": "Gutiérrez",
-                    "given": "Hugo Andrés"
-                }
-            ],
-            "edition": "Segunda edición",
-            "id": "Gutierrez_2016",
-            "issued": {
-                "date-parts": [
-                    [
-                        2016
-                    ]
-                ]
-            },
-            "note": "Google-Books-ID: UlVmE5pkRwIC",
-            "publisher": "Ediciones de la U",
-            "title": "Estrategias de muestreo: Diseño de encuestas y estimación de parámetros",
-            "title-short": "Estrategias de muestreo",
-            "type": "book"
         },
         {
             "author": [
@@ -3804,25 +3743,6 @@
         {
             "author": [
                 {
-                    "family": "Park",
-                    "given": "Inho"
-                }
-            ],
-            "id": "Park_2003",
-            "issued": {
-                "date-parts": [
-                    [
-                        2003
-                    ]
-                ]
-            },
-            "page": "8",
-            "title": "Design effects and survey planning",
-            "type": "article-journal"
-        },
-        {
-            "author": [
-                {
                     "family": "West",
                     "given": "Brady T."
                 }
@@ -3932,25 +3852,6 @@
         {
             "author": [
                 {
-                    "family": "Kish",
-                    "given": "Leslie"
-                }
-            ],
-            "id": "Kish_1965",
-            "issued": {
-                "date-parts": [
-                    [
-                        1965
-                    ]
-                ]
-            },
-            "publisher": "John Wiley; Sons",
-            "title": "Survey sampling",
-            "type": "book"
-        },
-        {
-            "author": [
-                {
                     "family": "West",
                     "given": "Brady T."
                 },
@@ -3973,29 +3874,6 @@
             "title": "Incorporating complex sample design effects when only final survey weights are available",
             "type": "article-journal",
             "volume": "12"
-        },
-        {
-            "ISBN": "978-958-762-586-8",
-            "author": [
-                {
-                    "family": "Gutiérrez",
-                    "given": "Hugo Andrés"
-                }
-            ],
-            "edition": "Segunda edición",
-            "id": "Gutierrez_2016",
-            "issued": {
-                "date-parts": [
-                    [
-                        2016
-                    ]
-                ]
-            },
-            "note": "Google-Books-ID: UlVmE5pkRwIC",
-            "publisher": "Ediciones de la U",
-            "title": "Estrategias de muestreo: Diseño de encuestas y estimación de parámetros",
-            "title-short": "Estrategias de muestreo",
-            "type": "book"
         },
         {
             "ISBN": "978-0-387-35099-8",

@@ -8,8 +8,9 @@ rmd_files: [
   
   "01Intro.Rmd",
   "02Tipos.Rmd",
-  
-  "99Referencias.Rmd",
+  "03Marcos.Rmd",
+
+  "99Referencias.Rmd"
   ]
 
 language:
