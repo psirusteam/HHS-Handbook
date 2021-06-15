@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es" xml:lang="es">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2.4 Parámetros de interés | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
+  <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2.4 Parámetros de interés | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
+  <meta name="github-repo" content="psirusteam/HHS-Handbook" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2.4 Parámetros de interés | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
+  
+  <meta name="twitter:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
+  
+
+<meta name="author" content="Andrés Gutiérrez" />
+
+
+<meta name="date" content="2021-06-15" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="rotación-de-paneles.html"/>
+<link rel="next" href="referencias.html"/>
+<script src="libs/header-attrs-2.8/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Diseño y análisis de encuestas de hogares</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefacio</a></li>
+<li class="chapter" data-level="" data-path="resumen.html"><a href="resumen.html"><i class="fa fa-check"></i>Resumen</a></li>
+<li class="chapter" data-level="1" data-path="introducción.html"><a href="introducción.html"><i class="fa fa-check"></i><b>1</b> Introducción</a>
+<ul>
+<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html#objetivos-de-desarrollo-sostenible"><i class="fa fa-check"></i>Objetivos de Desarrollo Sostenible</a></li>
+<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html#mercado-de-trabajo"><i class="fa fa-check"></i>Mercado de Trabajo</a></li>
+<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html#ingresos-y-gastos"><i class="fa fa-check"></i>Ingresos y gastos</a></li>
+<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html#esquema-del-documento"><i class="fa fa-check"></i>Esquema del documento</a></li>
+</ul></li>
+<li class="part"><span><b>I Diseño estadístico de las encuestas de hogares</b></span></li>
+<li class="chapter" data-level="2" data-path="elementos-básicos-y-planeación.html"><a href="elementos-básicos-y-planeación.html"><i class="fa fa-check"></i><b>2</b> Elementos básicos y planeación</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="universo-muestra-y-unidades.html"><a href="universo-muestra-y-unidades.html"><i class="fa fa-check"></i><b>2.1</b> Universo, muestra y unidades</a></li>
+<li class="chapter" data-level="2.2" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html"><i class="fa fa-check"></i><b>2.2</b> Periodicidad en el tiempo</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-transversales"><i class="fa fa-check"></i><b>2.2.1</b> Encuestas transversales</a></li>
+<li class="chapter" data-level="2.2.2" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-repetidas"><i class="fa fa-check"></i><b>2.2.2</b> Encuestas repetidas</a></li>
+<li class="chapter" data-level="2.2.3" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-panel"><i class="fa fa-check"></i><b>2.2.3</b> Encuestas panel</a></li>
+<li class="chapter" data-level="2.2.4" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-de-panel-dividido"><i class="fa fa-check"></i><b>2.2.4</b> Encuestas de panel dividido</a></li>
+<li class="chapter" data-level="2.2.5" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-de-panel-rotativo"><i class="fa fa-check"></i><b>2.2.5</b> Encuestas de panel rotativo</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="rotación-de-paneles.html"><a href="rotación-de-paneles.html"><i class="fa fa-check"></i><b>2.3</b> Rotación de paneles</a></li>
+<li class="chapter" data-level="2.4" data-path="parámetros-de-interés.html"><a href="parámetros-de-interés.html"><i class="fa fa-check"></i><b>2.4</b> Parámetros de interés</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="parámetros-de-interés.html"><a href="parámetros-de-interés.html#ejemplos-de-indicadores-de-interés-y-su-relación-con-los-tipos-de-encuestas"><i class="fa fa-check"></i><b>2.4.1</b> Ejemplos de indicadores de interés y su relación con los tipos de encuestas</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
+<li class="divider"></li>
+<li><a Diseño y análisis de encuestas de hogares</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Diseño y análisis estadístico en las encuestas de hogares de América Latina</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="parámetros-de-interés" class="section level2" number="2.4">
+<h2><span class="header-section-number">2.4</span> Parámetros de interés</h2>
+<p>Las encuestas son usadas para producir estimaciones de parámetros que describen la situación de una población, respondiendo a los objetivos de la investigación. Por lo general, el conocimiento de la población a cualquier nivel está reflejado en forma de totales, o de funciones de totales. Es por esta razón que este documento se enfoca y profundiza en las características inferenciales de los totales, puesto que la generalización a otros parámetros es inmediata. De esta manera, un <strong>total poblacional</strong> se define como la suma de las observaciones de una variable de interés, notada como <span class="math inline">\(y\)</span>, en la población. Se calcula mediante la siguiente ecuación:</p>
+<p><span class="math display">\[t_y = \sum_{k \in U} y_k\]</span></p>
+<p>En donde <span class="math inline">\(U\)</span> hace referencia al universo de estudio, mientras que <span class="math inline">\(y_k\)</span> hace referencia a la variable de interés en el <span class="math inline">\(k\)</span>-ésimo individuo. Por ejemplo, en una investigación social se puede realizar una encuesta para estimar el total de gasto de los hogares de un país en productos específicos de comida y bebidas no alcohólicas. En este ejemplo, la población <span class="math inline">\(U\)</span> corresponde a los hogares, mientras que la variable <span class="math inline">\(y\)</span> corresponde al gasto en comida y bebidas no alcohólicas, que es observada en el <span class="math inline">\(k\)</span>-ésimo hogar, y notada como <span class="math inline">\(y_k\)</span>.</p>
+<p>Un caso particular de este parámetro es el <strong>tamaño poblacional</strong> que mide la cantidad de unidades que conforman una población y se denota como <span class="math inline">\(N\)</span>. Por lo general, este parámetro es regularmente conocido, o al menos se tiene una aproximación de esta cantidad. En una encuesta de hogares, este parámetro podría denotar el número de hogares en el país - el cual no es conocido literalmente, aunque sí se conocen aproximaciones (o proyecciones) a esta cantidad con base en los resultados de los censos de población y vivienda - o el número de habitantes del país - el cual tampoco es conocido exactamente, aunque sí se cuente con proyecciones poblacionales. Este parámetro también toma la forma de un total poblaciónal:</p>
+<p><span class="math display">\[N = \sum_{k \in U}1\]</span></p>
+<p>Tal vez el parámetro más relevante en la investigación social lo constituye el <strong>promedio poblacional</strong> que describe la cantidad que debería ser asignada a cada individuo de la población si hubiese una asignación equitativa de la variable de interés. De esta forma, el promedio se define como la suma de las observaciones de la variable en la población dividida por el tamaño poblacional <span class="math inline">\(N\)</span> y se calcula mediante la siguiente expresión:</p>
+<p><span class="math display">\[\bar{y}_U = \frac{t_y}{N}\]</span></p>
+<p>Por ejemplo, en una encuesta de hogares es posible estimar el ingreso medio de la población, definido como el total de los ingresos de todos los hogares del país dividido entre el número de habitantes del país. En este caso la variable de interés <span class="math inline">\(y\)</span> es el ingreso per cápita. De la misma forma, también se podría estimar el gasto promedio de los hogares en educación; en donde la variable de interés <span class="math inline">\(y\)</span> es el gasto de todos lo miembros del hogar en este concepto (sin importar la edad ni el nivel propedéutico) y <span class="math inline">\(N\)</span> sería el número de hogares del país.</p>
+<p>Un parámetro que es de particular interés es el <strong>tamaño absoluto de un dominio poblacional</strong> que mide la cantidad de unidades que conforman una subpoblación de interés <span class="math inline">\(U_d\)</span> y que se denota como <span class="math inline">\(N_d\)</span>. Por ejemplo, en las encuestas de fuerza laboral, es muy importante estimar con una alta precisión el número de personas que están desocupadas en un periodo de tiempo, y comparar su evolución a través del tiempo. En este caso, la subpoblación de interés, o dominio poblacional, estará definida por los desocupados. Nótese que este parámetro está definido como un total sobre una variable dicotómica <span class="math inline">\(z_{d_k}\)</span> que toma el valor de 1, si el <span class="math inline">\(k\)</span>-ésimo individuo tiene el atributo de interés y de 0, en otro caso. Este parámetro se calcula de la siguiente manera:</p>
+<p><span class="math display">\[N_d = \sum_{k \in U}z_{d_k} = \sum_{k \in U_d}1\]</span></p>
+<p>De la misma forma, la incidencia relativa de los fenómenos sociales sobre los hogares o personas puede ser medida a través de la <strong>proporción de un dominio poblacional</strong>. Por ejemplo, la proporción de personas en condición de pobreza o de pobreza extrema son proporciones sobre toda la población, en donde la variable de interés <span class="math inline">\(z_{d_k}\)</span> indica si el ingreso per cápita de un individuo es menor que la línea de pobreza; <span class="citation"><a href="#ref-CEPAL_2018" role="doc-biblioref">CEPAL</a> (<a href="#ref-CEPAL_2018" role="doc-biblioref">2018</a>)</span> presenta los pormenores metodológicos del cálculo de la pobreza en los países de América Latina y el Caribe. Este parámetro se calcula mediante la siguiente ecuación:</p>
+<p><span class="math display">\[P_d=\frac{N_d}{N}\]</span></p>
+<p>Finalmente, la <strong>razón poblacional</strong> se calcula como el cociente entre dos totales, el primer total <span class="math inline">\(t_y\)</span> asociado a una variable de interés <span class="math inline">\(y\)</span>, el segundo total <span class="math inline">\(t_x\)</span> asociado a una variable de interés <span class="math inline">\(x\)</span>. Por ejemplo, en la medición del mercado de trabajo, la tasa de desocupación es una razón entre el total de personas desocupadas y el total de personas activas. Nótese que para clasificar a una persona como desocupada, ocupada, activa o inactiva, es necesario realizar una indagación en la encuesta a cada uno de los miembros del hogar; por lo tanto ambas cantidades, numerador y denominador, corresponden a cantidades desconocidas de antemano. Es más, la condición de ocupación de las personas puede variar entre los periodos de observación. Este parámetro se calcula mediante la siguiente expresión:</p>
+<p><span class="math display">\[R_U=\frac{t_y}{t_z}\]</span></p>
+<p>En efecto, los indicadores de pobreza pueden expresarse como razones poblacionales; es el caso de la brecha de pobreza y de la incidencia de la pobreza expresada en términos de un umbral de poder adquisitivo <span class="citation">(<a href="#ref-Foster_Greer_Thorbecke_1984" role="doc-biblioref">Foster, Greer, y Thorbecke 1984</a>)</span>. Este tipo de indicadores complejos se pueden expresar mediante la siguiente relación</p>
+<p><span class="math display">\[
+F_{\alpha} = \frac{1}{N} \sum_U \left(\frac{u-y_k}{u}\right)^{\alpha}
+\]</span></p>
+<p>En donde <span class="math inline">\(y_k\)</span> determina el ingreso del individuo <span class="math inline">\(k\)</span>, <span class="math inline">\(u\)</span> se refiere al umbral que establece la línea de pobreza y <span class="math inline">\(\alpha \geq 0\)</span>. Por ejemplo, en el caso en el que <span class="math inline">\(\alpha = 0\)</span>, este indicador calcula la tasa de pobreza, que es la incidencia de este fenómeno en la población; si <span class="math inline">\(\alpha = 1\)</span>, este indicador calcula la brecha de la pobreza, que es la cantidad de dinero que se necesitaría en promedio para que un país no tuviera personas en situación de pobreza. Por último si <span class="math inline">\(\alpha = 2\)</span>, este indicador medirá la severidad de la pobreza, como una combinación entre la incidencia de la pobreza de los hogares, la brecha absoluta de ingreso de los hogares en situación de pobreza y la desigualdad de ingresos entre los hogares en situación de pobreza.</p>
+<p>En este punto vale la pena resaltar que, en la definición de los parámetros básicos que se quieren estimar en una encuesta, el papel de los totales poblacionales es absolutamente relevante. De igual manera, existen otros parámetros que pueden ser considerados complejos - no por su forma funcional, sino por los procesos complejos que hay detrás del levantamiento de la información primaria - pero que al igual que los mencionados anteriormente resultan ser también una función de totales poblacionales. Por ejemplo, considere el <strong>cambio neto</strong> de los totales de la variable de interés <span class="math inline">\(y\)</span> en dos periodos de tiempo (<span class="math inline">\(t_1\)</span> y <span class="math inline">\(t_2\)</span>) dado por la siguiente expresión:</p>
+<p><span class="math display">\[
+\Delta_y = t_{y}^2 - t_{y}^1
+\]</span></p>
+<p>Este tipo de parámetros son muy comunes en las encuestas que se realizan para conocer la estructura y los cambios del mercado de trabajo. Por ejemplo, la siguiente tabla muestra la composición del mercado de trabajo en una población observada en dos periodos de interés (las cifras están en millones). De esta forma, los totales marginales de la tabla corresponden a los <strong>cambios netos</strong> que permiten una comparación simple con el periodo anterior. Específicamente, es posible observar que hay 313 mil empleados menos, 80 mil desempleados menos y 393 mil inactivos más en el segundo periodo, en comparación al primero.</p>
+<table>
+<caption><em>Composición del mercado de trabajo en dos periodos de tiempo</em></caption>
+<thead>
+<tr class="header">
+<th align="center">Condición</th>
+<th align="center">Ocupado</th>
+<th align="center">Desocupado</th>
+<th align="center">Inactivo</th>
+<th align="center"><strong>Total</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Ocupado</td>
+<td align="center">9222</td>
+<td align="center">128</td>
+<td align="center">662</td>
+<td align="center"><strong>10012</strong></td>
+</tr>
+<tr class="even">
+<td align="center">Desocupado</td>
+<td align="center">221</td>
+<td align="center">322</td>
+<td align="center">151</td>
+<td align="center"><strong>694</strong></td>
+</tr>
+<tr class="odd">
+<td align="center">Inactivo</td>
+<td align="center">256</td>
+<td align="center">164</td>
+<td align="center">5941</td>
+<td align="center"><strong>6361</strong></td>
+</tr>
+<tr class="even">
+<td align="center"><strong>Total</strong></td>
+<td align="center"><strong>9699</strong></td>
+<td align="center"><strong>614</strong></td>
+<td align="center"><strong>6754</strong></td>
+<td align="center"><strong>17067</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Una comparación más profunda está dada en términos de los <strong>cambios brutos</strong>, que corresponden a las entradas de la tabla cruzada. De esta manera, los cambios en la fuerza de trabajo de un periodo a otro, se explican porque el 92.1%=(9222/10012)% de los empleados conservó su empleo; el 31.8% de los desempleados y el 4.0% de los inactivos consiguió un nuevo empleo; el 6.6% de los empleados es ahora inactivo en la fuerza laboral y el 1.3% de los empleados perdió su empleo. Así mismo, el 46.4% de los desempleados conservó su clasificación; el 1.3% de los empleados perdió su empleo y el 2.6% de los inactivos entró a la fuerza laboral como desempleado; el 31.8% de los desempleados es ahora empleado y el 21.8% de los desempleados es ahora inactivo.</p>
+<div id="ejemplos-de-indicadores-de-interés-y-su-relación-con-los-tipos-de-encuestas" class="section level3" number="2.4.1">
+<h3><span class="header-section-number">2.4.1</span> Ejemplos de indicadores de interés y su relación con los tipos de encuestas</h3>
+<p>En esta sección se relacionan algunos de los parámetros anteriormente mencionados con los tipos más comunes de encuestas. Estos ejemplos nos presentan algunas indicaciones del tipo de encuestas que se encuentran en América Latina y examinan el raciocinio detrás de estos levantamientos. Tomando en consideración las características generales de las encuesta de hogares, <span class="citation"><a href="#ref-Duncan_Kalton_1987" role="doc-biblioref">Duncan y Kalton</a> (<a href="#ref-Duncan_Kalton_1987" role="doc-biblioref">1987</a>)</span> mencionan las siguientes situaciones, ejemplificadas a continuación.</p>
+<ul>
+<li><p><strong>Estimación de parámetros poblacionales en un punto del tiempo</strong>. Por ejemplo, suponga que se quiere estimar el <em>ingreso per cápita promedio por área (rural - urbano) en las regiones de un país</em>. En este tipo de estudios, la encuestas aptas serían las transversales, las repetidas, las de panel rotativo y las de panel dividido. Nótese que las encuestas de panel puro no son aptas para estimar este parámetro puesto que la muestra no es representativa de la población en el momento actual, sino que, por el contrario, es representativa de la población en el momento en la cual se extrajo la muestra.</p></li>
+<li><p><strong>Estimación de cambios netos</strong>. Si se quisiera estimar la <em>diferencia en el número de ocupados de la fuerza de trabajo entre el segundo trimestre de 2021 y el primer trimestre de 2021 en un país</em>, entonces las encuestas aptas serían las repetidas, las de panel rotativo y las de panel dividido. Una encuesta transversal no sería apta para lograr esta estimación, puesto que su frecuencia de realización no es trimestral. De la misma forma que en el parámetro anterior, las encuestas de panel puro no son aptas para captar este parámetro puesto que la muestra no es representativa de la población en el momento actual.</p></li>
+<li><p><strong>Estimación de cambios brutos y componentes individuales</strong>. Para estimar el <em>porcentaje de personas ocupadas en el segundo trimestre de 2021 que estuvieron desocupadas en el primer trimestre de 2021 en un país</em> es necesario que la encuesta tenga algún patrón de selección de los mismos individuos en los dos periodos. De esta forma, las únicas encuestas aptas para estimar este tipo de cambios brutos son las de panel, panel rotativo y panel dividido. Las encuestas transversales o repetidas no podrían arrojar este tipo de estimativas puesto que su diseño no considera a los mismos individuos en la muestra en dos periodos de tiempo.</p></li>
+<li><p><strong>Estimación de la incidencia de eventos en un periodo de tiempo</strong>. Suponga que se quiere estimar la <em>proporción de mujeres que fueron víctimas de un evento de violencia en los últimos seis meses en un país</em>. En este caso todas las encuestas resultarían aptas mediante ligeras modificaciones en el diseño. Por ejemplo, la encuesta transversal debería preguntar de forma retrospectiva; las encuestas repetidas podrían ser agregadas en los últimos seis meses, las encuestas de tipo panel rotativo y divididas deberían preguntar en cada medición de los últimos seis meses por este evento.</p></li>
+<li><p><strong>Estimación de la incidencia de eventos raros en el tiempo</strong>. Por ejemplo, si se quisiera estimar la <em>proporción de personas con una enfermedad rara</em>, es posible que las encuestas transversales y de tipo panel no sean las más apropiadas En el primer caso, dado que el evento es raro por definición, los requerimientos de tamaño de muestra en una encuesta transversal sobrepasarían el presupuesto y los costos de una encuesta regular; en el segundo caso, además de las consideraciones anteriormente planteadas del tamaño de muestra, por la misma definición de evento raro, tampoco sería plausible que en el panel se presentaran estos eventos en los individuos a través del tiempo. Por otro lado, al agregar las encuestas repetidas, las de panel rotativas y la parte nueva del panel dividido, podría ser posible llegar al tamaño de muestra adecuado para poder captar esta incidencia de forma precisa y eficiente.</p></li>
+</ul>
+<p>Estos últimos ejemplos muestran la importancia de contar con procedimientos adecuados de acumulación de datos y encuestas a lo largo de un periodo de interés, por ejemplo de forma anual o semestral. La acumulación de datos genera una buena base inferencial para poder estimar todo tipo de parámetros en una ventana más amplia del tiempo. Es posible acumular datos eficientemente por medio de la agregación de encuestas repetidas. De esta forma se definiría una agregación de datos vertical que añade filas, puesto que en cada levantamiento aparecen nuevos individuos, dado que el diseño de las encuestas repetidas selecciona diferentes individuos en cada punto del tiempo. Este es el caso de la <em>Gran Encuesta Integrada de Hogares de Colombia</em> que está diseñada para tener representatividad a niveles de desagregación mayores, juntando los individuos observados en los doce levantamientos continuos en un año.</p>
+<p>Por otro lado, las encuestas de panel permiten un tipo diferente de agregación, no basado en individuos, sino en variables en el tiempo. A diferencia de las encuestas repetidas, las encuestas de panel, panel rotativo o panel dividido permiten observar a los individuos en diferentes periodos de tiempo y la agregación puede hacerse de forma horizontal, manteniendo a los individuos en las filas y añadiendo columnas cada vez que se observe una nueva medición en un periodo de tiempo diferente.</p>
+
+</div>
+</div>
+<!-- </div> -->
+<h3>Referencias</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-CEPAL_2018" class="csl-entry">
+CEPAL. 2018. <em>Medición de la pobreza por ingresos - Actualización metodológica y resultados</em>. Metodologías de la CEPAL. <a href="http://repositorio.cepal.org/bitstream/handle/11362/44314/1/S1800852_es.pdf">http://repositorio.cepal.org/bitstream/handle/11362/44314/1/S1800852_es.pdf</a>.
+</div>
+<div id="ref-Duncan_Kalton_1987" class="csl-entry">
+Duncan, G. J., y G. Kalton. 1987. <span>«Issues of Design and Analysis of Surveys across Time»</span>. <em>International Statistical Review / Revue Internationale de Statistique</em> 55 (1): 97. <a href="https://doi.org/10.2307/1403273">https://doi.org/10.2307/1403273</a>.
+</div>
+<div id="ref-Foster_Greer_Thorbecke_1984" class="csl-entry">
+Foster, James, Joel Greer, y Erik Thorbecke. 1984. <span>«A Class of Decomposable Poverty Measures»</span>. <em>Econometrica</em> 52 (3): 761-66. <a href="https://doi.org/10.2307/1913475">https://doi.org/10.2307/1913475</a>.
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="rotación-de-paneles.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="referencias.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/psirusteam/HHS-Handbook/02Tipos.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Diseño y análisis de encuestas de hogares.pdf", "Diseño y análisis de encuestas de hogares.epub", "Diseño y análisis de encuestas de hogares.mobi"],
+"toc": {
+"collapse": "section"
+},
+"tconfig": null
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

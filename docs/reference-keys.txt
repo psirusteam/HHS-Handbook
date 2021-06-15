@@ -1,3 +1,14 @@
 fig:unnamed-chunk-1
 fig:esquema
 introducción
+elementos-básicos-y-planeación
+universo-muestra-y-unidades
+periodicidad-en-el-tiempo
+encuestas-transversales
+encuestas-repetidas
+encuestas-panel
+encuestas-de-panel-dividido
+encuestas-de-panel-rotativo
+rotación-de-paneles
+parámetros-de-interés
+ejemplos-de-indicadores-de-interés-y-su-relación-con-los-tipos-de-encuestas

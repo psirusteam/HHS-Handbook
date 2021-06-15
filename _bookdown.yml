@@ -7,6 +7,7 @@ rmd_files: [
   "index.Rmd",
   
   "01Intro.Rmd",
+  "02Tipos.Rmd",
   
   "99Referencias.Rmd",
   ]

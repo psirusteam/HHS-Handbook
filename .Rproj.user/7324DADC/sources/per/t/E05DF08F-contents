@@ -25,6 +25,7 @@ output:
     css: "style.css"
 # Compilar así:
 # bookdown::render_book("index.Rmd", "bookdown::pdf_book")
+# bookdown::render_book("index.Rmd", "bookdown::epub_book")
 # bookdown::render_book("index.Rmd", "bookdown::word_document2")
 # bookdown::preview_chapter("01.Rmd", "bookdown::word_document2")
 ---
@@ -48,6 +49,12 @@ thematic_on(
 
 # Prefacio {-}
 
-![Creative Commons License](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.png)
+
+```{r results = 'asis', out.width="100px", fig.cap="Licencia de Creative Commons", echo=FALSE}
+download.file(url = "https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.png",
+          destfile = "Pics/CClicence.png",
+          mode = 'wb')
+knitr::include_graphics(path = "Pics/CClicence.png")
+```
 
 La versión online de este libro está licenciada bajo una [Licencia Internacional de Creative Commons para compartir con atribución no comercial 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/). 

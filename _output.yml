@@ -1,5 +1,5 @@
 bookdown::gitbook:
-  split_by: chapter
+  split_by: section
   split_bib: yes
   dev: svglite
   css: style.css
