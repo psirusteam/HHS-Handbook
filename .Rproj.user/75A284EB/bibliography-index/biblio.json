@@ -337,39 +337,6 @@
             "type": "book"
         },
         {
-            "DOI": "10.15332/s2027-3355.2016.0001.06",
-            "ISSN": "2027-3355",
-            "author": [
-                {
-                    "family": "Gutiérrez",
-                    "given": "Andrés"
-                },
-                {
-                    "family": "Zhang",
-                    "given": "Hanwen"
-                },
-                {
-                    "family": "Montaño",
-                    "given": "Cristian"
-                }
-            ],
-            "container-title": "Comunicaciones en Estadística",
-            "id": "Gutierrez_Zhang_Montano_2016",
-            "issue": "1",
-            "issued": {
-                "date-parts": [
-                    [
-                        2016,
-                        6
-                    ]
-                ]
-            },
-            "page": "109",
-            "title": "Calculo del tamaño de muestra para la estimación de una varianza en poblaciones finitas con funciones en r",
-            "type": "article-journal",
-            "volume": "9"
-        },
-        {
             "author": [
                 {
                     "family": "Valliant",

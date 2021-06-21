@@ -9,6 +9,7 @@ rmd_files: [
   "01Intro.Rmd",
   "02Tipos.Rmd",
   "03Marcos.Rmd",
+  "04Estratificar.Rmd",
 
   "99Referencias.Rmd"
   ]
