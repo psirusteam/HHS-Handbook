@@ -37,10 +37,7 @@ $$
 
 Nótese que se esperaría que esta variable de resumen, al estar definida como una medida de bienestar sobre las UPM, tuviera un comportamiento sesgado, tal como se puede observar en la siguiente figura.
 
-<div class="figure">
-<img src="04Estratificar_files/figure-html/unnamed-chunk-1-1.svg" alt="*Histograma de la medida de resumen (y) sobre las UPM*" width="672" />
-<p class="caption">(\#fig:unnamed-chunk-1)*Histograma de la medida de resumen (y) sobre las UPM*</p>
-</div>
+![(\#fig:unnamed-chunk-1)*Histograma de la medida de resumen (y) sobre las UPM*](04Estratificar_files/figure-latex/unnamed-chunk-1-1.pdf) 
 
 En particular, el INE de Chile ha realizado un valioso estudio de modelación del *ingreso autónomo* con algunos indicadores homologados, disponibles en la encuesta CASEN y haciendo uso de la técnica de *random forest*. Con base en este modelo, es posible determinar una predicción del ingreso total de los hogares en el censo. Es posible considerar a este *ingreso autónomo imputado* como una medida de resumen del bienestar de la UPM y realizar los mismos análisis de estratificación sobre esta predicción. Para que este escenario sea comparable con los demás, este modelo debe volver a ajustarse teniendo en cuenta exactamente las mismas variables incluidas en la matriz de información. Además, valdría la pena volver a preguntarse si esta componente del ingreso es la que mejor resumiría el bienestar de las UPM. 
 
