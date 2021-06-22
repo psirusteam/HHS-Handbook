@@ -6,6 +6,7 @@ Para aumentar la eficiencia de la inferencia en las encuestas de hogares, es de 
 Luego de definir las UPM en el marco de muestreo es necesario realizar una agrupación de estas de acuerdo con sus características sociodemográficas agregadas con el fin de obtener una partición que conforme grupos homogéneos, que induzcan una mayor precisión en la ejecución de las estrategias de muestreo que se propongan dentro de la planificación de las encuestas de hogares que realizan los INE. Es importante señalar que se debe estudiar una multitud de escenarios de estratificación y para encontrar una óptima clasificación de las unidades primarias de muestreo, puesto que esta partición será utilizada en todas las encuestas de hogares que utilicen este marco de muestreo en el periodo intercensal. 
 
 En síntesis, los procesos que intervienen en la estratificación del marco de muestreo son los siguientes:
+
 1.	Ejecución de múltiples escenarios de estratificación de las UPM utilizando información agregada del censo^[Aunque también es posible añadir información geoespacial, catastral o de cualquier índole si se tiene una cobertura completa a nivel de las UPM.]. 
 2.	Para cada método señalado anteriormente realizar particiones de 3, 4, o 5 grupos en las áreas rural y urbana de forma independiente. 
 3.	A raíz de las pruebas y los escenarios ejecutados, evaluar su efectividad mediante una única medida de calidad, definida como el DEFF generalizado y escoger el mejor escenario en términos de la metodología y del número de particiones.
