@@ -35,8 +35,11 @@ output:
 # Prefacio {-}
 
 
-\begin{figure}
-\includegraphics[width=100px]{Pics/CClicence} \caption{Licencia de Creative Commons}(\#fig:unnamed-chunk-1)
-\end{figure}
+<div class="figure">
+<img src="Pics/CClicence.png" alt="Licencia de Creative Commons" width="100px" />
+<p class="caption">(\#fig:unnamed-chunk-1)Licencia de Creative Commons</p>
+</div>
 
 La versión online de este libro está licenciada bajo una [Licencia Internacional de Creative Commons para compartir con atribución no comercial 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/). 
+
+Este libro es el resultado de un compendio de las experiencias internacionales prácticas adquiridas por el autor como Asesor Regional en Estadísticas Sociales de la CEPAL.

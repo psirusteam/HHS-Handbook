@@ -528,3 +528,20 @@ La estratificación implícita es usada cuando la encuesta está enfocada en un 
 Aunque la estratificación implícita permite acotar el sesgo generado por la ausencia de respuesta de las UPM, @Vehovar_1999[págs. 348 - 349] advierte que se debe tener precaución en cuanto a los usos de esta práctica puesto que también puede conllevar sesgos importantes en las estimaciones de interés. Lo anterior se desprende del hecho de que los individuos ubicados en zonas donde sí es posible acceder diferirán significativamente de aquellos individuos ubicados en las zonas de difícil acceso; es evidente que se trata de dos realidades diferentes. Por esta razón es útil que, después de haber valorado los posibles sesgos, si se ha tomado la determinación de realizar las sustituciones sobre las UPM de difícil acceso, se realice un seguimiento exhaustivo en cada levantamiento que permita clasificar el esquema de recolección de información primaria y se valore su impacto en la precisión de los estimadores resultantes. 
 
 ## Evaluación de la precisión en el diseño de muestreo
+
+## Efecto de la estratificación en las estrategias de muestreo
+
+De hecho, la propuesta de @Park_2003 apunta en este mismo sentido, pues propone que el efecto de diseño de cualquier encuesta se puede descomponer en tres partes que se relacionan entre sí de forma multiplicativa. En primer lugar está el efecto debido a la ponderación desigual, $deff^W$; en segundo lugar se encuentra el efecto debido a la estratificación, $deff^S$; y por último se tiene el efecto debido al muestreo en varias etapas, $deff^C$. Por lo tanto:
+
+$$
+DEFF = deff^W \times deff^S \times deff^C
+$$
+
+Al encontrar la mejor estratificación, el equipo del INE ha permitido que la segunda componente de esta descomposición sea mínima, en cuanto se han seguido los pasos necesarios para ello y se ha escogido la estratificación en tres particiones que aseguró un menor $deff^S$ para los indicadores estudiados. Ahora, cuando el marco se entregue al área de producción estadísticas, será tarea del INE asegurar que los efectos de diseño dados por el efecto de conglomeración y el uso del muestreo en varias etapas $deff^C$ sea mínimo, así como el efecto debido al uso de factores de ponderación desiguales, $deff^W$. En el primer caso, se deberá estudiar, para cada encuesta y operación estadística que haga uso del marco de muestreo estratificado, la relación entre UPMs y hogares a la luz de los indicadores de interés; en particular, es necesario decidir cuántos hogares serán seleccionados en cada UPM y cuántas UPMs serán seleccionadas dentro de cada estrato. De la mima manera, en el segundo caso, también se debe decidir, a la luz de la correlación entre los indicadores particulares de cada encuesta de hogares, cuáles variables de control serán utilizadas en la calibración de los estimadores. De esta forma, en esta estrategia tripartita, se asegura que el efecto de diseño de una encuesta levantada por el INE sea pequeño. 
+
+
+
+
+
+
+

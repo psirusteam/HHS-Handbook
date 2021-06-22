@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  22 JUN 2021 11:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  22 JUN 2021 13:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -599,49 +599,49 @@ LaTeX Info: Redefining \% on input line 127.
 [8
 
 ]
-<Pics/CClicence.png, id=115, 97.0827pt x 33.9669pt>
+<Pics/CClicence.png, id=128, 97.0827pt x 33.9669pt>
 File: Pics/CClicence.png Graphic file (type png)
 <use Pics/CClicence.png>
 Package pdftex.def Info: Pics/CClicence.png  used on input line 131.
 (pdftex.def)             Requested size: 97.08688pt x 33.96835pt.
 [9 <./Pics/CClicence.png>]
-LaTeX Info: Redefining \. on input line 137.
-LaTeX Info: Redefining \% on input line 137.
+LaTeX Info: Redefining \. on input line 139.
+LaTeX Info: Redefining \% on input line 139.
 [10
 
 ] [11]
-LaTeX Info: Redefining \. on input line 145.
-LaTeX Info: Redefining \% on input line 145.
+LaTeX Info: Redefining \. on input line 147.
+LaTeX Info: Redefining \% on input line 147.
 [12
 
 ]
 Cap\'{\i }tulo 1.
 [13]
-LaTeX Info: Redefining \. on input line 183.
-LaTeX Info: Redefining \% on input line 183.
+LaTeX Info: Redefining \. on input line 185.
+LaTeX Info: Redefining \% on input line 185.
 [14] [15]
-LaTeX Info: Redefining \. on input line 218.
-LaTeX Info: Redefining \% on input line 218.
+LaTeX Info: Redefining \. on input line 220.
+LaTeX Info: Redefining \% on input line 220.
 [16]
-<Pics/Intro.png, id=202, 1325.95375pt x 1308.89pt>
+<Pics/Intro.png, id=215, 1325.95375pt x 1308.89pt>
 File: Pics/Intro.png Graphic file (type png)
 <use Pics/Intro.png>
-Package pdftex.def Info: Pics/Intro.png  used on input line 226.
+Package pdftex.def Info: Pics/Intro.png  used on input line 228.
 (pdftex.def)             Requested size: 557.1598pt x 549.98969pt.
 
-Overfull \hbox (212.1598pt too wide) in paragraph at lines 226--226
+Overfull \hbox (212.1598pt too wide) in paragraph at lines 228--228
 [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 35.93411pt on input line 227.
+LaTeX Warning: Float too large for page by 35.93411pt on input line 229.
 
 [17]
-LaTeX Info: Redefining \. on input line 230.
-LaTeX Info: Redefining \% on input line 230.
+LaTeX Info: Redefining \. on input line 232.
+LaTeX Info: Redefining \% on input line 232.
 [18 <./Pics/Intro.png>] [19]
-LaTeX Info: Redefining \. on input line 234.
-LaTeX Info: Redefining \% on input line 234.
+LaTeX Info: Redefining \. on input line 236.
+LaTeX Info: Redefining \% on input line 236.
 [20
 
 ] [21] [22]
@@ -649,481 +649,525 @@ Cap\'{\i }tulo 2.
 [23
 
 ]
-LaTeX Info: Redefining \. on input line 256.
-LaTeX Info: Redefining \% on input line 256.
+LaTeX Info: Redefining \. on input line 258.
+LaTeX Info: Redefining \% on input line 258.
 [24]
-LaTeX Info: Redefining \. on input line 265.
-LaTeX Info: Redefining \% on input line 265.
+LaTeX Info: Redefining \. on input line 267.
+LaTeX Info: Redefining \% on input line 267.
 [25]
-Overfull \hbox (14.58044pt too wide) in alignment at lines 266--271
+Overfull \hbox (14.58044pt too wide) in alignment at lines 268--273
  [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (14.58044pt too wide) in alignment at lines 271--275
+Overfull \hbox (14.58044pt too wide) in alignment at lines 273--277
  [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (14.58044pt too wide) in alignment at lines 275--283
+Overfull \hbox (14.58044pt too wide) in alignment at lines 277--285
  [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (14.58044pt too wide) in alignment at lines 290--295
+Overfull \hbox (14.58044pt too wide) in alignment at lines 292--297
  [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (14.58044pt too wide) in alignment at lines 295--299
+Overfull \hbox (14.58044pt too wide) in alignment at lines 297--301
  [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (14.58044pt too wide) in alignment at lines 299--307
+Overfull \hbox (14.58044pt too wide) in alignment at lines 301--309
  [] [] [] [] [] [] [] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 313.
-LaTeX Info: Redefining \% on input line 313.
+LaTeX Info: Redefining \. on input line 315.
+LaTeX Info: Redefining \% on input line 315.
 [26]
-Overfull \hbox (14.58044pt too wide) in alignment at lines 314--319
+Overfull \hbox (14.58044pt too wide) in alignment at lines 316--321
  [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (14.58044pt too wide) in alignment at lines 319--323
+Overfull \hbox (14.58044pt too wide) in alignment at lines 321--325
  [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (14.58044pt too wide) in alignment at lines 323--331
+Overfull \hbox (14.58044pt too wide) in alignment at lines 325--333
  [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (14.58044pt too wide) in alignment at lines 338--343
+Overfull \hbox (14.58044pt too wide) in alignment at lines 340--345
  [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (14.58044pt too wide) in alignment at lines 343--347
+Overfull \hbox (14.58044pt too wide) in alignment at lines 345--349
  [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (14.58044pt too wide) in alignment at lines 347--356
+Overfull \hbox (14.58044pt too wide) in alignment at lines 349--358
  [] [] [] [] [] [] [] 
  []
 
-LaTeX Info: Redefining \. on input line 356.
-LaTeX Info: Redefining \% on input line 356.
+LaTeX Info: Redefining \. on input line 358.
+LaTeX Info: Redefining \% on input line 358.
 [27]
-Overfull \hbox (14.58044pt too wide) in alignment at lines 363--368
+Overfull \hbox (14.58044pt too wide) in alignment at lines 365--370
  [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (14.58044pt too wide) in alignment at lines 368--372
+Overfull \hbox (14.58044pt too wide) in alignment at lines 370--374
  [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (14.58044pt too wide) in alignment at lines 372--382
+Overfull \hbox (14.58044pt too wide) in alignment at lines 374--384
  [] [] [] [] [] [] [] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 388.
-LaTeX Info: Redefining \% on input line 388.
+LaTeX Info: Redefining \. on input line 390.
+LaTeX Info: Redefining \% on input line 390.
 [28]
-LaTeX Info: Redefining \. on input line 426.
-LaTeX Info: Redefining \% on input line 426.
+LaTeX Info: Redefining \. on input line 428.
+LaTeX Info: Redefining \% on input line 428.
 [29]
-LaTeX Info: Redefining \. on input line 457.
-LaTeX Info: Redefining \% on input line 457.
+LaTeX Info: Redefining \. on input line 459.
+LaTeX Info: Redefining \% on input line 459.
 [30]
-LaTeX Info: Redefining \. on input line 467.
-LaTeX Info: Redefining \% on input line 467.
+LaTeX Info: Redefining \. on input line 469.
+LaTeX Info: Redefining \% on input line 469.
 [31]
-LaTeX Info: Redefining \. on input line 481.
-LaTeX Info: Redefining \% on input line 481.
+LaTeX Info: Redefining \. on input line 483.
+LaTeX Info: Redefining \% on input line 483.
 [32]
-LaTeX Info: Redefining \. on input line 492.
-LaTeX Info: Redefining \% on input line 492.
+LaTeX Info: Redefining \. on input line 494.
+LaTeX Info: Redefining \% on input line 494.
 [33]
-LaTeX Info: Redefining \. on input line 525.
-LaTeX Info: Redefining \% on input line 525.
+LaTeX Info: Redefining \. on input line 527.
+LaTeX Info: Redefining \% on input line 527.
 [34]
-LaTeX Info: Redefining \. on input line 540.
-LaTeX Info: Redefining \% on input line 540.
+LaTeX Info: Redefining \. on input line 542.
+LaTeX Info: Redefining \% on input line 542.
 [35]
-LaTeX Info: Redefining \. on input line 548.
-LaTeX Info: Redefining \% on input line 548.
+LaTeX Info: Redefining \. on input line 550.
+LaTeX Info: Redefining \% on input line 550.
 [36]
-LaTeX Info: Redefining \. on input line 552.
-LaTeX Info: Redefining \% on input line 552.
+LaTeX Info: Redefining \. on input line 554.
+LaTeX Info: Redefining \% on input line 554.
 [37]
-LaTeX Info: Redefining \. on input line 552.
-LaTeX Info: Redefining \% on input line 552.
+LaTeX Info: Redefining \. on input line 554.
+LaTeX Info: Redefining \% on input line 554.
 [38
 
 ]
 Cap\'{\i }tulo 3.
 [39]
-LaTeX Info: Redefining \. on input line 586.
-LaTeX Info: Redefining \% on input line 586.
+LaTeX Info: Redefining \. on input line 588.
+LaTeX Info: Redefining \% on input line 588.
 [40]
-LaTeX Info: Redefining \. on input line 614.
-LaTeX Info: Redefining \% on input line 614.
+LaTeX Info: Redefining \. on input line 616.
+LaTeX Info: Redefining \% on input line 616.
 [41]
 Underfull \vbox (badness 1337) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 623.
-LaTeX Info: Redefining \% on input line 623.
+LaTeX Info: Redefining \. on input line 625.
+LaTeX Info: Redefining \% on input line 625.
 [42]
-LaTeX Info: Redefining \. on input line 629.
-LaTeX Info: Redefining \% on input line 629.
+LaTeX Info: Redefining \. on input line 631.
+LaTeX Info: Redefining \% on input line 631.
 [43]
-LaTeX Info: Redefining \. on input line 633.
-LaTeX Info: Redefining \% on input line 633.
+LaTeX Info: Redefining \. on input line 635.
+LaTeX Info: Redefining \% on input line 635.
 [44]
-LaTeX Info: Redefining \. on input line 654.
-LaTeX Info: Redefining \% on input line 654.
+LaTeX Info: Redefining \. on input line 656.
+LaTeX Info: Redefining \% on input line 656.
 [45]
-LaTeX Info: Redefining \. on input line 668.
-LaTeX Info: Redefining \% on input line 668.
+LaTeX Info: Redefining \. on input line 670.
+LaTeX Info: Redefining \% on input line 670.
 [46]
-LaTeX Info: Redefining \. on input line 695.
-LaTeX Info: Redefining \% on input line 695.
+LaTeX Info: Redefining \. on input line 697.
+LaTeX Info: Redefining \% on input line 697.
 [47]
-LaTeX Info: Redefining \. on input line 708.
-LaTeX Info: Redefining \% on input line 708.
+LaTeX Info: Redefining \. on input line 710.
+LaTeX Info: Redefining \% on input line 710.
 [48]
 Cap\'{\i }tulo 4.
+
+Underfull \vbox (badness 1960) has occurred while \output is active []
+
 [49
 
 ]
-LaTeX Info: Redefining \. on input line 737.
-LaTeX Info: Redefining \% on input line 737.
+LaTeX Info: Redefining \. on input line 731.
+LaTeX Info: Redefining \% on input line 731.
 [50]
+LaTeX Info: Redefining \. on input line 747.
+LaTeX Info: Redefining \% on input line 747.
+[51]
+LaTeX Info: Redefining \. on input line 771.
+LaTeX Info: Redefining \% on input line 771.
+[52]
+LaTeX Info: Redefining \. on input line 780.
+LaTeX Info: Redefining \% on input line 780.
+[53]
+LaTeX Info: Redefining \. on input line 791.
+LaTeX Info: Redefining \% on input line 791.
+[54]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 7
-41.
+91.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [51]
-<04Estratificar_files/figure-latex/unnamed-chunk-1-1.pdf, id=460, 422.57875pt x
+)
+<04Estratificar_files/figure-latex/unnamed-chunk-1-1.pdf, id=486, 422.57875pt x
  174.6525pt>
 File: 04Estratificar_files/figure-latex/unnamed-chunk-1-1.pdf Graphic file (typ
 e pdf)
 <use 04Estratificar_files/figure-latex/unnamed-chunk-1-1.pdf>
 Package pdftex.def Info: 04Estratificar_files/figure-latex/unnamed-chunk-1-1.pd
-f  used on input line 758.
+f  used on input line 808.
 (pdftex.def)             Requested size: 345.00798pt x 142.59236pt.
-LaTeX Info: Redefining \. on input line 763.
-LaTeX Info: Redefining \% on input line 763.
-[52 <./04Estratificar_files/figure-latex/unnamed-chunk-1-1.pdf>] [53]
-Underfull \vbox (badness 1122) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 809.
-LaTeX Info: Redefining \% on input line 809.
-[54]
-LaTeX Info: Redefining \. on input line 827.
-LaTeX Info: Redefining \% on input line 827.
+LaTeX Info: Redefining \. on input line 810.
+LaTeX Info: Redefining \% on input line 810.
 [55]
-Overfull \hbox (6.81096pt too wide) in paragraph at lines 848--848
+LaTeX Info: Redefining \. on input line 835.
+LaTeX Info: Redefining \% on input line 835.
+[56 <./04Estratificar_files/figure-latex/unnamed-chunk-1-1.pdf>]
+LaTeX Info: Redefining \. on input line 864.
+LaTeX Info: Redefining \% on input line 864.
+
+Overfull \hbox (45.20146pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/10 IV.  METODOLOG�AS MULTIVARIADAS SOBRE LA MATRIZ DE INFORMACI�N 
+\T1/lmr/m/n/10 57
+ []
+
+[57]
+LaTeX Info: Redefining \. on input line 881.
+LaTeX Info: Redefining \% on input line 881.
+[58]
+Overfull \hbox (6.81096pt too wide) in paragraph at lines 908--908
  []|\T1/lmr/m/n/8 (-20) DEFF|
  []
 
 
-Overfull \hbox (8.29655pt too wide) in paragraph at lines 848--848
+Overfull \hbox (8.29655pt too wide) in paragraph at lines 908--908
  \T1/lmr/m/n/8 (-20) (H=3)|
  []
 
 
-Overfull \hbox (6.28766pt too wide) in paragraph at lines 848--848
+Overfull \hbox (6.28766pt too wide) in paragraph at lines 908--908
  \T1/lmr/m/n/8 (-20) (H=3)|
  []
 
 
-Overfull \hbox (6.28766pt too wide) in paragraph at lines 848--848
+Overfull \hbox (6.28766pt too wide) in paragraph at lines 908--908
  \T1/lmr/m/n/8 (-20) (H=3)|
  []
 
 
-Overfull \hbox (6.28766pt too wide) in paragraph at lines 848--848
+Overfull \hbox (6.28766pt too wide) in paragraph at lines 908--908
  \T1/lmr/m/n/8 (-20) (H=3)|
  []
 
 
-Overfull \hbox (1.60912pt too wide) in paragraph at lines 848--848
+Overfull \hbox (1.60912pt too wide) in paragraph at lines 908--908
  []|\T1/lmr/m/n/8 (-20) KmJ
  []
 
 
-Overfull \hbox (6.28766pt too wide) in paragraph at lines 848--848
+Overfull \hbox (6.28766pt too wide) in paragraph at lines 908--908
  \T1/lmr/m/n/8 (-20) (H=3)|
  []
 
 
-Overfull \hbox (6.28766pt too wide) in paragraph at lines 848--848
+Overfull \hbox (6.28766pt too wide) in paragraph at lines 908--908
  \T1/lmr/m/n/8 (-20) (H=3)|
  []
 
 
-Overfull \hbox (8.29655pt too wide) in paragraph at lines 848--848
+Overfull \hbox (8.29655pt too wide) in paragraph at lines 908--908
  \T1/lmr/m/n/8 (-20) (H=4)|
  []
 
 
-Overfull \hbox (6.28766pt too wide) in paragraph at lines 848--848
+Overfull \hbox (6.28766pt too wide) in paragraph at lines 908--908
  \T1/lmr/m/n/8 (-20) (H=4)|
  []
 
 
-Overfull \hbox (6.28766pt too wide) in paragraph at lines 848--848
+Overfull \hbox (6.28766pt too wide) in paragraph at lines 908--908
  \T1/lmr/m/n/8 (-20) (H=4)|
  []
 
 
-Overfull \hbox (6.28766pt too wide) in paragraph at lines 848--848
+Overfull \hbox (6.28766pt too wide) in paragraph at lines 908--908
  \T1/lmr/m/n/8 (-20) (H=4)|
  []
 
 
-Overfull \hbox (1.60912pt too wide) in paragraph at lines 848--848
+Overfull \hbox (1.60912pt too wide) in paragraph at lines 908--908
  []|\T1/lmr/m/n/8 (-20) KmJ
  []
 
 
-Overfull \hbox (6.28766pt too wide) in paragraph at lines 848--848
+Overfull \hbox (6.28766pt too wide) in paragraph at lines 908--908
  \T1/lmr/m/n/8 (-20) (H=4)|
  []
 
 
-Overfull \hbox (6.28766pt too wide) in paragraph at lines 848--849
+Overfull \hbox (6.28766pt too wide) in paragraph at lines 908--909
  \T1/lmr/m/n/8 (-20) (H=4)|
  []
 
 
-Overfull \hbox (4.027pt too wide) in alignment at lines 845--850
+Overfull \hbox (4.027pt too wide) in alignment at lines 905--910
  [] [] [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (6.81096pt too wide) in paragraph at lines 852--852
+Overfull \hbox (6.81096pt too wide) in paragraph at lines 912--912
  []|\T1/lmr/m/n/8 (-20) DEFF|
  []
 
 
-Overfull \hbox (8.29655pt too wide) in paragraph at lines 852--852
+Overfull \hbox (8.29655pt too wide) in paragraph at lines 912--912
  \T1/lmr/m/n/8 (-20) (H=3)|
  []
 
 
-Overfull \hbox (6.28766pt too wide) in paragraph at lines 852--852
+Overfull \hbox (6.28766pt too wide) in paragraph at lines 912--912
  \T1/lmr/m/n/8 (-20) (H=3)|
  []
 
 
-Overfull \hbox (6.28766pt too wide) in paragraph at lines 852--852
+Overfull \hbox (6.28766pt too wide) in paragraph at lines 912--912
  \T1/lmr/m/n/8 (-20) (H=3)|
  []
 
 
-Overfull \hbox (6.28766pt too wide) in paragraph at lines 852--852
+Overfull \hbox (6.28766pt too wide) in paragraph at lines 912--912
  \T1/lmr/m/n/8 (-20) (H=3)|
  []
 
 
-Overfull \hbox (1.60912pt too wide) in paragraph at lines 852--852
+Overfull \hbox (1.60912pt too wide) in paragraph at lines 912--912
  []|\T1/lmr/m/n/8 (-20) KmJ
  []
 
 
-Overfull \hbox (6.28766pt too wide) in paragraph at lines 852--852
+Overfull \hbox (6.28766pt too wide) in paragraph at lines 912--912
  \T1/lmr/m/n/8 (-20) (H=3)|
  []
 
 
-Overfull \hbox (6.28766pt too wide) in paragraph at lines 852--852
+Overfull \hbox (6.28766pt too wide) in paragraph at lines 912--912
  \T1/lmr/m/n/8 (-20) (H=3)|
  []
 
 
-Overfull \hbox (8.29655pt too wide) in paragraph at lines 852--852
+Overfull \hbox (8.29655pt too wide) in paragraph at lines 912--912
  \T1/lmr/m/n/8 (-20) (H=4)|
  []
 
 
-Overfull \hbox (6.28766pt too wide) in paragraph at lines 852--852
+Overfull \hbox (6.28766pt too wide) in paragraph at lines 912--912
  \T1/lmr/m/n/8 (-20) (H=4)|
  []
 
 
-Overfull \hbox (6.28766pt too wide) in paragraph at lines 852--852
+Overfull \hbox (6.28766pt too wide) in paragraph at lines 912--912
  \T1/lmr/m/n/8 (-20) (H=4)|
  []
 
 
-Overfull \hbox (6.28766pt too wide) in paragraph at lines 852--852
+Overfull \hbox (6.28766pt too wide) in paragraph at lines 912--912
  \T1/lmr/m/n/8 (-20) (H=4)|
  []
 
 
-Overfull \hbox (1.60912pt too wide) in paragraph at lines 852--852
+Overfull \hbox (1.60912pt too wide) in paragraph at lines 912--912
  []|\T1/lmr/m/n/8 (-20) KmJ
  []
 
 
-Overfull \hbox (6.28766pt too wide) in paragraph at lines 852--852
+Overfull \hbox (6.28766pt too wide) in paragraph at lines 912--912
  \T1/lmr/m/n/8 (-20) (H=4)|
  []
 
 
-Overfull \hbox (6.28766pt too wide) in paragraph at lines 852--853
+Overfull \hbox (6.28766pt too wide) in paragraph at lines 912--913
  \T1/lmr/m/n/8 (-20) (H=4)|
  []
 
 
-Overfull \hbox (4.027pt too wide) in alignment at lines 850--854
+Overfull \hbox (4.027pt too wide) in alignment at lines 910--914
  [] [] [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (0.73744pt too wide) in paragraph at lines 855--855
+Overfull \hbox (0.73744pt too wide) in paragraph at lines 915--915
  []|\T1/lmr/m/n/8 (-20) 0.87|
  []
 
 
-Overfull \hbox (0.73744pt too wide) in paragraph at lines 856--856
+Overfull \hbox (0.73744pt too wide) in paragraph at lines 916--916
  []|\T1/lmr/m/n/8 (-20) 0.89|
  []
 
 
-Overfull \hbox (0.73744pt too wide) in paragraph at lines 856--856
+Overfull \hbox (0.73744pt too wide) in paragraph at lines 916--916
  []|\T1/lmr/m/n/8 (-20) 0.79|
  []
 
 
-Overfull \hbox (0.73744pt too wide) in paragraph at lines 857--857
+Overfull \hbox (0.73744pt too wide) in paragraph at lines 917--917
  []|\T1/lmr/m/n/8 (-20) 0.87|
  []
 
 
-Overfull \hbox (0.73744pt too wide) in paragraph at lines 857--857
+Overfull \hbox (0.73744pt too wide) in paragraph at lines 917--917
  []|\T1/lmr/m/n/8 (-20) 0.74|
  []
 
 
-Overfull \hbox (0.73744pt too wide) in paragraph at lines 858--858
+Overfull \hbox (0.73744pt too wide) in paragraph at lines 918--918
  []|\T1/lmr/m/n/8 (-20) 0.92|
  []
 
 
-Overfull \hbox (0.73744pt too wide) in paragraph at lines 858--858
+Overfull \hbox (0.73744pt too wide) in paragraph at lines 918--918
  []|\T1/lmr/m/n/8 (-20) 0.77|
  []
 
 
-Overfull \hbox (0.73744pt too wide) in paragraph at lines 859--859
+Overfull \hbox (0.73744pt too wide) in paragraph at lines 919--919
  []|\T1/lmr/m/n/8 (-20) 0.85|
  []
 
 
-Overfull \hbox (0.73744pt too wide) in paragraph at lines 860--860
+Overfull \hbox (0.73744pt too wide) in paragraph at lines 920--920
  []|\T1/lmr/m/n/8 (-20) 0.87|
  []
 
 
-Overfull \hbox (0.73744pt too wide) in paragraph at lines 861--861
+Overfull \hbox (0.73744pt too wide) in paragraph at lines 921--921
  []|\T1/lmr/m/n/8 (-20) 0.87|
  []
 
 
-Overfull \hbox (0.73744pt too wide) in paragraph at lines 861--861
+Overfull \hbox (0.73744pt too wide) in paragraph at lines 921--921
  []|\T1/lmr/m/n/8 (-20) 0.75|
  []
 
 
-Overfull \hbox (0.73744pt too wide) in paragraph at lines 862--862
+Overfull \hbox (0.73744pt too wide) in paragraph at lines 922--922
  []|\T1/lmr/m/n/8 (-20) 0.93|
  []
 
 
-Overfull \hbox (0.73744pt too wide) in paragraph at lines 862--862
+Overfull \hbox (0.73744pt too wide) in paragraph at lines 922--922
  []|\T1/lmr/m/n/8 (-20) 0.77|
  []
 
 
-Overfull \hbox (1.56125pt too wide) in paragraph at lines 863--863
+Overfull \hbox (1.56125pt too wide) in paragraph at lines 923--923
  []|\T1/lmr/m/n/8 (-20) G(S)|
  []
 
 
-Overfull \hbox (0.73744pt too wide) in paragraph at lines 863--863
+Overfull \hbox (0.73744pt too wide) in paragraph at lines 923--923
  []|\T1/lmr/m/n/8 (-20) 7.07|
  []
 
 
-Overfull \hbox (0.73744pt too wide) in paragraph at lines 863--863
+Overfull \hbox (0.73744pt too wide) in paragraph at lines 923--923
  []|\T1/lmr/m/n/8 (-20) 6.22|
  []
 
 
-Overfull \hbox (4.027pt too wide) in alignment at lines 854--865
+Overfull \hbox (4.027pt too wide) in alignment at lines 914--925
  [] [] [] [] [] [] [] [] [] [] [] [] [] 
  []
 
-LaTeX Info: Redefining \. on input line 875.
-LaTeX Info: Redefining \% on input line 875.
-[56]
-LaTeX Info: Redefining \. on input line 885.
-LaTeX Info: Redefining \% on input line 885.
-[57]
-LaTeX Info: Redefining \. on input line 887.
-LaTeX Info: Redefining \% on input line 887.
-[58] (./Diseño-y-análisis-de-encuestas-de-hogares.bbl [59
+LaTeX Info: Redefining \. on input line 925.
+LaTeX Info: Redefining \% on input line 925.
+[59]
+LaTeX Info: Redefining \. on input line 949.
+LaTeX Info: Redefining \% on input line 949.
+[60]
+<Pics/Estratificar.png, id=570, 1740.5025pt x 806.01125pt>
+File: Pics/Estratificar.png Graphic file (type png)
+<use Pics/Estratificar.png>
+Package pdftex.def Info: Pics/Estratificar.png  used on input line 951.
+(pdftex.def)             Requested size: 803.00453pt x 371.86426pt.
+
+Overfull \hbox (458.00453pt too wide) in paragraph at lines 951--951
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 958.
+LaTeX Info: Redefining \% on input line 958.
+[61 <./Pics/Estratificar.png>]
+LaTeX Info: Redefining \. on input line 966.
+LaTeX Info: Redefining \% on input line 966.
+[62] (./Diseño-y-análisis-de-encuestas-de-hogares.bbl [63
 
 ]
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
-[60
+[64
 
-] [61]
+] [65]
 LaTeX Info: Redefining \. on input line 175.
 LaTeX Info: Redefining \% on input line 175.
-[62])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 892.
-LaTeX Info: Redefining \. on input line 892.
-LaTeX Info: Redefining \% on input line 892.
-[63]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 892.
+[66])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 971.
+LaTeX Info: Redefining \. on input line 971.
+LaTeX Info: Redefining \% on input line 971.
+[67]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 971.
 (./Diseño-y-análisis-de-encuestas-de-hogares.aux
 LaTeX Info: Redefining \. on input line 26.
 LaTeX Info: Redefining \% on input line 26.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 892.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 892.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 971.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 971.
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 14891 strings out of 480608
- 218686 string characters out of 5903631
- 554836 words of memory out of 5000000
- 30102 multiletter control sequences out of 15000+600000
- 643311 words of font info for 184 fonts, out of 8000000 for 9000
+ 14938 strings out of 480608
+ 219731 string characters out of 5903631
+ 557606 words of memory out of 5000000
+ 30124 multiletter control sequences out of 15000+600000
+ 643265 words of font info for 184 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,11n,42p,2600b,509s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exi
+pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exi
 st, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
+, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
 , replaced by a fixed one
@@ -1151,11 +1195,11 @@ ocal/texlive/2020/texmf-dist/fonts/type1/public/lm/lmro10.pfb></usr/local/texli
 ve/2020/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2020/te
 xmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2020/texmf-dist/fo
 nts/type1/public/lm/lmtt10.pfb>
-Output written on Diseño-y-análisis-de-encuestas-de-hogares.pdf (63 pages, 88
-2966 bytes).
+Output written on Diseño-y-análisis-de-encuestas-de-hogares.pdf (67 pages, 11
+45799 bytes).
 PDF statistics:
- 724 PDF objects out of 1000 (max. 8388607)
- 624 compressed objects within 7 object streams
- 188 named destinations out of 1000 (max. 500000)
- 22672 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 796 PDF objects out of 1000 (max. 8388607)
+ 690 compressed objects within 7 object streams
+ 212 named destinations out of 1000 (max. 500000)
+ 22717 words of extra memory for PDF output out of 24883 (max. 10000000)
 
