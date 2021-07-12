@@ -23,3 +23,7 @@ información-a-nivel-de-upm
 metodologías-univariadas-sobre-medidas-de-resumen
 metodologías-multivariadas-sobre-la-matriz-de-información
 evaluación-y-escogencia-de-la-mejor-estratificación
+diseño-y-mecanismo-de-selección-de-la-muestra
+diseños-de-muestreo
+muestreo-balanceado
+el-diseño-de-muestreo-estándar-en-una-encuesta-de-hogares

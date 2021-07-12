@@ -24,7 +24,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2021-06-22" />
+<meta name="date" content="2021-07-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -146,6 +146,20 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="4.5" data-path="evaluación-y-escogencia-de-la-mejor-estratificación.html"><a href="evaluación-y-escogencia-de-la-mejor-estratificación.html"><i class="fa fa-check"></i><b>4.5</b> Evaluación y escogencia de la mejor estratificación</a></li>
 </ul></li>
+<li class="chapter" data-level="5" data-path="diseño-y-mecanismo-de-selección-de-la-muestra.html"><a href="diseño-y-mecanismo-de-selección-de-la-muestra.html"><i class="fa fa-check"></i><b>5</b> Diseño y mecanismo de selección de la muestra</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html"><i class="fa fa-check"></i><b>5.1</b> Diseños de muestreo</a>
+<ul>
+<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-aleatorio-simple"><i class="fa fa-check"></i>Muestreo aleatorio simple</a></li>
+<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-proporcional-al-tamaño"><i class="fa fa-check"></i>Muestreo proporcional al tamaño</a></li>
+<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-estratificado"><i class="fa fa-check"></i>Muestreo estratificado</a></li>
+<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-de-conglomerados"><i class="fa fa-check"></i>Muestreo de conglomerados</a></li>
+<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-en-varias-etapas"><i class="fa fa-check"></i>Muestreo en varias etapas</a></li>
+<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-en-dos-fases"><i class="fa fa-check"></i>Muestreo en dos fases</a></li>
+<li class="chapter" data-level="5.1.1" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-balanceado"><i class="fa fa-check"></i><b>5.1.1</b> Muestreo balanceado</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="el-diseño-de-muestreo-estándar-en-una-encuesta-de-hogares.html"><a href="el-diseño-de-muestreo-estándar-en-una-encuesta-de-hogares.html"><i class="fa fa-check"></i><b>5.2</b> El diseño de muestreo estándar en una encuesta de hogares</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
 <li class="divider"></li>
 <li><a Diseño y análisis de encuestas de hogares</a></li>
@@ -169,7 +183,8 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="metodologías-de-estratificación" class="section level1" number="4">
 <h1><span class="header-section-number">Capítulo 4</span> Metodologías de estratificación</h1>
-<p>Para aumentar la eficiencia de la inferencia en las encuestas de hogares, es de particular interés que el marco de muestreo permita clasificar a las UPM de acuerdo con su nivel socio-económico con el fin de poder realizar selecciones independientes en cada categoría de la clasificación. De esta forma se garantiza la homogeneidad entre grupos y se disminuye la incertidumbre de la estimación. Este proceso se conoce con el nombre de estratificación. En la literatura especializada, es posible encontrar varias metodologías que clasifican a cada una de las UPM del marco y a la vez disminuyen la varianza de los estimadores de muestreo. Este capítulo se realiza un resumen no exhaustivo de las principales técnicas utilizadas por los INE de la región, se proponen algoritmos para encontrar la mejor estratificación basada en los datos de los censos y se ilustran los procedimientos computacionales necesarios para implementar esta metodología.</p>
+<p>Para aumentar la eficiencia de la inferencia en las encuestas de hogares, es de particular interés que el marco de muestreo permita clasificar a las UPM de acuerdo con su nivel socio-económico con el fin de poder realizar selecciones independientes en cada categoría de la clasificación. De esta forma se garantiza la homogeneidad entre grupos y se disminuye la incertidumbre de la estimación. Este proceso se conoce con el nombre de estratificación.</p>
+<p>En la literatura especializada, es posible encontrar varias metodologías que clasifican a cada una de las UPM del marco y a la vez disminuyen la varianza de los estimadores de muestreo. Este capítulo se realiza un resumen no exhaustivo de las principales técnicas utilizadas por los INE de la región, se proponen algoritmos para encontrar la mejor estratificación basada en los datos de los censos y se ilustran los procedimientos computacionales necesarios para implementar esta metodología. Si los estratos están conformados por unidades homogéneas que, a su vez, crean categorías heterogéneas entre sí, entonces se dice que el proceso de estratificación es eficiente y el error de muestreo se verá reducido significativamente.</p>
 <p>Luego de definir las UPM en el marco de muestreo es necesario realizar una agrupación de estas de acuerdo con sus características sociodemográficas agregadas con el fin de obtener una partición que conforme grupos homogéneos, que induzcan una mayor precisión en la ejecución de las estrategias de muestreo que se propongan dentro de la planificación de las encuestas de hogares que realizan los INE. Es importante señalar que se debe estudiar una multitud de escenarios de estratificación y para encontrar una óptima clasificación de las unidades primarias de muestreo, puesto que esta partición será utilizada en todas las encuestas de hogares que utilicen este marco de muestreo en el periodo intercensal.</p>
 <p>En síntesis, los procesos que intervienen en la estratificación del marco de muestreo son los siguientes:</p>
 <ol style="list-style-type: decimal">

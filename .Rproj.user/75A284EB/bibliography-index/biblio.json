@@ -307,36 +307,6 @@
             "volume": "63"
         },
         {
-            "ISBN": "978-0-387-40620-6",
-            "author": [
-                {
-                    "family": "Särndal",
-                    "given": "Carl-Erik"
-                },
-                {
-                    "family": "Swensson",
-                    "given": "Bengt"
-                },
-                {
-                    "family": "Wretman",
-                    "given": "Jan"
-                }
-            ],
-            "id": "Sarndal_Swensson_Wretman_2003",
-            "issued": {
-                "date-parts": [
-                    [
-                        2003,
-                        10
-                    ]
-                ]
-            },
-            "note": "Google-Books-ID: ufdONK3E1TcC",
-            "publisher": "Springer Science; Business Media",
-            "title": "Model assisted survey sampling",
-            "type": "book"
-        },
-        {
             "author": [
                 {
                     "family": "Valliant",
@@ -975,36 +945,6 @@
                 ]
             },
             "title": "Sample survey methods and theory",
-            "type": "book"
-        },
-        {
-            "ISBN": "978-0-387-40620-6",
-            "author": [
-                {
-                    "family": "Särndal",
-                    "given": "Carl-Erik"
-                },
-                {
-                    "family": "Swensson",
-                    "given": "Bengt"
-                },
-                {
-                    "family": "Wretman",
-                    "given": "Jan"
-                }
-            ],
-            "id": "Sarndal_Swensson_Wretman_2003",
-            "issued": {
-                "date-parts": [
-                    [
-                        2003,
-                        10
-                    ]
-                ]
-            },
-            "note": "Google-Books-ID: ufdONK3E1TcC",
-            "publisher": "Springer Science; Business Media",
-            "title": "Model assisted survey sampling",
             "type": "book"
         },
         {
@@ -2275,6 +2215,29 @@
             "note": "R package version 3.2.2",
             "title": "TeachingSampling: Selection of samples and parameter estimation in finite population",
             "title-short": "TeachingSampling",
+            "type": "book"
+        },
+        {
+            "DOI": "10.1007/0-387-34240-0",
+            "ISBN": "978-0-387-30814-2",
+            "URL": "https://www.springer.com/gp/book/9780387308142",
+            "author": [
+                {
+                    "family": "Tillé",
+                    "given": "Yves"
+                }
+            ],
+            "collection-title": "Springer series in statistics",
+            "id": "Tille2006",
+            "issued": {
+                "date-parts": [
+                    [
+                        2006
+                    ]
+                ]
+            },
+            "publisher": "Springer-Verlag",
+            "title": "Sampling algorithms",
             "type": "book"
         },
         {
@@ -3724,36 +3687,6 @@
             },
             "title": "Accounting for multi-stage sample designs in complex sample variance estimation",
             "type": "paper-conference"
-        },
-        {
-            "ISBN": "978-0-387-40620-6",
-            "author": [
-                {
-                    "family": "Särndal",
-                    "given": "Carl-Erik"
-                },
-                {
-                    "family": "Swensson",
-                    "given": "Bengt"
-                },
-                {
-                    "family": "Wretman",
-                    "given": "Jan"
-                }
-            ],
-            "id": "Sarndal_Swensson_Wretman_2003",
-            "issued": {
-                "date-parts": [
-                    [
-                        2003,
-                        10
-                    ]
-                ]
-            },
-            "note": "Google-Books-ID: ufdONK3E1TcC",
-            "publisher": "Springer Science; Business Media",
-            "title": "Model assisted survey sampling",
-            "type": "book"
         },
         {
             "author": [

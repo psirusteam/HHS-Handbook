@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es" xml:lang="es">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>5.1 Diseños de muestreo | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
+  <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="5.1 Diseños de muestreo | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
+  <meta name="github-repo" content="psirusteam/HHS-Handbook" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="5.1 Diseños de muestreo | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
+  
+  <meta name="twitter:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
+  
+
+<meta name="author" content="Andrés Gutiérrez" />
+
+
+<meta name="date" content="2021-07-12" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="diseño-y-mecanismo-de-selección-de-la-muestra.html"/>
+<link rel="next" href="el-diseño-de-muestreo-estándar-en-una-encuesta-de-hogares.html"/>
+<script src="libs/header-attrs-2.8/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Diseño y análisis de encuestas de hogares</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefacio</a></li>
+<li class="chapter" data-level="" data-path="resumen.html"><a href="resumen.html"><i class="fa fa-check"></i>Resumen</a></li>
+<li class="chapter" data-level="1" data-path="introducción.html"><a href="introducción.html"><i class="fa fa-check"></i><b>1</b> Introducción</a>
+<ul>
+<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html#objetivos-de-desarrollo-sostenible"><i class="fa fa-check"></i>Objetivos de Desarrollo Sostenible</a></li>
+<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html#mercado-de-trabajo"><i class="fa fa-check"></i>Mercado de Trabajo</a></li>
+<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html#ingresos-y-gastos"><i class="fa fa-check"></i>Ingresos y gastos</a></li>
+<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html#esquema-del-documento"><i class="fa fa-check"></i>Esquema del documento</a></li>
+</ul></li>
+<li class="part"><span><b>I Diseño estadístico de las encuestas de hogares</b></span></li>
+<li class="chapter" data-level="2" data-path="elementos-básicos-y-planeación.html"><a href="elementos-básicos-y-planeación.html"><i class="fa fa-check"></i><b>2</b> Elementos básicos y planeación</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="universo-muestra-y-unidades.html"><a href="universo-muestra-y-unidades.html"><i class="fa fa-check"></i><b>2.1</b> Universo, muestra y unidades</a></li>
+<li class="chapter" data-level="2.2" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html"><i class="fa fa-check"></i><b>2.2</b> Periodicidad en el tiempo</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-transversales"><i class="fa fa-check"></i><b>2.2.1</b> Encuestas transversales</a></li>
+<li class="chapter" data-level="2.2.2" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-repetidas"><i class="fa fa-check"></i><b>2.2.2</b> Encuestas repetidas</a></li>
+<li class="chapter" data-level="2.2.3" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-panel"><i class="fa fa-check"></i><b>2.2.3</b> Encuestas panel</a></li>
+<li class="chapter" data-level="2.2.4" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-de-panel-dividido"><i class="fa fa-check"></i><b>2.2.4</b> Encuestas de panel dividido</a></li>
+<li class="chapter" data-level="2.2.5" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-de-panel-rotativo"><i class="fa fa-check"></i><b>2.2.5</b> Encuestas de panel rotativo</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="rotación-de-paneles.html"><a href="rotación-de-paneles.html"><i class="fa fa-check"></i><b>2.3</b> Rotación de paneles</a></li>
+<li class="chapter" data-level="2.4" data-path="parámetros-de-interés.html"><a href="parámetros-de-interés.html"><i class="fa fa-check"></i><b>2.4</b> Parámetros de interés</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="parámetros-de-interés.html"><a href="parámetros-de-interés.html#ejemplos-de-indicadores-de-interés-y-su-relación-con-los-tipos-de-encuestas"><i class="fa fa-check"></i><b>2.4.1</b> Ejemplos de indicadores de interés y su relación con los tipos de encuestas</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="definición-del-marco-muestral.html"><a href="definición-del-marco-muestral.html"><i class="fa fa-check"></i><b>3</b> Definición del marco muestral</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="el-marco-de-muestreo.html"><a href="el-marco-de-muestreo.html"><i class="fa fa-check"></i><b>3.1</b> El marco de muestreo</a></li>
+<li class="chapter" data-level="3.2" data-path="los-censos-y-su-incidencia-en-los-marcos-de-muestreo.html"><a href="los-censos-y-su-incidencia-en-los-marcos-de-muestreo.html"><i class="fa fa-check"></i><b>3.2</b> Los censos y su incidencia en los marcos de muestreo</a></li>
+<li class="chapter" data-level="3.3" data-path="construcción-de-las-upm.html"><a href="construcción-de-las-upm.html"><i class="fa fa-check"></i><b>3.3</b> Construcción de las UPM</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="metodologías-de-estratificación.html"><a href="metodologías-de-estratificación.html"><i class="fa fa-check"></i><b>4</b> Metodologías de estratificación</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="dimensiones-estructurales-en-el-marco-de-muestreo.html"><a href="dimensiones-estructurales-en-el-marco-de-muestreo.html"><i class="fa fa-check"></i><b>4.1</b> Dimensiones estructurales en el marco de muestreo</a></li>
+<li class="chapter" data-level="4.2" data-path="información-a-nivel-de-upm.html"><a href="información-a-nivel-de-upm.html"><i class="fa fa-check"></i><b>4.2</b> Información a nivel de UPM</a></li>
+<li class="chapter" data-level="4.3" data-path="metodologías-univariadas-sobre-medidas-de-resumen.html"><a href="metodologías-univariadas-sobre-medidas-de-resumen.html"><i class="fa fa-check"></i><b>4.3</b> Metodologías univariadas sobre medidas de resumen</a>
+<ul>
+<li class="chapter" data-level="" data-path="metodologías-univariadas-sobre-medidas-de-resumen.html"><a href="metodologías-univariadas-sobre-medidas-de-resumen.html#partición-en-cuantiles-q"><i class="fa fa-check"></i>Partición en cuantiles (Q)</a></li>
+<li class="chapter" data-level="" data-path="metodologías-univariadas-sobre-medidas-de-resumen.html"><a href="metodologías-univariadas-sobre-medidas-de-resumen.html#método-de-raíz-de-frecuencia-acumulada-dh"><i class="fa fa-check"></i>Método de raíz de frecuencia acumulada (DH)</a></li>
+<li class="chapter" data-level="" data-path="metodologías-univariadas-sobre-medidas-de-resumen.html"><a href="metodologías-univariadas-sobre-medidas-de-resumen.html#estratificación-óptima-lh"><i class="fa fa-check"></i>Estratificación óptima (LH)</a></li>
+<li class="chapter" data-level="" data-path="metodologías-univariadas-sobre-medidas-de-resumen.html"><a href="metodologías-univariadas-sobre-medidas-de-resumen.html#estratificación-geométrica-gh"><i class="fa fa-check"></i>Estratificación geométrica (GH)</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="metodologías-multivariadas-sobre-la-matriz-de-información.html"><a href="metodologías-multivariadas-sobre-la-matriz-de-información.html"><i class="fa fa-check"></i><b>4.4</b> Metodologías multivariadas sobre la matriz de información</a>
+<ul>
+<li class="chapter" data-level="" data-path="metodologías-multivariadas-sobre-la-matriz-de-información.html"><a href="metodologías-multivariadas-sobre-la-matriz-de-información.html#k-medias-de-jarque-kmj"><i class="fa fa-check"></i>K-medias de Jarque (KmJ)</a></li>
+<li class="chapter" data-level="" data-path="metodologías-multivariadas-sobre-la-matriz-de-información.html"><a href="metodologías-multivariadas-sobre-la-matriz-de-información.html#partición-genética-bb"><i class="fa fa-check"></i>Partición genética (BB)</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="evaluación-y-escogencia-de-la-mejor-estratificación.html"><a href="evaluación-y-escogencia-de-la-mejor-estratificación.html"><i class="fa fa-check"></i><b>4.5</b> Evaluación y escogencia de la mejor estratificación</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="diseño-y-mecanismo-de-selección-de-la-muestra.html"><a href="diseño-y-mecanismo-de-selección-de-la-muestra.html"><i class="fa fa-check"></i><b>5</b> Diseño y mecanismo de selección de la muestra</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html"><i class="fa fa-check"></i><b>5.1</b> Diseños de muestreo</a>
+<ul>
+<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-aleatorio-simple"><i class="fa fa-check"></i>Muestreo aleatorio simple</a></li>
+<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-proporcional-al-tamaño"><i class="fa fa-check"></i>Muestreo proporcional al tamaño</a></li>
+<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-estratificado"><i class="fa fa-check"></i>Muestreo estratificado</a></li>
+<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-de-conglomerados"><i class="fa fa-check"></i>Muestreo de conglomerados</a></li>
+<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-en-varias-etapas"><i class="fa fa-check"></i>Muestreo en varias etapas</a></li>
+<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-en-dos-fases"><i class="fa fa-check"></i>Muestreo en dos fases</a></li>
+<li class="chapter" data-level="5.1.1" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-balanceado"><i class="fa fa-check"></i><b>5.1.1</b> Muestreo balanceado</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="el-diseño-de-muestreo-estándar-en-una-encuesta-de-hogares.html"><a href="el-diseño-de-muestreo-estándar-en-una-encuesta-de-hogares.html"><i class="fa fa-check"></i><b>5.2</b> El diseño de muestreo estándar en una encuesta de hogares</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
+<li class="divider"></li>
+<li><a Diseño y análisis de encuestas de hogares</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Diseño y análisis estadístico en las encuestas de hogares de América Latina</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="diseños-de-muestreo" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> Diseños de muestreo</h2>
+<p>Una vez que los marcos de muestreo se han refinado y se ha definido una estratificación apropiada para las UPM que las componen, es necesario realizar el proceso de muestreo la selección final de los hogares. Este proceso de selección debe inducir insesgamiento, además de ser eficiente. Esto quiere decir que la inclusión de las unidades en la muestra estará supeditada a un esquema probabilístico libre de cualquier sesgo. Además de esto, se necesita que este mecanismo genere la menor dispersión posible en el proceso inferencial posterior.</p>
+<p>El procedimiento de muestreo le asigna una probabilidad de selección conocida a cada posible muestra. Al diseñar un muestreo probabilístico, el investigador es el encargado de asignar estas probabilidades, mediante la definición del diseño de muestreo <span class="citation">(<a href="#ref-Sarndal_Swensson_Wretman_2003" role="doc-biblioref">Särndal, Swensson, y Wretman 2003</a>)</span>. Aunque esta asignación de probabilidades se realiza de manera teórica, la pericia del equipo técnico deberá establecer cuál es la mejor forma de selección, y sobre esta escoger el mejor algoritmo de muestreo. Luego de establecer este conjunto de probabilidades, una única muestra es escogida mediante un mecanismo aleatorio que siga a cabalidad esta configuración estocástica inducida por el diseño de muestreo. Las probabilidades deben ser distintas de cero puesto que, de lo contrario, no se podría garantizar una inferencia insesgada, puesto que estaría excluyendo algunos sectores cartográficos del país. Además, estas mismas probabilidades se utilizan para crear los factores de expansión que definen todo el proceso de estimación, junto con el cálculo de los errores de muestreo, como se verá en los capítulos posteriores.</p>
+<p>Existe una clara diferenciación entre un diseño de muestreo y un algoritmo de muestreo. El primero indica qué probabilidad de selección tendrán las posibles muestras en el soporte de muestreo, definido como el conjunto de todas las posibles muestras. Y el último se define como el proceso de selección de una única muestra que respeta las probabilidades del diseño de muestreo. En la definición de una encuesta de hogares es indispensable que se establezcan de antemano estos dos componentes. Es decir, si se ha decidido que el diseño de muestreo sea en etapas, el equipo técnico deberá documentar exhaustivamente cada etapa de muestreo, definiendo sus correspondientes unidades de muestreo y por consiguiente, los diseños de muestreos en cada etapa. Luego, es igual de importante explicar qué algoritmos de selección serán utilizados en cada etapa de muestreo. De esta forma habrá total transparencia en la selección de las unidades y esto redunda en la obtención de cifras oficiales confiables y precisas.</p>
+<p>Existen muchas formas de seleccionar una muestra de hogares y cada una de ellas induce una medida de probabilidad sobre los elementos que conforman la población de interés. En general, asociado a cada esquema particular de muestreo se define una única función que asocia a cada hogar <span class="math inline">\(k\)</span> con una probabilidad de inclusión en la muestra <span class="math inline">\(s\)</span>, definida de la siguiente manera:</p>
+<p><span class="math display">\[\pi_k = Pr (k \in s)\]</span></p>
+<p>Estas probabilidades de inclusión de los hogares, inducidas por los diseños de muestreo asociados a cada encuesta, cumplen con las siguientes propiedades</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\pi_k &gt; 0\)</span></li>
+<li><span class="math inline">\(\sum_U \pi_k = n\)</span></li>
+</ol>
+<p>Observe que la primera propiedad garantiza que ningún hogar será excluido de la selección inicial. Si bien no todos lo hogares serán seleccionados para pertenecer a la muestra <span class="math inline">\(s\)</span>, todos tendrán un chance de ser escogidos por el mecanismo de selección aleatoria. En segunda medida, el tamaño de la muestra de hogares estará inducido por la magnitud de las probabilidades de inclusión. Por esta razón, una encuesta con una tamaño de muestra grande asignará una mayor probabilidad de inclusión a todos los hogares, que una encuesta de tamaño de muestra más modesto. A continuación se presenta una lista no exhaustiva de diseños de muestreo utilizados en encuestas de hogares para la publicación de estadísticas oficiales, junto con la forma particular que toman las probabilidades de inclusión en cada esquema.</p>
+<div id="muestreo-aleatorio-simple" class="section level3 unnumbered">
+<h3>Muestreo aleatorio simple</h3>
+<p>Este diseño de muestreo supone que es posible realizar una enumeración de todas las posibles muestras de tamaño fijo y escoger una de ellas mediante una selección aleatoria que asigne la misma probabilidad a cada una. Para ejecutar este diseño de muestreo es necesario tener información suficiente y exhaustiva de la ubicación e identificación de todas las unidades de interés. Su uso es común en las etapas finales de selección de las encuestas, en donde los hogares o personas se seleccionan con las misma probabilidad. Por ejemplo, una vez se ha escogido un área de muestreo, una parte del operativo de campo deberá estar dedicada al enlistamiento de todas las viviendas en esa área seleccionada. Cuando se haya realizado este empadronamiento será posible asignarle la misma probabilidad de inclusión a cada vivienda en el área o en la UPM. Por ende, las probabilidades de inclusión en el muestreo aleatorio simple sin reemplazo son todas iguales y dadas por la siguiente expresión:</p>
+<p><span class="math display">\[\pi_k = Pr(k \in s) =  \frac{\binom{1}{1}\binom{N-1}{n-1}}{\binom{N}{k}} = \frac{n}{N}\]</span></p>
+<p>Una variante de este tipo de esquemas de selección de muestras de hogares dentro de la UPM es el muestreo sistemático, en donde se ordena el marco con algún patrón predefinido y posteriormente se selecciona un primer hogar (como arranque aleatorio). A partir de ese primer hogar seleccionado, se incluyen los restantes hogares en la muestra mediante saltos sistemáticos equi-espaciados por el siguiente factor <span class="math inline">\(a = N/n\)</span>, conocido como el intervalo de salto. Por ejemplo, una muestra sistemática podría ser:
+<span class="math display">\[s=\{2, 12, 22, 32, 42\}\]</span>.</p>
+<p>En donde el primer hogar elegido en la UPM fue el segundo y con saltos sistemáticos de diez hogares se va encuestando los restantes hogares en la lista. En este diseño la probabilidad de inclusión también es uniforme para cada hogar en la UPM y está dada por la siguiente expresión
+<span class="math display">\[\pi_k = Pr(k \in s) = \frac{1}{a} \approx \frac{n}{N}\]</span></p>
+</div>
+<div id="muestreo-proporcional-al-tamaño" class="section level3 unnumbered">
+<h3>Muestreo proporcional al tamaño</h3>
+<p>Este tipo de muestreo utiliza como insumo una característica de información auxiliar cuantitativa, también conocida como medida de tamaño (<em>MOS</em>, por sus siglas en inglés). Para la ejecución de este diseño, necesariamente el marco de muestreo deberá contener el valor correspondiente a la medida de tamaño para cada una de sus unidades. Este muestreo es utilizado con frecuencia en las etapas iniciales de selección de las muestras, particularmente en la selección de las UPM que harán parte de la muestra. De esta forma, los conglomerados o UPM con más hogares o personas (medida de tamaño) tendrán una mayor probabilidad de ser seleccionados en la muestra. Por consiguiente, las probabilidades de inclusión en la muestra para las UPM serán desiguales y proporcionales a la medida de tamaño. Observe que la cantidad de individuos en las UPM es una cifra conocida, puesto que son resultado directo de los censos de población y vivienda.</p>
+<p>Una de las ventajas de este tipo de muestreos es que hace más eficiente la estimación de los indicadores de interés. Para que esto ocurra, la medida de tamaño debe estar linealmente relacionada con la característica de interés. Esto a menudo sucede en las problemáticas sociales indagadas en las encuestas de hogares; puesto que a mayor número de hogares, se observa una mayor incidencia de estos fenómenos. Por ejemplo, restringidos a un estrato particular, es evidente que en las UPM con mas hogares se observarán mayor número de personas pobres, o de hogares con ingresos bajos, o de personas desocupadas, etc.</p>
+<p>Por último, la medida de tamaño no necesariamente tiene que estar definida como el conteo simple de hogares o personas dentro de las UPM, también puede definirse como una función de estos conteos; por ejemplo, la raíz cuadrada, o incluso como una función compuesta de conteos de subpoblaciones. En el caso más simple, si <span class="math inline">\(N_i\)</span> es la medida de tamaño de la <span class="math inline">\(i\)</span>-ésima UPM <span class="math inline">\(U_i\)</span>, es decir el número de hogares que componen esa UPM; <span class="math inline">\(n_I\)</span> el número de UPM que serán seleccionadas en cada estrato y <span class="math inline">\(N\)</span> la sumatoria (o total) del número de hogares en todas las UPM del estrato (es decir, el número de hogares en el estrato) se tiene que las probabilidades de inclusión a la muestra <span class="math inline">\(s_I\)</span> están dadas por la siguiente expresión:</p>
+<p><span class="math display">\[\pi_i = Pr(U_i \in s_I) = n_I * \frac{N_i}{N}\]</span></p>
+<p>Por último, no es cierto que la asignación de probabilidades desiguales en las unidades de muestreo induzca sesgo en la encuesta. Esta frase es cierta, siempre y cuando el estimador que se utilice no sea el adecuado. Por ejemplo, la frase pierde su validez cuando se utiliza el estimador de expansión (Hansen-Hurwitz, para el caso de muestreos con reemplazo - Horvitz-Thompson, en muestreos sin reemplazo). Ahora, lo natural es que si el diseño es con probabilidades desiguales, éstas se utilicen dentro de un estimador que considere esta desigualdad y lo menos usual es que se utilice el estimador de expansión en donde habría que corregir el sesgo causado por la omisión de las probabilidades desiguales.</p>
+</div>
+<div id="muestreo-estratificado" class="section level3 unnumbered">
+<h3>Muestreo estratificado</h3>
+<p>Esta familia de diseños de muestreo permite realizar inferencias precisas en subgrupos poblacionales de interés, usualmente definidos como agregaciones geográficas grandes. Por ejemplo, si se quieren estimaciones de la incidencia de la pobreza en las regiones geográficas de un país específico, entonces es pertinente que esta división geográfica sea considerada para la definición de los estratos. Como se mencionó al inicio de este capítulo, estas divisiones territoriales se forman de manera natural, puesto que los estratos ya están definidos como regiones de interés en el seguimiento de los indicadores sociales.</p>
+<p>Una consecuencia directa de la estratificación es que cada subgrupo tendrá un marco de muestreo de UPM independiente, disyunto y mutuamente excluyente. Esta última caracterización induce una de las mayores ventajas del muestreo estratificado puesto que hay independencia entre los estratos. Esto significa que, al interior de cada estrato, se pueden ejecutar distintas estrategias de muestreo de forma independiente. Es común que en los países de América Latina el cruce de las áreas geográficas grandes junto con la división socioeconómica conformen los estratos (justo como se ilustró en los capítulos anteriores); asimismo una desagregación común en investigación social es la división territorial del país: urbano y rural. Evidentemente, la realidad social del entorno urbano difiere tanto del entorno rural que bien vale la pena considerar esta escisión en el diseño de muestreo de las encuestas de hogares.</p>
+<p>Las probabilidades de inclusión definidas por este diseño de muestreo variarán en función de cada estrato. Por ejemplo, si en cada estrato (<span class="math inline">\(h=1, \ldots, H\)</span>) se hubiese planeado un diseño aleatorio simple, entonces las probabilidades de inclusión estarían dadas por la siguiente expresión</p>
+<p><span class="math display">\[\pi_k = Pr(k \in s_h) = \frac{n_h}{N_h}\]</span></p>
+<p>Por supuesto, es posible que la estrategia de muestreo cambie dependiendo de los estratos. Por ejemplo, en la planificación de las encuestas de uso de tiempo, una de las características de interés por las cuales se quiere indagar es la cantidad de horas que hombres y mujeres dedican a actividades de trabajo no remuneradas. Esta realidad cambia radicalmente entre zonas rurales y urbanas. Para este tipo de encuestas de hogares, la flexibilidad que tienen los diseños estratificados es un baluarte valioso que permite definir estrategias de muestreo más precisas.</p>
+<p>En algunas ocasiones, se ha sugerido que el muestreo estratificado es el mejor diseño para una encuesta de hogares, lo cual es parcialmente cierto. Aunque en muchas ocasiones, la opción de estratificar es adecuada e inclusive conveniente, no es cierto estrictamente que el muestreo estratificado sea el mejor diseño de muestreo. De hecho, la varianza inducida por el diseño aleatorio estratificado puede llegar a ser más grande cuando no hay una clara homogeneidad en el comportamiento de la característica de interés dentro de los estratos.</p>
+</div>
+<div id="muestreo-de-conglomerados" class="section level3 unnumbered">
+<h3>Muestreo de conglomerados</h3>
+<p>Este diseño de muestreo surge como contraparte a la imposibilidad de generar una muestra de hogares directamente de un marco de muestreo que enliste todos y cada uno de los hogares en un país. De hecho, de forma hipotética, si fuese posible, los costos generados por una muestra aleatoria simple serían tan altos que la harían inviable desde el punto de vista presupuestario. Así, ante la ausencia de un marco de muestreo de las unidades de interés, y aprovechando el principio de aglomeración de las poblaciones humanas (que forman hogares y se aglomeran en segmentos, ciudades, regiones, etc.), la idea general detrás de este diseño es la conformación de unidades homogéneas entre sí (conglomerados), de las cuales se extraerá una muestra y para cada elemento del conglomerado se realizará un proceso exhaustivo de medición censal. De esta forma, es natural definir a las UPM como los conglomerados. Luego de seleccionar una muestra de estas UPM se realiza un censo de hogares sobre cada una de las UPM seleccionadas. Nótese que este proceso logístico induce un esquema con ventajas económicas en términos presupuestales, puesto que limita el operativo de campo a un cierto número de UPM que se deben medir exhaustivamente.</p>
+<p>A pesar de que esta estrategia resulte conveniente desde el punto de vista logístico y operativo, ciertamente no lo es desde el punto de vista de la eficiencia estadística; los errores de muestreo que se producen al utilizar esta metodología son bastante más elevados que en un diseño simple, puesto que al realizar el proceso de aglomeración, generalmente la variación interna de los conglomerados es muy baja y la variación entre conglomerados tiende a ser muy alta, generando mayor incertidumbre en la inferencia de la encuesta. Para superar estos inconvenientes, se podría pensar en un esquema de muestreo que aumente el tamaño de la muestra de conglomerados; sin embargo, este aumento puede llegar a ser tan grande que, en algunos estratos, se deberían seleccionar todas las UPM. Por supuesto, se trata de un esquema inviable en la práctica, pero que da paso al esquema de muestreo más común en las encuestas de hogares: la selección por etapas.</p>
+<p>Como se mencionó en los capítulos anteriores, definir los conglomerados con tamaños muy desiguales redunda en un aumento signigicativo de la varianza del estimador; es por esto que, en encuestas de hogares, se intenta crear conglomerados acotados, a nivel de manzana, o vereda. Esta es una práctica muy pertinente, puesto que la varianza del estimador de expansión estará en función de la varianza de los totales de los conglomerados; si existe una alta variación en los tamaños, habrá también una alta variación en los totales y, por consiguiente, la varianza del estimador será alta. De otra forma, si se tiene conocimiento de una característica de información auxiliar a nivel de los conglomerados (medida de tamaño), es posible hacer uso de esta información del marco para reducir la varianza en el estimador.</p>
+</div>
+<div id="muestreo-en-varias-etapas" class="section level3 unnumbered">
+<h3>Muestreo en varias etapas</h3>
+<p>En este esquema de muestreo, la idea general es retomar los principios del muestreo de conglomerados y realizar un submuestreo de hogares dentro de los conglomerados o UPM seleccionadas inicialmente. Este submuestreo puede ser tan incluyente como sea necesario. En general, en América Latina son muy comunes los esquemas de selección en dos etapas: en la primera etapa se selecciona una muestra de UPM y en la segunda etapa se selecciona una muestra de hogares en aquellas UPM seleccionadas en la primera etapa. Aunque, también es posible encontrar en algunos países esquemas en más de dos etapas. Por ejemplo, en una primera etapa se seleccionan municipios; en una segunda etapa se seleccionan UPM dentro de los municipios seleccionados; y en la segunda etapa se selecciona una muestra de hogares en aquellas UPM seleccionadas en la segunda etapa. Si un municipio es incluido en la muestra es posible realizar un proceso de aglomeración continúa sistemática, hasta llegar a la unidad de observación. Por ejemplo, en una ciudad seleccionada, es posible hacer un submuestreo de sus secciones cartográficas, luego seleccionar sectores cartográficos (contenidos en las secciones) y por último seleccionar hogares o personas.</p>
+<p>Si el esquema de muestreo incluye la selección de municipios en la primera etapa, el diseño de muestreo apropiado en esta instancia deberá ser proporcional a una medida de tamaño, que puede ser definida como el número de habitantes de los municipios. De esta forma, con una probabilidad muy grande, a veces igual a uno, las ciudades más importantes (con más habitantes) serán siempre parte del estudio. Por otro lado, es posible que en algunas encuestas exista un submuetreo de personas dentro del hogar. En este caso, <span class="citation"><a href="#ref-Clark_Steel_2007" role="doc-biblioref">Clark y Steel</a> (<a href="#ref-Clark_Steel_2007" role="doc-biblioref">2007</a>)</span> aclaran que la escogencia de las personas dentro de los hogares no debería ser aleatoria simple puesto que ciertos grupos poblacionales podrían estar sub-representados o sobre-presentados. En general, el muestreo en varias etapas tiene dos características esenciales que lo hacen robusto, en términos estadísticos, y eficiente al momento de planear la logística del levantamiento de información; estas son:</p>
+<ul>
+<li>La independencia: que implica que no hay ninguna correlación en el diseño de muestreo de las unidades primarias de muestreo. Esto quiere decir que en cada UPM se puede ejecutar con independencia cualquier estrategia de muestreo que se crea apropiada para seleccionar la submuestra de hogares.</li>
+<li>La invarianza: que implica que sin importar qué diseño de muestreo se ejecutó en la primera etapa para seleccionar las UPM, la segunda etapa de selección podrá ejecutarse de manera independiente de la primera etapa. Es decir, el submuestreo de los hogares es independiente del muestreo de las UPM.</li>
+</ul>
+<p>Un esquema de selección bastante usado en las encuestas de hogares de América Latina es el relacionado con los diseños auto-ponderados, lo cuales, en la primera etapa de muestreo seleccionan <span class="math inline">\(n_I\)</span> UPM con probabilidad proporcional al número de hogares que la habitan; es decir:</p>
+<p><span class="math display">\[\pi_i = Pr(U_i \in S_i) = n_I \frac{N_i}{N}\]</span></p>
+<p>En la segunda etapa de muestreo se seleccionan hogares dentro de las UPM que fueron incluidas en la etapa anterior. Esta selección de hogares se hace mediante un muestreo aleatorio simple, pero el tamaño de la submuestra es fijo para cada UPM. Es decir, no importa si una UPM es mucho más grande o más pequeña que las otras, el número de hogares que serán seleccionados será siempre el mismo. Por ejemplo, se podrían seleccionar <span class="math inline">\(n_0 = 10\)</span> hogares por UPM, siempre. De esta forma, en la segunda etapa, la probabilidad de que el <span class="math inline">\(k\)</span>-ésimo hogar sea seleccionado en la submuestra <span class="math inline">\(s_i\)</span> de la UPM <span class="math inline">\(U_i\)</span> que fue seleccionada en la muestra de la primera etapa <span class="math inline">\(s_I\)</span>, está dada por la siguiente expresión:</p>
+<p><span class="math display">\[\pi_{k|i} = Pr(k \in s_i | U_i \in s_I ) = \frac{n_0}{N_i}\]</span></p>
+<p>En los esquemas auto-ponderados, a pesar de tener dos diseños de muestreo diferentes en dos etapas (proporcional al tamaño y aleatorio simple), la probabilidad de inclusión de los hogares es siempre la misma para todos los hogares, como se puede ver en la siguiente expresión:</p>
+<p><span class="math display">\[\pi_k = \pi_{k|i} * \pi_i = \frac{n_0}{N_i} \frac{n_I* N_i}{N} = \frac{n_0*n_I}{N} = \frac{n}{N}\]</span></p>
+<p>Nótese que <span class="math inline">\(n = n_0 * n_I\)</span> corresponderá con el número total de hogares que serán seleccionados, puesto que resulta ser la multiplicación del número de UPM que fueron seleccionadas en la primera etapa por el número de hogares que serán submuestreados en cada UPM en la segunda etapa. Este tipo de esquemas se utiliza cuando se quiere controlar el trabajo de campo y las cuotas por ciudad o municipio. Por otro lado, una particularidad de las encuestas de hogares es que, casi siempre, las personas y los hogares comparten las mismas probabilidades de inclusión. La razón de esto es que, en la mayoría de encuestas, el submuestreo de las personas es exhaustivo (censo en el hogar) y por ende, la probabilidad de inclusión en el submuestreo es forzosa.
+<span class="math display">\[\pi_k^{per} = Pr(persona \in hogar) =  1\]</span></p>
+<p>Por lo anterior, se tiene que la probabilidad de inclusión de las personas en la muestra es idéntica a la del hogar:</p>
+<p><span class="math display">\[1 * \pi_{k|i} * \pi_i = 1 * \frac{n}{N} = \frac{n}{N}\]</span></p>
+</div>
+<div id="muestreo-en-dos-fases" class="section level3 unnumbered">
+<h3>Muestreo en dos fases</h3>
+<p>En algunos casos en donde el marco de muestreo contiene poca o limitada información para proponer un diseño de muestreo eficiente, el investigador puede obtener información acerca de la población para construir un nuevo marco de muestreo reducido. En la primera fase, se selecciona una muestra de tamaño grande, conocida como <em>muestra maestra</em>. Para cada uno de los elementos en esa muestra se debe obtener información sobre una o más variables auxiliares, con el fin de estratificar de mejor manera, recolectar información auxiliar en la muestra, o simplemente para obtener muestras sucesivas y comparables a lo largo del ciclo de vida de la encuesta. En la segunda fase, con la ayuda de la información obtenida en la primera fase, se selecciona una submuestra mediante un diseño de muestreo conveniente, mucho más eficiente y apropiado para estimar el fenómeno en estudio.</p>
+<p>Por ejemplo, si se requieren estimativos precisos para distintos subgrupos poblacionales, pero no existe un marco de muestreo confiable o actualizado, que permita diseñar un muestreo estratificado, entonces es necesario realizar un esquema de muestreo en dos fases. De esta forma, se selecciona uma muestra aleatoria simple de tamaño moderado. Luego, se realiza un empadronamiento de los individuos en la muestra, a los cuales se eles pregunta acerca de su memebresía a los subgrupos poblacionales de interés. Luego, en una segunda fase, con ayuda de la información recolectada en la primera fase, se realiza un diseño estratificado.</p>
+<p>Un ejemplo de este tipo de diseños de muestreo se da en el caso de México, en donde el INEGI ha planteado la construcción de una muestra maestra que permita seleccionar submuestras para las encuestas de hogares más importantes a la vez que se va recopilando información de los hogares pertenecientes a esta muestra maestra. En <span class="citation"><a href="#ref-INEGI_MX_2012" role="doc-biblioref">INEGI</a> (<a href="#ref-INEGI_MX_2012" role="doc-biblioref">2012</a>)</span>, se menciona que &lt;&lt;a partir de la construcción del Marco Maestro de Muestreo 2012, se diseñó la Muestra Maestra para lograr mantener actualizada de forma continua la información de las viviendas particulares dentro de esta muestra. El diseño de la muestra maestra consideró y respetó las UPM formadas y la estratificación con que fue construido el marco de muestreo por lo que heredó la mayoría de sus propiedades. El diseño de la Muestra Maestra está basado en la cobertura, tamaño y distribución de las encuestas continuas y periódicas del INEGI. Los tamaños de muestra en viviendas para estas encuestas junto con el promedio óptimo de viviendas a seleccionar dentro de una UPM determinaron el número de UPM a seleccionar para la Muestra Maestra 2012&gt;&gt;. De esta forma, la muestra maestra constituye un elemento esencial para el levantamiento de la Encuesta Nacional de Ocupación y Empleo, la Encuesta Nacional sobre la Confianza del Consumidor, la Encuesta Nacional de Victimización y Percepción sobre Seguridad Pública, la Encuesta Nacional de Gasto de los Hogares, entre algunas otras.</p>
+<p>En el caso de Costa Rica, la muestra de la Encuesta Nacional de Microempresas de los Hogares sigue un diseño en dos fases. La primera fase toma como base la Encuesta Nacional de hogares, en la cual se identifican aquellos hogares cuyos integrantes desarrollan actividades económicas concernientes con emprendimientos y microempresas. A partir de este listado exhaustivo, en una segunda fase, se selecciona a todas las personas al frente de estas microempresas y se les aplica un cuestionario con el fin de obtener información sobre sus características y sus actividades económicas. Por otro lado, en Chile se realiza el Estudio Nacional de la Discapacidad que asume un marco de muestreo reducido, en una primera fase, basado en la encuesta de hogares CASEN, en la cual se identifican los hogares que tienen miembros con alguna condición de discapacidad. En una segunda fase, se realiza una selección de hogares y mediante un cuestionario estructurado se indagan las características de las personas con esta condición.</p>
+</div>
+<div id="muestreo-balanceado" class="section level3" number="5.1.1">
+<h3><span class="header-section-number">5.1.1</span> Muestreo balanceado</h3>
+<p>El método del cubo permite seleccionar muestras balanceadas, manteniendo las proporciones de la población original en la muestra en diferentes variables de equilibrio, las cuales se espera que estén correlacionadas con las variables de interés. En general, el método del cubo permite la selección de una muestra aleatoria para la cual el inverso de las probabilidades de inclusión reproduce de forma exacta el total poblacional de las variables de balanceo. El método del cubo se desarrolla en dos etapas, una fase de vuelo y una fase de aterrizaje que son descritas en detalle por <span class="citation"><a href="#ref-Tille2006" role="doc-biblioref">Tillé</a> (<a href="#ref-Tille2006" role="doc-biblioref">2006</a>)</span>.</p>
+<p><span class="citation"><a href="#ref-Gutierrez_2016" role="doc-biblioref">Gutiérrez</a> (<a href="#ref-Gutierrez_2016" role="doc-biblioref">2016</a>)</span> afirma que estos autores desarrollaron un procedimiento general y riguroso que permite la extracción de muestras probabilísticas balanceadas y la posterior estimación de las cantidades de interés, enmarcados bajo métodos de inferencia basados en el diseño de muestreo. Dado que bajo un diseño de muestreo balanceado el estimador para los totales de un conjunto de variables auxiliares, debe ser igual al total poblacional de las mismas, entonces la varianza del estimador del total poblacional de la característica de interés se debe reducir de acuerdo con el aumento de su correlación con las variables auxiliares.</p>
+<p>El método del cubo se compone de dos fases: la fase de vuelo y la fase de aterrizaje. En la primera, para que las restricciones sean satisfechas exactamente, se deben redondear a cero (0) o uno (1) las probabilidades de inclusión. La fase de aterrizaje consiste en el manejo adecuado del redondeo apelando a la programación lineal. Por ejmplo, aplicando el método simplex sujeto a una función de costo relacionada con la varianza del estimador.</p>
+<p>En las encuestas de hogares es posible utilizar el algoritmo de selección del método del cubo en cada uno de los estratos conformados en el diseño de muestreo para seleccionar UPM. El método del cubo es un algoritmo de selección, que a diferencia de los algoritmos de selección tradicionales permite reproducir de forma exacta el número total de personas por grupos de edad y sexo a nivel de la UPM para este caso concreto. En Perú, la Encuesta Demográfica y de Salud Familiar utiliza este tipo de muestreo en la selección de las UPM. Por ejemplo, como variables de balanceo se podrían definir las siguientes:</p>
+<ul>
+<li>Una columna de unos para que exista balanceo en el número de UPM.</li>
+<li>El vector de probabilidades de inclusión iniciales.</li>
+<li>Total de personas por grupos de edad y sexo (a partir de la información de los censo de población) para que en la UPM se puedan reproducir de forma exacta el total personas por grupos de edad y sexo.</li>
+</ul>
+<p>Si la encuesta se realiza de forma periodica, es necesario actualizar los marcos de muestreo y los tamaños poblacionales a través de tiempo. Si es necesario, el investigador puede apoyarse en las proyecciones demográficas (nacimientos esperados, muertes esperadas y población proyectada) disponibles en fuentes oficiales.</p>
+</div>
+</div>
+<h3>Referencias</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-Clark_Steel_2007" class="csl-entry">
+Clark, R. G., y D. G. Steel. 2007. <span>«Sampling within households in household surveys»</span>. <em>Journal of the Royal Statistical Society: Series A (Statistics in Society)</em> 170 (1): 63-82.
+</div>
+<div id="ref-Gutierrez_2016" class="csl-entry">
+Gutiérrez, Hugo Andrés. 2016. <em>Estrategias de muestreo: diseño de encuestas y estimación de parámetros</em>. Segunda edición. Ediciones de la U.
+</div>
+<div id="ref-INEGI_MX_2012" class="csl-entry">
+INEGI. 2012. <span>«Metodología de la Construcción del Marco Maestro de Muestreo 2012 y del Diseño de la Muestra Maestra 2012»</span>.
+</div>
+<div id="ref-Sarndal_Swensson_Wretman_2003" class="csl-entry">
+Särndal, Carl-Erik, Bengt Swensson, y Jan Wretman. 2003. <em>Model Assisted Survey Sampling</em>. Springer Science; Business Media.
+</div>
+<div id="ref-Tille2006" class="csl-entry">
+Tillé, Yves. 2006. <em>Sampling Algorithms</em>. Springer Series en Statistics. Springer-Verlag. <a href="https://doi.org/10.1007/0-387-34240-0">https://doi.org/10.1007/0-387-34240-0</a>.
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="diseño-y-mecanismo-de-selección-de-la-muestra.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="el-diseño-de-muestreo-estándar-en-una-encuesta-de-hogares.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/psirusteam/HHS-Handbook/05Diseno.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Diseño y análisis de encuestas de hogares.pdf", "Diseño y análisis de encuestas de hogares.epub", "Diseño y análisis de encuestas de hogares.mobi"],
+"toc": {
+"collapse": "section"
+},
+"tconfig": null
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
