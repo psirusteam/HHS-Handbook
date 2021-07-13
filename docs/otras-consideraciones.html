@@ -225,7 +225,7 @@ div.csl-indent {
 <h3><span class="header-section-number">6.4.1</span> El efecto de diseño general</h3>
 <p>Suponga que el diseño muestral es estratificado con <span class="math inline">\(H\)</span> estratos; entonces por la independencia de la selección en los estratos, la varianza del estimador de un total poblacional <span class="math inline">\(t_y\)</span> está dada por</p>
 <p><span class="math display">\[
-Var\left(\widehat{t_{y,\pi}}\right)=\sum_{h=1}^{H}{{Var}_h\left(\widehat{t_{y,\pi}}\right)}
+Var\left(\widehat{t_{y,\pi}}\right)=\sum_{h=1}^{H}Var_h\left(\widehat{t_{y,\pi}}\right)
 \]</span></p>
 <p>donde</p>
 <p><span class="math display">\[
@@ -237,7 +237,7 @@ Var\left(\widehat{t_{y,\pi}}\right)=Deff \times {Var}_{MAS}\left(\widehat{t_{y,\
 \]</span></p>
 <p>De esta forma, se tiene que</p>
 <p><span class="math display">\[
-Deff=\frac{\sum_{h=1}^{H}{{Deff}_h{Var}_{MAS,h}\left(\widehat{t_{y,\pi}}\right)}}{{Var}_{MAS}\left(\widehat{t_{y,\pi}}\right)}=\frac{\sum_{h=1}^{H}{Deff}_h\frac{N_h^2}{n_h}(1-\frac{n_h}{N_h})S_{y,U_h}^2}{\frac{N^2}{n}(1-\frac{n}{N})S_{y,U}^2}
+Deff=\frac{\sum_{h=1}^{H}{{Deff}_h{Var}_{MAS,h}\left(\widehat{t_{y,\pi}}\right)}}{Var_{MAS}\left(\widehat{t_{y,\pi}}\right)}=\frac{\sum_{h=1}^{H}{Deff}_h\frac{N_h^2}{n_h}(1-\frac{n_h}{N_h})S_{y,U_h}^2}{\frac{N^2}{n}(1-\frac{n}{N})S_{y,U}^2}
 \]</span></p>
 <p>Es decir, el efecto de diseño puede ser visto como una combinación lineal de los efectos de diseño de los <span class="math inline">\(H\)</span> estratos <span class="math inline">\((Deff=\sum_{h=1}^{H}{{Deff}_hw_h})\)</span>. En donde el peso <span class="math inline">\(w_h\)</span> está dado por</p>
 <p><span class="math display">\[
