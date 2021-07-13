@@ -94,6 +94,28 @@
             "type": "book"
         },
         {
+            "ISBN": "978-0-471-69120-4",
+            "URL": "https://www.wiley.com/en-us/Statistical+Design+for+Research-p-9780471691204",
+            "author": [
+                {
+                    "family": "Kish",
+                    "given": "Leslie"
+                }
+            ],
+            "collection-title": "Wiley classic library edition",
+            "id": "Kish_2004",
+            "issued": {
+                "date-parts": [
+                    [
+                        2004
+                    ]
+                ]
+            },
+            "publisher": "Wiley",
+            "title": "Statistical design for research",
+            "type": "book"
+        },
+        {
             "DOI": "10.1198/tast.2009.0028",
             "ISSN": "0003-1305, 1537-2731",
             "author": [
@@ -280,31 +302,6 @@
             "publisher": "Springer",
             "title": "Introduction to variance estimation",
             "type": "book"
-        },
-        {
-            "DOI": "10.1198/tast.2009.0028",
-            "ISSN": "0003-1305, 1537-2731",
-            "author": [
-                {
-                    "family": "Gambino",
-                    "given": "Jack G."
-                }
-            ],
-            "container-title": "The American Statistician",
-            "id": "Gambino_2009",
-            "issue": "2",
-            "issued": {
-                "date-parts": [
-                    [
-                        2009,
-                        5
-                    ]
-                ]
-            },
-            "page": "141-146",
-            "title": "Design effect caveats",
-            "type": "article-journal",
-            "volume": "63"
         },
         {
             "author": [
@@ -2973,6 +2970,7 @@
                     "given": "Louis-Paul"
                 }
             ],
+            "container-title": "Survey Methodology",
             "id": "Baillargeon_Rivest_2011",
             "issue": "1",
             "issued": {
@@ -2982,7 +2980,7 @@
                     ]
                 ]
             },
-            "page": "53 - 65",
+            "page": "53-65",
             "title": "The construction of stratified designs in r with the package stratification",
             "type": "article-journal",
             "volume": "37"
@@ -3257,25 +3255,6 @@
             "type": "article-journal"
         },
         {
-            "ISBN": "978-92-1-161481-7",
-            "author": [
-                {
-                    "family": "UN"
-                }
-            ],
-            "collection-title": "Studies in methods / united nations, department of economic and social affairs, statistics division series f",
-            "id": "United_Nations_2005",
-            "issued": {
-                "date-parts": [
-                    [
-                        2005
-                    ]
-                ]
-            },
-            "title": "Household surveys in developing and transition countries",
-            "type": "book"
-        },
-        {
             "author": [
                 {
                     "family": "Singh",
@@ -3300,30 +3279,6 @@
             },
             "title": "A generalization of the coefficient of variation with application to suppression of imprecise estimates",
             "type": "paper-conference"
-        },
-        {
-            "ISBN": "978-0-471-13773-3",
-            "author": [
-                {
-                    "family": "Korn",
-                    "given": "Edward Lee"
-                },
-                {
-                    "family": "Graubard",
-                    "given": "Barry I."
-                }
-            ],
-            "id": "Korn_Graubard_1999",
-            "issued": {
-                "date-parts": [
-                    [
-                        1999
-                    ]
-                ]
-            },
-            "publisher": "Wiley",
-            "title": "Analysis of health surveys",
-            "type": "book"
         },
         {
             "URL": "https://www.R-project.org/",
@@ -3794,27 +3749,6 @@
             "note": "Google-Books-ID: Cf8CUMB0vUsC",
             "publisher": "Springer Science; Business Media",
             "title": "Introduction to variance estimation",
-            "type": "book"
-        },
-        {
-            "ISBN": "978-92-1-161481-7",
-            "author": [
-                {
-                    "family": "Nations",
-                    "given": "United"
-                }
-            ],
-            "collection-title": "Studies in methods / united nations, department of economic and social affairs, statistics division series f",
-            "id": "United_Nations_2005",
-            "issued": {
-                "date-parts": [
-                    [
-                        2005
-                    ]
-                ]
-            },
-            "publisher": "United Nations",
-            "title": "Household surveys in developing and transition countries",
             "type": "book"
         }
     ],

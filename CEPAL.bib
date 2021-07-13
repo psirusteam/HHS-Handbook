@@ -6,6 +6,9 @@
 
  @book{Kish_1965, title={Survey Sampling}, publisher={John Wiley and Sons}, author={Kish, Leslie}, year={1965} }
  
+  @book{Kish_2004, series={Wiley classic library edition}, title={Statistical Design for Research}, ISBN={978-0-471-69120-4}, url={https://www.wiley.com/en-us/Statistical+Design+for+Research-p-9780471691204}, publisher={Wiley}, author={Kish, Leslie}, year={2004}, collection={Wiley classic library edition} }
+
+ 
   @article{Gambino_2009, title={Design Effect Caveats}, volume={63}, ISSN={0003-1305, 1537-2731}, DOI={10.1198/tast.2009.0028}, number={2}, journal={The American Statistician}, author={Gambino, Jack G.}, year={2009}, month={May}, pages={141–146} }
 
  @book{Sarndal_Swensson_Wretman_2003, title={Model Assisted Survey Sampling}, ISBN={978-0-387-40620-6}, note={Google-Books-ID: ufdONK3E1TcC}, publisher={Springer Science and Business Media}, author={Särndal, Carl-Erik and Swensson, Bengt and Wretman, Jan}, year={2003}, month={Oct} }
@@ -19,8 +22,6 @@
  @book{Valliant_Dever_Kreuter_2018, place={Cham}, series={Statistics for Social and Behavioral Sciences}, title={Practical Tools for Designing and Weighting Survey Samples}, ISBN={978-3-319-93631-4}, url={http://link.springer.com/10.1007/978-3-319-93632-1}, DOI={10.1007/978-3-319-93632-1}, publisher={Springer International Publishing}, author={Valliant, Richard and Dever, Jill A. and Kreuter, Frauke}, year={2018}, collection={Statistics for Social and Behavioral Sciences} }
  
   @book{Wolter_2007, place={New York}, edition={2nd ed}, series={Statistics for social and behavioral sciences}, title={Introduction to variance estimation}, ISBN={978-0-387-32917-8}, publisher={Springer}, author={Wolter, Kirk M.}, year={2007}, collection={Statistics for social and behavioral sciences} }
-
-  @article{Gambino_2009, title={Design Effect Caveats}, volume={63}, ISSN={0003-1305, 1537-2731}, DOI={10.1198/tast.2009.0028}, number={2}, journal={The American Statistician}, author={Gambino, Jack G.}, year={2009}, month={May}, pages={141–146} }
 
  @book{Valliant_Dever_2017, edition={1 edition}, title={Survey Weights: A Step-by-step Guide to Calculation}, abstractNote={Survey Weights: A Step-by-Step Guide to Calculation, by Richard Valliant and Jill Dever, is an excellent reference for survey data analysts and researchers. This book details the reasons for weighting and shows how to perform different weight-adjustment methods in Stata.Topics covered include nonresponse, weight adjustment and calibration, linearized and replication-based variance estimation, multiple weights, two-phase sampling, composite estimation, and quality control when computing your own survey weights.The authors assume familiarity with Stata and some applied sampling experience and knowledge of “lite” theory, such as the concepts of with-replacement versus without-replacement sampling and single- versus multistage designs.}, publisher={Stata Press}, author={Valliant, Richard and Dever, Jill A.}, year={2017}, month={Dec} }
 
@@ -325,8 +326,9 @@ Population},
     @article{Steel_McLaren_2008, title={Design and Analysis of Repeated Surveys}, author={Steel, D. and McLaren, C.}, year={2008}}
 
      @inbook{Lewis_2017, title={Estimation Strategies Involving Pooled Survey Data}, booktitle={SAS Global Forum}, author={Lewis, Taylor}, year={2017}}
-     
-      @article{Baillargeon_Rivest_2011, title={The construction of stratified designs in R with the package stratification}, volume={37}, number={1}, author={Baillargeon, Sophie and Rivest, Louis-Paul}, year={2011}, pages={53 - 65} }
+      
+       @article{Baillargeon_Rivest_2011, title={The construction of stratified designs in R with the package stratification}, volume={37}, number={1}, journal={Survey Methodology}, author={Baillargeon, Sophie and Rivest, Louis-Paul}, year={2011}, pages={53–65} }
+
  
  @article{Ballin_Barcaroli_2013, title={Joint determination of optimal stratification and sample allocation using genetic algorithm}, volume={39}, number={2}, journal={Survey Methodology}, author={Ballin, Marco and Barcaroli, Giulio}, year={2013}, pages={369–393} }
  
@@ -350,13 +352,24 @@ Population},
    @inproceedings{Macqueen_1967, place={Berkeley, California}, title={Some methods for classification and analysis of multivariate observations}, booktitle={Proceedings of the Fifth Berkeley Symposium on Mathematical Statistics and Probability}, publisher={University of California Press}, author={Macqueen, J}, year={1967}, pages={281–297} }
 
  @article{Park_2003, title={Design Effects and Survey Planning}, author={Park, Inho}, year={2003}, pages={8} }
-
-
- @book{United_Nations_2005, place={New York, NY}, series={Studies in methods / United Nations, Department of Economic and Social Affairs, Statistics Division Series F}, title={Household surveys in developing and transition countries}, ISBN={978-92-1-161481-7}, author={UN}, year={2005}, collection={Studies in methods / United Nations, Department of Economic and Social Affairs, Statistics Division Series F}}
  
   @inproceedings{Singh_Westlake_Feder_2004, title={A generalization of the Coefficient of variation with application to suppression of imprecise estimates}, author={Singh, A. C. and Westlake, M. and Feder, M.}, year={2004} }
-
-<<<<<<< HEAD
+ 
+ @Manual{R_2019,
+    title = {R: A Language and Environment for Statistical Computing},
+    author = {{R Core Team}},
+    organization = {R Foundation for Statistical Computing},
+    address = {Vienna, Austria},
+    year = {2019},
+    url = {https://www.R-project.org/},
+  }
+  
+  @Misc{TL,
+    author = {Thomas Lumley},
+    year = {2016},
+    title = {survey: analysis of complex survey samples},
+    note = {R package version 3.32},
+  }
 
  @book{Korn_Graubard_1999, place={New York, N.Y.}, title={Analysis of health surveys}, ISBN={978-0-471-13773-3}, publisher={Wiley}, author={Korn, Edward Lee and Graubard, Barry I.}, year={1999} }
  
@@ -376,27 +389,7 @@ Population},
     note = {R package version 3.32},
   }
 
-=======
 
- @book{Korn_Graubard_1999, place={New York, N.Y.}, title={Analysis of health surveys}, ISBN={978-0-471-13773-3}, publisher={Wiley}, author={Korn, Edward Lee and Graubard, Barry I.}, year={1999} }
- 
- @Manual{R_2019,
-    title = {R: A Language and Environment for Statistical Computing},
-    author = {{R Core Team}},
-    organization = {R Foundation for Statistical Computing},
-    address = {Vienna, Austria},
-    year = {2019},
-    url = {https://www.R-project.org/},
-  }
-  
-  @Misc{TL,
-    author = {Thomas Lumley},
-    year = {2016},
-    title = {survey: analysis of complex survey samples},
-    note = {R package version 3.32},
-  }
-
->>>>>>> 5ea076cd275ce3e2f99c68190b1d8c41d7106ec9
  @Manual{STATA_2017, title={STATA Survey Data}, url={https://www.stata.com/manuals13/svy.pdf}, author={Stata}, year={2013}}
  @book{Heeringa_West_Berglund_2010, place={Boca Raton, Fla.}, series={Chapman and Hall/CRC statistics in the social and behavioral sciences series}, title={Applied survey data analysis}, ISBN={978-1-4200-8066-7}, publisher={CRC Press}, author={Heeringa, Steven G. and West, Brady T. and Berglund, Patricia A.}, year={2010}, collection={Chapman and Hall/CRC statistics in the social and behavioral sciences series} }
  
@@ -431,5 +424,3 @@ Population},
     @article{West_McCabe_2012, title={Incorporating complex sample design effects when only final survey weights are available}, volume={12}, number={4}, journal={The Stata Journal}, author={West, Brady T. and McCabe, Sean Esteban}, year={2012}, pages={718–725} }
 
   @book{Wolter_2007, title={Introduction to Variance Estimation}, ISBN={978-0-387-35099-8}, note={Google-Books-ID: Cf8CUMB0vUsC}, publisher={Springer Science and Business Media}, author={Wolter, Kirk}, year={2007} }
-  
-   @book{United_Nations_2005, place={New York, NY}, series={Studies in methods / United Nations, Department of Economic and Social Affairs, Statistics Division Series F}, title={Household surveys in developing and transition countries}, ISBN={978-92-1-161481-7}, publisher={United Nations}, author={United Nations}, year={2005}, collection={Studies in methods / United Nations, Department of Economic and Social Affairs, Statistics Division Series F} }

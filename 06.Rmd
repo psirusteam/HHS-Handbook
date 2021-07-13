@@ -229,6 +229,10 @@ Por tanto, podemos escribir la varianza $\hat{V}_\text{MAS}(\hat{\bar{y}}_{s_d})
 \end{align*}
 
 
+## Estimadores de calibración
+
+
+
 
 
 
