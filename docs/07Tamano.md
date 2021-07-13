@@ -80,13 +80,13 @@ $$
 Al despejar el tamaño muestral $n$ de la anterior expresión, se tiene que
 
 $$
-n\geq\frac{P(1-P) \ Deff}{\frac{{ME}^2}{z_{1-\alpha/2}^2}+\frac{P(1-P) \ Deff}{N}}
+n\geq\frac{P(1-P) \ Deff}{\frac{ME^2}{z_{1-\alpha/2}^2}+\frac{P(1-P) \ Deff}{N}}
 $$
 
 La cual puede ser reescrita como 
 
 $$
-n\geq\frac{P(1-P)}{\frac{{ME}^2}{Deff \ z_{1-\alpha/2}^2}+\frac{P(1-P)}{N}}
+n\geq\frac{P(1-P)}{\frac{ME^2}{Deff \ z_{1-\alpha/2}^2}+\frac{P(1-P)}{N}}
 $$
 
 Por consiguiente, se donde se evidencia que valores grandes del efecto de diseño inducirán un mayor tamaño de muestra. Claramente el incremento no es lineal, más aún, el tamaño de muestre se ve más afectado en la medida en que el $Deff$ sea más grande.
