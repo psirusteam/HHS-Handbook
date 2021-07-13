@@ -127,10 +127,10 @@ $$
 De esta forma, se tiene que
 
 $$
-Deff=\frac{\sum_{h=1}^{H}{{Deff}_h{Var}_{MAS,h}\left(\widehat{t_{y,\pi}}\right)}}{Var_{MAS}\left(\widehat{t_{y,\pi}}\right)}=\frac{\sum_{h=1}^{H}{Deff}_h\frac{N_h^2}{n_h}(1-\frac{n_h}{N_h})S_{y,U_h}^2}{\frac{N^2}{n}(1-\frac{n}{N})S_{y,U}^2}
+Deff=\frac{\sum_{h=1}^{H}Deff_h{Var}_{MAS,h}\left(\widehat{t_{y,\pi}}\right)}{Var_{MAS}\left(\widehat{t_{y,\pi}}\right)}=\frac{\sum_{h=1}^{H}Deff_h\frac{N_h^2}{n_h}(1-\frac{n_h}{N_h})S_{y,U_h}^2}{\frac{N^2}{n}(1-\frac{n}{N})S_{y,U}^2}
 $$
 
-Es decir, el efecto de diseño puede ser visto como una combinación lineal de los efectos de diseño de los $H$ estratos $(Deff=\sum_{h=1}^{H}{{Deff}_hw_h})$. En donde el peso $w_h$ está dado por
+Es decir, el efecto de diseño puede ser visto como una combinación lineal de los efectos de diseño de los $H$ estratos $(Deff=\sum_{h=1}^{H} Deff_h \ w_h)$. En donde el peso $w_h$ está dado por
 
 $$
 w_h=\frac{\frac{N_h^2}{n_h}(1-\frac{n_h}{N_h})S_{y,U_h}^2}{\frac{N^2}{n}(1-\frac{n}{N})S_{y,U}^2}

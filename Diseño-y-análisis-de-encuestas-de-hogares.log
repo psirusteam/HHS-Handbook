@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  13 JUL 2021 17:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  13 JUL 2021 17:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -831,14 +831,14 @@ File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 LaTeX Info: Redefining \. on input line 820.
 LaTeX Info: Redefining \% on input line 820.
 [55]
-<04Estratificar_files/figure-latex/unnamed-chunk-1-1.pdf, id=526, 427.5975pt x 
-174.6525pt>
+<04Estratificar_files/figure-latex/unnamed-chunk-1-1.pdf, id=526, 422.57875pt x
+ 174.6525pt>
 File: 04Estratificar_files/figure-latex/unnamed-chunk-1-1.pdf Graphic file (typ
 e pdf)
 <use 04Estratificar_files/figure-latex/unnamed-chunk-1-1.pdf>
 Package pdftex.def Info: 04Estratificar_files/figure-latex/unnamed-chunk-1-1.pd
 f  used on input line 826.
-(pdftex.def)             Requested size: 345.00148pt x 140.91609pt.
+(pdftex.def)             Requested size: 345.00798pt x 142.59236pt.
 LaTeX Info: Redefining \. on input line 849.
 LaTeX Info: Redefining \% on input line 849.
 [56 <./04Estratificar_files/figure-latex/unnamed-chunk-1-1.pdf>]
@@ -1540,7 +1540,7 @@ ic/lm/lmsy5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy7
 .pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr
 /local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
 Output written on Diseño-y-análisis-de-encuestas-de-hogares.pdf (117 pages, 1
-347856 bytes).
+347880 bytes).
 PDF statistics:
  1318 PDF objects out of 1440 (max. 8388607)
  1154 compressed objects within 12 object streams
