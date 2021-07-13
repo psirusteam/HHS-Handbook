@@ -109,7 +109,7 @@ Cuando los subgrupos de interés son agregaciones de los estratos de diseño, no
 Suponga que el diseño muestral es estratificado con $H$ estratos; entonces por la independencia de la selección en los estratos, la varianza del estimador de un total poblacional $t_y$ está dada por
 
 $$
-Var\left(\widehat{t_{y,\pi}}\right)=\sum_{h=1}^{H}{{Var}_h\left(\widehat{t_{y,\pi}}\right)}
+Var\left(\widehat{t_{y,\pi}}\right)=\sum_{h=1}^{H}Var_h\left(\widehat{t_{y,\pi}}\right)
 $$
 
 donde 
@@ -127,7 +127,7 @@ $$
 De esta forma, se tiene que
 
 $$
-Deff=\frac{\sum_{h=1}^{H}{{Deff}_h{Var}_{MAS,h}\left(\widehat{t_{y,\pi}}\right)}}{{Var}_{MAS}\left(\widehat{t_{y,\pi}}\right)}=\frac{\sum_{h=1}^{H}{Deff}_h\frac{N_h^2}{n_h}(1-\frac{n_h}{N_h})S_{y,U_h}^2}{\frac{N^2}{n}(1-\frac{n}{N})S_{y,U}^2}
+Deff=\frac{\sum_{h=1}^{H}{{Deff}_h{Var}_{MAS,h}\left(\widehat{t_{y,\pi}}\right)}}{Var_{MAS}\left(\widehat{t_{y,\pi}}\right)}=\frac{\sum_{h=1}^{H}{Deff}_h\frac{N_h^2}{n_h}(1-\frac{n_h}{N_h})S_{y,U_h}^2}{\frac{N^2}{n}(1-\frac{n}{N})S_{y,U}^2}
 $$
 
 Es decir, el efecto de diseño puede ser visto como una combinación lineal de los efectos de diseño de los $H$ estratos $(Deff=\sum_{h=1}^{H}{{Deff}_hw_h})$. En donde el peso $w_h$ está dado por
