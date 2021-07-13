@@ -63,7 +63,7 @@ Var_p(\hat{\theta}) & = DEFF(\hat{\theta}) \ Var_{MAS}(\hat{\theta}) \\
 & = DEFF(\hat{\theta}) \ \frac{N^2}{n}\left(1-\frac{n}{N}\right)S^2_{y_U}
 \end{align}
 
-Por lo tanto, si al implementar un muestreo aleatorio simple el tamaño de muestra $n_0$ es suficiente para conseguir la precisión deseada, entonces el valor del tamaño de muestra que tendrá en cuenta el efecto de aglomeración para un diseño complejo estará cercano  a $n \approx  n_0 \times DEFF$. 
+Por lo tanto, si al implementar un muestreo aleatorio simple el tamaño de muestra $n_0$ es suficiente para conseguir la precisión deseada, entonces el valor del tamaño de muestra que tendrá en cuenta el efecto de aglomeración para un diseño complejo estará cercano  a $n \approx  n_0 \times DEFF$. @United_Nations_2008 afirma que, dada esta relación, no es deseable aceptar estrategias de muestreo que induzcan efectos de diseño mayores a 2.5 o 3. Lo cual quiere decir que los equipos técnicos dentro de los INEs deben plantear esquemas en donde el efecto de diseño para los indicadores claves de la encuesta no sea grande. 
 
 En particular, para el caso de una proporción, la calidad del estimador se puede medir en términos de que con un alto nivel de confianza $(1-\alpha)$, la distancia entre el estimador y el parámetro no supere el margen de error previamente establecido (ME), esto es:
 
@@ -185,6 +185,8 @@ Por supuesto que es posible plantear otros escenarios a medida que se evalúe el
 |          40|         140|  5.7| 1059|   42366|   148282|
 |          45|         158|  6.3| 1039|   46754|   163640|
 
+Siguiendo las recomendaciones internacionales, se desestimarían los escenarios con efectos de diseño mayores a 3. 
+
 #### Ejemplo: ingreso promedio por persona  {-}
 
 Suponga que se desea estimar el ingreso promedio por hogar con un error relativo máximo del 2%. La variable de interés (ingreso) es continua y se estima que la media oscila alrededor de $\bar{y}_U=1180$ dólares con una varianza de $S^2_{y_U}=1845.94^2$.  En este caso, la población objetivo son todos los habitantes del hogar, por lo cual $r = 1$. La composición del hogar se calcula en $b = 3.79$ personas por hogar. Por último, según levantamientos anteriores, la correlación intraclase de la característica de interés es $\rho = 0.035$. Nótese que la correlación intraclase cambia con respecto a la característica que se desee medir. 
@@ -209,6 +211,7 @@ A continuación se muestran algunos resultados que permiten establecer otros esc
 |          50|         190|  7.6|  662|   33098|   125443|
 |         100|         379| 14.2|  619|   61857|   234439|
 
+Siguiendo las recomendaciones internacionales, se desestimarían los escenarios con efectos de diseño mayores a 3. 
 
 #### Ejemplo: tasa de desocupación en adultos mayores {-}
 
@@ -233,6 +236,7 @@ En este caso la muestra en los 31617 hogares induce un operativo muy grande que 
 |          50|        11.5|  8.3| 1500|   74983|    17246|
 |         100|        23.0| 16.4| 1472|  147222|    33861|
 
+Siguiendo las recomendaciones internacionales, se desestimarían los escenarios con efectos de diseño mayores a 3. 
 
 ### Tamaño de muestra para UPM y hogares
 
@@ -288,6 +292,8 @@ Para este tipo de operativos, en donde los cuestionarios de gasto de los hogares
 |          18|  3.9| 1210|   21787|
 |          20|  4.3| 1185|   23695|
 
+Siguiendo las recomendaciones internacionales, se desestimarían los escenarios con efectos de diseño mayores a 3. 
+
 #### Ejemplo: proporción de hogares sin agua potable
 
 Suponga que se desea obtener una muestra con un error relativo máximo admisible del 10% sobre la variable de interés (necesidades básicas insatisfechas en agua) y el parámetro de interés es el porcentaje de hogares con esta carencia. En este país, se estima que la proporción de hogares con esta condición asciende a $P = 7.5$%.  En este ejemplo se supone que la correlación intraclase de la característica de interés con las UPM es de $\rho_{II} = 0.045$.
@@ -311,6 +317,8 @@ A continuación se muestran algunos resultados que permiten establecer otros esc
 |          35|  2.2|  205|    7190|
 |          40|  2.3|  194|    7757|
 |          45|  2.5|  185|    8323|
+
+Siguiendo las recomendaciones internacionales, se desestimarían los escenarios con efectos de diseño mayores a 3. 
 
 ### Tamaño de muestra para UPM y personas
 
@@ -372,6 +380,8 @@ A continuación se muestran algunos resultados que permiten establecer otros esc
 |         100|            46|  2.7|  899|      41360|    89913|
 |         125|            58|  3.1|  835|      48023|   104398|
 
+Siguiendo las recomendaciones internacionales, se desestimarían los escenarios con efectos de diseño mayores a 3. 
+
 #### Ejemplo: proporción de analfabetas pobres
 
 Suponga que se quiere estimar la proporción de incidencia de la pobreza sobre la población analfabeta con un error relativo máximo admisible del 15%. Se ha estimado que alrededor del $r = 14$% de las personas del país no saben leer ni escribir. Por otro lado, tal como se vio en un ejemplo anterior, el fenómeno de la pobreza está estimado en $P = 4$%. y la correlación intraclase de la característica de interés es $\rho^e = 0.045$.
@@ -393,6 +403,7 @@ Es posible plantear otros escenarios a medida que se evalúe el efecto que conll
 |         100|          14.0|  1.6|  327|       4574|    32671|
 |         125|          17.5|  1.7|  287|       5029|    35921|
 
+Siguiendo las recomendaciones internacionales, se desestimarían los escenarios con efectos de diseño mayores a 3. 
 
 ## Otros escenarios de interés
 

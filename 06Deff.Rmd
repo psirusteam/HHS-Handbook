@@ -37,6 +37,7 @@ $$
 $$
 
 En donde $TSS=\sum_{U}{(y_k-{\bar{y}}_U)}^2$, $BSS=\sum_{U_I} N_I{({\bar{y}}_{U_I}-{\bar{y}}_U)}^2$ y $WSS=TSS-BSS$. Cuando la característica de interés $y$ es heterogénea entre los conglomerados, pero los conglomerados son homogéneos entre sí, entonces $\rho$ es cercano a 0; mientras que si los conglomerados son heterogéneos entre sí, pero homogéneos dentro de cada uno, entonces $\rho$ es cercano a 1. En este tipo de escenarios, el efecto de diseño se puede expresar de la siguiente manera
+
 $$
 DEFF = 1 + (\bar m-1)\rho
 $$
@@ -166,7 +167,7 @@ Por otro lado, para la misma encuesta PNAD, los efectos de diseño para el núme
 como se verá en los capítulos poasteriores, al conocer el valor que toma el efecto de diseño para la estimación de un parámetro de interés, es posible crear escenarios de simulación que permitan establecer el tamaño de muestra en la planeación de las encuestas de hogares. Las anteriores expresiones corresponden al número de individuos que deberían ser seleccionados en cada subgrupo de interés. Por lo tanto, estos cálculos deben ser hechos tantas veces como subgrupos de interés exista en la encuesta, adecuando cada expresión a su contraparte poblacional. Por ejemplo, si el interés está en hacer inferencia en dos estratos: el rural y el urbano, entonces se debe calcular estas expresiones dos veces, una para cada estrato. Al final, el tamaño de muestra nacional será la sumatoria de los tamaños de muestra en cada uno de los estratos del país. 
 
 
-### Efecto de la estratificación en las estrategias de muestreo
+### Descomposición del efecto de diseño en las encuestas de hogares
 
 @Park_2003 propone que el efecto de diseño de cualquier encuesta se puede descomponerse en tres partes que se relacionan entre sí de forma multiplicativa. En primer lugar está el efecto debido a la ponderación desigual, $deff^W$; en segundo lugar se encuentra el efecto debido a la estratificación, $deff^S$; y por último se tiene el efecto debido al muestreo en varias etapas, $deff^C$. Por lo tanto:
 
@@ -174,10 +175,22 @@ $$
 DEFF = deff^W \times deff^S \times deff^C
 $$
 
-Al encontrar la mejor estratificación, el equipo del INE ha permitido que la segunda componente de esta descomposición sea mínima, en cuanto se han seguido los pasos necesarios para ello y se ha escogido la estratificación en tres particiones que aseguró un menor $deff^S$ para los indicadores estudiados. Ahora, cuando el marco se entregue al área de producción estadísticas, será tarea del INE asegurar que los efectos de diseño dados por el efecto de conglomeración y el uso del muestreo en varias etapas $deff^C$ sea mínimo, así como el efecto debido al uso de factores de ponderación desiguales, $deff^W$. 
+La primera componente $deff^W$ del efecto de diseño general tiende a aumentar ligeramente la variación de las estrategias de muestreo. @Valliant_Dever_Kreuter_2018 afirman que esta componente puede ser estimada por medio de la siguiente expresión:
+$$
+deff^W = 1 + cv^2(w_k)
+$$
+En donde $cv(w_k)$ representa el coeficiente de variación de los pesos de muestreo $w_k$ de las unidades en la encuesta. Si los pesos de muestreo son uniformes, entonces no habrá un incremento significativo en la varianza de la estrategia. Es por esto que los esquemas autoponderados son deseables en los diseños de muestreo de las encuestas de hogares. Por otra parte, si los pesos de muestreo tienen una variación grande, entonces habrá un incremento significativo en la varianza y, por ende, en el tamaño de muestra. Como se verá más adelante, los ajustes en el factor de expansión pueden inducir una alta variabilidad y por consiguiente se recomienda, en la medida de lo posible, crear clases o subgrupos de ajuste para mitigar y acotar la dispersión de los pesos finales de la encuesta. 
 
-En el primer caso, se deberá estudiar, para cada encuesta y operación estadística que haga uso del marco de muestreo estratificado, la relación entre UPMs y hogares a la luz de los indicadores de interés; en particular, es necesario decidir cuántos hogares serán seleccionados en cada UPM y cuántas UPMs serán seleccionadas dentro de cada estrato. De la mima manera, en el segundo caso, también se debe decidir, a la luz de la correlación entre los indicadores particulares de cada encuesta de hogares, cuáles variables de control serán utilizadas en la calibración de los estimadores. De esta forma, en esta estrategia tripartita, se asegura que el efecto de diseño de una encuesta levantada por el INE sea pequeño. 
+Al encontrar la mejor estratificación, nos aseguramos de que la segunda componente $deff^S$ de esta descomposición sea menor a uno (es decir que la varianza se reduce). Lamentablemente, la reducción de la varianza no suele ser tan grande y no mitiga los efectos de aglomeración debido a las múltiplies etapas de los diseños de muestreo complejos. 
 
+En general, la disminución del $deff$ debido a la estratificación se matiza con el aumento del $deff$ debido a la desigualdad de los pesos de muestreo. Es por esto que $deff^C$ predomina en el efecto de diseño general y es la razón por la cual se le presta mucha atención. @United_Nations_2008 propone que, para mitigar los efectos del muestreo multietápico, se consideren las siguientes estrategias:
+
+1. Seleccionar tantas UPM como sea posible. 
+1. Definir las UPM tan pequeñas como sea posible, en términos del número de viviendas que las componen. 
+1. Seleccionar un número fijo de viviendas dentro de las UPM seleccionadas, en vez de un número variable. 
+1. Utilizar un muestreo sistemático en la UPM, en vez de seleccionar segmentos de viviendas contiguas. 
+
+Recuérdese que $deff^C = 1 + (\bar m-1)\rho$. Por tanto, habiéndose definido el marco de muestreo, en el momento del levantamiento de la información primaria, ya no se tendrá control sobre el valor de la correlación intraclase $\rho$; únicamente se tiene control sobre el número de viviendas que serán seleccionadas en promedio en las UPMS $\bar m$. Si el marco de muestreo quedó correctamente definido, entonces el valor de $\rho$ será tan pequeño como fue posible establecerlo al proponer las UPM; de la misma manera, es recomendable que el equipo técnico dentro de los INEs defina el menor número promedio posible de encuestas dentro de las UPM $\bar m$ para que el efecto de aglomeración sea mínimo. 
 
 
 

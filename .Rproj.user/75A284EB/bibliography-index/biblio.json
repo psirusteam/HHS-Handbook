@@ -251,37 +251,6 @@
             "type": "paper-conference"
         },
         {
-            "DOI": "10.1007/978-3-319-93632-1",
-            "ISBN": "978-3-319-93631-4",
-            "URL": "http://link.springer.com/10.1007/978-3-319-93632-1",
-            "author": [
-                {
-                    "family": "Valliant",
-                    "given": "Richard"
-                },
-                {
-                    "family": "Dever",
-                    "given": "Jill A."
-                },
-                {
-                    "family": "Kreuter",
-                    "given": "Frauke"
-                }
-            ],
-            "collection-title": "Statistics for social and behavioral sciences",
-            "id": "Valliant_Dever_Kreuter_2018",
-            "issued": {
-                "date-parts": [
-                    [
-                        2018
-                    ]
-                ]
-            },
-            "publisher": "Springer International Publishing",
-            "title": "Practical tools for designing and weighting survey samples",
-            "type": "book"
-        },
-        {
             "ISBN": "978-0-387-32917-8",
             "author": [
                 {
