@@ -59,4 +59,4 @@ knitr::include_graphics(path = "Pics/CClicence.png")
 
 La versión online de este libro está licenciada bajo una [Licencia Internacional de Creative Commons para compartir con atribución no comercial 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/). 
 
-Este libro es el resultado de un compendio de las experiencias internacionales prácticas adquiridas por el autor como Asesor Regional en Estadísticas Sociales de la CEPAL.
+Este libro es el resultado de un compendio de las experiencias internacionales prácticas adquiridas por el autor como Experto Regional en Estadísticas Sociales de la CEPAL.
