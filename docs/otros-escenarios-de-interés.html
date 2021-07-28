@@ -24,7 +24,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2021-07-14" />
+<meta name="date" content="2021-07-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -194,9 +194,19 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="7.5" data-path="algunas-consideraciones-adicionales.html"><a href="algunas-consideraciones-adicionales.html"><i class="fa fa-check"></i><b>7.5</b> Algunas consideraciones adicionales</a>
 <ul>
-<li class="chapter" data-level="7.5.1" data-path="algunas-consideraciones-adicionales.html"><a href="algunas-consideraciones-adicionales.html#ajustes-de-subcobertura"><i class="fa fa-check"></i><b>7.5.1</b> Ajustes de subcobertura</a></li>
-<li class="chapter" data-level="7.5.2" data-path="algunas-consideraciones-adicionales.html"><a href="algunas-consideraciones-adicionales.html#sustituciones-y-reemplazos"><i class="fa fa-check"></i><b>7.5.2</b> Sustituciones y reemplazos</a></li>
+<li class="chapter" data-level="7.5.1" data-path="algunas-consideraciones-adicionales.html"><a href="algunas-consideraciones-adicionales.html#asignación-del-tamaño-de-muestra-en-los-estratos-de-muestreo"><i class="fa fa-check"></i><b>7.5.1</b> Asignación del tamaño de muestra en los estratos de muestreo</a></li>
+<li class="chapter" data-level="7.5.2" data-path="algunas-consideraciones-adicionales.html"><a href="algunas-consideraciones-adicionales.html#ajustes-de-subcobertura"><i class="fa fa-check"></i><b>7.5.2</b> Ajustes de subcobertura</a></li>
+<li class="chapter" data-level="7.5.3" data-path="algunas-consideraciones-adicionales.html"><a href="algunas-consideraciones-adicionales.html#sustituciones-y-reemplazos"><i class="fa fa-check"></i><b>7.5.3</b> Sustituciones y reemplazos</a></li>
 </ul></li>
+</ul></li>
+<li class="part"><span><b>II Procesamiento transversal de las encuestas de hogares</b></span></li>
+<li class="chapter" data-level="8" data-path="estimación-de-parámetros.html"><a href="estimación-de-parámetros.html"><i class="fa fa-check"></i><b>8</b> Estimación de parámetros</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="estimadores-puntuales.html"><a href="estimadores-puntuales.html"><i class="fa fa-check"></i><b>8.1</b> Estimadores puntuales</a></li>
+<li class="chapter" data-level="8.2" data-path="estimación-de-las-varianzas-y-del-efecto-de-diseño-deff.html"><a href="estimación-de-las-varianzas-y-del-efecto-de-diseño-deff.html"><i class="fa fa-check"></i><b>8.2</b> Estimación de las varianzas y del efecto de diseño (DEFF)</a></li>
+<li class="chapter" data-level="8.3" data-path="estimación-estratificada.html"><a href="estimación-estratificada.html"><i class="fa fa-check"></i><b>8.3</b> Estimación estratificada</a></li>
+<li class="chapter" data-level="8.4" data-path="comparabilidad-entre-los-softwares-r-y-stata.html"><a href="comparabilidad-entre-los-softwares-r-y-stata.html"><i class="fa fa-check"></i><b>8.4</b> Comparabilidad entre los softwares <code>R</code> y <code>STATA</code></a></li>
+<li class="chapter" data-level="8.5" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html"><i class="fa fa-check"></i><b>8.5</b> Estimadores de calibración</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
 <li class="divider"></li>
@@ -224,47 +234,57 @@ div.csl-indent {
 <p>En las encuestas de hogares también surgen escenarios particulares que llevan a sugerir distintos caminos para la adopción de un determinado tamaño de muestra. En esta sección analizaremos los casos en los que se quieren realizar diferencias de proporciones, diferencias en diferencias y pruebas de hipótesis.</p>
 <div id="tamaño-de-muestra-para-la-estimación-de-la-diferencia-de-proporciones" class="section level3" number="7.4.1">
 <h3><span class="header-section-number">7.4.1</span> Tamaño de muestra para la estimación de la diferencia de proporciones</h3>
-<p>Suponga una población <span class="math inline">\(U\)</span>, que se encuentra particionada en dos subpoblaciones <span class="math inline">\(U_1\)</span> de tamaño <span class="math inline">\(N_1\)</span> y <span class="math inline">\(U_2\)</span>, de tamaño <span class="math inline">\(N_2\)</span>. El interés del investigador está en conocer la diferencia de algunas proporciones entre estos grupos. Por ejemplo, suponga que se quiere conocer la diferencia entre las proporciones de niños desnutridos por sexo. Se espera que la proporción de niños desnutridos no supere la proporción de niñas desnutridas en el grupo control. Por lo tanto, el parámetro de interés se escribe como:
-<span class="math display">\[\begin{equation}
+<p>Suponga una población <span class="math inline">\(U\)</span>, que se encuentra particionada en dos subpoblaciones <span class="math inline">\(U_1\)</span> de tamaño <span class="math inline">\(N_1\)</span> y <span class="math inline">\(U_2\)</span>, de tamaño <span class="math inline">\(N_2\)</span>. El interés del investigador está en conocer la diferencia de algunas proporciones entre estos grupos. Por ejemplo, suponga que se quiere conocer la diferencia entre las proporciones de niños desnutridos por sexo. Se espera que la proporción de niños desnutridos no supere la proporción de niñas desnutridas en el grupo control. Por lo tanto, el parámetro de interés se escribe como:</p>
+<p><span class="math display">\[
 \theta=P_1-P_2=\frac{N_{d1}}{N_1}-\frac{N_{d2}}{N_2}
-\end{equation}\]</span></p>
-<p>En donde <span class="math inline">\(N_{di}=\sum_{k\in U_i}Z_{dik}\)</span>, para <span class="math inline">\(i=1,2.\)</span> Ahora, <span class="math inline">\(Z_{dik}\)</span> es una característica dicotómica que indica si el individuo <span class="math inline">\(k\)</span>-ésimo de la subpoblación <span class="math inline">\(U_i\)</span> está en estado de desnutrición. Por supuesto, bajo muestreo aleatorio simple, un estimador insesgado para <span class="math inline">\(\theta\)</span> es
-<span class="math display">\[\begin{align}
+\]</span></p>
+<p>En donde <span class="math inline">\(N_{di}=\sum_{k\in U_i}Z_{dik}\)</span>, para <span class="math inline">\(i=1,2.\)</span> Ahora, <span class="math inline">\(Z_{dik}\)</span> es una característica dicotómica que indica si el individuo <span class="math inline">\(k\)</span>-ésimo de la subpoblación <span class="math inline">\(U_i\)</span> está en estado de desnutrición. Por supuesto, bajo muestreo aleatorio simple, un estimador insesgado para <span class="math inline">\(\theta\)</span> es</p>
+<p><span class="math display">\[
 \hat{\theta}=\hat{P}_1-\hat{P}_2=\frac{\hat{N}_{d1}}{N_1}-\frac{\hat{N}_{d2}}{N_2}
-\end{align}\]</span></p>
-<p>En donde, <span class="math inline">\(\hat{N}_{di}=\frac{N_i}{n_i}\sum_{k\in S_i}Z_{dik}\)</span>, para <span class="math inline">\(i=1,2.\)</span> La varianza del anterior estimador es:
-<span class="math display">\[\begin{align*}
-Var(\hat{P}_1-\hat{P}_2)&amp;=Var\left(\hat{P}_1\right)+Var\left(\hat{P}_2\right)-2Cov\left(\hat{P}_1, \hat{P}_2\right)
-\end{align*}\]</span></p>
+\]</span></p>
+<p>En donde, <span class="math inline">\(\hat{N}_{di}=\frac{N_i}{n_i}\sum_{k\in S_i}Z_{dik}\)</span>, para <span class="math inline">\(i=1,2.\)</span> La varianza del anterior estimador es:</p>
+<p><span class="math display">\[
+Var(\hat{\theta})=Var\left(\hat{P}_1\right)+Var\left(\hat{P}_2\right)-2Cov\left(\hat{P}_1, \hat{P}_2\right)
+\]</span></p>
 <p>Por otro lado, siendo <span class="math inline">\(T_1\)</span> y <span class="math inline">\(T_2\)</span>, el porcentaje de traslape de las subpoblaciones y la <span class="math inline">\(R_{1,2}\)</span> la correlación de Pearson entre los datos observados de ambas subpoblaciones, la covarianza entre este par de estimadores está determinada por la siguiente relación <span class="citation">(<a href="#ref-Kish_2004" role="doc-biblioref">Kish 2004</a>)</span>:</p>
 <p><span class="math display">\[
-Cov(\hat{\theta}_1, \hat{\theta}_2) = \sqrt{Var(\hat{\theta}_1)}\sqrt{Var(\hat{\theta}_2)}\sqrt{T_1}\sqrt{T_2}R_{1,2}
+Cov(\hat{P}_1, \hat{P}_2) = \sqrt{Var(\hat{\theta}_1)}\sqrt{Var(\hat{\theta}_2)}\sqrt{T_1}\sqrt{T_2}R_{1,2}
 \]</span></p>
 <p>Ahora, para encontrar el tamaño de muestra óptimo, es útil realizar los siguientes supuestos:</p>
 <ol style="list-style-type: decimal">
 <li>Asumir que las subpoblaciones son grandes y por ende <span class="math inline">\(N_1=N_2=N\)</span>.</li>
 <li>Por lo anterior, asumir que los tamaños de muestra pueden ser iguales, tales que <span class="math inline">\(n_1=n_2=n\)</span>.</li>
 </ol>
-<p>Nótese a su vez que, si el levantamiento de las observaciones no puede ser realizado utilizando muestreo aleatorio simple, sino que por el contrario, la muestra aleatoria fue seleccionada mediante un diseño de muestreo complejo con un efecto de diseño<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a> <span class="math inline">\((DEFF)\)</span> no ignorable y mayor a uno, entonces la varianza tomaría la siguiente forma
-<span class="math display">\[\begin{align}
-Var(\hat{P}_1-\hat{P}_2)=\frac{DEFF}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2) * \sqrt{T_1}\sqrt{T_2}R_{1,2}
-\end{align}\]</span></p>
-<p>De esta manera, un intervalo de confianza del 95% para la diferencia de proporciones está dado por
-<span class="math display">\[\begin{align}
-IC(95\%)_{P_1-P_2}&amp;=(\hat{P}_1-\hat{P}_2) \pm Z_{1-\alpha/2} \sqrt{\frac{DEFF}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)* \sqrt{T_1}\sqrt{T_2}R_{1,2}}
-\end{align}\]</span></p>
-<p>Lo anterior quiere decir que el margen de error, <span class="math inline">\(e\)</span>, de la encuesta debe ser tal que:
-<span class="math display">\[\begin{align}
-e&lt; Z_{1-\alpha/2}\sqrt{\frac{DEFF}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)* \sqrt{T_1}\sqrt{T_2}R_{1,2}}
-\end{align}\]</span></p>
-<p>Por lo tanto, despejando <span class="math inline">\(n\)</span>, se tiene que la muestra en cada subgrupo debe mayor que:
-<span class="math display">\[\begin{align}
- n&gt; \dfrac{DEFF(P_1Q_1+P_2Q_2)* \sqrt{T_1}\sqrt{T_2}R_{1,2}}{\dfrac{e^2}{Z_{1-\alpha/2}^2}+\dfrac{DEFF(P_1Q_1+P_2Q_2)* \sqrt{T_1}\sqrt{T_2}R_{1,2}}{N}}
- \end{align}\]</span></p>
-<p>Para el levantamiento de una línea de base, que quiera estimar una diferencia de proporciones <span class="math inline">\(P_1-P_2\)</span> (donde <span class="math inline">\(Q_1=1-P_1\)</span> y <span class="math inline">\(Q_2=1-P_2\)</span>), entonces el tamaño de muestra mínimo necesario para lograr una estimación confiable de esta diferencia, con menos de <span class="math inline">\(\varepsilon\%\)</span> de error, es:</p>
-<p><span class="math display">\[\begin{equation} 
-n \geq \dfrac{(P_1Q_1+P_2Q_2)DEFF* \sqrt{T_1}\sqrt{T_2}R_{1,2}}{\dfrac{\varepsilon^2}{z_{\alpha}^2}+\dfrac{(P_1Q_1+P_2Q_2)DEFF* \sqrt{T_1}\sqrt{T_2}R_{1,2}}{N}}
-\end{equation}\]</span></p>
+<p>Nótese a su vez que, si el levantamiento de las observaciones no puede ser realizado utilizando muestreo aleatorio simple, sino que por el contrario, la muestra aleatoria fue seleccionada mediante un diseño de muestreo complejo con un efecto de diseño<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a> <span class="math inline">\((Deff)\)</span> no ignorable y mayor a uno, entonces la varianza tomaría la siguiente forma</p>
+<p><span class="math display">\[
+Var(\hat{\theta})=\frac{Deff}{n}\left(1-\frac{n}{N}\right)S^2_{\theta}
+\]</span></p>
+<p>En donde</p>
+<p><span class="math display">\[
+S^2_{\theta} = P_1Q_1+P_2Q_2 - 2 \sqrt{T_1}\sqrt{T_2}R_{1,2} \sqrt{P_1Q_1}\sqrt{P_2Q_2}
+\]</span>
+De esta manera, un intervalo de confianza del 95% para la diferencia de proporciones está dado por</p>
+<p><span class="math display">\[
+IC(95\%)_{\theta}=\hat{\theta} \pm Z_{1-\alpha/2} \sqrt{\frac{Deff}{n}\left(1-\frac{n}{N}\right)S^2_{\theta}}
+\]</span></p>
+<p>Lo anterior quiere decir que el margen de error, <span class="math inline">\(e\)</span>, de la encuesta debe ser tal que:</p>
+<p><span class="math display">\[
+e&lt; Z_{1-\alpha/2}\sqrt{\frac{Deff}{n}\left(1-\frac{n}{N}\right)S^2_{\theta}}
+\]</span></p>
+<p>Por lo tanto, despejando <span class="math inline">\(n\)</span>, se tiene que la muestra en cada subgrupo debe mayor que:</p>
+<p><span class="math display">\[
+ n&gt; \dfrac{Deff \ S^2_{\theta}}{\dfrac{e^2}{Z_{1-\alpha/2}^2}+\dfrac{Deff \ S^2_{\theta}}{N}}
+\]</span></p>
+<p>Para el levantamiento de una línea de base, que quiera estimar una diferencia de proporciones <span class="math inline">\(P_1-P_2\)</span> (donde <span class="math inline">\(Q_1=1-P_1\)</span> y <span class="math inline">\(Q_2=1-P_2\)</span>), entonces el tamaño de muestra mínimo<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a> necesario para lograr una estimación confiable de esta diferencia, con menos de <span class="math inline">\(\varepsilon\%\)</span> de error, es:</p>
+<p><span class="math display">\[
+n \geq \dfrac{(P_1Q_1+P_2Q_2) \ Deff \ S^2_{\theta}}{\dfrac{\varepsilon^2}{z_{\alpha}^2}+\dfrac{(P_1Q_1+P_2Q_2) \ Deff \ S^2_{\theta}}{N}}
+\]</span></p>
+<p>Nótese que dependiendo de los pocentajes de traslape <span class="math inline">\(\sqrt{T_1}\)</span>, <span class="math inline">\(\sqrt{T_2}\)</span> y de la correlación de la característica de interés en ambas subpoblaciones <span class="math inline">\(R_{1,2}\)</span>, la varianza <span class="math inline">\(S^2_{\theta}\)</span> tomará diferentes formas, como se detalla a continuación:</p>
+<ol style="list-style-type: decimal">
+<li>Si no hay traslape, <span class="math inline">\(T_1 = T_2 = 0\)</span>, y <span class="math inline">\(S^2_{\theta} = P_1Q_1+P_2Q_2\)</span>.</li>
+<li>Si hay traslape completo, <span class="math inline">\(T_1 = T_2 = 1\)</span> y <span class="math inline">\(S^2_{\theta} = P_1Q_1+P_2Q_2 - 2 R_{1,2} \sqrt{P_1Q_1}\sqrt{P_2Q_2}\)</span>.</li>
+<li>Si hay traslape parcial y balanceo, <span class="math inline">\(T_1 = T_2 = T\)</span> y si además se considera que las varianzas en cada subgrupo o periodo son similares <span class="math inline">\(P_1Q_1 = P_2Q_2 = PQ\)</span>, entonces <span class="math inline">\(S^2_{\theta} = 2PQ (1- TR_{1,2})\)</span>.</li>
+</ol>
 <div id="covarianza-en-comparaciones-mensuales" class="section level4 unnumbered">
 <h4>Covarianza en comparaciones mensuales</h4>
 <p>Suponga que se quiere comparar la tasa de desempleo nacional entre dos meses consecutivos. En este escenario, asumiendo que existe independencia en el muestreo de los dos meses consecutivos, el porcentaje de traslape de muestra entre los dos meses (que por diseño es nulo) es igual a cero. Por lo tanto, <span class="math inline">\(T_1 = T_2 = 0\)</span>. Luego, el término de la covarianza se anula. En resumen, la varianza del estimador en este caso sería igual a:</p>
@@ -301,13 +321,17 @@ Var(\hat{d})
 <div id="tamaño-de-muestra-para-la-estimación-del-impacto-en-dos-mediciones-longitudinales" class="section level3" number="7.4.2">
 <h3><span class="header-section-number">7.4.2</span> Tamaño de muestra para la estimación del impacto en dos mediciones longitudinales</h3>
 <p>Para las encuestas que planean un seguimiento panel o de panel rotativo, es posible contemplar escenarios en los que se quiera estimar el efecto de una intervención, definido como la diferencia en diferencias de las proporciones de interés. De esta forma, el efecto se define como:</p>
-<p><span class="math display">\[\begin{equation}
-Efecto =(P_{1,1}-P_{2,1})-(P_{1,2}-P_{2, 2})
-\end{equation}\]</span></p>
-<p>En donde <span class="math inline">\(P_{i,j}\)</span> <span class="math inline">\((i, j = 1, 2.)\)</span> corresponden a las proporciones del grupo <span class="math inline">\(i\)</span> en la oleada <span class="math inline">\(j\)</span>. Entonces el tamaño de muestra mínimo<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a> necesario para lograr una estimación confiable de esta diferencia, con menos de <span class="math inline">\(\varepsilon \%\)</span> de error, es:</p>
-<p><span class="math display">\[\begin{equation} 
-n \geq \dfrac{(P_{1,SO}Q_{1,SO}+P_{1,LB}Q_{1,LB}+P_{2,SO}Q_{2,SO}+P_{2,LB}Q_{2,LB})(1-TR)DEFF}{\dfrac{\varepsilon^2}{z_{\alpha}^2}+\dfrac{(P_{1,SO}Q_{1,SO}+P_{1,LB}Q_{1,LB}+P_{2,SO}Q_{2,SO}+P_{2,LB}Q_{2,LB})(1-TR_{1,2})DEFF}{N}}
-\end{equation}\]</span></p>
+<p><span class="math display">\[
+\theta = (P_{1,1}-P_{2,1})-(P_{1,2}-P_{2, 2})
+\]</span></p>
+<p>En donde <span class="math inline">\(P_{i,j}\)</span> <span class="math inline">\((i, j = 1, 2.)\)</span> corresponden a las proporciones del grupo <span class="math inline">\(i\)</span> en la oleada <span class="math inline">\(j\)</span>. Entonces el tamaño de muestra mínimo<a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a> necesario para lograr una estimación confiable de esta diferencia, con menos de <span class="math inline">\(\varepsilon \%\)</span> de error, es:</p>
+<p><span class="math display">\[
+n \geq \dfrac{Deff \ S^2_{\theta}}{\dfrac{\varepsilon^2}{z_{\alpha}^2}+\dfrac{Deff \ S^2_{\theta}}{N}}
+\]</span></p>
+<p>En donde</p>
+<p><span class="math display">\[
+S^2_{\theta} = (P_{1,1}Q_{1,1}+P_{1,2}Q_{1,2}+P_{2,1}Q_{2,1}+P_{2,2}Q_{2,2})(1-TR)
+\]</span></p>
 <p>En donde <span class="math inline">\(T\)</span> corresponde a la tasa de traslape (<span class="math inline">\(T=1\)</span> corresponde a un panel completo, <span class="math inline">\(T=0.5\)</span> a un semi-panel con traslape del 50% y el caso extremo <span class="math inline">\(T=0\)</span> a una encuesta en donde no hay traslape) y <span class="math inline">\(R_{1,2}\)</span> se define como la correlación entre las dos oleadas (<span class="math inline">\(R=0\)</span> implica que no hay correlación entre los dos momentos, <span class="math inline">\(R=-1\)</span> implica una máxima correlación negativa entre los dos momentos y <span class="math inline">\(R=1\)</span> implica una correlación positiva máxima entre los dos momentos).</p>
 <p>Por ejemplo, en una encuesta de fuerza laboral intermediada por alguna intervención gubernamental, puede ser de interés la evaluación del efecto de esa política de asistencia laboral entre hombres y mujeres en dos periodos de tiempo.</p>
 </div>
@@ -322,27 +346,27 @@ H_o: P_1-P_2=0 \ \ \ \ \ vs.  \ \ \ \ \ H_a: P_1 -P_2 =D &gt; 0
 <span class="math display">\[\begin{align*}
 \dfrac{\hat{P}_1-\hat{P}_2}{\sqrt{Var(\hat{P}_1-\hat{P}_2)}} &gt; Z_{1-\alpha}
 \end{align*}\]</span></p>
-<p>Si las características del estudio implican que el diseño de muestreo es complejo con un <span class="math inline">\(DEFF &gt; 1\)</span>, entonces esta regla de decisión rechaza la hipótesis nula si
+<p>Si las características del estudio implican que el diseño de muestreo es complejo con un <span class="math inline">\(Deff &gt; 1\)</span>, entonces esta regla de decisión rechaza la hipótesis nula si
 <span class="math display">\[\begin{align*}
-\dfrac{\hat{P}_1-\hat{P}_2}{\sqrt{\frac{DEFF}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)}} &gt; Z_{1-\alpha}
+\dfrac{\hat{P}_1-\hat{P}_2}{\sqrt{\frac{Deff}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)}} &gt; Z_{1-\alpha}
 \end{align*}\]</span></p>
 <p>En este caso, es necesario controlar la probabilidad de cometer el error tipo 2 (aceptar una hipótesis nula, dado que ésta es falsa). A esta probabilidad se le conoce como *potencia} y, suponiendo que nuestro interés está en <span class="math inline">\(P_1 -P_2 =D\)</span>, está dada por</p>
 <p><span class="math display">\[\begin{align*}
-\beta &amp;\leq Pr\left(\dfrac{\hat{P}_1-\hat{P}_2}{\sqrt{\frac{DEFF}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)}} &gt; Z_{1-\alpha} \left. | \right. P_1 -P_2 =D \right)\\
-&amp;= Pr\left(\dfrac{(\hat{P}_1-\hat{P}_2)-D}{\sqrt{\frac{DEFF}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)}} &gt; Z_{1-\alpha} - \dfrac{D}{\sqrt{\frac{DEFF}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)}} \right)\\
-&amp;= 1-\Phi\left(Z_{1-\alpha} - \dfrac{D}{\sqrt{\frac{DEFF}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)}} \right)
+\beta &amp;\leq Pr\left(\dfrac{\hat{P}_1-\hat{P}_2}{\sqrt{\frac{Deff}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)}} &gt; Z_{1-\alpha} \left. | \right. P_1 -P_2 =D \right)\\
+&amp;= Pr\left(\dfrac{(\hat{P}_1-\hat{P}_2)-D}{\sqrt{\frac{Deff}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)}} &gt; Z_{1-\alpha} - \dfrac{D}{\sqrt{\frac{Deff}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)}} \right)\\
+&amp;= 1-\Phi\left(Z_{1-\alpha} - \dfrac{D}{\sqrt{\frac{Deff}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)}} \right)
 \end{align*}\]</span></p>
 <p>Por lo anterior, se tiene que
 <span class="math display">\[\begin{align*}
-1-\beta \geq \Phi\left(Z_{1-\alpha} - \dfrac{D}{\sqrt{\frac{DEFF}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)}} \right)
+1-\beta \geq \Phi\left(Z_{1-\alpha} - \dfrac{D}{\sqrt{\frac{Deff}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)}} \right)
 \end{align*}\]</span></p>
 <p>Entonces,
 <span class="math display">\[\begin{align*}
-Z_{1-\beta}&amp; \leq Z_{1-\alpha} - \dfrac{D}{\sqrt{\frac{DEFF}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)}} 
+Z_{1-\beta}&amp; \leq Z_{1-\alpha} - \dfrac{D}{\sqrt{\frac{Deff}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)}} 
 \end{align*}\]</span></p>
 <p>En consecuencia, al despejar <span class="math inline">\(n\)</span>, se tiene que la muestra en cada subgrupo debe mayor que:
 <span class="math display">\[\begin{align}
-n \geq \dfrac{DEFF(P_1Q_1+P_2Q_2)}{\dfrac{D^2}{(Z_{1-\alpha}+Z_{\beta})^2}+\dfrac{DEFF(P_1Q_1+P_2Q_2)}{N}}
+n \geq \dfrac{Deff(P_1Q_1+P_2Q_2)}{\dfrac{D^2}{(Z_{1-\alpha}+Z_{\beta})^2}+\dfrac{Deff(P_1Q_1+P_2Q_2)}{N}}
  \end{align}\]</span></p>
 </div>
 </div>
@@ -355,8 +379,9 @@ n \geq \dfrac{DEFF(P_1Q_1+P_2Q_2)}{\dfrac{D^2}{(Z_{1-\alpha}+Z_{\beta})^2}+\dfra
 <div class="footnotes">
 <hr />
 <ol start="7">
-<li id="fn7"><p>Recuerde que si el muestreo es aleatorio simple, el efecto de diseño es <span class="math inline">\(DEFF=1\)</span>.<a href="otros-escenarios-de-interés.html#fnref7" class="footnote-back">↩︎</a></p></li>
-<li id="fn8"><p>Note que el tamaño de muestra de toda la encuesta es <span class="math inline">\(4n\)</span>, en las dos oleadas, puesto que se debe seleccionar <span class="math inline">\(n\)</span> elementos en cada grupo.<a href="otros-escenarios-de-interés.html#fnref8" class="footnote-back">↩︎</a></p></li>
+<li id="fn7"><p>Recuerde que si el muestreo es aleatorio simple, el efecto de diseño es <span class="math inline">\(Deff=1\)</span>.<a href="otros-escenarios-de-interés.html#fnref7" class="footnote-back">↩︎</a></p></li>
+<li id="fn8"><p>Note que el tamaño de muestra de toda la encuesta es <span class="math inline">\(2n\)</span>, puesto que se debe seleccionar <span class="math inline">\(n\)</span> elementos en cada subgrupo.<a href="otros-escenarios-de-interés.html#fnref8" class="footnote-back">↩︎</a></p></li>
+<li id="fn9"><p>Note que el tamaño de muestra de toda la encuesta es <span class="math inline">\(4n\)</span>, en las dos oleadas, puesto que se debe seleccionar <span class="math inline">\(n\)</span> elementos en cada grupo.<a href="otros-escenarios-de-interés.html#fnref9" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

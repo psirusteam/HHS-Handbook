@@ -24,7 +24,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2021-07-14" />
+<meta name="date" content="2021-07-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -194,9 +194,19 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="7.5" data-path="algunas-consideraciones-adicionales.html"><a href="algunas-consideraciones-adicionales.html"><i class="fa fa-check"></i><b>7.5</b> Algunas consideraciones adicionales</a>
 <ul>
-<li class="chapter" data-level="7.5.1" data-path="algunas-consideraciones-adicionales.html"><a href="algunas-consideraciones-adicionales.html#ajustes-de-subcobertura"><i class="fa fa-check"></i><b>7.5.1</b> Ajustes de subcobertura</a></li>
-<li class="chapter" data-level="7.5.2" data-path="algunas-consideraciones-adicionales.html"><a href="algunas-consideraciones-adicionales.html#sustituciones-y-reemplazos"><i class="fa fa-check"></i><b>7.5.2</b> Sustituciones y reemplazos</a></li>
+<li class="chapter" data-level="7.5.1" data-path="algunas-consideraciones-adicionales.html"><a href="algunas-consideraciones-adicionales.html#asignación-del-tamaño-de-muestra-en-los-estratos-de-muestreo"><i class="fa fa-check"></i><b>7.5.1</b> Asignación del tamaño de muestra en los estratos de muestreo</a></li>
+<li class="chapter" data-level="7.5.2" data-path="algunas-consideraciones-adicionales.html"><a href="algunas-consideraciones-adicionales.html#ajustes-de-subcobertura"><i class="fa fa-check"></i><b>7.5.2</b> Ajustes de subcobertura</a></li>
+<li class="chapter" data-level="7.5.3" data-path="algunas-consideraciones-adicionales.html"><a href="algunas-consideraciones-adicionales.html#sustituciones-y-reemplazos"><i class="fa fa-check"></i><b>7.5.3</b> Sustituciones y reemplazos</a></li>
 </ul></li>
+</ul></li>
+<li class="part"><span><b>II Procesamiento transversal de las encuestas de hogares</b></span></li>
+<li class="chapter" data-level="8" data-path="estimación-de-parámetros.html"><a href="estimación-de-parámetros.html"><i class="fa fa-check"></i><b>8</b> Estimación de parámetros</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="estimadores-puntuales.html"><a href="estimadores-puntuales.html"><i class="fa fa-check"></i><b>8.1</b> Estimadores puntuales</a></li>
+<li class="chapter" data-level="8.2" data-path="estimación-de-las-varianzas-y-del-efecto-de-diseño-deff.html"><a href="estimación-de-las-varianzas-y-del-efecto-de-diseño-deff.html"><i class="fa fa-check"></i><b>8.2</b> Estimación de las varianzas y del efecto de diseño (DEFF)</a></li>
+<li class="chapter" data-level="8.3" data-path="estimación-estratificada.html"><a href="estimación-estratificada.html"><i class="fa fa-check"></i><b>8.3</b> Estimación estratificada</a></li>
+<li class="chapter" data-level="8.4" data-path="comparabilidad-entre-los-softwares-r-y-stata.html"><a href="comparabilidad-entre-los-softwares-r-y-stata.html"><i class="fa fa-check"></i><b>8.4</b> Comparabilidad entre los softwares <code>R</code> y <code>STATA</code></a></li>
+<li class="chapter" data-level="8.5" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html"><i class="fa fa-check"></i><b>8.5</b> Estimadores de calibración</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
 <li class="divider"></li>
@@ -223,17 +233,17 @@ div.csl-indent {
 <h2><span class="header-section-number">7.2</span> El efecto de diseño en la determinación del tamaño de muestra</h2>
 <p>Al momento diseñar un estudio por muestreo con encuestas de hogares, es importante establecer el número mínimo de encuestas que se deben realizar. Esto es necesario para determinar el costo del estudio; y en el aspecto técnico, permite tener control desde la fase de diseño sobre la calidad estadística de los resultados esperados en el estudio. Como se mencionó anteriormente, esta calidad puede ser medida en términos del error muestral, con indicadores tales como el margen de error absoluto, el margen de error relativo o el coeficiente de variación. Estas medidas todas dependen de la varianza del estimador bajo el diseño muestral complejo; por lo tanto, contar con un valor aproximado para el efecto de diseño <span class="math inline">\(Deff\)</span> nos permite obtener una aproximación a dicha varianza, y acercarnos al error muestral del estudio en la fase del diseño.</p>
 <p>Uno de los primeros paradigmas con el que se debe lidiar es el de la independencia entre las observaciones. Este es un supuesto que gobierna gran parte de la teoría de análisis estadístico, pero que infortunadamente no se aplica en el contexto de las encuestas de hogares. Ante los retos que se debe enfrentar y las diversas estrategias de recolección de información, las fórmulas que se desprenden del supuesto de que los observaciones corresponden a una muestra de variables independientes e idénticamente distribuidas no son plausibles.</p>
-<p>La estratificación, las múltiples etapas y la aglomeración de las unidades de muestreo hacen que este supuesto no se cumpla en la práctica y por tanto, utilizar las expresiones tradicionales que se encuentran en los libros introductorios de estadística guiará a tamaños de muestra insuficientes. El problema del tamaño de muestra en encuestas de hogares ha sido abordado por diferentes autores con diferentes enfoques. Quizás uno de los más aceptados es aquel que define un factor de ajuste, llamado efecto de diseño (DEFF), en función de la correlación que hay entre la variable de interés con las unidades primarias de muestreo. A partir de este efecto de diseño se calcula el número de personas que deben ser encuestadas para minimizar un error de muestreo predefinido.</p>
+<p>La estratificación, las múltiples etapas y la aglomeración de las unidades de muestreo hacen que este supuesto no se cumpla en la práctica y por tanto, utilizar las expresiones tradicionales que se encuentran en los libros introductorios de estadística guiará a tamaños de muestra insuficientes. El problema del tamaño de muestra en encuestas de hogares ha sido abordado por diferentes autores con diferentes enfoques. Quizás uno de los más aceptados es aquel que define un factor de ajuste, llamado efecto de diseño (Deff), en función de la correlación que hay entre la variable de interés con las unidades primarias de muestreo. A partir de este efecto de diseño se calcula el número de personas que deben ser encuestadas para minimizar un error de muestreo predefinido.</p>
 <p>Cuando para la población de interés, se selecciona una muestra utilizando un diseño de muestreo de conglomerados o en varias etapas, no es imposible afirmar que existe independencia entre las observaciones. Lo anterior hace que no sea posible utilizar las fórmulas clásicas para la determinación de un tamaño de muestra, al considerar un diseño de muestreo aleatorio simple. Sin embargo, una forma sencilla de incorporar este efecto de aglomeración en las expresiones clásicas del muestreo aleatorio simple la da la siguiente relación, denotada como efecto de diseño:</p>
 <p><span class="math display">\[\begin{equation}
-DEFF(\hat{\theta})=\frac{Var_p(\hat{\theta})}{Var_{MAS}(\hat{\theta})}
+Deff(\hat{\theta})=\frac{Var_p(\hat{\theta})}{Var_{MAS}(\hat{\theta})}
 \end{equation}\]</span></p>
 <p>Esta cifra da cuenta del efecto de aglomeración causado por la utilización de un diseño de muestreo cualquiera <span class="math inline">\((p)\)</span>, frente a un diseño de muestreo aleatorio simple (MAS) en la inferencia de un parámetro de la población finita <span class="math inline">\(\theta\)</span> (que puede ser un total, una proporción, una razón, un coeficiente de regresión, etc.). Por lo anterior, es posible escribir la varianza del estimador bajo el diseño de muestreo complejo como</p>
 <p><span class="math display">\[\begin{align}
-Var_p(\hat{\theta}) &amp; = DEFF(\hat{\theta}) \ Var_{MAS}(\hat{\theta}) \\
-&amp; = DEFF(\hat{\theta}) \ \frac{N^2}{n}\left(1-\frac{n}{N}\right)S^2_{y_U}
+Var_p(\hat{\theta}) &amp; = Deff(\hat{\theta}) \ Var_{MAS}(\hat{\theta}) \\
+&amp; = Deff(\hat{\theta}) \ \frac{N^2}{n}\left(1-\frac{n}{N}\right)S^2_{y_U}
 \end{align}\]</span></p>
-<p>Por lo tanto, si al implementar un muestreo aleatorio simple el tamaño de muestra <span class="math inline">\(n_0\)</span> es suficiente para conseguir la precisión deseada, entonces el valor del tamaño de muestra que tendrá en cuenta el efecto de aglomeración para un diseño complejo estará cercano a <span class="math inline">\(n \approx n_0 \times DEFF\)</span>. <span class="citation"><a href="#ref-United_Nations_2008" role="doc-biblioref">UN</a> (<a href="#ref-United_Nations_2008" role="doc-biblioref">2008</a>)</span> afirma que, dada esta relación, no es deseable aceptar estrategias de muestreo que induzcan efectos de diseño mayores a 2.5 o 3. Lo cual quiere decir que los equipos técnicos dentro de los INEs deben plantear esquemas en donde el efecto de diseño para los indicadores claves de la encuesta no sea grande.</p>
+<p>Por lo tanto, si al implementar un muestreo aleatorio simple el tamaño de muestra <span class="math inline">\(n_0\)</span> es suficiente para conseguir la precisión deseada, entonces el valor del tamaño de muestra que tendrá en cuenta el efecto de aglomeración para un diseño complejo estará cercano a <span class="math inline">\(n \approx n_0 \times Deff\)</span>. <span class="citation"><a href="#ref-United_Nations_2008" role="doc-biblioref">UN</a> (<a href="#ref-United_Nations_2008" role="doc-biblioref">2008</a>)</span> afirma que, dada esta relación, no es deseable aceptar estrategias de muestreo que induzcan efectos de diseño mayores a 2.5 o 3. Lo cual quiere decir que los equipos técnicos dentro de los INEs deben plantear esquemas en donde el efecto de diseño para los indicadores claves de la encuesta no sea grande.</p>
 <p>En particular, para el caso de una proporción, la calidad del estimador se puede medir en términos de que con un alto nivel de confianza <span class="math inline">\((1-\alpha)\)</span>, la distancia entre el estimador y el parámetro no supere el margen de error previamente establecido (ME), esto es:</p>
 <p><span class="math display">\[
 1-\alpha=\Pr\left(|\hat{P}-P|&lt;ME\right)

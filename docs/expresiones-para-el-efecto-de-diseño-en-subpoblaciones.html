@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es" xml:lang="es">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>8.5 Expresiones para el efecto de diseño en subpoblaciones | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
+  <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="8.5 Expresiones para el efecto de diseño en subpoblaciones | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
+  <meta name="github-repo" content="psirusteam/HHS-Handbook" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="8.5 Expresiones para el efecto de diseño en subpoblaciones | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
+  
+  <meta name="twitter:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
+  
+
+<meta name="author" content="Andrés Gutiérrez" />
+
+
+<meta name="date" content="2021-07-14" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="comparabilidad-entre-los-softwares-r-y-stata.html"/>
+<link rel="next" href="estimadores-de-calibración.html"/>
+<script src="libs/header-attrs-2.8/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Diseño y análisis de encuestas de hogares</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefacio</a></li>
+<li class="chapter" data-level="" data-path="resumen.html"><a href="resumen.html"><i class="fa fa-check"></i>Resumen</a></li>
+<li class="chapter" data-level="1" data-path="introducción.html"><a href="introducción.html"><i class="fa fa-check"></i><b>1</b> Introducción</a>
+<ul>
+<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html#objetivos-de-desarrollo-sostenible"><i class="fa fa-check"></i>Objetivos de Desarrollo Sostenible</a></li>
+<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html#mercado-de-trabajo"><i class="fa fa-check"></i>Mercado de Trabajo</a></li>
+<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html#ingresos-y-gastos"><i class="fa fa-check"></i>Ingresos y gastos</a></li>
+<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html#esquema-del-documento"><i class="fa fa-check"></i>Esquema del documento</a></li>
+</ul></li>
+<li class="part"><span><b>I Diseño estadístico de las encuestas de hogares</b></span></li>
+<li class="chapter" data-level="2" data-path="elementos-básicos-y-planeación.html"><a href="elementos-básicos-y-planeación.html"><i class="fa fa-check"></i><b>2</b> Elementos básicos y planeación</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="universo-muestra-y-unidades.html"><a href="universo-muestra-y-unidades.html"><i class="fa fa-check"></i><b>2.1</b> Universo, muestra y unidades</a></li>
+<li class="chapter" data-level="2.2" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html"><i class="fa fa-check"></i><b>2.2</b> Periodicidad en el tiempo</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-transversales"><i class="fa fa-check"></i><b>2.2.1</b> Encuestas transversales</a></li>
+<li class="chapter" data-level="2.2.2" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-repetidas"><i class="fa fa-check"></i><b>2.2.2</b> Encuestas repetidas</a></li>
+<li class="chapter" data-level="2.2.3" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-panel"><i class="fa fa-check"></i><b>2.2.3</b> Encuestas panel</a></li>
+<li class="chapter" data-level="2.2.4" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-de-panel-dividido"><i class="fa fa-check"></i><b>2.2.4</b> Encuestas de panel dividido</a></li>
+<li class="chapter" data-level="2.2.5" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-de-panel-rotativo"><i class="fa fa-check"></i><b>2.2.5</b> Encuestas de panel rotativo</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="rotación-de-paneles.html"><a href="rotación-de-paneles.html"><i class="fa fa-check"></i><b>2.3</b> Rotación de paneles</a></li>
+<li class="chapter" data-level="2.4" data-path="parámetros-de-interés.html"><a href="parámetros-de-interés.html"><i class="fa fa-check"></i><b>2.4</b> Parámetros de interés</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="parámetros-de-interés.html"><a href="parámetros-de-interés.html#ejemplos-de-indicadores-de-interés-y-su-relación-con-los-tipos-de-encuestas"><i class="fa fa-check"></i><b>2.4.1</b> Ejemplos de indicadores de interés y su relación con los tipos de encuestas</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="definición-del-marco-muestral.html"><a href="definición-del-marco-muestral.html"><i class="fa fa-check"></i><b>3</b> Definición del marco muestral</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="el-marco-de-muestreo.html"><a href="el-marco-de-muestreo.html"><i class="fa fa-check"></i><b>3.1</b> El marco de muestreo</a></li>
+<li class="chapter" data-level="3.2" data-path="los-censos-y-su-incidencia-en-los-marcos-de-muestreo.html"><a href="los-censos-y-su-incidencia-en-los-marcos-de-muestreo.html"><i class="fa fa-check"></i><b>3.2</b> Los censos y su incidencia en los marcos de muestreo</a></li>
+<li class="chapter" data-level="3.3" data-path="construcción-de-las-upm.html"><a href="construcción-de-las-upm.html"><i class="fa fa-check"></i><b>3.3</b> Construcción de las UPM</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="metodologías-de-estratificación.html"><a href="metodologías-de-estratificación.html"><i class="fa fa-check"></i><b>4</b> Metodologías de estratificación</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="dimensiones-estructurales-en-el-marco-de-muestreo.html"><a href="dimensiones-estructurales-en-el-marco-de-muestreo.html"><i class="fa fa-check"></i><b>4.1</b> Dimensiones estructurales en el marco de muestreo</a></li>
+<li class="chapter" data-level="4.2" data-path="información-a-nivel-de-upm.html"><a href="información-a-nivel-de-upm.html"><i class="fa fa-check"></i><b>4.2</b> Información a nivel de UPM</a></li>
+<li class="chapter" data-level="4.3" data-path="metodologías-univariadas-sobre-medidas-de-resumen.html"><a href="metodologías-univariadas-sobre-medidas-de-resumen.html"><i class="fa fa-check"></i><b>4.3</b> Metodologías univariadas sobre medidas de resumen</a>
+<ul>
+<li class="chapter" data-level="" data-path="metodologías-univariadas-sobre-medidas-de-resumen.html"><a href="metodologías-univariadas-sobre-medidas-de-resumen.html#partición-en-cuantiles-q"><i class="fa fa-check"></i>Partición en cuantiles (Q)</a></li>
+<li class="chapter" data-level="" data-path="metodologías-univariadas-sobre-medidas-de-resumen.html"><a href="metodologías-univariadas-sobre-medidas-de-resumen.html#método-de-raíz-de-frecuencia-acumulada-dh"><i class="fa fa-check"></i>Método de raíz de frecuencia acumulada (DH)</a></li>
+<li class="chapter" data-level="" data-path="metodologías-univariadas-sobre-medidas-de-resumen.html"><a href="metodologías-univariadas-sobre-medidas-de-resumen.html#estratificación-óptima-lh"><i class="fa fa-check"></i>Estratificación óptima (LH)</a></li>
+<li class="chapter" data-level="" data-path="metodologías-univariadas-sobre-medidas-de-resumen.html"><a href="metodologías-univariadas-sobre-medidas-de-resumen.html#estratificación-geométrica-gh"><i class="fa fa-check"></i>Estratificación geométrica (GH)</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="metodologías-multivariadas-sobre-la-matriz-de-información.html"><a href="metodologías-multivariadas-sobre-la-matriz-de-información.html"><i class="fa fa-check"></i><b>4.4</b> Metodologías multivariadas sobre la matriz de información</a>
+<ul>
+<li class="chapter" data-level="" data-path="metodologías-multivariadas-sobre-la-matriz-de-información.html"><a href="metodologías-multivariadas-sobre-la-matriz-de-información.html#k-medias-de-jarque-kmj"><i class="fa fa-check"></i>K-medias de Jarque (KmJ)</a></li>
+<li class="chapter" data-level="" data-path="metodologías-multivariadas-sobre-la-matriz-de-información.html"><a href="metodologías-multivariadas-sobre-la-matriz-de-información.html#partición-genética-bb"><i class="fa fa-check"></i>Partición genética (BB)</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="evaluación-y-escogencia-de-la-mejor-estratificación.html"><a href="evaluación-y-escogencia-de-la-mejor-estratificación.html"><i class="fa fa-check"></i><b>4.5</b> Evaluación y escogencia de la mejor estratificación</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="diseño-y-mecanismo-de-selección-de-la-muestra.html"><a href="diseño-y-mecanismo-de-selección-de-la-muestra.html"><i class="fa fa-check"></i><b>5</b> Diseño y mecanismo de selección de la muestra</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html"><i class="fa fa-check"></i><b>5.1</b> Diseños de muestreo</a>
+<ul>
+<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-aleatorio-simple"><i class="fa fa-check"></i>Muestreo aleatorio simple</a></li>
+<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-proporcional-al-tamaño"><i class="fa fa-check"></i>Muestreo proporcional al tamaño</a></li>
+<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-estratificado"><i class="fa fa-check"></i>Muestreo estratificado</a></li>
+<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-de-conglomerados"><i class="fa fa-check"></i>Muestreo de conglomerados</a></li>
+<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-en-varias-etapas"><i class="fa fa-check"></i>Muestreo en varias etapas</a></li>
+<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-en-dos-fases"><i class="fa fa-check"></i>Muestreo en dos fases</a></li>
+<li class="chapter" data-level="5.1.1" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-balanceado"><i class="fa fa-check"></i><b>5.1.1</b> Muestreo balanceado</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="el-diseño-de-muestreo-estándar-en-una-encuesta-de-hogares.html"><a href="el-diseño-de-muestreo-estándar-en-una-encuesta-de-hogares.html"><i class="fa fa-check"></i><b>5.2</b> El diseño de muestreo estándar en una encuesta de hogares</a></li>
+<li class="chapter" data-level="5.3" data-path="acerca-del-efecto-de-diseño.html"><a href="acerca-del-efecto-de-diseño.html"><i class="fa fa-check"></i><b>5.3</b> Acerca del efecto de diseño</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="acerca-del-efecto-de-diseño.html"><a href="acerca-del-efecto-de-diseño.html#efecto-de-la-estratificación-en-las-estrategias-de-muestreo"><i class="fa fa-check"></i><b>5.3.1</b> Efecto de la estratificación en las estrategias de muestreo</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="el-efecto-de-diseño.html"><a href="el-efecto-de-diseño.html"><i class="fa fa-check"></i><b>6</b> El efecto de diseño</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="formas-comunes-del-efecto-de-diseño.html"><a href="formas-comunes-del-efecto-de-diseño.html"><i class="fa fa-check"></i><b>6.1</b> Formas comunes del efecto de diseño</a></li>
+<li class="chapter" data-level="6.2" data-path="estimación-del-efecto-de-diseño.html"><a href="estimación-del-efecto-de-diseño.html"><i class="fa fa-check"></i><b>6.2</b> Estimación del efecto de diseño</a></li>
+<li class="chapter" data-level="6.3" data-path="el-efecto-de-diseño-en-subpoblaciones.html"><a href="el-efecto-de-diseño-en-subpoblaciones.html"><i class="fa fa-check"></i><b>6.3</b> El efecto de diseño en subpoblaciones</a></li>
+<li class="chapter" data-level="6.4" data-path="otras-consideraciones.html"><a href="otras-consideraciones.html"><i class="fa fa-check"></i><b>6.4</b> Otras consideraciones</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="otras-consideraciones.html"><a href="otras-consideraciones.html#el-efecto-de-diseño-general"><i class="fa fa-check"></i><b>6.4.1</b> El efecto de diseño general</a></li>
+<li class="chapter" data-level="6.4.2" data-path="otras-consideraciones.html"><a href="otras-consideraciones.html#el-efecto-de-diseño-en-las-encuestas-de-hogares-de-la-región"><i class="fa fa-check"></i><b>6.4.2</b> El efecto de diseño en las encuestas de hogares de la región</a></li>
+<li class="chapter" data-level="6.4.3" data-path="otras-consideraciones.html"><a href="otras-consideraciones.html#descomposición-del-efecto-de-diseño-en-las-encuestas-de-hogares"><i class="fa fa-check"></i><b>6.4.3</b> Descomposición del efecto de diseño en las encuestas de hogares</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="cálculo-del-tamaño-de-muestra.html"><a href="cálculo-del-tamaño-de-muestra.html"><i class="fa fa-check"></i><b>7</b> Cálculo del tamaño de muestra</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="confiabilidad-y-precisión.html"><a href="confiabilidad-y-precisión.html"><i class="fa fa-check"></i><b>7.1</b> Confiabilidad y precisión</a></li>
+<li class="chapter" data-level="7.2" data-path="el-efecto-de-diseño-en-la-determinación-del-tamaño-de-muestra.html"><a href="el-efecto-de-diseño-en-la-determinación-del-tamaño-de-muestra.html"><i class="fa fa-check"></i><b>7.2</b> El efecto de diseño en la determinación del tamaño de muestra</a></li>
+<li class="chapter" data-level="7.3" data-path="escenarios-de-interés.html"><a href="escenarios-de-interés.html"><i class="fa fa-check"></i><b>7.3</b> Escenarios de interés</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="escenarios-de-interés.html"><a href="escenarios-de-interés.html#tamaño-de-muestra-para-upm-hogares-y-personas"><i class="fa fa-check"></i><b>7.3.1</b> Tamaño de muestra para UPM, hogares y personas</a></li>
+<li class="chapter" data-level="7.3.2" data-path="escenarios-de-interés.html"><a href="escenarios-de-interés.html#tamaño-de-muestra-para-upm-y-hogares"><i class="fa fa-check"></i><b>7.3.2</b> Tamaño de muestra para UPM y hogares</a></li>
+<li class="chapter" data-level="7.3.3" data-path="escenarios-de-interés.html"><a href="escenarios-de-interés.html#tamaño-de-muestra-para-upm-y-personas"><i class="fa fa-check"></i><b>7.3.3</b> Tamaño de muestra para UPM y personas</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="otros-escenarios-de-interés.html"><a href="otros-escenarios-de-interés.html"><i class="fa fa-check"></i><b>7.4</b> Otros escenarios de interés</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="otros-escenarios-de-interés.html"><a href="otros-escenarios-de-interés.html#tamaño-de-muestra-para-la-estimación-de-la-diferencia-de-proporciones"><i class="fa fa-check"></i><b>7.4.1</b> Tamaño de muestra para la estimación de la diferencia de proporciones</a></li>
+<li class="chapter" data-level="7.4.2" data-path="otros-escenarios-de-interés.html"><a href="otros-escenarios-de-interés.html#tamaño-de-muestra-para-la-estimación-del-impacto-en-dos-mediciones-longitudinales"><i class="fa fa-check"></i><b>7.4.2</b> Tamaño de muestra para la estimación del impacto en dos mediciones longitudinales</a></li>
+<li class="chapter" data-level="7.4.3" data-path="otros-escenarios-de-interés.html"><a href="otros-escenarios-de-interés.html#tamaño-de-muestra-para-el-contraste-de-hipótesis-en-la-diferencia-de-proporciones"><i class="fa fa-check"></i><b>7.4.3</b> Tamaño de muestra para el contraste de hipótesis en la diferencia de proporciones</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="algunas-consideraciones-adicionales.html"><a href="algunas-consideraciones-adicionales.html"><i class="fa fa-check"></i><b>7.5</b> Algunas consideraciones adicionales</a>
+<ul>
+<li class="chapter" data-level="7.5.1" data-path="algunas-consideraciones-adicionales.html"><a href="algunas-consideraciones-adicionales.html#ajustes-de-subcobertura"><i class="fa fa-check"></i><b>7.5.1</b> Ajustes de subcobertura</a></li>
+<li class="chapter" data-level="7.5.2" data-path="algunas-consideraciones-adicionales.html"><a href="algunas-consideraciones-adicionales.html#sustituciones-y-reemplazos"><i class="fa fa-check"></i><b>7.5.2</b> Sustituciones y reemplazos</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>II Procesamiento transversal de las encuestas de hogares</b></span></li>
+<li class="chapter" data-level="8" data-path="estimación-de-parámetros.html"><a href="estimación-de-parámetros.html"><i class="fa fa-check"></i><b>8</b> Estimación de parámetros</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="estimadores-puntuales.html"><a href="estimadores-puntuales.html"><i class="fa fa-check"></i><b>8.1</b> Estimadores puntuales</a></li>
+<li class="chapter" data-level="8.2" data-path="estimación-de-las-varianzas-y-del-efecto-de-diseño-deff.html"><a href="estimación-de-las-varianzas-y-del-efecto-de-diseño-deff.html"><i class="fa fa-check"></i><b>8.2</b> Estimación de las varianzas y del efecto de diseño (DEFF)</a></li>
+<li class="chapter" data-level="8.3" data-path="estimación-estratificada.html"><a href="estimación-estratificada.html"><i class="fa fa-check"></i><b>8.3</b> Estimación estratificada</a></li>
+<li class="chapter" data-level="8.4" data-path="comparabilidad-entre-los-softwares-r-y-stata.html"><a href="comparabilidad-entre-los-softwares-r-y-stata.html"><i class="fa fa-check"></i><b>8.4</b> Comparabilidad entre los softwares <code>R</code> y <code>STATA</code></a></li>
+<li class="chapter" data-level="8.5" data-path="expresiones-para-el-efecto-de-diseño-en-subpoblaciones.html"><a href="expresiones-para-el-efecto-de-diseño-en-subpoblaciones.html"><i class="fa fa-check"></i><b>8.5</b> Expresiones para el efecto de diseño en subpoblaciones</a>
+<ul>
+<li class="chapter" data-level="8.5.1" data-path="expresiones-para-el-efecto-de-diseño-en-subpoblaciones.html"><a href="expresiones-para-el-efecto-de-diseño-en-subpoblaciones.html#deff-poblacional"><i class="fa fa-check"></i><b>8.5.1</b> DEFF poblacional</a></li>
+<li class="chapter" data-level="8.5.2" data-path="expresiones-para-el-efecto-de-diseño-en-subpoblaciones.html"><a href="expresiones-para-el-efecto-de-diseño-en-subpoblaciones.html#deff-en-estratos"><i class="fa fa-check"></i><b>8.5.2</b> DEFF en estratos</a></li>
+<li class="chapter" data-level="8.5.3" data-path="expresiones-para-el-efecto-de-diseño-en-subpoblaciones.html"><a href="expresiones-para-el-efecto-de-diseño-en-subpoblaciones.html#deff-en-dominios"><i class="fa fa-check"></i><b>8.5.3</b> DEFF en dominios</a></li>
+</ul></li>
+<li class="chapter" data-level="8.6" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html"><i class="fa fa-check"></i><b>8.6</b> Estimadores de calibración</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
+<li class="divider"></li>
+<li><a Diseño y análisis de encuestas de hogares</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Diseño y análisis estadístico en las encuestas de hogares de América Latina</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="expresiones-para-el-efecto-de-diseño-en-subpoblaciones" class="section level2" number="8.5">
+<h2><span class="header-section-number">8.5</span> Expresiones para el efecto de diseño en subpoblaciones</h2>
+<div id="deff-poblacional" class="section level3" number="8.5.1">
+<h3><span class="header-section-number">8.5.1</span> DEFF poblacional</h3>
+<p>Interesa calcular el efecto de diseño para la estimación de <span class="math inline">\(\bar{y}_s\)</span> definida como <span class="math inline">\(\hat{\bar{y}}_s = \frac{\sum_{k \in S}w_ky_k}{\sum_{k \in S}w_k}\)</span> donde <span class="math inline">\(w_k\)</span> corresponde al factor de expansión del individuo <span class="math inline">\(k\)</span>.</p>
+<p>El efecto de diseño se define como</p>
+<p><span class="math display">\[DEFF = \frac{V_p(\hat{\bar{y}}_s)}{V_{\text{MAS}}(\hat{\bar{y}}_s)}\]</span>
+<span class="math inline">\(V_{\text{MAS}}(\hat{\bar{y}}_s)\)</span> corresponde a la varianza de <span class="math inline">\(\hat{\bar{y}}_s\)</span> bajo un muestreo aleatorio simple la cuál puede ser expresada como</p>
+<p><span class="math display">\[V_{\text{MAS}}(\hat{\bar{y}}_s) = \frac{1}{n}\left(1-\frac{n}{N}\right)S^2_{y_E} = \frac{1}{n}\left(1-\frac{n}{N}\right)\frac{1}{N-1}\sum_{k \in U}(y_k - \bar{y}_U)^2\]</span>
+sändat et al indican que dicha varianza puede ser estimada como</p>
+<p><span class="math display">\[\hat{V}_{\text{MAS}}(\hat{\bar{y}}_s) = \frac{1}{n}\left(1-\frac{n}{N}\right)\hat{S}^2_{y_e}\]</span>
+donde <span class="math inline">\(\hat{S}^2_{y_e} = \frac{\sum_{k \in S}w_k(y_k-\hat{\bar{y}}_s)^2}{\sum_{k \in S}w_k - 1}\)</span></p>
+</div>
+<div id="deff-en-estratos" class="section level3" number="8.5.2">
+<h3><span class="header-section-number">8.5.2</span> DEFF en estratos</h3>
+<p>Para cada estrato <span class="math inline">\(h = 1,...,H\)</span>, se considera un DEFF distinto asociado a la estimación de <span class="math inline">\(\bar{y}_{s_h}\)</span> definida como <span class="math inline">\(\hat{\bar{y}}_{s_h} = \frac{\sum_{k \in S_h}w_ky_k}{\sum_{k \in S_h}w_k}\)</span>-
+Definimos el efecto de diseño para el estrato <span class="math inline">\(h\)</span> como</p>
+<p><span class="math display">\[DEFF_h = \frac{V_p(\hat{\bar{y}}_{s_h})}{V_{\text{MAS}}(\hat{\bar{y}}_{s_h})}\]</span>
+Para el caso de un muestreo aleatorio simple se tiene que
+<span class="math display">\[V_{\text{MAS}}(\hat{\bar{y}}_{s_h}) = \frac{N_h^2}{n_h}\left(1-\frac{n_h}{N_h}\right)S^2_{y_{E_h}} = \frac{1}{n_h}\left(1-\frac{n_h}{N_h}\right)\frac{1}{N_h-1}\sum_{k \in U}(y_k - \bar{y}_U)^2\]</span>
+donde la varianza puede ser estimada como</p>
+<p><span class="math display">\[\hat{V}_{\text{MAS}}(\hat{\bar{y}}_{s_h}) = \frac{N_h^2}{n_h}\left(1-\frac{n_h}{N_h}\right)\hat{S}^2_{y_{e_h}}\]</span>
+donde <span class="math inline">\(\hat{S}^2_{y_{e_h}} = \frac{\sum_{k \in S_h}w_k(y_k-\hat{\bar{y}}_{s_h})^2}{\sum_{k \in S_h}w_k - 1}\)</span></p>
+</div>
+<div id="deff-en-dominios" class="section level3" number="8.5.3">
+<h3><span class="header-section-number">8.5.3</span> DEFF en dominios</h3>
+<p>En el caso de dominios, la estimación de <span class="math inline">\(\bar{y}_{s_d}\)</span> está dada por <span class="math inline">\(\hat{\bar{y}}_{s_d} = \frac{\sum_{k \in S}w_kI_{k_d}y_k}{\sum_{k \in S}w_kI_{k_d}}\)</span> donde <span class="math inline">\(I_{k_d}\)</span> es una indicatriz que vale uno cuando el individuo <span class="math inline">\(k\)</span> se encuentra en el dominio <span class="math inline">\(d\)</span> y cero en otro caso.</p>
+<p>Definimos el efecto de diseño para el dominio <span class="math inline">\(d\)</span> como</p>
+<p><span class="math display">\[DEFF_d = \frac{V_p(\hat{\bar{y}}_{s_d})}{V_{\text{MAS}}(\hat{\bar{y}}_{s_d})}\]</span>
+En el caso del DEFF poblacional Gutierrez indica que:</p>
+<p><span class="math display">\[\hat{B} = f(\hat{t}_y,\hat{N}) = \hat{t}_y/\hat{N}\]</span>
+De aquí, tenemos que</p>
+<p><span class="math display">\[E_k = \sum_{q = 1}^Qa_qy_{qk} = \frac{y_k}{N}-\frac{t_y}{N^2} = \frac{1}{N}(y_k - B)\]</span>
+<span class="math display">\[e_k = \frac{1}{\hat{N}}(y_k - \hat{\bar{y}}_s)\]</span>
+Note que <span class="math inline">\(\sum_{k\in S} w_ke_k= 0\)</span></p>
+<p>De aquí, es posible calcular <span class="math inline">\(\hat{V}_{\text{MAS}}(\hat{\bar{y}}_s)\)</span> como</p>
+<p><span class="math display">\[\begin{align*}
+\hat{V}_{\text{MAS}}(\hat{\bar{y}}_s) &amp; = \frac{N^2}{n}(1-\frac{n}{N})\hat{S}^2_{e_s} \\
+&amp; = \frac{N^2}{n}(1-\frac{n}{N})\frac{1}{N-1}\sum_{k \in S}w_k(\frac{1}{\hat{N}}(y_k - \hat{\bar{y}}_s))^2 \\
+&amp; \approx \frac{N}{n}(1-\frac{n}{N})\sum_{k \in S}w_k(y_k - \hat{\bar{y}}_s)^2/(\sum_{k \in S}w_k)^2 \\
+&amp; \approx \frac{1}{n}(1-\frac{n}{N})\sum_{k \in S}w_k(y_k - \hat{\bar{y}}_s)^2/\sum_{k \in S}w_k
+\end{align*}\]</span></p>
+<p>Este razonamiento es válido dentro de los estratos, para el caso de los dominios, debemos considerar una variable adicional:</p>
+<p><span class="math display">\[\hat{B}_d = f(\hat{t}_{y_d},\hat{N}_d) = \hat{t}_{y_d}/\hat{N}_d\]</span>
+De aquí, tenemos que</p>
+<p><span class="math display">\[E_{k_d} = \frac{y_{k_d}}{N_d}-\frac{t_{y_d}}{N^2_d} = \frac{I_{k_d}}{N_d}(y_{k_d} - B_d)\]</span>
+<span class="math display">\[e_{k_d} = \frac{I_{k_d}}{\hat{N}_d}(y_{k_d} - \hat{\bar{y}}_{s_d})\]</span>
+Por tanto, podemos escribir la varianza <span class="math inline">\(\hat{V}_\text{MAS}(\hat{\bar{y}}_{s_d})\)</span> como</p>
+<p><span class="math display">\[\begin{align*}
+\hat{V}_{\text{MAS}}(\hat{\bar{y}}_{s_d}) &amp; = \frac{N^2}{n}(1-\frac{n}{N})\hat{S}^2_{e_{s_d}} \\
+&amp; = \frac{N^2}{n}(1-\frac{n}{N})\frac{1}{N-1}\sum_{k \in S_d}w_k e_{s_d}^2 \\
+&amp; = \frac{N^2}{n}(1-\frac{n}{N})\frac{1}{N-1}\sum_{k \in S_d}w_k\left(\frac{1}{\hat{N}_d}(y_k - \hat{\bar{y}}_{s_d})\right)^2 \\
+&amp; = \frac{N^2}{n}(1-\frac{n}{N})\sum_{k \in S_d}w_k(y_k - \hat{\bar{y}}_{s_d})^2/\hat{N}^2_d 
+\end{align*}\]</span></p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="comparabilidad-entre-los-softwares-r-y-stata.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="estimadores-de-calibración.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/psirusteam/HHS-Handbook/08Estimadores.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Diseño y análisis de encuestas de hogares.pdf", "Diseño y análisis de encuestas de hogares.epub", "Diseño y análisis de encuestas de hogares.mobi"],
+"toc": {
+"collapse": "section"
+},
+"tconfig": null
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

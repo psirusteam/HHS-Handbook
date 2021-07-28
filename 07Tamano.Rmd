@@ -48,22 +48,22 @@ Al momento diseñar un estudio por muestreo con encuestas de hogares, es importa
 
 Uno de los primeros paradigmas con el que se debe lidiar es el de la independencia entre las observaciones. Este es un supuesto que gobierna gran parte de la teoría de análisis estadístico, pero que infortunadamente no se aplica en el contexto de las encuestas de hogares. Ante los retos que se debe enfrentar y las diversas estrategias de recolección de información, las fórmulas que se desprenden del supuesto de que los observaciones corresponden a una muestra de variables independientes e idénticamente distribuidas no son plausibles. 
 
-La estratificación, las múltiples etapas y la aglomeración de las unidades de muestreo hacen que este supuesto no se cumpla en la práctica y por tanto, utilizar las expresiones tradicionales que se encuentran en los libros introductorios de estadística guiará a tamaños de muestra insuficientes. El problema del tamaño de muestra en encuestas de hogares ha sido abordado por diferentes autores con diferentes enfoques. Quizás uno de los más aceptados es aquel que define un factor de ajuste, llamado efecto de diseño (DEFF), en función de la correlación que hay entre la variable de interés con las unidades primarias de muestreo. A partir de este efecto de diseño se calcula el número de personas que deben ser encuestadas para minimizar un error de muestreo predefinido. 
+La estratificación, las múltiples etapas y la aglomeración de las unidades de muestreo hacen que este supuesto no se cumpla en la práctica y por tanto, utilizar las expresiones tradicionales que se encuentran en los libros introductorios de estadística guiará a tamaños de muestra insuficientes. El problema del tamaño de muestra en encuestas de hogares ha sido abordado por diferentes autores con diferentes enfoques. Quizás uno de los más aceptados es aquel que define un factor de ajuste, llamado efecto de diseño (Deff), en función de la correlación que hay entre la variable de interés con las unidades primarias de muestreo. A partir de este efecto de diseño se calcula el número de personas que deben ser encuestadas para minimizar un error de muestreo predefinido. 
 
 Cuando para la población de interés, se selecciona una muestra utilizando un diseño de muestreo de conglomerados o en varias etapas, no es imposible afirmar que existe independencia entre las observaciones. Lo anterior hace que no sea posible utilizar las fórmulas clásicas para la determinación de un tamaño de muestra, al considerar un diseño de muestreo aleatorio simple. Sin embargo, una forma sencilla de incorporar este efecto de aglomeración en las expresiones clásicas del muestreo aleatorio simple la da la siguiente relación, denotada como efecto de diseño:
 
 \begin{equation}
-DEFF(\hat{\theta})=\frac{Var_p(\hat{\theta})}{Var_{MAS}(\hat{\theta})}
+Deff(\hat{\theta})=\frac{Var_p(\hat{\theta})}{Var_{MAS}(\hat{\theta})}
 \end{equation}
 
 Esta cifra da cuenta del efecto de aglomeración causado por la utilización de un diseño de muestreo cualquiera $(p)$, frente a un diseño de muestreo aleatorio simple (MAS) en la inferencia de un parámetro de la población finita $\theta$ (que puede ser un total, una proporción, una razón, un coeficiente de regresión, etc.). Por lo anterior, es posible escribir la varianza del estimador bajo el diseño de muestreo complejo como 
 
 \begin{align}
-Var_p(\hat{\theta}) & = DEFF(\hat{\theta}) \ Var_{MAS}(\hat{\theta}) \\
-& = DEFF(\hat{\theta}) \ \frac{N^2}{n}\left(1-\frac{n}{N}\right)S^2_{y_U}
+Var_p(\hat{\theta}) & = Deff(\hat{\theta}) \ Var_{MAS}(\hat{\theta}) \\
+& = Deff(\hat{\theta}) \ \frac{N^2}{n}\left(1-\frac{n}{N}\right)S^2_{y_U}
 \end{align}
 
-Por lo tanto, si al implementar un muestreo aleatorio simple el tamaño de muestra $n_0$ es suficiente para conseguir la precisión deseada, entonces el valor del tamaño de muestra que tendrá en cuenta el efecto de aglomeración para un diseño complejo estará cercano  a $n \approx  n_0 \times DEFF$. @United_Nations_2008 afirma que, dada esta relación, no es deseable aceptar estrategias de muestreo que induzcan efectos de diseño mayores a 2.5 o 3. Lo cual quiere decir que los equipos técnicos dentro de los INEs deben plantear esquemas en donde el efecto de diseño para los indicadores claves de la encuesta no sea grande. 
+Por lo tanto, si al implementar un muestreo aleatorio simple el tamaño de muestra $n_0$ es suficiente para conseguir la precisión deseada, entonces el valor del tamaño de muestra que tendrá en cuenta el efecto de aglomeración para un diseño complejo estará cercano  a $n \approx  n_0 \times Deff$. @United_Nations_2008 afirma que, dada esta relación, no es deseable aceptar estrategias de muestreo que induzcan efectos de diseño mayores a 2.5 o 3. Lo cual quiere decir que los equipos técnicos dentro de los INEs deben plantear esquemas en donde el efecto de diseño para los indicadores claves de la encuesta no sea grande. 
 
 En particular, para el caso de una proporción, la calidad del estimador se puede medir en términos de que con un alto nivel de confianza $(1-\alpha)$, la distancia entre el estimador y el parámetro no supere el margen de error previamente establecido (ME), esto es:
 
@@ -133,19 +133,19 @@ $$
 \bar{n} = \bar{n}_{II} * r * b
 $$
 
-- **Calcular el efecto de diseño**. Es necesario definir (o calcular con encuestas o censos anteriores) la correlación intraclase de la variable de interés con el agrupamiento por UPM $\rho$. Luego de esto, se debe calcular el efecto de diseño $DEFF$ como función de $\rho$ y de $\bar{n}$. Ahora, el efecto de diseño $DEFF$, definido como una función de la correlación existente entre la variable de interés y la conformación de las UPM, está dado por la siguiente expresión
+- **Calcular el efecto de diseño**. Es necesario definir (o calcular con encuestas o censos anteriores) la correlación intraclase de la variable de interés con el agrupamiento por UPM $\rho$. Luego de esto, se debe calcular el efecto de diseño $Deff$ como función de $\rho$ y de $\bar{n}$. Ahora, el efecto de diseño $Deff$, definido como una función de la correlación existente entre la variable de interés y la conformación de las UPM, está dado por la siguiente expresión
 $$
-DEFF \approx 1 + (\bar{n} - 1)\rho
+Deff \approx 1 + (\bar{n} - 1)\rho
 $$
 
 - **Calcular el tamaño de muestra de personas**. A partir de las expresiones de tamaño de muestra para diseños de muestreo complejos, calcular el tamaño de muestra necesario para lograr una precisión adecuada en la inferencia. En primer lugar, si lo que se quiere estimar es un promedio $\bar{y}_U$, el tamaño de muestra necesario para alcanzar un error relativo máximo de $\delta$ % es de 
 $$
-n \geq \dfrac{S^2_{y_U}DEFF}{\dfrac{\delta^2 \bar{y}_U^2}{z_{\alpha}^2}+\dfrac{S^2_{y_U}DEFF}{N}}
+n \geq \dfrac{S^2_{y_U}Deff}{\dfrac{\delta^2 \bar{y}_U^2}{z_{\alpha}^2}+\dfrac{S^2_{y_U}Deff}{N}}
 $$
 
 Por otro lado, si lo que se quiere estimar es una proporción $P$, entonces la expresión apropiada para calcular el tamaño de muestra estará dada por
 $$
-n \geq \dfrac{P\ (1-P)\ DEFF}{\dfrac{\delta^2P^2}{z_{\alpha}^2 }+\dfrac{P\ (1-P) \ DEFF}{N}}
+n \geq \dfrac{P\ (1-P)\ Deff}{\dfrac{\delta^2P^2}{z_{\alpha}^2 }+\dfrac{P\ (1-P) \ Deff}{N}}
 $$
 
 - **Calcular el tamaño de muestra de hogares**. Es necesario calcular el número total de hogares de deben ser seleccionados para lograr entrevistar a todas las personas que serán observadas en el punto anterior. El número de hogares que deben se seleccionados estará determinado por las cantidades $n$, $b$ y $r$, de la siguiente forma
@@ -165,15 +165,15 @@ $$
 
 Suponga que el parámetro de interés es el porcentaje de personas pobres (cuyo ingreso está por debajo de un umbral preestablecido) y se quiere hacer inferencia con un error relativo máximo del 5%. Por estudios anteriores en este país, se ha estimado que la proporción de personas pobres está alrededor de $P = 4$%. Nótese que la población objetivo está conformada por todos los habitantes del hogar puesto que $r = 100$%. En este país se ha estimado que el tamaño promedio del hogar es de alrededor de $b = 3.5$ personas. Por último, según levantamientos anteriores, la correlación intraclase de la característica de interés con las unidades primarias de muestreo es $\rho = 0.034$.
 
-La siguiente tabla resume los resultados del ejercicio para $\bar{n}_{II} =$ 10 hogares por UPM, los cuales implican que por cada UPM se entrevistarían en promedio a $\bar{n}$ 35 personas. Con lo anterior se obtendría un efecto de diseño $DEFF =$ 2.2, para un total de personas en la muestra de $n =$ 55936 que serán observados a partir de la selección de $n_{II} =$ 15982 hogares en $n_{I} =$ 1598 UPM.
+La siguiente tabla resume los resultados del ejercicio para $\bar{n}_{II} =$ 10 hogares por UPM, los cuales implican que por cada UPM se entrevistarían en promedio a $\bar{n}$ 35 personas. Con lo anterior se obtendría un efecto de diseño $Deff =$ 2.2, para un total de personas en la muestra de $n =$ 55936 que serán observados a partir de la selección de $n_{II} =$ 15982 hogares en $n_{I} =$ 1598 UPM.
 
-|Hogares promedio por UPM|Personas promedio por UPM| DEFF| Muestra de UPM|Muestra de hogares| Muestra de personas|
+|Hogares promedio por UPM|Personas promedio por UPM| Deff| Muestra de UPM|Muestra de hogares| Muestra de personas|
 |:---------:|:-----------:|:----:|:-------:|:-------:|:-------:|
 |          10|          35|  2.2| 1598|   15982|    55936|
 
 Por supuesto que es posible plantear otros escenarios a medida que se evalúe el efecto que conlleva el cambio del número de hogares que se seleccionan en cada UPM. Por ejemplo, el investigador podría proponer que se seleccionarán en promedio 5 hogares por UPM, lo cual cambiaría el número de UPM que serían seleccionadas en la muestra de la primera etapa, así como también el número total de personas que serían seleccionadas en todo el operativo. Debido a que el efecto de diseño es una función del número de hogares promedio a seleccionar en las UPM, esta cifra también variará. A continuación se muestran algunos resultados que permiten establecer estos escenarios cuando se varía el tamaño de muestra promedio de hogares por UPM. La escogencia del escenario ideal se debe dar en términos de la conveniencia logística y presupuestal en el estudio. 
 
-|Hogares promedio por UPM|Personas promedio por UPM| DEFF| Muestra de UPM|Muestra de hogares| Muestra de personas|
+|Hogares promedio por UPM|Personas promedio por UPM| Deff| Muestra de UPM|Muestra de hogares| Muestra de personas|
 |:---------:|:-----------:|:----:|:-------:|:-------:|:-------:|
 |           5|          18|  1.6| 2315|   11575|    40512|
 |          10|          35|  2.2| 1598|   15982|    55936|
@@ -191,16 +191,16 @@ Siguiendo las recomendaciones internacionales, se desestimarían los escenarios 
 
 Suponga que se desea estimar el ingreso promedio por hogar con un error relativo máximo del 2%. La variable de interés (ingreso) es continua y se estima que la media oscila alrededor de $\bar{y}_U=1180$ dólares con una varianza de $S^2_{y_U}=1845.94^2$.  En este caso, la población objetivo son todos los habitantes del hogar, por lo cual $r = 1$. La composición del hogar se calcula en $b = 3.79$ personas por hogar. Por último, según levantamientos anteriores, la correlación intraclase de la característica de interés es $\rho = 0.035$. Nótese que la correlación intraclase cambia con respecto a la característica que se desee medir. 
 
-La siguiente tabla muestra los resultados del ejercicio al seleccionar $\bar{n}_{II} =$ 15 hogares por UPM, que a su vez implica que por cada UPM se encontrarían en promedio $\bar{n}=$ 57 personas por UPM. Con lo anterior se obtendría un efecto de diseño $DEFF =$ 3, para un total de personas en la muestra de $n =$ 48861 que serán observados a partir de la selección de $n_{II} =$ 12892 hogares en $n_{I} =$ 859 UPM.
+La siguiente tabla muestra los resultados del ejercicio al seleccionar $\bar{n}_{II} =$ 15 hogares por UPM, que a su vez implica que por cada UPM se encontrarían en promedio $\bar{n}=$ 57 personas por UPM. Con lo anterior se obtendría un efecto de diseño $Deff =$ 3, para un total de personas en la muestra de $n =$ 48861 que serán observados a partir de la selección de $n_{II} =$ 12892 hogares en $n_{I} =$ 859 UPM.
 
-|Hogares promedio por UPM|Personas promedio por UPM| DEFF| Muestra de UPM|Muestra de hogares| Muestra de personas|
+|Hogares promedio por UPM|Personas promedio por UPM| Deff| Muestra de UPM|Muestra de hogares| Muestra de personas|
 |:---------:|:-----------:|:----:|:-------:|:-------:|:-------:|
 |          15|          57|    3|  859|   12892|    48861|
 
 
 A continuación se muestran algunos resultados que permiten establecer otros escenarios de muestreo cuando se varía el tamaño de muestra promedio de hogares por UPM. Recuérdese que cualquiera de estos escenarios es válido, desde el punto de vista de la eficiencia estadística, aunque no todos serán válidos si se tienen en cuenta otros aspectos como los logísticos o presupuestales. Por ejemplo, si se escogiera el penúltimo escenario, entonces para 50 hogares por UPM, se debería encuestar en promedio a 190 personas, lo cual reduciría el número de UPM a 662, pero aumentaría el tamaño de muestra general a 33098 personas, lo cual involucraría mayores costos de contratación de encuestadores, supervisores y seguramente un operativo de campo de más días de duración. 
 
-|Hogares promedio por UPM|Personas promedio por UPM| DEFF| Muestra de UPM|Muestra de hogares| Muestra de personas|
+|Hogares promedio por UPM|Personas promedio por UPM| Deff| Muestra de UPM|Muestra de hogares| Muestra de personas|
 |:---------:|:-----------:|:----:|:-------:|:-------:|:-------:|
 |           5|          19|  1.6| 1422|    7108|    26938|
 |          10|          38|  2.3| 1000|   10001|    37902|
@@ -217,15 +217,15 @@ Siguiendo las recomendaciones internacionales, se desestimarían los escenarios 
 
 Suponga que la incidencia de este fenómeno está alrededor de $P = 5.5$% en la población objetivo que son las personas económicamente activas (PEA) mayores de 60 años; en este país, se ha estimado que en promedio hay $r = 4.6$% de adultos mayores por hogar que pertenecen a la PEA, cuyo tamaño promedio es de alrededor de $b = 5$ personas. Además, se quiere hacer inferencia con un error relativo máximo del 15%. Por último, según levantamientos anteriores, la correlación intraclase de la característica de interés es $\rho = 0.7$.
 
-La siguiente tabla muestra los resultados del ejercicio, que implica que seleccionar $\bar{n}_{II} =$ 20 hogares por UPM implicaría un promedio de $\bar{n} =$ 4.6 adultos mayores en la PEA (casos de interés) por UPM. Con lo anterior se obtendría un efecto de diseño $DEFF =$ 3.5, para un total de adultos mayores en la muestra de $n =$ 7272 que serán observados a partir de la selección de $n_{II} =$ 31617 hogares en $n_{I} =$ 1581 UPM.
+La siguiente tabla muestra los resultados del ejercicio, que implica que seleccionar $\bar{n}_{II} =$ 20 hogares por UPM implicaría un promedio de $\bar{n} =$ 4.6 adultos mayores en la PEA (casos de interés) por UPM. Con lo anterior se obtendría un efecto de diseño $Deff =$ 3.5, para un total de adultos mayores en la muestra de $n =$ 7272 que serán observados a partir de la selección de $n_{II} =$ 31617 hogares en $n_{I} =$ 1581 UPM.
 
-|Hogares promedio por UPM|Personas promedio por UPM| DEFF| Muestra de UPM|Muestra de hogares| Muestra de casos|
+|Hogares promedio por UPM|Personas promedio por UPM| Deff| Muestra de UPM|Muestra de hogares| Muestra de casos|
 |:---------:|:-----------:|:----:|:-------:|:-------:|:-------:|
 |          20|         4.6|  3.5| 1581|   31617|     7272|
 
 En este caso la muestra en los 31617 hogares induce un operativo muy grande que implicaría la observación de $31617 * 5 = 158085$ personas, de las cuales $n =$ 7272, serían los casos de interés. Como se ha visto en los anteriores ejemplos, es posible plantear otros escenarios a medida que se evalúe el efecto que conlleva el cambio del número de hogares que se seleccionan en cada UPM. A continuación se muestran algunos resultados que permite establecer estos escenarios cuando se varía el tamaño de muestra promedio de hogares por UPM. 
 
-|Hogares promedio por UPM|Personas promedio por UPM| DEFF| Muestra de UPM|Muestra de hogares| Muestra de casos|
+|Hogares promedio por UPM|Personas promedio por UPM| Deff| Muestra de UPM|Muestra de hogares| Muestra de casos|
 |:---------:|:-----------:|:----:|:-------:|:-------:|:-------:|
 |           5|         1.1|  1.1| 1985|    9926|     2283|
 |          10|         2.3|  1.9| 1716|   17157|     3946|
@@ -244,19 +244,19 @@ En algunas ocasiones la variable de interés y la unidad de observación están 
 
 - **Definir el número promedio de hogares**. El número promedio de hogares que se desea encuestar en cada una de las UPM está dado por $\bar{n}_{II}$. Esta cifra sigue siendo el insumo más importante del algoritmo y se propone crear escenarios de muestreo a partir de su modificación y evaluación del tamaño de muestra final.
 
-- **Calcular el efecto de diseño**. Es necesario definir (o calcular con encuestas o censos anteriores) la correlación intraclase $\rho_{II}$ de la variable de interés *a nivel del hogar* con el agrupamiento por UPM definido por la división cartográfica del último censo. Además de lo anterior, el efecto de diseño $DEFF$ será función del tamaño de muestra promedio de hogares por UPM $\bar{n}_{II}$, como se muestra a continuación:
+- **Calcular el efecto de diseño**. Es necesario definir (o calcular con encuestas o censos anteriores) la correlación intraclase $\rho_{II}$ de la variable de interés *a nivel del hogar* con el agrupamiento por UPM definido por la división cartográfica del último censo. Además de lo anterior, el efecto de diseño $Deff$ será función del tamaño de muestra promedio de hogares por UPM $\bar{n}_{II}$, como se muestra a continuación:
 $$
-DEFF \approx 1 + (\bar{n}_{II} - 1)\rho_{II}
+Deff \approx 1 + (\bar{n}_{II} - 1)\rho_{II}
 $$
 
 - **Tamaño de muestra de hogares**. Partiendo de las expresiones de tamaño de muestra generales para muestreos complejos y teniendo en cuenta que la población de interés son los hogares y que la variable de interés $y_{II}$ está a nivel de hogar, entonces el tamaño de muestra necesario para alcanzar un error relativo máximo de $\delta$ % es de 
 $$
-n_{II} \geq \dfrac{S^2_{y_{II}}DEFF}{\dfrac{\delta^2 \bar{y}_{II}^2}{z_{\alpha}^2}+\dfrac{S^2_{y_{II}}DEFF}{N_{II}}}
+n_{II} \geq \dfrac{S^2_{y_{II}}Deff}{\dfrac{\delta^2 \bar{y}_{II}^2}{z_{\alpha}^2}+\dfrac{S^2_{y_{II}}Deff}{N_{II}}}
 $$
 
 La expresión apropiada para calcular el tamaño de muestra para una proporción estará dada por
 $$
-n_{II} \geq \dfrac{P_{II}\ (1-P_{II})\ DEFF}{\dfrac{\delta^2P^2_{II}}{z_{\alpha}^2 }+\dfrac{P_{II}\ (1-P_{II}) \ DEFF}{N_{II}}}
+n_{II} \geq \dfrac{P_{II}\ (1-P_{II})\ Deff}{\dfrac{\delta^2P^2_{II}}{z_{\alpha}^2 }+\dfrac{P_{II}\ (1-P_{II}) \ Deff}{N_{II}}}
 $$
 
 - **Cálculo del número de UPMs**. Los hogares se observan a partir de las UPM. En este paso final es necesario calcular el número de UPM que deben ser seleccionadas en el muestreo a partir de la relación 
@@ -268,9 +268,9 @@ $$
 
 Suponga que se desea estimar el promedio de gasto en dólares en los hogares del país con un error relativo máximo admisible del 3.5%. La variable de interés (gasto) es continua y se estima que la media oscila alrededor de $\bar{y}_U=1407$ dólares con una varianza de $S^2_{y_U}=2228^2$. En este ejemplo se supone que el país está dividido en $N_I = 10$ mil UPM y la correlación intraclase de la característica de interés, medida a nivel del hogar, con las UPM es de $\rho_{II} = 0.173$.
 
-La siguiente tabla muestra los resultados del ejercicio para $\bar{n}_{II} =$ 12 hogares por UPM, que serán observados a partir de la selección de $n_{I} =$ 1338 UPM y $n_{I} =$ 16056 hogares que inducen un efecto de diseño $DEFF =$ 2.9.
+La siguiente tabla muestra los resultados del ejercicio para $\bar{n}_{II} =$ 12 hogares por UPM, que serán observados a partir de la selección de $n_{I} =$ 1338 UPM y $n_{I} =$ 16056 hogares que inducen un efecto de diseño $Deff =$ 2.9.
 
-|Hogares promedio por UPM| DEFF|Muestra de UPM|Muestra de hogares|
+|Hogares promedio por UPM| Deff|Muestra de UPM|Muestra de hogares|
 |:-----------:|:----:|:----:|:-------:|
 |          12|  2.9| 1338|   16056|
 
@@ -279,7 +279,7 @@ A continuación se muestran algunos resultados que permiten establecer otros esc
 
 Para este tipo de operativos, en donde los cuestionarios de gasto de los hogares están acompañados de un operativo exhaustivo que le permite al investigador conocer los hábitos de consumo del hogar de forma desagregada, y en donde se visita el hogar durante un periodo de tiempo determinado, tal vez sea más conveniente estudiar la viabilidad de seleccionar más hogares por UPM y menos UPM para que el operativo de campo no exija la contratación de demasiado personal en campo. Al estar agrupados en menos UPM, se podría definir un mejor levantamiento de la información con un equipo mediano de personas; de lo contrario, se debería contratar bastante más personal que cubra las UPM dispersas a lo largo del país. 
 
-|Hogares promedio por UPM| DEFF|Muestra de UPM|Muestra de hogares|
+|Hogares promedio por UPM| Deff|Muestra de UPM|Muestra de hogares|
 |:-----------:|:----:|:----:|:-------:|
 |           2|  1.2| 3246|    6493|
 |           4|  1.5| 2102|    8407|
@@ -298,15 +298,15 @@ Siguiendo las recomendaciones internacionales, se desestimarían los escenarios 
 
 Suponga que se desea obtener una muestra con un error relativo máximo admisible del 10% sobre la variable de interés (necesidades básicas insatisfechas en agua) y el parámetro de interés es el porcentaje de hogares con esta carencia. En este país, se estima que la proporción de hogares con esta condición asciende a $P = 7.5$%.  En este ejemplo se supone que la correlación intraclase de la característica de interés con las UPM es de $\rho_{II} = 0.045$.
 
-La siguiente tabla muestra los resultados del ejercicio para $\bar{n}_{II} =$ 10 hogares por UPM, que serán observados a partir de la selección de $n_{I} =$ 436 UPM y $n_{II} =$  4357 hogares que inducen un efecto de diseño $DEFF =$ 1.3.
+La siguiente tabla muestra los resultados del ejercicio para $\bar{n}_{II} =$ 10 hogares por UPM, que serán observados a partir de la selección de $n_{I} =$ 436 UPM y $n_{II} =$  4357 hogares que inducen un efecto de diseño $Deff =$ 1.3.
 
-|Hogares promedio por UPM| DEFF|Muestra de UPM|Muestra de hogares|
+|Hogares promedio por UPM| Deff|Muestra de UPM|Muestra de hogares|
 |:-----------:|:----:|:----:|:-------:|
 |          10|  1.3|  436|    4357|
 
-A continuación se muestran algunos resultados que permiten establecer otros escenarios de muestreo al variar el tamaño de muestra promedio de hogares por UPM. Observe que el efecto de diseño DEFF es directamente proporcional al número de hogares entrevistados por UPM y al tamaño de muestra de hogares final; de la misma manera, es inversamente proporcional al número de UPM. 
+A continuación se muestran algunos resultados que permiten establecer otros escenarios de muestreo al variar el tamaño de muestra promedio de hogares por UPM. Observe que el efecto de diseño Deff es directamente proporcional al número de hogares entrevistados por UPM y al tamaño de muestra de hogares final; de la misma manera, es inversamente proporcional al número de UPM. 
 
-|Hogares promedio por UPM| DEFF|Muestra de UPM|Muestra de hogares|
+|Hogares promedio por UPM| Deff|Muestra de UPM|Muestra de hogares|
 |:-----------:|:----:|:----:|:-------:|
 |           5|  1.1|  758|    3790|
 |          10|  1.3|  436|    4357|
@@ -333,19 +333,19 @@ $$
 
 En donde $\bar{n}^e$ denota el número promedio de encuestas realizadas en cada UPMS sobre la población de interés.
 
-- **Calcular el efecto de diseño**. Es necesario definir el efecto de diseño $DEFF$ como una función de la correlación existente entre la variable de interés y la conformación de las UPM $\rho^e$, está dado por la siguiente expresión
+- **Calcular el efecto de diseño**. Es necesario definir el efecto de diseño $Deff$ como una función de la correlación existente entre la variable de interés y la conformación de las UPM $\rho^e$, está dado por la siguiente expresión
 $$
-DEFF^e \approx 1 + (\bar{n}^e - 1)\rho^e
+Deff^e \approx 1 + (\bar{n}^e - 1)\rho^e
 $$
 
 - **Tamaño de muestra de personas**. A partir de las expresiones de tamaño de muestra para muestreos complejos, calcular el tamaño de muestra necesario para lograr una precisión adecuada en la inferencia. En primer lugar, el tamaño de muestra necesario para alcanzar un error relativo máximo de $\delta$ % es de 
 $$
-n^e \geq \dfrac{S^2_{y_U}DEFF^e}{\dfrac{\delta^2 \bar{y}_U^2}{z_{\alpha}^2}+\dfrac{S^2_{y_U}DEFF^e}{N}}
+n^e \geq \dfrac{S^2_{y_U}Deff^e}{\dfrac{\delta^2 \bar{y}_U^2}{z_{\alpha}^2}+\dfrac{S^2_{y_U}Deff^e}{N}}
 $$
 
 Si lo que se quiere estimar es una proporción $P$, entonces la expresión apropiada para calcular el tamaño de muestra estará dada por
 $$
-n^e \geq \dfrac{P\ (1-P)\ DEFF^e}{\dfrac{\delta^2P^2}{z_{\alpha}^2 }+\dfrac{P\ (1-P) \ DEFF^e}{N}}
+n^e \geq \dfrac{P\ (1-P)\ Deff^e}{\dfrac{\delta^2P^2}{z_{\alpha}^2 }+\dfrac{P\ (1-P) \ Deff^e}{N}}
 $$
 
 - **Tamaño de muestra final**. Es necesario calcular el número total de personas que deben ser seleccionados para lograr observar a quienes hacen parte de la población objetivo. Esta cantidad está dada por la siguiente expresión.
@@ -363,16 +363,16 @@ $$
 
 Suponga que se desea estimar el ingreso promedio en las personas empleadas con un error relativo máximo admisible del 2%. La variable de interés (ingreso) es continua y se estima que la media oscila alrededor de $\bar{y}_U=1458$ dólares con una varianza de $S^2_{y_U}=2191^2$. Nótese que la población objetivo son todas las personas empleadas, cuya proporción se estima en $r = 46$%. La correlación intraclase de la característica de interés es $\rho = 0.038$.
 
-La siguiente tabla muestra los resultados del ejercicio al seleccionar $\bar{n}_{II} =$ 50 personas por UPM, que a su vez implica que por cada UPM se encontrarían en promedio $\bar{n}$ 23 personas ocupadas por UPM. Con lo anterior se obtendría un efecto de diseño $DEFF =$ 1.8, para un total de personas en la muestra de $n =$ 60933 de las cuales habrían $n_e =$ 28029 ocupados repartidos en $n_{I} =$ 1219 UPM.
+La siguiente tabla muestra los resultados del ejercicio al seleccionar $\bar{n}_{II} =$ 50 personas por UPM, que a su vez implica que por cada UPM se encontrarían en promedio $\bar{n}$ 23 personas ocupadas por UPM. Con lo anterior se obtendría un efecto de diseño $Deff =$ 1.8, para un total de personas en la muestra de $n =$ 60933 de las cuales habrían $n_e =$ 28029 ocupados repartidos en $n_{I} =$ 1219 UPM.
 
-|Personas promedio por UPM|Casos promedio por UPM| DEFF| Muestra de UPM|Muestra de Casos|Muestra de personas|
+|Personas promedio por UPM|Casos promedio por UPM| Deff| Muestra de UPM|Muestra de Casos|Muestra de personas|
 |:-----------:|:-------------:|:----:|:-------:|:-------:|:---------:|
 |          50|            23|  1.8| 1219|      28029|    60933|
 
 
 A continuación se muestran algunos resultados que permiten establecer otros escenarios de muestreo cuando se varía el tamaño de muestra promedio de hogares por UPM. 
 
-|Personas promedio por UPM|Casos promedio por UPM| DEFF| Muestra de UPM|Muestra de Casos|Muestra de personas|
+|Personas promedio por UPM|Casos promedio por UPM| Deff| Muestra de UPM|Muestra de Casos|Muestra de personas|
 |:-----------:|:-------------:|:----:|:-------:|:-------:|:---------:|
 |          25|            12|  1.4| 1857|      21360|    46435|
 |          50|            23|  1.8| 1219|      28029|    60933|
@@ -386,16 +386,16 @@ Siguiendo las recomendaciones internacionales, se desestimarían los escenarios 
 
 Suponga que se quiere estimar la proporción de incidencia de la pobreza sobre la población analfabeta con un error relativo máximo admisible del 15%. Se ha estimado que alrededor del $r = 14$% de las personas del país no saben leer ni escribir. Por otro lado, tal como se vio en un ejemplo anterior, el fenómeno de la pobreza está estimado en $P = 4$%. y la correlación intraclase de la característica de interés es $\rho^e = 0.045$.
 
-La siguiente tabla muestra los resultados del ejercicio al seleccionar $\bar{n}_{II} =$ 100 personas por UPM, que a su vez implica que por cada UPM se encontrarían en promedio $\bar{n}$ 14 personas que no saben leer ni escribir por UPM. Con lo anterior se obtendría un efecto de diseño $DEFF =$ 1.6, para un total de personas en la muestra de $n =$ 32671 de las cuales habrían $n_e =$ 4574 ocupados repartidos en $n_{I} =$ 327 UPM.
+La siguiente tabla muestra los resultados del ejercicio al seleccionar $\bar{n}_{II} =$ 100 personas por UPM, que a su vez implica que por cada UPM se encontrarían en promedio $\bar{n}$ 14 personas que no saben leer ni escribir por UPM. Con lo anterior se obtendría un efecto de diseño $Deff =$ 1.6, para un total de personas en la muestra de $n =$ 32671 de las cuales habrían $n_e =$ 4574 ocupados repartidos en $n_{I} =$ 327 UPM.
 
-|Personas promedio por UPM|Casos promedio por UPM| DEFF| Muestra de UPM|Muestra de Casos|Muestra de personas|
+|Personas promedio por UPM|Casos promedio por UPM| Deff| Muestra de UPM|Muestra de Casos|Muestra de personas|
 |:-----------:|:-------------:|:----:|:-------:|:-------:|:---------:|
 |         100|            14|  1.6|  327|       4574|    32671|
 
 
 Es posible plantear otros escenarios a medida que se evalúe el efecto que conlleva el cambio del número de hogares que se seleccionan en cada UPM. A continuación se muestran algunos resultados que permite establecer estos escenarios cuando se varía el tamaño de muestra promedio de hogares por UPM. 
 
-|Personas promedio por UPM|Casos promedio por UPM| DEFF| Muestra de UPM|Muestra de Casos|Muestra de personas|
+|Personas promedio por UPM|Casos promedio por UPM| Deff| Muestra de UPM|Muestra de Casos|Muestra de personas|
 |:-----------:|:-------------:|:----:|:-------:|:-------:|:---------:|
 |          25|           3.5|  1.1|  917|       3211|    22936|
 |          50|           7.0|  1.3|  524|       3665|    26179|
@@ -413,24 +413,27 @@ En las encuestas de hogares también surgen escenarios particulares que llevan a
 
 
 Suponga una población $U$, que se encuentra particionada en dos subpoblaciones $U_1$ de tamaño $N_1$ y $U_2$, de tamaño $N_2$. El interés del investigador está en conocer la diferencia de algunas proporciones entre estos grupos. Por ejemplo, suponga que se quiere conocer la diferencia entre las proporciones de niños desnutridos por sexo. Se espera que la proporción de niños desnutridos no supere la proporción de niñas desnutridas en el grupo control. Por lo tanto, el parámetro de interés se escribe como:
-\begin{equation}
+
+$$
 \theta=P_1-P_2=\frac{N_{d1}}{N_1}-\frac{N_{d2}}{N_2}
-\end{equation}
+$$
 
 En donde $N_{di}=\sum_{k\in U_i}Z_{dik}$, para $i=1,2.$ Ahora, $Z_{dik}$ es una característica dicotómica que indica si el individuo $k$-ésimo de la subpoblación $U_i$ está en estado de desnutrición. Por supuesto, bajo muestreo aleatorio simple, un estimador insesgado para $\theta$ es
-\begin{align}
+
+$$
 \hat{\theta}=\hat{P}_1-\hat{P}_2=\frac{\hat{N}_{d1}}{N_1}-\frac{\hat{N}_{d2}}{N_2}
-\end{align}
+$$
 
 En donde, $\hat{N}_{di}=\frac{N_i}{n_i}\sum_{k\in S_i}Z_{dik}$, para $i=1,2.$ La varianza del anterior estimador es:
-\begin{align*}
-Var(\hat{P}_1-\hat{P}_2)&=Var\left(\hat{P}_1\right)+Var\left(\hat{P}_2\right)-2Cov\left(\hat{P}_1, \hat{P}_2\right)
-\end{align*}
+
+$$
+Var(\hat{\theta})=Var\left(\hat{P}_1\right)+Var\left(\hat{P}_2\right)-2Cov\left(\hat{P}_1, \hat{P}_2\right)
+$$
 
 Por otro lado, siendo $T_1$ y $T_2$, el porcentaje de traslape de las subpoblaciones y la $R_{1,2}$ la correlación de Pearson entre los datos observados de ambas subpoblaciones, la covarianza entre este par de estimadores está determinada por la siguiente relación [@Kish_2004]:
 
 $$
-Cov(\hat{\theta}_1, \hat{\theta}_2) = \sqrt{Var(\hat{\theta}_1)}\sqrt{Var(\hat{\theta}_2)}\sqrt{T_1}\sqrt{T_2}R_{1,2}
+Cov(\hat{P}_1, \hat{P}_2) = \sqrt{Var(\hat{\theta}_1)}\sqrt{Var(\hat{\theta}_2)}\sqrt{T_1}\sqrt{T_2}R_{1,2}
 $$
 
 Ahora, para encontrar el tamaño de muestra óptimo, es útil realizar los siguientes supuestos:
@@ -438,31 +441,46 @@ Ahora, para encontrar el tamaño de muestra óptimo, es útil realizar los sigui
 1. Asumir que las subpoblaciones son grandes y por ende $N_1=N_2=N$.
 2. Por lo anterior, asumir que los tamaños de muestra pueden ser iguales, tales que $n_1=n_2=n$. 
 
-Nótese a su vez que, si el levantamiento de las observaciones no puede ser realizado utilizando muestreo aleatorio simple, sino que por el contrario, la muestra aleatoria fue seleccionada mediante un diseño de muestreo complejo con un efecto de diseño^[Recuerde que si el muestreo es aleatorio simple, el efecto de diseño es $DEFF=1$.] $(DEFF)$ no ignorable y mayor a uno, entonces la varianza tomaría la siguiente forma 
-\begin{align}
-Var(\hat{P}_1-\hat{P}_2)=\frac{DEFF}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2) * \sqrt{T_1}\sqrt{T_2}R_{1,2}
-\end{align}
+Nótese a su vez que, si el levantamiento de las observaciones no puede ser realizado utilizando muestreo aleatorio simple, sino que por el contrario, la muestra aleatoria fue seleccionada mediante un diseño de muestreo complejo con un efecto de diseño^[Recuerde que si el muestreo es aleatorio simple, el efecto de diseño es $Deff=1$.] $(Deff)$ no ignorable y mayor a uno, entonces la varianza tomaría la siguiente forma 
 
-De esta manera, un intervalo de confianza del 95\% para la diferencia de proporciones está dado por
-\begin{align}
-IC(95\%)_{P_1-P_2}&=(\hat{P}_1-\hat{P}_2) \pm Z_{1-\alpha/2} \sqrt{\frac{DEFF}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)* \sqrt{T_1}\sqrt{T_2}R_{1,2}}
-\end{align}
+$$
+Var(\hat{\theta})=\frac{Deff}{n}\left(1-\frac{n}{N}\right)S^2_{\theta}
+$$
+
+En donde
+
+$$
+S^2_{\theta} = P_1Q_1+P_2Q_2 - 2 \sqrt{T_1}\sqrt{T_2}R_{1,2} \sqrt{P_1Q_1}\sqrt{P_2Q_2}
+$$
+De esta manera, un intervalo de confianza del 95% para la diferencia de proporciones está dado por
+
+$$
+IC(95\%)_{\theta}=\hat{\theta} \pm Z_{1-\alpha/2} \sqrt{\frac{Deff}{n}\left(1-\frac{n}{N}\right)S^2_{\theta}}
+$$
 
 Lo anterior quiere decir que el margen de error, $e$, de la encuesta debe ser tal que:
-\begin{align}
-e< Z_{1-\alpha/2}\sqrt{\frac{DEFF}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)* \sqrt{T_1}\sqrt{T_2}R_{1,2}}
-\end{align}
+
+$$
+e< Z_{1-\alpha/2}\sqrt{\frac{Deff}{n}\left(1-\frac{n}{N}\right)S^2_{\theta}}
+$$
 
 Por lo tanto, despejando $n$, se tiene que la muestra en cada subgrupo debe mayor que:
-\begin{align}
- n> \dfrac{DEFF(P_1Q_1+P_2Q_2)* \sqrt{T_1}\sqrt{T_2}R_{1,2}}{\dfrac{e^2}{Z_{1-\alpha/2}^2}+\dfrac{DEFF(P_1Q_1+P_2Q_2)* \sqrt{T_1}\sqrt{T_2}R_{1,2}}{N}}
- \end{align}
+
+$$
+ n> \dfrac{Deff \ S^2_{\theta}}{\dfrac{e^2}{Z_{1-\alpha/2}^2}+\dfrac{Deff \ S^2_{\theta}}{N}}
+$$
  
-Para el levantamiento de una línea de base, que quiera estimar una diferencia de proporciones $P_1-P_2$ (donde $Q_1=1-P_1$ y $Q_2=1-P_2$), entonces el tamaño de muestra mínimo\footnote{Note que el tamaño de muestra de toda la encuesta es $2n$, puesto que se debe seleccionar $n$ elementos en cada subgrupo.} necesario para lograr una estimación confiable de esta diferencia, con menos de $\varepsilon\%$ de error, es:
+Para el levantamiento de una línea de base, que quiera estimar una diferencia de proporciones $P_1-P_2$ (donde $Q_1=1-P_1$ y $Q_2=1-P_2$), entonces el tamaño de muestra mínimo^[Note que el tamaño de muestra de toda la encuesta es $2n$, puesto que se debe seleccionar $n$ elementos en cada subgrupo.] necesario para lograr una estimación confiable de esta diferencia, con menos de $\varepsilon\%$ de error, es:
  
-\begin{equation} 
-n \geq \dfrac{(P_1Q_1+P_2Q_2)DEFF* \sqrt{T_1}\sqrt{T_2}R_{1,2}}{\dfrac{\varepsilon^2}{z_{\alpha}^2}+\dfrac{(P_1Q_1+P_2Q_2)DEFF* \sqrt{T_1}\sqrt{T_2}R_{1,2}}{N}}
-\end{equation} 
+$$
+n \geq \dfrac{(P_1Q_1+P_2Q_2) \ Deff \ S^2_{\theta}}{\dfrac{\varepsilon^2}{z_{\alpha}^2}+\dfrac{(P_1Q_1+P_2Q_2) \ Deff \ S^2_{\theta}}{N}}
+$$
+
+Nótese que dependiendo de los pocentajes de traslape $\sqrt{T_1}$, $\sqrt{T_2}$ y de la correlación de la característica de interés en ambas subpoblaciones $R_{1,2}$, la varianza $S^2_{\theta}$ tomará diferentes formas, como se detalla a continuación:
+
+1. Si no hay traslape, $T_1 = T_2 = 0$, y $S^2_{\theta} = P_1Q_1+P_2Q_2$.
+1. Si hay traslape completo, $T_1 = T_2 = 1$ y $S^2_{\theta} = P_1Q_1+P_2Q_2 - 2 R_{1,2} \sqrt{P_1Q_1}\sqrt{P_2Q_2}$.
+1. Si hay traslape parcial y balanceo, $T_1 = T_2 = T$ y si además se considera que las varianzas en cada subgrupo o periodo son similares $P_1Q_1 = P_2Q_2 = PQ$, entonces $S^2_{\theta} = 2PQ (1- TR_{1,2})$.
 
 #### Covarianza en comparaciones mensuales {-}
 
@@ -506,15 +524,21 @@ $$
 
 Para las encuestas que planean un seguimiento panel o de panel rotativo, es posible contemplar escenarios en los que se quiera estimar el efecto de una intervención, definido como la diferencia en diferencias de las proporciones de interés. De esta forma, el efecto se define como:
 
-\begin{equation}
-Efecto =(P_{1,1}-P_{2,1})-(P_{1,2}-P_{2, 2})
-\end{equation}
+$$
+\theta = (P_{1,1}-P_{2,1})-(P_{1,2}-P_{2, 2})
+$$
 
 En donde $P_{i,j}$ $(i, j = 1, 2.)$ corresponden a las proporciones del grupo $i$ en la oleada $j$. Entonces el tamaño de muestra mínimo^[Note que el tamaño de muestra de toda la encuesta es $4n$, en las dos oleadas, puesto que se debe seleccionar $n$ elementos en cada grupo.]  necesario para lograr una estimación confiable de esta diferencia, con menos de $\varepsilon \%$ de error, es:
  
-\begin{equation} 
-n \geq \dfrac{(P_{1,SO}Q_{1,SO}+P_{1,LB}Q_{1,LB}+P_{2,SO}Q_{2,SO}+P_{2,LB}Q_{2,LB})(1-TR)DEFF}{\dfrac{\varepsilon^2}{z_{\alpha}^2}+\dfrac{(P_{1,SO}Q_{1,SO}+P_{1,LB}Q_{1,LB}+P_{2,SO}Q_{2,SO}+P_{2,LB}Q_{2,LB})(1-TR_{1,2})DEFF}{N}}
-\end{equation} 
+$$
+n \geq \dfrac{Deff \ S^2_{\theta}}{\dfrac{\varepsilon^2}{z_{\alpha}^2}+\dfrac{Deff \ S^2_{\theta}}{N}}
+$$
+
+En donde
+
+$$
+S^2_{\theta} = (P_{1,1}Q_{1,1}+P_{1,2}Q_{1,2}+P_{2,1}Q_{2,1}+P_{2,2}Q_{2,2})(1-TR)
+$$
 
 En donde $T$ corresponde a la tasa de traslape ($T=1$ corresponde a un panel completo, $T=0.5$ a un semi-panel con traslape del 50\% y el caso extremo $T=0$ a una encuesta en donde no hay traslape) y $R_{1,2}$ se define como la correlación entre las dos oleadas ($R=0$ implica que no hay correlación entre los dos momentos, $R=-1$ implica una máxima correlación negativa entre los dos momentos y $R=1$ implica una correlación positiva máxima entre los dos momentos). 
 
@@ -534,38 +558,61 @@ Nótese que, acudiendo a la distribución normal de los estimadores de las propo
 \dfrac{\hat{P}_1-\hat{P}_2}{\sqrt{Var(\hat{P}_1-\hat{P}_2)}} > Z_{1-\alpha}
 \end{align*}
 
-Si las características del estudio implican que el diseño de muestreo es complejo con un $DEFF > 1$, entonces esta regla de decisión rechaza la hipótesis nula si
+Si las características del estudio implican que el diseño de muestreo es complejo con un $Deff > 1$, entonces esta regla de decisión rechaza la hipótesis nula si
 \begin{align*}
-\dfrac{\hat{P}_1-\hat{P}_2}{\sqrt{\frac{DEFF}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)}} > Z_{1-\alpha}
+\dfrac{\hat{P}_1-\hat{P}_2}{\sqrt{\frac{Deff}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)}} > Z_{1-\alpha}
 \end{align*}
 
 En este caso, es necesario controlar la probabilidad de cometer el error tipo 2 (aceptar una hipótesis nula, dado que ésta es falsa). A esta probabilidad se le conoce como *potencia} y, suponiendo que nuestro interés está en $P_1 -P_2 =D$, está dada por
 
 \begin{align*}
-\beta &\leq Pr\left(\dfrac{\hat{P}_1-\hat{P}_2}{\sqrt{\frac{DEFF}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)}} > Z_{1-\alpha} \left. | \right. P_1 -P_2 =D \right)\\
-&= Pr\left(\dfrac{(\hat{P}_1-\hat{P}_2)-D}{\sqrt{\frac{DEFF}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)}} > Z_{1-\alpha} - \dfrac{D}{\sqrt{\frac{DEFF}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)}} \right)\\
-&= 1-\Phi\left(Z_{1-\alpha} - \dfrac{D}{\sqrt{\frac{DEFF}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)}} \right)
+\beta &\leq Pr\left(\dfrac{\hat{P}_1-\hat{P}_2}{\sqrt{\frac{Deff}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)}} > Z_{1-\alpha} \left. | \right. P_1 -P_2 =D \right)\\
+&= Pr\left(\dfrac{(\hat{P}_1-\hat{P}_2)-D}{\sqrt{\frac{Deff}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)}} > Z_{1-\alpha} - \dfrac{D}{\sqrt{\frac{Deff}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)}} \right)\\
+&= 1-\Phi\left(Z_{1-\alpha} - \dfrac{D}{\sqrt{\frac{Deff}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)}} \right)
 \end{align*}
 
 Por lo anterior, se tiene que 
 \begin{align*}
-1-\beta \geq \Phi\left(Z_{1-\alpha} - \dfrac{D}{\sqrt{\frac{DEFF}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)}} \right)
+1-\beta \geq \Phi\left(Z_{1-\alpha} - \dfrac{D}{\sqrt{\frac{Deff}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)}} \right)
 \end{align*}
 
 Entonces, 
 \begin{align*}
-Z_{1-\beta}& \leq Z_{1-\alpha} - \dfrac{D}{\sqrt{\frac{DEFF}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)}} 
+Z_{1-\beta}& \leq Z_{1-\alpha} - \dfrac{D}{\sqrt{\frac{Deff}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)}} 
 \end{align*}
 
 En consecuencia, al despejar $n$, se tiene que la muestra en cada subgrupo debe mayor que:
 \begin{align}
-n \geq \dfrac{DEFF(P_1Q_1+P_2Q_2)}{\dfrac{D^2}{(Z_{1-\alpha}+Z_{\beta})^2}+\dfrac{DEFF(P_1Q_1+P_2Q_2)}{N}}
+n \geq \dfrac{Deff(P_1Q_1+P_2Q_2)}{\dfrac{D^2}{(Z_{1-\alpha}+Z_{\beta})^2}+\dfrac{Deff(P_1Q_1+P_2Q_2)}{N}}
  \end{align}
  
-
 ## Algunas consideraciones adicionales
 
-Cuando la encuesta se ha planeado para que tenga representatividad para algún conjunto de estratos, es necesario replicar estas mismas expresiones en cada uno de los subgrupos de interés. Por otro lado, las anteriores aproximaciones al cálculo de tamaño de muestra son insuficientes ante la realidad de la ausencia de respuesta y las desactualizaciones de los marcos de muestreo de UPM. 
+Cuando la encuesta se ha planeado para que tenga representatividad para algún conjunto de estratos, es necesario replicar estas mismas expresiones en cada uno de los subgrupos de interés. Por otro lado, las anteriores aproximaciones al cálculo de tamaño de muestra son insuficientes ante la realidad de la ausencia de respuesta y las desactualizaciones de los marcos de muestreo de UPM.
+
+### Asignación del tamaño de muestra en los estratos de muestreo
+
+Como se aclaró anteriormente, todas las encuestas de hogares en América Latina tienen un componente explícito de estratificación, y por ende una pregunta que surge inmediatamente es: ¿después de determinar el tamaño de muestra general, como asignarlo apropiadamanete en todos los estratos de muestreo? En general, se supone que el tamaño de la muestra general es $n$ y que hay $H$ estratos fijos; por ende, se quiere determinar los tamaños de muestra $n_h$ para cada estrato $(h = 1, \ldots, H)$, de tal manera que se garantice la ganancia de precisión de la estrategia de muestreo. 
+
+Existen varios tipos de asignación que pueden estudiarse para determinar la más apropiada, en términos de eficiencia; a continuación se presenta una lista no exhaustiva de ellas:
+
+1. Asignación proporcional: @Lohr_2019 afirma que este tipo de asignación se utiliza cuando es deseable que la muestra se pueda ver como una versión miniatura de la población. @Gutierrez_2016 señala que si se define la *fracción de muestreo* como $f_h=n_h/N_h$ en el estrato $h$, entonces al utilizar la asignación proporcional la fracción de muestreo será la misma para todos los estratos, tal que $f_h=f$. En este caso la probabilidad de inclusión de cualquier elemento en la población $\pi_k=f_h=f$ es constante y fija. De esta manera, cada unidad en la muestra representará el mismo número de elementos en la población, independientemente del estrato al que pertenezca. Bajo la asignación proporcional, el tamaño de muestra en cada estrato está dado por
+$$
+n_h=f \times N_h
+$$
+
+1. Asignación de Neyman: @Groves_Fowler_Couper_Lepkowski_Singer_Tourangeau_2009 mecionan que, bajo este método, se producen las menores varianzas para la media muestral comparado con otras técnicas de asignación de tamaño de muestra. Bajo la asignación de Neyman, el tamaño de muestra que minimiza la varianza de la estrategia de muestreo está dado por
+$$
+n_h=n\dfrac{N_hS_{yU_h}}{\sum_{h=1}^HN_hS_{yU_h}}
+$$
+donde $S_{yU_h}=\sqrt{S_{yU_h}^2}$ es la raiz de la varianza de la característica de interés en cada estrato. @Gutierrez_2016 afirma que, con respecto a la asignación de Neyman, es recomendable redondear el tamaño de muestra en cada estrato al entero más próximo. 
+
+1. Asignación de Kish: al usar la asignación proporcional en los estratos pequeños, la muestra puede resultar muy pequeña, generando problemas de eficiencia y pérdida de precisión. Por otro lado, utilizar una asignación uniforme (selección del mismo número de elementos en cada estrato $n_h = c$) tendrá como consecuencia una variación sustancial en las fracciones de muestreo entre los estratos y, por ende, una fracción de muestreo muy grande del estrato más pequeño. Un punto intermedio entre la asignación proporcional y la asignación uniforme es la asignación propuesta por Kish, la cual toma la siguiente expresión:
+$$
+n_h=n\frac{\sqrt{\frac{1}{H^2}+I\ W_h^2}}{\sum_{h=1}^{H}\sqrt{\frac{1}{H^2}+I\ W_h^2}}
+$$
+En donde $W_h=N_h/N$, e $I$ es el índice de asignación de Kish, que denota la importancia relativa entre las estimaciones nacionales y las de cada estrato. La asignación de Kish proporciona un balance entre la asignación uniforme y la proporcional. Cuando $I=0$, se reduce a la asignación uniforme, mientras que si $I \rightarrow \infty$ tiende a un enfoque de asignación proporcional. Usualmente se utiliza $I = 1$ para garantizar que la precisión de las características de interés en lo nacional y en los estratos sea aproximadamente la misma.
+
 
 ### Ajustes de subcobertura
 
@@ -573,11 +620,10 @@ Debido a las características propias de las encuestas de hogares, siempre se pr
 
 En encuestas de hogares cuyo diseño es longitudinal, no solamente se debe abordar el problema de la ausencia de respuesta al momento de la aplicación de la encuesta, sino que debe ser visto de manera integral y más general debido a que un hogar que pertenezca a un panel puede decidir no participar más después de un par de visitas. Es así como la atrición se convierte en un problema que enmarca la ausencia de respuesta como un fenómeno al cual se debe prestar atención para evitar problemas de sesgo y baja confiabilidad. 
 
-@Kalton_2009 advierte que el diseño de la encuesta debe tener en cuenta el ajuste de submuestras; por ejemplo, para estimar el cambio de la condición de pobreza o indigencia en los hogares es necesario realizar un ajuste al tamaño de muestra inicial para que al final de la aplicación de la encuesta el tamaño de muestra efectivo cumpla con los requerimientos de precisión de la inferencia estadística. Los INE pueden estimar, con base en su basta experiencia en la realización de encuestas, la probabilidad de que una persona (o jefe de hogar) responda al instrumento. Si esta probabilidad es denotada como $\phi=Pr(k \in s_r)$, en donde $s_r$ denota el subconjunto de respondientes efectivos, entonces los tamaños de muestra de individuos y hogares serán ajustados al dividirlos por $\phi$. De esta forma, si esta probabilidad fue estimada en $\phi = 0.8$, entonces todos los tamaños de muestra calculados en los pasos anteriores deberán ser ajustados como 
+@Kalton_2009 advierte que el diseño de la encuesta debe tener en cuenta el ajuste de submuestras; por ejemplo, para estimar el cambio de la condición de pobreza o indigencia en los hogares es necesario realizar un ajuste al tamaño de muestra inicial para que al final de la aplicación de la encuesta el tamaño de muestra efectivo cumpla con los requerimientos de precisión de la inferencia estadística. Los INE pueden estimar, con base en su basta experiencia en la realización de encuestas, la probabilidad de que una persona (o jefe de hogar) responda al instrumento. Si esta probabilidad es denotada como $\phi=Pr(k \in s_r)$, en donde $s_r$ denota el subconjunto de respondientes efectivos, entonces los tamaños de muestra de individuos y hogares serán ajustados al dividirlos por $\phi$.
+$$n_{final} = \frac{n_{inicial}}{\phi}$$
 
-$$n_{final} = \frac{n_{inicial}}{0.8}$$
-
-Por último, si la información auxiliar lo permite, este ajuste debería realizarse de manera diferenciada en cada uno de los estratos. Por ejemplo, si se conoce que este fenómeno de ausencia de respuesta tiene una mayor incidencia en lo rural que en lo urbano, entonces este ajuste debería tenerse en cuenta de forma diferenciada. 
+Por ejemplo, si esta probabilidad fue estimada en $\phi = 0.8$, entonces todos los tamaños de muestra calculados en los pasos anteriores deberán ser ajustados como $n_{final} = \frac{n_{inicial}}{0.8} = 1.25\times n_{inicial}$.  Por último, si la información auxiliar lo permite, este ajuste debería realizarse de manera diferenciada en cada uno de los estratos. Por ejemplo, si se conoce que este fenómeno de ausencia de respuesta tiene una mayor incidencia en lo rural que en lo urbano, entonces este ajuste debería tenerse en cuenta de forma diferenciada. 
 
 ### Sustituciones y reemplazos
 
@@ -586,3 +632,4 @@ Una práctica común en los operativos de campo de las encuestas de hogares en L
 La estratificación implícita es usada cuando la encuesta está enfocada en un tema particular y, para su ejecución exitosa, requiere el uso del muestreo sistemático con probabilidades desiguales en la selección de las UPM, es decir en la definición del diseño de muestreo de la primera etapa. Según @United_Nations_2008[pág. 46], en la mayoría de países la secuencia podría empezar con el estrato urbano, desagregado por departamento, a su vez desagregado por municipio; el estrato rural, de forma similar, es desagregado por departamento, a su vez desagregado por comuna o vereda. Observe que la selección sistemática de UPM está condicionada a la medida de tamaño utilizada en la primera etapa, es decir el número de viviendas que la componen. De esta forma, la estratificación implícita consiste en que, para cada estrato explícito (urbano, rural, regiones, etc.) se crea una lista ordenada de UPM. Esta lista estará ordenada por los estratos implícitos definidas en la planeación de la encuesta (departamento, municipio) y dentro de cada subgrupo se ordenan las UPM en orden descendente (o ascendente). De esta forma, esta metodología constituye un método objetivo de selección de reemplazos, puesto que si no se puede acceder a la UPM seleccionada originalmente, su reemplazo será la inmediatamente anterior (o posterior) en la lista estratificada implícitamente. Este procedimiento seleccionará como reemplazo a la UPM ubicada en el mismo municipio, dentro del mismo departamento, en la misma zona y con un número similar de viviendas, respetando el principio de representatividad. De otra forma, si no se considera un procedimiento similar a la estratificación implícita, los reemplazos de las UPM podrían ser seleccionados aleatoriamente en otro departamento y con un número de viviendas mucho más grande o mucho más pequeño, añadiendo sesgo a la selección inicial. 
 
 Aunque la estratificación implícita permite acotar el sesgo generado por la ausencia de respuesta de las UPM, @Vehovar_1999[págs. 348 - 349] advierte que se debe tener precaución en cuanto a los usos de esta práctica puesto que también puede conllevar sesgos importantes en las estimaciones de interés. Lo anterior se desprende del hecho de que los individuos ubicados en zonas donde sí es posible acceder diferirán significativamente de aquellos individuos ubicados en las zonas de difícil acceso; es evidente que se trata de dos realidades diferentes. Por esta razón es útil que, después de haber valorado los posibles sesgos, si se ha tomado la determinación de realizar las sustituciones sobre las UPM de difícil acceso, se realice un seguimiento exhaustivo en cada levantamiento que permita clasificar el esquema de recolección de información primaria y se valore su impacto en la precisión de los estimadores resultantes. 
+

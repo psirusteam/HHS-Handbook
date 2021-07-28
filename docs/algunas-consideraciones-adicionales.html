@@ -24,7 +24,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2021-07-14" />
+<meta name="date" content="2021-07-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="otros-escenarios-de-interés.html"/>
-<link rel="next" href="referencias.html"/>
+<link rel="next" href="estimación-de-parámetros.html"/>
 <script src="libs/header-attrs-2.8/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -194,9 +194,19 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="7.5" data-path="algunas-consideraciones-adicionales.html"><a href="algunas-consideraciones-adicionales.html"><i class="fa fa-check"></i><b>7.5</b> Algunas consideraciones adicionales</a>
 <ul>
-<li class="chapter" data-level="7.5.1" data-path="algunas-consideraciones-adicionales.html"><a href="algunas-consideraciones-adicionales.html#ajustes-de-subcobertura"><i class="fa fa-check"></i><b>7.5.1</b> Ajustes de subcobertura</a></li>
-<li class="chapter" data-level="7.5.2" data-path="algunas-consideraciones-adicionales.html"><a href="algunas-consideraciones-adicionales.html#sustituciones-y-reemplazos"><i class="fa fa-check"></i><b>7.5.2</b> Sustituciones y reemplazos</a></li>
+<li class="chapter" data-level="7.5.1" data-path="algunas-consideraciones-adicionales.html"><a href="algunas-consideraciones-adicionales.html#asignación-del-tamaño-de-muestra-en-los-estratos-de-muestreo"><i class="fa fa-check"></i><b>7.5.1</b> Asignación del tamaño de muestra en los estratos de muestreo</a></li>
+<li class="chapter" data-level="7.5.2" data-path="algunas-consideraciones-adicionales.html"><a href="algunas-consideraciones-adicionales.html#ajustes-de-subcobertura"><i class="fa fa-check"></i><b>7.5.2</b> Ajustes de subcobertura</a></li>
+<li class="chapter" data-level="7.5.3" data-path="algunas-consideraciones-adicionales.html"><a href="algunas-consideraciones-adicionales.html#sustituciones-y-reemplazos"><i class="fa fa-check"></i><b>7.5.3</b> Sustituciones y reemplazos</a></li>
 </ul></li>
+</ul></li>
+<li class="part"><span><b>II Procesamiento transversal de las encuestas de hogares</b></span></li>
+<li class="chapter" data-level="8" data-path="estimación-de-parámetros.html"><a href="estimación-de-parámetros.html"><i class="fa fa-check"></i><b>8</b> Estimación de parámetros</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="estimadores-puntuales.html"><a href="estimadores-puntuales.html"><i class="fa fa-check"></i><b>8.1</b> Estimadores puntuales</a></li>
+<li class="chapter" data-level="8.2" data-path="estimación-de-las-varianzas-y-del-efecto-de-diseño-deff.html"><a href="estimación-de-las-varianzas-y-del-efecto-de-diseño-deff.html"><i class="fa fa-check"></i><b>8.2</b> Estimación de las varianzas y del efecto de diseño (DEFF)</a></li>
+<li class="chapter" data-level="8.3" data-path="estimación-estratificada.html"><a href="estimación-estratificada.html"><i class="fa fa-check"></i><b>8.3</b> Estimación estratificada</a></li>
+<li class="chapter" data-level="8.4" data-path="comparabilidad-entre-los-softwares-r-y-stata.html"><a href="comparabilidad-entre-los-softwares-r-y-stata.html"><i class="fa fa-check"></i><b>8.4</b> Comparabilidad entre los softwares <code>R</code> y <code>STATA</code></a></li>
+<li class="chapter" data-level="8.5" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html"><i class="fa fa-check"></i><b>8.5</b> Estimadores de calibración</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
 <li class="divider"></li>
@@ -222,16 +232,37 @@ div.csl-indent {
 <div id="algunas-consideraciones-adicionales" class="section level2" number="7.5">
 <h2><span class="header-section-number">7.5</span> Algunas consideraciones adicionales</h2>
 <p>Cuando la encuesta se ha planeado para que tenga representatividad para algún conjunto de estratos, es necesario replicar estas mismas expresiones en cada uno de los subgrupos de interés. Por otro lado, las anteriores aproximaciones al cálculo de tamaño de muestra son insuficientes ante la realidad de la ausencia de respuesta y las desactualizaciones de los marcos de muestreo de UPM.</p>
-<div id="ajustes-de-subcobertura" class="section level3" number="7.5.1">
-<h3><span class="header-section-number">7.5.1</span> Ajustes de subcobertura</h3>
+<div id="asignación-del-tamaño-de-muestra-en-los-estratos-de-muestreo" class="section level3" number="7.5.1">
+<h3><span class="header-section-number">7.5.1</span> Asignación del tamaño de muestra en los estratos de muestreo</h3>
+<p>Como se aclaró anteriormente, todas las encuestas de hogares en América Latina tienen un componente explícito de estratificación, y por ende una pregunta que surge inmediatamente es: ¿después de determinar el tamaño de muestra general, como asignarlo apropiadamanete en todos los estratos de muestreo? En general, se supone que el tamaño de la muestra general es <span class="math inline">\(n\)</span> y que hay <span class="math inline">\(H\)</span> estratos fijos; por ende, se quiere determinar los tamaños de muestra <span class="math inline">\(n_h\)</span> para cada estrato <span class="math inline">\((h = 1, \ldots, H)\)</span>, de tal manera que se garantice la ganancia de precisión de la estrategia de muestreo.</p>
+<p>Existen varios tipos de asignación que pueden estudiarse para determinar la más apropiada, en términos de eficiencia; a continuación se presenta una lista no exhaustiva de ellas:</p>
+<ol style="list-style-type: decimal">
+<li><p>Asignación proporcional: <span class="citation"><a href="#ref-Lohr_2019" role="doc-biblioref">Lohr</a> (<a href="#ref-Lohr_2019" role="doc-biblioref">2019</a>)</span> afirma que este tipo de asignación se utiliza cuando es deseable que la muestra se pueda ver como una versión miniatura de la población. <span class="citation"><a href="#ref-Gutierrez_2016" role="doc-biblioref">H. A. Gutiérrez</a> (<a href="#ref-Gutierrez_2016" role="doc-biblioref">2016</a>)</span> señala que si se define la <em>fracción de muestreo</em> como <span class="math inline">\(f_h=n_h/N_h\)</span> en el estrato <span class="math inline">\(h\)</span>, entonces al utilizar la asignación proporcional la fracción de muestreo será la misma para todos los estratos, tal que <span class="math inline">\(f_h=f\)</span>. En este caso la probabilidad de inclusión de cualquier elemento en la población <span class="math inline">\(\pi_k=f_h=f\)</span> es constante y fija. De esta manera, cada unidad en la muestra representará el mismo número de elementos en la población, independientemente del estrato al que pertenezca. Bajo la asignación proporcional, el tamaño de muestra en cada estrato está dado por
+<span class="math display">\[
+n_h=f \times N_h
+\]</span></p></li>
+<li><p>Asignación de Neyman: <span class="citation"><a href="#ref-Groves_Fowler_Couper_Lepkowski_Singer_Tourangeau_2009" role="doc-biblioref">Groves et al.</a> (<a href="#ref-Groves_Fowler_Couper_Lepkowski_Singer_Tourangeau_2009" role="doc-biblioref">2009</a>)</span> mecionan que, bajo este método, se producen las menores varianzas para la media muestral comparado con otras técnicas de asignación de tamaño de muestra. Bajo la asignación de Neyman, el tamaño de muestra que minimiza la varianza de la estrategia de muestreo está dado por
+<span class="math display">\[
+n_h=n\dfrac{N_hS_{yU_h}}{\sum_{h=1}^HN_hS_{yU_h}}
+\]</span>
+donde <span class="math inline">\(S_{yU_h}=\sqrt{S_{yU_h}^2}\)</span> es la raiz de la varianza de la característica de interés en cada estrato. <span class="citation"><a href="#ref-Gutierrez_2016" role="doc-biblioref">H. A. Gutiérrez</a> (<a href="#ref-Gutierrez_2016" role="doc-biblioref">2016</a>)</span> afirma que, con respecto a la asignación de Neyman, es recomendable redondear el tamaño de muestra en cada estrato al entero más próximo.</p></li>
+<li><p>Asignación de Kish: al usar la asignación proporcional en los estratos pequeños, la muestra puede resultar muy pequeña, generando problemas de eficiencia y pérdida de precisión. Por otro lado, utilizar una asignación uniforme (selección del mismo número de elementos en cada estrato <span class="math inline">\(n_h = c\)</span>) tendrá como consecuencia una variación sustancial en las fracciones de muestreo entre los estratos y, por ende, una fracción de muestreo muy grande del estrato más pequeño. Un punto intermedio entre la asignación proporcional y la asignación uniforme es la asignación propuesta por Kish, la cual toma la siguiente expresión:
+<span class="math display">\[
+n_h=n\frac{\sqrt{\frac{1}{H^2}+I\ W_h^2}}{\sum_{h=1}^{H}\sqrt{\frac{1}{H^2}+I\ W_h^2}}
+\]</span>
+En donde <span class="math inline">\(W_h=N_h/N\)</span>, e <span class="math inline">\(I\)</span> es el índice de asignación de Kish, que denota la importancia relativa entre las estimaciones nacionales y las de cada estrato. La asignación de Kish proporciona un balance entre la asignación uniforme y la proporcional. Cuando <span class="math inline">\(I=0\)</span>, se reduce a la asignación uniforme, mientras que si <span class="math inline">\(I \rightarrow \infty\)</span> tiende a un enfoque de asignación proporcional. Usualmente se utiliza <span class="math inline">\(I = 1\)</span> para garantizar que la precisión de las características de interés en lo nacional y en los estratos sea aproximadamente la misma.</p></li>
+</ol>
+</div>
+<div id="ajustes-de-subcobertura" class="section level3" number="7.5.2">
+<h3><span class="header-section-number">7.5.2</span> Ajustes de subcobertura</h3>
 <p>Debido a las características propias de las encuestas de hogares, siempre se presentará un fenómeno que puede ser descrito como una realidad: <em>existirá ausencia de respuesta en las encuestas de hogares</em>. En estos términos, los institutos nacionales de estadística deben tomar medidas preventivas al momento de adjudicar los tamaños de muestra en cada estrato, puesto que contar con un tamaño efectivo de muestra mucho menor al planeado inicialmente puede conllevar problemas de sesgo y de precisión en las estimaciones de las cifras nacionales o regionales, con las cuales se aborda la política económica y de desarrollo de los países de la región.</p>
 <p>En encuestas de hogares cuyo diseño es longitudinal, no solamente se debe abordar el problema de la ausencia de respuesta al momento de la aplicación de la encuesta, sino que debe ser visto de manera integral y más general debido a que un hogar que pertenezca a un panel puede decidir no participar más después de un par de visitas. Es así como la atrición se convierte en un problema que enmarca la ausencia de respuesta como un fenómeno al cual se debe prestar atención para evitar problemas de sesgo y baja confiabilidad.</p>
-<p><span class="citation"><a href="#ref-Kalton_2009" role="doc-biblioref">Kalton</a> (<a href="#ref-Kalton_2009" role="doc-biblioref">2009</a>)</span> advierte que el diseño de la encuesta debe tener en cuenta el ajuste de submuestras; por ejemplo, para estimar el cambio de la condición de pobreza o indigencia en los hogares es necesario realizar un ajuste al tamaño de muestra inicial para que al final de la aplicación de la encuesta el tamaño de muestra efectivo cumpla con los requerimientos de precisión de la inferencia estadística. Los INE pueden estimar, con base en su basta experiencia en la realización de encuestas, la probabilidad de que una persona (o jefe de hogar) responda al instrumento. Si esta probabilidad es denotada como <span class="math inline">\(\phi=Pr(k \in s_r)\)</span>, en donde <span class="math inline">\(s_r\)</span> denota el subconjunto de respondientes efectivos, entonces los tamaños de muestra de individuos y hogares serán ajustados al dividirlos por <span class="math inline">\(\phi\)</span>. De esta forma, si esta probabilidad fue estimada en <span class="math inline">\(\phi = 0.8\)</span>, entonces todos los tamaños de muestra calculados en los pasos anteriores deberán ser ajustados como</p>
-<p><span class="math display">\[n_{final} = \frac{n_{inicial}}{0.8}\]</span></p>
-<p>Por último, si la información auxiliar lo permite, este ajuste debería realizarse de manera diferenciada en cada uno de los estratos. Por ejemplo, si se conoce que este fenómeno de ausencia de respuesta tiene una mayor incidencia en lo rural que en lo urbano, entonces este ajuste debería tenerse en cuenta de forma diferenciada.</p>
+<p><span class="citation"><a href="#ref-Kalton_2009" role="doc-biblioref">Kalton</a> (<a href="#ref-Kalton_2009" role="doc-biblioref">2009</a>)</span> advierte que el diseño de la encuesta debe tener en cuenta el ajuste de submuestras; por ejemplo, para estimar el cambio de la condición de pobreza o indigencia en los hogares es necesario realizar un ajuste al tamaño de muestra inicial para que al final de la aplicación de la encuesta el tamaño de muestra efectivo cumpla con los requerimientos de precisión de la inferencia estadística. Los INE pueden estimar, con base en su basta experiencia en la realización de encuestas, la probabilidad de que una persona (o jefe de hogar) responda al instrumento. Si esta probabilidad es denotada como <span class="math inline">\(\phi=Pr(k \in s_r)\)</span>, en donde <span class="math inline">\(s_r\)</span> denota el subconjunto de respondientes efectivos, entonces los tamaños de muestra de individuos y hogares serán ajustados al dividirlos por <span class="math inline">\(\phi\)</span>.
+<span class="math display">\[n_{final} = \frac{n_{inicial}}{\phi}\]</span></p>
+<p>Por ejemplo, si esta probabilidad fue estimada en <span class="math inline">\(\phi = 0.8\)</span>, entonces todos los tamaños de muestra calculados en los pasos anteriores deberán ser ajustados como <span class="math inline">\(n_{final} = \frac{n_{inicial}}{0.8} = 1.25\times n_{inicial}\)</span>. Por último, si la información auxiliar lo permite, este ajuste debería realizarse de manera diferenciada en cada uno de los estratos. Por ejemplo, si se conoce que este fenómeno de ausencia de respuesta tiene una mayor incidencia en lo rural que en lo urbano, entonces este ajuste debería tenerse en cuenta de forma diferenciada.</p>
 </div>
-<div id="sustituciones-y-reemplazos" class="section level3" number="7.5.2">
-<h3><span class="header-section-number">7.5.2</span> Sustituciones y reemplazos</h3>
+<div id="sustituciones-y-reemplazos" class="section level3" number="7.5.3">
+<h3><span class="header-section-number">7.5.3</span> Sustituciones y reemplazos</h3>
 <p>Una práctica común en los operativos de campo de las encuestas de hogares en Latinoamérica es sustituir las UPM y viviendas para las cuales no se ha obtenido respuesta. Por ejemplo, se consideraría el reemplazo de las UPM cuando no se puede acceder al sitio geográfico por diferentes razones, como por ejemplo problemas de orden público o seguridad, algún cambio importante en la infraestructura de la zona, o porque no se tiene el consentimiento informado de las autoridades de la comunidad. En este caso, si no se puede acceder a la UPM, no se puede tampoco acceder a ninguno de los hogares que la integran. Los esquemas de sustituciones y reemplazos en las encuestas de hogares utiliza, por lo general, la metodología de <em>estratificación implícita</em> que permite seleccionar de manera automática a los reemplazos adecuados de acuerdo a la conformación de subgrupos poblacionales similares.</p>
 <p>La estratificación implícita es usada cuando la encuesta está enfocada en un tema particular y, para su ejecución exitosa, requiere el uso del muestreo sistemático con probabilidades desiguales en la selección de las UPM, es decir en la definición del diseño de muestreo de la primera etapa. Según <span class="citation"><a href="#ref-United_Nations_2008" role="doc-biblioref">UN</a> (<a href="#ref-United_Nations_2008" role="doc-biblioref">2008</a>pág. 46)</span>, en la mayoría de países la secuencia podría empezar con el estrato urbano, desagregado por departamento, a su vez desagregado por municipio; el estrato rural, de forma similar, es desagregado por departamento, a su vez desagregado por comuna o vereda. Observe que la selección sistemática de UPM está condicionada a la medida de tamaño utilizada en la primera etapa, es decir el número de viviendas que la componen. De esta forma, la estratificación implícita consiste en que, para cada estrato explícito (urbano, rural, regiones, etc.) se crea una lista ordenada de UPM. Esta lista estará ordenada por los estratos implícitos definidas en la planeación de la encuesta (departamento, municipio) y dentro de cada subgrupo se ordenan las UPM en orden descendente (o ascendente). De esta forma, esta metodología constituye un método objetivo de selección de reemplazos, puesto que si no se puede acceder a la UPM seleccionada originalmente, su reemplazo será la inmediatamente anterior (o posterior) en la lista estratificada implícitamente. Este procedimiento seleccionará como reemplazo a la UPM ubicada en el mismo municipio, dentro del mismo departamento, en la misma zona y con un número similar de viviendas, respetando el principio de representatividad. De otra forma, si no se considera un procedimiento similar a la estratificación implícita, los reemplazos de las UPM podrían ser seleccionados aleatoriamente en otro departamento y con un número de viviendas mucho más grande o mucho más pequeño, añadiendo sesgo a la selección inicial.</p>
 <p>Aunque la estratificación implícita permite acotar el sesgo generado por la ausencia de respuesta de las UPM, <span class="citation"><a href="#ref-Vehovar_1999" role="doc-biblioref">Vehovar</a> (<a href="#ref-Vehovar_1999" role="doc-biblioref">1999</a>págs. 348 - 349)</span> advierte que se debe tener precaución en cuanto a los usos de esta práctica puesto que también puede conllevar sesgos importantes en las estimaciones de interés. Lo anterior se desprende del hecho de que los individuos ubicados en zonas donde sí es posible acceder diferirán significativamente de aquellos individuos ubicados en las zonas de difícil acceso; es evidente que se trata de dos realidades diferentes. Por esta razón es útil que, después de haber valorado los posibles sesgos, si se ha tomado la determinación de realizar las sustituciones sobre las UPM de difícil acceso, se realice un seguimiento exhaustivo en cada levantamiento que permita clasificar el esquema de recolección de información primaria y se valore su impacto en la precisión de los estimadores resultantes.</p>
@@ -239,10 +270,22 @@ div.csl-indent {
 </div>
 </div>
 <!-- </div> -->
+
+
+
 <h3>Referencias</h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-Groves_Fowler_Couper_Lepkowski_Singer_Tourangeau_2009" class="csl-entry">
+Groves, Robert, Floyd Fowler, Mick Couper, James Lepkowski, Eleanor Singer, y Roger Tourangeau. 2009. <em>Survey Methodology</em>. John Wiley; Sons.
+</div>
+<div id="ref-Gutierrez_2016" class="csl-entry">
+Gutiérrez, Hugo Andrés. 2016. <em>Estrategias de muestreo: diseño de encuestas y estimación de parámetros</em>. Segunda edición. Ediciones de la U.
+</div>
 <div id="ref-Kalton_2009" class="csl-entry">
 Kalton, G. 2009. <span>«Some Issues in the Design and Analysis of Longitudinal Surveys»</span>. En.
+</div>
+<div id="ref-Lohr_2019" class="csl-entry">
+Lohr, Sharon L. 2019. <em>Sampling: Design and Analysis</em>. Duxbury Press.
 </div>
 <div id="ref-United_Nations_2008" class="csl-entry">
 ———. 2008. <em>Designing household survey samples: practical guidelines</em>. Studies en methods / United Nations, Department of Economic y Social Affairs, Statistics Division Series F. United Nations.
@@ -257,7 +300,7 @@ Vehovar, Vasja. 1999. <span>«Field Substitution and Unit Nonresponse»</span>. 
         </div>
       </div>
 <a href="otros-escenarios-de-interés.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="referencias.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="estimación-de-parámetros.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

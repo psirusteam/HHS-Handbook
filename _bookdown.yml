@@ -7,12 +7,15 @@ rmd_files: [
   "index.Rmd",
   
   "01Intro.Rmd",
+  
   "02Tipos.Rmd",
   "03Marcos.Rmd",
   "04Estratificar.Rmd",
   "05Diseno.Rmd",
   "06Deff.Rmd",
   "07Tamano.Rmd",
+  
+  "08Estimadores.Rmd",
 
   "99Referencias.Rmd"
   ]
