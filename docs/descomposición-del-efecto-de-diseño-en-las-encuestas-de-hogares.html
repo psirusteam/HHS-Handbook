@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>7.5 Algunas consideraciones adicionales | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
+  <title>6.2 Descomposición del efecto de diseño en las encuestas de hogares | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="7.5 Algunas consideraciones adicionales | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
+  <meta property="og:title" content="6.2 Descomposición del efecto de diseño en las encuestas de hogares | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="7.5 Algunas consideraciones adicionales | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
+  <meta name="twitter:title" content="6.2 Descomposición del efecto de diseño en las encuestas de hogares | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   
   <meta name="twitter:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="otros-escenarios-de-interés.html"/>
-<link rel="next" href="estimación-de-parámetros.html"/>
+<link rel="prev" href="estimación-del-efecto-de-diseño.html"/>
+<link rel="next" href="formas-comunes-del-efecto-de-diseño.html"/>
 <script src="libs/header-attrs-2.8/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -224,69 +224,52 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="algunas-consideraciones-adicionales" class="section level2" number="7.5">
-<h2><span class="header-section-number">7.5</span> Algunas consideraciones adicionales</h2>
-<p>Cuando la encuesta se ha planeado para que tenga representatividad para algún conjunto de estratos, es necesario replicar estas mismas expresiones en cada uno de los subgrupos de interés. Por otro lado, las anteriores aproximaciones al cálculo de tamaño de muestra son insuficientes ante la realidad de la ausencia de respuesta y las desactualizaciones de los marcos de muestreo de UPM.</p>
-<div id="asignación-del-tamaño-de-muestra-en-los-estratos-de-muestreo" class="section level3" number="7.5.1">
-<h3><span class="header-section-number">7.5.1</span> Asignación del tamaño de muestra en los estratos de muestreo</h3>
-<p>Como se aclaró anteriormente, todas las encuestas de hogares en América Latina tienen un componente explícito de estratificación, y por ende una pregunta que surge inmediatamente es: ¿después de determinar el tamaño de muestra general, como asignarlo apropiadamanete en todos los estratos de muestreo? En general, se supone que el tamaño de la muestra general es <span class="math inline">\(n\)</span> y que hay <span class="math inline">\(H\)</span> estratos fijos; por ende, se quiere determinar los tamaños de muestra <span class="math inline">\(n_h\)</span> para cada estrato <span class="math inline">\((h = 1, \ldots, H)\)</span>, de tal manera que se garantice la ganancia de precisión de la estrategia de muestreo.</p>
-<p>Existen varios tipos de asignación que pueden estudiarse para determinar la más apropiada, en términos de eficiencia; a continuación se presenta una lista no exhaustiva de ellas:</p>
+<div id="descomposición-del-efecto-de-diseño-en-las-encuestas-de-hogares" class="section level2" number="6.2">
+<h2><span class="header-section-number">6.2</span> Descomposición del efecto de diseño en las encuestas de hogares</h2>
+<p><span class="citation"><a href="#ref-Park_2003" role="doc-biblioref">Inho Park</a> (<a href="#ref-Park_2003" role="doc-biblioref">2003</a>)</span> propone que el efecto de diseño de cualquier encuesta se puede descomponerse en tres partes que se relacionan entre sí de forma multiplicativa. En primer lugar está el efecto debido a la ponderación desigual, <span class="math inline">\(deff^W\)</span>; en segundo lugar se encuentra el efecto debido a la estratificación, <span class="math inline">\(deff^S\)</span>; y por último se tiene el efecto debido al muestreo en varias etapas, <span class="math inline">\(deff^C\)</span>. Por lo tanto:</p>
+<p><span class="math display">\[
+DEFF = deff^W \times deff^S \times deff^C
+\]</span></p>
+<p>La primera componente <span class="math inline">\(deff^W\)</span> del efecto de diseño general tiende a aumentar ligeramente la variación de las estrategias de muestreo. <span class="citation"><a href="#ref-Valliant_Dever_Kreuter_2018" role="doc-biblioref">Valliant, Dever, y Kreuter</a> (<a href="#ref-Valliant_Dever_Kreuter_2018" role="doc-biblioref">2018</a>)</span> afirman que esta componente puede ser estimada por medio de la siguiente expresión:
+<span class="math display">\[
+deff^W = 1 + cv^2(w_k)
+\]</span>
+En donde <span class="math inline">\(cv(w_k)\)</span> representa el coeficiente de variación de los pesos de muestreo <span class="math inline">\(w_k\)</span> de las unidades en la encuesta. Si los pesos de muestreo son uniformes, entonces no habrá un incremento significativo en la varianza de la estrategia. Es por esto que los esquemas autoponderados son deseables en los diseños de muestreo de las encuestas de hogares. Por otra parte, si los pesos de muestreo tienen una variación grande, entonces habrá un incremento significativo en la varianza y, por ende, en el tamaño de muestra. Como se verá más adelante, los ajustes en el factor de expansión pueden inducir una alta variabilidad y por consiguiente se recomienda, en la medida de lo posible, crear clases o subgrupos de ajuste para mitigar y acotar la dispersión de los pesos finales de la encuesta.</p>
+<p>Al encontrar la mejor estratificación, nos aseguramos de que la segunda componente <span class="math inline">\(deff^S\)</span> de esta descomposición sea menor a uno (es decir que la varianza se reduce). Lamentablemente, la reducción de la varianza no suele ser tan grande y no mitiga los efectos de aglomeración debido a las múltiples etapas de los diseños de muestreo complejos. Como lo indica <span class="citation"><a href="#ref-Gutierrez_2016" role="doc-biblioref">H. A. Gutiérrez</a> (<a href="#ref-Gutierrez_2016" role="doc-biblioref">2016</a>)</span>, el efecto de diseño en el muestreo aleatorio simple sin reemplazo con asignación proporcional está dado por
+<span class="math display">\[
+deff^S \cong\frac{\text{Varianza dentro de los estratos}}{\text{Varianza Total}}
+\]</span></p>
+<p>Ahora, intuitivamente tenemos que
+<span class="math display">\[
+\rm Varianza \ Total = Varianza \ dentro + Varianza \ entre
+\]</span></p>
+<p>Por tanto se concluye que, casi siempre, esta estrategia de muestreo arrojará mejores resultados que una estrategia aleatoria simple.</p>
+<p>Por otro lado, recordando que el efecto de diseño debido a la conglomeración de la población finita en las UPM está dado por la siguiente expresión:</p>
+<p><span class="math display">\[deff^C = 1 + (\bar m-1)\rho\]</span></p>
+<p>Por tanto, habiéndose definido el marco de muestreo, en el momento del levantamiento de la información primaria, ya no se tendrá control sobre el valor de la correlación intraclase <span class="math inline">\(\rho\)</span>; únicamente se tiene control sobre el número de viviendas que serán seleccionadas en promedio en las UPMS <span class="math inline">\(\bar m\)</span>. Si el marco de muestreo quedó correctamente definido, entonces el valor de <span class="math inline">\(\rho\)</span> será tan pequeño como fue posible establecerlo al proponer las UPM; de la misma manera, es recomendable que el equipo técnico dentro de los INEs defina el menor número promedio posible de encuestas dentro de las UPM <span class="math inline">\(\bar m\)</span> para que el efecto de aglomeración sea mínimo.</p>
+<p>En general, la disminución del <span class="math inline">\(deff\)</span> debido a la estratificación se matiza con el aumento del <span class="math inline">\(deff\)</span> debido a la desigualdad de los pesos de muestreo. Es por esto que <span class="math inline">\(deff^C\)</span> predomina en el efecto de diseño general y es la razón por la cual se le presta mucha atención. <span class="citation"><a href="#ref-United_Nations_2008" role="doc-biblioref">UN</a> (<a href="#ref-United_Nations_2008" role="doc-biblioref">2008</a>)</span> propone que, para mitigar los efectos del muestreo multietápico, se consideren las siguientes estrategias:</p>
 <ol style="list-style-type: decimal">
-<li><p>Asignación proporcional: <span class="citation"><a href="#ref-Lohr_2019" role="doc-biblioref">Lohr</a> (<a href="#ref-Lohr_2019" role="doc-biblioref">2019</a>)</span> afirma que este tipo de asignación se utiliza cuando es deseable que la muestra se pueda ver como una versión miniatura de la población. <span class="citation"><a href="#ref-Gutierrez_2016" role="doc-biblioref">H. A. Gutiérrez</a> (<a href="#ref-Gutierrez_2016" role="doc-biblioref">2016</a>)</span> señala que si se define la <em>fracción de muestreo</em> como <span class="math inline">\(f_h=n_h/N_h\)</span> en el estrato <span class="math inline">\(h\)</span>, entonces al utilizar la asignación proporcional la fracción de muestreo será la misma para todos los estratos, tal que <span class="math inline">\(f_h=f\)</span>. En este caso la probabilidad de inclusión de cualquier elemento en la población <span class="math inline">\(\pi_k=f_h=f\)</span> es constante y fija. De esta manera, cada unidad en la muestra representará el mismo número de elementos en la población, independientemente del estrato al que pertenezca. Bajo la asignación proporcional, el tamaño de muestra en cada estrato está dado por
-<span class="math display">\[
-n_h=f \times N_h
-\]</span></p></li>
-<li><p>Asignación de Neyman: <span class="citation"><a href="#ref-Groves_Fowler_Couper_Lepkowski_Singer_Tourangeau_2009" role="doc-biblioref">Groves et al.</a> (<a href="#ref-Groves_Fowler_Couper_Lepkowski_Singer_Tourangeau_2009" role="doc-biblioref">2009</a>)</span> mecionan que, bajo este método, se producen las menores varianzas para la media muestral comparado con otras técnicas de asignación de tamaño de muestra. Bajo la asignación de Neyman, el tamaño de muestra que minimiza la varianza de la estrategia de muestreo está dado por
-<span class="math display">\[
-n_h=n\dfrac{N_hS_{yU_h}}{\sum_{h=1}^HN_hS_{yU_h}}
-\]</span>
-donde <span class="math inline">\(S_{yU_h}=\sqrt{S_{yU_h}^2}\)</span> es la raiz de la varianza de la característica de interés en cada estrato. <span class="citation"><a href="#ref-Gutierrez_2016" role="doc-biblioref">H. A. Gutiérrez</a> (<a href="#ref-Gutierrez_2016" role="doc-biblioref">2016</a>)</span> afirma que, con respecto a la asignación de Neyman, es recomendable redondear el tamaño de muestra en cada estrato al entero más próximo.</p></li>
-<li><p>Asignación de Kish: al usar la asignación proporcional en los estratos pequeños, la muestra puede resultar muy pequeña, generando problemas de eficiencia y pérdida de precisión. Por otro lado, utilizar una asignación uniforme (selección del mismo número de elementos en cada estrato <span class="math inline">\(n_h = c\)</span>) tendrá como consecuencia una variación sustancial en las fracciones de muestreo entre los estratos y, por ende, una fracción de muestreo muy grande del estrato más pequeño. Un punto intermedio entre la asignación proporcional y la asignación uniforme es la asignación propuesta por Kish, la cual toma la siguiente expresión:
-<span class="math display">\[
-n_h=n\frac{\sqrt{\frac{1}{H^2}+I\ W_h^2}}{\sum_{h=1}^{H}\sqrt{\frac{1}{H^2}+I\ W_h^2}}
-\]</span>
-En donde <span class="math inline">\(W_h=N_h/N\)</span>, e <span class="math inline">\(I\)</span> es el índice de asignación de Kish, que denota la importancia relativa entre las estimaciones nacionales y las de cada estrato. La asignación de Kish proporciona un balance entre la asignación uniforme y la proporcional. Cuando <span class="math inline">\(I=0\)</span>, se reduce a la asignación uniforme, mientras que si <span class="math inline">\(I \rightarrow \infty\)</span> tiende a un enfoque de asignación proporcional. Usualmente se utiliza <span class="math inline">\(I = 1\)</span> para garantizar que la precisión de las características de interés en lo nacional y en los estratos sea aproximadamente la misma.</p></li>
+<li>Seleccionar tantas UPM como sea posible.</li>
+<li>Definir las UPM tan pequeñas como sea posible, en términos del número de viviendas que las componen.</li>
+<li>Seleccionar un número fijo de viviendas dentro de las UPM seleccionadas, en vez de un número variable.</li>
+<li>Utilizar un muestreo sistemático en la UPM, en vez de seleccionar segmentos de viviendas contiguas.</li>
 </ol>
+<p>Al encontrar la mejor estratificación, los funcionarios de los INE permiten que la segunda componente <span class="math inline">\(deff^S\)</span> de la descomposición del efecto de diseño general sea mínima para los indicadores estudiados. También es tarea de los funcionarios de los INE asegurar que los efectos de diseño dados por el efecto de conglomeración y el uso del muestreo en varias etapas <span class="math inline">\(deff^C\)</span> sea mínimo. En este caso, se deberá estudiar, para cada encuesta y operación estadística que haga uso del marco de muestreo estratificado, la relación entre UPMs y hogares a la luz de los indicadores de interés; en particular, es necesario decidir cuántos hogares serán seleccionados en cada UPM y cuántas UPMs serán seleccionadas dentro de cada estrato</p>
+<p>De la mima manera, y como se verá en los siguientes capítulos, el efecto debido al uso de factores de ponderación desiguales <span class="math inline">\(deff^W\)</span> puede ser minimizado al decidir, a la luz de la correlación entre los indicadores particulares de cada encuesta de hogares, cuáles variables de control serán utilizadas en la calibración de los estimadores. De esta forma, en esta estrategia tripartita, se asegura que el efecto de diseño general de las encuestas sea pequeño.</p>
 </div>
-<div id="ajustes-de-subcobertura" class="section level3" number="7.5.2">
-<h3><span class="header-section-number">7.5.2</span> Ajustes de subcobertura</h3>
-<p>Debido a las características propias de las encuestas de hogares, siempre se presentará un fenómeno que puede ser descrito como una realidad: <em>existirá ausencia de respuesta en las encuestas de hogares</em>. En estos términos, los institutos nacionales de estadística deben tomar medidas preventivas al momento de adjudicar los tamaños de muestra en cada estrato, puesto que contar con un tamaño efectivo de muestra mucho menor al planeado inicialmente puede conllevar problemas de sesgo y de precisión en las estimaciones de las cifras nacionales o regionales, con las cuales se aborda la política económica y de desarrollo de los países de la región.</p>
-<p>En encuestas de hogares cuyo diseño es longitudinal, no solamente se debe abordar el problema de la ausencia de respuesta al momento de la aplicación de la encuesta, sino que debe ser visto de manera integral y más general debido a que un hogar que pertenezca a un panel puede decidir no participar más después de un par de visitas. Es así como la atrición se convierte en un problema que enmarca la ausencia de respuesta como un fenómeno al cual se debe prestar atención para evitar problemas de sesgo y baja confiabilidad.</p>
-<p><span class="citation"><a href="#ref-Kalton_2009" role="doc-biblioref">Kalton</a> (<a href="#ref-Kalton_2009" role="doc-biblioref">2009</a>)</span> advierte que el diseño de la encuesta debe tener en cuenta el ajuste de submuestras; por ejemplo, para estimar el cambio de la condición de pobreza o indigencia en los hogares es necesario realizar un ajuste al tamaño de muestra inicial para que al final de la aplicación de la encuesta el tamaño de muestra efectivo cumpla con los requerimientos de precisión de la inferencia estadística. Los INE pueden estimar, con base en su basta experiencia en la realización de encuestas, la probabilidad de que una persona (o jefe de hogar) responda al instrumento. Si esta probabilidad es denotada como <span class="math inline">\(\phi=Pr(k \in s_r)\)</span>, en donde <span class="math inline">\(s_r\)</span> denota el subconjunto de respondientes efectivos, entonces los tamaños de muestra de individuos y hogares serán ajustados al dividirlos por <span class="math inline">\(\phi\)</span>.
-<span class="math display">\[n_{final} = \frac{n_{inicial}}{\phi}\]</span></p>
-<p>Por ejemplo, si esta probabilidad fue estimada en <span class="math inline">\(\phi = 0.8\)</span>, entonces todos los tamaños de muestra calculados en los pasos anteriores deberán ser ajustados como <span class="math inline">\(n_{final} = \frac{n_{inicial}}{0.8} = 1.25\times n_{inicial}\)</span>. Por último, si la información auxiliar lo permite, este ajuste debería realizarse de manera diferenciada en cada uno de los estratos. Por ejemplo, si se conoce que este fenómeno de ausencia de respuesta tiene una mayor incidencia en lo rural que en lo urbano, entonces este ajuste debería tenerse en cuenta de forma diferenciada.</p>
-</div>
-<div id="sustituciones-y-reemplazos" class="section level3" number="7.5.3">
-<h3><span class="header-section-number">7.5.3</span> Sustituciones y reemplazos</h3>
-<p>Una práctica común en los operativos de campo de las encuestas de hogares en Latinoamérica es sustituir las UPM y viviendas para las cuales no se ha obtenido respuesta. Por ejemplo, se consideraría el reemplazo de las UPM cuando no se puede acceder al sitio geográfico por diferentes razones, como por ejemplo problemas de orden público o seguridad, algún cambio importante en la infraestructura de la zona, o porque no se tiene el consentimiento informado de las autoridades de la comunidad. En este caso, si no se puede acceder a la UPM, no se puede tampoco acceder a ninguno de los hogares que la integran. Los esquemas de sustituciones y reemplazos en las encuestas de hogares utiliza, por lo general, la metodología de <em>estratificación implícita</em> que permite seleccionar de manera automática a los reemplazos adecuados de acuerdo a la conformación de subgrupos poblacionales similares.</p>
-<p>La estratificación implícita es usada cuando la encuesta está enfocada en un tema particular y, para su ejecución exitosa, requiere el uso del muestreo sistemático con probabilidades desiguales en la selección de las UPM, es decir en la definición del diseño de muestreo de la primera etapa. Según <span class="citation"><a href="#ref-United_Nations_2008" role="doc-biblioref">UN</a> (<a href="#ref-United_Nations_2008" role="doc-biblioref">2008</a>pág. 46)</span>, en la mayoría de países la secuencia podría empezar con el estrato urbano, desagregado por departamento, a su vez desagregado por municipio; el estrato rural, de forma similar, es desagregado por departamento, a su vez desagregado por comuna o vereda. Observe que la selección sistemática de UPM está condicionada a la medida de tamaño utilizada en la primera etapa, es decir el número de viviendas que la componen. De esta forma, la estratificación implícita consiste en que, para cada estrato explícito (urbano, rural, regiones, etc.) se crea una lista ordenada de UPM. Esta lista estará ordenada por los estratos implícitos definidas en la planeación de la encuesta (departamento, municipio) y dentro de cada subgrupo se ordenan las UPM en orden descendente (o ascendente). De esta forma, esta metodología constituye un método objetivo de selección de reemplazos, puesto que si no se puede acceder a la UPM seleccionada originalmente, su reemplazo será la inmediatamente anterior (o posterior) en la lista estratificada implícitamente. Este procedimiento seleccionará como reemplazo a la UPM ubicada en el mismo municipio, dentro del mismo departamento, en la misma zona y con un número similar de viviendas, respetando el principio de representatividad. De otra forma, si no se considera un procedimiento similar a la estratificación implícita, los reemplazos de las UPM podrían ser seleccionados aleatoriamente en otro departamento y con un número de viviendas mucho más grande o mucho más pequeño, añadiendo sesgo a la selección inicial.</p>
-<p>Aunque la estratificación implícita permite acotar el sesgo generado por la ausencia de respuesta de las UPM, <span class="citation"><a href="#ref-Vehovar_1999" role="doc-biblioref">Vehovar</a> (<a href="#ref-Vehovar_1999" role="doc-biblioref">1999</a>págs. 348 - 349)</span> advierte que se debe tener precaución en cuanto a los usos de esta práctica puesto que también puede conllevar sesgos importantes en las estimaciones de interés. Lo anterior se desprende del hecho de que los individuos ubicados en zonas donde sí es posible acceder diferirán significativamente de aquellos individuos ubicados en las zonas de difícil acceso; es evidente que se trata de dos realidades diferentes. Por esta razón es útil que, después de haber valorado los posibles sesgos, si se ha tomado la determinación de realizar las sustituciones sobre las UPM de difícil acceso, se realice un seguimiento exhaustivo en cada levantamiento que permita clasificar el esquema de recolección de información primaria y se valore su impacto en la precisión de los estimadores resultantes.</p>
-
-</div>
-</div>
-<!-- </div> -->
-
-
-
 <h3>Referencias</h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-Groves_Fowler_Couper_Lepkowski_Singer_Tourangeau_2009" class="csl-entry">
-Groves, Robert, Floyd Fowler, Mick Couper, James Lepkowski, Eleanor Singer, y Roger Tourangeau. 2009. <em>Survey Methodology</em>. John Wiley; Sons.
-</div>
 <div id="ref-Gutierrez_2016" class="csl-entry">
 Gutiérrez, Hugo Andrés. 2016. <em>Estrategias de muestreo: diseño de encuestas y estimación de parámetros</em>. Segunda edición. Ediciones de la U.
 </div>
-<div id="ref-Kalton_2009" class="csl-entry">
-Kalton, G. 2009. <span>«Some Issues in the Design and Analysis of Longitudinal Surveys»</span>. En.
-</div>
-<div id="ref-Lohr_2019" class="csl-entry">
-Lohr, Sharon L. 2019. <em>Sampling: Design and Analysis</em>. Duxbury Press.
+<div id="ref-Park_2003" class="csl-entry">
+Park, Inho. 2003. <span>«Design Effects and Survey Planning»</span>, 8.
 </div>
 <div id="ref-United_Nations_2008" class="csl-entry">
 ———. 2008. <em>Designing household survey samples: practical guidelines</em>. Studies en methods / United Nations, Department of Economic y Social Affairs, Statistics Division Series F. United Nations.
 </div>
-<div id="ref-Vehovar_1999" class="csl-entry">
-Vehovar, Vasja. 1999. <span>«Field Substitution and Unit Nonresponse»</span>. <em>Journal of Official Statistics</em> 15 (2): 335-50.
+<div id="ref-Valliant_Dever_Kreuter_2018" class="csl-entry">
+———. 2018. <em>Practical Tools for Designing and Weighting Survey Samples</em>. Statistics for Social y Behavioral Sciences. Springer International Publishing. <a href="https://doi.org/10.1007/978-3-319-93632-1">https://doi.org/10.1007/978-3-319-93632-1</a>.
 </div>
 </div>
             </section>
@@ -294,8 +277,8 @@ Vehovar, Vasja. 1999. <span>«Field Substitution and Unit Nonresponse»</span>. 
           </div>
         </div>
       </div>
-<a href="otros-escenarios-de-interés.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="estimación-de-parámetros.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="estimación-del-efecto-de-diseño.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="formas-comunes-del-efecto-de-diseño.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -327,7 +310,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/psirusteam/HHS-Handbook/07Tamano.Rmd",
+"link": "https://github.com/psirusteam/HHS-Handbook/06Deff.Rmd",
 "text": "Edit"
 },
 "history": {

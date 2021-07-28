@@ -16,9 +16,77 @@ $$
 
 En donde $Var(\hat{\theta})$ denota la varianza de un estimador $\hat{\theta}$ bajo un diseño de muestreo complejo $P$ y $Var_{MAS}(\hat{\theta})$ denota la varianza del este estimador $\hat{\theta}$ bajo un diseño de muestreo aleatorio simple $MAS$. Esta cifra da cuenta del efecto de aglomeración causado por la utilización de un diseño de muestreo complejo $(p)$, frente a un diseño de muestreo aleatorio simple $MAS$, en la inferencia de un parámetro de la población finita $\theta$ (que puede ser un total, un promedio, una proporción, una razón, un percentil, etc.). 
 
+## Estimación del efecto de diseño
+
+En la expresión de efecto de diseño se debe notar dos hechos importantes, en primer lugar, Deff depende del diseño muestral $p(s)$, y en segundo lugar, depende del estimador del parámetro $\theta$. De esta forma, no es correcto describir al $Deff$ únicamente como una medidad de eficiencia del diseño muestral, puesto que bajo un mismo diseño, este puede tomar diferentes valores según el parámetro que se quiera estimar.
+
+Nótese que ninguno de los componentes del efecto de diseño se conoce y por ende deben ser estimados. Un estimador aproximadamente insesgado de esta varianza $S^2_U$ es la varianza muestral ponderada, la cual está dada por la siguiente expresión:
+
+$$
+\hat{S}^2_U = \left(\frac{n}{n-1}\right)
+\frac{\sum_s{ w_k ( y_k - \hat{\theta})^2}}{\sum_s{w_k} -1 }
+$$
+
+De esta forma, una estimación de la varianza ${Var}_{MAS}(\hat{\theta})$ bajo muestreo aleatorio simple está dada por la siguiente expresión:
+
+$$
+\widehat{Var}_{MAS}(\hat{\theta}) = \frac{1}{n} \left(1-\frac{n}{\hat N}\right)  \hat S^2_U
+$$
+
+En donde $\hat N = \sum_s w_k$. Por lo tanto, la estimación del efecto de diseño DEFF está dada por
+
+$$
+\widehat{DEFF} = \frac{\widehat{Var}(\hat\theta)}{\widehat{Var}_{MAS}(\hat{\theta})}
+$$
+
+La idea del efecto de diseño trata de evaluar el mismo estimador bajo diferentes escenarios de muestreo. Como el estimador que se está estudiando $\hat \theta$ viene ponderado por los factores de expansión de la encuesta, entonces lo más conveniente es utilizar el mismo rasero para evaluar ambas estrategias de muestreo. Es posible encontrar una discusión más profunda sobre el efecto de diseño en @Gambino_2009[, sección 4.],  @Sarndal_Swensson_Wretman_2003[, página 188] y @Gutierrez_Zhang_Montano_2016[, página 101].
+
+## Descomposición del efecto de diseño en las encuestas de hogares
+
+@Park_2003 propone que el efecto de diseño de cualquier encuesta se puede descomponerse en tres partes que se relacionan entre sí de forma multiplicativa. En primer lugar está el efecto debido a la ponderación desigual, $deff^W$; en segundo lugar se encuentra el efecto debido a la estratificación, $deff^S$; y por último se tiene el efecto debido al muestreo en varias etapas, $deff^C$. Por lo tanto:
+
+$$
+DEFF = deff^W \times deff^S \times deff^C
+$$
+
+La primera componente $deff^W$ del efecto de diseño general tiende a aumentar ligeramente la variación de las estrategias de muestreo. @Valliant_Dever_Kreuter_2018 afirman que esta componente puede ser estimada por medio de la siguiente expresión:
+$$
+deff^W = 1 + cv^2(w_k)
+$$
+En donde $cv(w_k)$ representa el coeficiente de variación de los pesos de muestreo $w_k$ de las unidades en la encuesta. Si los pesos de muestreo son uniformes, entonces no habrá un incremento significativo en la varianza de la estrategia. Es por esto que los esquemas autoponderados son deseables en los diseños de muestreo de las encuestas de hogares. Por otra parte, si los pesos de muestreo tienen una variación grande, entonces habrá un incremento significativo en la varianza y, por ende, en el tamaño de muestra. Como se verá más adelante, los ajustes en el factor de expansión pueden inducir una alta variabilidad y por consiguiente se recomienda, en la medida de lo posible, crear clases o subgrupos de ajuste para mitigar y acotar la dispersión de los pesos finales de la encuesta. 
+
+Al encontrar la mejor estratificación, nos aseguramos de que la segunda componente $deff^S$ de esta descomposición sea menor a uno (es decir que la varianza se reduce). Lamentablemente, la reducción de la varianza no suele ser tan grande y no mitiga los efectos de aglomeración debido a las múltiples etapas de los diseños de muestreo complejos. Como lo indica @Gutierrez_2016, el efecto de diseño en el muestreo aleatorio simple sin reemplazo con asignación proporcional está dado por
+$$
+deff^S \cong\frac{\text{Varianza dentro de los estratos}}{\text{Varianza Total}}
+$$
+
+Ahora, intuitivamente tenemos que
+$$
+\rm Varianza \ Total = Varianza \ dentro + Varianza \ entre
+$$
+
+Por tanto se concluye que, casi siempre, esta estrategia de muestreo arrojará mejores resultados que una estrategia aleatoria simple.
+
+Por otro lado, recordando que el efecto de diseño debido a la conglomeración de la población finita en las UPM está dado por la siguiente expresión:
+
+$$deff^C = 1 + (\bar m-1)\rho$$ 
+
+Por tanto, habiéndose definido el marco de muestreo, en el momento del levantamiento de la información primaria, ya no se tendrá control sobre el valor de la correlación intraclase $\rho$; únicamente se tiene control sobre el número de viviendas que serán seleccionadas en promedio en las UPMS $\bar m$. Si el marco de muestreo quedó correctamente definido, entonces el valor de $\rho$ será tan pequeño como fue posible establecerlo al proponer las UPM; de la misma manera, es recomendable que el equipo técnico dentro de los INEs defina el menor número promedio posible de encuestas dentro de las UPM $\bar m$ para que el efecto de aglomeración sea mínimo. 
+
+En general, la disminución del $deff$ debido a la estratificación se matiza con el aumento del $deff$ debido a la desigualdad de los pesos de muestreo. Es por esto que $deff^C$ predomina en el efecto de diseño general y es la razón por la cual se le presta mucha atención. @United_Nations_2008 propone que, para mitigar los efectos del muestreo multietápico, se consideren las siguientes estrategias:
+
+1. Seleccionar tantas UPM como sea posible. 
+1. Definir las UPM tan pequeñas como sea posible, en términos del número de viviendas que las componen. 
+1. Seleccionar un número fijo de viviendas dentro de las UPM seleccionadas, en vez de un número variable. 
+1. Utilizar un muestreo sistemático en la UPM, en vez de seleccionar segmentos de viviendas contiguas. 
+
+Al encontrar la mejor estratificación, los funcionarios de los INE permiten que la segunda componente $deff^S$ de la descomposición del efecto de diseño general sea mínima para los indicadores estudiados. También es tarea de los funcionarios de los INE asegurar que los efectos de diseño dados por el efecto de conglomeración y el uso del muestreo en varias etapas $deff^C$ sea mínimo. En este caso, se deberá estudiar, para cada encuesta y operación estadística que haga uso del marco de muestreo estratificado, la relación entre UPMs y hogares a la luz de los indicadores de interés; en particular, es necesario decidir cuántos hogares serán seleccionados en cada UPM y cuántas UPMs serán seleccionadas dentro de cada estrato
+
+De la mima manera, y como se verá en los siguientes capítulos, el efecto debido al uso de factores de ponderación desiguales $deff^W$ puede ser minimizado al decidir, a la luz de la correlación entre los indicadores particulares de cada encuesta de hogares, cuáles variables de control serán utilizadas en la calibración de los estimadores. De esta forma, en esta estrategia tripartita, se asegura que el efecto de diseño general de las encuestas sea pequeño. 
+
 ## Formas comunes del efecto de diseño
 
-Por ejemplo, suponiendo que el parámetro de interés es la media poblacional ($\bar{y}$) de una variable de interés $y$ (por ejemplo, el ingreso per cápita mensual), es posible escribir la varianza del estimador bajo el diseño de muestreo complejo como 
+Suponiendo que el parámetro de interés es la media poblacional ($\bar{y}$) de una variable de interés $y$ (por ejemplo, el ingreso per cápita mensual), es posible escribir la varianza del estimador bajo el diseño de muestreo complejo como 
 
 $$
 Var(\hat{\bar{y}}) = \frac{DEFF}{n}\left(1-\frac{n}{N}\right)S^2_{y}
@@ -47,32 +115,9 @@ donde $\bar m$ corresponde al promedio de hogares seleccionados por UPM y $\rho$
 1.  El coeficiente de correlación crezca, lo cual no puede ser controlado de antemano, puesto que se trata de la observación de la realidad. En general, $\rho_y$ será más grande cuando la distribución de la variable de interés sea explicada por las UPM en el país. Por ejemplo, si el indicador de interés es la pobreza y los hogares pobres están aglomerados, segregados y separados de los hogares más acaudalados, entonces $\rho_y$ será más grande; además, entre más segregación haya, mayor será su valor. 
 2. El promedio de hogares seleccionados por UPM ascienda. Esto es controlado de antemano en la etapa de diseño y será un número fijo y transversal en la encuesta. 
 
-## Estimación del efecto de diseño
+## Otras consideraciones
 
-En la expresión de efecto de diseño se debe notar dos hechos importantes, en primer lugar, Deff depende del diseño muestral $p(s)$, y en segundo lugar, depende del estimador del parámetro $\theta$. De esta forma, no es correcto describir al $Deff$ únicamente como una medidad de eficiencia del diseño muestral, puesto que bajo un mismo diseño, este puede tomar diferentes valores según el parámetro que se quiera estimar.
-
-Nótese que ninguno de los componentes del efecto de diseño se conoce y por ende deben ser estimados. Un estimador aproximadamente insesgado de esta varianza $S^2_U$ es la varianza muestral ponderada, la cual está dada por la siguiente expresión:
-
-$$
-\hat{S}^2_U = \left(\frac{n}{n-1}\right)
-\frac{\sum_s{ w_k ( y_k - \hat{\theta})^2}}{\sum_s{w_k} -1 }
-$$
-
-De esta forma, una estimación de la varianza ${Var}_{MAS}(\hat{\theta})$ bajo muestreo aleatorio simple está dada por la siguiente expresión:
-
-$$
-\widehat{Var}_{MAS}(\hat{\theta}) = \frac{1}{n} \left(1-\frac{n}{\hat N}\right)  \hat S^2_U
-$$
-
-En donde $\hat N = \sum_s w_k$. Por lo tanto, la estimación del efecto de diseño DEFF está dada por
-
-$$
-\widehat{DEFF} = \frac{\widehat{Var}(\hat\theta)}{\widehat{Var}_{MAS}(\hat{\theta})}
-$$
-
-La idea del efecto de diseño trata de evaluar el mismo estimador bajo diferentes escenarios de muestreo. Como el estimador que se está estudiando $\hat \theta$ viene ponderado por los factores de expansión de la encuesta, entonces lo más conveniente es utilizar el mismo rasero para evaluar ambas estrategias de muestreo. Es posible encontrar una discusión más profunda sobre el efecto de diseño en @Gambino_2009[, sección 4.],  @Sarndal_Swensson_Wretman_2003[, página 188] y @Gutierrez_Zhang_Montano_2016[, página 101].
-
-## El efecto de diseño en subpoblaciones
+### El efecto de diseño en subpoblaciones
 
 La estimación del efecto de diseño es un problema común cuando se trabaja con estimaciones desagregadas en subpoblaciones de interés. Luego, cuando las subpoblaciones constituyen estratos (o agregaciones de estratos) planeados de antemano, para los cuales se conoce previamente su tamaño poblacional, se tiene el siguiente efecto de diseño:
 
@@ -100,10 +145,6 @@ $$
 En donde $S_{y_{hU}}^2$ es la varianza muestral de la variable de interés calculada en toda la población. Por lo tanto, en ambos efectos de diseño, la estimación de la varianza del diseño de muestreo complejo $Var (\hat\theta_h)$ es la misma, pero el denominador cambia dependiendo de si el subgrupo es un estrato o no. Es por esta razón que en los software computacionales las cifras relacionadas con la estimación puntual, errores estándar, intervalos de confianza y coeficientes de variación coinciden plenamente. Sin embargo, tanto los software `Stata` como `SPSS` estiman por defecto el DEFF. Nótese que, en este caso, las estimaciones de $Var_{MAS}^U(\hat\theta_h)$ y $Var_{MAS}^h(\hat\theta_h)$  serán diferentes, puesto que la primera involucra a toda la muestra, mientras que la segunda involucra únicamente a la muestra del estrato. 
 
 Cuando los subgrupos de interés son agregaciones de los estratos de diseño, no es correcto utilizar el enfoque que `Stata` trae por defecto. En efecto, @Lumley_2010 afirma que el efecto del diseño compara la varianza de una media o total con la varianza de un estudio del mismo tamaño utilizando un muestreo aleatorio simple sin reemplazo y que su cálculo será incorrecto si los pesos de muestreo se han re-escalado o no son recíprocos a las probabilidades de inclusión. Además, en `R` se compara la varianza de la estimación con la varianza de una estimación basada en una muestra aleatoria simple del mismo tamaño que el de la subpoblación. Entonces, por ejemplo, en el muestreo aleatorio estratificado, el efecto de diseño calculado en un estrato será igual a uno.
-
-
-
-## Otras consideraciones
 
 ### El efecto de diseño general
 
@@ -164,33 +205,12 @@ Basado en lo anterior, se nota que los efectos de diseño no solo son diferentes
 
 Por otro lado, para la misma encuesta PNAD, los efectos de diseño para el número promedio de cuartos usados como dormitorios es de 2.14 a nivel nacional, de 2.37 en las áreas metropolitanas, de 1.72 en las ciudades grandes y de 2.09 en las áreas rurales. Considerando que $\bar{m}=10$, el coeficiente de correlación intraclase es de $\rho= 0.12$ a nivel nacional, $\rho= 0.15$ en las zonas metropolitanas, $\rho= 0.08$ en las ciudades grandes y $\rho= 0.12$ en las áreas rurales. Lo anterior implica que hay una mayor homogeneidad del número de cuartos utilizados como dormitorio entre las UPM del país y de las zonas que lo componen. 
 
-como se verá en los capítulos poasteriores, al conocer el valor que toma el efecto de diseño para la estimación de un parámetro de interés, es posible crear escenarios de simulación que permitan establecer el tamaño de muestra en la planeación de las encuestas de hogares. Las anteriores expresiones corresponden al número de individuos que deberían ser seleccionados en cada subgrupo de interés. Por lo tanto, estos cálculos deben ser hechos tantas veces como subgrupos de interés exista en la encuesta, adecuando cada expresión a su contraparte poblacional. Por ejemplo, si el interés está en hacer inferencia en dos estratos: el rural y el urbano, entonces se debe calcular estas expresiones dos veces, una para cada estrato. Al final, el tamaño de muestra nacional será la sumatoria de los tamaños de muestra en cada uno de los estratos del país. 
+Como se verá en los capítulos posteriores, al conocer el valor que toma el efecto de diseño para la estimación de un parámetro de interés, es posible crear escenarios de simulación que permitan establecer el tamaño de muestra en la planeación de las encuestas de hogares. Las anteriores expresiones corresponden al número de individuos que deberían ser seleccionados en cada subgrupo de interés. Por lo tanto, estos cálculos deben ser hechos tantas veces como subgrupos de interés exista en la encuesta, adecuando cada expresión a su contraparte poblacional. Por ejemplo, si el interés está en hacer inferencia en dos estratos: el rural y el urbano, entonces se debe calcular estas expresiones dos veces, una para cada estrato. Al final, el tamaño de muestra nacional será la sumatoria de los tamaños de muestra en cada uno de los estratos del país. 
 
 
-### Descomposición del efecto de diseño en las encuestas de hogares
 
-@Park_2003 propone que el efecto de diseño de cualquier encuesta se puede descomponerse en tres partes que se relacionan entre sí de forma multiplicativa. En primer lugar está el efecto debido a la ponderación desigual, $deff^W$; en segundo lugar se encuentra el efecto debido a la estratificación, $deff^S$; y por último se tiene el efecto debido al muestreo en varias etapas, $deff^C$. Por lo tanto:
 
-$$
-DEFF = deff^W \times deff^S \times deff^C
-$$
 
-La primera componente $deff^W$ del efecto de diseño general tiende a aumentar ligeramente la variación de las estrategias de muestreo. @Valliant_Dever_Kreuter_2018 afirman que esta componente puede ser estimada por medio de la siguiente expresión:
-$$
-deff^W = 1 + cv^2(w_k)
-$$
-En donde $cv(w_k)$ representa el coeficiente de variación de los pesos de muestreo $w_k$ de las unidades en la encuesta. Si los pesos de muestreo son uniformes, entonces no habrá un incremento significativo en la varianza de la estrategia. Es por esto que los esquemas autoponderados son deseables en los diseños de muestreo de las encuestas de hogares. Por otra parte, si los pesos de muestreo tienen una variación grande, entonces habrá un incremento significativo en la varianza y, por ende, en el tamaño de muestra. Como se verá más adelante, los ajustes en el factor de expansión pueden inducir una alta variabilidad y por consiguiente se recomienda, en la medida de lo posible, crear clases o subgrupos de ajuste para mitigar y acotar la dispersión de los pesos finales de la encuesta. 
-
-Al encontrar la mejor estratificación, nos aseguramos de que la segunda componente $deff^S$ de esta descomposición sea menor a uno (es decir que la varianza se reduce). Lamentablemente, la reducción de la varianza no suele ser tan grande y no mitiga los efectos de aglomeración debido a las múltiplies etapas de los diseños de muestreo complejos. 
-
-En general, la disminución del $deff$ debido a la estratificación se matiza con el aumento del $deff$ debido a la desigualdad de los pesos de muestreo. Es por esto que $deff^C$ predomina en el efecto de diseño general y es la razón por la cual se le presta mucha atención. @United_Nations_2008 propone que, para mitigar los efectos del muestreo multietápico, se consideren las siguientes estrategias:
-
-1. Seleccionar tantas UPM como sea posible. 
-1. Definir las UPM tan pequeñas como sea posible, en términos del número de viviendas que las componen. 
-1. Seleccionar un número fijo de viviendas dentro de las UPM seleccionadas, en vez de un número variable. 
-1. Utilizar un muestreo sistemático en la UPM, en vez de seleccionar segmentos de viviendas contiguas. 
-
-Recuérdese que $deff^C = 1 + (\bar m-1)\rho$. Por tanto, habiéndose definido el marco de muestreo, en el momento del levantamiento de la información primaria, ya no se tendrá control sobre el valor de la correlación intraclase $\rho$; únicamente se tiene control sobre el número de viviendas que serán seleccionadas en promedio en las UPMS $\bar m$. Si el marco de muestreo quedó correctamente definido, entonces el valor de $\rho$ será tan pequeño como fue posible establecerlo al proponer las UPM; de la misma manera, es recomendable que el equipo técnico dentro de los INEs defina el menor número promedio posible de encuestas dentro de las UPM $\bar m$ para que el efecto de aglomeración sea mínimo. 
 
 
 
