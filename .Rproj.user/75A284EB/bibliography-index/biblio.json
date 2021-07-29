@@ -2288,6 +2288,47 @@
             "type": "book"
         },
         {
+            "ISSN": "0033362X, 15375331",
+            "author": [
+                {
+                    "family": "Schwarz",
+                    "given": "Norbert"
+                },
+                {
+                    "family": "Knäuper",
+                    "given": "Bärbel"
+                },
+                {
+                    "family": "Hippler",
+                    "given": "Hans-J."
+                },
+                {
+                    "family": "Noelle-Neumann",
+                    "given": "Elisabeth"
+                },
+                {
+                    "family": "Clark",
+                    "given": "Leslie"
+                }
+            ],
+            "container-title": "The Public Opinion Quarterly",
+            "id": "Schwarz1991",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        1991
+                    ]
+                ]
+            },
+            "page": "570-582",
+            "publisher": "[Oxford University Press, American Association for Public Opinion Research]",
+            "title": "Rating scales: Numeric values may change the meaning of scale labels",
+            "title-short": "Rating scales",
+            "type": "article-journal",
+            "volume": "55"
+        },
+        {
             "DOI": "10.1080/01621459.1992.10475217",
             "ISSN": "0162-1459",
             "author": [
@@ -2315,6 +2356,27 @@
             "title": "Calibration estimators in survey sampling",
             "type": "article-journal",
             "volume": "87"
+        },
+        {
+            "author": [
+                {
+                    "family": "Krosnick",
+                    "given": "J. A."
+                }
+            ],
+            "container-title": "Annual Review of Psychology",
+            "id": "Krosnick1999",
+            "issued": {
+                "date-parts": [
+                    [
+                        1999
+                    ]
+                ]
+            },
+            "page": "537-567",
+            "title": "Survey research",
+            "type": "article-journal",
+            "volume": "50"
         },
         {
             "author": [

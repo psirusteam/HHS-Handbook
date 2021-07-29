@@ -1,6 +1,4 @@
-# (PART) Diseño estadístico de las encuestas de hogares {-} 
-
-# Elementos básicos y planeación
+# Elementos básicos 
 
 El fortalecimiento continuo de las investigaciones sociales es un objetivo que los institutos nacionales de estadística procuran cumplir de forma sistemática. En el caso de aquellas operaciones que conllevan la recolección de información primaria y que involucran la selección y medición de hogares y sus miembros, mantener una documentación adecuada que describa las razones por las cuales se ha optado por cierta metodología de recolección en particular es un requisito fundamental para cumplir este cometido. En este apartado se exploran diferentes métodos de recolección de la información y se discuten las diferentes particularidades en la planeación de una encuesta de hogares. 
 
@@ -152,9 +150,20 @@ Los diseños de las encuestas de hogares deben tener en cuenta la rotación de l
 
 La definición de los indicadores de interés debe primar sobre el diseño de las encuestas de hogares. Por ejemplo, si el objetivo de la encuesta se centra en la estimación del cambio del indicador en dos periodos de tiempo, entonces el cálculo de la precisión de las estimaciones debe tener en cuenta que las muestras no son independientes y por lo tanto se debe calcular la varianza de la primera ronda, la varianza de la segunda ronda y la correlación entre las dos rondas de interés. Estos tres componentes deben intervenir en el cálculo de los coeficientes de variación, así como en la determinación del tamaño de muestra en cada ronda. En efecto, como lo afirma @McLaren_Steel_2001[pág. 236], para la estimación de tendencias, definidas a partir de series de tiempo macroeconómicas de los parámetros de interés en los estudios de fuerza laboral, el mejor patrón encontrado es el 1(2)m, en donde la vivienda entra en un primer mes en el panel, se excluye por los siguientes dos meses y este patrón se repite $m$ veces consecutivas. A partir de allí, la vivienda ya no vuelve a ser incluida en el estudio. En resumen, por la naturaleza de las encuestas de hogares en la región, al momento de pensar en incluir o cambiar la estructura rotacional en el sistema de encuestas de hogares, se debería considerar en primer lugar el esquema de repartición mensual de paneles. Una mirada más profunda de este tipo de análisis longitudinales se encuentra presente en los capítulos posteriores de este documento. 
 
-## Parámetros de interés
+## Parámetros e indicadores de interés
 
-Las encuestas son usadas para producir estimaciones de parámetros que describen la situación de una población, respondiendo a los objetivos de la investigación. Por lo general, el conocimiento de la población a cualquier nivel está reflejado en forma de totales, o de funciones de totales. Es por esta razón que este documento se enfoca y profundiza en las características inferenciales de los totales, puesto que la generalización a otros parámetros es inmediata. De esta manera, un **total poblacional** se define como la suma de las observaciones de una variable de interés, notada como $y$, en la población. Se calcula mediante la siguiente ecuación:
+Las encuestas son usadas para producir estimaciones de parámetros que describen la situación de una población, respondiendo a los objetivos de la investigación. En general, es posible clasificar en dos grandes grupos los indicadores o parámetros de interés en una encuesta:
+
+1. Indicadores descriptivos
+    - Media: promedio de años en educación.
+    - Proporciones: porcentaje de personas que votarán por un candidato.
+    - Totales: Total de personas víctimas del desplazamiento forzado.
+1. Indicadores analíticos
+    - Correlación: relación entre la cantidad de libros leídos y los años de escolaridad.
+    - Regresión: razón de incremento entre ingreso y años de experiencia
+
+
+Por lo general, el conocimiento de la población a cualquier nivel está reflejado en forma de totales, o de funciones de totales. Es por esta razón que este documento se enfoca y profundiza en las características inferenciales de los totales, puesto que la generalización a otros parámetros es inmediata. De esta manera, un **total poblacional** se define como la suma de las observaciones de una variable de interés, notada como $y$, en la población y se calcula mediante la siguiente ecuación:
 
 $$t_y = \sum_{k \in U} y_k$$
 

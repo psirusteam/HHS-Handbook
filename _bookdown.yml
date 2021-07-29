@@ -6,8 +6,9 @@ new_session: yes
 rmd_files: [
   "index.Rmd",
   
-  "01Intro.Rmd",
+  "00Intro.Rmd",
   
+  "01Planeacion.Rmd",
   "02Tipos.Rmd",
   "03Marcos.Rmd",
   "04Estratificar.Rmd",
