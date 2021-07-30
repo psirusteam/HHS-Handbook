@@ -204,6 +204,154 @@
             "volume": "9"
         },
         {
+            "DOI": "10.1007/s13253-018-00340-4",
+            "ISSN": "1085-7117, 1537-2693",
+            "author": [
+                {
+                    "family": "Sartore",
+                    "given": "Luca"
+                },
+                {
+                    "family": "Toppin",
+                    "given": "Kelly"
+                },
+                {
+                    "family": "Young",
+                    "given": "Linda"
+                },
+                {
+                    "family": "Spiegelman",
+                    "given": "Clifford"
+                }
+            ],
+            "container-title": "Journal of Agricultural, Biological and Environmental Statistics",
+            "id": "Sartore_Toppin_Young_Spiegelman_2019",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019,
+                        3
+                    ]
+                ]
+            },
+            "page": "26-48",
+            "title": "Developing integer calibration weights for census of agriculture",
+            "type": "article-journal",
+            "volume": "24"
+        },
+        {
+            "author": [
+                {
+                    "family": "Tillé",
+                    "given": "Yves"
+                }
+            ],
+            "id": "Tille",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "page": "3",
+            "title": "A simple and efficient way of rounding calibration weights",
+            "type": "article-journal"
+        },
+        {
+            "author": [
+                {
+                    "family": "Särndal",
+                    "given": "C-E."
+                }
+            ],
+            "container-title": "Survey Methodology",
+            "id": "Sar08",
+            "issued": {
+                "date-parts": [
+                    [
+                        2007
+                    ]
+                ]
+            },
+            "page": "99-119",
+            "title": "The calibration approach in survey theory and practice",
+            "type": "article-journal",
+            "volume": "33"
+        },
+        {
+            "ISBN": "978-958-762-586-8",
+            "author": [
+                {
+                    "family": "Gutiérrez",
+                    "given": "Hugo Andrés"
+                }
+            ],
+            "edition": "Segunda edición",
+            "id": "Gutierrez_2016",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "note": "Google-Books-ID: UlVmE5pkRwIC",
+            "publisher": "Ediciones de la U",
+            "title": "Estrategias de muestreo: Diseño de encuestas y estimación de parámetros",
+            "title-short": "Estrategias de muestreo",
+            "type": "book"
+        },
+        {
+            "DOI": "10.1007/0-387-34240-0",
+            "ISBN": "978-0-387-30814-2",
+            "URL": "https://www.springer.com/gp/book/9780387308142",
+            "author": [
+                {
+                    "family": "Tillé",
+                    "given": "Yves"
+                }
+            ],
+            "collection-title": "Springer series in statistics",
+            "id": "Tille_2006",
+            "issued": {
+                "date-parts": [
+                    [
+                        2006
+                    ]
+                ]
+            },
+            "publisher": "Springer-Verlag",
+            "title": "Sampling algorithms",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=sampling",
+            "author": [
+                {
+                    "family": "Tillé",
+                    "given": "Yves"
+                },
+                {
+                    "family": "Matei",
+                    "given": "Alina"
+                }
+            ],
+            "id": "Matei",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "note": "R package version 2.8",
+            "title": "Sampling: Survey sampling",
+            "title-short": "Sampling",
+            "type": "book"
+        },
+        {
             "author": [
                 {
                     "family": "Valliant",
@@ -270,32 +418,6 @@
             },
             "publisher": "Springer",
             "title": "Introduction to variance estimation",
-            "type": "book"
-        },
-        {
-            "author": [
-                {
-                    "family": "Valliant",
-                    "given": "Richard"
-                },
-                {
-                    "family": "Dever",
-                    "given": "Jill A."
-                }
-            ],
-            "edition": "1 edition",
-            "id": "Valliant_Dever_2017",
-            "issued": {
-                "date-parts": [
-                    [
-                        2017,
-                        12
-                    ]
-                ]
-            },
-            "publisher": "Stata Press",
-            "title": "Survey weights: A step-by-step guide to calculation",
-            "title-short": "Survey weights",
             "type": "book"
         },
         {
@@ -1988,29 +2110,6 @@
             "type": "book"
         },
         {
-            "ISBN": "978-958-762-586-8",
-            "author": [
-                {
-                    "family": "Gutiérrez",
-                    "given": "Hugo Andrés"
-                }
-            ],
-            "edition": "Segunda edición",
-            "id": "Gutierrez_2016",
-            "issued": {
-                "date-parts": [
-                    [
-                        2016
-                    ]
-                ]
-            },
-            "note": "Google-Books-ID: UlVmE5pkRwIC",
-            "publisher": "Ediciones de la U",
-            "title": "Estrategias de muestreo: Diseño de encuestas y estimación de parámetros",
-            "title-short": "Estrategias de muestreo",
-            "type": "book"
-        },
-        {
             "URL": "ftp://public.dhe.ibm.com/software/analytics/spss/documentation/statistics/23.0/en/client/Manuals/IBM_SPSS_Complex_Samples.pdf",
             "author": [
                 {
@@ -2843,32 +2942,6 @@
             "publisher": "United Nations",
             "title": "Designing household survey samples: Practical guidelines",
             "title-short": "Designing household survey samples",
-            "type": "book"
-        },
-        {
-            "author": [
-                {
-                    "family": "Valliant",
-                    "given": "Richard"
-                },
-                {
-                    "family": "Dever",
-                    "given": "Jill A."
-                }
-            ],
-            "edition": "1 edition",
-            "id": "Valliant_Dever_2017",
-            "issued": {
-                "date-parts": [
-                    [
-                        2017,
-                        12
-                    ]
-                ]
-            },
-            "publisher": "Stata Press",
-            "title": "Survey weights: A step-by-step guide to calculation",
-            "title-short": "Survey weights",
             "type": "book"
         },
         {

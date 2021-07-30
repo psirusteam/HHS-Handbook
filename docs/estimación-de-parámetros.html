@@ -24,7 +24,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2021-07-29" />
+<meta name="date" content="2021-07-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="algunas-consideraciones-adicionales.html"/>
-<link rel="next" href="estimadores-puntuales.html"/>
+<link rel="next" href="el-estimador-de-horvitz-thompson.html"/>
 <script src="libs/header-attrs-2.8/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -138,7 +138,10 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="4.1" data-path="el-marco-de-muestreo.html"><a href="el-marco-de-muestreo.html"><i class="fa fa-check"></i><b>4.1</b> El marco de muestreo</a></li>
 <li class="chapter" data-level="4.2" data-path="los-censos-y-su-incidencia-en-los-marcos-de-muestreo.html"><a href="los-censos-y-su-incidencia-en-los-marcos-de-muestreo.html"><i class="fa fa-check"></i><b>4.2</b> Los censos y su incidencia en los marcos de muestreo</a></li>
-<li class="chapter" data-level="4.3" data-path="construcción-de-las-upm.html"><a href="construcción-de-las-upm.html"><i class="fa fa-check"></i><b>4.3</b> Construcción de las UPM</a></li>
+<li class="chapter" data-level="4.3" data-path="construcción-de-las-upm.html"><a href="construcción-de-las-upm.html"><i class="fa fa-check"></i><b>4.3</b> Construcción de las UPM</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="construcción-de-las-upm.html"><a href="construcción-de-las-upm.html#actualización-continua-del-marco"><i class="fa fa-check"></i><b>4.3.1</b> Actualización continua del marco</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="metodologías-de-estratificación.html"><a href="metodologías-de-estratificación.html"><i class="fa fa-check"></i><b>5</b> Metodologías de estratificación</a>
 <ul>
@@ -157,6 +160,7 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="metodologías-multivariadas-sobre-la-matriz-de-información.html"><a href="metodologías-multivariadas-sobre-la-matriz-de-información.html#partición-genética-bb"><i class="fa fa-check"></i>Partición genética (BB)</a></li>
 </ul></li>
 <li class="chapter" data-level="5.5" data-path="evaluación-y-escogencia-de-la-mejor-estratificación.html"><a href="evaluación-y-escogencia-de-la-mejor-estratificación.html"><i class="fa fa-check"></i><b>5.5</b> Evaluación y escogencia de la mejor estratificación</a></li>
+<li class="chapter" data-level="5.6" data-path="estratificación-implícita.html"><a href="estratificación-implícita.html"><i class="fa fa-check"></i><b>5.6</b> Estratificación implícita</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="diseño-y-mecanismo-de-selección-de-la-muestra.html"><a href="diseño-y-mecanismo-de-selección-de-la-muestra.html"><i class="fa fa-check"></i><b>6</b> Diseño y mecanismo de selección de la muestra</a>
 <ul>
@@ -210,8 +214,18 @@ div.csl-indent {
 <li class="part"><span><b>II Procesamiento transversal de las encuestas de hogares</b></span></li>
 <li class="chapter" data-level="9" data-path="estimación-de-parámetros.html"><a href="estimación-de-parámetros.html"><i class="fa fa-check"></i><b>9</b> Estimación de parámetros</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="estimadores-puntuales.html"><a href="estimadores-puntuales.html"><i class="fa fa-check"></i><b>9.1</b> Estimadores puntuales</a></li>
-<li class="chapter" data-level="9.2" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html"><i class="fa fa-check"></i><b>9.2</b> Estimadores de calibración</a></li>
+<li class="chapter" data-level="9.1" data-path="el-estimador-de-horvitz-thompson.html"><a href="el-estimador-de-horvitz-thompson.html"><i class="fa fa-check"></i><b>9.1</b> El estimador de Horvitz-Thompson</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="el-estimador-de-horvitz-thompson.html"><a href="el-estimador-de-horvitz-thompson.html#estimación-para-para-totales"><i class="fa fa-check"></i><b>9.1.1</b> Estimación para para totales</a></li>
+<li class="chapter" data-level="9.1.2" data-path="el-estimador-de-horvitz-thompson.html"><a href="el-estimador-de-horvitz-thompson.html#estimación-para-tamaños-y-totales-en-dominios"><i class="fa fa-check"></i><b>9.1.2</b> Estimación para tamaños y totales en dominios</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="el-estimador-de-hájek-para-medias-y-proporciones.html"><a href="el-estimador-de-hájek-para-medias-y-proporciones.html"><i class="fa fa-check"></i><b>9.2</b> El estimador de Hájek para medias y proporciones</a></li>
+<li class="chapter" data-level="9.3" data-path="otros-estimadores-de-muestreo.html"><a href="otros-estimadores-de-muestreo.html"><i class="fa fa-check"></i><b>9.3</b> Otros estimadores de muestreo</a></li>
+<li class="chapter" data-level="9.4" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html"><i class="fa fa-check"></i><b>9.4</b> Estimadores de calibración</a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html#calibración-de-personas-con-bases-de-datos-de-hogares"><i class="fa fa-check"></i><b>9.4.1</b> Calibración de personas con bases de datos de hogares</a></li>
+<li class="chapter" data-level="9.4.2" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html#la-calibración-como-un-cambio-de-paradigma"><i class="fa fa-check"></i><b>9.4.2</b> La calibración como un cambio de paradigma</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
 <li class="divider"></li>
@@ -236,6 +250,30 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="estimación-de-parámetros" class="section level1" number="9">
 <h1><span class="header-section-number">Capítulo 9</span> Estimación de parámetros</h1>
+<p>Un estimador se define como una función de la muestra aleatoria <span class="math inline">\(S\)</span>, al cual toma valores reales y sólo depende de los elementos pertenecientes a <span class="math inline">\(S\)</span>. Las propiedades estadísticas de un estimador están determinadas por el diseño de muestreo. Es decir, dada la probabilidad de selección de cada muestra <span class="math inline">\(s \in Q\)</span>, la esperanza, la varianza y otras propiedades de interés están definidas a partir de <span class="math inline">\(p(s)\)</span>. En particular, la esperanza de una estimador <span class="math inline">\(\hat\theta\)</span> es</p>
+<p>Así, las propiedades más comúnmente utilizadas de un estimador <span class="math inline">\(\hat\theta\)</span> son el sesgo, definido por</p>
+<p><span class="math display">\[
+B(\hat\theta)=E(\hat\theta)-\theta
+\]</span></p>
+<p>y el error cuadrático medio, dado por</p>
+<p><span class="math display">\[
+ECM(\hat\theta)=E[\hat\theta-\theta]^2=Var(\hat\theta)+B^2(\hat\theta).
+\]</span></p>
+<p>Si el sesgo de un estimador es nulo, se dice que el estimador es insesgado y cuando esto ocurre el error cuadrático medio se convierte en la varianza del estimador. Además, <span class="citation"><a href="#ref-Sarndal_Swensson_Wretman_2003" role="doc-biblioref">C.-E. Särndal, Swensson, y Wretman</a> (<a href="#ref-Sarndal_Swensson_Wretman_2003" role="doc-biblioref">2003</a>)</span> afirman que el objetivo en un estudio por muestreo es estimar uno a más parámetros poblacionales. <span class="citation"><a href="#ref-Gutierrez_2016" role="doc-biblioref">H. A. Gutiérrez</a> (<a href="#ref-Gutierrez_2016" role="doc-biblioref">2016</a>)</span> afirma que las decisiones más importantes a la hora de abordar un problema de estimación por muestreo son</p>
+<ol style="list-style-type: decimal">
+<li>La escogencia de un diseño de muestreo y un algoritmo de selección que permita implementar el diseño.</li>
+<li>La elección de una fórmula matemática o estimador que calcule una estimación del parámetro de interés en la muestra seleccionada.</li>
+</ol>
+<p>Las anteriores no son decisiones independientes. Es decir, la escogencia de un estimador dependerá, usualmente, del diseño de muestreo utilizado. De hecho, si <span class="math inline">\(\hat\theta\)</span> es un estimador del parámetro <span class="math inline">\(\theta\)</span> y <span class="math inline">\(p_s(\cdot)\)</span> un diseño de muestreo definido sobre un soporte <span class="math inline">\(Q\)</span>, entonces la estrategia de muestreo será la dupla <span class="math inline">\((p(\cdot),\hat{T})\)</span>.</p>
+</div>
+<h3>Referencias</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-Gutierrez_2016" class="csl-entry">
+Gutiérrez, Hugo Andrés. 2016. <em>Estrategias de muestreo: diseño de encuestas y estimación de parámetros</em>. Segunda edición. Ediciones de la U.
+</div>
+<div id="ref-Sarndal_Swensson_Wretman_2003" class="csl-entry">
+Särndal, Carl-Erik, Bengt Swensson, y Jan Wretman. 2003. <em>Model Assisted Survey Sampling</em>. Springer Science; Business Media.
+</div>
 </div>
             </section>
 
@@ -243,7 +281,7 @@ div.csl-indent {
         </div>
       </div>
 <a href="algunas-consideraciones-adicionales.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="estimadores-puntuales.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="el-estimador-de-horvitz-thompson.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

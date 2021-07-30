@@ -162,7 +162,6 @@ Las encuestas son usadas para producir estimaciones de parámetros que describen
     - Correlación: relación entre la cantidad de libros leídos y los años de escolaridad.
     - Regresión: razón de incremento entre ingreso y años de experiencia
 
-
 Por lo general, el conocimiento de la población a cualquier nivel está reflejado en forma de totales, o de funciones de totales. Es por esta razón que este documento se enfoca y profundiza en las características inferenciales de los totales, puesto que la generalización a otros parámetros es inmediata. De esta manera, un **total poblacional** se define como la suma de las observaciones de una variable de interés, notada como $y$, en la población y se calcula mediante la siguiente ecuación:
 
 $$t_y = \sum_{k \in U} y_k$$
@@ -188,6 +187,12 @@ De la misma forma, la incidencia relativa de los fenómenos sociales sobre los h
 
 $$P_d=\frac{N_d}{N}$$
 
+En algunos casos es de interés conocer el total de una variable en una subpoblación. Por ejemplo, el total del ingreso en las mujeres, o el total de gasto en el área rural. En estas situaciones el parametro se conoce como **total del dominio** y se puede calcular mediante la siguiente expresión:
+
+$$t_{y_d} = \sum_{k \in U}y_{k} \ z_{d_k} = \sum_{k \in U_d}y_{k}$$
+De la misma forma, puede ser de interés calcular medidas relativas en el dominio como por ejemplo la **media del dominio**. Por ejemplo, es posible comparar la media de los ingresos entre hombres y mujeres, o la media de los ingresos en los ocupados, o la media del gasto en comida para la población indígena. Este parámetro puede ser calculado con la siguiente expresión:
+
+$$\bar y_{U_d} = \frac{t_{y_d}}{N_d}$$
 Finalmente, la **razón poblacional** se calcula como el cociente entre dos totales, el primer total $t_y$ asociado a una variable de interés $y$, el segundo total $t_x$ asociado a una variable de interés $x$. Por ejemplo, en la medición del mercado de trabajo, la tasa de desocupación es una razón entre el total de personas desocupadas y el total de personas activas. Nótese que para clasificar a una persona como desocupada, ocupada, activa o inactiva, es necesario realizar una indagación en la encuesta a cada uno de los miembros del hogar; por lo tanto ambas cantidades, numerador y denominador, corresponden a cantidades desconocidas de antemano. Es más, la condición de ocupación de las personas puede variar entre los periodos de observación. Este parámetro se calcula mediante la siguiente expresión:
 
 $$R_U=\frac{t_y}{t_z}$$

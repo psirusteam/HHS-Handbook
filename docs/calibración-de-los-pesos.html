@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="es" xml:lang="es">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>10.5 Calibración de los pesos | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
+  <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="10.5 Calibración de los pesos | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
+  <meta name="github-repo" content="psirusteam/HHS-Handbook" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="10.5 Calibración de los pesos | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
+  
+  <meta name="twitter:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
+  
+
+<meta name="author" content="Andrés Gutiérrez" />
+
+
+<meta name="date" content="2021-07-30" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="ajuste-por-ausencia-de-respuesta.html"/>
+<link rel="next" href="redondeo-de-los-factores-de-expansión.html"/>
+<script src="libs/header-attrs-2.8/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Diseño y análisis de encuestas de hogares</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefacio</a></li>
+<li class="chapter" data-level="" data-path="resumen.html"><a href="resumen.html"><i class="fa fa-check"></i>Resumen</a></li>
+<li class="chapter" data-level="1" data-path="introducción.html"><a href="introducción.html"><i class="fa fa-check"></i><b>1</b> Introducción</a>
+<ul>
+<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html#objetivos-de-desarrollo-sostenible"><i class="fa fa-check"></i>Objetivos de Desarrollo Sostenible</a></li>
+<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html#mercado-de-trabajo"><i class="fa fa-check"></i>Mercado de Trabajo</a></li>
+<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html#ingresos-y-gastos"><i class="fa fa-check"></i>Ingresos y gastos</a></li>
+<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html#esquema-del-documento"><i class="fa fa-check"></i>Esquema del documento</a></li>
+</ul></li>
+<li class="part"><span><b>I Diseño estadístico de las encuestas de hogares</b></span></li>
+<li class="chapter" data-level="2" data-path="el-paradigma-del-error-total.html"><a href="el-paradigma-del-error-total.html"><i class="fa fa-check"></i><b>2</b> El paradigma del error total</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="qué-es-una-encuesta.html"><a href="qué-es-una-encuesta.html"><i class="fa fa-check"></i><b>2.1</b> ¿Qué es una encuesta?</a></li>
+<li class="chapter" data-level="2.2" data-path="evolución-de-las-encuestas-estandarizadas.html"><a href="evolución-de-las-encuestas-estandarizadas.html"><i class="fa fa-check"></i><b>2.2</b> Evolución de las encuestas estandarizadas</a></li>
+<li class="chapter" data-level="2.3" data-path="el-ciclo-de-vida-de-una-encuesta.html"><a href="el-ciclo-de-vida-de-una-encuesta.html"><i class="fa fa-check"></i><b>2.3</b> El ciclo de vida de una encuesta</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="el-ciclo-de-vida-de-una-encuesta.html"><a href="el-ciclo-de-vida-de-una-encuesta.html#inferencia-individual"><i class="fa fa-check"></i><b>2.3.1</b> Inferencia individual</a></li>
+<li class="chapter" data-level="2.3.2" data-path="el-ciclo-de-vida-de-una-encuesta.html"><a href="el-ciclo-de-vida-de-una-encuesta.html#inferencia-grupal"><i class="fa fa-check"></i><b>2.3.2</b> Inferencia grupal</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="el-proceso-de-respuesta.html"><a href="el-proceso-de-respuesta.html"><i class="fa fa-check"></i><b>2.4</b> El proceso de respuesta</a></li>
+<li class="chapter" data-level="2.5" data-path="otras-consideraciones.html"><a href="otras-consideraciones.html"><i class="fa fa-check"></i><b>2.5</b> Otras consideraciones</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="elementos-básicos.html"><a href="elementos-básicos.html"><i class="fa fa-check"></i><b>3</b> Elementos básicos</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="universo-muestra-y-unidades.html"><a href="universo-muestra-y-unidades.html"><i class="fa fa-check"></i><b>3.1</b> Universo, muestra y unidades</a></li>
+<li class="chapter" data-level="3.2" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html"><i class="fa fa-check"></i><b>3.2</b> Periodicidad en el tiempo</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-transversales"><i class="fa fa-check"></i><b>3.2.1</b> Encuestas transversales</a></li>
+<li class="chapter" data-level="3.2.2" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-repetidas"><i class="fa fa-check"></i><b>3.2.2</b> Encuestas repetidas</a></li>
+<li class="chapter" data-level="3.2.3" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-panel"><i class="fa fa-check"></i><b>3.2.3</b> Encuestas panel</a></li>
+<li class="chapter" data-level="3.2.4" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-de-panel-dividido"><i class="fa fa-check"></i><b>3.2.4</b> Encuestas de panel dividido</a></li>
+<li class="chapter" data-level="3.2.5" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-de-panel-rotativo"><i class="fa fa-check"></i><b>3.2.5</b> Encuestas de panel rotativo</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="rotación-de-paneles.html"><a href="rotación-de-paneles.html"><i class="fa fa-check"></i><b>3.3</b> Rotación de paneles</a></li>
+<li class="chapter" data-level="3.4" data-path="parámetros-e-indicadores-de-interés.html"><a href="parámetros-e-indicadores-de-interés.html"><i class="fa fa-check"></i><b>3.4</b> Parámetros e indicadores de interés</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="parámetros-e-indicadores-de-interés.html"><a href="parámetros-e-indicadores-de-interés.html#ejemplos-de-indicadores-de-interés-y-su-relación-con-los-tipos-de-encuestas"><i class="fa fa-check"></i><b>3.4.1</b> Ejemplos de indicadores de interés y su relación con los tipos de encuestas</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="definición-del-marco-muestral.html"><a href="definición-del-marco-muestral.html"><i class="fa fa-check"></i><b>4</b> Definición del marco muestral</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="el-marco-de-muestreo.html"><a href="el-marco-de-muestreo.html"><i class="fa fa-check"></i><b>4.1</b> El marco de muestreo</a></li>
+<li class="chapter" data-level="4.2" data-path="los-censos-y-su-incidencia-en-los-marcos-de-muestreo.html"><a href="los-censos-y-su-incidencia-en-los-marcos-de-muestreo.html"><i class="fa fa-check"></i><b>4.2</b> Los censos y su incidencia en los marcos de muestreo</a></li>
+<li class="chapter" data-level="4.3" data-path="construcción-de-las-upm.html"><a href="construcción-de-las-upm.html"><i class="fa fa-check"></i><b>4.3</b> Construcción de las UPM</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="construcción-de-las-upm.html"><a href="construcción-de-las-upm.html#actualización-continua-del-marco"><i class="fa fa-check"></i><b>4.3.1</b> Actualización continua del marco</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="metodologías-de-estratificación.html"><a href="metodologías-de-estratificación.html"><i class="fa fa-check"></i><b>5</b> Metodologías de estratificación</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="dimensiones-estructurales-en-el-marco-de-muestreo.html"><a href="dimensiones-estructurales-en-el-marco-de-muestreo.html"><i class="fa fa-check"></i><b>5.1</b> Dimensiones estructurales en el marco de muestreo</a></li>
+<li class="chapter" data-level="5.2" data-path="información-a-nivel-de-upm.html"><a href="información-a-nivel-de-upm.html"><i class="fa fa-check"></i><b>5.2</b> Información a nivel de UPM</a></li>
+<li class="chapter" data-level="5.3" data-path="metodologías-univariadas-sobre-medidas-de-resumen.html"><a href="metodologías-univariadas-sobre-medidas-de-resumen.html"><i class="fa fa-check"></i><b>5.3</b> Metodologías univariadas sobre medidas de resumen</a>
+<ul>
+<li class="chapter" data-level="" data-path="metodologías-univariadas-sobre-medidas-de-resumen.html"><a href="metodologías-univariadas-sobre-medidas-de-resumen.html#partición-en-cuantiles-q"><i class="fa fa-check"></i>Partición en cuantiles (Q)</a></li>
+<li class="chapter" data-level="" data-path="metodologías-univariadas-sobre-medidas-de-resumen.html"><a href="metodologías-univariadas-sobre-medidas-de-resumen.html#método-de-raíz-de-frecuencia-acumulada-dh"><i class="fa fa-check"></i>Método de raíz de frecuencia acumulada (DH)</a></li>
+<li class="chapter" data-level="" data-path="metodologías-univariadas-sobre-medidas-de-resumen.html"><a href="metodologías-univariadas-sobre-medidas-de-resumen.html#estratificación-óptima-lh"><i class="fa fa-check"></i>Estratificación óptima (LH)</a></li>
+<li class="chapter" data-level="" data-path="metodologías-univariadas-sobre-medidas-de-resumen.html"><a href="metodologías-univariadas-sobre-medidas-de-resumen.html#estratificación-geométrica-gh"><i class="fa fa-check"></i>Estratificación geométrica (GH)</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="metodologías-multivariadas-sobre-la-matriz-de-información.html"><a href="metodologías-multivariadas-sobre-la-matriz-de-información.html"><i class="fa fa-check"></i><b>5.4</b> Metodologías multivariadas sobre la matriz de información</a>
+<ul>
+<li class="chapter" data-level="" data-path="metodologías-multivariadas-sobre-la-matriz-de-información.html"><a href="metodologías-multivariadas-sobre-la-matriz-de-información.html#k-medias-de-jarque-kmj"><i class="fa fa-check"></i>K-medias de Jarque (KmJ)</a></li>
+<li class="chapter" data-level="" data-path="metodologías-multivariadas-sobre-la-matriz-de-información.html"><a href="metodologías-multivariadas-sobre-la-matriz-de-información.html#partición-genética-bb"><i class="fa fa-check"></i>Partición genética (BB)</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="evaluación-y-escogencia-de-la-mejor-estratificación.html"><a href="evaluación-y-escogencia-de-la-mejor-estratificación.html"><i class="fa fa-check"></i><b>5.5</b> Evaluación y escogencia de la mejor estratificación</a></li>
+<li class="chapter" data-level="5.6" data-path="estratificación-implícita.html"><a href="estratificación-implícita.html"><i class="fa fa-check"></i><b>5.6</b> Estratificación implícita</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="diseño-y-mecanismo-de-selección-de-la-muestra.html"><a href="diseño-y-mecanismo-de-selección-de-la-muestra.html"><i class="fa fa-check"></i><b>6</b> Diseño y mecanismo de selección de la muestra</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html"><i class="fa fa-check"></i><b>6.1</b> Diseños de muestreo</a>
+<ul>
+<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-aleatorio-simple"><i class="fa fa-check"></i>Muestreo aleatorio simple</a></li>
+<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-proporcional-al-tamaño"><i class="fa fa-check"></i>Muestreo proporcional al tamaño</a></li>
+<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-estratificado"><i class="fa fa-check"></i>Muestreo estratificado</a></li>
+<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-de-conglomerados"><i class="fa fa-check"></i>Muestreo de conglomerados</a></li>
+<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-en-varias-etapas"><i class="fa fa-check"></i>Muestreo en varias etapas</a></li>
+<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-en-dos-fases"><i class="fa fa-check"></i>Muestreo en dos fases</a></li>
+<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-balanceado"><i class="fa fa-check"></i>Muestreo balanceado</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="el-diseño-de-muestreo-estándar-en-una-encuesta-de-hogares.html"><a href="el-diseño-de-muestreo-estándar-en-una-encuesta-de-hogares.html"><i class="fa fa-check"></i><b>6.2</b> El diseño de muestreo estándar en una encuesta de hogares</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="el-efecto-de-diseño.html"><a href="el-efecto-de-diseño.html"><i class="fa fa-check"></i><b>7</b> El efecto de diseño</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="estimación-del-efecto-de-diseño.html"><a href="estimación-del-efecto-de-diseño.html"><i class="fa fa-check"></i><b>7.1</b> Estimación del efecto de diseño</a></li>
+<li class="chapter" data-level="7.2" data-path="descomposición-del-efecto-de-diseño-en-las-encuestas-de-hogares.html"><a href="descomposición-del-efecto-de-diseño-en-las-encuestas-de-hogares.html"><i class="fa fa-check"></i><b>7.2</b> Descomposición del efecto de diseño en las encuestas de hogares</a></li>
+<li class="chapter" data-level="7.3" data-path="formas-comunes-del-efecto-de-diseño.html"><a href="formas-comunes-del-efecto-de-diseño.html"><i class="fa fa-check"></i><b>7.3</b> Formas comunes del efecto de diseño</a></li>
+<li class="chapter" data-level="7.4" data-path="otras-consideraciones-1.html"><a href="otras-consideraciones-1.html"><i class="fa fa-check"></i><b>7.4</b> Otras consideraciones</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="otras-consideraciones-1.html"><a href="otras-consideraciones-1.html#el-efecto-de-diseño-en-subpoblaciones"><i class="fa fa-check"></i><b>7.4.1</b> El efecto de diseño en subpoblaciones</a></li>
+<li class="chapter" data-level="7.4.2" data-path="otras-consideraciones-1.html"><a href="otras-consideraciones-1.html#el-efecto-de-diseño-general"><i class="fa fa-check"></i><b>7.4.2</b> El efecto de diseño general</a></li>
+<li class="chapter" data-level="7.4.3" data-path="otras-consideraciones-1.html"><a href="otras-consideraciones-1.html#el-efecto-de-diseño-en-las-encuestas-de-hogares-de-la-región"><i class="fa fa-check"></i><b>7.4.3</b> El efecto de diseño en las encuestas de hogares de la región</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="cálculo-del-tamaño-de-muestra.html"><a href="cálculo-del-tamaño-de-muestra.html"><i class="fa fa-check"></i><b>8</b> Cálculo del tamaño de muestra</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="confiabilidad-y-precisión.html"><a href="confiabilidad-y-precisión.html"><i class="fa fa-check"></i><b>8.1</b> Confiabilidad y precisión</a></li>
+<li class="chapter" data-level="8.2" data-path="el-efecto-de-diseño-en-la-determinación-del-tamaño-de-muestra.html"><a href="el-efecto-de-diseño-en-la-determinación-del-tamaño-de-muestra.html"><i class="fa fa-check"></i><b>8.2</b> El efecto de diseño en la determinación del tamaño de muestra</a></li>
+<li class="chapter" data-level="8.3" data-path="escenarios-de-interés.html"><a href="escenarios-de-interés.html"><i class="fa fa-check"></i><b>8.3</b> Escenarios de interés</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="escenarios-de-interés.html"><a href="escenarios-de-interés.html#tamaño-de-muestra-para-upm-hogares-y-personas"><i class="fa fa-check"></i><b>8.3.1</b> Tamaño de muestra para UPM, hogares y personas</a></li>
+<li class="chapter" data-level="8.3.2" data-path="escenarios-de-interés.html"><a href="escenarios-de-interés.html#tamaño-de-muestra-para-upm-y-hogares"><i class="fa fa-check"></i><b>8.3.2</b> Tamaño de muestra para UPM y hogares</a></li>
+<li class="chapter" data-level="8.3.3" data-path="escenarios-de-interés.html"><a href="escenarios-de-interés.html#tamaño-de-muestra-para-upm-y-personas"><i class="fa fa-check"></i><b>8.3.3</b> Tamaño de muestra para UPM y personas</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="otros-escenarios-de-interés.html"><a href="otros-escenarios-de-interés.html"><i class="fa fa-check"></i><b>8.4</b> Otros escenarios de interés</a>
+<ul>
+<li class="chapter" data-level="8.4.1" data-path="otros-escenarios-de-interés.html"><a href="otros-escenarios-de-interés.html#tamaño-de-muestra-para-la-estimación-de-la-diferencia-de-proporciones"><i class="fa fa-check"></i><b>8.4.1</b> Tamaño de muestra para la estimación de la diferencia de proporciones</a></li>
+<li class="chapter" data-level="8.4.2" data-path="otros-escenarios-de-interés.html"><a href="otros-escenarios-de-interés.html#tamaño-de-muestra-para-la-estimación-del-impacto-en-dos-mediciones-longitudinales"><i class="fa fa-check"></i><b>8.4.2</b> Tamaño de muestra para la estimación del impacto en dos mediciones longitudinales</a></li>
+<li class="chapter" data-level="8.4.3" data-path="otros-escenarios-de-interés.html"><a href="otros-escenarios-de-interés.html#tamaño-de-muestra-para-el-contraste-de-hipótesis-en-la-diferencia-de-proporciones"><i class="fa fa-check"></i><b>8.4.3</b> Tamaño de muestra para el contraste de hipótesis en la diferencia de proporciones</a></li>
+</ul></li>
+<li class="chapter" data-level="8.5" data-path="algunas-consideraciones-adicionales.html"><a href="algunas-consideraciones-adicionales.html"><i class="fa fa-check"></i><b>8.5</b> Algunas consideraciones adicionales</a>
+<ul>
+<li class="chapter" data-level="8.5.1" data-path="algunas-consideraciones-adicionales.html"><a href="algunas-consideraciones-adicionales.html#asignación-del-tamaño-de-muestra-en-los-estratos-de-muestreo"><i class="fa fa-check"></i><b>8.5.1</b> Asignación del tamaño de muestra en los estratos de muestreo</a></li>
+<li class="chapter" data-level="8.5.2" data-path="algunas-consideraciones-adicionales.html"><a href="algunas-consideraciones-adicionales.html#ajustes-de-subcobertura"><i class="fa fa-check"></i><b>8.5.2</b> Ajustes de subcobertura</a></li>
+<li class="chapter" data-level="8.5.3" data-path="algunas-consideraciones-adicionales.html"><a href="algunas-consideraciones-adicionales.html#sustituciones-y-reemplazos"><i class="fa fa-check"></i><b>8.5.3</b> Sustituciones y reemplazos</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>II Procesamiento transversal de las encuestas de hogares</b></span></li>
+<li class="chapter" data-level="9" data-path="estimación-de-parámetros.html"><a href="estimación-de-parámetros.html"><i class="fa fa-check"></i><b>9</b> Estimación de parámetros</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="el-estimador-de-horvitz-thompson.html"><a href="el-estimador-de-horvitz-thompson.html"><i class="fa fa-check"></i><b>9.1</b> El estimador de Horvitz-Thompson</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="el-estimador-de-horvitz-thompson.html"><a href="el-estimador-de-horvitz-thompson.html#estimación-para-para-totales"><i class="fa fa-check"></i><b>9.1.1</b> Estimación para para totales</a></li>
+<li class="chapter" data-level="9.1.2" data-path="el-estimador-de-horvitz-thompson.html"><a href="el-estimador-de-horvitz-thompson.html#estimación-para-tamaños-y-totales-en-dominios"><i class="fa fa-check"></i><b>9.1.2</b> Estimación para tamaños y totales en dominios</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="el-estimador-de-hájek-para-medias-y-proporciones.html"><a href="el-estimador-de-hájek-para-medias-y-proporciones.html"><i class="fa fa-check"></i><b>9.2</b> El estimador de Hájek para medias y proporciones</a></li>
+<li class="chapter" data-level="9.3" data-path="otros-estimadores-de-muestreo.html"><a href="otros-estimadores-de-muestreo.html"><i class="fa fa-check"></i><b>9.3</b> Otros estimadores de muestreo</a></li>
+<li class="chapter" data-level="9.4" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html"><i class="fa fa-check"></i><b>9.4</b> Estimadores de calibración</a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html#calibración-de-personas-con-bases-de-datos-de-hogares"><i class="fa fa-check"></i><b>9.4.1</b> Calibración de personas con bases de datos de hogares</a></li>
+<li class="chapter" data-level="9.4.2" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html#la-calibración-como-un-cambio-de-paradigma"><i class="fa fa-check"></i><b>9.4.2</b> La calibración como un cambio de paradigma</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="construcción-de-los-factores-de-expansión.html"><a href="construcción-de-los-factores-de-expansión.html"><i class="fa fa-check"></i><b>10</b> Construcción de los factores de expansión</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="creación-de-los-pesos-básicos.html"><a href="creación-de-los-pesos-básicos.html"><i class="fa fa-check"></i><b>10.1</b> Creación de los pesos básicos</a></li>
+<li class="chapter" data-level="10.2" data-path="descarte-de-las-unidades-no-elegibles.html"><a href="descarte-de-las-unidades-no-elegibles.html"><i class="fa fa-check"></i><b>10.2</b> Descarte de las unidades no elegibles</a></li>
+<li class="chapter" data-level="10.3" data-path="ajuste-por-elegibilidad-desconocida.html"><a href="ajuste-por-elegibilidad-desconocida.html"><i class="fa fa-check"></i><b>10.3</b> Ajuste por elegibilidad desconocida</a></li>
+<li class="chapter" data-level="10.4" data-path="ajuste-por-ausencia-de-respuesta.html"><a href="ajuste-por-ausencia-de-respuesta.html"><i class="fa fa-check"></i><b>10.4</b> Ajuste por ausencia de respuesta</a></li>
+<li class="chapter" data-level="10.5" data-path="calibración-de-los-pesos.html"><a href="calibración-de-los-pesos.html"><i class="fa fa-check"></i><b>10.5</b> Calibración de los pesos</a>
+<ul>
+<li class="chapter" data-level="10.5.1" data-path="calibración-de-los-pesos.html"><a href="calibración-de-los-pesos.html#medidas-de-calidad-en-la-calibración"><i class="fa fa-check"></i><b>10.5.1</b> Medidas de calidad en la calibración</a></li>
+<li class="chapter" data-level="10.5.2" data-path="calibración-de-los-pesos.html"><a href="calibración-de-los-pesos.html#calibración-a-nivel-de-personas-y-hogares"><i class="fa fa-check"></i><b>10.5.2</b> Calibración a nivel de personas y hogares</a></li>
+<li class="chapter" data-level="10.5.3" data-path="calibración-de-los-pesos.html"><a href="calibración-de-los-pesos.html#calibración-integrada-en-hogares"><i class="fa fa-check"></i><b>10.5.3</b> Calibración integrada en hogares</a></li>
+</ul></li>
+<li class="chapter" data-level="10.6" data-path="redondeo-de-los-factores-de-expansión.html"><a href="redondeo-de-los-factores-de-expansión.html"><i class="fa fa-check"></i><b>10.6</b> Redondeo de los factores de expansión</a>
+<ul>
+<li class="chapter" data-level="10.6.1" data-path="redondeo-de-los-factores-de-expansión.html"><a href="redondeo-de-los-factores-de-expansión.html#la-solución"><i class="fa fa-check"></i><b>10.6.1</b> La solución</a></li>
+<li class="chapter" data-level="10.6.2" data-path="redondeo-de-los-factores-de-expansión.html"><a href="redondeo-de-los-factores-de-expansión.html#ejemplos-en-r"><i class="fa fa-check"></i><b>10.6.2</b> Ejemplos en <code>R</code></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
+<li class="divider"></li>
+<li><a Diseño y análisis de encuestas de hogares</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Diseño y análisis estadístico en las encuestas de hogares de América Latina</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="calibración-de-los-pesos" class="section level2" number="10.5">
+<h2><span class="header-section-number">10.5</span> Calibración de los pesos</h2>
+<p>Después de conformar el sistema de ponderación de pesos de muestreo en la encuesta, es posible calibrar estos pesos con la información auxiliar disponible para cada país, a nivel nacional, por estratos de interés, e incluso por variable continuas sobre las que se tenga interés. <span class="citation"><a href="#ref-Sarndal_Lundstrom_2006" role="doc-biblioref">C.-E. Särndal y Lundström</a> (<a href="#ref-Sarndal_Lundstrom_2006" role="doc-biblioref">2006</a>)</span> afirman que cuando los estudios por muestreo están afectados por la ausencia de respuesta, es deseable tener las siguientes propiedades en la estructura inferencial que sustenta el muestreo:</p>
+<ol style="list-style-type: decimal">
+<li>Sesgo pequeño o nulo.</li>
+<li>Errores estándares pequeños.</li>
+<li>Un sistema de ponderación que reproduzca la información auxiliar disponible<a href="#fn16" class="footnote-ref" id="fnref16"><sup>16</sup></a>.</li>
+<li>Un sistema de ponderación que sea eficiente al momento de estimar cualquier característica de interés en un estudio multipropósito.</li>
+</ol>
+<p>A pesar de que cada vez es más extendido el uso de los pesos calibrados en las encuestas de América Latina, es necesario que se disemine más esta práctica metodológica que induce estimadores muestrales que reproducen exactamente la información auxiliar conocida a nivel poblacional. Debido a la construcción teórica de los estimadores de calibración, los pesos finales responden a la siguiente restricción</p>
+<p><span class="math display">\[
+\sum_{s}w^*_{k}\boldsymbol{x}_k = \sum_{U}\boldsymbol{x}_{k} = \boldsymbol{t}_{\boldsymbol{x}}
+\]</span></p>
+<p>El ejemplo más básico se encuentra cuando se desea que los pesos de muestreo deberían reproducir con exactitud el tamaño de las regiones <span class="math inline">\(N_h\)</span> y el tamaño del país <span class="math inline">\(N\)</span>. Es así como, utilizar la metodología de calibración <span class="citation">(<a href="#ref-Deville_Sarndal_1992" role="doc-biblioref">Deville y Särndal 1992</a>)</span> hace que se cumpla la siguiente ecuación de calibración sobre los nuevos pesos calibrados <span class="math inline">\(w_k^*\)</span> para todos lo estratos explícitos</p>
+<p><span class="math display">\[
+\sum_{s_h} w_k^* = N_h
+\]</span></p>
+<p>Esta coherencia entre las cifras oficiales y las que la encuesta puede producir hace que sea preferible el uso de los estimadores de calibración. Las anteriores características son satisfechas al usar el enfoque de calibración que induce una estructura inferencial robusta en presencia de información disponible puesto que reduce tanto el error de muestreo como el error debido a la ausencia de respuesta. Los estimadores de calibración son <strong>aproximandamente insesgados</strong>, pero la magnitud del sesgo está dada por la siguiente expresión:</p>
+<p><span class="math display">\[
+Bias(\hat{t}_{y, cal}) = E_p \left[ \sum_{k \in s} (w_k - d_k) y_k \right]
+\]</span></p>
+<p>Si los nuevos pesos calibrados son cercanos a los pesos originales en todas las posibles muestras, entonces el sesgo será insignificante. Ahora, si el tamaño de muestra es insuficiente no conviene utilizar este tipo de estimadores. Además, se sugiere que el coeficiente de variación del estimador de Horvitz-Thompson para las covariables (inducidas por todos los cruces y celdas considerados) sea menor del 10% para asegurar que el sesgo de los estimadores de calibración sea despreciable.</p>
+<p>Por otro lado, cuando se tienen múltiples variables discretas es posible que el cruce de categorías contenga muy pocas unidades para las cuales se deba ajustar los pesos originales. Esto induce sesgo en cada subgrupo ajustado. Si aún así se decide optar por múltiples aumentar las variables de calibración, es necesario hacer un chequeo empírico del ajuste que cada modelo pueda tener con todas las variables de la encuesta, aunque se advierte que este chequeo a veces puede ser demorado e ir en contravía de las apretadas agendas de producción estadísticas que se manejan en el INE.</p>
+<div id="medidas-de-calidad-en-la-calibración" class="section level3" number="10.5.1">
+<h3><span class="header-section-number">10.5.1</span> Medidas de calidad en la calibración</h3>
+<p><span class="citation"><a href="#ref-Silva_2004" role="doc-biblioref">Silva</a> (<a href="#ref-Silva_2004" role="doc-biblioref">2004</a>)</span> presenta algunas consideraciones al respecto del sesgo que puede generarse al usar esta metodología en las encuestas de hogares y aborda algunos criterios para evaluar la calidad de la calibración.</p>
+<p>La idea general del proceso de calibración es encontrar un número de restricciones parsimonioso que permita tener estimaciones aproximadamente insesgadas con una varianza menor a la generada con los factores de expansión originales. En general los INE podrán clasificar sus procesos de calibración en una de las siguientes tres categorías:</p>
+<ol style="list-style-type: decimal">
+<li>Calibración con variables continuas, que es el caso en donde la calibración se realiza con los totales de variables continuas como ingreso, gasto, entre otras.</li>
+<li>Post-estratificación con variables categóricas, que representa el caso en donde la calibración se realiza con los tamaños poblacionales (basados en proyecciones demográficas o registros administrativos) de subgrupos de interés.</li>
+<li><em>Raking</em> con variables categóricas, que se define como una calibración sobre los tamaños marginales de tablas de contingencia de subgrupos de interés. A diferencia del caso anterior, esta calibración no tiene en cuenta los tamaños de los cruces, sino solo los tamaños marginales; por ende, este método induce menos restricciones.</li>
+</ol>
+<p>En un encuesta de hogares las restricciones de calibración pueden establecerse sobre características de hogares y características de personas al mismo tiempo. De esta forma, por ejemplo, es posible calibrar sobre las proyecciones demográficas de personas y al mismo tiempo controlar las estimaciones del número de hogares en el país de manera conjunta. <span class="citation"><a href="#ref-Estevao_Sarndal_2006" role="doc-biblioref">Estevao y Särndal</a> (<a href="#ref-Estevao_Sarndal_2006" role="doc-biblioref">2006</a>)</span> discuten una amplia variedad de casos en donde se calibra conjuntamente en distintos niveles de desagregación sobre diferentes esquema de muestreo. Por ejemplo, para la <em>Encuesta Continua de Empleo</em> de Bolivia la calibración está inducida por una post-estratificación sobre los tamaños poblacionales de los cruces resultantes entre las variable Departamento (hay 9 departamentos), Zona (rural y urbano) y PET (con dos categorías: mayor o igual a 10 años y menor de 10 años).</p>
+<p>El asesor regional dio una charla acerca de la metodología de calibración al equipo del Departamento de Investigación y Desarrollo, en donde se presentaron algunas medidas de calidad como protección en contra del sesgo generado por considerar demasiadas restricciones y se resaltó la importancia de que las variables utilizadas para la calibración sean estimadas de manera precisa por los estimadores clásicos de muestreo. Por ejemplo, si el número de personas por hogar es utilizada como una variable de calibración (utilizando como total auxiliar las proyecciones demográficas), entonces el coeficiente de variación del estimador de Horvitz-Thompson sobre esta variable debería ser menor al 10%.</p>
+<div class="figure">
+<img src="Pics/18.png" height="500" alt="" />
+<p class="caption"><em>Comparación de la distribución de los pesos básicos de muestreo (izquierda) con los pesos ajustados por ausencia de respuesta (derecha) en una encuesta de hogares.</em></p>
+</div>
+<p>La teoría afirma que entre más variables de calibración se tengan menor será la varianza asociada a las estimaciones (no así el sesgo). Sin embargo, existen problemas computacionales cuando crecen las restricciones que se deben satisfacer son demasiadas. Una primera opción es verificar que no se tengan variables que puedan tener codependencia lineal con otras. Al descartar estas variables es posible conservar una varianza pequeña puesto que se descartan combinaciones lineales de otras variables.</p>
+<p>Si los pesos de calibración resultan ser menores que uno su interpretación puede tornarse difícil (aunque no reviste un problema teórico). El usuario común entiende al factor de expansión como un factor de representatividad: <em>es la cantidad de veces que una persona se represnta a sí misma y a algunas otras más en la población</em>. Por ende, los pesos negativos o menores que uno no resisten esta interpretación intuitiva y natural. Además, los pesos negativos pueden conllevar a estimaciones negativas para algunos dominios en donde el tamaño de muestra es pequeño, lo cual resulta ser problemático en un contexto en donde todas las variables de estudio son no negativas.</p>
+<p>Para garantizar que los pesos se ubiquen en un intervalo determinado, se debe minimizar una distancia que a su vez debe inducir pesos restringidos a este intervalo y que respete las ecuaciones de calibración. Es posible que no se tenga una solución exacta para todas las restricciones de calibración e incluso que el algoritmo de calibración no converja. Nótese que los estimadores de calibración se pueden escribir como</p>
+<p><span class="math display">\[
+w_k = g_k * d_k
+\]</span></p>
+<p>Con base en lo anterior, es necesario analizar los pesos <span class="math inline">\(g_k\)</span> en perspectiva en cada dominio, estrato y postestrato de interés. Una buena idea puede ser identificar aquellos <span class="math inline">\(g_k\)</span> que resulten potencialmente grandes o influyentes. Se recomienda postestratificar la muestra, y aplicar la calibración a aquellas unidades en los que los <span class="math inline">\(g_k\)</span> sean estables y usar los pesos originales en el restante conjunto.</p>
+<p>Es posible hacer que los pesos de calibración estén restringidos a un espacio predefinido por el usuario, mediante límites <span class="math inline">\((L, U)\)</span> sobre los <span class="math inline">\(g_k\)</span>. De esta forma, si <span class="math inline">\(w_k \geq 1\)</span> implica <span class="math inline">\(g_k \geq 1\)</span> y por tanto <span class="math inline">\(L=1\)</span>. Se acostumbra a tomar <span class="math inline">\(U &gt; Q_3 + 1.5 * (Q_3 - Q_1)\)</span> en donde <span class="math inline">\(Q_3\)</span> y <span class="math inline">\(Q_1\)</span> están dados en términos de la distribución de <span class="math inline">\(g_k\)</span> y corresponden al tercer y primer cuartil, respectivamente.</p>
+<p>Si el mecanismo que genera la ausencia de respuesta no es aleatorio (MAR) o completamente aleatorio (MCAR), es posible que los ponderadores de calibración induzcan sesgo en las estimaciones finales. En general, cuando hay ausencia de respuesta es más probable que aparezcan pesos de calibración negativos y que los pesos de calibración no convergieran a los pesos originales. Además, la varianza de los estimadores de calibración no convergerá a los resultados usuales de los estimadores de regresión.</p>
+<p><span class="citation"><a href="#ref-Silva_2004" role="doc-biblioref">Silva</a> (<a href="#ref-Silva_2004" role="doc-biblioref">2004</a>)</span> presenta algunas medidas que permiten decidir cuáles escenarios de calibración son los mejores. A continuación se citan tales medidas.</p>
+<ul>
+<li><p>Error relativo promedio sobre las variables auxiliares
+<span class="math display">\[
+M1= \frac{1}{p} \sum_{j=1}^p \frac{|\hat{t}_{xc} - t_x|}{t_x}
+\]</span></p></li>
+<li><p>Coeficiente de variación HT relativo promedio
+<span class="math display">\[M2= \frac{1}{p} \sum_{j=1}^p \frac{(Var(\hat{t}_{x\pi}))^{1/2}}{t_x} \]</span></p></li>
+<li><p>Proporción de pesos extremos (límite inferior)
+<span class="math display">\[M3 = \frac{1}{n} \sum_{k \in s}I(g_k&lt;L)\]</span></p></li>
+<li><p>Proporción de pesos extremos (límite superior)
+<span class="math display">\[M4= \frac{1}{n} \sum_{k \in s}I(g_k&gt;U)\]</span></p></li>
+<li><p>Coeficiente de variación de los <span class="math inline">\(g_k\)</span>
+<span class="math display">\[M5= \frac{\sigma(g)}{\bar{g}}\]</span></p></li>
+<li><p>Distancia entre los pesos de calibración y los pesos originales
+<span class="math display">\[M6 = \frac{1}{n}\sum_{k \in s} \frac{(w_k - d_k)^2}{d_k}
+= \frac{1}{n}\sum_{k \in s} d_k(g_k - 1)^2\]</span></p></li>
+<li><p>Eficiencia de los estimadores de calibración sobre la estimación del diseño de muestreo
+<span class="math display">\[M7 = \frac{1}{J}\sum_{j=1}^J \frac{Var(\hat{t}_{y_jc})}{Var(\hat{t}_{y_j\pi})} \]</span></p></li>
+<li><p>Efecto de la calibración sobre la dispersión de los ponderadores (DEFFk)
+<span class="math display">\[M8 = 1+\frac{\sigma^2_w}{\bar{w}^2}\]</span></p></li>
+</ul>
+</div>
+<div id="calibración-a-nivel-de-personas-y-hogares" class="section level3" number="10.5.2">
+<h3><span class="header-section-number">10.5.2</span> Calibración a nivel de personas y hogares</h3>
+<p>En el caso particular en que haya información auxiliar disponible a nivel de personas y hogares (al mismo tiempo), es posible calibrar conjuntamente ambas variables en un sólo procedimiento de calibración. <span class="citation"><a href="#ref-Estevao_Sarndal_2006" role="doc-biblioref">Estevao y Särndal</a> (<a href="#ref-Estevao_Sarndal_2006" role="doc-biblioref">2006, sec. 5</a>)</span> recrea la calibración conjunta para hogares y personas, en donde se genera una variable indicadora para el jefe de hogar y sobre esta se crea una nueva restricción de calibración que utilice los totales auxiliares de los hogares. Con esta nueva calibración, se generan unos nuevos pesos de calibración en la base de datos de personas. Al filtrar esta base de datos por el jefe de hogar, se crea inmediatamente una base de hogares (puesto que solo hay un único jefe de hogar) que puede ser utilizada para combinarla con la información de los hogares. De esta forma, los pesos que venían de la base de datos de personas serán los que se utilicen en la base de datos de hogares obteniendo estimaciones consistentes.</p>
+<p>En principio, se supone que se selecciona una muestra de unidades de una población finita <span class="math inline">\(U = \lbrace 1,2,\ldots,k,\ldots,M\rbrace\)</span> la cual está agrupada en conglomerados <span class="math inline">\(U_I = \lbrace 1, 2,\ldots, i, \ldots, N_I \rbrace\)</span>. El proceso de selección se puede resumir de la siguiente manera <span class="citation">(<a href="#ref-Gutierrez_2016" role="doc-biblioref">H. A. Gutiérrez 2016</a>)</span>:</p>
+<ul>
+<li>Se selecciona una muestra <span class="math inline">\(S_I\)</span> de conglomerados de <span class="math inline">\(U_I\)</span> con probabilidades de inclusión <span class="math inline">\(\pi_{I_i}\)</span> para <span class="math inline">\(i\in U_I\)</span>. Los pesos muestrales de la primera etapa son <span class="math inline">\(d_{I_i} = \frac{1}{\pi_{I_i}}\)</span></li>
+<li>En la segunda etapa se seleccionan unidades para <span class="math inline">\(i\in S_I\)</span>. Se enumeran las unidades en <span class="math inline">\(U_i\)</span> y se selecciona una muestra <span class="math inline">\(S_i\)</span> con probabilidades de inclusión condicionales <span class="math inline">\(\pi_{k|i}\)</span>.</li>
+<li>De esta forma, <span class="math inline">\(d_{k|i} = \frac{1}{\pi_{k|i}}\)</span> son los pesos condicionales y <span class="math inline">\(d_k = d_{I_i}d_{k|i}\)</span> es el peso de muestreo general para la k-ésima unidad, siendo <span class="math inline">\(s =\bigcup_{i\in s_I}S_i\)</span> la muestra de unidades.</li>
+</ul>
+<p>Para calibrar sobre la información auxiliar a nivel de hogar, se deben satisfacer las siguientes ecuaciones:</p>
+<p><span class="math display">\[
+\sum_{i \in S_I}w_{I_i}x_{ci} = \sum_{i \in U_I}x_{ci} = t_{x_c}
+\]</span></p>
+<p>En donde <span class="math inline">\(x_{ci}\)</span> denota el vector de variables auxiliares a nivel del hogar, que siempre será definido como un conteo de individuos con cierta característica en el hogar. Por ejemplo, en su caso más básico <span class="math inline">\(x_{ci}\)</span> puede ser el número de individuos en el hogar, mientras que el total auxiliar <span class="math inline">\(t_{x_c} = \sum_{i \in U_I}x_{ci}\)</span> será el número de individuos en todos los hogares de Chile Luego de que se ha calibrado la base de hogares, se construyen los pesos a nivel de persona recurriendo a la siguiente expresión:</p>
+<p><span class="math display">\[
+w_k = d_{k|i}w_{I_i} \quad \forall k \in S_i
+\]</span></p>
+<p>Y además, se preserva la siguiente propiedad
+<span class="math display">\[
+\frac{w_k}{w_{I_i}}=d_{k|i}
+\]</span></p>
+<p>Lo anterior imita la propiedad del muestreo en dos etapas de que</p>
+<p><span class="math display">\[
+\frac{d_k}{d_{I_i}}=d_{k|i}
+\]</span></p>
+<p>Como todos los individuos pertenecientes a un hogar son seleccionados para que respondan la encuesta de hogares, se tiene que <span class="math inline">\(d_{k|i} = 1\)</span>, por definición. Por lo tanto, el peso del individuo (en la base de datos de la muestra de personas) será idéntico al peso calibrado del hogar; es decir <span class="math inline">\(w_k = w_{I_i} \quad \forall k \in S_i\)</span>. Por lo anterior, dado que el muestreo es de conglomerados en la última etapa y todos los individuos del hogar son seleccionados, entonces el peso de muestreo del hogar será el promedio de los pesos individuales.</p>
+<p><span class="math display">\[
+w_{I_i}=\sum_{k\in S_i}\frac{w_k}{N_i}=\sum_{k\in U_i}\frac{w_k}{N_i}=\bar{w}_i
+\]</span></p>
+<p>Por último, nótese que la matriz de calibración toma la siguiente forma:</p>
+<p><span class="math display">\[
+X_{[i]}=X=
+\begin{bmatrix}
+x_{c11} &amp; x_{c12} &amp; \cdots &amp; x_{c1p}\\
+x_{c21} &amp; x_{c22} &amp; \cdots &amp; x_{c2p}\\
+x_{c31} &amp; x_{c32} &amp; \cdots &amp; x_{c3p}\\
+\vdots  &amp; \vdots &amp; \ddots &amp;\\
+x_{cN_I1} &amp; x_{cN_I2} &amp; \cdots &amp; x_{cN_Ip}
+\end{bmatrix}
+\]</span></p>
+</div>
+<div id="calibración-integrada-en-hogares" class="section level3" number="10.5.3">
+<h3><span class="header-section-number">10.5.3</span> Calibración integrada en hogares</h3>
+<p>En general, la mayoría de encuestas de hogares en la región tienen una naturaleza multipropóstio, generando estimaciones de indicadores a nivel de persona (tasa de participación, tasa de desocupación, etc.), y al mismo tiempo, indicadores a nivel de hogar (pobreza monetaria, necesidades básicas insatisfechas y pobreza multidimensional).</p>
+<p>En las diferentes sesiones con el INEC, se realizaron recomendaciones en términos de disponer factores de expansión coherentes entre las diferentes unidades de análisis. Una práctica común, pero que pone en tela de juicio las propiedades estadísticas de su estimador, es generar factores de expansión a nivel de persona y endilgarle el factor de expansión del jefe de hogar al mismo hogar (Alexander, 1987). Esta es una escogencia arbitraria si es que los factores de expansión se han generado mediante una calibración que tenga en cuenta las características de las personas, como por ejemplo edad o sexo. Este acercamiento deliberado no permite sopesar las propiedades estadísticas del estimador resultante y por ende sus resultados no pueden ser interpretados confiablemente, mucho menos comparados.
+Una escogencia más parsimoniosa puede ser optar por un enfoque tipo integrated household weighting. Nótese que, como lo expone Heldal (1992), al realizar una calibración a nivel de personas, ya no será posible agregar a las personas de un mismo hogar para obtener un único peso del hogar, pues las características de las personas del hogar serán, en general, diferentes y sus respectivos factores de expansión también lo serán. Por tanto, es necesario que el sistema de pesos satisfaga la siguiente restricción:
+w_j=w_i   para toda persona i en el hogar j
+De esta forma, si el sistema de pesos de calibración satisface la anterior restricción, sería posible obtener pesos consistentes con las restricciones de calibración a nivel de persona y que permitiera la integración con los hogares, al cambiar de unidad de observación. En la literatura se han descrito dos métodos para lograr esta estandarización. El primero, condensado en Lemaitre &amp; Dufour (1987) afirma que se deben crear nuevas variables de calibración a nivel de persona, definidas como el promedio de las variables originales en el hogar. Por ende, se definen las siguientes cantidades:
+z_{ij}=<em>{ih} x</em>{ij}  y   {{z}}<em>{ij}=
+En donde z</em>{ij} es la agregación a nivel de hogar de las covariables originales de calibración a nivel de persona y N_j es el tamaño del hogar j. Al ejecutar el algoritmo de calibración utilizando las variables z, en vez de las variables x, se reproducen las ecuaciones de calibración a satisfacción y, dado que todos los individuos comparten las mismas covariables en la calibración, sus pesos serán idénticos para todos aquellos compartiendo un mismo hogar. Nótese que esta calibración se realiza con la base de datos a nivel de personas.
+En segundo lugar, es posible también agregar las covariables de personas a nivel de hogar y ejecutar la calibración con las covariables agregadas. Esta calibración se realiza con la base de datos a nivel de hogares e induce un conjunto de pesos calibrados a nivel de hogar, que fácilmente pueden ser heredados por todos los individuos dentro del hogar. Nótese que, como se trata de una agregación, cuando se cree la base de datos de personas, las ecuaciones de calibración se reproducirán a cabalidad.
+En la literatura estadística se ha estudiado este enfoque integrado. Es así como Neethling &amp; Galpin (2006) concluyeron que para ambos enfoques las estimaciones resultantes redujeron el sesgo, aumentaron la precisión y proporcionaron un único conjunto de ponderaciones para los datos de las encuestas estudiadas. La recomendación de la CEPAL para llevar a cabo el despliegue y diseminación de las bases de datos es la de considerar un enfoque integrado para la ENEMDU 2021 – 2024.
+Además, si se opta por el primer enfoque, en el cual la base de datos mensual constaría de alrededor de 30 mil observaciones, se tendría el suficiente margen para actualizar las restricciones de calibración con el fin de ejercer un mayor control sobre los tamaños de los subgrupos de interés.</p>
+<p>A manera de ejemplo, la calibración mensual podría constar de las siguientes marginales:
+Cuatro cruces entre sexo y área
+24 provincias
+5 ciudades principales
+5 grupos etarios
+Una vez definidos los esquemas de calibración mensual, se sugiere fuertemente que estos mismos se mantengan idénticos en las agregaciones trimestrales y anuales. De esta manera, se conserva una estructura de comparabilidad completa, pues se está teniendo en cuenta la misma medida de probabilidad en la selección de la muestra (puesto que se realizó una única selección para las gestiones 2021 – 2024), el mismo enfoque de ajuste ante fenómenos de elegibilidad desconocida, no elegibilidad y ausencia de respuesta, y por último, el mismo enfoque en la calibración de los factores de expansión.</p>
+</div>
+</div>
+<h3>Referencias</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-Deville_Sarndal_1992" class="csl-entry">
+Deville, Jean-Claude, y Carl-Erik Särndal. 1992. <span>«Calibration Estimators in Survey Sampling»</span>. <em>Journal of the American Statistical Association</em> 87 (418): 376-82. <a href="https://doi.org/10.1080/01621459.1992.10475217">https://doi.org/10.1080/01621459.1992.10475217</a>.
+</div>
+<div id="ref-Estevao_Sarndal_2006" class="csl-entry">
+Estevao, Victor, y Carl-Erik Särndal. 2006. <span>«Survey Estimates by Calibration on Complex Auxiliary Information»</span>. <em>International Statistical Review / Revue Internationale de Statistique</em> 74 (2): 127-47.
+</div>
+<div id="ref-Gutierrez_2016" class="csl-entry">
+Gutiérrez, Hugo Andrés. 2016. <em>Estrategias de muestreo: diseño de encuestas y estimación de parámetros</em>. Segunda edición. Ediciones de la U.
+</div>
+<div id="ref-Sarndal_Lundstrom_2006" class="csl-entry">
+Särndal, Carl-Erik, y Sixten Lundström. 2006. <em>Estimation in surveys with nonresponse</em>. Repr. Wiley series en survey methodology. Wiley.
+</div>
+<div id="ref-Silva_2004" class="csl-entry">
+Silva, PL. d N. 2004. <span>«Calibration estimation: when and why, how much and how»</span>. <em>Rio de Janeiro: Instituto Brasileiro de Geografia e Estatística</em>.
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="16">
+<li id="fn16"><p>Por ejemplo, el número de hogares o habitantes en el país.<a href="calibración-de-los-pesos.html#fnref16" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="ajuste-por-ausencia-de-respuesta.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="redondeo-de-los-factores-de-expansión.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/psirusteam/HHS-Handbook/09Ponderadores.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Diseño y análisis de encuestas de hogares.pdf", "Diseño y análisis de encuestas de hogares.epub", "Diseño y análisis de encuestas de hogares.mobi"],
+"toc": {
+"collapse": "section"
+},
+"tconfig": null
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

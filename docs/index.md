@@ -1,7 +1,7 @@
 --- 
 title: "Diseño y análisis estadístico en las encuestas de hogares de América Latina"
 author: "Andrés Gutiérrez^[Experto regional en estadísticas sociales - Unidad de Estadística Social - Comisión Económica para América Latina y el Caribe (CEPAL) -  andres.gutierrez@cepal.org]"
-date: "2021-07-29"
+date: "2021-07-30"
 documentclass: book
 bibliography: [CEPAL.bib]
 biblio-style: apalike
@@ -10,6 +10,7 @@ colorlinks: yes
 lot: yes
 lof: yes
 fontsize: 10pt
+header-includes: \usepackage[spanish, spanishkw, onelanguage, linesnumbered]{algorithm2e}
 github-repo: psirusteam/HHS-Handbook
 description: "Este es el repositorio del libro *Diseño y análisis estadístico en las encuestas de hogares de América Latina*."
 knit: "bookdown::render_book"

@@ -249,66 +249,6 @@ $$M7 = \frac{1}{J}\sum_{j=1}^J \frac{Var(\hat{t}_{y_jc})}{Var(\hat{t}_{y_j\pi})}
 $$M8 = 1+\frac{\sigma^2_w}{\bar{w}^2}$$
 
 
-## Calibración de personas con bases de datos de hogares
-
-Una de las preguntas recurrentes en la calibración de encuestas de hogares es el nivel al cual se debería realizar este ajuste. En prinicpio, es posible realizar la calibración al nivel de las personas, o al nivel de los hogares. Cada una de estas opciones trae algunas ventajas y consideraciones que se deben tener en cuenta. 
-
-Calibrar al nivel de los hogares implica que el hogar tendrá unos nuevos pesos que cumplen con las restricciones de calibración, y esos pesos los heredará a las personas que habitan el hogar. De esta forma todas las personas pertenecientes a un mismo hogar tendrán el mismo peso de muestreo, sin importar sus diferencias en composición demográfica. Es decir que, hombres, mujeres, menores y mayores de 15 años tendrán el mismo peso de muestreo. Esta propiedad es atractiva puesto que emula el diseño de muestreo que se definió en la fase de planeación. Por otro lado, realizar la calibración a nivel de los hogares hace que dentro de las unidades primarias de muestreo (UPMs) los hogares no tengan un peso homogeneo, lo que se distancia de las propiedades del diseño sistemático simple que se usa para la selección de los hogares dentro de las UPMs.
-
-Por otro lado, calibrar a nivel de personas implica que los pesos de muestreo de los hogares también pueden verse alterados, y que los pesos finales de muestreo de las personas sean diferentes dentro de los hogares. De esta forma, de acuerdo a las características de las personas se tendrá un peso diferente. Es decir que hombres, mujeres, menores y mayores de 15 años **no** tendrían el mismo peso de muestreo. Por consiguiente cuando se calibra por personas y se utiliza un filtro sobre esa base de personas para crear una base de hogares, las características observadas de los jefes de hogares influenciarían los pesos d emuestreo resultantes en dicha base de datos de hogares.  
-
-En principio, se supone que se selecciona una muestra de unidades de una población finita $U = \lbrace 1,2,\ldots,k,\ldots,M\rbrace$ la cual está agrupada en conglomerados $U_I = \lbrace 1, 2,\ldots, i, \ldots, N_I \rbrace$. El proceso de selección se puede resumir de la siguiente manera [@Gutierrez_2016]:
-
-- Se selecciona una muestra $S_I$ de conglomerados de $U_I$ con probabilidades de inclusión $\pi_{I_i}$ para $i\in U_I$. Los pesos muestrales de la primera etapa son $d_{I_i} = \frac{1}{\pi_{I_i}}$
-- En la segunda etapa se seleccionan unidades para $i\in S_I$. Se enumeran las unidades en $U_i$ y se selecciona una muestra $S_i$ con probabilidades de inclusión condicionales $\pi_{k|i}$.
-- De esta forma, $d_{k|i} = \frac{1}{\pi_{k|i}}$ son los pesos condicionales y $d_k = d_{I_i}d_{k|i}$ es el peso de muestreo general para la k-ésima unidad, siendo $s =\bigcup_{i\in s_I}S_i$ la muestra de unidades.
-
-Para calibrar sobre la información auxiliar a nivel de hogar, se deben satisfacer las siguientes ecuaciones:
-
-$$
-\sum_{i \in S_I}w_{I_i}x_{ci} = \sum_{i \in U_I}x_{ci} = t_{x_c}
-$$
-
-En donde $x_{ci}$ denota el vector de variables auxiliares a nivel del hogar, que siempre será definido como un conteo de individuos con cierta característica en el hogar. Por ejemplo, en su caso más básico $x_{ci}$ puede ser el número de individuos en el hogar, mientras que el total auxiliar $t_{x_c} = \sum_{i \in U_I}x_{ci}$ será el número de individuos en todos los hogares de Chile Luego de que se ha calibrado la base de hogares, se construyen los pesos a nivel de persona recurriendo a la siguiente expresión:
-
-$$
-w_k = d_{k|i}w_{I_i} \quad \forall k \in S_i
-$$
-
-Y además, se preserva la siguiente propiedad
-$$
-\frac{w_k}{w_{I_i}}=d_{k|i}
-$$
-
-Lo anterior imita la propiedad del muestreo en dos etapas de que 
-
-$$
-\frac{d_k}{d_{I_i}}=d_{k|i}
-$$
-
-Como todos los individuos pertenecientes a un hogar son seleccionados para que respondan la encuesta de hogares, se tiene que $d_{k|i} = 1$, por definición. Por lo tanto, el peso del individuo (en la base de datos de la muestra de personas) será idéntico al peso calibrado del hogar; es decir $w_k = w_{I_i} \quad \forall k \in S_i$. Por lo anterior, dado que el muestreo es de conglomerados en la última etapa y todos los individuos del hogar son seleccionados, entonces el peso de muestreo del hogar será el promedio de los pesos individuales.
-
-$$
-w_{I_i}=\sum_{k\in S_i}\frac{w_k}{N_i}=\sum_{k\in U_i}\frac{w_k}{N_i}=\bar{w}_i
-$$
-
-Por último, nótese que la matriz de calibración toma la siguiente forma:
-
-$$
-X_{[i]}=X=
-\begin{bmatrix}
-x_{c11} & x_{c12} & \cdots & x_{c1p}\\
-x_{c21} & x_{c22} & \cdots & x_{c2p}\\
-x_{c31} & x_{c32} & \cdots & x_{c3p}\\
-\vdots  & \vdots & \ddots &\\
-x_{cN_I1} & x_{cN_I2} & \cdots & x_{cN_Ip}
-\end{bmatrix}
-$$
-
-Por otro lado, la calibracion se puede realizar a nivel de las personas o a nivel de los hogares. Por ejemplo, si la calibración se realiza a nivel de personas y se calibra sobre la población en edad de trabajar, esto traerá como consecuencia que los factores de expansión sean diferentes para los miembros de un mismo hogar, puesto que la metodología buscará ajustar los totales de las personas en edad de trabajar y las personas que no están en la fuerza de trabajo de manera independiente. Por esta razón en la mayoría de hogares, en donde hay personas que son parte de la fuerza de trabajo y personas que no lo son, los pesos de muestreo no serán equivalentes. En principio, y debido al diseño de las encuesta, los pesos de muestreo originales son idénticos para todos los miembros de un mismo hogar. Sin embargo, cuando la calibración trata de ajustar los totales de las restricciones, y debido a que la población no está equitativamente distribuida, entonces de igual manera se presenta un reajuste en los factores de calibración. Por otro lado, calibrar a nivel de hogar hace que se cree un único factor de expansión para el hogar, que será heredado por todos sus miembros. Sin embargo, en este acercamiento y debido a que la composición de los hogares es diferente, entonces dentro de una misma UPM se tendrán hogares con diferentes pesos de muestreo. 
-
-En el caso particular en que haya información auxiliar disponible a nivel de personas y hogares (al mismo tiempo), es posible calibrar conjuntamente ambas variables en un sólo procedieminto de calibración. @Estevao_Sarndal_2006[sec. 5] recrea la calibración conjunta para hogares y personas, en donde se genera una variable indicadora para el jefe de hogar y sobre esta se crea una nueva restricción de calibración que utilice los totales auxiliares de los hogares. Con esta nueva calibración, se generan unos nuevos pesos de calibración en la base de datos de personas. Al filtrar esta base de datos por el jefe de hogar, se crea inmediatamente una base de hogares (puesto que solo hay un único jefe de hogar) que puede ser utilizada para combinarla con la información de los hogares. De esta forma, los pesos que venían de la base de datos de personas serán los que se utilicen en la base de datos de hogares obteniendo estimaciones consistentes. 
-
 ## Consideraciones adicionales en la calibración de factores de expansión
 
 ### Medición del sesgo por ausencia de respuesta
