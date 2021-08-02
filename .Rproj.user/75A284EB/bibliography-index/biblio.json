@@ -53,6 +53,97 @@
             "type": "book"
         },
         {
+            "author": [
+                {
+                    "family": "Alexander",
+                    "given": "Charles"
+                }
+            ],
+            "container-title": "Survey Methodology",
+            "id": "Alexander_1987",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        1987
+                    ]
+                ]
+            },
+            "page": "183-198",
+            "title": "A class of methods for using person controls in household weighting",
+            "type": "article-journal",
+            "volume": "13"
+        },
+        {
+            "author": [
+                {
+                    "family": "Heldal",
+                    "given": "Johan"
+                }
+            ],
+            "id": "Heldal_1992",
+            "issued": {
+                "date-parts": [
+                    [
+                        1992
+                    ]
+                ]
+            },
+            "page": "22",
+            "title": "A method for calibration of weights in sample surveys",
+            "type": "article-journal"
+        },
+        {
+            "author": [
+                {
+                    "family": "Lemaitre",
+                    "given": "G"
+                },
+                {
+                    "family": "Dufour",
+                    "given": "Johane"
+                }
+            ],
+            "container-title": "Survey Methodology",
+            "id": "Lemaitre_Dufour_1987",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        1987
+                    ]
+                ]
+            },
+            "title": "An integrated method for weighting persons and families",
+            "type": "article-journal",
+            "volume": "13"
+        },
+        {
+            "author": [
+                {
+                    "family": "Neethling",
+                    "given": "A"
+                },
+                {
+                    "family": "Galpin",
+                    "given": "J S"
+                }
+            ],
+            "container-title": "South African Statistical Journal",
+            "id": "Neethling_Galpin_2006",
+            "issued": {
+                "date-parts": [
+                    [
+                        2006
+                    ]
+                ]
+            },
+            "page": "23",
+            "title": "Weighting of household survey data: A comparison of various calibration, integrated and cosmetic estimators",
+            "title-short": "Weighting of household survey data",
+            "type": "article-journal"
+        },
+        {
             "ISBN": "978-0-387-32917-8",
             "author": [
                 {

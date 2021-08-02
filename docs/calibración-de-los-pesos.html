@@ -24,7 +24,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2021-07-30" />
+<meta name="date" content="2021-08-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="ajuste-por-ausencia-de-respuesta.html"/>
-<link rel="next" href="redondeo-de-los-factores-de-expansión.html"/>
+<link rel="next" href="recorte-de-los-pesos.html"/>
 <script src="libs/header-attrs-2.8/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -55,70 +55,6 @@
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
 
-<style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-</style>
 
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
@@ -287,27 +223,26 @@ div.csl-indent {
 <li class="chapter" data-level="9.3" data-path="otros-estimadores-de-muestreo.html"><a href="otros-estimadores-de-muestreo.html"><i class="fa fa-check"></i><b>9.3</b> Otros estimadores de muestreo</a></li>
 <li class="chapter" data-level="9.4" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html"><i class="fa fa-check"></i><b>9.4</b> Estimadores de calibración</a>
 <ul>
-<li class="chapter" data-level="9.4.1" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html#calibración-de-personas-con-bases-de-datos-de-hogares"><i class="fa fa-check"></i><b>9.4.1</b> Calibración de personas con bases de datos de hogares</a></li>
-<li class="chapter" data-level="9.4.2" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html#la-calibración-como-un-cambio-de-paradigma"><i class="fa fa-check"></i><b>9.4.2</b> La calibración como un cambio de paradigma</a></li>
+<li class="chapter" data-level="9.4.1" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html#ganancia-en-eficiencia"><i class="fa fa-check"></i><b>9.4.1</b> Ganancia en eficiencia</a></li>
+<li class="chapter" data-level="9.4.2" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html#diferentes-formas-del-estimador-de-calibración"><i class="fa fa-check"></i><b>9.4.2</b> Diferentes formas del estimador de calibración</a></li>
+<li class="chapter" data-level="9.4.3" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html#la-calibración-como-un-cambio-de-paradigma"><i class="fa fa-check"></i><b>9.4.3</b> La calibración como un cambio de paradigma</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="construcción-de-los-factores-de-expansión.html"><a href="construcción-de-los-factores-de-expansión.html"><i class="fa fa-check"></i><b>10</b> Construcción de los factores de expansión</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="creación-de-los-pesos-básicos.html"><a href="creación-de-los-pesos-básicos.html"><i class="fa fa-check"></i><b>10.1</b> Creación de los pesos básicos</a></li>
-<li class="chapter" data-level="10.2" data-path="descarte-de-las-unidades-no-elegibles.html"><a href="descarte-de-las-unidades-no-elegibles.html"><i class="fa fa-check"></i><b>10.2</b> Descarte de las unidades no elegibles</a></li>
-<li class="chapter" data-level="10.3" data-path="ajuste-por-elegibilidad-desconocida.html"><a href="ajuste-por-elegibilidad-desconocida.html"><i class="fa fa-check"></i><b>10.3</b> Ajuste por elegibilidad desconocida</a></li>
+<li class="chapter" data-level="10.2" data-path="ajuste-por-elegibilidad-desconocida.html"><a href="ajuste-por-elegibilidad-desconocida.html"><i class="fa fa-check"></i><b>10.2</b> Ajuste por elegibilidad desconocida</a></li>
+<li class="chapter" data-level="10.3" data-path="descarte-de-las-unidades-no-elegibles.html"><a href="descarte-de-las-unidades-no-elegibles.html"><i class="fa fa-check"></i><b>10.3</b> Descarte de las unidades no elegibles</a></li>
 <li class="chapter" data-level="10.4" data-path="ajuste-por-ausencia-de-respuesta.html"><a href="ajuste-por-ausencia-de-respuesta.html"><i class="fa fa-check"></i><b>10.4</b> Ajuste por ausencia de respuesta</a></li>
 <li class="chapter" data-level="10.5" data-path="calibración-de-los-pesos.html"><a href="calibración-de-los-pesos.html"><i class="fa fa-check"></i><b>10.5</b> Calibración de los pesos</a>
 <ul>
 <li class="chapter" data-level="10.5.1" data-path="calibración-de-los-pesos.html"><a href="calibración-de-los-pesos.html#medidas-de-calidad-en-la-calibración"><i class="fa fa-check"></i><b>10.5.1</b> Medidas de calidad en la calibración</a></li>
-<li class="chapter" data-level="10.5.2" data-path="calibración-de-los-pesos.html"><a href="calibración-de-los-pesos.html#calibración-a-nivel-de-personas-y-hogares"><i class="fa fa-check"></i><b>10.5.2</b> Calibración a nivel de personas y hogares</a></li>
+<li class="chapter" data-level="10.5.2" data-path="calibración-de-los-pesos.html"><a href="calibración-de-los-pesos.html#diferentes-niveles-de-calibración"><i class="fa fa-check"></i><b>10.5.2</b> Diferentes niveles de calibración</a></li>
 <li class="chapter" data-level="10.5.3" data-path="calibración-de-los-pesos.html"><a href="calibración-de-los-pesos.html#calibración-integrada-en-hogares"><i class="fa fa-check"></i><b>10.5.3</b> Calibración integrada en hogares</a></li>
+<li class="chapter" data-level="10.5.4" data-path="calibración-de-los-pesos.html"><a href="calibración-de-los-pesos.html#calibración-conjunta-a-nivel-de-personas-y-hogares"><i class="fa fa-check"></i><b>10.5.4</b> Calibración conjunta a nivel de personas y hogares</a></li>
 </ul></li>
-<li class="chapter" data-level="10.6" data-path="redondeo-de-los-factores-de-expansión.html"><a href="redondeo-de-los-factores-de-expansión.html"><i class="fa fa-check"></i><b>10.6</b> Redondeo de los factores de expansión</a>
-<ul>
-<li class="chapter" data-level="10.6.1" data-path="redondeo-de-los-factores-de-expansión.html"><a href="redondeo-de-los-factores-de-expansión.html#la-solución"><i class="fa fa-check"></i><b>10.6.1</b> La solución</a></li>
-<li class="chapter" data-level="10.6.2" data-path="redondeo-de-los-factores-de-expansión.html"><a href="redondeo-de-los-factores-de-expansión.html#ejemplos-en-r"><i class="fa fa-check"></i><b>10.6.2</b> Ejemplos en <code>R</code></a></li>
-</ul></li>
+<li class="chapter" data-level="10.6" data-path="recorte-de-los-pesos.html"><a href="recorte-de-los-pesos.html"><i class="fa fa-check"></i><b>10.6</b> Recorte de los pesos</a></li>
+<li class="chapter" data-level="10.7" data-path="redondeo-de-los-factores-de-expansión.html"><a href="redondeo-de-los-factores-de-expansión.html"><i class="fa fa-check"></i><b>10.7</b> Redondeo de los factores de expansión</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
 <li class="divider"></li>
@@ -339,37 +274,31 @@ div.csl-indent {
 <li>Un sistema de ponderación que reproduzca la información auxiliar disponible<a href="#fn16" class="footnote-ref" id="fnref16"><sup>16</sup></a>.</li>
 <li>Un sistema de ponderación que sea eficiente al momento de estimar cualquier característica de interés en un estudio multipropósito.</li>
 </ol>
-<p>A pesar de que cada vez es más extendido el uso de los pesos calibrados en las encuestas de América Latina, es necesario que se disemine más esta práctica metodológica que induce estimadores muestrales que reproducen exactamente la información auxiliar conocida a nivel poblacional. Debido a la construcción teórica de los estimadores de calibración, los pesos finales responden a la siguiente restricción</p>
+<p>como se vio en el capítulo anterior, debido a la construcción teórica de los estimadores de calibración, los pesos calibrados responden a la siguiente restricción</p>
 <p><span class="math display">\[
-\sum_{s}w^*_{k}\boldsymbol{x}_k = \sum_{U}\boldsymbol{x}_{k} = \boldsymbol{t}_{\boldsymbol{x}}
+\sum_{s}w_{k}\boldsymbol{x}_k = \sum_{U}\boldsymbol{x}_{k} = \boldsymbol{t}_{\boldsymbol{x}}
 \]</span></p>
-<p>El ejemplo más básico se encuentra cuando se desea que los pesos de muestreo deberían reproducir con exactitud el tamaño de las regiones <span class="math inline">\(N_h\)</span> y el tamaño del país <span class="math inline">\(N\)</span>. Es así como, utilizar la metodología de calibración <span class="citation">(<a href="#ref-Deville_Sarndal_1992" role="doc-biblioref">Deville y Särndal 1992</a>)</span> hace que se cumpla la siguiente ecuación de calibración sobre los nuevos pesos calibrados <span class="math inline">\(w_k^*\)</span> para todos lo estratos explícitos</p>
+<p>El ejemplo más básico se encuentra cuando se desea que los pesos de muestreo deberían reproducir con exactitud el tamaño de las regiones <span class="math inline">\(N_h\)</span> y/o el tamaño del país <span class="math inline">\(N\)</span>. Es así como, utilizar la metodología de calibración <span class="citation">(<a href="#ref-Deville_Sarndal_1992" role="doc-biblioref">Deville y Särndal 1992</a>)</span> hace que se cumpla la siguiente ecuación de calibración sobre los nuevos pesos calibrados <span class="math inline">\(w_k^*\)</span> para todos lo estratos explícitos</p>
 <p><span class="math display">\[
-\sum_{s_h} w_k^* = N_h
+\sum_{s_h} w_k = N_h
 \]</span></p>
-<p>Esta coherencia entre las cifras oficiales y las que la encuesta puede producir hace que sea preferible el uso de los estimadores de calibración. Las anteriores características son satisfechas al usar el enfoque de calibración que induce una estructura inferencial robusta en presencia de información disponible puesto que reduce tanto el error de muestreo como el error debido a la ausencia de respuesta. Los estimadores de calibración son <strong>aproximandamente insesgados</strong>, pero la magnitud del sesgo está dada por la siguiente expresión:</p>
+<p>Esta coherencia entre las cifras oficiales y las que la encuesta puede producir hace que sea preferible el uso de los estimadores de calibración. Las anteriores características son satisfechas al usar el enfoque de calibración que induce una estructura inferencial robusta en presencia de información disponible puesto que reduce tanto el error de muestreo como el error debido a la ausencia de respuesta.</p>
+<div class="figure">
+<img src="Pics/17.png" height="500" alt="" />
+<p class="caption"><em>Comparación de la distribución de los pesos básicos de muestreo (izquierda) con los pesos ajustados por ausencia de respuesta (derecha) en una encuesta de hogares.</em></p>
+</div>
+<div id="medidas-de-calidad-en-la-calibración" class="section level3" number="10.5.1">
+<h3><span class="header-section-number">10.5.1</span> Medidas de calidad en la calibración</h3>
+<p>Los estimadores de calibración son <em>aproximandamente insesgados</em>, pero la magnitud del sesgo está dada por la siguiente expresión:</p>
 <p><span class="math display">\[
 Bias(\hat{t}_{y, cal}) = E_p \left[ \sum_{k \in s} (w_k - d_k) y_k \right]
 \]</span></p>
 <p>Si los nuevos pesos calibrados son cercanos a los pesos originales en todas las posibles muestras, entonces el sesgo será insignificante. Ahora, si el tamaño de muestra es insuficiente no conviene utilizar este tipo de estimadores. Además, se sugiere que el coeficiente de variación del estimador de Horvitz-Thompson para las covariables (inducidas por todos los cruces y celdas considerados) sea menor del 10% para asegurar que el sesgo de los estimadores de calibración sea despreciable.</p>
 <p>Por otro lado, cuando se tienen múltiples variables discretas es posible que el cruce de categorías contenga muy pocas unidades para las cuales se deba ajustar los pesos originales. Esto induce sesgo en cada subgrupo ajustado. Si aún así se decide optar por múltiples aumentar las variables de calibración, es necesario hacer un chequeo empírico del ajuste que cada modelo pueda tener con todas las variables de la encuesta, aunque se advierte que este chequeo a veces puede ser demorado e ir en contravía de las apretadas agendas de producción estadísticas que se manejan en el INE.</p>
-<div id="medidas-de-calidad-en-la-calibración" class="section level3" number="10.5.1">
-<h3><span class="header-section-number">10.5.1</span> Medidas de calidad en la calibración</h3>
-<p><span class="citation"><a href="#ref-Silva_2004" role="doc-biblioref">Silva</a> (<a href="#ref-Silva_2004" role="doc-biblioref">2004</a>)</span> presenta algunas consideraciones al respecto del sesgo que puede generarse al usar esta metodología en las encuestas de hogares y aborda algunos criterios para evaluar la calidad de la calibración.</p>
-<p>La idea general del proceso de calibración es encontrar un número de restricciones parsimonioso que permita tener estimaciones aproximadamente insesgadas con una varianza menor a la generada con los factores de expansión originales. En general los INE podrán clasificar sus procesos de calibración en una de las siguientes tres categorías:</p>
-<ol style="list-style-type: decimal">
-<li>Calibración con variables continuas, que es el caso en donde la calibración se realiza con los totales de variables continuas como ingreso, gasto, entre otras.</li>
-<li>Post-estratificación con variables categóricas, que representa el caso en donde la calibración se realiza con los tamaños poblacionales (basados en proyecciones demográficas o registros administrativos) de subgrupos de interés.</li>
-<li><em>Raking</em> con variables categóricas, que se define como una calibración sobre los tamaños marginales de tablas de contingencia de subgrupos de interés. A diferencia del caso anterior, esta calibración no tiene en cuenta los tamaños de los cruces, sino solo los tamaños marginales; por ende, este método induce menos restricciones.</li>
-</ol>
-<p>En un encuesta de hogares las restricciones de calibración pueden establecerse sobre características de hogares y características de personas al mismo tiempo. De esta forma, por ejemplo, es posible calibrar sobre las proyecciones demográficas de personas y al mismo tiempo controlar las estimaciones del número de hogares en el país de manera conjunta. <span class="citation"><a href="#ref-Estevao_Sarndal_2006" role="doc-biblioref">Estevao y Särndal</a> (<a href="#ref-Estevao_Sarndal_2006" role="doc-biblioref">2006</a>)</span> discuten una amplia variedad de casos en donde se calibra conjuntamente en distintos niveles de desagregación sobre diferentes esquema de muestreo. Por ejemplo, para la <em>Encuesta Continua de Empleo</em> de Bolivia la calibración está inducida por una post-estratificación sobre los tamaños poblacionales de los cruces resultantes entre las variable Departamento (hay 9 departamentos), Zona (rural y urbano) y PET (con dos categorías: mayor o igual a 10 años y menor de 10 años).</p>
-<p>El asesor regional dio una charla acerca de la metodología de calibración al equipo del Departamento de Investigación y Desarrollo, en donde se presentaron algunas medidas de calidad como protección en contra del sesgo generado por considerar demasiadas restricciones y se resaltó la importancia de que las variables utilizadas para la calibración sean estimadas de manera precisa por los estimadores clásicos de muestreo. Por ejemplo, si el número de personas por hogar es utilizada como una variable de calibración (utilizando como total auxiliar las proyecciones demográficas), entonces el coeficiente de variación del estimador de Horvitz-Thompson sobre esta variable debería ser menor al 10%.</p>
-<div class="figure">
-<img src="Pics/18.png" height="500" alt="" />
-<p class="caption"><em>Comparación de la distribución de los pesos básicos de muestreo (izquierda) con los pesos ajustados por ausencia de respuesta (derecha) en una encuesta de hogares.</em></p>
-</div>
-<p>La teoría afirma que entre más variables de calibración se tengan menor será la varianza asociada a las estimaciones (no así el sesgo). Sin embargo, existen problemas computacionales cuando crecen las restricciones que se deben satisfacer son demasiadas. Una primera opción es verificar que no se tengan variables que puedan tener codependencia lineal con otras. Al descartar estas variables es posible conservar una varianza pequeña puesto que se descartan combinaciones lineales de otras variables.</p>
-<p>Si los pesos de calibración resultan ser menores que uno su interpretación puede tornarse difícil (aunque no reviste un problema teórico). El usuario común entiende al factor de expansión como un factor de representatividad: <em>es la cantidad de veces que una persona se represnta a sí misma y a algunas otras más en la población</em>. Por ende, los pesos negativos o menores que uno no resisten esta interpretación intuitiva y natural. Además, los pesos negativos pueden conllevar a estimaciones negativas para algunos dominios en donde el tamaño de muestra es pequeño, lo cual resulta ser problemático en un contexto en donde todas las variables de estudio son no negativas.</p>
+<p><span class="citation"><a href="#ref-Silva_2004" role="doc-biblioref">Silva</a> (<a href="#ref-Silva_2004" role="doc-biblioref">2004</a>)</span> presenta algunas consideraciones al respecto del sesgo que puede generarse al usar esta metodología en las encuestas de hogares y aborda algunos criterios para evaluar la calidad de la calibración. Estas medidas se pueden considerar como protección en contra del sesgo generado por tener demasiadas restricciones. Además, se resalta la importancia de que las variables utilizadas para la calibración sean estimadas de manera precisa por los estimadores clásicos de muestreo. Por ejemplo, si el número de personas en una región es utilizada como una variable de calibración (utilizando como total auxiliar las proyecciones demográficas), entonces el coeficiente de variación del estimador de Horvitz-Thompson sobre esta variable debería ser menor, por ejemplo, al 10%.</p>
+<p>La teoría afirma que entre más variables de calibración se tengan menor será la varianza asociada a las estimaciones (no así el sesgo). Sin embargo, existen problemas computacionales cuando crecen las restricciones que se deben satisfacer son demasiadas. Una primera opción es verificar que no se tengan variables que puedan tener codependencia lineal con otras. Al descartar estas variables es posible conservar una varianza pequeña puesto que se descartan combinaciones lineales de otras variables. Se recomienda hacer un análisis de cuántas variables se deben utilizar en la calibración para optimizar el error cuadrático medio de los estimadores finales en las encuestas de hogares.</p>
+<p>En una primera instancia, no sería adecuado utilizar demasiadas restricciones de calibración para satisfacer muchas proyecciones demográficas. Es fácil equivocarse en esta definición. Por ejemplo, si la encuesta es representativa a nivel de departamento (10 niveles), sexo (2 niveles) y edad (4 niveles), entonces sería equivocado utilizar <span class="math inline">\(10 \times 2 \times 4 = 80\)</span> restricciones de calibración y se debería empezar por analizar una estrategia más parsimoniosa con <span class="math inline">\(10 + 2 + 4 = 16\)</span> restricciones de calibración. Nótese que a medida que las desagregaciones sean más profundas, el nivel de error en las proyecciones poblacionales será más grande. Ademas, entre más restricciones haya, más sesgo y varianza se introduce a la estimación. La idea general del proceso es encontrar un número de restricciones parsimonioso que permita tener estimaciones aproximadamente insesgadas con una varianza menor a la generada con los factores de expansión originales.</p>
+<p>Por otro lado, si los pesos de calibración resultan ser menores que uno su interpretación puede tornarse difícil (aunque no reviste un problema teórico). El usuario común entiende al factor de expansión como un factor de representatividad: <em>es la cantidad de veces que una persona se representa a sí misma y a algunas otras más en la población</em>. Por ende, los pesos negativos o menores que uno no resisten esta interpretación intuitiva y natural. Además, los pesos negativos pueden conllevar a estimaciones negativas para algunos dominios en donde el tamaño de muestra es pequeño, lo cual resulta ser problemático en un contexto en donde todas las variables de estudio son no negativas.</p>
 <p>Para garantizar que los pesos se ubiquen en un intervalo determinado, se debe minimizar una distancia que a su vez debe inducir pesos restringidos a este intervalo y que respete las ecuaciones de calibración. Es posible que no se tenga una solución exacta para todas las restricciones de calibración e incluso que el algoritmo de calibración no converja. Nótese que los estimadores de calibración se pueden escribir como</p>
 <p><span class="math display">\[
 w_k = g_k * d_k
@@ -400,9 +329,36 @@ M1= \frac{1}{p} \sum_{j=1}^p \frac{|\hat{t}_{xc} - t_x|}{t_x}
 <span class="math display">\[M8 = 1+\frac{\sigma^2_w}{\bar{w}^2}\]</span></p></li>
 </ul>
 </div>
-<div id="calibración-a-nivel-de-personas-y-hogares" class="section level3" number="10.5.2">
-<h3><span class="header-section-number">10.5.2</span> Calibración a nivel de personas y hogares</h3>
-<p>En el caso particular en que haya información auxiliar disponible a nivel de personas y hogares (al mismo tiempo), es posible calibrar conjuntamente ambas variables en un sólo procedimiento de calibración. <span class="citation"><a href="#ref-Estevao_Sarndal_2006" role="doc-biblioref">Estevao y Särndal</a> (<a href="#ref-Estevao_Sarndal_2006" role="doc-biblioref">2006, sec. 5</a>)</span> recrea la calibración conjunta para hogares y personas, en donde se genera una variable indicadora para el jefe de hogar y sobre esta se crea una nueva restricción de calibración que utilice los totales auxiliares de los hogares. Con esta nueva calibración, se generan unos nuevos pesos de calibración en la base de datos de personas. Al filtrar esta base de datos por el jefe de hogar, se crea inmediatamente una base de hogares (puesto que solo hay un único jefe de hogar) que puede ser utilizada para combinarla con la información de los hogares. De esta forma, los pesos que venían de la base de datos de personas serán los que se utilicen en la base de datos de hogares obteniendo estimaciones consistentes.</p>
+<div id="diferentes-niveles-de-calibración" class="section level3" number="10.5.2">
+<h3><span class="header-section-number">10.5.2</span> Diferentes niveles de calibración</h3>
+<p>Una de las preguntas recurrentes en la calibración de encuestas de hogares es el nivel al cual se debería realizar este ajuste. En principio, es posible realizar la calibración al nivel de las personas, o al nivel de los hogares. Cada una de estas opciones trae algunas ventajas y consideraciones que se deben tener en cuenta.</p>
+<ul>
+<li><p>Calibrar al nivel de los hogares implica que el hogar tendrá unos nuevos pesos que cumplen con las restricciones de calibración, y esos pesos los heredará a las personas que habitan el hogar. De esta forma todas las personas pertenecientes a un mismo hogar tendrán el mismo peso de muestreo, sin importar sus diferencias en composición demográfica. Por ejemplo, hombres, mujeres, menores y mayores de 15 años tendrán el mismo peso de muestreo. Esta propiedad es atractiva puesto que emula el diseño de muestreo que se definió en la fase de planeación. Sin embargo, realizar la calibración a nivel de los hogares hace que dentro de las unidades primarias de muestreo (UPM) los hogares no tengan un peso homogéneo, lo que se distancia de las propiedades del diseño sistemático simple que se usa para la selección de los hogares dentro de las UPM.</p></li>
+<li><p>Por otro lado, calibrar a nivel de personas implica que los pesos de muestreo de los hogares también pueden verse alterados, y que los pesos finales de muestreo de las personas sean diferentes dentro de los hogares. De esta forma, de acuerdo a las características de las personas se tendrá un peso diferente. Por ejemplo, es posible que hombres, mujeres, menores y mayores de 15 años <strong>no</strong> tengan el mismo peso de muestreo. Por consiguiente cuando se calibra por personas y se utiliza un filtro sobre esa base de personas para crear una base de hogares, las características observadas de los jefes de hogares influenciarían los pesos de muestreo resultantes.</p></li>
+</ul>
+<p>Dado que la calibración puede inducir factores de expansión diferentes para los miembros de un mismo hogar, es necesario analizar a qué nivel se realiza este procedimiento (persona, hogar). En principio, y debido al diseño de la encuesta, los pesos de muestreo originales son idénticos para todos los miembros de un mismo hogar. Sin embargo, cuando la post-estratificación trata de ajustar los totales de las restricciones de calibración, y debido a que la población no está equitativamente distribuida, entonces de igual manera se presenta un reajuste en los factores de calibración. Podría ser conveniente revisar la metodología de <em>raking</em> y su impacto en los pesos de calibración dentro de los hogares.</p>
+<p>Por ejemplo, si la calibración se realiza a nivel de personas y se calibra sobre la población en edad de trabajar, esto traerá como consecuencia que los factores de expansión sean diferentes para los miembros de un mismo hogar, puesto que la metodología buscará ajustar los totales de las personas en edad de trabajar y las personas que no están en la fuerza de trabajo de manera independiente. Por esta razón en la mayoría de hogares, en donde hay personas que son parte de la fuerza de trabajo y personas que no lo son, los pesos de muestreo no serán equivalentes.</p>
+</div>
+<div id="calibración-integrada-en-hogares" class="section level3" number="10.5.3">
+<h3><span class="header-section-number">10.5.3</span> Calibración integrada en hogares</h3>
+<p>En general, la mayoría de encuestas de hogares en la región tienen una naturaleza multipropósito, generando estimaciones de indicadores a nivel de persona (tasa de participación, tasa de desocupación, etc.), y al mismo tiempo, indicadores a nivel de hogar (pobreza monetaria, necesidades básicas insatisfechas y pobreza multidimensional). En este documento se enfatiza la recomendación de disponer de factores de expansión coherentes entre las diferentes unidades de análisis.</p>
+<p>Por ejemplo, una práctica común que pone en tela de juicio las propiedades estadísticas del estimador, es generar factores de expansión a nivel de persona y endilgarle el factor de expansión del jefe de hogar al mismo hogar <span class="citation">(<a href="#ref-Alexander_1987" role="doc-biblioref">Alexander 1987</a>)</span>. Esta es una escogencia arbitraria si es que los factores de expansión se han generado mediante una calibración que tenga en cuenta las características de las personas, como por ejemplo edad o sexo. Este acercamiento deliberado no permite sopesar las propiedades estadísticas del estimador resultante y por ende sus resultados no pueden ser interpretados confiablemente, mucho menos comparados.</p>
+<p>Una escogencia más parsimoniosa puede ser optar por un enfoque tipo <em>integrated household weighting</em>. Nótese que, como lo expone <span class="citation"><a href="#ref-Heldal_1992" role="doc-biblioref">Heldal</a> (<a href="#ref-Heldal_1992" role="doc-biblioref">1992</a>)</span>, al realizar una calibración a nivel de personas, ya no será posible agregar a las personas de un mismo hogar para obtener un único peso del hogar, pues las características de las personas del hogar serán, en general, diferentes y sus respectivos factores de expansión también lo serán. Por tanto, es necesario que el sistema de pesos satisfaga la siguiente restricción:</p>
+<p><span class="math display">\[
+w_j=w_i\ \rm \ para\ toda\ persona\ i\ en\ el\ hogar\ j
+\]</span></p>
+<p>De esta forma, si el sistema de pesos de calibración satisface la anterior restricción, sería posible obtener pesos consistentes con las restricciones de calibración a nivel de persona y que permitiera la integración con los hogares, al cambiar de unidad de observación. En la literatura se han descrito dos métodos para lograr esta estandarización. El primero, condensado en <span class="citation"><a href="#ref-Lemaitre_Dufour_1987" role="doc-biblioref">Lemaitre y Dufour</a> (<a href="#ref-Lemaitre_Dufour_1987" role="doc-biblioref">1987</a>)</span> afirma que se deben crear nuevas variables de calibración a nivel de persona, definidas como el promedio de las variables originales en el hogar. Por ende, se definen las siguientes cantidades:</p>
+<p><span class="math display">\[
+z_{ij}=\sum_{i\in h} x_{ij}\ \ y\ \ \ {\bar{z}}_{ij}=\frac{z_{ij}}{N_j}
+\]</span></p>
+<p>En donde <span class="math inline">\(z_{ij}\)</span> es la agregación a nivel de hogar de las covariables originales de calibración a nivel de persona y <span class="math inline">\(N_j\)</span> es el tamaño del hogar <span class="math inline">\(j\)</span>. Al ejecutar el algoritmo de calibración utilizando las variables <span class="math inline">\(z\)</span>, en vez de las variables <span class="math inline">\(x\)</span>, se reproducen las ecuaciones de calibración a satisfacción y, dado que todos los individuos comparten las mismas covariables en la calibración, sus pesos serán idénticos para todos aquellos compartiendo un mismo hogar. Nótese que esta calibración se realiza con la base de datos a nivel de personas.</p>
+<p>En segundo lugar, es posible también agregar las covariables de personas a nivel de hogar y ejecutar la calibración con las covariables agregadas. Esta calibración se realiza con la base de datos a nivel de hogares e induce un conjunto de pesos calibrados a nivel de hogar, que fácilmente pueden ser heredados por todos los individuos dentro del hogar. Nótese que, como se trata de una agregación, cuando se cree la base de datos de personas, las ecuaciones de calibración se reproducirán a cabalidad.</p>
+<p>En la literatura estadística se ha estudiado este enfoque integrado. Es así como <span class="citation"><a href="#ref-Neethling_Galpin_2006" role="doc-biblioref">Neethling y Galpin</a> (<a href="#ref-Neethling_Galpin_2006" role="doc-biblioref">2006</a>)</span> concluyeron que, para ambos enfoques, las estimaciones resultantes redujeron el sesgo, aumentaron la precisión y proporcionaron un único conjunto de ponderaciones para los datos de las encuestas estudiadas.</p>
+<p>Además, si se opta por el primer enfoque, en el cual el tamaño de la base de datos sería igual al número de personas entrevistadas, se tendría el suficiente margen para actualizar las restricciones de calibración con el fin de ejercer un mayor control sobre los tamaños de los subgrupos de interés.</p>
+</div>
+<div id="calibración-conjunta-a-nivel-de-personas-y-hogares" class="section level3" number="10.5.4">
+<h3><span class="header-section-number">10.5.4</span> Calibración conjunta a nivel de personas y hogares</h3>
+<p>En el caso particular en el que haya información auxiliar disponible a nivel de personas y hogares (al mismo tiempo), es posible calibrar conjuntamente ambas variables en un sólo procedimiento de calibración. <span class="citation"><a href="#ref-Estevao_Sarndal_2006" role="doc-biblioref">Estevao y Särndal</a> (<a href="#ref-Estevao_Sarndal_2006" role="doc-biblioref">2006, sec. 5</a>)</span> recrea la calibración conjunta para hogares y personas, en donde se genera una variable indicadora para el jefe de hogar y sobre esta se crea una nueva restricción de calibración que utilice los totales auxiliares de los hogares. Con esta nueva calibración, se generan unos nuevos pesos de calibración en la base de datos de personas. Al filtrar esta base de datos por el jefe de hogar, se crea inmediatamente una base de hogares (puesto que solo hay un único jefe de hogar) que puede ser utilizada para combinarla con la información de los hogares. De esta forma, los pesos que venían de la base de datos de personas serán los que se utilicen en la base de datos de hogares obteniendo estimaciones consistentes.</p>
 <p>En principio, se supone que se selecciona una muestra de unidades de una población finita <span class="math inline">\(U = \lbrace 1,2,\ldots,k,\ldots,M\rbrace\)</span> la cual está agrupada en conglomerados <span class="math inline">\(U_I = \lbrace 1, 2,\ldots, i, \ldots, N_I \rbrace\)</span>. El proceso de selección se puede resumir de la siguiente manera <span class="citation">(<a href="#ref-Gutierrez_2016" role="doc-biblioref">H. A. Gutiérrez 2016</a>)</span>:</p>
 <ul>
 <li>Se selecciona una muestra <span class="math inline">\(S_I\)</span> de conglomerados de <span class="math inline">\(U_I\)</span> con probabilidades de inclusión <span class="math inline">\(\pi_{I_i}\)</span> para <span class="math inline">\(i\in U_I\)</span>. Los pesos muestrales de la primera etapa son <span class="math inline">\(d_{I_i} = \frac{1}{\pi_{I_i}}\)</span></li>
@@ -413,7 +369,7 @@ M1= \frac{1}{p} \sum_{j=1}^p \frac{|\hat{t}_{xc} - t_x|}{t_x}
 <p><span class="math display">\[
 \sum_{i \in S_I}w_{I_i}x_{ci} = \sum_{i \in U_I}x_{ci} = t_{x_c}
 \]</span></p>
-<p>En donde <span class="math inline">\(x_{ci}\)</span> denota el vector de variables auxiliares a nivel del hogar, que siempre será definido como un conteo de individuos con cierta característica en el hogar. Por ejemplo, en su caso más básico <span class="math inline">\(x_{ci}\)</span> puede ser el número de individuos en el hogar, mientras que el total auxiliar <span class="math inline">\(t_{x_c} = \sum_{i \in U_I}x_{ci}\)</span> será el número de individuos en todos los hogares de Chile Luego de que se ha calibrado la base de hogares, se construyen los pesos a nivel de persona recurriendo a la siguiente expresión:</p>
+<p>En donde <span class="math inline">\(x_{ci}\)</span> denota el vector de variables auxiliares a nivel del hogar, que siempre será definido como un conteo de individuos con cierta característica en el hogar. Por ejemplo, en su caso más básico <span class="math inline">\(x_{ci}\)</span> puede ser el número de individuos en el hogar, mientras que el total auxiliar <span class="math inline">\(t_{x_c} = \sum_{i \in U_I}x_{ci}\)</span> será el número de individuos en todos los hogares del país. Luego de que se ha calibrado la base de hogares, se construyen los pesos a nivel de persona recurriendo a la siguiente expresión:</p>
 <p><span class="math display">\[
 w_k = d_{k|i}w_{I_i} \quad \forall k \in S_i
 \]</span></p>
@@ -441,28 +397,12 @@ x_{cN_I1} &amp; x_{cN_I2} &amp; \cdots &amp; x_{cN_Ip}
 \end{bmatrix}
 \]</span></p>
 </div>
-<div id="calibración-integrada-en-hogares" class="section level3" number="10.5.3">
-<h3><span class="header-section-number">10.5.3</span> Calibración integrada en hogares</h3>
-<p>En general, la mayoría de encuestas de hogares en la región tienen una naturaleza multipropóstio, generando estimaciones de indicadores a nivel de persona (tasa de participación, tasa de desocupación, etc.), y al mismo tiempo, indicadores a nivel de hogar (pobreza monetaria, necesidades básicas insatisfechas y pobreza multidimensional).</p>
-<p>En las diferentes sesiones con el INEC, se realizaron recomendaciones en términos de disponer factores de expansión coherentes entre las diferentes unidades de análisis. Una práctica común, pero que pone en tela de juicio las propiedades estadísticas de su estimador, es generar factores de expansión a nivel de persona y endilgarle el factor de expansión del jefe de hogar al mismo hogar (Alexander, 1987). Esta es una escogencia arbitraria si es que los factores de expansión se han generado mediante una calibración que tenga en cuenta las características de las personas, como por ejemplo edad o sexo. Este acercamiento deliberado no permite sopesar las propiedades estadísticas del estimador resultante y por ende sus resultados no pueden ser interpretados confiablemente, mucho menos comparados.
-Una escogencia más parsimoniosa puede ser optar por un enfoque tipo integrated household weighting. Nótese que, como lo expone Heldal (1992), al realizar una calibración a nivel de personas, ya no será posible agregar a las personas de un mismo hogar para obtener un único peso del hogar, pues las características de las personas del hogar serán, en general, diferentes y sus respectivos factores de expansión también lo serán. Por tanto, es necesario que el sistema de pesos satisfaga la siguiente restricción:
-w_j=w_i   para toda persona i en el hogar j
-De esta forma, si el sistema de pesos de calibración satisface la anterior restricción, sería posible obtener pesos consistentes con las restricciones de calibración a nivel de persona y que permitiera la integración con los hogares, al cambiar de unidad de observación. En la literatura se han descrito dos métodos para lograr esta estandarización. El primero, condensado en Lemaitre &amp; Dufour (1987) afirma que se deben crear nuevas variables de calibración a nivel de persona, definidas como el promedio de las variables originales en el hogar. Por ende, se definen las siguientes cantidades:
-z_{ij}=<em>{ih} x</em>{ij}  y   {{z}}<em>{ij}=
-En donde z</em>{ij} es la agregación a nivel de hogar de las covariables originales de calibración a nivel de persona y N_j es el tamaño del hogar j. Al ejecutar el algoritmo de calibración utilizando las variables z, en vez de las variables x, se reproducen las ecuaciones de calibración a satisfacción y, dado que todos los individuos comparten las mismas covariables en la calibración, sus pesos serán idénticos para todos aquellos compartiendo un mismo hogar. Nótese que esta calibración se realiza con la base de datos a nivel de personas.
-En segundo lugar, es posible también agregar las covariables de personas a nivel de hogar y ejecutar la calibración con las covariables agregadas. Esta calibración se realiza con la base de datos a nivel de hogares e induce un conjunto de pesos calibrados a nivel de hogar, que fácilmente pueden ser heredados por todos los individuos dentro del hogar. Nótese que, como se trata de una agregación, cuando se cree la base de datos de personas, las ecuaciones de calibración se reproducirán a cabalidad.
-En la literatura estadística se ha estudiado este enfoque integrado. Es así como Neethling &amp; Galpin (2006) concluyeron que para ambos enfoques las estimaciones resultantes redujeron el sesgo, aumentaron la precisión y proporcionaron un único conjunto de ponderaciones para los datos de las encuestas estudiadas. La recomendación de la CEPAL para llevar a cabo el despliegue y diseminación de las bases de datos es la de considerar un enfoque integrado para la ENEMDU 2021 – 2024.
-Además, si se opta por el primer enfoque, en el cual la base de datos mensual constaría de alrededor de 30 mil observaciones, se tendría el suficiente margen para actualizar las restricciones de calibración con el fin de ejercer un mayor control sobre los tamaños de los subgrupos de interés.</p>
-<p>A manera de ejemplo, la calibración mensual podría constar de las siguientes marginales:
-Cuatro cruces entre sexo y área
-24 provincias
-5 ciudades principales
-5 grupos etarios
-Una vez definidos los esquemas de calibración mensual, se sugiere fuertemente que estos mismos se mantengan idénticos en las agregaciones trimestrales y anuales. De esta manera, se conserva una estructura de comparabilidad completa, pues se está teniendo en cuenta la misma medida de probabilidad en la selección de la muestra (puesto que se realizó una única selección para las gestiones 2021 – 2024), el mismo enfoque de ajuste ante fenómenos de elegibilidad desconocida, no elegibilidad y ausencia de respuesta, y por último, el mismo enfoque en la calibración de los factores de expansión.</p>
-</div>
 </div>
 <h3>Referencias</h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-Alexander_1987" class="csl-entry">
+Alexander, Charles. 1987. <span>«A class of methods for using person controls in household weighting»</span>. <em>Survey Methodology</em> 13 (1): 183-98.
+</div>
 <div id="ref-Deville_Sarndal_1992" class="csl-entry">
 Deville, Jean-Claude, y Carl-Erik Särndal. 1992. <span>«Calibration Estimators in Survey Sampling»</span>. <em>Journal of the American Statistical Association</em> 87 (418): 376-82. <a href="https://doi.org/10.1080/01621459.1992.10475217">https://doi.org/10.1080/01621459.1992.10475217</a>.
 </div>
@@ -471,6 +411,15 @@ Estevao, Victor, y Carl-Erik Särndal. 2006. <span>«Survey Estimates by Calibra
 </div>
 <div id="ref-Gutierrez_2016" class="csl-entry">
 Gutiérrez, Hugo Andrés. 2016. <em>Estrategias de muestreo: diseño de encuestas y estimación de parámetros</em>. Segunda edición. Ediciones de la U.
+</div>
+<div id="ref-Heldal_1992" class="csl-entry">
+Heldal, Johan. 1992. <span>«A Method for Calibration of Weights in Sample Surveys»</span>, 22.
+</div>
+<div id="ref-Lemaitre_Dufour_1987" class="csl-entry">
+Lemaitre, G, y Johane Dufour. 1987. <span>«An integrated method for weighting persons and families»</span>. <em>Survey Methodology</em> 13 (2).
+</div>
+<div id="ref-Neethling_Galpin_2006" class="csl-entry">
+Neethling, A, y J S Galpin. 2006. <span>«Weighting of Household Survey Data: A Comparison of Various Calibration, Integrated and Cosmetic Estimators»</span>. <em>South African Statistical Journal</em>, 23.
 </div>
 <div id="ref-Sarndal_Lundstrom_2006" class="csl-entry">
 Särndal, Carl-Erik, y Sixten Lundström. 2006. <em>Estimation in surveys with nonresponse</em>. Repr. Wiley series en survey methodology. Wiley.
@@ -491,7 +440,7 @@ Silva, PL. d N. 2004. <span>«Calibration estimation: when and why, how much and
         </div>
       </div>
 <a href="ajuste-por-ausencia-de-respuesta.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="redondeo-de-los-factores-de-expansión.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="recorte-de-los-pesos.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

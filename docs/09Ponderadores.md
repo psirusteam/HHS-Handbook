@@ -23,8 +23,8 @@ Para hacerle frente a las imperfeccciones del marco, la AsociacEl esquema de pon
 Para construir los factores de expansión de una encuesta se recomienda seguir en este orden los siguientes procesos:
 
 1. Creación de los pesos básicos.
-1. Descarte de las unidades no elegibles.
 1. Ajuste por elegibilidad desconocida.
+1. Descarte de las unidades no elegibles.
 1. Ajuste por ausencia de respuesta.
 1. Calibración por proyecciones poblacionales y variables auxiliares.
 1. Preparación de la base de datos de respondientes. 
@@ -45,23 +45,11 @@ Estos pesos son creados incluso para aquellas unidades que serán excluidas de l
 ![*Distribución de los pesos básicos de muestreo en una encuesta de hogares.*](Pics/15.png){width=350px, height=500px}
 
 
-## Descarte de las unidades no elegibles
-
-Si hay viviendas seleccionadas desde el marco de muestreo que han cambiado su estado de ocupación y ahora no contienen ningún hogar, entonces el segundo paso consiste en ajustar su peso básico de la siguiente manera:
-
-$$
-d_{2k} = 
-\begin{cases}
-0, \ \ \ \ \ \text{si la unidad $k$ no pertenece a la población objetivo}\\
-d_{1k},\ \ \ \text{en otro caso }
-\end{cases}
-$$
-
 ## Ajuste por elegibilidad desconocida
 
 El tercer paso consiste en redistribuir el peso de las unidades cuyo estado de elegibilidad es desconocido. Por ejemplo, si la encuesta está enfocada en la población mayor de 15 años y hay personas que no proveen ninguna información acerca de su edad, entonces es necesario distribuir estos pesos. Esta situación también se puede presentar a nivel de hogar cuando no puede ser contactado porque nadie nunca atendió el llamado del encuestador (*nadie en casa*). Se acostumbra a redistribuir los pesos de los UNK entre las unidades que sí disponen de su estatus de elegibilidad (ER, ENR, IN). 
 
-Luego, si no es posible determinar la elegibilidad de algunas unidades que aparecen en el marco de muestreo, se tendrá una muestra $s$ que contendrá el conjunto de las unidades *elegibles* en la muestra $s_{e}$, el conjunto de las unidades *no elegibles* en la muestra $s_{n}$ y el conjunto de las unidades con *elegibilidad desconocidad* $s_{u}$. En este último caso, la elegibilidad de estos casos es desconocida, a no ser que de manera arbitraria sean clasificadas como ENR (elegibles no respondientes), o se tenga información auxiliar en el marco de muestreo que permita imputar su estado de elegibilidad. 
+Es así como, si no es posible determinar la elegibilidad de algunas unidades que aparecen en el marco de muestreo, se tendrá una muestra $s$ que contendrá el conjunto de las unidades *elegibles* en la muestra $s_{e}$, el conjunto de las unidades *no elegibles* en la muestra $s_{n}$ y el conjunto de las unidades con *elegibilidad desconocidad* $s_{u}$. En este último caso, la elegibilidad de estos casos es desconocida, a no ser que de manera arbitraria sean clasificadas como ENR (elegibles no respondientes), o se tenga información auxiliar en el marco de muestreo que permita imputar su estado de elegibilidad. 
 
 Se recomienda formar $B$ $(b = 1,  \ldots, B)$ categorías^[Se acostumbra a formar categorías con al menos 50 casos.] basadas en la información del marco de muestreo. Estas categorías pueden ser estratos o cruces de subpoblaciones. Siendo $s_b$ la muestra de unidades en la categoría $b$ (que incluye a ER, ENR y UNK), se define el factor de ajuste por elegibilidad como:
 
@@ -76,6 +64,17 @@ $$
 
 ![*Comparación de la distribución de los pesos básicos de muestreo (izquierda) con los pesos ajustados por el estado de elegibilidad (derecha) en una encuesta de hogares.*](Pics/16.png){width=350px, height=500px}
 
+## Descarte de las unidades no elegibles
+
+Si hay viviendas seleccionadas desde el marco de muestreo que han cambiado su estado de ocupación y ahora no contienen ningún hogar particular, entonces el segundo paso consiste en ajustar su peso básico de la siguiente manera:
+
+$$
+d_{2k} = 
+\begin{cases}
+0, \ \ \ \ \ \text{si la unidad $k$ no pertenece a la población objetivo}\\
+d_{1k},\ \ \ \text{en otro caso }
+\end{cases}
+$$
 
 ## Ajuste por ausencia de respuesta
 
@@ -121,7 +120,16 @@ $$
 \phi_k = f(\mathbf{y}_k, \beta)
 $$ 
 
-Luego, como no es posible tener acceso a la variables de interés para todos los individuos en la muestra (porque no todos respondieron), entonces no es posible estimar el patrón de ausencia de respuesta y por ende hay sesgo. Bajo los dos primeros escenarios, es posible definir el siguiente estimador insesgado
+Ene ste caso, como no es posible tener acceso a la variables de interés para todos los individuos en la muestra (porque no todos respondieron), entonces no es posible estimar el patrón de ausencia de respuesta y por ende hay sesgo. @Kim_Riddles_2012 muestran que es posible utilizar un modelo basado en el *propensity score* de las respuestas. 
+
+Si la muestra de los respondientes se denota como $s_r$ entonces la probabilidad de que un individuo conteste es $\phi_k = Pr(k \in s_r)$. Al suponer que existe un vector de información auxiliar $\mathbf{z}_k$ conocido  para todo $k\in s$ es posible estimarla por medio de un modelo de regresión logística; esto es, 
+
+$$
+\hat{\phi}_k = \frac{\exp\{\mathbf{z}_k'\hat{\boldsymbol{\beta}}\}}{1 + \exp\{\mathbf{z}_k'\hat{\boldsymbol{\beta}}\}}
+$$
+
+donde $\hat{\mathbf{\beta}}$ es el vector de coeficientes estimado de la regresión logística. Bajo los dos primeros escenarios, es posible definir el siguiente estimador insesgado
+
 $$
 \hat{t}_y=\sum_{k\in s_r}d_{4k}y_k
 $$
@@ -131,8 +139,7 @@ En donde
 $$
 d_{4k} = \frac{d_{3k}}{\hat{\phi_k}}
 $$
-
-Nótese que el sesgo se anula puesto que
+Nótese que, si el modelo está bien definido y se verifica en la población, el sesgo se anula puesto que
 
 $$
 E(I_kD_k) 
@@ -140,24 +147,9 @@ E(I_kD_k)
 = E(I_k)E(D_k|I_k) = \pi_k \phi_k
 $$
 
-XXXXXXXX
+Si se tiene acceso a información auxiliar (contenida en el marco de muestreo o en otras preguntas de la encuesta), y si se considera que el mecanismo que genera la ausencia de respuesta en la encuesta de hogares es MAR, es posible ajustar un modelo para la ausencia de respuesta (en donde la variable dependiente es una variable indicadora de la respuesta del individuo por lo general supeditado a una distribución Bernoulli o Binomial).
 
-
-Si se tiene acceso a información auxiliar (contenida en el marco de muestreo o en otras preguntas de la encuesta), y si se considera que el mecanismo que genera la ausencia de respuesta en la encuesta de hogares es MAR, es posible ajustar un modelo para la ausencia de respuesta (en donde la variable dependiente es una variable indicadora de la respuesta del individuo por lo general supeditado a una distribución Bernoulli o Binomial). @Kim_Riddles_2012 muestran que es posible utilizar un modelo basado en el *propensity score* de las respuestas. Si la muestra de los respondientes se denota como $s_r$ entonces la probabilidad de que un individuo conteste es $\phi_k = Pr(k \in s_r)$. Al suponer que existe un vector de información auxiliar $\mathbf{z}_k$ conocido  para todo $k\in s$ es posible estimarla por medio de un modelo de regresión logística; esto es, 
-
-$$
-\hat{\phi}_k = \frac{\exp\{\mathbf{z}_k'\hat{\boldsymbol{\beta}}\}}{1 + \exp\{\mathbf{z}_k'\hat{\boldsymbol{\beta}}\}}
-$$
-
-donde $\hat{\mathbf{\beta}}$ es el vector de coeficientes estimado de la regresión logística. Finalmente, el nuevo peso  estimador para un total poblacional, con el ajuste debido a la ausencia de respuesta no ignorable, queda expresado como
-
-$$
-\hat{t}_{y}^{(adj)}= \sum_{k\in s_r} \frac{w_k}{\hat{\phi}_k}y_k
-$$
-
-XXXXXX
-
-![*Comparación de la distribución de los pesos básicos de muestreo (izquierda) con los pesos ajustados por ausencia de respuesta (derecha) en una encuesta de hogares.*](Pics/17.png){width=350px, height=500px}
+![*Comparación de la distribución de los pesos básicos de muestreo (izquierda) con los pesos ajustados por ausencia de respuesta (derecha) en una encuesta de hogares.*](Pics/18.png){width=350px, height=500px}
 
 ## Calibración de los pesos
 
@@ -168,19 +160,26 @@ Después de conformar el sistema de ponderación de pesos de muestreo en la encu
 3. Un sistema de ponderación que reproduzca la información auxiliar disponible^[Por ejemplo, el número de hogares o habitantes en el país.].
 4. Un sistema de ponderación que sea eficiente al momento de estimar cualquier característica de interés en un estudio multipropósito.
 
-A pesar de que cada vez es más extendido el uso de los pesos calibrados en las encuestas de América Latina, es necesario que se disemine más esta práctica metodológica que induce estimadores muestrales que reproducen exactamente la información auxiliar conocida a nivel poblacional. Debido a la construcción teórica de los estimadores de calibración, los pesos finales responden a la siguiente restricción
+como se vio en el capítulo anterior, debido a la construcción teórica de los estimadores de calibración, los pesos calibrados responden a la siguiente restricción
 
 $$
-\sum_{s}w^*_{k}\boldsymbol{x}_k = \sum_{U}\boldsymbol{x}_{k} = \boldsymbol{t}_{\boldsymbol{x}}
+\sum_{s}w_{k}\boldsymbol{x}_k = \sum_{U}\boldsymbol{x}_{k} = \boldsymbol{t}_{\boldsymbol{x}}
 $$
 
-El ejemplo más básico se encuentra cuando se desea que los pesos de muestreo deberían reproducir con exactitud el tamaño de las regiones $N_h$ y el tamaño del país $N$. Es así como, utilizar la metodología de calibración [@Deville_Sarndal_1992] hace que se cumpla la siguiente ecuación de calibración sobre los nuevos pesos calibrados $w_k^*$ para todos lo estratos explícitos
+El ejemplo más básico se encuentra cuando se desea que los pesos de muestreo deberían reproducir con exactitud el tamaño de las regiones $N_h$ y/o el tamaño del país $N$. Es así como, utilizar la metodología de calibración [@Deville_Sarndal_1992] hace que se cumpla la siguiente ecuación de calibración sobre los nuevos pesos calibrados $w_k^*$ para todos lo estratos explícitos
 
 $$
-\sum_{s_h} w_k^* = N_h
+\sum_{s_h} w_k = N_h
 $$
 
-Esta coherencia entre las cifras oficiales y las que la encuesta puede producir hace que sea preferible el uso de los estimadores de calibración. Las anteriores características son satisfechas al usar el enfoque de calibración que induce una estructura inferencial robusta en presencia de información disponible puesto que reduce tanto el error de muestreo como el error debido a la ausencia de respuesta. Los estimadores de calibración son **aproximandamente insesgados**, pero la magnitud del sesgo está dada por la siguiente expresión:
+Esta coherencia entre las cifras oficiales y las que la encuesta puede producir hace que sea preferible el uso de los estimadores de calibración. Las anteriores características son satisfechas al usar el enfoque de calibración que induce una estructura inferencial robusta en presencia de información disponible puesto que reduce tanto el error de muestreo como el error debido a la ausencia de respuesta. 
+
+
+![*Comparación de la distribución de los pesos básicos de muestreo (izquierda) con los pesos ajustados por ausencia de respuesta (derecha) en una encuesta de hogares.*](Pics/17.png){width=350px, height=500px}
+
+### Medidas de calidad en la calibración
+
+Los estimadores de calibración son *aproximandamente insesgados*, pero la magnitud del sesgo está dada por la siguiente expresión:
 
 $$
 Bias(\hat{t}_{y, cal}) = E_p \left[ \sum_{k \in s} (w_k - d_k) y_k \right]
@@ -190,27 +189,13 @@ Si los nuevos pesos calibrados son cercanos a los pesos originales en todas las 
 
 Por otro lado, cuando se tienen múltiples variables discretas es posible que el cruce de categorías contenga muy pocas unidades para las cuales se deba ajustar los pesos originales. Esto induce sesgo en cada subgrupo ajustado. Si aún así se decide optar por múltiples aumentar las variables de calibración, es necesario hacer un chequeo empírico del ajuste que cada modelo pueda tener con todas las variables de la encuesta, aunque se advierte que este chequeo a veces puede ser demorado e ir en contravía de las apretadas agendas de producción estadísticas que se manejan en el INE.
 
+@Silva_2004 presenta algunas consideraciones al respecto del sesgo que puede generarse al usar esta metodología en las encuestas de hogares y aborda algunos criterios para evaluar la calidad de la calibración. Estas medidas se pueden considerar como protección en contra del sesgo generado por tener demasiadas restricciones. Además, se resalta la importancia de que las variables utilizadas para la calibración sean estimadas de manera precisa por los estimadores clásicos de muestreo. Por ejemplo, si el número de personas en una región es utilizada como una variable de calibración (utilizando como total auxiliar las proyecciones demográficas), entonces el coeficiente de variación del estimador de Horvitz-Thompson sobre esta variable debería ser menor, por ejemplo, al 10%. 
 
-### Medidas de calidad en la calibración
+La teoría afirma que entre más variables de calibración se tengan menor será la varianza asociada a las estimaciones (no así el sesgo). Sin embargo, existen problemas computacionales cuando crecen las restricciones que se deben satisfacer son demasiadas. Una primera opción es verificar que no se tengan variables que puedan tener codependencia lineal con otras. Al descartar estas variables es posible conservar una varianza pequeña puesto que se descartan combinaciones lineales de otras variables. Se recomienda hacer un análisis de cuántas variables se deben utilizar en la calibración para optimizar el error cuadrático medio de los estimadores finales en las encuestas de hogares. 
 
-@Silva_2004 presenta algunas consideraciones al respecto del sesgo que puede generarse al usar esta metodología en las encuestas de hogares y aborda algunos criterios para evaluar la calidad de la calibración. 
+En una primera instancia, no sería adecuado utilizar demasiadas restricciones de calibración para satisfacer muchas proyecciones demográficas. Es fácil equivocarse en esta definición. Por ejemplo, si la encuesta es representativa a nivel de departamento (10 niveles), sexo (2 niveles) y edad (4 niveles), entonces sería equivocado utilizar $10 \times 2 \times 4 = 80$ restricciones de calibración y se debería empezar por analizar una estrategia más parsimoniosa con $10 + 2 + 4 = 16$ restricciones de calibración. Nótese que a medida que las desagregaciones sean más profundas, el nivel de error en las proyecciones poblacionales será más grande. Ademas, entre más restricciones haya, más sesgo y varianza se introduce a la estimación. La idea general del proceso es encontrar un número de restricciones parsimonioso que permita tener estimaciones aproximadamente insesgadas con una varianza menor a la generada con los factores de expansión originales.
 
-La idea general del proceso de calibración es encontrar un número de restricciones parsimonioso que permita tener estimaciones aproximadamente insesgadas con una varianza menor a la generada con los factores de expansión originales. En general los INE podrán clasificar sus procesos de calibración en una de las siguientes tres categorías:
-
-1. Calibración con variables continuas, que es el caso en donde la calibración se realiza con los totales de variables continuas como ingreso, gasto, entre otras. 
-2. Post-estratificación con variables categóricas, que representa el caso en donde la calibración se realiza con los tamaños poblacionales (basados en proyecciones demográficas o registros administrativos) de subgrupos de interés. 
-3. *Raking* con variables categóricas, que se define como una calibración sobre los tamaños marginales de tablas de contingencia de subgrupos de interés. A diferencia del caso anterior, esta calibración no tiene en cuenta los tamaños de los cruces, sino solo los tamaños marginales; por ende, este método induce menos restricciones.
-
-En un encuesta de hogares las restricciones de calibración pueden establecerse sobre características de hogares y características de personas al mismo tiempo. De esta forma, por ejemplo, es posible calibrar sobre las proyecciones demográficas de personas y al mismo tiempo controlar las estimaciones del número de hogares en el país de manera conjunta. @Estevao_Sarndal_2006 discuten una amplia variedad de casos en donde se calibra conjuntamente en distintos niveles de desagregación sobre diferentes esquema de muestreo. Por ejemplo, para la *Encuesta Continua de Empleo* de Bolivia la calibración está inducida por una post-estratificación sobre los tamaños poblacionales de los cruces resultantes entre las variable Departamento (hay 9 departamentos), Zona (rural y urbano) y PET (con dos categorías: mayor o igual a 10 años y menor de 10 años).
-
-El asesor regional dio una charla acerca de la metodología de calibración al equipo del Departamento de Investigación y Desarrollo, en donde se presentaron algunas medidas de calidad como protección en contra del sesgo generado por considerar demasiadas restricciones y se resaltó la importancia de que las variables utilizadas para la calibración sean estimadas de manera precisa por los estimadores clásicos de muestreo. Por ejemplo, si el número de personas por hogar es utilizada como una variable de calibración (utilizando como total auxiliar las proyecciones demográficas), entonces el coeficiente de variación del estimador de Horvitz-Thompson sobre esta variable debería ser menor al 10%. 
-
-![*Comparación de la distribución de los pesos básicos de muestreo (izquierda) con los pesos ajustados por ausencia de respuesta (derecha) en una encuesta de hogares.*](Pics/18.png){width=350px, height=500px}
-
-
-La teoría afirma que entre más variables de calibración se tengan menor será la varianza asociada a las estimaciones (no así el sesgo). Sin embargo, existen problemas computacionales cuando crecen las restricciones que se deben satisfacer son demasiadas. Una primera opción es verificar que no se tengan variables que puedan tener codependencia lineal con otras. Al descartar estas variables es posible conservar una varianza pequeña puesto que se descartan combinaciones lineales de otras variables.
-
-Si los pesos de calibración resultan ser menores que uno su interpretación puede tornarse difícil (aunque no reviste un problema teórico). El usuario común entiende al factor de expansión como un factor de representatividad: *es la cantidad de veces que una persona se represnta a sí misma y a algunas otras más en la población*. Por ende, los pesos negativos o menores que uno no resisten esta interpretación intuitiva y natural. Además, los pesos negativos pueden conllevar a estimaciones negativas para algunos dominios en donde el tamaño de muestra es pequeño, lo cual resulta ser problemático en un contexto en donde todas las variables de estudio son no negativas. 
+Por otro lado, si los pesos de calibración resultan ser menores que uno su interpretación puede tornarse difícil (aunque no reviste un problema teórico). El usuario común entiende al factor de expansión como un factor de representatividad: *es la cantidad de veces que una persona se representa a sí misma y a algunas otras más en la población*. Por ende, los pesos negativos o menores que uno no resisten esta interpretación intuitiva y natural. Además, los pesos negativos pueden conllevar a estimaciones negativas para algunos dominios en donde el tamaño de muestra es pequeño, lo cual resulta ser problemático en un contexto en donde todas las variables de estudio son no negativas. 
 
 Para garantizar que los pesos se ubiquen en un intervalo determinado, se debe minimizar una distancia que a su vez debe inducir pesos restringidos a este intervalo y que respete las ecuaciones de calibración. Es posible que no se tenga una solución exacta para todas las restricciones de calibración e incluso que el algoritmo de calibración no converja. Nótese que los estimadores de calibración se pueden escribir como 
 
@@ -251,10 +236,47 @@ $$M7 = \frac{1}{J}\sum_{j=1}^J \frac{Var(\hat{t}_{y_jc})}{Var(\hat{t}_{y_j\pi})}
 - Efecto de la calibración sobre la dispersión de los ponderadores (DEFFk)
 $$M8 = 1+\frac{\sigma^2_w}{\bar{w}^2}$$
 
+### Diferentes niveles de calibración
 
-### Calibración a nivel de personas y hogares
+Una de las preguntas recurrentes en la calibración de encuestas de hogares es el nivel al cual se debería realizar este ajuste. En principio, es posible realizar la calibración al nivel de las personas, o al nivel de los hogares. Cada una de estas opciones trae algunas ventajas y consideraciones que se deben tener en cuenta. 
 
-En el caso particular en que haya información auxiliar disponible a nivel de personas y hogares (al mismo tiempo), es posible calibrar conjuntamente ambas variables en un sólo procedimiento de calibración. @Estevao_Sarndal_2006[sec. 5] recrea la calibración conjunta para hogares y personas, en donde se genera una variable indicadora para el jefe de hogar y sobre esta se crea una nueva restricción de calibración que utilice los totales auxiliares de los hogares. Con esta nueva calibración, se generan unos nuevos pesos de calibración en la base de datos de personas. Al filtrar esta base de datos por el jefe de hogar, se crea inmediatamente una base de hogares (puesto que solo hay un único jefe de hogar) que puede ser utilizada para combinarla con la información de los hogares. De esta forma, los pesos que venían de la base de datos de personas serán los que se utilicen en la base de datos de hogares obteniendo estimaciones consistentes. 
+* Calibrar al nivel de los hogares implica que el hogar tendrá unos nuevos pesos que cumplen con las restricciones de calibración, y esos pesos los heredará a las personas que habitan el hogar. De esta forma todas las personas pertenecientes a un mismo hogar tendrán el mismo peso de muestreo, sin importar sus diferencias en composición demográfica. Por ejemplo, hombres, mujeres, menores y mayores de 15 años tendrán el mismo peso de muestreo. Esta propiedad es atractiva puesto que emula el diseño de muestreo que se definió en la fase de planeación. Sin embargo, realizar la calibración a nivel de los hogares hace que dentro de las unidades primarias de muestreo (UPM) los hogares no tengan un peso homogéneo, lo que se distancia de las propiedades del diseño sistemático simple que se usa para la selección de los hogares dentro de las UPM.
+
+* Por otro lado, calibrar a nivel de personas implica que los pesos de muestreo de los hogares también pueden verse alterados, y que los pesos finales de muestreo de las personas sean diferentes dentro de los hogares. De esta forma, de acuerdo a las características de las personas se tendrá un peso diferente. Por ejemplo, es posible que hombres, mujeres, menores y mayores de 15 años **no** tengan el mismo peso de muestreo. Por consiguiente cuando se calibra por personas y se utiliza un filtro sobre esa base de personas para crear una base de hogares, las características observadas de los jefes de hogares influenciarían los pesos de muestreo resultantes.  
+
+Dado que la calibración puede inducir factores de expansión diferentes para los miembros de un mismo hogar, es necesario analizar a qué nivel se realiza este procedimiento (persona, hogar). En principio, y debido al diseño de la encuesta, los pesos de muestreo originales son idénticos para todos los miembros de un mismo hogar. Sin embargo, cuando la post-estratificación trata de ajustar los totales de las restricciones de calibración, y debido a que la población no está equitativamente distribuida, entonces de igual manera se presenta un reajuste en los factores de calibración. Podría ser conveniente revisar la metodología de *raking* y su impacto en los pesos de calibración dentro de los hogares.
+
+Por ejemplo, si la calibración se realiza a nivel de personas y se calibra sobre la población en edad de trabajar, esto traerá como consecuencia que los factores de expansión sean diferentes para los miembros de un mismo hogar, puesto que la metodología buscará ajustar los totales de las personas en edad de trabajar y las personas que no están en la fuerza de trabajo de manera independiente. Por esta razón en la mayoría de hogares, en donde hay personas que son parte de la fuerza de trabajo y personas que no lo son, los pesos de muestreo no serán equivalentes. 
+
+### Calibración integrada en hogares
+
+En general, la mayoría de encuestas de hogares en la región tienen una naturaleza multipropósito, generando estimaciones de indicadores a nivel de persona (tasa de participación, tasa de desocupación, etc.), y al mismo tiempo, indicadores a nivel de hogar (pobreza monetaria, necesidades básicas insatisfechas y pobreza multidimensional). En este documento se enfatiza la recomendación de disponer de factores de expansión coherentes entre las diferentes unidades de análisis. 
+
+Por ejemplo, una práctica común que pone en tela de juicio las propiedades estadísticas del estimador, es generar factores de expansión a nivel de persona y endilgarle el factor de expansión del jefe de hogar al mismo hogar [@Alexander_1987]. Esta es una escogencia arbitraria si es que los factores de expansión se han generado mediante una calibración que tenga en cuenta las características de las personas, como por ejemplo edad o sexo. Este acercamiento deliberado no permite sopesar las propiedades estadísticas del estimador resultante y por ende sus resultados no pueden ser interpretados confiablemente, mucho menos comparados. 
+
+Una escogencia más parsimoniosa puede ser optar por un enfoque tipo *integrated household weighting*. Nótese que, como lo expone @Heldal_1992, al realizar una calibración a nivel de personas, ya no será posible agregar a las personas de un mismo hogar para obtener un único peso del hogar, pues las características de las personas del hogar serán, en general, diferentes y sus respectivos factores de expansión también lo serán. Por tanto, es necesario que el sistema de pesos satisfaga la siguiente restricción:
+
+$$
+w_j=w_i\ \rm \ para\ toda\ persona\ i\ en\ el\ hogar\ j
+$$
+
+De esta forma, si el sistema de pesos de calibración satisface la anterior restricción, sería posible obtener pesos consistentes con las restricciones de calibración a nivel de persona y que permitiera la integración con los hogares, al cambiar de unidad de observación. En la literatura se han descrito dos métodos para lograr esta estandarización. El primero, condensado en @Lemaitre_Dufour_1987 afirma que se deben crear nuevas variables de calibración a nivel de persona, definidas como el promedio de las variables originales en el hogar. Por ende, se definen las siguientes cantidades:
+
+$$
+z_{ij}=\sum_{i\in h} x_{ij}\ \ y\ \ \ {\bar{z}}_{ij}=\frac{z_{ij}}{N_j}
+$$
+
+En donde $z_{ij}$ es la agregación a nivel de hogar de las covariables originales de calibración a nivel de persona y $N_j$ es el tamaño del hogar $j$. Al ejecutar el algoritmo de calibración utilizando las variables $z$, en vez de las variables $x$, se reproducen las ecuaciones de calibración a satisfacción y, dado que todos los individuos comparten las mismas covariables en la calibración, sus pesos serán idénticos para todos aquellos compartiendo un mismo hogar. Nótese que esta calibración se realiza con la base de datos a nivel de personas.
+
+En segundo lugar, es posible también agregar las covariables de personas a nivel de hogar y ejecutar la calibración con las covariables agregadas. Esta calibración se realiza con la base de datos a nivel de hogares e induce un conjunto de pesos calibrados a nivel de hogar, que fácilmente pueden ser heredados por todos los individuos dentro del hogar. Nótese que, como se trata de una agregación, cuando se cree la base de datos de personas, las ecuaciones de calibración se reproducirán a cabalidad. 
+
+En la literatura estadística se ha estudiado este enfoque integrado. Es así como @Neethling_Galpin_2006 concluyeron que, para ambos enfoques, las estimaciones resultantes redujeron el sesgo, aumentaron la precisión y proporcionaron un único conjunto de ponderaciones para los datos de las encuestas estudiadas. 
+
+Además, si se opta por el primer enfoque, en el cual el tamaño de la base de datos sería igual al número de personas entrevistadas, se tendría el suficiente margen para actualizar las restricciones de calibración con el fin de ejercer un mayor control sobre los tamaños de los subgrupos de interés. 
+
+### Calibración conjunta a nivel de personas y hogares
+
+En el caso particular en el que haya información auxiliar disponible a nivel de personas y hogares (al mismo tiempo), es posible calibrar conjuntamente ambas variables en un sólo procedimiento de calibración. @Estevao_Sarndal_2006[sec. 5] recrea la calibración conjunta para hogares y personas, en donde se genera una variable indicadora para el jefe de hogar y sobre esta se crea una nueva restricción de calibración que utilice los totales auxiliares de los hogares. Con esta nueva calibración, se generan unos nuevos pesos de calibración en la base de datos de personas. Al filtrar esta base de datos por el jefe de hogar, se crea inmediatamente una base de hogares (puesto que solo hay un único jefe de hogar) que puede ser utilizada para combinarla con la información de los hogares. De esta forma, los pesos que venían de la base de datos de personas serán los que se utilicen en la base de datos de hogares obteniendo estimaciones consistentes. 
 
 En principio, se supone que se selecciona una muestra de unidades de una población finita $U = \lbrace 1,2,\ldots,k,\ldots,M\rbrace$ la cual está agrupada en conglomerados $U_I = \lbrace 1, 2,\ldots, i, \ldots, N_I \rbrace$. El proceso de selección se puede resumir de la siguiente manera [@Gutierrez_2016]:
 
@@ -268,7 +290,7 @@ $$
 \sum_{i \in S_I}w_{I_i}x_{ci} = \sum_{i \in U_I}x_{ci} = t_{x_c}
 $$
 
-En donde $x_{ci}$ denota el vector de variables auxiliares a nivel del hogar, que siempre será definido como un conteo de individuos con cierta característica en el hogar. Por ejemplo, en su caso más básico $x_{ci}$ puede ser el número de individuos en el hogar, mientras que el total auxiliar $t_{x_c} = \sum_{i \in U_I}x_{ci}$ será el número de individuos en todos los hogares de Chile Luego de que se ha calibrado la base de hogares, se construyen los pesos a nivel de persona recurriendo a la siguiente expresión:
+En donde $x_{ci}$ denota el vector de variables auxiliares a nivel del hogar, que siempre será definido como un conteo de individuos con cierta característica en el hogar. Por ejemplo, en su caso más básico $x_{ci}$ puede ser el número de individuos en el hogar, mientras que el total auxiliar $t_{x_c} = \sum_{i \in U_I}x_{ci}$ será el número de individuos en todos los hogares del país. Luego de que se ha calibrado la base de hogares, se construyen los pesos a nivel de persona recurriendo a la siguiente expresión:
 
 $$
 w_k = d_{k|i}w_{I_i} \quad \forall k \in S_i
@@ -304,34 +326,35 @@ x_{cN_I1} & x_{cN_I2} & \cdots & x_{cN_Ip}
 \end{bmatrix}
 $$
 
-### Calibración integrada en hogares
 
-En general, la mayoría de encuestas de hogares en la región tienen una naturaleza multipropóstio, generando estimaciones de indicadores a nivel de persona (tasa de participación, tasa de desocupación, etc.), y al mismo tiempo, indicadores a nivel de hogar (pobreza monetaria, necesidades básicas insatisfechas y pobreza multidimensional). 
+## Recorte de los pesos
 
-En las diferentes sesiones con el INEC, se realizaron recomendaciones en términos de disponer factores de expansión coherentes entre las diferentes unidades de análisis. Una práctica común, pero que pone en tela de juicio las propiedades estadísticas de su estimador, es generar factores de expansión a nivel de persona y endilgarle el factor de expansión del jefe de hogar al mismo hogar (Alexander, 1987). Esta es una escogencia arbitraria si es que los factores de expansión se han generado mediante una calibración que tenga en cuenta las características de las personas, como por ejemplo edad o sexo. Este acercamiento deliberado no permite sopesar las propiedades estadísticas del estimador resultante y por ende sus resultados no pueden ser interpretados confiablemente, mucho menos comparados. 
-Una escogencia más parsimoniosa puede ser optar por un enfoque tipo integrated household weighting. Nótese que, como lo expone Heldal (1992), al realizar una calibración a nivel de personas, ya no será posible agregar a las personas de un mismo hogar para obtener un único peso del hogar, pues las características de las personas del hogar serán, en general, diferentes y sus respectivos factores de expansión también lo serán. Por tanto, es necesario que el sistema de pesos satisfaga la siguiente restricción:
-w_j=w_i\ \ \ para\ toda\ persona\ i\ en\ el\ hogar\ j
-De esta forma, si el sistema de pesos de calibración satisface la anterior restricción, sería posible obtener pesos consistentes con las restricciones de calibración a nivel de persona y que permitiera la integración con los hogares, al cambiar de unidad de observación. En la literatura se han descrito dos métodos para lograr esta estandarización. El primero, condensado en Lemaitre & Dufour (1987) afirma que se deben crear nuevas variables de calibración a nivel de persona, definidas como el promedio de las variables originales en el hogar. Por ende, se definen las siguientes cantidades:
-z_{ij}=\sum_{i\in h} x_{ij}\ \ y\ \ \ {\bar{z}}_{ij}=\frac{z_{ij}}{N_j}
-En donde z_{ij} es la agregación a nivel de hogar de las covariables originales de calibración a nivel de persona y N_j es el tamaño del hogar j. Al ejecutar el algoritmo de calibración utilizando las variables z, en vez de las variables x, se reproducen las ecuaciones de calibración a satisfacción y, dado que todos los individuos comparten las mismas covariables en la calibración, sus pesos serán idénticos para todos aquellos compartiendo un mismo hogar. Nótese que esta calibración se realiza con la base de datos a nivel de personas.
-En segundo lugar, es posible también agregar las covariables de personas a nivel de hogar y ejecutar la calibración con las covariables agregadas. Esta calibración se realiza con la base de datos a nivel de hogares e induce un conjunto de pesos calibrados a nivel de hogar, que fácilmente pueden ser heredados por todos los individuos dentro del hogar. Nótese que, como se trata de una agregación, cuando se cree la base de datos de personas, las ecuaciones de calibración se reproducirán a cabalidad. 
-En la literatura estadística se ha estudiado este enfoque integrado. Es así como Neethling & Galpin (2006) concluyeron que para ambos enfoques las estimaciones resultantes redujeron el sesgo, aumentaron la precisión y proporcionaron un único conjunto de ponderaciones para los datos de las encuestas estudiadas. La recomendación de la CEPAL para llevar a cabo el despliegue y diseminación de las bases de datos es la de considerar un enfoque integrado para la ENEMDU 2021 – 2024.
-Además, si se opta por el primer enfoque, en el cual la base de datos mensual constaría de alrededor de 30 mil observaciones, se tendría el suficiente margen para actualizar las restricciones de calibración con el fin de ejercer un mayor control sobre los tamaños de los subgrupos de interés. 
+Un inconveniente que se genera debido a la multitud de ajustes en los factores  de expansión es que, si bien el estimador resultante tendrá un sesgo cercano a cero, la distribución de los pesos puede mostrar datos extremos, sobre todo a la derecha de la distribución (valores muy grandes), que hacen que la varianza del estimador crezca y que, por ende, la precisión de la inferencia decrezca. Para hacerle frente a este problema, es posible considerar un procedimiento de *trimming* o recorte de pesos, siguiendo las recomendaciones de @Valliant_Dever_Kreuter_2018[, sec. 14.4], que puede ser resumido de la siguiente manera:
+	
+1. Recortar cualquier peso mayor a un umbral prestablecido en la distribución de pesos ajustados. Por lo general este umbral se fija alrededro de 3.5 veces la mediana de los pesos. Por tanto, 
+$$
+U=3.5\times mediana(\mathbf{d_{4k}})
+$$
+1. Cualquier peso con magnitud superior a $U$ se trunca de la siguiente manera
+$$
+d_k^\ast=\left\{\begin{matrix}U,\ si\ d_k^\ast\geq U\\
+d_{4k},\ en\ otro\ caso\\\end{matrix}\right.
+$$
+1. Determinar la cantidad neta perdida debido al recorte de pesos extremos, siguiendo la siguiente expresión:
+$$
+K=\sum_{s_r}(d_k^\ast - d_{4k})
+$$
+1. Distribuir $K$ equitativamente entre las unidades que no fueron recortadas.
+1. Iterar hasta que todos los nuevos pesos calibrados estén por debajo del umbral $U$.
 
-
-A manera de ejemplo, la calibración mensual podría constar de las siguientes marginales:
-	Cuatro cruces entre sexo y área
-	24 provincias
-	5 ciudades principales
-	5 grupos etarios
-Una vez definidos los esquemas de calibración mensual, se sugiere fuertemente que estos mismos se mantengan idénticos en las agregaciones trimestrales y anuales. De esta manera, se conserva una estructura de comparabilidad completa, pues se está teniendo en cuenta la misma medida de probabilidad en la selección de la muestra (puesto que se realizó una única selección para las gestiones 2021 – 2024), el mismo enfoque de ajuste ante fenómenos de elegibilidad desconocida, no elegibilidad y ausencia de respuesta, y por último, el mismo enfoque en la calibración de los factores de expansión. 
+Al final del proceso se debe asegurar que los datos extremos en los factores de expansión han sido correctamente manejados y que la distribución general de los pesos no sufrió cambios estructurales en los subgrupos poblacionales de interés. 
 
 
 ## Redondeo de los factores de expansión
 
-El principio de representatividad es el paradigma inferencial dominante en cualquier encuesta de hogares y el factor de expansión es el concepto más importante en este contexto. Por ejemplo, un hogar en una encuesta con un factor de expansión de 50 se representa a sí mismo y a otros 49 hogares más. La definición teórica del factor de expansión, inducida por el inverso multiplicativo de la probabilidad de inclusión de un hogar en la muestra, hace que la inferencia sea insesgada y confiable. Sin embargo, debido a que la probabilidad de inclusión es un número real contenido en el intervalo $(0, 1]$, entonces su inverso multiplicativo también será un número real mayor que uno. 
+El principio de representatividad es el paradigma inferencial dominante en cualquier encuesta de hogares y el factor de expansión es el concepto más importante en este contexto. Por ejemplo, un hogar en una encuesta con un factor de expansión de 500 se representa a sí mismo y a otros 499 hogares más. La definición teórica del factor de expansión, inducida por el inverso multiplicativo de la probabilidad de inclusión de un hogar en la muestra, hace que la inferencia sea insesgada y confiable. Sin embargo, debido a que la probabilidad de inclusión es un número real contenido en el intervalo $(0, 1]$, entonces su inverso multiplicativo también será un número real mayor que uno. 
 
-Cuando el factor de expansión no es entero, entonces su interpretación se torna compleja desde el punto de vista práctico, aunque teóricamente no tenga ninguna repercusión negativa. Sin embargo, este inconveniente hace que en la práctica las oficinas nacionales de estadística y los usuarios de las bases de datos de encuestas de hogares tomen la decisión (bienintencionada pero errada) de redondear estas cantidades al entero más cercano. Esta práctica es perjudicial porque le añade sesgo a la inferencia y causará problemas de sobre o sub estimación en algunos dominios de estudio. @Sartore_Toppin_Young_Spiegelman_2019 plantean que el redondeo de los factores de expansión puede ser problemático puesto que las estimaciones ponderadas pueden crecer o decrecer enormemente. 
+Cuando el factor de expansión no es entero, entonces su interpretación se torna compleja desde el punto de vista práctico, aunque teóricamente no tenga ninguna repercusión negativa. Sin embargo, este inconveniente puede hacer que, en la práctica, las oficinas nacionales de estadística y los usuarios de las bases de datos de encuestas de hogares tomen la decisión (bienintencionada pero errada) de redondear estas cantidades al entero más cercano. Esta práctica es perjudicial porque le añade sesgo a la inferencia y causará problemas de sobre o sub estimación en algunos dominios de estudio. @Sartore_Toppin_Young_Spiegelman_2019 plantean que el redondeo de los factores de expansión puede ser problemático puesto que las estimaciones ponderadas pueden crecer o decrecer enormemente. 
 
 Los siguientes ejemplos prácticos muestran de forma directa las repercusiones perjudiciales que conlleva esta práctica y que son consecuencia directa del sesgo de redondeo: 
 
@@ -349,11 +372,7 @@ E(\hat t_y)
 = \sum_U \pi_k \frac{y_k}{\pi_k} = t_y
 $$
 
-De las anteriores relaciones es evidente que, cuando el factor de expansión se redondea de forma determinística, entonces $E(\hat t_y) \neq t_y$.
-
-### La solución
-
-Para evadir el sesgo de redondeo, es necesario emplear un método aleatorio que induzca insesgamiento en los estimadores de muestreo. En general, este problema puede ser abordado desde una perspectiva probabilística. De hecho, si en primera instancia se utiliza como redondeo la parte entera (el entero máximo que sea menor o igual) del factor de expansión, entonces bastará con añadir aleatoriamente una unidad a algunos factores de expansión para asegurar que la suma de los factores redondeados sea idéntica a la original. Con esta simple idea se le devuelve la propiedad del insesgamiento a los estimadores de muestreo. 
+De las anteriores relaciones es evidente que, cuando el factor de expansión se redondea de forma determinística, entonces $E(\hat t_y) \neq t_y$. Para evadir el sesgo de redondeo, es necesario emplear un método aleatorio que induzca insesgamiento en los estimadores de muestreo. En general, este problema puede ser abordado desde una perspectiva probabilística. De hecho, si en primera instancia se utiliza como redondeo la parte entera (el entero máximo que sea menor o igual) del factor de expansión, entonces bastará con añadir aleatoriamente una unidad a algunos factores de expansión para asegurar que la suma de los factores redondeados sea idéntica a la original. Con esta simple idea se le devuelve la propiedad del insesgamiento a los estimadores de muestreo. 
 
 \begin{algorithm}
 \DontPrintSemicolon
@@ -391,7 +410,7 @@ E \left( \sum_s \tilde d_k y_k \right)
 = E \left( \sum_s d_k y_k \right) = t_y
 $$
 
-Por último, cuando los factores de expansión de la encuesta están calibrados se presenta un problema de optimización un poco más complejo, puesto que al utilizar el redondeo aleatorio, los factores de expansión perderan la propiedad de calibración. Recientemente @Sartore_Toppin_Young_Spiegelman_2019 y @Tille han presentado diferentes soluciones a este problema, siendo la última mucho más fácil de implementar en el software estadístico `R`. Bajo esta perspectiva, la calibración de los factores de expansión crea nuevos pesos denominados $w_k$ que conservan la siguiente propiedad para un conjunto de totales auxiliares $\mathbf{t_x}$ disponibles para toda la población
+Por último, cuando los factores de expansión de la encuesta están calibrados se presenta un problema de optimización un poco más complejo, puesto que al utilizar el redondeo aleatorio, los factores de expansión perderan la propiedad de calibración. @Sartore_Toppin_Young_Spiegelman_2019 y @Tille han presentado diferentes soluciones a este problema, siendo la última mucho más fácil de implementar en el software estadístico `R`. Bajo esta perspectiva, la calibración de los factores de expansión crea nuevos pesos denominados $w_k$ que conservan la siguiente propiedad para un conjunto de totales auxiliares $\mathbf{t_x}$ disponibles para toda la población
 
 $$
 \sum_s w_k \mathbf{x}_k =  \mathbf{t_x}
@@ -436,78 +455,44 @@ $$
 \sum_s \tilde w_k \mathbf{x}_k \cong  \mathbf{t_x}
 $$
 
-### Ejemplos en `R`
+Nótese que el redondeo aleatorio depende de la selección de la submuestra $s_a$ para completar los restos de la parte entera. En esta selección intervienen diferentes algoritmos de muestreo que se pueden aplicar fácilmente utilizando la librería `sampling` [@Matei]. Por ejemplo, suponga una muestra de tamaño $n= 200$ que fue seleccionada de una población de tamaño $N=9200$ con factores de expansión desiguales que no están calibrados. Asuma que el vector de probabilidades de inclusión en la muestra toman la siguiente forma
 
-El redondeo aleatorio depende de la selección de la submuestra $s_a$ para completar los restos de la parte entera. En esta selección intervienen diferentes algoritmos de muestreo que se pueden aplicar fácilmente utilizando la librería `sampling` [@Matei].
+$$
+\boldsymbol{\pi}_s = (\underbrace{15/500}_{50 \ veces},
+\ldots,
+\underbrace{15/800}_{80 \ veces}, 
+\ldots,
+\underbrace{15/700}_{70 \ veces})'
+$$
 
+Por lo tanto, el vector de pesos de muestreo estará definido de la siguiente manera:
 
-```r
-library(sampling)
-```
- 
-En una primera instancia se supone una base de datos de tamaño $n= 200$ que corresponde a las observaciones de una muestra que fue seleccionada de una población de tamaño $N=9200$ con factores de expansión desiguales que no están calibrados.
- 
+$$
+\mathbf{d}_s = (\underbrace{33.33333}_{50 \ veces},
+\ldots,
+\underbrace{53.33333}_{80 \ veces}, 
+\ldots,
+\underbrace{46.66667}_{70 \ veces})'
+$$
 
-```r
-n <- 200
-N <- 9200
-pik <- c(rep(15/500, 50), rep(15/800, 80), rep(15/700, 70))
-dk <- 1/pik
-sum(dk)
-```
+De la misma manera, el vector de excesos $\phi_k = w_k - \lfloor d_k \rfloor$, estará dado por la siguiente expresión:
 
-```
-## [1] 9200
-```
+$$
+\boldsymbol{\phi}_s = (\underbrace{0.33333}_{130 \ veces},
+\ldots,
+\underbrace{0.66667}_{70 \ veces})'
+$$
 
-Luego del cálculo de $\phi_k$, se selecciona la submuestra $s_a$. En particular, en este caso se utiliza el algoritmo de Brewer, puesto que $\sum_s\phi_k = 90$ y es entero. Al final del proceso de redondeo aleatorio la suma de los nuevos factores coincide con la suma de los factores originales. 
+Luego del cálculo de $\phi_k$, se selecciona la submuestra $s_a$. En particular, en este caso se utiliza el algoritmo de Brewer, puesto que $\sum_s\phi_k = 90$ y es entero. Al final del proceso de redondeo aleatorio la suma de los nuevos factores coincidirá con la suma de los factores originales. 
 
-
-```r
-phi <- dk - floor(dk)
-na <- sum(phi)
-sa <- UPbrewer(phi)
-dktilde <- floor(dk) + sa
-sum(dktilde)
-```
-
-```
-## [1] 9200
-```
-
-En una segunda instancia, se considera que los pesos están calibrados mediante tres covariables de calibración que respetan las siguientes restricciones:
+Por último, si en una segunda instancia, se considera que los pesos están calibrados mediante tres covariables de calibración que respetan las siguientes restricciones:
 
 $$
 \sum_{s} (x_{1k}, x_{2k}, x_{3k})' = (1000, 1000000, 11000000)'
 $$
 
 
-
-```r
-Xs <- cbind(rep(1, n), 1:n, (1:n)^1.5)
-Total <- c(1000, 1000000, 11000000) 
-wk <- dk * calib(Xs, dk, Total, method = "linear")
-colSums(wk * Xs)
-```
-
-```
-## [1] 1.0e+03 1.0e+06 1.1e+07
-```
-
-Por último, se utiliza la función `samplecube` para que la submuestra esté balanceada y los pesos redondeados sigan las restricciones de calibración bajo una tolerancia predefinida. 
-
-
-```r
-phi <- wk - floor(wk)
-Xtilde <- phi * Xs
-sa <- samplecube(Xtilde, phi, comment = FALSE)
-wktilde <- floor(wk) + sa 
-colSums(wktilde * Xs)
-```
-
-```
-## [1]     1000  1000048 11000720
-```
+Entonces es posible utilizar el método del cubo, en particular la función `samplecube` del paquete `sampling` de `R`, para que la submuestra esté balanceada y los pesos redondeados sigan las restricciones de calibración bajo una tolerancia predefinida. 
 
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  30 JUL 2021 13:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  2 AUG 2021 17:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -648,7 +648,7 @@ LaTeX Info: Redefining \% on input line 128.
 [8
 
 ]
-<Pics/CClicence.png, id=183, 97.0827pt x 33.9669pt>
+<Pics/CClicence.png, id=227, 97.0827pt x 33.9669pt>
 File: Pics/CClicence.png Graphic file (type png)
 <use Pics/CClicence.png>
 Package pdftex.def Info: Pics/CClicence.png  used on input line 132.
@@ -672,7 +672,7 @@ LaTeX Info: Redefining \% on input line 186.
 LaTeX Info: Redefining \. on input line 221.
 LaTeX Info: Redefining \% on input line 221.
 [16]
-<Pics/Intro.png, id=270, 1325.95375pt x 1308.89pt>
+<Pics/Intro.png, id=313, 1325.95375pt x 1308.89pt>
 File: Pics/Intro.png Graphic file (type png)
 <use Pics/Intro.png>
 Package pdftex.def Info: Pics/Intro.png  used on input line 229.
@@ -695,7 +695,7 @@ LaTeX Info: Redefining \% on input line 237.
 
 ] [21] [22]
 Cap\'{\i }tulo 2.
-<Pics/Picture9.png, id=305, 677.4108pt x 352.6776pt>
+<Pics/Picture9.png, id=349, 677.4108pt x 352.6776pt>
 File: Pics/Picture9.png Graphic file (type png)
 <use Pics/Picture9.png>
 Package pdftex.def Info: Pics/Picture9.png  used on input line 257.
@@ -709,7 +709,7 @@ LaTeX Info: Redefining \% on input line 282.
 LaTeX Info: Redefining \. on input line 322.
 LaTeX Info: Redefining \% on input line 322.
 [25]
-<Pics/Picture6.png, id=341, 590.6868pt x 333.4056pt>
+<Pics/Picture6.png, id=384, 590.6868pt x 333.4056pt>
 File: Pics/Picture6.png Graphic file (type png)
 <use Pics/Picture6.png>
 Package pdftex.def Info: Pics/Picture6.png  used on input line 341.
@@ -947,14 +947,14 @@ File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 LaTeX Info: Redefining \. on input line 1246.
 LaTeX Info: Redefining \% on input line 1246.
 [69]
-<04Estratificar_files/figure-latex/unnamed-chunk-1-1.pdf, id=700, 422.57875pt x
- 174.6525pt>
+<04Estratificar_files/figure-latex/unnamed-chunk-1-1.pdf, id=743, 427.5975pt x 
+174.6525pt>
 File: 04Estratificar_files/figure-latex/unnamed-chunk-1-1.pdf Graphic file (typ
 e pdf)
 <use 04Estratificar_files/figure-latex/unnamed-chunk-1-1.pdf>
 Package pdftex.def Info: 04Estratificar_files/figure-latex/unnamed-chunk-1-1.pd
 f  used on input line 1252.
-(pdftex.def)             Requested size: 345.00798pt x 142.59236pt.
+(pdftex.def)             Requested size: 345.00148pt x 140.91609pt.
 LaTeX Info: Redefining \. on input line 1275.
 LaTeX Info: Redefining \% on input line 1275.
 [70 <./04Estratificar_files/figure-latex/unnamed-chunk-1-1.pdf>]
@@ -1220,7 +1220,7 @@ LaTeX Info: Redefining \% on input line 1371.
 LaTeX Info: Redefining \. on input line 1395.
 LaTeX Info: Redefining \% on input line 1395.
 [74]
-<Pics/Estratificar.png, id=774, 1740.5025pt x 806.01125pt>
+<Pics/Estratificar.png, id=818, 1740.5025pt x 806.01125pt>
 File: Pics/Estratificar.png Graphic file (type png)
 <use Pics/Estratificar.png>
 Package pdftex.def Info: Pics/Estratificar.png  used on input line 1397.
@@ -1573,59 +1573,252 @@ LaTeX Info: Redefining \% on input line 2957.
 LaTeX Info: Redefining \. on input line 2987.
 LaTeX Info: Redefining \% on input line 2987.
 [141]
-LaTeX Info: Redefining \. on input line 3013.
-LaTeX Info: Redefining \% on input line 3013.
+LaTeX Info: Redefining \. on input line 3011.
+LaTeX Info: Redefining \% on input line 3011.
 [142]
-LaTeX Info: Redefining \. on input line 3035.
-LaTeX Info: Redefining \% on input line 3035.
+<Pics/c5.png, id=1363, 1445.4pt x 859.21pt>
+File: Pics/c5.png Graphic file (type png)
+<use Pics/c5.png>
+Package pdftex.def Info: Pics/c5.png  used on input line 3031.
+(pdftex.def)             Requested size: 344.9843pt x 205.074pt.
+<Pics/c6.png, id=1364, 1445.4pt x 859.21pt>
+File: Pics/c6.png Graphic file (type png)
+<use Pics/c6.png>
+Package pdftex.def Info: Pics/c6.png  used on input line 3039.
+(pdftex.def)             Requested size: 344.9843pt x 205.074pt.
+<Pics/c7.png, id=1365, 1445.4pt x 859.21pt>
+File: Pics/c7.png Graphic file (type png)
+<use Pics/c7.png>
+Package pdftex.def Info: Pics/c7.png  used on input line 3047.
+(pdftex.def)             Requested size: 344.9843pt x 205.074pt.
+<Pics/c8.png, id=1366, 1445.4pt x 858.20625pt>
+File: Pics/c8.png Graphic file (type png)
+<use Pics/c8.png>
+Package pdftex.def Info: Pics/c8.png  used on input line 3055.
+(pdftex.def)             Requested size: 344.9843pt x 204.83443pt.
+LaTeX Info: Redefining \. on input line 3057.
+LaTeX Info: Redefining \% on input line 3057.
 [143]
-LaTeX Info: Redefining \. on input line 3051.
-LaTeX Info: Redefining \% on input line 3051.
-[144]
-LaTeX Info: Redefining \. on input line 3059.
-LaTeX Info: Redefining \% on input line 3059.
-[145]
-LaTeX Info: Redefining \. on input line 3063.
-LaTeX Info: Redefining \% on input line 3063.
-[146] (./DiseÃ±o-y-anÃ¡lisis-de-encuestas-de-hogares.bbl [147
+LaTeX Info: Redefining \. on input line 3057.
+LaTeX Info: Redefining \% on input line 3057.
+[144 <./Pics/c5.png> <./Pics/c6.png>]
+LaTeX Info: Redefining \. on input line 3073.
+LaTeX Info: Redefining \% on input line 3073.
+[145 <./Pics/c7.png>]
+LaTeX Info: Redefining \. on input line 3090.
+LaTeX Info: Redefining \% on input line 3090.
+[146 <./Pics/c8.png>]
+LaTeX Info: Redefining \. on input line 3114.
+LaTeX Info: Redefining \% on input line 3114.
+[147]
+LaTeX Info: Redefining \. on input line 3134.
+LaTeX Info: Redefining \% on input line 3134.
+[148]
+LaTeX Info: Redefining \. on input line 3141.
+LaTeX Info: Redefining \% on input line 3141.
+[149]
+LaTeX Info: Redefining \. on input line 3144.
+LaTeX Info: Redefining \% on input line 3144.
+[150]
+Cap\'{\i }tulo 10.
+[151
+
+]
+LaTeX Info: Redefining \. on input line 3200.
+LaTeX Info: Redefining \% on input line 3200.
+
+Overfull \hbox (0.4164pt too wide) has occurred while \output is active
+\T1/lmr/m/n/10 152 \T1/lmr/m/sl/10 CAPÍTULO 10.  CONSTRUCCIÓN DE LOS FACTORES D
+E EXPANSIÓN
+ []
+
+[152]
+<Pics/15.png, id=1461, 981.6675pt x 491.8375pt>
+File: Pics/15.png Graphic file (type png)
+<use Pics/15.png>
+Package pdftex.def Info: Pics/15.png  used on input line 3207.
+(pdftex.def)             Requested size: 344.9968pt x 172.85115pt.
+LaTeX Info: Redefining \. on input line 3215.
+LaTeX Info: Redefining \% on input line 3215.
+[153 <./Pics/15.png>]
+<Pics/16.png, id=1469, 1025.8325pt x 514.92375pt>
+File: Pics/16.png Graphic file (type png)
+<use Pics/16.png>
+Package pdftex.def Info: Pics/16.png  used on input line 3231.
+(pdftex.def)             Requested size: 344.99043pt x 173.17033pt.
+LaTeX Info: Redefining \. on input line 3253.
+LaTeX Info: Redefining \% on input line 3253.
+
+Overfull \hbox (0.4164pt too wide) has occurred while \output is active
+\T1/lmr/m/n/10 154 \T1/lmr/m/sl/10 CAPÍTULO 10.  CONSTRUCCIÓN DE LOS FACTORES D
+E EXPANSIÓN
+ []
+
+[154]
+LaTeX Info: Redefining \. on input line 3287.
+LaTeX Info: Redefining \% on input line 3287.
+[155 <./Pics/16.png>]
+<Pics/18.png, id=1485, 1021.8175pt x 512.91624pt>
+File: Pics/18.png Graphic file (type png)
+<use Pics/18.png>
+Package pdftex.def Info: Pics/18.png  used on input line 3323.
+(pdftex.def)             Requested size: 344.99664pt x 173.17612pt.
+LaTeX Info: Redefining \. on input line 3331.
+LaTeX Info: Redefining \% on input line 3331.
+
+Overfull \hbox (0.4164pt too wide) has occurred while \output is active
+\T1/lmr/m/n/10 156 \T1/lmr/m/sl/10 CAPÍTULO 10.  CONSTRUCCIÓN DE LOS FACTORES D
+E EXPANSIÓN
+ []
+
+[156]
+LaTeX Info: Redefining \. on input line 3352.
+LaTeX Info: Redefining \% on input line 3352.
+[157 <./Pics/18.png>]
+<Pics/17.png, id=1511, 1023.825pt x 512.91624pt>
+File: Pics/17.png Graphic file (type png)
+<use Pics/17.png>
+Package pdftex.def Info: Pics/17.png  used on input line 3361.
+(pdftex.def)             Requested size: 345.00267pt x 172.83957pt.
+LaTeX Info: Redefining \. on input line 3375.
+LaTeX Info: Redefining \% on input line 3375.
+
+Overfull \hbox (0.4164pt too wide) has occurred while \output is active
+\T1/lmr/m/n/10 158 \T1/lmr/m/sl/10 CAPÍTULO 10.  CONSTRUCCIÓN DE LOS FACTORES D
+E EXPANSIÓN
+ []
+
+[158 <./Pics/17.png>]
+LaTeX Info: Redefining \. on input line 3385.
+LaTeX Info: Redefining \% on input line 3385.
+[159]
+LaTeX Info: Redefining \. on input line 3408.
+LaTeX Info: Redefining \% on input line 3408.
+
+Overfull \hbox (0.4164pt too wide) has occurred while \output is active
+\T1/lmr/m/n/10 160 \T1/lmr/m/sl/10 CAPÍTULO 10.  CONSTRUCCIÓN DE LOS FACTORES D
+E EXPANSIÓN
+ []
+
+[160]
+LaTeX Info: Redefining \. on input line 3439.
+LaTeX Info: Redefining \% on input line 3439.
+[161]
+LaTeX Info: Redefining \. on input line 3452.
+LaTeX Info: Redefining \% on input line 3452.
+
+Overfull \hbox (0.4164pt too wide) has occurred while \output is active
+\T1/lmr/m/n/10 162 \T1/lmr/m/sl/10 CAPÍTULO 10.  CONSTRUCCIÓN DE LOS FACTORES D
+E EXPANSIÓN
+ []
+
+[162]
+LaTeX Info: Redefining \. on input line 3469.
+LaTeX Info: Redefining \% on input line 3469.
+[163]
+Underfull \vbox (badness 1577) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 3494.
+LaTeX Info: Redefining \% on input line 3494.
+
+Overfull \hbox (0.4164pt too wide) has occurred while \output is active
+\T1/lmr/m/n/10 164 \T1/lmr/m/sl/10 CAPÍTULO 10.  CONSTRUCCIÓN DE LOS FACTORES D
+E EXPANSIÓN
+ []
+
+[164]
+LaTeX Info: Redefining \. on input line 3536.
+LaTeX Info: Redefining \% on input line 3536.
+[165]
+LaTeX Info: Redefining \. on input line 3570.
+LaTeX Info: Redefining \% on input line 3570.
+
+Overfull \hbox (0.4164pt too wide) has occurred while \output is active
+\T1/lmr/m/n/10 166 \T1/lmr/m/sl/10 CAPÍTULO 10.  CONSTRUCCIÓN DE LOS FACTORES D
+E EXPANSIÓN
+ []
+
+[166]
+LaTeX Info: Redefining \. on input line 3615.
+LaTeX Info: Redefining \% on input line 3615.
+[167]
+Overfull \hbox (11.12169pt too wide) detected at line 3630
+\OML/lmm/m/it/10 E [] \OT1/lmr/m/n/10 = \OML/lmm/m/it/10 EE [] \OT1/lmr/m/n/10 
+= \OML/lmm/m/it/10 E [] \OT1/lmr/m/n/10 = \OML/lmm/m/it/10 E [] \OT1/lmr/m/n/10
+ = \OML/lmm/m/it/10 t[]
+ []
+
+LaTeX Info: Redefining \. on input line 3636.
+LaTeX Info: Redefining \% on input line 3636.
+
+Overfull \hbox (0.4164pt too wide) has occurred while \output is active
+\T1/lmr/m/n/10 168 \T1/lmr/m/sl/10 CAPÍTULO 10.  CONSTRUCCIÓN DE LOS FACTORES D
+E EXPANSIÓN
+ []
+
+[168]
+LaTeX Info: Redefining \. on input line 3678.
+LaTeX Info: Redefining \% on input line 3678.
+[169]
+LaTeX Info: Redefining \. on input line 3716.
+LaTeX Info: Redefining \% on input line 3716.
+
+Overfull \hbox (0.4164pt too wide) has occurred while \output is active
+\T1/lmr/m/n/10 170 \T1/lmr/m/sl/10 CAPÍTULO 10.  CONSTRUCCIÓN DE LOS FACTORES D
+E EXPANSIÓN
+ []
+
+[170] (./DiseÃ±o-y-anÃ¡lisis-de-encuestas-de-hogares.bbl [171
 
 ]
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
-[148
 
-] [149]
-LaTeX Info: Redefining \. on input line 171.
-LaTeX Info: Redefining \% on input line 171.
-[150]
-LaTeX Info: Redefining \. on input line 258.
-LaTeX Info: Redefining \% on input line 258.
-[151])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3068.
-LaTeX Info: Redefining \. on input line 3068.
-LaTeX Info: Redefining \% on input line 3068.
-[152]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 3068.
+Overfull \hbox (0.4164pt too wide) has occurred while \output is active
+\T1/lmr/m/n/10 172 \T1/lmr/m/sl/10 CAPÍTULO 10.  CONSTRUCCIÓN DE LOS FACTORES D
+E EXPANSIÓN
+ []
+
+[172
+
+] [173]
+LaTeX Info: Redefining \. on input line 175.
+LaTeX Info: Redefining \% on input line 175.
+[174]
+LaTeX Info: Redefining \. on input line 268.
+LaTeX Info: Redefining \% on input line 268.
+[175])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3721.
+LaTeX Info: Redefining \. on input line 3721.
+LaTeX Info: Redefining \% on input line 3721.
+[176]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3721.
 (./DiseÃ±o-y-anÃ¡lisis-de-encuestas-de-hogares.aux
 LaTeX Info: Redefining \. on input line 27.
 LaTeX Info: Redefining \% on input line 27.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3068.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 3068.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3721.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 3721.
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 16802 strings out of 480608
- 252102 string characters out of 5903631
- 601154 words of memory out of 5000000
- 31527 multiletter control sequences out of 15000+600000
- 650306 words of font info for 226 fonts, out of 8000000 for 9000
+ 17050 strings out of 480608
+ 256152 string characters out of 5903631
+ 603514 words of memory out of 5000000
+ 31631 multiletter control sequences out of 15000+600000
+ 653820 words of font info for 231 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,13n,42p,2600b,692s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.13} has been referenced but does not ex
+ 41i,16n,42p,2600b,692s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{Hfootnote.15} has been referenced but does not ex
 ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.14} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.13} has been referenced but does not exis
+t, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.12} has been referenced but does not exis
 t, replaced by a fixed one
@@ -1663,10 +1856,10 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
 , replaced by a fixed one
 
-{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/te
-xlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2020
-/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2020/texmf-dis
-t/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2020/texmf-dist/fonts/enc/dv
+{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/te
+xlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2020
+/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2020/texmf-dist/fo
+nts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2020/texmf-dist/fonts/enc/dv
 ips/lm/lm-mathex.enc}{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-
 ts1.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></
 usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/
@@ -1676,25 +1869,27 @@ st/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/t
 ype1/public/lm/lmmi5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public
 /lm/lmmi6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmmi7.p
 fb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/lo
-cal/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive
-/2020/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2020/texmf
--dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2020/texmf-dist/fonts
-/type1/public/lm/lmr5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/publi
-c/lm/lmr6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr7.pf
-b></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/loca
-l/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/20
-20/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2020/texmf-d
-ist/fonts/type1/public/lm/lmri8.pfb></usr/local/texlive/2020/texmf-dist/fonts/t
-ype1/public/lm/lmro10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/publi
-c/lm/lmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy5
-.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/
-local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texl
-ive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on DiseÃ±o-y-anÃ¡lisis-de-encuestas-de-hogares.pdf (152 pages, 1
-609062 bytes).
+cal/texlive/2020/texmf-dist/fonts/type1/public/lm/lmmib10.pfb></usr/local/texli
+ve/2020/texmf-dist/fonts/type1/public/lm/lmmib7.pfb></usr/local/texlive/2020/te
+xmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2020/texmf-dist/fo
+nts/type1/public/lm/lmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/p
+ublic/lm/lmr17.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lm
+r5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr
+/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texli
+ve/2020/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2020/texm
+f-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texlive/2020/texmf-dist/fonts
+/type1/public/lm/lmri10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/pub
+lic/lm/lmri8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmro
+10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></u
+sr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/te
+xlive/2020/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2020/
+texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2020/texmf-dist
+/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on DiseÃ±o-y-anÃ¡lisis-de-encuestas-de-hogares.pdf (176 pages, 4
+186388 bytes).
 PDF statistics:
- 1741 PDF objects out of 2073 (max. 8388607)
- 1533 compressed objects within 16 object streams
- 570 named destinations out of 1000 (max. 500000)
- 22935 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 2098 PDF objects out of 2487 (max. 8388607)
+ 1845 compressed objects within 19 object streams
+ 697 named destinations out of 1000 (max. 500000)
+ 23039 words of extra memory for PDF output out of 24883 (max. 10000000)
 
