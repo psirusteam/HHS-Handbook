@@ -418,6 +418,119 @@
             "type": "book"
         },
         {
+            "author": [
+                {
+                    "family": "Särndal",
+                    "given": "C."
+                }
+            ],
+            "container-title": "Journal of Official Statistics",
+            "id": "Sar1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2011
+                    ]
+                ]
+            },
+            "page": "1 - 21",
+            "title": "The 2010 Morris Hansen lecture: Dealing with survey nonresponse in data collection",
+            "type": "article-journal",
+            "volume": "27"
+        },
+        {
+            "author": [
+                {
+                    "family": "Särndal",
+                    "given": "C."
+                },
+                {
+                    "family": "Lundstrom",
+                    "given": "S."
+                }
+            ],
+            "id": "Lund",
+            "issued": {
+                "date-parts": [
+                    [
+                        2005
+                    ]
+                ]
+            },
+            "publisher": "Wiley",
+            "title": "Estimation in surveys with nonresponse",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Little",
+                    "given": "R."
+                },
+                {
+                    "family": "Rubin",
+                    "given": "D. B."
+                }
+            ],
+            "edition": "2nd",
+            "id": "LR2002",
+            "issued": {
+                "date-parts": [
+                    [
+                        2002
+                    ]
+                ]
+            },
+            "publisher": "Wiley",
+            "title": "Statistical analysis with missing data",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Särndal",
+                    "given": "C."
+                },
+                {
+                    "family": "Lundstrom",
+                    "given": "S."
+                }
+            ],
+            "container-title": "Survey Methodology",
+            "id": "Sar2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2010
+                    ]
+                ]
+            },
+            "page": "131 - 144",
+            "title": "Design for estimation: Identifying auxiliary vectors to reduce nonresponse bias",
+            "title-short": "Design for estimation",
+            "type": "article-journal",
+            "volume": "36"
+        },
+        {
+            "author": [
+                {
+                    "family": "Fuller",
+                    "given": "W. A."
+                }
+            ],
+            "id": "Fuller",
+            "issued": {
+                "date-parts": [
+                    [
+                        2009
+                    ]
+                ]
+            },
+            "publisher": "Wiley",
+            "title": "Sampling statistics",
+            "type": "book"
+        },
+        {
             "URL": "https://CRAN.R-project.org/package=sampling",
             "author": [
                 {
@@ -2395,6 +2508,182 @@
             "publisher": "Springer-Verlag",
             "title": "Sampling algorithms",
             "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Bethlehem",
+                    "given": "Jelke"
+                },
+                {
+                    "family": "Cobben",
+                    "given": "Fannie"
+                },
+                {
+                    "family": "Schouten",
+                    "given": "Barry"
+                }
+            ],
+            "container-title": "Statistics canada’s international symposium",
+            "id": "Bethlehem_Cobben_Schouten_2009",
+            "issued": {
+                "date-parts": [
+                    [
+                        2009
+                    ]
+                ]
+            },
+            "page": "10",
+            "title": "Indicators for the representativeness of survey response",
+            "type": "paper-conference"
+        },
+        {
+            "DOI": "10.1016/j.jspi.2011.07.008",
+            "ISSN": "03783758",
+            "author": [
+                {
+                    "family": "Shlomo",
+                    "given": "Natalie"
+                },
+                {
+                    "family": "Skinner",
+                    "given": "Chris"
+                },
+                {
+                    "family": "Schouten",
+                    "given": "Barry"
+                }
+            ],
+            "container-title": "Journal of Statistical Planning and Inference",
+            "id": "Shlomo_Skinner_Schouten_2012",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2012
+                    ]
+                ]
+            },
+            "page": "201-211",
+            "title": "Estimation of an indicator of the representativeness of survey response",
+            "type": "article-journal",
+            "volume": "142"
+        },
+        {
+            "ISSN": "03067734, 17515823",
+            "author": [
+                {
+                    "family": "Kruskal",
+                    "given": "William"
+                },
+                {
+                    "family": "Mosteller",
+                    "given": "Frederick"
+                }
+            ],
+            "container-title": "International Statistical Review / Revue Internationale de Statistique",
+            "id": "KruskalMosteller4",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        1980
+                    ]
+                ]
+            },
+            "page": "169-195",
+            "publisher": "[Wiley, International Statistical Institute (ISI)]",
+            "title": "Representative sampling, IV: The history of the concept in statistics, 1895-1939",
+            "title-short": "Representative sampling, IV",
+            "type": "article-journal",
+            "volume": "48"
+        },
+        {
+            "ISSN": "03067734, 17515823",
+            "author": [
+                {
+                    "family": "Kruskal",
+                    "given": "William"
+                },
+                {
+                    "family": "Mosteller",
+                    "given": "Frederick"
+                }
+            ],
+            "container-title": "International Statistical Review / Revue Internationale de Statistique",
+            "id": "KruskalMosteller3",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        1979
+                    ]
+                ]
+            },
+            "page": "245-265",
+            "publisher": "[Wiley, International Statistical Institute (ISI)]",
+            "title": "Representative sampling, III: The current statistical literature",
+            "title-short": "Representative sampling, III",
+            "type": "article-journal",
+            "volume": "47"
+        },
+        {
+            "ISSN": "03067734, 17515823",
+            "author": [
+                {
+                    "family": "Kruskal",
+                    "given": "William"
+                },
+                {
+                    "family": "Mosteller",
+                    "given": "Frederick"
+                }
+            ],
+            "container-title": "International Statistical Review / Revue Internationale de Statistique",
+            "id": "KruskalMosteller1",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        1979
+                    ]
+                ]
+            },
+            "page": "13-24",
+            "publisher": "[Wiley, International Statistical Institute (ISI)]",
+            "title": "Representative sampling, i: Non-scientific literature",
+            "title-short": "Representative sampling, i",
+            "type": "article-journal",
+            "volume": "47"
+        },
+        {
+            "ISSN": "03067734, 17515823",
+            "author": [
+                {
+                    "family": "Kruskal",
+                    "given": "William"
+                },
+                {
+                    "family": "Mosteller",
+                    "given": "Frederick"
+                }
+            ],
+            "container-title": "International Statistical Review / Revue Internationale de Statistique",
+            "id": "KruskalMosteller2",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        1979
+                    ]
+                ]
+            },
+            "page": "111-127",
+            "publisher": "[Wiley, International Statistical Institute (ISI)]",
+            "title": "Representative sampling, II: Scientific literature, excluding statistics",
+            "title-short": "Representative sampling, II",
+            "type": "article-journal",
+            "volume": "47"
         },
         {
             "URL": "https://CRAN.R-project.org/package=sampling",

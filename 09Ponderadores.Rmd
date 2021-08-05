@@ -52,7 +52,9 @@ Por lo tanto, el primer paso, en la reponderación de los pesos de muestreo, es 
 
 $$d_{1k} = \frac{1}{\pi_k}$$
 
-Estos pesos son creados incluso para aquellas unidades que serán excluidas de la muestra porque son no elegibles o porque no proveyeron ninguna información y luego serán modificados convenientemente. La siguiente figura muestra la distribución típica de los pesos originales en una encuesta de hogares. A través de las modificaciones posteriores, esta distribución irá sufriendo algunos cambios. Si la distribución original de los pesos básicos difiere estructuralmente con la distribución final de los ponderadores, resultante de todos los ajustes debidos a las imperfecciones del marco, entonces las propiedades estadísticas de insesgamiento, consistencia y precisión podrían desvanecerse. Lo anterior implica que el nivel de desactaulización del marco de muestreo tiene implicaciones directas en la calidad de la inferencia. Por tanto, si el marco de meustreo es muy imperfecto, los ponderadores finales no inducirán una inferecnia precisa. 
+Estos pesos son creados incluso para aquellas unidades que serán excluidas de la muestra porque son no elegibles o porque no proveyeron ninguna información y luego serán modificados convenientemente. La siguiente figura muestra la distribución típica de los pesos originales en una encuesta de hogares. Se recomienda calcular las probabilidades de inclusión y selección a medida que avance el muestreo en sus etapas y, de esta forma, siempre confirmar la consistencia de los pesos en cada etapa y de los pesos finales. 
+
+A través de las modificaciones posteriores sobre este peso de muestreo, la distribución de los ponderadores irá sufriendo algunos cambios. Si la distribución original de los pesos básicos difiere estructuralmente con la distribución final de los ponderadores, resultante de todos los ajustes debidos a las imperfecciones del marco, entonces las propiedades estadísticas de insesgamiento, consistencia y precisión podrían desvanecerse. Lo anterior implica que el nivel de desactualización del marco de muestreo tiene implicaciones directas en la calidad de la inferencia. Por tanto, si el marco de muestreo es muy imperfecto, los ponderadores finales no inducirán una inferencia precisa. 
 
 
 ![*Distribución de los pesos básicos de muestreo en una encuesta de hogares.*](Pics/15.png){width=350px, height=500px}
@@ -67,12 +69,12 @@ Es así como, si no es posible determinar la elegibilidad de algunas unidades qu
 Se recomienda formar $B$ $(b = 1,  \ldots, B)$ categorías^[Se acostumbra a formar categorías con al menos 50 casos.] basadas en la información del marco de muestreo. Estas categorías pueden ser estratos o cruces de subpoblaciones. Siendo $s_b$ la muestra de unidades en la categoría $b$ (que incluye a ER, ENR y UNK), se define el factor de ajuste por elegibilidad como:
 
 $$
-a_b = \frac{\sum_{s_b}d_{2k}}{\sum_{s_b \cap s_e}d_{2k}}
+a_b = \frac{\sum_{s_b}d_{1k}}{\sum_{s_b \cap s_e}d_{1k}}
 $$
 Para la categoría $b$, los pesos ajustados por elegibilidad desconocida para aquellas unidades cuya elegibilidad si pudo ser establecida (independientemente de su estado de respuesta) estarán dados por la siguiente expresión:
 
 $$
-d_{3k} = a_b * d_{2k}
+d_{2k} = a_b * d_{1k}
 $$
 
 ![*Comparación de la distribución de los pesos básicos de muestreo (izquierda) con los pesos ajustados por el estado de elegibilidad (derecha) en una encuesta de hogares.*](Pics/16.png){width=350px, height=500px}
@@ -82,10 +84,10 @@ $$
 Si hay viviendas seleccionadas desde el marco de muestreo que han cambiado su estado de ocupación y ahora no contienen ningún hogar particular, entonces el segundo paso consiste en ajustar su peso básico de la siguiente manera:
 
 $$
-d_{2k} = 
+d_{3k} = 
 \begin{cases}
 0, \ \ \ \ \ \text{si la unidad $k$ no pertenece a la población objetivo}\\
-d_{1k},\ \ \ \text{en otro caso }
+d_{2k},\ \ \ \text{en otro caso }
 \end{cases}
 $$
 
@@ -133,7 +135,7 @@ $$
 \phi_k = f(\mathbf{y}_k, \beta)
 $$ 
 
-Ene ste caso, como no es posible tener acceso a la variables de interés para todos los individuos en la muestra (porque no todos respondieron), entonces no es posible estimar el patrón de ausencia de respuesta y por ende hay sesgo. @Kim_Riddles_2012 muestran que es posible utilizar un modelo basado en el *propensity score* de las respuestas. 
+En este caso, como no es posible tener acceso a la variables de interés para todos los individuos en la muestra (porque no todos respondieron), entonces no es posible estimar el patrón de ausencia de respuesta y por ende hay sesgo. @Kim_Riddles_2012 muestran que es posible utilizar un modelo basado de estimación de las probabilidades de respuesta (*propensity score*). 
 
 Si la muestra de los respondientes se denota como $s_r$ entonces la probabilidad de que un individuo conteste es $\phi_k = Pr(k \in s_r)$. Al suponer que existe un vector de información auxiliar $\mathbf{z}_k$ conocido  para todo $k\in s$ es posible estimarla por medio de un modelo de regresión logística; esto es, 
 
@@ -152,17 +154,42 @@ En donde
 $$
 d_{4k} = \frac{d_{3k}}{\hat{\phi_k}}
 $$
-Nótese que, si el modelo está bien definido y se verifica en la población, el sesgo se anula puesto que
-
-$$
-E(I_kD_k) 
-= EE(I_kD_k|I_k) 
-= E(I_k)E(D_k|I_k) = \pi_k \phi_k
-$$
-
-Si se tiene acceso a información auxiliar (contenida en el marco de muestreo o en otras preguntas de la encuesta), y si se considera que el mecanismo que genera la ausencia de respuesta en la encuesta de hogares es MAR, es posible ajustar un modelo para la ausencia de respuesta (en donde la variable dependiente es una variable indicadora de la respuesta del individuo por lo general supeditado a una distribución Bernoulli o Binomial).
 
 ![*Comparación de la distribución de los pesos básicos de muestreo (izquierda) con los pesos ajustados por ausencia de respuesta (derecha) en una encuesta de hogares.*](Pics/18.png){width=350px, height=500px}
+
+
+Es posible aumentar la eficiencia del estimar si se crean categorías homogéneas de individuos que tengan la misma probabilidad de responder. En este caso, los valores de las covariables pueden ser usados para crear estas categorías. Por consiguiente, siempre es necesario obtener un conjunto de covariables que esté disponible para respondientes y no respondientes a la vez. 
+
+Por ejemplo, en un escenario simplificado, es posible identificar variables como ubicación, edad, sexo, raza, etc. que estén relacionadas con la probabilidad de responder o con la variable de interés (o con ambas). En este caso, se formarían $Q$ $(q = 1, \ldots, Q)$ categorías de acuerdo al cruce de estas variables para obtener una estimación de la probabilidad de respuesta en cada categoría y ajustar el peso de muestreo. De esta manera, siendo $s_{q}$ la muestra seleccionada en la categoría $q$ y $s_r$ el conjunto de respondientes efectivos, la probabilidad de respuesta en esta categoría se estimaría como:
+
+$$
+\phi_{q} = \frac{\sum_{s_{r}\cap s_q}d_{3k}}{\sum_{s_{q}}d_{3k}}
+$$
+
+El nuevo peso ajustado por la ausencia de respuesta estará dado por:
+
+$$
+d_{4k} = d_{3k}\frac{1}{\phi_{q}} 
+= d_{3k}\frac{\sum_{s_q}d_{3k}}{\sum_{s_{r}\cap s_q}d_{3k}}
+$$
+
+En un escenario más complejo, si las probabilidades de respuesta fueron estimadas con un modelo de *propensity score* y, teniendo en cuenta que las predicciones de estas probabilidades varían entre cero y uno, es posible crear clases de individuos (respondientes y no respondientes) con probabilidades similares. En este caso, se asumiría que las unidades dentro de una misma clase tendrán la misma configuración  de covariables, o al menos, una probabilidad de respuesta estimada similar $\hat\phi_k$. Así, dentro de cada clase, las unidades serían tratadas como si fuesen sido aleatorizadas al tratamiento (responder) o al control (no responder).
+
+Por lo tanto, el objetivo de este proceso es asegurar que cualquier diferencia en las covariables (edad, raza, etnia, estrato socioeconómico, etc.) pueda ser ajustada. Teniendo en cuenta que, si el modelo es adecuado, la estimación $\hat\phi_k$ resumiría los efectos de las covariables en la respuesta del individuo, entonces una vez hayan sido creadas las clases es posible realizar el ajuste mediante alguna medida de localización en cada clase y, de esta forma, todos los individuos de una misma clase se ajustarían de la misma manera. @Valliant_Dever_2017 muestran algunas medidas comunmente adoptadas: 
+
+1. Promedio no ponderado:
+$$\hat{\phi}_c = \frac{\sum_{k \in s_c}\hat{\phi}_k(\mathbf{z})}{n_c}$$
+1. Promedio ponderado:
+$$\hat{\phi}_c = \frac{\sum_{k \in s_c}d_{2k}\hat{\phi}_k(\mathbf{z})}{n_c}$$
+1. Tasa de repuesta no ponderada:
+$$\hat{\phi}_c = \frac{n_{cr}}{n_c}$$
+1. Tasa estimada de repuesta:
+$$\hat{\phi}_c = \frac{\sum_{s_c \cap s_r}d_{2k}}{\sum_{s_c}d_{2k}}$$
+1. Mediana no ponderada:
+$$\hat{\phi}_c = \rm mediana[\hat{\phi}_k(\mathbf{z})]_{k \in s_c}$$
+
+Nótese que, si todas las unidades dentro de una clase tienen la misma probabilidad de responder, entonces la tasa de repuesta no ponderada es la mejor opción. Además, si dentro de las clases las unidades tienen una probabilidad de responder muy disimil, entonces el promedio no ponderado (o ponderado) del PS puede usarse. De la misma manera, la tasa estimada de repuesta puede ser ineficiente si los pesos de muestreo varían demasiado, pero la probabilidad de respuesta es similar en cada clase. Por úlitmo, la mediana se considera si la distribución de la probabilidad de respuesta es sesgada. 
+
 
 ## Calibración de los pesos
 
@@ -273,7 +300,37 @@ $$
 w_j=w_i\ \rm \ para\ toda\ persona\ i\ en\ el\ hogar\ j
 $$
 
-De esta forma, si el sistema de pesos de calibración satisface la anterior restricción, sería posible obtener pesos consistentes con las restricciones de calibración a nivel de persona y que permitiera la integración con los hogares, al cambiar de unidad de observación. En la literatura se han descrito dos métodos para lograr esta estandarización. El primero, condensado en @Lemaitre_Dufour_1987 afirma que se deben crear nuevas variables de calibración a nivel de persona, definidas como el promedio de las variables originales en el hogar. Por ende, se definen las siguientes cantidades:
+De esta forma, si el sistema de pesos de calibración satisface la anterior restricción, sería posible obtener pesos consistentes con las restricciones de calibración a nivel de persona y que permitiera la integración con los hogares, al cambiar de unidad de observación. En la literatura se han descrito varios métodos para lograr esta estandarización. 
+
+#### Agregación en los hogares {-}
+
+Es posible realizar el proceso de calibración de factores de expansión sobre la base de datos de las personas o sobre la base de datos de los hogares. De estos dos escenarios calibrar sobre la base de personas parecería ser la opción más rápida puesto que, en la mayoría de los casos, las cifras que se utilizan para calibrar están al nivel de los individuos. Por ejemplo, pensando en una encuesta de fuerza laboral, es evidente que las variables más importantes de la encuesta se encuentran al nivel de las personas y que la calibración de los factores de expansión se debería realizar desde la base de datos de personas. 
+
+Por ejemplo, suponga una situación en la cual se desea calibrar por sexo. En este caso, se debería tener acceso a las proyecciones demográficas por sexo para el periodo de referencia de la encuesta y se procedería a calibrar los factores de expansión, utilizando un enfoque de post-estratificación. En este escenario, las ecuaciones de calibración estarían dadas por la siguiente expresión:
+
+$$
+\left ( \sum_{k \in s} w_k x_{1k}, \sum_{k \in s} w_k x_{2i} \right )=(t_{x1}, t_{x2})
+$$
+
+En donde la suma se hace sobre las personas en la muestra $s$; además, $x_{k1}$ toma el valor de uno, si el individuo $k$ es hombre, y cero en otro caso. Por supuesto, $x_{k2} = 1 - x_{k1}$, $t_{x1}$ es la proyección demográfica del total de mujeres y $t_{x2}$ es la proyección demográfica del total de hombres. En este caso, las covariables de la calibración son variables dicotómicas. Nótese que las ecuaciones de calibración están al nivel de la muestra $s$ que induce una base de datos de personas. Como el muestreo ha sido en varias etapas, una posibilidad que surge al momento de calibrar los factores de expansión es utilizar la muestra de hogares $s_I$ que induce una base de datos con información de los hogares y calibrar usando un enfoque de covariables continuas. De esta forma las ecuaciones de calibración estarían dadas por la siguiente expresión:
+
+$$
+\left ( \sum_{k \in sI} w_{i} x^h_{1i}, \sum_{k \in sI} w_{i} x^h_{2i}\right )=(t_{x1}, t_{x2})
+$$
+
+En donde la suma ahora se realiza sobre los hogares en la muestra de hogares $s_I$. Nótese que $x^h_{1i}=(\sum_{k \in sI} w_{i} x^h_{1i})$ se refiere al número de hombres en el hogar $i$; $x^h_{2i}=(\sum_{k \in sI} w_{i} x^h_{2i})$ es el número de mujeres en el hogar $i$; y los totales de calibración $t_{x1}$ y $t_{x2}$ siguen siendo el número de hombres y mujeres en la población, respectivamente. 
+
+Al respecto, nótese que calibrar con el primer escenario reproduce los totales auxiliares sobre la base de personas, mientras que calibrar sobre el segundo escenario reproduce los totales sobre la base de hogares. Sin embargo, teniendo en cuenta los principios del muestreo en varias etapas y notando que en un hogar, la probabilidad de inclusión de las personas es de uno (inclusión forzosa), entonces generar factores de expansión para las personas en el segundo escenario es muy sencillo puesto que:
+
+$$
+w_k=w_i/Pr(k \in U_i | i \in sI) = w_i / 1 = w_i
+$$
+
+Es decir que, bajo este escenario de calibración, todas las personas dentro del hogar comparten los mismos pesos de muestreo y además estos pesos son iguales al peso del hogar. 
+
+#### Lemaitre & Dufour {-}
+
+El segundo enfoque, condensado en @Lemaitre_Dufour_1987 afirma que se deben crear nuevas variables de calibración a nivel de persona, definidas como el promedio de las variables originales en el hogar. Por ende, se definen las siguientes cantidades:
 
 $$
 z_{ij}=\sum_{i\in h} x_{ij}\ \ y\ \ \ {\bar{z}}_{ij}=\frac{z_{ij}}{N_j}
@@ -287,7 +344,7 @@ En la literatura estadística se ha estudiado este enfoque integrado. Es así co
 
 Además, si se opta por el primer enfoque, en el cual el tamaño de la base de datos sería igual al número de personas entrevistadas, se tendría el suficiente margen para actualizar las restricciones de calibración con el fin de ejercer un mayor control sobre los tamaños de los subgrupos de interés. 
 
-### Calibración conjunta a nivel de personas y hogares
+#### Estevao & Sarndal {-}
 
 En el caso particular en el que haya información auxiliar disponible a nivel de personas y hogares (al mismo tiempo), es posible calibrar conjuntamente ambas variables en un sólo procedimiento de calibración. @Estevao_Sarndal_2006[sec. 5] recrea la calibración conjunta para hogares y personas, en donde se genera una variable indicadora para el jefe de hogar y sobre esta se crea una nueva restricción de calibración que utilice los totales auxiliares de los hogares. Con esta nueva calibración, se generan unos nuevos pesos de calibración en la base de datos de personas. Al filtrar esta base de datos por el jefe de hogar, se crea inmediatamente una base de hogares (puesto que solo hay un único jefe de hogar) que puede ser utilizada para combinarla con la información de los hogares. De esta forma, los pesos que venían de la base de datos de personas serán los que se utilicen en la base de datos de hogares obteniendo estimaciones consistentes. 
 

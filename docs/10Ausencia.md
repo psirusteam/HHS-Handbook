@@ -1,0 +1,283 @@
+# Enfrentando la ausencia de respuesta
+
+El problema de la ausencia de respuesta es una faceta normal, aunque no deseable, en el desarrollo de una encuesta. Existe un consenso completo de que la ausencia de respuesta puede perjudicar severamente la calidad de las estadísticas calculadas y publicadas en un estudio por muestreo. @Sarndal_Lundstrom_2006 afirman que la ausencia de respuesta ha sido un tópico de interés en las agencias de estadística que producen cifras oficiales en los últimos años. La atención de la literatura hacia este tópico y sus efectos se ha incrementado considerablemente. En parte, esto se debe a un deseo decreciente del público en general para cooperar y reportar los datos solicitados por los Institutos Nacionales de Estadística. 
+
+@Lohr_2019 afirma que la mayoría de encuestas tienen cierta ausencia de respuesta residual, aún después de un diseño cuidadoso y un seguimiento de la ausencia de respuesta y establece que existen varios tipos de mecanismos de ausencia de respuesta.
+
+1. Se define la ausencia de respuesta ignorable cuando la probabilidad de que un individuo responda no depende de la característica de interés. Nótese que el adjetivo ignorable hace referencia a que un modelo puede explicar el mecanismo de ausencia de respuesta y que ésta se puede ignorar después de que el modelo la toma en cuenta.
+1. Por otra parte, la ausencia de respuesta se dice no ignorable cuando la probabilidad de que un individuo responda depende de la característica de interés. Por ejemplo, si en una encuesta de fuerza laboral, se desea estimar el número de personas empleadas o desempleadas, la ausencia de respuesta es no ignorable cuando depende de la clasificación laboral del individuo.
+
+Además, @Lumley_2010[, capítulo 9] hace un análisis detallado con la ausencia de respuesta individual, en donde existen datos parciales para un respondiente, considerando un enfoque que está basado en el diseño de muestreo al ajustar los pesos muestrales. @Fuller[, capítulo 5] cita algunas técnicas de imputación para el tratamiento de la ausencia de respuesta y conjuga modelos probabilísticos junto con los pesos del diseño de muestreo para mitigar los efectos de este problema. @Sar1 considera un enfoque asistido por modelos, en donde toma conjuntos balanceados para lograr mayor representatividad de las estimaciones. De la misma forma, @Sar2 propone un conjunto de indicadores para juzgar la efectividad de la información auxiliar utilizada para controlar el sesgo generado por la ausencia de respuesta. 
+
+## Clasificación de la ausencia de respuesta
+
+Por otra parte, @Lund aclaran que existe una gran cantidad de literatura acerca de la ausencia de respuesta y muchos artículos recientes. Esta literatura examina dos aspectos diferentes pero complementarios en el ejercicio de una encuesta: la prevención de la ausencia de respuesta (antes de que ocurra) y las técnicas de estimación necesarias para tener en cuenta la ausencia de respuesta de manera apropiada en el proceso de inferencia. Esta segunda actividad se conoce con el nombre de ajuste para la ausencia de respuesta. @LR2002 establecen tres tipos de mecanismos de ausencia de respuesta.
+
+1. Ausencia de respuesta completamente aleatoria (MCAR - *missing completely at random*): cuando la probabilidad de que un individuo responda no depende de la característica de interés, ni de alguna otra covariable auxiliar. Por ejemplo, si la ausencia de respuesta en una encuesta laboral, no depende del estado actual de empleo del respondiente, ni de alguna característica auxiliar. De esta forma, la ausencia de respuesta está dispersa de manera uniforme sobre toda la población. 
+1. Ausencia de respuesta aleatoria (MAR - *missing at random*): cuando la probabilidad de que un individuo responda depende de algunas covariables auxiliares, pero no depende de la característica de interés.  Por ejemplo, en una encuesta de fuerza laboral, la ausencia de respuesta puede depender del nivel socioeconómico del individuo, pero no depende de su clasificación laboral.
+1. Ausencia de respuesta no aleatoria (NMAR - *not missing at random*): cuando la ausencia de respuesta depende de la característica de interés. Por ejemplo, en la encuesta de fuerza laboral, es posible que los no respondientes dependan de su clasificación laboral. En este caso puede suceder que los desempleados sean los que sistemáticamente no respondan la encuesta. 
+
+### Ausencia de respuesta de registro y de unidad
+
+En general se puede afirmar que existen dos tipos de ausencia de respuesta: la primera, debido a la falta de respuesta de una unidad de observación (ausencia de respuesta de unidad), y la segunda debido a la falta de respuesta de una unidad en algunas variables de interés (ausencia de respuesta por registro). La siguiente figura representa el impacto de estos escenarios en la base de datos inicial.
+
+![*Esquema de ausencia de respuesta en una muestra (las celdas en negro representan los valores faltantes en la base de datos).*](Pics/nr1.png)
+
+El primer escenario se evidencia porque en la base de datos inicial falta toda la unidad de observación y sus correspondientes registros. Suele suceder porque el encuestador no pudo establecer contacto con el hogar, o porque la persona seleccionada está enferma o simplemente porque se rehúsa a participar. En esta etapa es recomendable que el encuestador pueda determinar algunas características demográficas del hogar para poder realizar los ajustes pertinentes en el proceso de análisis.
+
+El segundo escenario puede deberse a muchas más causas y se evidencia en la base de datos inicial porque faltan algunos registros de la unidad de observación, aunque otros si están efectivamente respondidos. Suele suceder porque el respondiente se sintió agotado en algún momento del cuestionario, o porque alguna pregunta en particular no fue respondida por considerarse sensible.
+
+### Efectos y consecuencias de la ausencia de respuesta
+
+En general, es posible hacer frente a este fenómeno indeseado desde varias perspectiva. Los siguientes son algunos puntos de vista para enfrentar la ausencia de respuesta:
+
+1. *Ignorancia*: lamentablemente, no es raro que se pretenda ignorar la ausencia de respuesta en la encuesta y realizar inferencias con los datos recopilados de las unidades respondientes, sin realizar ningún tipo de acercamiento estadístico para ajustar la inferencia.
+2. *Prevención*: diseñar la encuesta de modo que la ausencia de respuesta sea pequeña. Éste es el mejor método de enfrentarla. La capacitación al equipo encuestador, la redacción de las preguntas, la longitud del cuestionario, las revisitas y el agendamiento de las entrevistas pueden palear las altas tasas de asusencia de respuesta. 
+3. *Reacción*: utilizar herramientas para analizar la encuesta de modo que se corrijan los sesgos causados por la ausencia de respuesta. En este caso es posible ajustar los ponderadores de las unidades, o establecer procedimientos de imputación en los registros.
+
+Ignorar la ausencia de respuesta puede tener consecuencias graves en la entendimiento del constructo de interés en la encuesta. Más aún, puede llevar a tomar decisiones erradas de política pública. Por ejemplo, si se omite el efecto de la ausencia de respuesta en una encuesta de ingresos y gastos, se podría subestimar el ingreso medio y el ingreso total en un país; si se omite el efecto de la ausencia de respuesta en una encuesta de desempleo, se podría subestimar el número total de desempleados; además, si se omite el efecto de la ausencia de respuesta en una encuesta de victimización, se podría subestimar el número total de víctimas.
+
+La ausencia de repuesta conlleva grandes efectos de sesgo en los resultados de calidad de las estimaciones. Debe contemplarse muy bien la mejor estrategia para hacer frente a sus consecuencias. Por ejemplo, si se aumentara el tamaño de muestra para enfrentar la ausencia de respuesta, es posible que nos encontremos con una mayor cantidad de personas de la misma clase de respondientes (homogeneidad). En este caso, el sesgo puede aumentar porque se malgastaron recursos que hubiesen servido para remediar la ausencia de respuesta con otras medidas. 
+
+
+### Posibles soluciones
+
+Al lidiar con la ausencia de respuesta, podemos distinguir algunas prácticas que guían a diferentes tratamientos metodológicos diferentes. En general, se pueden distinguir las siguientes prácticas:
+
+- **Imputación total**: se trata de imputar todos los valores faltantes para los individuos con al menos un valor perdido. En otras palabras, la imputación se considera como la única forma de tratar la ausencia de respuesta.
+- **Ponderación total**: se trata de ponderar cada una de las variables de interés, así sea de manera diferenciada. No se utiliza la imputación y existirán tantos conjuntos de factores de expansión como variables con valores perdidos.
+- **Eliminación total**: se trata de eliminar todos los registros con algún valor perdido y hacer el análisis con el conjunto restante de valores respondidos.
+- **Enfoque combinado**: se trata de imputar únicamente en los elementos que tienen al menos un registro (no todos) perdido y modificar los factores de expansión en aquellos casos en donde hay omisión de todos los registros del cuestionario.
+
+Siguiendo la notación de @Sarndal_Lundstrom_2006, consideramos una muestra de unidades $s$, de la cual $r$ denota el conjunto de respondientes que han contestado a una o más de las $I$ variables de interés. Por tanto, una unidad que no responde a ninguna variable pertenece al conjunto $s-r$. El conjunto de unidades que han respondido a una variable del estudio en particular se denota por $r_i$. Nótese que
+
+$$
+r_i\subseteq r \subseteq s
+$$
+
+Finalmente, si se supone que $y_k$ es faltante y se considera para la imputación, entonces $\hat{y}_k$ denotará su valor imputado
+
+#### Imputación total {-}
+
+En este enfoque se imputarían todos los valores $y_k$ que están perdidos, sin importar si la pérdida es debida a la ausencia del registro o del individuo. En este caso, tendríamos un conjunto completo de datos con los valores $\{y_{\circ \  k}: k\in s\}$, donde
+
+$$
+y_{\circ \  k} = 
+\begin{cases}
+y_k, \ \text{for $k \in r_i$} \\
+\hat{y}_k, \ \text{for $k \in s - r_i$}
+\end{cases}
+$$
+
+y $\hat{y}_k$ es el valor imputado. Por ejemplo, el estimador del total utilizando este enfoque estaría dado por la siguiente expresión.
+
+$$
+\hat{t}_{y,\pi} = \sum_s d_{k}y_{\circ \  k}
+= \sum_{r_i}d_{k}y_k + \sum_{s - r_i}d_{k}\hat{y}_k
+$$
+
+Nótese que en el siguiente gráfico, cada valor faltante (que originalmente estaba en color negro en la base de datos) ahora es estimado (en color gris) y participaría en el proceso inferencial con una base de datos completa, pero imputada.
+
+![*Enfoque de inputación total*](Pics/nr3.png)
+
+#### Ponderación total {-}
+
+Al usar el enfoque de ponderación total es posible usar pesos de calibración específicos $w_k = d_k F_{ik}$ que compensarían la ausencia de respuesta de unidad y de registro. De esta forma, el estimador del total estaría dado por la siguiente expresión:
+
+$$
+\hat{y}_{cal}=\sum_{r_i}w_ky_k = 
+\sum_{r_i}d_k F_{ik} y_k
+$$
+
+Si todos los $r_i$ son diferentes, entonces cada variable de estudio requerirá un conjunto de ponderadores diferentes. Basado en la siguiente gráfica, nótese que este camino elimina, de manera diferencial, todos los registros faltantes de la base de datos original (en color negro). Al final este enfoque induce un número no uniforme de casos por variable.
+
+![*Esquema de ausencia de respuesta en una muestra*](Pics/nr4.png)
+
+#### Eliminación total {-}
+
+En este enfoque se eliminarán de la base de datos todas las unidades que contengan al menos un registro perdido. En este caso, tendríamos una pérdida considerable del tamaño de muestra, aunque induciría un solo conjunto de ponderadores. Se recomienda fuertemente abstenerse de tomar este camino. La siguiente gráfica representa este enfoque en donde es evidente que el decrecimiento en el tamaño de muestra podría tener repercuciones nefastas en la inferencia de la encuesta. 
+![*Enfoque de eliminación total*](Pics/nr2.png)
+
+#### Enfoque combinado {-}
+
+Por el contrario, es recomendable escoger un camino parsimonioso que combine estas estrategias de forma diferencial a lo largo de la encuesta. El enfoque combinado usa la imputación para afrontar la ausencia de respuesta por registro para las variables específicas que lo necesiten y luego utiliza un ajuste a los factores de ponderación para afrontar la ausencia de respuesta por unidad. Usualmente, los pesos finales se producen utilizando un enfoque de calibración que hace uso de información auxiliar externa. 
+
+Cuando se presenta ausencia de respuesta por registro y por unidad, el enfoque combinado imputa primero para luego obtener una matriz rectangular completa. Luego de lo anterior se procede a realizar un ajuste a los ponderadores. El conjunto de datos completo para la variable de interés $y$ está dado por $\{y_{\circ \  k}: k\in r\}$
+
+$$
+y_{\circ \  k} = 
+\begin{cases}
+y_k, \ \text{for $k \in r_i$} \\
+\hat{y}_k, \ \text{for $k \in r - r_i$}
+\end{cases}
+$$
+
+En donde $\hat{y}_k$ es el valor imputado. Note que en el enfoque de imputación total, también se imputa para $k \in s-r$. La siguiente gráfica representa este enfoque parsimonioso en donde los valores imputados (en gris) entran a ser parte de la inferencia y las unidades que nunca respondieron (en negro) y que tienen todos sus registros faltantes son retiradas de la base de datos final.
+
+![*Enfoque combinado*](Pics/nr5.png)
+
+
+## Indicadores de representatividad
+
+Como se mencionó anteriormente, la mayoría de las encuestas adolecen de falta de respuesta y este fenómeno puede afectar seriamente la calidad de
+los resultados de una encuesta. De hecho, las estimaciones de las características de la población estarán sesgadas si, debido a la falta de respuesta, algunos grupos de la población quedan sobre-representados o sub-representados; el problema se agrava cuando estos grupos
+se comportan de manera diferente con respecto a las variables de la
+encuesta. En referencia a la ausencia de respuesta de unidad, en general los INE de la región a menudo usan la tasa de respuesta de la encuesta como un indicador de la calidad de la encuesta. 
+
+Dado que una tasa de respuesta baja no implica necesariamente que la precisión de las estimaciones de la encuesta sea deficiente, centrarse solo en la tasa de respuesta como indicador de la calidad de la encuesta puede ser engañoso. Por ejemplo, @Bethlehem_Cobben_Schouten_2009 ilustran esta situación con un ejemplo de la encuesta holandesa POLS en 1998 (Encuesta Integrada de Condiciones de Vida de los Hogares). Después de un mes de trabajo de campo, la tasa de respuesta fue del 47,2%, mientras que después del período completo de dos meses, la tasa había aumentado al 59,7%. El modo de recolección de datos en el primer mes fue CAPI (entrevista
+personal asistida por computadora). Los que no respondieron fueron
+contactados en el segundo mes con CATI (Entrevista Telefónica Asistida
+por Computadora) si tenían un teléfono fijo en la lista. El segundo mes de trabajo de campo aumentó la respuesta en un 12,5%. Sin embargo, esto no resultó en mejores estimaciones puesto que el sesgo de los estimadores aumentó a partir del segundo mes, dado que las personas que habían reportado un número telefónico diferían de las que no reportaron este contacto.
+
+Adicional a la tasa de no respuesta, se necesitan indicadores
+de calidad de la encuesta que proporcionen más información sobre el
+posible riesgo de estimadores sesgados. Por ejemplo, @Shlomo_Skinner_Schouten_2012 estudian el uso de los *indicadores R* o indicadores de *representatividad*, los cuales miden qué tan representativa es la respuesta de la encuesta, y cómo la composición
+de la respuesta en la muestra diferiría de la composición de la población finita. Estos indicadores han probado ser una guía importante para determinar en qué medida el sesgo causado por la ausencia de respuesta afecta la encuesta. De hecho, en Europa el proyecto RISQ (*Representativity Indicators for Survey Quality*) está basado en este enfoque y pretende desarrollar y probar indicadores R en varias encuestas de interés. Los socios que participan en este proyecto son Las oficinas nacionales de estadística de Holanda, Noruega y Eslovenia, en conjunto con las universidad de Southampton (Reino Unido) y la Universidad de Lovaina (Bélgica). Este proyecto es financiado por la Unión Europea y su sitio web es [www.r-indicator.eu.](www.r-indicator.eu.).
+
+
+### El concepto de representatividad
+
+El concepto de representatividad se utiliza a menudo en la investigación
+de encuestas, pero por lo general no está claro qué significa. En particular Kruskal y Mosteller presentan una amplia descripción
+de lo que se supone que significa representativo [@KruskalMosteller1, @KruskalMosteller2, @KruskalMosteller3, @KruskalMosteller4]. El concepto de muestra representativa no está del todo estandarizado, @Bethlehem_Cobben_Schouten_2009 menciona que algunos de estos conceptos son muy vagos e imprecisos; por ejemplo:
+
+- Reconocimiento general de los datos.
+- Ausencia de fuerzas selectivas en la muestra.
+- Una muestra que sea una miniatura de la población.
+- Una muestra que contenga casos típicos o ideales.
+- Cobertura suficiente de la población,
+- Que permite una buena estimación,
+- Suficientemente bueno para un propósito particular.
+
+En términos de notación, supongamos que se selecciona una muestra probabilística $s$ de tamaño $n$ sin reemplazo de una población finita $U$ de tamaño $N$. La muestra puede verse como un vector de $N$ indicadores $s=(I_{1},I_{2},\ldots,I_{N})$, donde el indicador $I_{k}=1$ si se selecciona el elemento $k$ en la muestra, y $I_{k}=0$ en caso contrario ($k=1,2,\ldots,N$). El fenómeno de la ausencia de respuesta se modela por medio de las probabilidades de respuesta. Para esto, se supone que cada elemento $k$ en la población tiene una cierta probabilidad desconocida $\phi_{k}$ de responder cuando se selecciona en la muestra. La respuesta a la encuesta se puede representar mediante el vector de indicadores $D=(D_{1},D_{2},\ldots,D_{N})$, donde $D_{k}=1$ si el elemento $k$ fue seleccionado en la muestra $(I_{k}=1)$ y respondió. De lo contrario, $D_{k}=0$. Por ende, se deduce que
+
+$$
+\phi_{k}=P\left(D_{k}=1\mid I_{k}=1\right)
+$$
+
+Para poder definir un indicador de representatividad, el concepto
+de representatividad que mejor se acomoda se define como \emph{la ausencia de fuerzas selectivas}. Está claro que no existen fuerzas selectivas si todas las probabilidades de respuesta son uniformes. Esta observación forma la base de la primera definición de representatividad.
+
+#### Representatividad fuerte {-}
+
+La respuesta a una encuesta se denomina representativa fuerte con
+respecto a la muestra, si las probabilidades de respuesta de todos
+los elementos de la población son iguales y si la respuesta de un
+elemento es independiente de la respuesta de todos los demás elementos.
+En otras palabras:
+
+$$
+\phi_{k} = P\left(D_{k}=1\mid I_{k}=1\right) =  \phi  \ \ \ \ \ \ \ \ \ \ k=1,2,\ldots,N
+$$
+
+Se debe tener en cuenta que la representatividad fuerte se garantiza cuando el mecanismo de datos faltantes es MCAR para cada variable objetivo en el estudio. En este caso, la falta de respuesta no provoca que los estimadores estén sesgados. Esta es una definición atractiva, pero no es muy útil ya que en la práctica no es posible comparar las probabilidades de respuesta individual.
+
+#### Representatividad débil {-}
+
+Suponga que hay una variable auxiliar categórica $X$ que tiene $L$
+categorías y divide la población en $L$ estratos (subpoblaciones).
+El número de elementos en el estrato $h$ se denota por $N_{h}$,
+para $h=1,2,\ldots,L$. Se asume que esta variable ha sido medida
+en la encuesta y que su valor está disponible para cada encuestado
+y no encuestado. La probabilidad de respuesta del elemento $k$ en
+el estrato $h$ está definida por $\phi_{hk}$.
+
+La respuesta a una encuesta se denomina débilmente representativa
+con respecto a la muestra para la variable auxiliar $X$ si la probabilidad
+de respuesta promedio es la misma en cada estrato, es decir,
+
+$$
+\bar{\phi}_{h} =  
+\frac{1}{N_{h}}\sum_{k=1}^{N_{h}}\phi_{hk} =
+\phi \ \ \ \ \ \ \ \ \ \  h=1,2,\ldots,L
+$$
+
+La representatividad débil significa que no es posible distinguir
+a los encuestados de los no encuestados simplemente usando información
+con respecto a $X$. Si la respuesta es débilmente representativa con respecto a muchas variables auxiliares $X$, existirán relaciones fuertes entre las variables objetivo y las variables auxiliares. Nótese que es posible estimar las medias de las probabilidades de respuesta
+en los estratos y, por lo tanto, se puede comprobar en la práctica
+el supuesto de representatividad débil.
+
+
+### Indicadores $R$
+
+Los indicadores $R$ miden hasta qué punto la composición de
+la respuesta a una encuesta se desvía de la muestra original. Si todas las probabilidades de respuesta son iguales, la respuesta
+es fuertemente representativa y no habrá diferencias sistemáticas
+entre la composición de la respuesta y la muestra. Por el contrario, si las probabilidades de respuesta no son iguales, es importante
+establecer en qué medida se ve afectada la composición de la respuesta. Esto se logra mediante la definición de una función de distancia
+que mide en qué medida las probabilidades de respuesta individuales
+difieren de la probabilidad de respuesta media.
+
+Supongamos que se conocen las probabilidades de respuesta individual
+$\phi_{1},\phi_{2},\ldots,\phi_{N}$ de todos los elementos de la población.
+Entonces la desviación estándar es
+
+$$
+S\left(\phi\right)  =  \sqrt{\frac{1}{N-1}\sum_{k=1}^{N}\left(\phi_{k}-\bar{\phi}\right)^{2}}
+$$
+
+Nótese que $S\left(\phi\right)=0$ si todas las probabilidades de respuesta
+son iguales y el valor de $S\left(\phi\right)$ será mayor a medida
+que haya más variación en los valores de las probabilidades de respuesta. Además, el valor máximo de $S\left(\phi\right)$ es igual a 0.5. Por ende, el indicador $R$ se define como: 
+
+$$
+R\left(\phi\right)=1-2\,S\left(\phi\right)
+$$
+
+Este indicador asume valores en el intervalo $\left[0,1\right]$. De esta manera, un valor de uno implica una fuerte representatividad. Cuanto menor es su valor, más se desvía la composición de respuesta
+de la composición de la muestra. En general, los valores de las probabilidades de respuesta individuales se desconocen en la práctica. Este problema se resuelve estimando las probabilidades de respuesta. Esto se puede lograr si se dispone de información auxiliar adecuada; es decir, de variables que se han medido tanto para los encuestados como para los no encuestados. Para estimar estas probabilidades es posible utilizar varias técnicas, por ejemplo, modelos logísticos o probit, árboles de clasificación CHAID, entre otras. 
+
+Al suponer que $\hat{\phi}_{1},\hat{\phi}_{2},\ldots,\hat{\phi}_{n}$ son
+las probabilidades de respuesta estimadas para las unidades en la muestra.
+Entonces, la probabilidad de respuesta media se puede estimar mediante
+
+$$
+\hat{\bar{\phi}}  =  \frac{1}{N}\sum_{i=1}^{n}\frac{\hat{\phi}_{i}}{\pi_{i}}
+$$
+
+y
+
+$$
+\hat{R}\left(\phi\right)  =  1-2\sqrt{\frac{1}{N-1}\sum_{k=1}^{n}\frac{\left(\hat{\phi}_{k}-\hat{\bar{\phi}}\right)^{2}}{\pi_{k}}}
+$$
+
+Nótese que el indicador $R$ mide la desviación de la representatividad débil y no de la representatividad fuerte. Por ende, este enfoque no es capaz de detectar y cuantificar las diferencias
+entre las probabilidades de respuesta individual dentro de las clases obtenidas al cruzar las variables auxiliares. Suponiendo que las clases están definidas por una variable auxiliar $X$ que tiene $L$ categorías. Sea $N_{h}$ el tamaño de la clase $h$ y sea $\bar{\phi}_{h}$ la media poblacional de las probabilidades de respuesta en el estrato $h$. Si se utiliza un modelo estándar como la regresión logística, el indicador $R$ se calcula como:
+
+$$
+R_{x}\left(\phi\right)  =  1-2\sqrt{\frac{1}{n-1}\sum_{h=1}^{H}N_{h}\left(\bar{\phi}_{h}-\bar{\phi}\right)^{2}}
+$$
+
+En este caso, $R_{x}\left(\phi\right)$ mide la variación de las probabilidades de respuesta entre clases $X$. Si se supone que la variación dentro de la clase es cero en todas las clases, entonces $R_{x}\left(\phi\right) = R\left(\phi\right)$. 
+
+### El indicador $R$ en la práctica
+
+@Bethlehem_Cobben_Schouten_2009 mencionan que de julio a diciembre de 2005, Statistics Netherlands realizó un seguimiento a gran escala entre los no encuestados en la Encuesta de población activa holandesa (EPA). En el estudio, se abordó una vez más a dos muestras de personas
+que no respondieron en la EPA utilizando: el enfoque de devolución
+de llamada con el cuestionario completo de la EPA o el enfoque de preguntas básicas con un cuestionario muy corto que contiene solo algunas preguntas
+básicas. Se usó CAPI en el enfoque de devolución de llamada, y el enfoque de preguntas básicas utilizó un diseño de modo mixto que involucró cuestionarios *online* y recolección presencial con papel y CATI. Los indicadores R se estimaron utilizando modelos de regresión logística que incluían una gran cantidad de variables explicativas que medían características demográficas, geográficas y socioeconómicas
+de los hogares. Los resultados de este estudio se dan a continuación:
+
+1. Se reportó que el valor del indicador $R$ para la respuesta inicial de la EPA es igual a 0.8, que es menor que el valor ideal de 1,00. Entonces, esta respuesta no es fuertemente representativa. La aplicación del enfoque de devolución de llamada aumentó la
+tasa de respuesta del 62.2% al 76.9%. Pero, el valor del indicador $R$ también aumentó, de 0.8 a 0.85. Como los intervalos de confianza no se superponen, hay indicios de que la respuesta adicional mejora la composición del conjunto de datos.
+1. La aplicación del enfoque de preguntas básicas da como resultado
+una conclusión diferente. Aunque la tasa de respuesta aumenta del 62.2% al 75.6%, el valor del indicador $R$ disminuye de 0.80 a 0.78. Los intervalos para la EPA inicial y la EPA, incluido el enfoque de preguntas básicas, se superponen. Por lo tanto, aparentemente, el enfoque de preguntas básicas no mejora la composición del conjunto de datos. 
+
+Este último enfoque ofrece *más de lo mismo* y, por lo tanto, agudiza el contraste entre respondientes y no respondientes. Dado que las probabilidades de respuesta estimadas se utilizan para calcular
+el indicador $R$ y esta estimación se basa en un modelo de
+regresión logística que utiliza un conjunto de variables auxiliares como variables explicativas. 
+
+La dependencia del indicador $R$ del conjunto de variables auxiliares utilizadas tiene implicaciones para comparar diferentes conjuntos de datos (por ejemplo, en el tiempo o en dominios). Un enfoque apropiado podría ser fijar el conjunto de variables auxiliares de antemano y mantenerlas iguales para todos los conjuntos de datos. Para ello, debe elegirse el máximo posible de variables. Por otro lado, debido al sobreajuste, el error estándar (estimado) puede verse
+afectado, pero las probabilidades de respuesta estimadas no serán sesgadas.
+
+Otro enfoque que se recomienda, podría ser intentar encontrar el mejor modelo para cada conjunto de datos utilizando técnicas de selección de modelos. Esto hace que los modelos dependan del tamaño de la muestra: cuanto
+mayor sea la muestra, más variables del modelo tendrán una contribución significativa. Las muestras pequeñas simplemente no permiten una estimación adecuada de las probabilidades de respuesta y conducirán a una visión más optimista de la representatividad.
+
+
+Con esta metodología es posible determinar si la composición de la muestra de respondientes efectivos difiere o no de la de la muestra inicial. Los resultados de este proceso de seguimiento pueden ayudar a sustentar
+la decisión de iniciar esfuerzos adicionales para obtener datos para grupos específicos de la población objetivo; Este enfoque también puede resultar útil para evaluar si volver a abordar una muestra de personas que no respondieron sería una buena estrategia para acotar el sesgo, o si con un enfoque de preguntas básicas sería suficiente.
+
+El uso de un indicador $R$ durante la fase de recopilación
+de datos puede revelar que la composición de los datos recolectados se está desviando cada vez más de la representatividad. Esto podría llevar a la decisión de enfocar el resto del proceso de recopilación
+de datos en grupos que están subrepresentados. Estos cambios mitad de la encuesta se conocen en la literatura especializada como *diseños receptivos*. Otra forma de utilizar el indicador $R$ para controlar el proceso de la encuesta es analizar la representatividad de una versión anterior de la encuesta. Los resultados de dicho análisis pueden proporcionar información para implementar una estrategia mejorada de recopilación de datos para una nueva versión de la encuesta. 

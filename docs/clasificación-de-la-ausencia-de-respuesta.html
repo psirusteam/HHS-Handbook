@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="es" xml:lang="es">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>11.1 Clasificación de la ausencia de respuesta | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
+  <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="11.1 Clasificación de la ausencia de respuesta | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
+  <meta name="github-repo" content="psirusteam/HHS-Handbook" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="11.1 Clasificación de la ausencia de respuesta | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
+  
+  <meta name="twitter:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
+  
+
+<meta name="author" content="Andrés Gutiérrez" />
+
+
+<meta name="date" content="2021-08-05" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="enfrentando-la-ausencia-de-respuesta.html"/>
+<link rel="next" href="indicadores-de-representatividad.html"/>
+<script src="libs/header-attrs-2.8/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Diseño y análisis de encuestas de hogares</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefacio</a></li>
+<li class="chapter" data-level="" data-path="resumen.html"><a href="resumen.html"><i class="fa fa-check"></i>Resumen</a></li>
+<li class="chapter" data-level="1" data-path="introducción.html"><a href="introducción.html"><i class="fa fa-check"></i><b>1</b> Introducción</a>
+<ul>
+<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html#objetivos-de-desarrollo-sostenible"><i class="fa fa-check"></i>Objetivos de Desarrollo Sostenible</a></li>
+<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html#mercado-de-trabajo"><i class="fa fa-check"></i>Mercado de Trabajo</a></li>
+<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html#ingresos-y-gastos"><i class="fa fa-check"></i>Ingresos y gastos</a></li>
+<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html#esquema-del-documento"><i class="fa fa-check"></i>Esquema del documento</a></li>
+</ul></li>
+<li class="part"><span><b>I Diseño estadístico de las encuestas de hogares</b></span></li>
+<li class="chapter" data-level="2" data-path="el-paradigma-del-error-total.html"><a href="el-paradigma-del-error-total.html"><i class="fa fa-check"></i><b>2</b> El paradigma del error total</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="qué-es-una-encuesta.html"><a href="qué-es-una-encuesta.html"><i class="fa fa-check"></i><b>2.1</b> ¿Qué es una encuesta?</a></li>
+<li class="chapter" data-level="2.2" data-path="evolución-de-las-encuestas-estandarizadas.html"><a href="evolución-de-las-encuestas-estandarizadas.html"><i class="fa fa-check"></i><b>2.2</b> Evolución de las encuestas estandarizadas</a></li>
+<li class="chapter" data-level="2.3" data-path="el-ciclo-de-vida-de-una-encuesta.html"><a href="el-ciclo-de-vida-de-una-encuesta.html"><i class="fa fa-check"></i><b>2.3</b> El ciclo de vida de una encuesta</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="el-ciclo-de-vida-de-una-encuesta.html"><a href="el-ciclo-de-vida-de-una-encuesta.html#inferencia-individual"><i class="fa fa-check"></i><b>2.3.1</b> Inferencia individual</a></li>
+<li class="chapter" data-level="2.3.2" data-path="el-ciclo-de-vida-de-una-encuesta.html"><a href="el-ciclo-de-vida-de-una-encuesta.html#inferencia-grupal"><i class="fa fa-check"></i><b>2.3.2</b> Inferencia grupal</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="el-proceso-de-respuesta.html"><a href="el-proceso-de-respuesta.html"><i class="fa fa-check"></i><b>2.4</b> El proceso de respuesta</a></li>
+<li class="chapter" data-level="2.5" data-path="otras-consideraciones.html"><a href="otras-consideraciones.html"><i class="fa fa-check"></i><b>2.5</b> Otras consideraciones</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="elementos-básicos.html"><a href="elementos-básicos.html"><i class="fa fa-check"></i><b>3</b> Elementos básicos</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="universo-muestra-y-unidades.html"><a href="universo-muestra-y-unidades.html"><i class="fa fa-check"></i><b>3.1</b> Universo, muestra y unidades</a></li>
+<li class="chapter" data-level="3.2" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html"><i class="fa fa-check"></i><b>3.2</b> Periodicidad en el tiempo</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-transversales"><i class="fa fa-check"></i><b>3.2.1</b> Encuestas transversales</a></li>
+<li class="chapter" data-level="3.2.2" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-repetidas"><i class="fa fa-check"></i><b>3.2.2</b> Encuestas repetidas</a></li>
+<li class="chapter" data-level="3.2.3" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-panel"><i class="fa fa-check"></i><b>3.2.3</b> Encuestas panel</a></li>
+<li class="chapter" data-level="3.2.4" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-de-panel-dividido"><i class="fa fa-check"></i><b>3.2.4</b> Encuestas de panel dividido</a></li>
+<li class="chapter" data-level="3.2.5" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-de-panel-rotativo"><i class="fa fa-check"></i><b>3.2.5</b> Encuestas de panel rotativo</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="rotación-de-paneles.html"><a href="rotación-de-paneles.html"><i class="fa fa-check"></i><b>3.3</b> Rotación de paneles</a></li>
+<li class="chapter" data-level="3.4" data-path="parámetros-e-indicadores-de-interés.html"><a href="parámetros-e-indicadores-de-interés.html"><i class="fa fa-check"></i><b>3.4</b> Parámetros e indicadores de interés</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="parámetros-e-indicadores-de-interés.html"><a href="parámetros-e-indicadores-de-interés.html#ejemplos-de-indicadores-de-interés-y-su-relación-con-los-tipos-de-encuestas"><i class="fa fa-check"></i><b>3.4.1</b> Ejemplos de indicadores de interés y su relación con los tipos de encuestas</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="definición-del-marco-muestral.html"><a href="definición-del-marco-muestral.html"><i class="fa fa-check"></i><b>4</b> Definición del marco muestral</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="el-marco-de-muestreo.html"><a href="el-marco-de-muestreo.html"><i class="fa fa-check"></i><b>4.1</b> El marco de muestreo</a></li>
+<li class="chapter" data-level="4.2" data-path="los-censos-y-su-incidencia-en-los-marcos-de-muestreo.html"><a href="los-censos-y-su-incidencia-en-los-marcos-de-muestreo.html"><i class="fa fa-check"></i><b>4.2</b> Los censos y su incidencia en los marcos de muestreo</a></li>
+<li class="chapter" data-level="4.3" data-path="construcción-de-las-upm.html"><a href="construcción-de-las-upm.html"><i class="fa fa-check"></i><b>4.3</b> Construcción de las UPM</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="construcción-de-las-upm.html"><a href="construcción-de-las-upm.html#actualización-continua-del-marco"><i class="fa fa-check"></i><b>4.3.1</b> Actualización continua del marco</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="metodologías-de-estratificación.html"><a href="metodologías-de-estratificación.html"><i class="fa fa-check"></i><b>5</b> Metodologías de estratificación</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="dimensiones-estructurales-en-el-marco-de-muestreo.html"><a href="dimensiones-estructurales-en-el-marco-de-muestreo.html"><i class="fa fa-check"></i><b>5.1</b> Dimensiones estructurales en el marco de muestreo</a></li>
+<li class="chapter" data-level="5.2" data-path="información-a-nivel-de-upm.html"><a href="información-a-nivel-de-upm.html"><i class="fa fa-check"></i><b>5.2</b> Información a nivel de UPM</a></li>
+<li class="chapter" data-level="5.3" data-path="metodologías-univariadas-sobre-medidas-de-resumen.html"><a href="metodologías-univariadas-sobre-medidas-de-resumen.html"><i class="fa fa-check"></i><b>5.3</b> Metodologías univariadas sobre medidas de resumen</a>
+<ul>
+<li class="chapter" data-level="" data-path="metodologías-univariadas-sobre-medidas-de-resumen.html"><a href="metodologías-univariadas-sobre-medidas-de-resumen.html#partición-en-cuantiles-q"><i class="fa fa-check"></i>Partición en cuantiles (Q)</a></li>
+<li class="chapter" data-level="" data-path="metodologías-univariadas-sobre-medidas-de-resumen.html"><a href="metodologías-univariadas-sobre-medidas-de-resumen.html#método-de-raíz-de-frecuencia-acumulada-dh"><i class="fa fa-check"></i>Método de raíz de frecuencia acumulada (DH)</a></li>
+<li class="chapter" data-level="" data-path="metodologías-univariadas-sobre-medidas-de-resumen.html"><a href="metodologías-univariadas-sobre-medidas-de-resumen.html#estratificación-óptima-lh"><i class="fa fa-check"></i>Estratificación óptima (LH)</a></li>
+<li class="chapter" data-level="" data-path="metodologías-univariadas-sobre-medidas-de-resumen.html"><a href="metodologías-univariadas-sobre-medidas-de-resumen.html#estratificación-geométrica-gh"><i class="fa fa-check"></i>Estratificación geométrica (GH)</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="metodologías-multivariadas-sobre-la-matriz-de-información.html"><a href="metodologías-multivariadas-sobre-la-matriz-de-información.html"><i class="fa fa-check"></i><b>5.4</b> Metodologías multivariadas sobre la matriz de información</a>
+<ul>
+<li class="chapter" data-level="" data-path="metodologías-multivariadas-sobre-la-matriz-de-información.html"><a href="metodologías-multivariadas-sobre-la-matriz-de-información.html#k-medias-de-jarque-kmj"><i class="fa fa-check"></i>K-medias de Jarque (KmJ)</a></li>
+<li class="chapter" data-level="" data-path="metodologías-multivariadas-sobre-la-matriz-de-información.html"><a href="metodologías-multivariadas-sobre-la-matriz-de-información.html#partición-genética-bb"><i class="fa fa-check"></i>Partición genética (BB)</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="evaluación-y-escogencia-de-la-mejor-estratificación.html"><a href="evaluación-y-escogencia-de-la-mejor-estratificación.html"><i class="fa fa-check"></i><b>5.5</b> Evaluación y escogencia de la mejor estratificación</a></li>
+<li class="chapter" data-level="5.6" data-path="estratificación-implícita.html"><a href="estratificación-implícita.html"><i class="fa fa-check"></i><b>5.6</b> Estratificación implícita</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="diseño-y-mecanismo-de-selección-de-la-muestra.html"><a href="diseño-y-mecanismo-de-selección-de-la-muestra.html"><i class="fa fa-check"></i><b>6</b> Diseño y mecanismo de selección de la muestra</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html"><i class="fa fa-check"></i><b>6.1</b> Diseños de muestreo</a>
+<ul>
+<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-aleatorio-simple"><i class="fa fa-check"></i>Muestreo aleatorio simple</a></li>
+<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-proporcional-al-tamaño"><i class="fa fa-check"></i>Muestreo proporcional al tamaño</a></li>
+<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-estratificado"><i class="fa fa-check"></i>Muestreo estratificado</a></li>
+<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-de-conglomerados"><i class="fa fa-check"></i>Muestreo de conglomerados</a></li>
+<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-en-varias-etapas"><i class="fa fa-check"></i>Muestreo en varias etapas</a></li>
+<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-en-dos-fases"><i class="fa fa-check"></i>Muestreo en dos fases</a></li>
+<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-balanceado"><i class="fa fa-check"></i>Muestreo balanceado</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="el-diseño-de-muestreo-estándar-en-una-encuesta-de-hogares.html"><a href="el-diseño-de-muestreo-estándar-en-una-encuesta-de-hogares.html"><i class="fa fa-check"></i><b>6.2</b> El diseño de muestreo estándar en una encuesta de hogares</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="el-efecto-de-diseño.html"><a href="el-efecto-de-diseño.html"><i class="fa fa-check"></i><b>7</b> El efecto de diseño</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="estimación-del-efecto-de-diseño.html"><a href="estimación-del-efecto-de-diseño.html"><i class="fa fa-check"></i><b>7.1</b> Estimación del efecto de diseño</a></li>
+<li class="chapter" data-level="7.2" data-path="descomposición-del-efecto-de-diseño-en-las-encuestas-de-hogares.html"><a href="descomposición-del-efecto-de-diseño-en-las-encuestas-de-hogares.html"><i class="fa fa-check"></i><b>7.2</b> Descomposición del efecto de diseño en las encuestas de hogares</a></li>
+<li class="chapter" data-level="7.3" data-path="formas-comunes-del-efecto-de-diseño.html"><a href="formas-comunes-del-efecto-de-diseño.html"><i class="fa fa-check"></i><b>7.3</b> Formas comunes del efecto de diseño</a></li>
+<li class="chapter" data-level="7.4" data-path="otras-consideraciones-1.html"><a href="otras-consideraciones-1.html"><i class="fa fa-check"></i><b>7.4</b> Otras consideraciones</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="otras-consideraciones-1.html"><a href="otras-consideraciones-1.html#el-efecto-de-diseño-en-subpoblaciones"><i class="fa fa-check"></i><b>7.4.1</b> El efecto de diseño en subpoblaciones</a></li>
+<li class="chapter" data-level="7.4.2" data-path="otras-consideraciones-1.html"><a href="otras-consideraciones-1.html#el-efecto-de-diseño-general"><i class="fa fa-check"></i><b>7.4.2</b> El efecto de diseño general</a></li>
+<li class="chapter" data-level="7.4.3" data-path="otras-consideraciones-1.html"><a href="otras-consideraciones-1.html#el-efecto-de-diseño-en-las-encuestas-de-hogares-de-la-región"><i class="fa fa-check"></i><b>7.4.3</b> El efecto de diseño en las encuestas de hogares de la región</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="cálculo-del-tamaño-de-muestra.html"><a href="cálculo-del-tamaño-de-muestra.html"><i class="fa fa-check"></i><b>8</b> Cálculo del tamaño de muestra</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="confiabilidad-y-precisión.html"><a href="confiabilidad-y-precisión.html"><i class="fa fa-check"></i><b>8.1</b> Confiabilidad y precisión</a></li>
+<li class="chapter" data-level="8.2" data-path="el-efecto-de-diseño-en-la-determinación-del-tamaño-de-muestra.html"><a href="el-efecto-de-diseño-en-la-determinación-del-tamaño-de-muestra.html"><i class="fa fa-check"></i><b>8.2</b> El efecto de diseño en la determinación del tamaño de muestra</a></li>
+<li class="chapter" data-level="8.3" data-path="escenarios-de-interés.html"><a href="escenarios-de-interés.html"><i class="fa fa-check"></i><b>8.3</b> Escenarios de interés</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="escenarios-de-interés.html"><a href="escenarios-de-interés.html#tamaño-de-muestra-para-upm-hogares-y-personas"><i class="fa fa-check"></i><b>8.3.1</b> Tamaño de muestra para UPM, hogares y personas</a></li>
+<li class="chapter" data-level="8.3.2" data-path="escenarios-de-interés.html"><a href="escenarios-de-interés.html#tamaño-de-muestra-para-upm-y-hogares"><i class="fa fa-check"></i><b>8.3.2</b> Tamaño de muestra para UPM y hogares</a></li>
+<li class="chapter" data-level="8.3.3" data-path="escenarios-de-interés.html"><a href="escenarios-de-interés.html#tamaño-de-muestra-para-upm-y-personas"><i class="fa fa-check"></i><b>8.3.3</b> Tamaño de muestra para UPM y personas</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="otros-escenarios-de-interés.html"><a href="otros-escenarios-de-interés.html"><i class="fa fa-check"></i><b>8.4</b> Otros escenarios de interés</a>
+<ul>
+<li class="chapter" data-level="8.4.1" data-path="otros-escenarios-de-interés.html"><a href="otros-escenarios-de-interés.html#tamaño-de-muestra-para-la-estimación-de-la-diferencia-de-proporciones"><i class="fa fa-check"></i><b>8.4.1</b> Tamaño de muestra para la estimación de la diferencia de proporciones</a></li>
+<li class="chapter" data-level="8.4.2" data-path="otros-escenarios-de-interés.html"><a href="otros-escenarios-de-interés.html#tamaño-de-muestra-para-la-estimación-del-impacto-en-dos-mediciones-longitudinales"><i class="fa fa-check"></i><b>8.4.2</b> Tamaño de muestra para la estimación del impacto en dos mediciones longitudinales</a></li>
+<li class="chapter" data-level="8.4.3" data-path="otros-escenarios-de-interés.html"><a href="otros-escenarios-de-interés.html#tamaño-de-muestra-para-el-contraste-de-hipótesis-en-la-diferencia-de-proporciones"><i class="fa fa-check"></i><b>8.4.3</b> Tamaño de muestra para el contraste de hipótesis en la diferencia de proporciones</a></li>
+</ul></li>
+<li class="chapter" data-level="8.5" data-path="algunas-consideraciones-adicionales.html"><a href="algunas-consideraciones-adicionales.html"><i class="fa fa-check"></i><b>8.5</b> Algunas consideraciones adicionales</a>
+<ul>
+<li class="chapter" data-level="8.5.1" data-path="algunas-consideraciones-adicionales.html"><a href="algunas-consideraciones-adicionales.html#asignación-del-tamaño-de-muestra-en-los-estratos-de-muestreo"><i class="fa fa-check"></i><b>8.5.1</b> Asignación del tamaño de muestra en los estratos de muestreo</a></li>
+<li class="chapter" data-level="8.5.2" data-path="algunas-consideraciones-adicionales.html"><a href="algunas-consideraciones-adicionales.html#ajustes-de-subcobertura"><i class="fa fa-check"></i><b>8.5.2</b> Ajustes de subcobertura</a></li>
+<li class="chapter" data-level="8.5.3" data-path="algunas-consideraciones-adicionales.html"><a href="algunas-consideraciones-adicionales.html#sustituciones-y-reemplazos"><i class="fa fa-check"></i><b>8.5.3</b> Sustituciones y reemplazos</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>II Procesamiento transversal de las encuestas de hogares</b></span></li>
+<li class="chapter" data-level="9" data-path="estimación-de-parámetros.html"><a href="estimación-de-parámetros.html"><i class="fa fa-check"></i><b>9</b> Estimación de parámetros</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="el-estimador-de-horvitz-thompson.html"><a href="el-estimador-de-horvitz-thompson.html"><i class="fa fa-check"></i><b>9.1</b> El estimador de Horvitz-Thompson</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="el-estimador-de-horvitz-thompson.html"><a href="el-estimador-de-horvitz-thompson.html#estimación-para-para-totales"><i class="fa fa-check"></i><b>9.1.1</b> Estimación para para totales</a></li>
+<li class="chapter" data-level="9.1.2" data-path="el-estimador-de-horvitz-thompson.html"><a href="el-estimador-de-horvitz-thompson.html#estimación-para-tamaños-y-totales-en-dominios"><i class="fa fa-check"></i><b>9.1.2</b> Estimación para tamaños y totales en dominios</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="el-estimador-de-hájek-para-medias-y-proporciones.html"><a href="el-estimador-de-hájek-para-medias-y-proporciones.html"><i class="fa fa-check"></i><b>9.2</b> El estimador de Hájek para medias y proporciones</a></li>
+<li class="chapter" data-level="9.3" data-path="otros-estimadores-de-muestreo.html"><a href="otros-estimadores-de-muestreo.html"><i class="fa fa-check"></i><b>9.3</b> Otros estimadores de muestreo</a></li>
+<li class="chapter" data-level="9.4" data-path="estimación-en-subgrupos-poblacionales.html"><a href="estimación-en-subgrupos-poblacionales.html"><i class="fa fa-check"></i><b>9.4</b> Estimación en subgrupos poblacionales</a></li>
+<li class="chapter" data-level="9.5" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html"><i class="fa fa-check"></i><b>9.5</b> Estimadores de calibración</a>
+<ul>
+<li class="chapter" data-level="9.5.1" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html#ganancia-en-eficiencia"><i class="fa fa-check"></i><b>9.5.1</b> Ganancia en eficiencia</a></li>
+<li class="chapter" data-level="9.5.2" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html#diferentes-formas-del-estimador-de-calibración"><i class="fa fa-check"></i><b>9.5.2</b> Diferentes formas del estimador de calibración</a></li>
+<li class="chapter" data-level="9.5.3" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html#la-calibración-como-un-cambio-de-paradigma"><i class="fa fa-check"></i><b>9.5.3</b> La calibración como un cambio de paradigma</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="construcción-de-los-factores-de-expansión.html"><a href="construcción-de-los-factores-de-expansión.html"><i class="fa fa-check"></i><b>10</b> Construcción de los factores de expansión</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="creación-de-los-pesos-básicos.html"><a href="creación-de-los-pesos-básicos.html"><i class="fa fa-check"></i><b>10.1</b> Creación de los pesos básicos</a></li>
+<li class="chapter" data-level="10.2" data-path="ajuste-por-elegibilidad-desconocida.html"><a href="ajuste-por-elegibilidad-desconocida.html"><i class="fa fa-check"></i><b>10.2</b> Ajuste por elegibilidad desconocida</a></li>
+<li class="chapter" data-level="10.3" data-path="descarte-de-las-unidades-no-elegibles.html"><a href="descarte-de-las-unidades-no-elegibles.html"><i class="fa fa-check"></i><b>10.3</b> Descarte de las unidades no elegibles</a></li>
+<li class="chapter" data-level="10.4" data-path="ajuste-por-ausencia-de-respuesta.html"><a href="ajuste-por-ausencia-de-respuesta.html"><i class="fa fa-check"></i><b>10.4</b> Ajuste por ausencia de respuesta</a></li>
+<li class="chapter" data-level="10.5" data-path="calibración-de-los-pesos.html"><a href="calibración-de-los-pesos.html"><i class="fa fa-check"></i><b>10.5</b> Calibración de los pesos</a>
+<ul>
+<li class="chapter" data-level="10.5.1" data-path="calibración-de-los-pesos.html"><a href="calibración-de-los-pesos.html#medidas-de-calidad-en-la-calibración"><i class="fa fa-check"></i><b>10.5.1</b> Medidas de calidad en la calibración</a></li>
+<li class="chapter" data-level="10.5.2" data-path="calibración-de-los-pesos.html"><a href="calibración-de-los-pesos.html#diferentes-niveles-de-calibración"><i class="fa fa-check"></i><b>10.5.2</b> Diferentes niveles de calibración</a></li>
+<li class="chapter" data-level="10.5.3" data-path="calibración-de-los-pesos.html"><a href="calibración-de-los-pesos.html#calibración-integrada-en-hogares"><i class="fa fa-check"></i><b>10.5.3</b> Calibración integrada en hogares</a></li>
+</ul></li>
+<li class="chapter" data-level="10.6" data-path="recorte-de-los-pesos.html"><a href="recorte-de-los-pesos.html"><i class="fa fa-check"></i><b>10.6</b> Recorte de los pesos</a></li>
+<li class="chapter" data-level="10.7" data-path="redondeo-de-los-factores-de-expansión.html"><a href="redondeo-de-los-factores-de-expansión.html"><i class="fa fa-check"></i><b>10.7</b> Redondeo de los factores de expansión</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="enfrentando-la-ausencia-de-respuesta.html"><a href="enfrentando-la-ausencia-de-respuesta.html"><i class="fa fa-check"></i><b>11</b> Enfrentando la ausencia de respuesta</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="clasificación-de-la-ausencia-de-respuesta.html"><a href="clasificación-de-la-ausencia-de-respuesta.html"><i class="fa fa-check"></i><b>11.1</b> Clasificación de la ausencia de respuesta</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="clasificación-de-la-ausencia-de-respuesta.html"><a href="clasificación-de-la-ausencia-de-respuesta.html#ausencia-de-respuesta-de-registro-y-de-unidad"><i class="fa fa-check"></i><b>11.1.1</b> Ausencia de respuesta de registro y de unidad</a></li>
+<li class="chapter" data-level="11.1.2" data-path="clasificación-de-la-ausencia-de-respuesta.html"><a href="clasificación-de-la-ausencia-de-respuesta.html#efectos-y-consecuencias-de-la-ausencia-de-respuesta"><i class="fa fa-check"></i><b>11.1.2</b> Efectos y consecuencias de la ausencia de respuesta</a></li>
+<li class="chapter" data-level="11.1.3" data-path="clasificación-de-la-ausencia-de-respuesta.html"><a href="clasificación-de-la-ausencia-de-respuesta.html#posibles-soluciones"><i class="fa fa-check"></i><b>11.1.3</b> Posibles soluciones</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="indicadores-de-representatividad.html"><a href="indicadores-de-representatividad.html"><i class="fa fa-check"></i><b>11.2</b> Indicadores de representatividad</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="indicadores-de-representatividad.html"><a href="indicadores-de-representatividad.html#el-concepto-de-representatividad"><i class="fa fa-check"></i><b>11.2.1</b> El concepto de representatividad</a></li>
+<li class="chapter" data-level="11.2.2" data-path="indicadores-de-representatividad.html"><a href="indicadores-de-representatividad.html#indicadores-r"><i class="fa fa-check"></i><b>11.2.2</b> Indicadores <span class="math inline">\(R\)</span></a></li>
+<li class="chapter" data-level="11.2.3" data-path="indicadores-de-representatividad.html"><a href="indicadores-de-representatividad.html#el-indicador-r-en-la-práctica"><i class="fa fa-check"></i><b>11.2.3</b> El indicador <span class="math inline">\(R\)</span> en la práctica</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="corrección-de-sesgos-debidos-a-la-ausencia-de-respuesta-de-unidad.html"><a href="corrección-de-sesgos-debidos-a-la-ausencia-de-respuesta-de-unidad.html"><i class="fa fa-check"></i><b>12</b> Corrección de sesgos debidos a la ausencia de respuesta de unidad</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="sesgo-sobre-los-estimadores.html"><a href="sesgo-sobre-los-estimadores.html"><i class="fa fa-check"></i><b>12.1</b> Sesgo sobre los estimadores</a></li>
+<li class="chapter" data-level="12.2" data-path="soluciones.html"><a href="soluciones.html"><i class="fa fa-check"></i><b>12.2</b> Soluciones</a>
+<ul>
+<li class="chapter" data-level="12.2.1" data-path="soluciones.html"><a href="soluciones.html#propensity-score"><i class="fa fa-check"></i><b>12.2.1</b> Propensity Score</a></li>
+<li class="chapter" data-level="12.2.2" data-path="soluciones.html"><a href="soluciones.html#calibración"><i class="fa fa-check"></i><b>12.2.2</b> Calibración</a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="la-pandemia-por-covid-19-y-la-ausencia-de-respuesta-por-unidad.html"><a href="la-pandemia-por-covid-19-y-la-ausencia-de-respuesta-por-unidad.html"><i class="fa fa-check"></i><b>12.3</b> La pandemia por COVID-19 y la ausencia de respuesta por unidad</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
+<li class="divider"></li>
+<li><a Diseño y análisis de encuestas de hogares</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Diseño y análisis estadístico en las encuestas de hogares de América Latina</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="clasificación-de-la-ausencia-de-respuesta" class="section level2" number="11.1">
+<h2><span class="header-section-number">11.1</span> Clasificación de la ausencia de respuesta</h2>
+<p>Por otra parte, <span class="citation"><a href="#ref-Lund" role="doc-biblioref">C. Särndal y Lundstrom</a> (<a href="#ref-Lund" role="doc-biblioref">2005</a>)</span> aclaran que existe una gran cantidad de literatura acerca de la ausencia de respuesta y muchos artículos recientes. Esta literatura examina dos aspectos diferentes pero complementarios en el ejercicio de una encuesta: la prevención de la ausencia de respuesta (antes de que ocurra) y las técnicas de estimación necesarias para tener en cuenta la ausencia de respuesta de manera apropiada en el proceso de inferencia. Esta segunda actividad se conoce con el nombre de ajuste para la ausencia de respuesta. <span class="citation"><a href="#ref-LR2002" role="doc-biblioref">Little y Rubin</a> (<a href="#ref-LR2002" role="doc-biblioref">2002</a>)</span> establecen tres tipos de mecanismos de ausencia de respuesta.</p>
+<ol style="list-style-type: decimal">
+<li>Ausencia de respuesta completamente aleatoria (MCAR - <em>missing completely at random</em>): cuando la probabilidad de que un individuo responda no depende de la característica de interés, ni de alguna otra covariable auxiliar. Por ejemplo, si la ausencia de respuesta en una encuesta laboral, no depende del estado actual de empleo del respondiente, ni de alguna característica auxiliar. De esta forma, la ausencia de respuesta está dispersa de manera uniforme sobre toda la población.</li>
+<li>Ausencia de respuesta aleatoria (MAR - <em>missing at random</em>): cuando la probabilidad de que un individuo responda depende de algunas covariables auxiliares, pero no depende de la característica de interés. Por ejemplo, en una encuesta de fuerza laboral, la ausencia de respuesta puede depender del nivel socioeconómico del individuo, pero no depende de su clasificación laboral.</li>
+<li>Ausencia de respuesta no aleatoria (NMAR - <em>not missing at random</em>): cuando la ausencia de respuesta depende de la característica de interés. Por ejemplo, en la encuesta de fuerza laboral, es posible que los no respondientes dependan de su clasificación laboral. En este caso puede suceder que los desempleados sean los que sistemáticamente no respondan la encuesta.</li>
+</ol>
+<div id="ausencia-de-respuesta-de-registro-y-de-unidad" class="section level3" number="11.1.1">
+<h3><span class="header-section-number">11.1.1</span> Ausencia de respuesta de registro y de unidad</h3>
+<p>En general se puede afirmar que existen dos tipos de ausencia de respuesta: la primera, debido a la falta de respuesta de una unidad de observación (ausencia de respuesta de unidad), y la segunda debido a la falta de respuesta de una unidad en algunas variables de interés (ausencia de respuesta por registro). La siguiente figura representa el impacto de estos escenarios en la base de datos inicial.</p>
+<div class="figure">
+<img src="Pics/nr1.png" alt="" />
+<p class="caption"><em>Esquema de ausencia de respuesta en una muestra (las celdas en negro representan los valores faltantes en la base de datos).</em></p>
+</div>
+<p>El primer escenario se evidencia porque en la base de datos inicial falta toda la unidad de observación y sus correspondientes registros. Suele suceder porque el encuestador no pudo establecer contacto con el hogar, o porque la persona seleccionada está enferma o simplemente porque se rehúsa a participar. En esta etapa es recomendable que el encuestador pueda determinar algunas características demográficas del hogar para poder realizar los ajustes pertinentes en el proceso de análisis.</p>
+<p>El segundo escenario puede deberse a muchas más causas y se evidencia en la base de datos inicial porque faltan algunos registros de la unidad de observación, aunque otros si están efectivamente respondidos. Suele suceder porque el respondiente se sintió agotado en algún momento del cuestionario, o porque alguna pregunta en particular no fue respondida por considerarse sensible.</p>
+</div>
+<div id="efectos-y-consecuencias-de-la-ausencia-de-respuesta" class="section level3" number="11.1.2">
+<h3><span class="header-section-number">11.1.2</span> Efectos y consecuencias de la ausencia de respuesta</h3>
+<p>En general, es posible hacer frente a este fenómeno indeseado desde varias perspectiva. Los siguientes son algunos puntos de vista para enfrentar la ausencia de respuesta:</p>
+<ol style="list-style-type: decimal">
+<li><em>Ignorancia</em>: lamentablemente, no es raro que se pretenda ignorar la ausencia de respuesta en la encuesta y realizar inferencias con los datos recopilados de las unidades respondientes, sin realizar ningún tipo de acercamiento estadístico para ajustar la inferencia.</li>
+<li><em>Prevención</em>: diseñar la encuesta de modo que la ausencia de respuesta sea pequeña. Éste es el mejor método de enfrentarla. La capacitación al equipo encuestador, la redacción de las preguntas, la longitud del cuestionario, las revisitas y el agendamiento de las entrevistas pueden palear las altas tasas de asusencia de respuesta.</li>
+<li><em>Reacción</em>: utilizar herramientas para analizar la encuesta de modo que se corrijan los sesgos causados por la ausencia de respuesta. En este caso es posible ajustar los ponderadores de las unidades, o establecer procedimientos de imputación en los registros.</li>
+</ol>
+<p>Ignorar la ausencia de respuesta puede tener consecuencias graves en la entendimiento del constructo de interés en la encuesta. Más aún, puede llevar a tomar decisiones erradas de política pública. Por ejemplo, si se omite el efecto de la ausencia de respuesta en una encuesta de ingresos y gastos, se podría subestimar el ingreso medio y el ingreso total en un país; si se omite el efecto de la ausencia de respuesta en una encuesta de desempleo, se podría subestimar el número total de desempleados; además, si se omite el efecto de la ausencia de respuesta en una encuesta de victimización, se podría subestimar el número total de víctimas.</p>
+<p>La ausencia de repuesta conlleva grandes efectos de sesgo en los resultados de calidad de las estimaciones. Debe contemplarse muy bien la mejor estrategia para hacer frente a sus consecuencias. Por ejemplo, si se aumentara el tamaño de muestra para enfrentar la ausencia de respuesta, es posible que nos encontremos con una mayor cantidad de personas de la misma clase de respondientes (homogeneidad). En este caso, el sesgo puede aumentar porque se malgastaron recursos que hubiesen servido para remediar la ausencia de respuesta con otras medidas.</p>
+</div>
+<div id="posibles-soluciones" class="section level3" number="11.1.3">
+<h3><span class="header-section-number">11.1.3</span> Posibles soluciones</h3>
+<p>Al lidiar con la ausencia de respuesta, podemos distinguir algunas prácticas que guían a diferentes tratamientos metodológicos diferentes. En general, se pueden distinguir las siguientes prácticas:</p>
+<ul>
+<li><strong>Imputación total</strong>: se trata de imputar todos los valores faltantes para los individuos con al menos un valor perdido. En otras palabras, la imputación se considera como la única forma de tratar la ausencia de respuesta.</li>
+<li><strong>Ponderación total</strong>: se trata de ponderar cada una de las variables de interés, así sea de manera diferenciada. No se utiliza la imputación y existirán tantos conjuntos de factores de expansión como variables con valores perdidos.</li>
+<li><strong>Eliminación total</strong>: se trata de eliminar todos los registros con algún valor perdido y hacer el análisis con el conjunto restante de valores respondidos.</li>
+<li><strong>Enfoque combinado</strong>: se trata de imputar únicamente en los elementos que tienen al menos un registro (no todos) perdido y modificar los factores de expansión en aquellos casos en donde hay omisión de todos los registros del cuestionario.</li>
+</ul>
+<p>Siguiendo la notación de <span class="citation"><a href="#ref-Sarndal_Lundstrom_2006" role="doc-biblioref">C.-E. Särndal y Lundström</a> (<a href="#ref-Sarndal_Lundstrom_2006" role="doc-biblioref">2006</a>)</span>, consideramos una muestra de unidades <span class="math inline">\(s\)</span>, de la cual <span class="math inline">\(r\)</span> denota el conjunto de respondientes que han contestado a una o más de las <span class="math inline">\(I\)</span> variables de interés. Por tanto, una unidad que no responde a ninguna variable pertenece al conjunto <span class="math inline">\(s-r\)</span>. El conjunto de unidades que han respondido a una variable del estudio en particular se denota por <span class="math inline">\(r_i\)</span>. Nótese que</p>
+<p><span class="math display">\[
+r_i\subseteq r \subseteq s
+\]</span></p>
+<p>Finalmente, si se supone que <span class="math inline">\(y_k\)</span> es faltante y se considera para la imputación, entonces <span class="math inline">\(\hat{y}_k\)</span> denotará su valor imputado</p>
+<div id="imputación-total" class="section level4 unnumbered">
+<h4>Imputación total</h4>
+<p>En este enfoque se imputarían todos los valores <span class="math inline">\(y_k\)</span> que están perdidos, sin importar si la pérdida es debida a la ausencia del registro o del individuo. En este caso, tendríamos un conjunto completo de datos con los valores <span class="math inline">\(\{y_{\circ \  k}: k\in s\}\)</span>, donde</p>
+<p><span class="math display">\[
+y_{\circ \  k} = 
+\begin{cases}
+y_k, \ \text{for $k \in r_i$} \\
+\hat{y}_k, \ \text{for $k \in s - r_i$}
+\end{cases}
+\]</span></p>
+<p>y <span class="math inline">\(\hat{y}_k\)</span> es el valor imputado. Por ejemplo, el estimador del total utilizando este enfoque estaría dado por la siguiente expresión.</p>
+<p><span class="math display">\[
+\hat{t}_{y,\pi} = \sum_s d_{k}y_{\circ \  k}
+= \sum_{r_i}d_{k}y_k + \sum_{s - r_i}d_{k}\hat{y}_k
+\]</span></p>
+<p>Nótese que en el siguiente gráfico, cada valor faltante (que originalmente estaba en color negro en la base de datos) ahora es estimado (en color gris) y participaría en el proceso inferencial con una base de datos completa, pero imputada.</p>
+<div class="figure">
+<img src="Pics/nr3.png" alt="" />
+<p class="caption"><em>Enfoque de inputación total</em></p>
+</div>
+</div>
+<div id="ponderación-total" class="section level4 unnumbered">
+<h4>Ponderación total</h4>
+<p>Al usar el enfoque de ponderación total es posible usar pesos de calibración específicos <span class="math inline">\(w_k = d_k F_{ik}\)</span> que compensarían la ausencia de respuesta de unidad y de registro. De esta forma, el estimador del total estaría dado por la siguiente expresión:</p>
+<p><span class="math display">\[
+\hat{y}_{cal}=\sum_{r_i}w_ky_k = 
+\sum_{r_i}d_k F_{ik} y_k
+\]</span></p>
+<p>Si todos los <span class="math inline">\(r_i\)</span> son diferentes, entonces cada variable de estudio requerirá un conjunto de ponderadores diferentes. Basado en la siguiente gráfica, nótese que este camino elimina, de manera diferencial, todos los registros faltantes de la base de datos original (en color negro). Al final este enfoque induce un número no uniforme de casos por variable.</p>
+<div class="figure">
+<img src="Pics/nr4.png" alt="" />
+<p class="caption"><em>Esquema de ausencia de respuesta en una muestra</em></p>
+</div>
+</div>
+<div id="eliminación-total" class="section level4 unnumbered">
+<h4>Eliminación total</h4>
+<p>En este enfoque se eliminarán de la base de datos todas las unidades que contengan al menos un registro perdido. En este caso, tendríamos una pérdida considerable del tamaño de muestra, aunque induciría un solo conjunto de ponderadores. Se recomienda fuertemente abstenerse de tomar este camino. La siguiente gráfica representa este enfoque en donde es evidente que el decrecimiento en el tamaño de muestra podría tener repercuciones nefastas en la inferencia de la encuesta.
+<img src="Pics/nr2.png" alt="Enfoque de eliminación total" /></p>
+</div>
+<div id="enfoque-combinado" class="section level4 unnumbered">
+<h4>Enfoque combinado</h4>
+<p>Por el contrario, es recomendable escoger un camino parsimonioso que combine estas estrategias de forma diferencial a lo largo de la encuesta. El enfoque combinado usa la imputación para afrontar la ausencia de respuesta por registro para las variables específicas que lo necesiten y luego utiliza un ajuste a los factores de ponderación para afrontar la ausencia de respuesta por unidad. Usualmente, los pesos finales se producen utilizando un enfoque de calibración que hace uso de información auxiliar externa.</p>
+<p>Cuando se presenta ausencia de respuesta por registro y por unidad, el enfoque combinado imputa primero para luego obtener una matriz rectangular completa. Luego de lo anterior se procede a realizar un ajuste a los ponderadores. El conjunto de datos completo para la variable de interés <span class="math inline">\(y\)</span> está dado por <span class="math inline">\(\{y_{\circ \  k}: k\in r\}\)</span></p>
+<p><span class="math display">\[
+y_{\circ \  k} = 
+\begin{cases}
+y_k, \ \text{for $k \in r_i$} \\
+\hat{y}_k, \ \text{for $k \in r - r_i$}
+\end{cases}
+\]</span></p>
+<p>En donde <span class="math inline">\(\hat{y}_k\)</span> es el valor imputado. Note que en el enfoque de imputación total, también se imputa para <span class="math inline">\(k \in s-r\)</span>. La siguiente gráfica representa este enfoque parsimonioso en donde los valores imputados (en gris) entran a ser parte de la inferencia y las unidades que nunca respondieron (en negro) y que tienen todos sus registros faltantes son retiradas de la base de datos final.</p>
+<div class="figure">
+<img src="Pics/nr5.png" alt="" />
+<p class="caption"><em>Enfoque combinado</em></p>
+</div>
+</div>
+</div>
+</div>
+<h3>Referencias</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-LR2002" class="csl-entry">
+Little, R., y D. B. Rubin. 2002. <em>Statistical Analysis with Missing Data</em>. 2nd ed. Wiley.
+</div>
+<div id="ref-Lund" class="csl-entry">
+Särndal, C., y S. Lundstrom. 2005. <em>Estimation in Surveys with Nonresponse</em>. Wiley.
+</div>
+<div id="ref-Sarndal_Lundstrom_2006" class="csl-entry">
+Särndal, Carl-Erik, y Sixten Lundström. 2006. <em>Estimation in surveys with nonresponse</em>. Repr. Wiley series en survey methodology. Wiley.
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="enfrentando-la-ausencia-de-respuesta.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="indicadores-de-representatividad.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/psirusteam/HHS-Handbook/10Ausencia.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Diseño y análisis de encuestas de hogares.pdf", "Diseño y análisis de encuestas de hogares.epub", "Diseño y análisis de encuestas de hogares.mobi"],
+"toc": {
+"collapse": "section"
+},
+"tconfig": null
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
