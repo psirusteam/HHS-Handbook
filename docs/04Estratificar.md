@@ -82,7 +82,10 @@ $$
 
 Nótese que se esperaría que esta variable de resumen, al estar definida como una medida de bienestar sobre las UPM, tuviera un comportamiento sesgado, tal como se puede observar en la siguiente figura.
 
-![(\#fig:unnamed-chunk-1)*Histograma de la medida de resumen (y) sobre las UPM*](04Estratificar_files/figure-latex/unnamed-chunk-1-1.pdf) 
+<div class="figure">
+<img src="04Estratificar_files/figure-html/unnamed-chunk-1-1.svg" alt="*Histograma de la medida de resumen (y) sobre las UPM*" width="672" />
+<p class="caption">(\#fig:unnamed-chunk-1)*Histograma de la medida de resumen (y) sobre las UPM*</p>
+</div>
 
 Por ende, si esta característica es altamente sesgada, es recomendable crear un estrato de inclusión forzosa con estas unidades. Esta práctica asegura que el error de muestreo para este estrato sea nulo.
 
@@ -183,9 +186,10 @@ El efecto diseño no es el único aspecto por evaluar para la elección del proc
 Por último, suponiendo que se decidió la creación de tres estratos se encuentran numerado en orden ascendente que indica el nivel de bienestar socioeconómico, también se debe evaluar la coherencia de la distribución de las diferentes variables agregadas a nivel de UPM en los estratos. Por ejemplo, la proporción de personas mayores de 15 años alfabetizadas debería tener mayor incidencia en los estratos más altos, y este patrón también se debería observar para diferentes indicadores como la proporción de hogares con internet, la proporción de tenencia de refrigerador, la proporción de tenencia de televisión por cable, la proporción de tenencia de automovil, la proporción de hogares con saneamiento adecuado, la proporción de hogares con pisos adecuados, la proporción de personas con educación superior, entre otras. La figura \@ref(fig:estrata) muestra el comportamiento esperado en los estratos de muestreo para algunas variables de interés. De esta forma, el estrato uno debería presentar condiciones económicas más adversas, el estrato dos debería tener mejores condiciones, siendo el tercer estrato el que agrupa a las UPM con menores dificultades socioeconómicas. En el área rural debiesen aparecer una menor proporción de UPM en el estrato 3, dadas las condiciones menos favorables. 
 
 
-\begin{figure}
-\includegraphics[width=800px]{Pics/Estratificar} \caption{Comportamiento esperado en los estratos de muestreo para algunas variables de interés.}(\#fig:estrata)
-\end{figure}
+<div class="figure">
+<img src="Pics/Estratificar.png" alt="Comportamiento esperado en los estratos de muestreo para algunas variables de interés." width="800px" />
+<p class="caption">(\#fig:estrata)Comportamiento esperado en los estratos de muestreo para algunas variables de interés.</p>
+</div>
 
 
 Si la contribución de algunas unidades al total poblacional es no significativa, y además esas unidades son de difícil acceso, es común que en algunos países de la región se opte por redefinir el universo y crear un estrato de exclusión forzosa. En este estrato no se realiza ninguna encuesta y las respectivas estimaciones no tendrán en cuenta a esta población excluida. Por último, como algunos procedimientos de clasificación se basan en la generación de números aleatorios, se recomienda documentar los códigos computacionales que se utilizaron para que los resultados puedan ser replicados, por lo que debe fijar una semilla aleatoria al comienzo del código computacional.

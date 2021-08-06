@@ -20,6 +20,7 @@ rmd_files: [
   "09Ponderadores.Rmd",
   "10Ausencia.Rmd",
   "11SesgoUnidad.Rmd",
+  "12Imputar.Rmd",
 
   "99Referencias.Rmd"
   ]

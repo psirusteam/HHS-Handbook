@@ -1,0 +1,36 @@
+# Detección de datos atípicos
+
+En esta sección se describen los aspectos teóricos y prácticos de la identificación de valores atípicos en una base de datos completa (incluso con registros que ya han sido imputados), basándose en métodos que han mostrado buenas propiedades en la inferencia de encuestas de hogares. Después de una breve introducción, se presenta un enfoque no exhaustivo del problema de la identificación de valores atípicos, así como la teoría detrás de los métodos y algunos hallazgos empíricos de la imputación de valores atípicos. El enfoque de imputación de valores atípicos siguió los mismos principios que el método utilizado para imputar ingresos y gastos en misiones anteriores.
+
+## Definiciones iniciales
+
+
+Un valor atípico es un punto de datos que está distante de todos los demás puntos de datos. Thera son dos fuentes de valores atípicos:
+
+1. ** Valores erróneos **: entrada de datos o errores de medición
+1. ** Valores improbables o raros **: valores válidos, pero poco probables
+
+Los valores erróneos deben corregirse, eliminarse o imputarse; mientras tanto, se deben dejar valores improbables en el conjunto de datos y se debe tomar una decisión para ajustar ese valor para reducir su impacto en el análisis de la encuesta. Los valores que se apartan de la distribución habitual pueden clasificarse como valores atípicos o como puntos influyentes. El tratamiento de los valores para el análisis viene definido por su clasificación.
+
+- ** Valores atípicos representativos **: valores que se han registrado correctamente y representan otras unidades de población con valores similares.
+- ** Valores atípicos no representativos **: registrados incorrectamente o únicos, lo que significa que no hay otra persona como ellos.
+- ** Puntos de influencia **: cuando el efecto conjunto del punto de datos atípicos y su respectivo peso muestral tienen un efecto significativo. Estos pueden ser representativos o no representativos.
+
+En las asistencias anteriores, el asesor regional introdujo algunos métodos populares para localizar valores atípicos y formas de lidiar con los valores atípicos cuando se identifican, la teoría detrás de estos métodos se puede encontrar en esos informes de misión. Al final, se recomienda que cuando se encuentren valores atípicos, se marquen para su revisión. Cuando se revisan, el error se corrige (si el valor atípico es erróneo) o las estimaciones se ajustan (si el valor atípico es simplemente improbable). Por último, si es erróneo pero no se puede localizar al encuestado, se debe imputar el valor.
+
+A menudo, los valores atípicos pueden ser representativos de otros en la población, por lo que siguen siendo importantes y deben permanecer en el conjunto de datos. Al final, el proceso de identificación de valores atípicos se trata de un compromiso entre el sesgo y la varianza. Los valores atípicos pueden tener un gran impacto en los estimadores de ubicación y escala, como la media de la muestra y la varianza de la muestra, así como en los estimadores de diseño de encuestas para métricas como totales y tamaños de subpoblaciones. Aunque estos estimadores permanecen insesgados, su varianza crece en presencia de valores atípicos. Por lo tanto, existe una compensación entre el sesgo y la varianza cuando se acercan a los valores atípicos.
+
+@ Filzmoser_Gussenbauer_Templ_2016 afirma que en el proceso de entrada de datos se pueden cometer errores. Estos incluyen la introducción de valores de gasto imposibles, es decir, valores
+que son demasiado altos o demasiado bajos para ser plausibles. Estos valores periféricos pueden tener
+un impacto significativo en algunos tipos de análisis (por ejemplo, indicadores de desigualdad,
+o coeficientes de regresión, pueden verse significativamente afectados por un número reducido de
+valores extremos en un conjunto de datos). Por tanto, estamos interesados ​​en detectarlos, y
+en solucionar el problema reemplazando valores inverosímiles por otros más realistas.
+Detectar valores atípicos y distinguir aquellos que son errores de aquellos que
+son inusualmente altos (o bajos) pero valores correctos, es un desafío. Haciendo estos
+correcciones en los microdatos (es decir, en los datos a nivel del hogar) en lugar de
+a nivel agregado (en tablas de resultados), se suma al desafío.
+
+
+
+

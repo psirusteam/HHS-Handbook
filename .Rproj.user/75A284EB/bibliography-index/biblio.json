@@ -94,6 +94,40 @@
             "type": "article-journal"
         },
         {
+            "ISBN": "978-0-471-08705-2",
+            "author": [
+                {
+                    "family": "Rubin",
+                    "given": "Donald B."
+                }
+            ],
+            "collection-title": "Wiley series in probability and mathematical statistics applied probability and statistics",
+            "id": "Rubin_1987",
+            "issued": {
+                "date-parts": [
+                    [
+                        1987
+                    ]
+                ]
+            },
+            "publisher": "Wiley",
+            "title": "Multiple imputation for nonresponse in surveys",
+            "type": "book"
+        },
+        {
+            "id": "VanBuuren",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "publisher": "Chapman; Hall",
+            "title": "Flexible imputation of missing data",
+            "type": "book"
+        },
+        {
             "author": [
                 {
                     "family": "Lemaitre",
@@ -3056,27 +3090,6 @@
             "volume": "38"
         },
         {
-            "ISBN": "978-0-471-08705-2",
-            "author": [
-                {
-                    "family": "Rubin",
-                    "given": "Donald B."
-                }
-            ],
-            "collection-title": "Wiley series in probability and mathematical statistics applied probability and statistics",
-            "id": "Rubin_1987",
-            "issued": {
-                "date-parts": [
-                    [
-                        1987
-                    ]
-                ]
-            },
-            "publisher": "Wiley",
-            "title": "Multiple imputation for nonresponse in surveys",
-            "type": "book"
-        },
-        {
             "DOI": "10.1002/9781118445112.stat03310.pub2",
             "ISBN": "978-1-118-44511-2",
             "URL": "http://onlinelibrary.wiley.com/doi/10.1002/9781118445112.stat03310.pub2/abstract",
@@ -3886,35 +3899,6 @@
                 ]
             },
             "title": "STATA survey data",
-            "type": "book"
-        },
-        {
-            "ISBN": "978-1-4200-8066-7",
-            "author": [
-                {
-                    "family": "Heeringa",
-                    "given": "Steven G."
-                },
-                {
-                    "family": "West",
-                    "given": "Brady T."
-                },
-                {
-                    "family": "Berglund",
-                    "given": "Patricia A."
-                }
-            ],
-            "collection-title": "Chapman and hall/CRC statistics in the social and behavioral sciences series",
-            "id": "Heeringa_West_Berglund_2010",
-            "issued": {
-                "date-parts": [
-                    [
-                        2010
-                    ]
-                ]
-            },
-            "publisher": "CRC Press",
-            "title": "Applied survey data analysis",
             "type": "book"
         },
         {
