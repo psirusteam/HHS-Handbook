@@ -109,3 +109,6 @@ consideraciones-sobre-la-imputación-múltiple
 propiedades-de-los-estimadores
 simulación-empírica
 ejemplo-imputación-en-una-encuesta-de-ingresos-y-gastos
+detección-de-datos-atípicos
+algunos-métodos-de-detección-de-valores-extremos
+valores-atípicos-en-una-encuesta-de-consumo

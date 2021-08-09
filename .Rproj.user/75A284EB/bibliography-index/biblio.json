@@ -55,6 +55,34 @@
         {
             "author": [
                 {
+                    "family": "Filzmoser",
+                    "given": "P."
+                },
+                {
+                    "family": "Gussenbauer",
+                    "given": "J."
+                },
+                {
+                    "family": "Templ",
+                    "given": "M."
+                }
+            ],
+            "collection-title": "Final report contract with the world bank",
+            "id": "Filzmoser_Gussenbauer_Templ_2016",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "publisher": "Vienna University of Technology",
+            "title": "Detecting outliers in household consumption survey data",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
                     "family": "Alexander",
                     "given": "Charles"
                 }

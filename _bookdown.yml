@@ -21,6 +21,7 @@ rmd_files: [
   "10Ausencia.Rmd",
   "11SesgoUnidad.Rmd",
   "12Imputar.Rmd",
+  "13Outliers.Rmd",
 
   "99Referencias.Rmd"
   ]
