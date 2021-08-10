@@ -206,6 +206,48 @@
             "type": "article-journal"
         },
         {
+            "author": [
+                {
+                    "family": "Quenouille",
+                    "given": "M. H."
+                }
+            ],
+            "container-title": "Biometrika",
+            "id": "Quenouille",
+            "issue": "3/4",
+            "issued": {
+                "date-parts": [
+                    [
+                        1956
+                    ]
+                ]
+            },
+            "page": "353-360",
+            "publisher": "[Oxford University Press, Biometrika Trust]",
+            "title": "Notes on bias in estimation",
+            "type": "article-journal",
+            "volume": "43"
+        },
+        {
+            "URL": "https://books.google.cl/books?id=6ptDHQAACAAJ",
+            "author": [
+                {
+                    "family": "Mosteller",
+                    "given": "F."
+                }
+            ],
+            "id": "mosteller1968data",
+            "issued": {
+                "date-parts": [
+                    [
+                        1968
+                    ]
+                ]
+            },
+            "title": "Data analysis, including statistics",
+            "type": "book"
+        },
+        {
             "ISBN": "978-0-387-32917-8",
             "author": [
                 {
@@ -620,6 +662,108 @@
         {
             "author": [
                 {
+                    "family": "Efron",
+                    "given": "Bradley"
+                },
+                {
+                    "family": "Tibshirani",
+                    "given": "Robert J."
+                }
+            ],
+            "collection-number": "57",
+            "collection-title": "Monographs on statistics and applied probability",
+            "id": "EfroTibs93",
+            "issued": {
+                "date-parts": [
+                    [
+                        1993
+                    ]
+                ]
+            },
+            "publisher": "Chapman & Hall/CRC",
+            "publisher-place": "Boca Raton, Florida, USA",
+            "title": "An introduction to the bootstrap",
+            "type": "book"
+        },
+        {
+            "DOI": "10.1080/01621459.1988.10478591",
+            "ISSN": "0162-1459",
+            "author": [
+                {
+                    "family": "Rao",
+                    "given": "J. N. K."
+                },
+                {
+                    "family": "Wu",
+                    "given": "C. F. J."
+                }
+            ],
+            "container-title": "Journal of the American Statistical Association",
+            "id": "Rao_Wu_1988",
+            "issue": "401",
+            "issued": {
+                "date-parts": [
+                    [
+                        1988,
+                        3
+                    ]
+                ]
+            },
+            "page": "231-241",
+            "title": "Resampling inference with complex survey data",
+            "type": "article-journal",
+            "volume": "83"
+        },
+        {
+            "author": [
+                {
+                    "family": "Preston",
+                    "given": "John"
+                }
+            ],
+            "container-title": "Survey Methodology",
+            "id": "Preston_2009",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2009
+                    ]
+                ]
+            },
+            "page": "227-234",
+            "title": "Rescaled bootstrap for stratified multistage sampling",
+            "type": "article-journal",
+            "volume": "35"
+        },
+        {
+            "author": [
+                {
+                    "family": "Rao",
+                    "given": "J. N. K."
+                },
+                {
+                    "family": "Wu",
+                    "given": "C. F. J."
+                }
+            ],
+            "container-title": "Procedings of the survey research methods section",
+            "id": "Rao_Wu_1984",
+            "issued": {
+                "date-parts": [
+                    [
+                        1984
+                    ]
+                ]
+            },
+            "page": "106-112",
+            "publisher": "American Statistical Association",
+            "title": "BOOTSTRAP INFERENCE FOR SAMPLE SURVEYS",
+            "type": "paper-conference"
+        },
+        {
+            "author": [
+                {
                     "family": "Valliant",
                     "given": "Richard"
                 },
@@ -644,6 +788,31 @@
             "type": "book"
         },
         {
+            "ISBN": "9781461207955",
+            "author": [
+                {
+                    "family": "Shao",
+                    "given": "J."
+                },
+                {
+                    "family": "Tu",
+                    "given": "D."
+                }
+            ],
+            "collection-title": "Springer series in statistics",
+            "id": "shao2012jackknife",
+            "issued": {
+                "date-parts": [
+                    [
+                        2012
+                    ]
+                ]
+            },
+            "publisher": "Springer New York",
+            "title": "The jackknife and bootstrap",
+            "type": "book"
+        },
+        {
             "author": [
                 {
                     "family": "Potter",
@@ -663,28 +832,6 @@
             "publisher": "American Statistical Association",
             "title": "The effect of weight trimming on nonlinear survey estimates",
             "type": "paper-conference"
-        },
-        {
-            "ISBN": "978-0-387-32917-8",
-            "author": [
-                {
-                    "family": "Wolter",
-                    "given": "Kirk M."
-                }
-            ],
-            "collection-title": "Statistics for social and behavioral sciences",
-            "edition": "2nd ed",
-            "id": "Wolter_2007",
-            "issued": {
-                "date-parts": [
-                    [
-                        2007
-                    ]
-                ]
-            },
-            "publisher": "Springer",
-            "title": "Introduction to variance estimation",
-            "type": "book"
         },
         {
             "author": [
@@ -3017,55 +3164,6 @@
             "volume": "9"
         },
         {
-            "DOI": "10.1080/01621459.1988.10478591",
-            "ISSN": "0162-1459",
-            "author": [
-                {
-                    "family": "Rao",
-                    "given": "J. N. K."
-                },
-                {
-                    "family": "Wu",
-                    "given": "C. F. J."
-                }
-            ],
-            "container-title": "Journal of the American Statistical Association",
-            "id": "Rao_Wu_1988",
-            "issue": "401",
-            "issued": {
-                "date-parts": [
-                    [
-                        1988,
-                        3
-                    ]
-                ]
-            },
-            "page": "231-241",
-            "title": "Resampling inference with complex survey data",
-            "type": "article-journal",
-            "volume": "83"
-        },
-        {
-            "ISBN": "978-0-387-35099-8",
-            "author": [
-                {
-                    "family": "Wolter",
-                    "given": "Kirk"
-                }
-            ],
-            "id": "Wolter_2007",
-            "issued": {
-                "date-parts": [
-                    [
-                        2007
-                    ]
-                ]
-            },
-            "publisher": "Springer Science; Business Media",
-            "title": "Introduction to variance estimation",
-            "type": "book"
-        },
-        {
             "ISBN": "978-0-471-18386-0",
             "author": [
                 {
@@ -3847,30 +3945,6 @@
             "type": ""
         },
         {
-            "ISBN": "978-0-471-13773-3",
-            "author": [
-                {
-                    "family": "Korn",
-                    "given": "Edward Lee"
-                },
-                {
-                    "family": "Graubard",
-                    "given": "Barry I."
-                }
-            ],
-            "id": "Korn_Graubard_1999",
-            "issued": {
-                "date-parts": [
-                    [
-                        1999
-                    ]
-                ]
-            },
-            "publisher": "Wiley",
-            "title": "Analysis of health surveys",
-            "type": "book"
-        },
-        {
             "URL": "https://www.R-project.org/",
             "author": [
                 {
@@ -4225,27 +4299,6 @@
             "title": "Incorporating complex sample design effects when only final survey weights are available",
             "type": "article-journal",
             "volume": "12"
-        },
-        {
-            "ISBN": "978-0-387-35099-8",
-            "author": [
-                {
-                    "family": "Wolter",
-                    "given": "Kirk"
-                }
-            ],
-            "id": "Wolter_2007",
-            "issued": {
-                "date-parts": [
-                    [
-                        2007
-                    ]
-                ]
-            },
-            "note": "Google-Books-ID: Cf8CUMB0vUsC",
-            "publisher": "Springer Science; Business Media",
-            "title": "Introduction to variance estimation",
-            "type": "book"
         }
     ],
     "project_biblios": [

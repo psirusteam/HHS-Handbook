@@ -16,6 +16,24 @@
  @article{Lemaitre_Dufour_1987, title={An integrated method for weighting persons and families}, volume={13}, number={2}, journal={Survey Methodology}, author={Lemaitre, G and Dufour, Johane}, year={1987} }
 
  @article{Neethling_Galpin_2006, title={Weighting of Household Survey Data: A Comparison of Various Calibration, Integrated and Cosmetic Estimators}, abstractNote={This paper compares the bias and efficiencies of different estimation techniques aimed at creating a unique set of case weights, which can be used to estimate characteristics for both person and household variables in a household sampling survey. The resulting estimates are compatible with external population information and thus attempt to correct for differential non-response (i.e. underrepresentation of certain parts of the population). The existing techniques of calibration and integrated weighting and cosmetic estimators are combined and modified to give improved weighted estimators. The theoretical properties of these estimators are outlined, and the performance of the estimators is investigated via simulation studies and by application to a data set. The effect of using auxiliary information on persons only, or on both persons and households, is evaluated. The performance of the estimators under condition of differential non-response has been simulated by using unequal probability sampling to mimic such conditions.}, journal={South African Statistical Journal}, author={Neethling, A and Galpin, J S}, year={2006}, pages={23} }
+ 
+ @article{Quenouille,
+ author = {M. H. Quenouille},
+ journal = {Biometrika},
+ number = {3/4},
+ pages = {353--360},
+ publisher = {[Oxford University Press, Biometrika Trust]},
+ title = {Notes on Bias in Estimation},
+ volume = {43},
+ year = {1956}
+}
+
+@book{mosteller1968data,
+  title={Data Analysis, Including Statistics},
+  author={Mosteller, F.},
+  url={https://books.google.cl/books?id=6ptDHQAACAAJ},
+  year={1968}
+}
 
 
   @book{Wolter_2007, place={New York}, edition={2nd ed}, series={Statistics for social and behavioral sciences}, title={Introduction to variance estimation}, ISBN={978-0-387-32917-8}, publisher={Springer}, author={Wolter, Kirk M.}, year={2007}, collection={Statistics for social and behavioral sciences} }
@@ -97,12 +115,40 @@
     url = {https://CRAN.R-project.org/package=sampling},
   }
 
+@Book{EfroTibs93,
+  Title                    = {An Introduction to the Bootstrap},
+  Author                   = {Bradley Efron and Robert J. Tibshirani},
+  Publisher                = {Chapman \& Hall/CRC},
+  Year                     = {1993},
+
+  Address                  = {Boca Raton, Florida, USA},
+  Number                   = {57},
+  Series                   = {Monographs on Statistics and Applied Probability}
+}
+
+ @article{Rao_Wu_1988, title={Resampling Inference with Complex Survey Data}, volume={83}, ISSN={0162-1459}, DOI={10.1080/01621459.1988.10478591}, number={401}, journal={Journal of the American Statistical Association}, author={Rao, J. N. K. and Wu, C. F. J.}, year={1988}, month={Mar}, pages={231–241} }
+
+ @article{Preston_2009, title={Rescaled bootstrap for stratified multistage sampling}, volume={35}, abstractNote={In large scaled sample surveys it is common practice to employ stratified multistage designs where units are selected using simple random sampling without replacement at each stage. Variance estimation for these types of designs can be quite cumbersome to implement, particularly for non-linear estimators. Various bootstrap methods for variance estimation have been proposed, but most of these are restricted to single-stage designs or two-stage cluster designs. An extension of the rescaled bootstrap method (Rao and Wu 1988) to stratified multistage designs is proposed which can easily be extended to any number of stages. The proposed method is suitable for a wide range of reweighting techniques, including the general class of calibration estimators. A Monte Carlo simulation study was conducted to examine the performance of the proposed multistage rescaled bootstrap variance estimator.}, number={2}, journal={Survey Methodology}, author={Preston, John}, year={2009}, pages={227–234} }
+
+
+
+@inproceedings{Rao_Wu_1984, title={BOOTSTRAP INFERENCE FOR SAMPLE SURVEYS}, booktitle={Procedings of the Survey Research Methods Section}, publisher={American Statistical Association}, author={Rao, J. N. K. and Wu, C. F. J.}, year={1984}, pages={106-112} }
+
 
  @book{Valliant_Dever_2017, edition={1 edition}, title={Survey Weights: A Step-by-step Guide to Calculation}, abstractNote={Survey Weights: A Step-by-Step Guide to Calculation, by Richard Valliant and Jill Dever, is an excellent reference for survey data analysts and researchers. This book details the reasons for weighting and shows how to perform different weight-adjustment methods in Stata.Topics covered include nonresponse, weight adjustment and calibration, linearized and replication-based variance estimation, multiple weights, two-phase sampling, composite estimation, and quality control when computing your own survey weights.The authors assume familiarity with Stata and some applied sampling experience and knowledge of “lite” theory, such as the concepts of with-replacement versus without-replacement sampling and single- versus multistage designs.}, publisher={Stata Press}, author={Valliant, Richard and Dever, Jill A.}, year={2017}, month={Dec} }
 
+@book{shao2012jackknife,
+  title={The Jackknife and Bootstrap},
+  author={Shao, J. and Tu, D.},
+  isbn={9781461207955},
+  lccn={95015074},
+  series={Springer Series in Statistics},
+  year={2012},
+  publisher={Springer New York}
+}
+
+
  @inproceedings{Potter_1993, title={The Effect of Weight Trimming on Nonlinear Survey Estimates}, booktitle={Procedings of the Survey Research Methods Section}, publisher={American Statistical Association}, author={Potter, Frank J}, year={1993}, pages={758–763} }
- 
-  @book{Wolter_2007, place={New York}, edition={2nd ed}, series={Statistics for social and behavioral sciences}, title={Introduction to variance estimation}, ISBN={978-0-387-32917-8}, publisher={Springer}, author={Wolter, Kirk M.}, year={2007}, collection={Statistics for social and behavioral sciences} }
 
 @article{Gutierrez_2014, title={The estimation of gross flows in complex surveys with random nonresponse}, volume={40}, number={2}, journal={Survey Methodology}, author={Gutiérrez, H. A.}, year={2014}, pages={285–321} }
 
@@ -406,10 +452,6 @@ Population},
 
  @article{Krewski_Rao_1981, title={Inference From Stratified Samples: Properties of the Linearization, Jackknife and Balanced Repeated Replication Methods}, volume={9}, ISSN={0090-5364}, number={5}, journal={The Annals of Statistics}, author={Krewski, D. and Rao, J. N. K.}, year={1981}, pages={1010–1019}}
 
- @article{Rao_Wu_1988, title={Resampling Inference with Complex Survey Data}, volume={83}, ISSN={0162-1459}, DOI={10.1080/01621459.1988.10478591}, number={401}, journal={Journal of the American Statistical Association}, author={Rao, J. N. K. and Wu, C. F. J.}, year={1988}, month={Mar}, pages={231–241}}
-
- @book{Wolter_2007, title={Introduction to Variance Estimation}, ISBN={978-0-387-35099-8}, publisher={Springer Science and Business Media}, author={Wolter, Kirk}, year={2007}}
-
  @book{Little_Rubin_2002, place={Hoboken, NJ}, edition={2. ed}, series={Wiley series in probability and statistics}, title={Statistical analysis with missing data}, ISBN={978-0-471-18386-0}, publisher={Wiley}, author={Little, Roderick J. A. and Rubin, Donald B.}, year={2002}, collection={Wiley series in probability and statistics}}
 
  @article{Kim_Riddles_2012, title={Some theory for propensity-score-adjustment estimators in survey sampling}, volume={38}, number={2}, journal={Survey Methodology}, author={Kim, Jae Kwang and Riddles, Minsun Kim}, year={2012}, pages={157–165}}
@@ -510,8 +552,6 @@ Population},
     note = {R package version 3.32},
   }
 
- @book{Korn_Graubard_1999, place={New York, N.Y.}, title={Analysis of health surveys}, ISBN={978-0-471-13773-3}, publisher={Wiley}, author={Korn, Edward Lee and Graubard, Barry I.}, year={1999} }
- 
  @Manual{R_2019,
     title = {R: A Language and Environment for Statistical Computing},
     author = {{R Core Team}},
@@ -561,5 +601,3 @@ Population},
   @book{Lumley_2010, place={Hoboken, NJ}, series={Wiley series in survey methodology}, title={Complex surveys: a guide to analysis using R}, ISBN={978-0-470-28430-8}, publisher={Wiley}, author={Lumley, Thomas}, year={2010}, collection={Wiley series in survey methodology} }
   
     @article{West_McCabe_2012, title={Incorporating complex sample design effects when only final survey weights are available}, volume={12}, number={4}, journal={The Stata Journal}, author={West, Brady T. and McCabe, Sean Esteban}, year={2012}, pages={718–725} }
-
-  @book{Wolter_2007, title={Introduction to Variance Estimation}, ISBN={978-0-387-35099-8}, note={Google-Books-ID: Cf8CUMB0vUsC}, publisher={Springer Science and Business Media}, author={Wolter, Kirk}, year={2007} }

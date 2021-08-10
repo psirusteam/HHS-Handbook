@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  9 AUG 2021 19:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  10 AUG 2021 14:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -647,40 +647,51 @@ LaTeX Info: Redefining \% on input line 126.
 ] (./DiseÃ±o-y-anÃ¡lisis-de-encuestas-de-hogares.lof
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
-[9])
+
+Underfull \vbox (badness 4660) has occurred while \output is active []
+
+[9]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 54.
+LaTeX Info: Redefining \% on input line 54.
+[10])
 \tf@lof=\write5
 \openout5 = `DiseÃ±o-y-anÃ¡lisis-de-encuestas-de-hogares.lof'.
 
 LaTeX Info: Redefining \. on input line 128.
 LaTeX Info: Redefining \% on input line 128.
-[10]
-<Pics/CClicence.png, id=339, 97.0827pt x 33.9669pt>
+[11]
+LaTeX Info: Redefining \. on input line 128.
+LaTeX Info: Redefining \% on input line 128.
+[12
+
+]
+<Pics/CClicence.png, id=367, 97.0827pt x 33.9669pt>
 File: Pics/CClicence.png Graphic file (type png)
 <use Pics/CClicence.png>
 Package pdftex.def Info: Pics/CClicence.png  used on input line 132.
 (pdftex.def)             Requested size: 97.08688pt x 33.96835pt.
-[11
-
- <./Pics/CClicence.png>]
+[13 <./Pics/CClicence.png>]
 LaTeX Info: Redefining \. on input line 140.
 LaTeX Info: Redefining \% on input line 140.
-[12
+[14
 
-] [13]
+] [15]
 LaTeX Info: Redefining \. on input line 148.
 LaTeX Info: Redefining \% on input line 148.
-[14
+[16
 
 ]
 Cap\'{\i }tulo 1.
-[15]
+[17]
 LaTeX Info: Redefining \. on input line 186.
 LaTeX Info: Redefining \% on input line 186.
-[16] [17]
+[18] [19]
 LaTeX Info: Redefining \. on input line 221.
 LaTeX Info: Redefining \% on input line 221.
-[18]
-<Pics/Intro.png, id=426, 1325.95375pt x 1308.89pt>
+[20]
+<Pics/Intro.png, id=454, 1325.95375pt x 1308.89pt>
 File: Pics/Intro.png Graphic file (type png)
 <use Pics/Intro.png>
 Package pdftex.def Info: Pics/Intro.png  used on input line 229.
@@ -693,27 +704,27 @@ Overfull \hbox (212.1598pt too wide) in paragraph at lines 229--229
 
 LaTeX Warning: Float too large for page by 35.93411pt on input line 230.
 
-[19]
+[21]
 LaTeX Info: Redefining \. on input line 233.
 LaTeX Info: Redefining \% on input line 233.
-[20 <./Pics/Intro.png>] [21]
+[22 <./Pics/Intro.png>] [23]
 LaTeX Info: Redefining \. on input line 237.
 LaTeX Info: Redefining \% on input line 237.
-[22
+[24
 
-] [23] [24]
+] [25] [26]
 Cap\'{\i }tulo 2.
-<Pics/Picture9.png, id=461, 677.4108pt x 352.6776pt>
+<Pics/Picture9.png, id=490, 677.4108pt x 352.6776pt>
 File: Pics/Picture9.png Graphic file (type png)
 <use Pics/Picture9.png>
 Package pdftex.def Info: Pics/Picture9.png  used on input line 257.
 (pdftex.def)             Requested size: 344.99947pt x 179.61565pt.
-[25
+[27
 
 ]
 LaTeX Info: Redefining \. on input line 282.
 LaTeX Info: Redefining \% on input line 282.
-[26 <./Pics/Picture9.png>]
+[28 <./Pics/Picture9.png>]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
 05.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/lm/t1lmtt.fd
@@ -789,7 +800,7 @@ abajando en una encuesta de criminalidad.[]
 
 LaTeX Info: Redefining \. on input line 327.
 LaTeX Info: Redefining \% on input line 327.
-[27]
+[29]
 Overfull \hbox (605.24724pt too wide) in paragraph at lines 327--327
 []\T1/lmtt/m/n/10 - Distintas respuestas a distintos entrevistadores. En alguna
 s regiones es muy probable que la raza, edad o género del encuestador afecte di
@@ -813,8 +824,8 @@ ernet no proporcionan información confiable.[]
 
 LaTeX Info: Redefining \. on input line 359.
 LaTeX Info: Redefining \% on input line 359.
-[28]
-<Pics/Picture6.png, id=517, 590.6868pt x 333.4056pt>
+[30]
+<Pics/Picture6.png, id=544, 590.6868pt x 333.4056pt>
 File: Pics/Picture6.png Graphic file (type png)
 <use Pics/Picture6.png>
 Package pdftex.def Info: Pics/Picture6.png  used on input line 376.
@@ -836,18 +847,18 @@ Underfull \vbox (badness 5607) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 379.
 LaTeX Info: Redefining \% on input line 379.
-[29]
+[31]
 LaTeX Info: Redefining \. on input line 402.
 LaTeX Info: Redefining \% on input line 402.
-[30 <./Pics/Picture6.png>]
+[32 <./Pics/Picture6.png>]
 LaTeX Info: Redefining \. on input line 439.
 LaTeX Info: Redefining \% on input line 439.
-[31]
+[33]
 Underfull \vbox (badness 1077) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 484.
 LaTeX Info: Redefining \% on input line 484.
-[32]
+[34]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 5
 13.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/lm/ts1lmr.fd
@@ -857,32 +868,32 @@ Underfull \vbox (badness 2573) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 537.
 LaTeX Info: Redefining \% on input line 537.
-[33]
+[35]
 LaTeX Info: Redefining \. on input line 580.
 LaTeX Info: Redefining \% on input line 580.
-[34]
+[36]
 LaTeX Info: Redefining \. on input line 613.
 LaTeX Info: Redefining \% on input line 613.
-[35]
+[37]
 LaTeX Info: Redefining \. on input line 643.
 LaTeX Info: Redefining \% on input line 643.
-[36]
+[38]
 LaTeX Info: Redefining \. on input line 647.
 LaTeX Info: Redefining \% on input line 647.
-[37]
+[39]
 LaTeX Info: Redefining \. on input line 647.
 LaTeX Info: Redefining \% on input line 647.
-[38
+[40
 
 ]
 Cap\'{\i }tulo 3.
-[39]
+[41]
 LaTeX Info: Redefining \. on input line 666.
 LaTeX Info: Redefining \% on input line 666.
-[40]
+[42]
 LaTeX Info: Redefining \. on input line 675.
 LaTeX Info: Redefining \% on input line 675.
-[41]
+[43]
 Overfull \hbox (14.58044pt too wide) in alignment at lines 676--681
  [] [] [] [] [] [] [] 
  []
@@ -914,7 +925,7 @@ Overfull \hbox (14.58044pt too wide) in alignment at lines 709--717
 
 LaTeX Info: Redefining \. on input line 723.
 LaTeX Info: Redefining \% on input line 723.
-[42]
+[44]
 Overfull \hbox (14.58044pt too wide) in alignment at lines 724--729
  [] [] [] [] [] [] [] 
  []
@@ -946,7 +957,7 @@ Overfull \hbox (14.58044pt too wide) in alignment at lines 757--766
 
 LaTeX Info: Redefining \. on input line 766.
 LaTeX Info: Redefining \% on input line 766.
-[43]
+[45]
 Overfull \hbox (14.58044pt too wide) in alignment at lines 773--778
  [] [] [] [] [] [] [] 
  []
@@ -963,121 +974,121 @@ Overfull \hbox (14.58044pt too wide) in alignment at lines 782--792
 
 LaTeX Info: Redefining \. on input line 798.
 LaTeX Info: Redefining \% on input line 798.
-[44]
+[46]
 LaTeX Info: Redefining \. on input line 836.
 LaTeX Info: Redefining \% on input line 836.
-[45]
+[47]
 LaTeX Info: Redefining \. on input line 867.
 LaTeX Info: Redefining \% on input line 867.
-[46]
+[48]
 LaTeX Info: Redefining \. on input line 877.
 LaTeX Info: Redefining \% on input line 877.
-[47]
+[49]
 LaTeX Info: Redefining \. on input line 916.
 LaTeX Info: Redefining \% on input line 916.
-[48]
+[50]
 LaTeX Info: Redefining \. on input line 931.
 LaTeX Info: Redefining \% on input line 931.
-[49]
+[51]
 LaTeX Info: Redefining \. on input line 948.
 LaTeX Info: Redefining \% on input line 948.
-[50]
+[52]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 978.
 LaTeX Info: Redefining \% on input line 978.
-[51]
+[53]
 LaTeX Info: Redefining \. on input line 990.
 LaTeX Info: Redefining \% on input line 990.
-[52]
+[54]
 LaTeX Info: Redefining \. on input line 997.
 LaTeX Info: Redefining \% on input line 997.
-[53]
+[55]
 LaTeX Info: Redefining \. on input line 997.
 LaTeX Info: Redefining \% on input line 997.
-[54
+[56
 
 ]
 Cap\'{\i }tulo 4.
-[55]
+[57]
 LaTeX Info: Redefining \. on input line 1030.
 LaTeX Info: Redefining \% on input line 1030.
-[56]
+[58]
 LaTeX Info: Redefining \. on input line 1061.
 LaTeX Info: Redefining \% on input line 1061.
-[57]
+[59]
 LaTeX Info: Redefining \. on input line 1068.
 LaTeX Info: Redefining \% on input line 1068.
-[58]
+[60]
 LaTeX Info: Redefining \. on input line 1074.
 LaTeX Info: Redefining \% on input line 1074.
-[59]
+[61]
 LaTeX Info: Redefining \. on input line 1080.
 LaTeX Info: Redefining \% on input line 1080.
-[60]
+[62]
 LaTeX Info: Redefining \. on input line 1098.
 LaTeX Info: Redefining \% on input line 1098.
-[61]
+[63]
 LaTeX Info: Redefining \. on input line 1113.
 LaTeX Info: Redefining \% on input line 1113.
-[62]
+[64]
 LaTeX Info: Redefining \. on input line 1141.
 LaTeX Info: Redefining \% on input line 1141.
-[63]
+[65]
 LaTeX Info: Redefining \. on input line 1160.
 LaTeX Info: Redefining \% on input line 1160.
-[64]
+[66]
 LaTeX Info: Redefining \. on input line 1171.
 LaTeX Info: Redefining \% on input line 1171.
-[65]
+[67]
 LaTeX Info: Redefining \. on input line 1171.
 LaTeX Info: Redefining \% on input line 1171.
-[66
+[68
 
 ]
 Cap\'{\i }tulo 5.
-[67]
+[69]
 LaTeX Info: Redefining \. on input line 1202.
 LaTeX Info: Redefining \% on input line 1202.
-[68]
+[70]
 LaTeX Info: Redefining \. on input line 1216.
 LaTeX Info: Redefining \% on input line 1216.
-[69]
+[71]
 LaTeX Info: Redefining \. on input line 1240.
 LaTeX Info: Redefining \% on input line 1240.
-[70]
+[72]
 LaTeX Info: Redefining \. on input line 1251.
 LaTeX Info: Redefining \% on input line 1251.
-[71]
+[73]
 LaTeX Info: Redefining \. on input line 1269.
 LaTeX Info: Redefining \% on input line 1269.
-[72]
+[74]
 LaTeX Info: Redefining \. on input line 1281.
 LaTeX Info: Redefining \% on input line 1281.
-[73]
-<04Estratificar_files/figure-latex/unnamed-chunk-1-1.pdf, id=878, 422.57875pt x
+[75]
+<05Estratificar_files/figure-latex/unnamed-chunk-1-1.pdf, id=905, 422.57875pt x
  174.6525pt>
-File: 04Estratificar_files/figure-latex/unnamed-chunk-1-1.pdf Graphic file (typ
+File: 05Estratificar_files/figure-latex/unnamed-chunk-1-1.pdf Graphic file (typ
 e pdf)
-<use 04Estratificar_files/figure-latex/unnamed-chunk-1-1.pdf>
-Package pdftex.def Info: 04Estratificar_files/figure-latex/unnamed-chunk-1-1.pd
+<use 05Estratificar_files/figure-latex/unnamed-chunk-1-1.pdf>
+Package pdftex.def Info: 05Estratificar_files/figure-latex/unnamed-chunk-1-1.pd
 f  used on input line 1287.
 (pdftex.def)             Requested size: 345.00798pt x 142.59236pt.
 LaTeX Info: Redefining \. on input line 1310.
 LaTeX Info: Redefining \% on input line 1310.
-[74 <./04Estratificar_files/figure-latex/unnamed-chunk-1-1.pdf>]
+[76 <./05Estratificar_files/figure-latex/unnamed-chunk-1-1.pdf>]
 LaTeX Info: Redefining \. on input line 1339.
 LaTeX Info: Redefining \% on input line 1339.
 
 Overfull \hbox (45.20146pt too wide) has occurred while \output is active
 \T1/lmr/m/sl/10 IV.  METODOLOGÍAS MULTIVARIADAS SOBRE LA MATRIZ DE INFORMACIÓN 
-\T1/lmr/m/n/10 75
+\T1/lmr/m/n/10 77
  []
 
-[75]
+[77]
 LaTeX Info: Redefining \. on input line 1362.
 LaTeX Info: Redefining \% on input line 1362.
-[76]
+[78]
 Overfull \hbox (6.81096pt too wide) in paragraph at lines 1389--1389
  []|\T1/lmr/m/n/8 (-20) DEFF|
  []
@@ -1324,11 +1335,11 @@ Overfull \hbox (4.027pt too wide) in alignment at lines 1395--1406
 
 LaTeX Info: Redefining \. on input line 1406.
 LaTeX Info: Redefining \% on input line 1406.
-[77]
+[79]
 LaTeX Info: Redefining \. on input line 1430.
 LaTeX Info: Redefining \% on input line 1430.
-[78]
-<Pics/Estratificar.png, id=951, 1740.5025pt x 806.01125pt>
+[80]
+<Pics/Estratificar.png, id=980, 1740.5025pt x 806.01125pt>
 File: Pics/Estratificar.png Graphic file (type png)
 <use Pics/Estratificar.png>
 Package pdftex.def Info: Pics/Estratificar.png  used on input line 1432.
@@ -1340,34 +1351,22 @@ Overfull \hbox (458.00453pt too wide) in paragraph at lines 1432--1432
 
 LaTeX Info: Redefining \. on input line 1453.
 LaTeX Info: Redefining \% on input line 1453.
-[79]
+[81]
 LaTeX Info: Redefining \. on input line 1453.
 LaTeX Info: Redefining \% on input line 1453.
-[80 <./Pics/Estratificar.png>]
+[82 <./Pics/Estratificar.png>]
 LaTeX Info: Redefining \. on input line 1461.
 LaTeX Info: Redefining \% on input line 1461.
-[81]
+[83]
 LaTeX Info: Redefining \. on input line 1461.
 LaTeX Info: Redefining \% on input line 1461.
-[82
+[84
 
 ]
 Cap\'{\i }tulo 6.
-[83]
+[85]
 LaTeX Info: Redefining \. on input line 1484.
 LaTeX Info: Redefining \% on input line 1484.
-
-Overfull \hbox (12.0817pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 84 \T1/lmr/m/sl/10 CAPÍTULO 6.  DISEÑO Y MECANISMO DE SELECCIÓN 
-DE LA MUESTRA
- []
-
-[84]
-LaTeX Info: Redefining \. on input line 1493.
-LaTeX Info: Redefining \% on input line 1493.
-[85]
-LaTeX Info: Redefining \. on input line 1517.
-LaTeX Info: Redefining \% on input line 1517.
 
 Overfull \hbox (12.0817pt too wide) has occurred while \output is active
 \T1/lmr/m/n/10 86 \T1/lmr/m/sl/10 CAPÍTULO 6.  DISEÑO Y MECANISMO DE SELECCIÓN 
@@ -1375,11 +1374,11 @@ DE LA MUESTRA
  []
 
 [86]
-LaTeX Info: Redefining \. on input line 1537.
-LaTeX Info: Redefining \% on input line 1537.
+LaTeX Info: Redefining \. on input line 1493.
+LaTeX Info: Redefining \% on input line 1493.
 [87]
-LaTeX Info: Redefining \. on input line 1551.
-LaTeX Info: Redefining \% on input line 1551.
+LaTeX Info: Redefining \. on input line 1517.
+LaTeX Info: Redefining \% on input line 1517.
 
 Overfull \hbox (12.0817pt too wide) has occurred while \output is active
 \T1/lmr/m/n/10 88 \T1/lmr/m/sl/10 CAPÍTULO 6.  DISEÑO Y MECANISMO DE SELECCIÓN 
@@ -1387,11 +1386,11 @@ DE LA MUESTRA
  []
 
 [88]
-LaTeX Info: Redefining \. on input line 1567.
-LaTeX Info: Redefining \% on input line 1567.
+LaTeX Info: Redefining \. on input line 1537.
+LaTeX Info: Redefining \% on input line 1537.
 [89]
-LaTeX Info: Redefining \. on input line 1577.
-LaTeX Info: Redefining \% on input line 1577.
+LaTeX Info: Redefining \. on input line 1551.
+LaTeX Info: Redefining \% on input line 1551.
 
 Overfull \hbox (12.0817pt too wide) has occurred while \output is active
 \T1/lmr/m/n/10 90 \T1/lmr/m/sl/10 CAPÍTULO 6.  DISEÑO Y MECANISMO DE SELECCIÓN 
@@ -1399,11 +1398,11 @@ DE LA MUESTRA
  []
 
 [90]
-LaTeX Info: Redefining \. on input line 1593.
-LaTeX Info: Redefining \% on input line 1593.
+LaTeX Info: Redefining \. on input line 1567.
+LaTeX Info: Redefining \% on input line 1567.
 [91]
-LaTeX Info: Redefining \. on input line 1612.
-LaTeX Info: Redefining \% on input line 1612.
+LaTeX Info: Redefining \. on input line 1577.
+LaTeX Info: Redefining \% on input line 1577.
 
 Overfull \hbox (12.0817pt too wide) has occurred while \output is active
 \T1/lmr/m/n/10 92 \T1/lmr/m/sl/10 CAPÍTULO 6.  DISEÑO Y MECANISMO DE SELECCIÓN 
@@ -1411,13 +1410,11 @@ DE LA MUESTRA
  []
 
 [92]
-LaTeX Info: Redefining \. on input line 1624.
-LaTeX Info: Redefining \% on input line 1624.
+LaTeX Info: Redefining \. on input line 1593.
+LaTeX Info: Redefining \% on input line 1593.
 [93]
-Underfull \vbox (badness 1014) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 1647.
-LaTeX Info: Redefining \% on input line 1647.
+LaTeX Info: Redefining \. on input line 1612.
+LaTeX Info: Redefining \% on input line 1612.
 
 Overfull \hbox (12.0817pt too wide) has occurred while \output is active
 \T1/lmr/m/n/10 94 \T1/lmr/m/sl/10 CAPÍTULO 6.  DISEÑO Y MECANISMO DE SELECCIÓN 
@@ -1425,17 +1422,13 @@ DE LA MUESTRA
  []
 
 [94]
-LaTeX Info: Redefining \. on input line 1667.
-LaTeX Info: Redefining \% on input line 1667.
-
-Overfull \hbox (37.1414pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10 II.  EL DISEÑO DE MUESTREO ESTÁNDAR EN UNA ENCUESTA DE HOGARES 
-\T1/lmr/m/n/10 95
- []
-
+LaTeX Info: Redefining \. on input line 1624.
+LaTeX Info: Redefining \% on input line 1624.
 [95]
-LaTeX Info: Redefining \. on input line 1689.
-LaTeX Info: Redefining \% on input line 1689.
+Underfull \vbox (badness 1014) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 1647.
+LaTeX Info: Redefining \% on input line 1647.
 
 Overfull \hbox (12.0817pt too wide) has occurred while \output is active
 \T1/lmr/m/n/10 96 \T1/lmr/m/sl/10 CAPÍTULO 6.  DISEÑO Y MECANISMO DE SELECCIÓN 
@@ -1443,8 +1436,8 @@ DE LA MUESTRA
  []
 
 [96]
-LaTeX Info: Redefining \. on input line 1693.
-LaTeX Info: Redefining \% on input line 1693.
+LaTeX Info: Redefining \. on input line 1667.
+LaTeX Info: Redefining \% on input line 1667.
 
 Overfull \hbox (37.1414pt too wide) has occurred while \output is active
 \T1/lmr/m/sl/10 II.  EL DISEÑO DE MUESTREO ESTÁNDAR EN UNA ENCUESTA DE HOGARES 
@@ -1452,85 +1445,103 @@ Overfull \hbox (37.1414pt too wide) has occurred while \output is active
  []
 
 [97]
-LaTeX Info: Redefining \. on input line 1693.
-LaTeX Info: Redefining \% on input line 1693.
+LaTeX Info: Redefining \. on input line 1689.
+LaTeX Info: Redefining \% on input line 1689.
 
 Overfull \hbox (12.0817pt too wide) has occurred while \output is active
 \T1/lmr/m/n/10 98 \T1/lmr/m/sl/10 CAPÍTULO 6.  DISEÑO Y MECANISMO DE SELECCIÓN 
 DE LA MUESTRA
  []
 
-[98
+[98]
+LaTeX Info: Redefining \. on input line 1693.
+LaTeX Info: Redefining \% on input line 1693.
+
+Overfull \hbox (37.1414pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/10 II.  EL DISEÑO DE MUESTREO ESTÁNDAR EN UNA ENCUESTA DE HOGARES 
+\T1/lmr/m/n/10 99
+ []
+
+[99]
+LaTeX Info: Redefining \. on input line 1693.
+LaTeX Info: Redefining \% on input line 1693.
+
+Overfull \hbox (17.0817pt too wide) has occurred while \output is active
+\T1/lmr/m/n/10 100 \T1/lmr/m/sl/10 CAPÍTULO 6.  DISEÑO Y MECANISMO DE SELECCIÓN
+ DE LA MUESTRA
+ []
+
+[100
 
 ]
 Cap\'{\i }tulo 7.
-[99]
+[101]
 LaTeX Info: Redefining \. on input line 1741.
 LaTeX Info: Redefining \% on input line 1741.
-[100]
+[102]
 LaTeX Info: Redefining \. on input line 1763.
 LaTeX Info: Redefining \% on input line 1763.
 
 Overfull \hbox (74.36397pt too wide) has occurred while \output is active
 \T1/lmr/m/sl/10 II.  DESCOMPOSICIÓN DEL EFECTO DE DISEÑO EN LAS ENCUESTAS DE HO
-GARES \T1/lmr/m/n/10 101
+GARES \T1/lmr/m/n/10 103
  []
 
-[101]
+[103]
 LaTeX Info: Redefining \. on input line 1793.
 LaTeX Info: Redefining \% on input line 1793.
-[102]
+[104]
 Underfull \vbox (badness 1005) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 1828.
 LaTeX Info: Redefining \% on input line 1828.
-[103]
+[105]
 LaTeX Info: Redefining \. on input line 1851.
 LaTeX Info: Redefining \% on input line 1851.
-[104]
+[106]
 LaTeX Info: Redefining \. on input line 1885.
 LaTeX Info: Redefining \% on input line 1885.
-[105]
+[107]
 LaTeX Info: Redefining \. on input line 1909.
 LaTeX Info: Redefining \% on input line 1909.
-[106]
+[108]
 LaTeX Info: Redefining \. on input line 1917.
 LaTeX Info: Redefining \% on input line 1917.
-[107]
+[109]
 LaTeX Info: Redefining \. on input line 1917.
 LaTeX Info: Redefining \% on input line 1917.
-[108
+[110
 
 ]
 Cap\'{\i }tulo 8.
 
 Underfull \vbox (badness 2134) has occurred while \output is active []
 
-[109]
+[111]
 LaTeX Info: Redefining \. on input line 1966.
 LaTeX Info: Redefining \% on input line 1966.
-[110]
+[112]
 LaTeX Info: Redefining \. on input line 1978.
 LaTeX Info: Redefining \% on input line 1978.
 
 Overfull \hbox (65.26633pt too wide) has occurred while \output is active
 \T1/lmr/m/sl/10 II.  EL EFECTO DE DISEÑO EN LA DETERMINACIÓN DEL TAMAÑO DE MUES
-TRA \T1/lmr/m/n/10 111
+TRA \T1/lmr/m/n/10 113
  []
 
-[111]
+[113]
 LaTeX Info: Redefining \. on input line 2011.
 LaTeX Info: Redefining \% on input line 2011.
-[112]
+[114]
 LaTeX Info: Redefining \. on input line 2034.
 LaTeX Info: Redefining \% on input line 2034.
-[113]
+[115]
 LaTeX Info: Redefining \. on input line 2070.
 LaTeX Info: Redefining \% on input line 2070.
-[114]
+[116]
 LaTeX Info: Redefining \. on input line 2097.
 LaTeX Info: Redefining \% on input line 2097.
-[115]
+[117]
 Overfull \hbox (2.85278pt too wide) in alignment at lines 2128--2132
  [] [] [] [] [] [] 
  []
@@ -1542,7 +1553,7 @@ Overfull \hbox (2.85278pt too wide) in alignment at lines 2132--2135
 
 LaTeX Info: Redefining \. on input line 2138.
 LaTeX Info: Redefining \% on input line 2138.
-[116]
+[118]
 Overfull \hbox (2.85278pt too wide) in alignment at lines 2145--2149
  [] [] [] [] [] [] 
  []
@@ -1567,7 +1578,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 2188.
 LaTeX Info: Redefining \% on input line 2188.
-[117]
+[119]
 Overfull \hbox (2.85278pt too wide) in alignment at lines 2195--2199
  [] [] [] [] [] [] 
  []
@@ -1589,7 +1600,7 @@ Overfull \hbox (2.85278pt too wide) in alignment at lines 2231--2234
 
 LaTeX Info: Redefining \. on input line 2234.
 LaTeX Info: Redefining \% on input line 2234.
-[118]
+[120]
 Overfull \hbox (2.85278pt too wide) in alignment at lines 2244--2248
  [] [] [] [] [] [] 
  []
@@ -1601,200 +1612,184 @@ Overfull \hbox (2.85278pt too wide) in alignment at lines 2248--2258
 
 LaTeX Info: Redefining \. on input line 2271.
 LaTeX Info: Redefining \% on input line 2271.
-[119]
+[121]
 LaTeX Info: Redefining \. on input line 2310.
 LaTeX Info: Redefining \% on input line 2310.
-[120]
+[122]
 LaTeX Info: Redefining \. on input line 2341.
 LaTeX Info: Redefining \% on input line 2341.
-[121]
+[123]
 LaTeX Info: Redefining \. on input line 2383.
 LaTeX Info: Redefining \% on input line 2383.
-[122]
+[124]
 LaTeX Info: Redefining \. on input line 2426.
 LaTeX Info: Redefining \% on input line 2426.
-[123]
+[125]
 LaTeX Info: Redefining \. on input line 2473.
 LaTeX Info: Redefining \% on input line 2473.
-[124]
+[126]
 LaTeX Info: Redefining \. on input line 2521.
 LaTeX Info: Redefining \% on input line 2521.
-[125]
+[127]
 LaTeX Info: Redefining \. on input line 2563.
 LaTeX Info: Redefining \% on input line 2563.
-[126]
+[128]
 LaTeX Info: Redefining \. on input line 2608.
 LaTeX Info: Redefining \% on input line 2608.
-[127]
+[129]
 LaTeX Info: Redefining \. on input line 2643.
 LaTeX Info: Redefining \% on input line 2643.
-[128]
+[130]
 LaTeX Info: Redefining \. on input line 2672.
 LaTeX Info: Redefining \% on input line 2672.
-[129]
+[131]
 Overfull \hbox (35.63612pt too wide) detected at line 2700
 []
  []
 
 LaTeX Info: Redefining \. on input line 2700.
 LaTeX Info: Redefining \% on input line 2700.
-[130]
+[132]
 LaTeX Info: Redefining \. on input line 2726.
 LaTeX Info: Redefining \% on input line 2726.
-[131]
+[133]
 LaTeX Info: Redefining \. on input line 2746.
 LaTeX Info: Redefining \% on input line 2746.
-[132]
+[134]
 LaTeX Info: Redefining \. on input line 2761.
 LaTeX Info: Redefining \% on input line 2761.
-[133]
+[135]
 LaTeX Info: Redefining \. on input line 2769.
 LaTeX Info: Redefining \% on input line 2769.
-[134]
+[136]
 LaTeX Info: Redefining \. on input line 2772.
 LaTeX Info: Redefining \% on input line 2772.
-[135]
+[137]
 LaTeX Info: Redefining \. on input line 2772.
 LaTeX Info: Redefining \% on input line 2772.
-[136
+[138
 
-] [137] [138]
+] [139] [140]
 Cap\'{\i }tulo 9.
-[139
+[141
 
 ]
 LaTeX Info: Redefining \. on input line 2840.
 LaTeX Info: Redefining \% on input line 2840.
-[140]
+[142]
 LaTeX Info: Redefining \. on input line 2885.
 LaTeX Info: Redefining \% on input line 2885.
-[141]
-LaTeX Info: Redefining \. on input line 2925.
-LaTeX Info: Redefining \% on input line 2925.
-[142]
-LaTeX Info: Redefining \. on input line 2958.
-LaTeX Info: Redefining \% on input line 2958.
 [143]
-LaTeX Info: Redefining \. on input line 2992.
-LaTeX Info: Redefining \% on input line 2992.
+LaTeX Info: Redefining \. on input line 2920.
+LaTeX Info: Redefining \% on input line 2920.
 [144]
-LaTeX Info: Redefining \. on input line 3022.
-LaTeX Info: Redefining \% on input line 3022.
+LaTeX Info: Redefining \. on input line 2956.
+LaTeX Info: Redefining \% on input line 2956.
 [145]
-LaTeX Info: Redefining \. on input line 3032.
-LaTeX Info: Redefining \% on input line 3032.
+LaTeX Info: Redefining \. on input line 2986.
+LaTeX Info: Redefining \% on input line 2986.
 [146]
-Underfull \vbox (badness 2698) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 3060.
-LaTeX Info: Redefining \% on input line 3060.
+LaTeX Info: Redefining \. on input line 3021.
+LaTeX Info: Redefining \% on input line 3021.
 [147]
-LaTeX Info: Redefining \. on input line 3084.
-LaTeX Info: Redefining \% on input line 3084.
+LaTeX Info: Redefining \. on input line 3042.
+LaTeX Info: Redefining \% on input line 3042.
 [148]
-<Pics/c5.png, id=1512, 1445.4pt x 859.21pt>
+LaTeX Info: Redefining \. on input line 3052.
+LaTeX Info: Redefining \% on input line 3052.
+[149]
+LaTeX Info: Redefining \. on input line 3090.
+LaTeX Info: Redefining \% on input line 3090.
+[150]
+LaTeX Info: Redefining \. on input line 3110.
+LaTeX Info: Redefining \% on input line 3110.
+[151]
+<Pics/c5.png, id=1547, 1445.4pt x 859.21pt>
 File: Pics/c5.png Graphic file (type png)
 <use Pics/c5.png>
-Package pdftex.def Info: Pics/c5.png  used on input line 3104.
+Package pdftex.def Info: Pics/c5.png  used on input line 3116.
 (pdftex.def)             Requested size: 344.9843pt x 205.074pt.
-<Pics/c6.png, id=1513, 1445.4pt x 859.21pt>
+<Pics/c6.png, id=1548, 1445.4pt x 859.21pt>
 File: Pics/c6.png Graphic file (type png)
 <use Pics/c6.png>
-Package pdftex.def Info: Pics/c6.png  used on input line 3112.
+Package pdftex.def Info: Pics/c6.png  used on input line 3124.
 (pdftex.def)             Requested size: 344.9843pt x 205.074pt.
-<Pics/c7.png, id=1514, 1445.4pt x 859.21pt>
+<Pics/c7.png, id=1549, 1445.4pt x 859.21pt>
 File: Pics/c7.png Graphic file (type png)
 <use Pics/c7.png>
-Package pdftex.def Info: Pics/c7.png  used on input line 3120.
+Package pdftex.def Info: Pics/c7.png  used on input line 3132.
 (pdftex.def)             Requested size: 344.9843pt x 205.074pt.
-<Pics/c8.png, id=1515, 1445.4pt x 858.20625pt>
+LaTeX Info: Redefining \. on input line 3137.
+LaTeX Info: Redefining \% on input line 3137.
+[152 <./Pics/c5.png>]
+LaTeX Info: Redefining \. on input line 3137.
+LaTeX Info: Redefining \% on input line 3137.
+[153 <./Pics/c6.png> <./Pics/c7.png>]
+<Pics/c8.png, id=1562, 1445.4pt x 858.20625pt>
 File: Pics/c8.png Graphic file (type png)
 <use Pics/c8.png>
-Package pdftex.def Info: Pics/c8.png  used on input line 3128.
+Package pdftex.def Info: Pics/c8.png  used on input line 3140.
 (pdftex.def)             Requested size: 344.9843pt x 204.83443pt.
-LaTeX Info: Redefining \. on input line 3130.
-LaTeX Info: Redefining \% on input line 3130.
-[149]
-LaTeX Info: Redefining \. on input line 3130.
-LaTeX Info: Redefining \% on input line 3130.
-[150 <./Pics/c5.png> <./Pics/c6.png>]
-LaTeX Info: Redefining \. on input line 3146.
-LaTeX Info: Redefining \% on input line 3146.
-[151 <./Pics/c7.png>]
-LaTeX Info: Redefining \. on input line 3163.
-LaTeX Info: Redefining \% on input line 3163.
-[152 <./Pics/c8.png>]
-LaTeX Info: Redefining \. on input line 3187.
-LaTeX Info: Redefining \% on input line 3187.
-[153]
-LaTeX Info: Redefining \. on input line 3207.
-LaTeX Info: Redefining \% on input line 3207.
-[154]
-LaTeX Info: Redefining \. on input line 3215.
-LaTeX Info: Redefining \% on input line 3215.
+
+Underfull \vbox (badness 2753) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 3158.
+LaTeX Info: Redefining \% on input line 3158.
+[154 <./Pics/c8.png>]
+LaTeX Info: Redefining \. on input line 3185.
+LaTeX Info: Redefining \% on input line 3185.
 [155]
-LaTeX Info: Redefining \. on input line 3215.
-LaTeX Info: Redefining \% on input line 3215.
-[156
+LaTeX Info: Redefining \. on input line 3211.
+LaTeX Info: Redefining \% on input line 3211.
+[156]
+LaTeX Info: Redefining \. on input line 3223.
+LaTeX Info: Redefining \% on input line 3223.
+[157]
+LaTeX Info: Redefining \. on input line 3227.
+LaTeX Info: Redefining \% on input line 3227.
+[158]
+Cap\'{\i }tulo 10.
+[159
 
 ]
-Cap\'{\i }tulo 10.
-[157]
-LaTeX Info: Redefining \. on input line 3271.
-LaTeX Info: Redefining \% on input line 3271.
-
-Overfull \hbox (0.4164pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 158 \T1/lmr/m/sl/10 CAPÍTULO 10.  CONSTRUCCIÓN DE LOS FACTORES D
-E EXPANSIÓN
- []
-
-[158]
-<Pics/15.png, id=1607, 981.6675pt x 491.8375pt>
-File: Pics/15.png Graphic file (type png)
-<use Pics/15.png>
-Package pdftex.def Info: Pics/15.png  used on input line 3309.
-(pdftex.def)             Requested size: 344.9968pt x 172.85115pt.
-LaTeX Info: Redefining \. on input line 3317.
-LaTeX Info: Redefining \% on input line 3317.
-[159]
-Underfull \vbox (badness 2351) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 3324.
-LaTeX Info: Redefining \% on input line 3324.
+LaTeX Info: Redefining \. on input line 3283.
+LaTeX Info: Redefining \% on input line 3283.
 
 Overfull \hbox (0.4164pt too wide) has occurred while \output is active
 \T1/lmr/m/n/10 160 \T1/lmr/m/sl/10 CAPÍTULO 10.  CONSTRUCCIÓN DE LOS FACTORES D
 E EXPANSIÓN
  []
 
-[160 <./Pics/15.png>]
-<Pics/16.png, id=1627, 1025.8325pt x 514.92375pt>
-File: Pics/16.png Graphic file (type png)
-<use Pics/16.png>
-Package pdftex.def Info: Pics/16.png  used on input line 3333.
-(pdftex.def)             Requested size: 344.99043pt x 173.17033pt.
-LaTeX Info: Redefining \. on input line 3354.
-LaTeX Info: Redefining \% on input line 3354.
-[161 <./Pics/16.png>]
-LaTeX Info: Redefining \. on input line 3403.
-LaTeX Info: Redefining \% on input line 3403.
+[160]
+<Pics/15.png, id=1634, 981.6675pt x 491.8375pt>
+File: Pics/15.png Graphic file (type png)
+<use Pics/15.png>
+Package pdftex.def Info: Pics/15.png  used on input line 3321.
+(pdftex.def)             Requested size: 344.9968pt x 172.85115pt.
+LaTeX Info: Redefining \. on input line 3329.
+LaTeX Info: Redefining \% on input line 3329.
+[161]
+Underfull \vbox (badness 2351) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 3336.
+LaTeX Info: Redefining \% on input line 3336.
 
 Overfull \hbox (0.4164pt too wide) has occurred while \output is active
 \T1/lmr/m/n/10 162 \T1/lmr/m/sl/10 CAPÍTULO 10.  CONSTRUCCIÓN DE LOS FACTORES D
 E EXPANSIÓN
  []
 
-[162]
-<Pics/18.png, id=1644, 1021.8175pt x 512.91624pt>
-File: Pics/18.png Graphic file (type png)
-<use Pics/18.png>
-Package pdftex.def Info: Pics/18.png  used on input line 3416.
-(pdftex.def)             Requested size: 344.99664pt x 173.17612pt.
-LaTeX Info: Redefining \. on input line 3426.
-LaTeX Info: Redefining \% on input line 3426.
-[163 <./Pics/18.png>]
-LaTeX Info: Redefining \. on input line 3460.
-LaTeX Info: Redefining \% on input line 3460.
+[162 <./Pics/15.png>]
+<Pics/16.png, id=1654, 1025.8325pt x 514.92375pt>
+File: Pics/16.png Graphic file (type png)
+<use Pics/16.png>
+Package pdftex.def Info: Pics/16.png  used on input line 3345.
+(pdftex.def)             Requested size: 344.99043pt x 173.17033pt.
+LaTeX Info: Redefining \. on input line 3366.
+LaTeX Info: Redefining \% on input line 3366.
+[163 <./Pics/16.png>]
+LaTeX Info: Redefining \. on input line 3415.
+LaTeX Info: Redefining \% on input line 3415.
 
 Overfull \hbox (0.4164pt too wide) has occurred while \output is active
 \T1/lmr/m/n/10 164 \T1/lmr/m/sl/10 CAPÍTULO 10.  CONSTRUCCIÓN DE LOS FACTORES D
@@ -1802,40 +1797,45 @@ E EXPANSIÓN
  []
 
 [164]
-<Pics/17.png, id=1667, 1023.825pt x 512.91624pt>
-File: Pics/17.png Graphic file (type png)
-<use Pics/17.png>
-Package pdftex.def Info: Pics/17.png  used on input line 3495.
-(pdftex.def)             Requested size: 345.00267pt x 172.83957pt.
-LaTeX Info: Redefining \. on input line 3497.
-LaTeX Info: Redefining \% on input line 3497.
-[165]
-LaTeX Info: Redefining \. on input line 3512.
-LaTeX Info: Redefining \% on input line 3512.
+<Pics/18.png, id=1672, 1021.8175pt x 512.91624pt>
+File: Pics/18.png Graphic file (type png)
+<use Pics/18.png>
+Package pdftex.def Info: Pics/18.png  used on input line 3428.
+(pdftex.def)             Requested size: 344.99664pt x 173.17612pt.
+LaTeX Info: Redefining \. on input line 3438.
+LaTeX Info: Redefining \% on input line 3438.
+[165 <./Pics/18.png>]
+LaTeX Info: Redefining \. on input line 3472.
+LaTeX Info: Redefining \% on input line 3472.
 
 Overfull \hbox (0.4164pt too wide) has occurred while \output is active
 \T1/lmr/m/n/10 166 \T1/lmr/m/sl/10 CAPÍTULO 10.  CONSTRUCCIÓN DE LOS FACTORES D
 E EXPANSIÓN
  []
 
-[166 <./Pics/17.png>]
-LaTeX Info: Redefining \. on input line 3521.
-LaTeX Info: Redefining \% on input line 3521.
+[166]
+<Pics/17.png, id=1695, 1023.825pt x 512.91624pt>
+File: Pics/17.png Graphic file (type png)
+<use Pics/17.png>
+Package pdftex.def Info: Pics/17.png  used on input line 3507.
+(pdftex.def)             Requested size: 345.00267pt x 172.83957pt.
+LaTeX Info: Redefining \. on input line 3509.
+LaTeX Info: Redefining \% on input line 3509.
 [167]
-LaTeX Info: Redefining \. on input line 3548.
-LaTeX Info: Redefining \% on input line 3548.
+LaTeX Info: Redefining \. on input line 3524.
+LaTeX Info: Redefining \% on input line 3524.
 
 Overfull \hbox (0.4164pt too wide) has occurred while \output is active
 \T1/lmr/m/n/10 168 \T1/lmr/m/sl/10 CAPÍTULO 10.  CONSTRUCCIÓN DE LOS FACTORES D
 E EXPANSIÓN
  []
 
-[168]
-LaTeX Info: Redefining \. on input line 3574.
-LaTeX Info: Redefining \% on input line 3574.
+[168 <./Pics/17.png>]
+LaTeX Info: Redefining \. on input line 3533.
+LaTeX Info: Redefining \% on input line 3533.
 [169]
-LaTeX Info: Redefining \. on input line 3588.
-LaTeX Info: Redefining \% on input line 3588.
+LaTeX Info: Redefining \. on input line 3560.
+LaTeX Info: Redefining \% on input line 3560.
 
 Overfull \hbox (0.4164pt too wide) has occurred while \output is active
 \T1/lmr/m/n/10 170 \T1/lmr/m/sl/10 CAPÍTULO 10.  CONSTRUCCIÓN DE LOS FACTORES D
@@ -1843,11 +1843,11 @@ E EXPANSIÓN
  []
 
 [170]
-LaTeX Info: Redefining \. on input line 3609.
-LaTeX Info: Redefining \% on input line 3609.
+LaTeX Info: Redefining \. on input line 3586.
+LaTeX Info: Redefining \% on input line 3586.
 [171]
-LaTeX Info: Redefining \. on input line 3636.
-LaTeX Info: Redefining \% on input line 3636.
+LaTeX Info: Redefining \. on input line 3600.
+LaTeX Info: Redefining \% on input line 3600.
 
 Overfull \hbox (0.4164pt too wide) has occurred while \output is active
 \T1/lmr/m/n/10 172 \T1/lmr/m/sl/10 CAPÍTULO 10.  CONSTRUCCIÓN DE LOS FACTORES D
@@ -1855,11 +1855,11 @@ E EXPANSIÓN
  []
 
 [172]
-LaTeX Info: Redefining \. on input line 3663.
-LaTeX Info: Redefining \% on input line 3663.
+LaTeX Info: Redefining \. on input line 3621.
+LaTeX Info: Redefining \% on input line 3621.
 [173]
-LaTeX Info: Redefining \. on input line 3705.
-LaTeX Info: Redefining \% on input line 3705.
+LaTeX Info: Redefining \. on input line 3648.
+LaTeX Info: Redefining \% on input line 3648.
 
 Overfull \hbox (0.4164pt too wide) has occurred while \output is active
 \T1/lmr/m/n/10 174 \T1/lmr/m/sl/10 CAPÍTULO 10.  CONSTRUCCIÓN DE LOS FACTORES D
@@ -1867,11 +1867,11 @@ E EXPANSIÓN
  []
 
 [174]
-LaTeX Info: Redefining \. on input line 3739.
-LaTeX Info: Redefining \% on input line 3739.
+LaTeX Info: Redefining \. on input line 3675.
+LaTeX Info: Redefining \% on input line 3675.
 [175]
-LaTeX Info: Redefining \. on input line 3784.
-LaTeX Info: Redefining \% on input line 3784.
+LaTeX Info: Redefining \. on input line 3717.
+LaTeX Info: Redefining \% on input line 3717.
 
 Overfull \hbox (0.4164pt too wide) has occurred while \output is active
 \T1/lmr/m/n/10 176 \T1/lmr/m/sl/10 CAPÍTULO 10.  CONSTRUCCIÓN DE LOS FACTORES D
@@ -1879,17 +1879,11 @@ E EXPANSIÓN
  []
 
 [176]
-Overfull \hbox (11.12169pt too wide) detected at line 3799
-\OML/lmm/m/it/10 E [] \OT1/lmr/m/n/10 = \OML/lmm/m/it/10 EE [] \OT1/lmr/m/n/10 
-= \OML/lmm/m/it/10 E [] \OT1/lmr/m/n/10 = \OML/lmm/m/it/10 E [] \OT1/lmr/m/n/10
- = \OML/lmm/m/it/10 t[]
- []
-
-LaTeX Info: Redefining \. on input line 3805.
-LaTeX Info: Redefining \% on input line 3805.
+LaTeX Info: Redefining \. on input line 3751.
+LaTeX Info: Redefining \% on input line 3751.
 [177]
-LaTeX Info: Redefining \. on input line 3847.
-LaTeX Info: Redefining \% on input line 3847.
+LaTeX Info: Redefining \. on input line 3796.
+LaTeX Info: Redefining \% on input line 3796.
 
 Overfull \hbox (0.4164pt too wide) has occurred while \output is active
 \T1/lmr/m/n/10 178 \T1/lmr/m/sl/10 CAPÍTULO 10.  CONSTRUCCIÓN DE LOS FACTORES D
@@ -1897,401 +1891,509 @@ E EXPANSIÓN
  []
 
 [178]
-LaTeX Info: Redefining \. on input line 3885.
-LaTeX Info: Redefining \% on input line 3885.
+Overfull \hbox (11.12169pt too wide) detected at line 3811
+\OML/lmm/m/it/10 E [] \OT1/lmr/m/n/10 = \OML/lmm/m/it/10 EE [] \OT1/lmr/m/n/10 
+= \OML/lmm/m/it/10 E [] \OT1/lmr/m/n/10 = \OML/lmm/m/it/10 E [] \OT1/lmr/m/n/10
+ = \OML/lmm/m/it/10 t[]
+ []
+
+LaTeX Info: Redefining \. on input line 3817.
+LaTeX Info: Redefining \% on input line 3817.
 [179]
-LaTeX Info: Redefining \. on input line 3885.
-LaTeX Info: Redefining \% on input line 3885.
+LaTeX Info: Redefining \. on input line 3859.
+LaTeX Info: Redefining \% on input line 3859.
 
 Overfull \hbox (0.4164pt too wide) has occurred while \output is active
 \T1/lmr/m/n/10 180 \T1/lmr/m/sl/10 CAPÍTULO 10.  CONSTRUCCIÓN DE LOS FACTORES D
 E EXPANSIÓN
  []
 
-[180
+[180]
+LaTeX Info: Redefining \. on input line 3897.
+LaTeX Info: Redefining \% on input line 3897.
+[181]
+LaTeX Info: Redefining \. on input line 3897.
+LaTeX Info: Redefining \% on input line 3897.
+
+Overfull \hbox (0.4164pt too wide) has occurred while \output is active
+\T1/lmr/m/n/10 182 \T1/lmr/m/sl/10 CAPÍTULO 10.  CONSTRUCCIÓN DE LOS FACTORES D
+E EXPANSIÓN
+ []
+
+[182
 
 ]
 Cap\'{\i }tulo 11.
-[181]
-<10Ausencia_files/figure-latex/unnamed-chunk-1-1.pdf, id=1856, 453.695pt x 169.
+
+Underfull \vbox (badness 2073) has occurred while \output is active []
+
+[183]
+LaTeX Info: Redefining \. on input line 3942.
+LaTeX Info: Redefining \% on input line 3942.
+[184]
+LaTeX Info: Redefining \. on input line 3971.
+LaTeX Info: Redefining \% on input line 3971.
+[185]
+LaTeX Info: Redefining \. on input line 3995.
+LaTeX Info: Redefining \% on input line 3995.
+[186]
+LaTeX Info: Redefining \. on input line 4048.
+LaTeX Info: Redefining \% on input line 4048.
+[187]
+Underfull \vbox (badness 2020) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 4080.
+LaTeX Info: Redefining \% on input line 4080.
+[188]
+LaTeX Info: Redefining \. on input line 4101.
+LaTeX Info: Redefining \% on input line 4101.
+[189]
+LaTeX Info: Redefining \. on input line 4128.
+LaTeX Info: Redefining \% on input line 4128.
+[190]
+LaTeX Info: Redefining \. on input line 4166.
+LaTeX Info: Redefining \% on input line 4166.
+[191]
+LaTeX Info: Redefining \. on input line 4196.
+LaTeX Info: Redefining \% on input line 4196.
+[192]
+LaTeX Info: Redefining \. on input line 4220.
+LaTeX Info: Redefining \% on input line 4220.
+[193]
+LaTeX Info: Redefining \. on input line 4239.
+LaTeX Info: Redefining \% on input line 4239.
+[194]
+LaTeX Info: Redefining \. on input line 4262.
+LaTeX Info: Redefining \% on input line 4262.
+[195]
+<Pics/20.png, id=1989, 806.01125pt x 368.37625pt>
+File: Pics/20.png Graphic file (type png)
+<use Pics/20.png>
+Package pdftex.def Info: Pics/20.png  used on input line 4291.
+(pdftex.def)             Requested size: 345.00385pt x 157.6792pt.
+LaTeX Info: Redefining \. on input line 4301.
+LaTeX Info: Redefining \% on input line 4301.
+[196]
+<Pics/9.jpg, id=2001, 405.76593pt x 413.29407pt>
+File: Pics/9.jpg Graphic file (type jpg)
+<use Pics/9.jpg>
+Package pdftex.def Info: Pics/9.jpg  used on input line 4318.
+(pdftex.def)             Requested size: 345.00792pt x 351.40881pt.
+<Pics/21.png, id=2002, 628.3475pt x 369.38pt>
+File: Pics/21.png Graphic file (type png)
+<use Pics/21.png>
+Package pdftex.def Info: Pics/21.png  used on input line 4334.
+(pdftex.def)             Requested size: 344.99774pt x 202.81017pt.
+LaTeX Info: Redefining \. on input line 4341.
+LaTeX Info: Redefining \% on input line 4341.
+[197 <./Pics/20.png>]
+LaTeX Info: Redefining \. on input line 4341.
+LaTeX Info: Redefining \% on input line 4341.
+[198 <./Pics/9.jpg>]
+LaTeX Info: Redefining \. on input line 4359.
+LaTeX Info: Redefining \% on input line 4359.
+[199 <./Pics/21.png>]
+
+Package natbib Warning: Citation `Preston' on page 200 undefined on input line 
+4366.
+
+LaTeX Info: Redefining \. on input line 4382.
+LaTeX Info: Redefining \% on input line 4382.
+[200]
+<Pics/23.png, id=2035, 453.695pt x 262.9825pt>
+File: Pics/23.png Graphic file (type png)
+<use Pics/23.png>
+Package pdftex.def Info: Pics/23.png  used on input line 4399.
+(pdftex.def)             Requested size: 344.9987pt x 199.97711pt.
+LaTeX Info: Redefining \. on input line 4406.
+LaTeX Info: Redefining \% on input line 4406.
+[201 <./Pics/23.png>]
+LaTeX Info: Redefining \. on input line 4406.
+LaTeX Info: Redefining \% on input line 4406.
+[202
+
+]
+Cap\'{\i }tulo 12.
+[203]
+<12Ausencia_files/figure-latex/unnamed-chunk-1-1.pdf, id=2065, 453.695pt x 169.
 63374pt>
-File: 10Ausencia_files/figure-latex/unnamed-chunk-1-1.pdf Graphic file (type pd
+File: 12Ausencia_files/figure-latex/unnamed-chunk-1-1.pdf Graphic file (type pd
 f)
-<use 10Ausencia_files/figure-latex/unnamed-chunk-1-1.pdf>
-Package pdftex.def Info: 10Ausencia_files/figure-latex/unnamed-chunk-1-1.pdf  u
-sed on input line 3917.
+<use 12Ausencia_files/figure-latex/unnamed-chunk-1-1.pdf>
+Package pdftex.def Info: 12Ausencia_files/figure-latex/unnamed-chunk-1-1.pdf  u
+sed on input line 4438.
 (pdftex.def)             Requested size: 344.9987pt x 128.99286pt.
-LaTeX Info: Redefining \. on input line 3926.
-LaTeX Info: Redefining \% on input line 3926.
-[182]
-<10Ausencia_files/figure-latex/unnamed-chunk-2-1.pdf, id=1871, 453.695pt x 169.
+LaTeX Info: Redefining \. on input line 4447.
+LaTeX Info: Redefining \% on input line 4447.
+[204]
+<12Ausencia_files/figure-latex/unnamed-chunk-2-1.pdf, id=2081, 453.695pt x 169.
 63374pt>
-File: 10Ausencia_files/figure-latex/unnamed-chunk-2-1.pdf Graphic file (type pd
+File: 12Ausencia_files/figure-latex/unnamed-chunk-2-1.pdf Graphic file (type pd
 f)
-<use 10Ausencia_files/figure-latex/unnamed-chunk-2-1.pdf>
-Package pdftex.def Info: 10Ausencia_files/figure-latex/unnamed-chunk-2-1.pdf  u
-sed on input line 3929.
+<use 12Ausencia_files/figure-latex/unnamed-chunk-2-1.pdf>
+Package pdftex.def Info: 12Ausencia_files/figure-latex/unnamed-chunk-2-1.pdf  u
+sed on input line 4450.
 (pdftex.def)             Requested size: 344.9987pt x 128.99286pt.
-<10Ausencia_files/figure-latex/unnamed-chunk-3-1.pdf, id=1872, 453.695pt x 170.
+<12Ausencia_files/figure-latex/unnamed-chunk-3-1.pdf, id=2082, 453.695pt x 170.
 6375pt>
-File: 10Ausencia_files/figure-latex/unnamed-chunk-3-1.pdf Graphic file (type pd
+File: 12Ausencia_files/figure-latex/unnamed-chunk-3-1.pdf Graphic file (type pd
 f)
-<use 10Ausencia_files/figure-latex/unnamed-chunk-3-1.pdf>
-Package pdftex.def Info: 10Ausencia_files/figure-latex/unnamed-chunk-3-1.pdf  u
-sed on input line 3941.
+<use 12Ausencia_files/figure-latex/unnamed-chunk-3-1.pdf>
+Package pdftex.def Info: 12Ausencia_files/figure-latex/unnamed-chunk-3-1.pdf  u
+sed on input line 4462.
 (pdftex.def)             Requested size: 344.9987pt x 129.75613pt.
-LaTeX Info: Redefining \. on input line 3943.
-LaTeX Info: Redefining \% on input line 3943.
-[183 <./10Ausencia_files/figure-latex/unnamed-chunk-1-1.pdf> <./10Ausencia_file
+LaTeX Info: Redefining \. on input line 4464.
+LaTeX Info: Redefining \% on input line 4464.
+[205 <./12Ausencia_files/figure-latex/unnamed-chunk-1-1.pdf> <./12Ausencia_file
 s/figure-latex/unnamed-chunk-2-1.pdf>]
-LaTeX Info: Redefining \. on input line 3953.
-LaTeX Info: Redefining \% on input line 3953.
-[184 <./10Ausencia_files/figure-latex/unnamed-chunk-3-1.pdf>]
-<Pics/j1.png, id=1912, 923.45pt x 693.59125pt>
+LaTeX Info: Redefining \. on input line 4474.
+LaTeX Info: Redefining \% on input line 4474.
+[206 <./12Ausencia_files/figure-latex/unnamed-chunk-3-1.pdf>]
+<Pics/j1.png, id=2123, 923.45pt x 693.59125pt>
 File: Pics/j1.png Graphic file (type png)
 <use Pics/j1.png>
-Package pdftex.def Info: Pics/j1.png  used on input line 3960.
+Package pdftex.def Info: Pics/j1.png  used on input line 4481.
 (pdftex.def)             Requested size: 225.84564pt x 169.62971pt.
-LaTeX Info: Redefining \. on input line 3977.
-LaTeX Info: Redefining \% on input line 3977.
-[185]
-LaTeX Info: Redefining \. on input line 3994.
-LaTeX Info: Redefining \% on input line 3994.
-[186 <./Pics/j1.png>]
-LaTeX Info: Redefining \. on input line 4031.
-LaTeX Info: Redefining \% on input line 4031.
-[187]
-<Pics/j3.png, id=1939, 924.45375pt x 694.595pt>
+LaTeX Info: Redefining \. on input line 4498.
+LaTeX Info: Redefining \% on input line 4498.
+[207]
+LaTeX Info: Redefining \. on input line 4515.
+LaTeX Info: Redefining \% on input line 4515.
+[208 <./Pics/j1.png>]
+LaTeX Info: Redefining \. on input line 4552.
+LaTeX Info: Redefining \% on input line 4552.
+[209]
+<Pics/j3.png, id=2148, 924.45375pt x 694.595pt>
 File: Pics/j3.png Graphic file (type png)
 <use Pics/j3.png>
-Package pdftex.def Info: Pics/j3.png  used on input line 4034.
+Package pdftex.def Info: Pics/j3.png  used on input line 4555.
 (pdftex.def)             Requested size: 225.83722pt x 169.68442pt.
-LaTeX Info: Redefining \. on input line 4050.
-LaTeX Info: Redefining \% on input line 4050.
-[188 <./Pics/j3.png>]
-<Pics/j4.png, id=1947, 922.44624pt x 693.59125pt>
+LaTeX Info: Redefining \. on input line 4571.
+LaTeX Info: Redefining \% on input line 4571.
+[210 <./Pics/j3.png>]
+<Pics/j4.png, id=2156, 922.44624pt x 693.59125pt>
 File: Pics/j4.png Graphic file (type png)
 <use Pics/j4.png>
-Package pdftex.def Info: Pics/j4.png  used on input line 4053.
+Package pdftex.def Info: Pics/j4.png  used on input line 4574.
 (pdftex.def)             Requested size: 225.83943pt x 169.80963pt.
-<Pics/j2.png, id=1948, 924.45375pt x 692.5875pt>
+<Pics/j2.png, id=2157, 924.45375pt x 692.5875pt>
 File: Pics/j2.png Graphic file (type png)
 <use Pics/j2.png>
-Package pdftex.def Info: Pics/j2.png  used on input line 4067.
+Package pdftex.def Info: Pics/j2.png  used on input line 4588.
 (pdftex.def)             Requested size: 225.83722pt x 169.194pt.
-LaTeX Info: Redefining \. on input line 4076.
-LaTeX Info: Redefining \% on input line 4076.
-[189 <./Pics/j4.png>]
-LaTeX Info: Redefining \. on input line 4090.
-LaTeX Info: Redefining \% on input line 4090.
-[190 <./Pics/j2.png>]
-<Pics/j5.png, id=1963, 924.45375pt x 692.5875pt>
+LaTeX Info: Redefining \. on input line 4597.
+LaTeX Info: Redefining \% on input line 4597.
+[211 <./Pics/j4.png>]
+LaTeX Info: Redefining \. on input line 4611.
+LaTeX Info: Redefining \% on input line 4611.
+[212 <./Pics/j2.png>]
+<Pics/j5.png, id=2173, 924.45375pt x 692.5875pt>
 File: Pics/j5.png Graphic file (type png)
 <use Pics/j5.png>
-Package pdftex.def Info: Pics/j5.png  used on input line 4093.
+Package pdftex.def Info: Pics/j5.png  used on input line 4614.
 (pdftex.def)             Requested size: 225.83722pt x 169.194pt.
-<Pics/nr5.png, id=1964, 924.45375pt x 692.5875pt>
+<Pics/nr5.png, id=2174, 924.45375pt x 692.5875pt>
 File: Pics/nr5.png Graphic file (type png)
 <use Pics/nr5.png>
-Package pdftex.def Info: Pics/nr5.png  used on input line 4099.
+Package pdftex.def Info: Pics/nr5.png  used on input line 4620.
 (pdftex.def)             Requested size: 345.00479pt x 258.47264pt.
-LaTeX Info: Redefining \. on input line 4115.
-LaTeX Info: Redefining \% on input line 4115.
-[191 <./Pics/j5.png>]
-LaTeX Info: Redefining \. on input line 4115.
-LaTeX Info: Redefining \% on input line 4115.
-[192 <./Pics/nr5.png>]
-LaTeX Info: Redefining \. on input line 4147.
-LaTeX Info: Redefining \% on input line 4147.
-[193]
-LaTeX Info: Redefining \. on input line 4198.
-LaTeX Info: Redefining \% on input line 4198.
-[194]
-Underfull \hbox (badness 1147) in paragraph at lines 4210--4213
+LaTeX Info: Redefining \. on input line 4636.
+LaTeX Info: Redefining \% on input line 4636.
+[213 <./Pics/j5.png>]
+LaTeX Info: Redefining \. on input line 4636.
+LaTeX Info: Redefining \% on input line 4636.
+[214 <./Pics/nr5.png>]
+LaTeX Info: Redefining \. on input line 4668.
+LaTeX Info: Redefining \% on input line 4668.
+[215]
+LaTeX Info: Redefining \. on input line 4719.
+LaTeX Info: Redefining \% on input line 4719.
+[216]
+Underfull \hbox (badness 1147) in paragraph at lines 4731--4734
 []\T1/lmr/m/n/10 (+20) Supongamos que se co-no-cen las pro-ba-bi-li-da-des de r
 es-pues-ta in-di-vi-dual
  []
 
-LaTeX Info: Redefining \. on input line 4235.
-LaTeX Info: Redefining \% on input line 4235.
-[195]
-LaTeX Info: Redefining \. on input line 4268.
-LaTeX Info: Redefining \% on input line 4268.
-[196]
-LaTeX Info: Redefining \. on input line 4288.
-LaTeX Info: Redefining \% on input line 4288.
-[197]
-LaTeX Info: Redefining \. on input line 4290.
-LaTeX Info: Redefining \% on input line 4290.
-[198]
-Cap\'{\i }tulo 12.
-[199
+LaTeX Info: Redefining \. on input line 4756.
+LaTeX Info: Redefining \% on input line 4756.
+[217]
+LaTeX Info: Redefining \. on input line 4789.
+LaTeX Info: Redefining \% on input line 4789.
+[218]
+LaTeX Info: Redefining \. on input line 4809.
+LaTeX Info: Redefining \% on input line 4809.
+[219]
+LaTeX Info: Redefining \. on input line 4811.
+LaTeX Info: Redefining \% on input line 4811.
+[220]
+Cap\'{\i }tulo 13.
+[221
 
 ]
-LaTeX Info: Redefining \. on input line 4340.
-LaTeX Info: Redefining \% on input line 4340.
+LaTeX Info: Redefining \. on input line 4861.
+LaTeX Info: Redefining \% on input line 4861.
 
 Overfull \hbox (139.50711pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 200 \T1/lmr/m/sl/10 CAPÍTULO 12.  CORRECCIÓN DE SESGOS DEBIDOS A
+\T1/lmr/m/n/10 222 \T1/lmr/m/sl/10 CAPÍTULO 13.  CORRECCIÓN DE SESGOS DEBIDOS A
  LA AUSENCIA DE RESPUESTA DE UNIDAD
  []
 
-[200]
-LaTeX Info: Redefining \. on input line 4372.
-LaTeX Info: Redefining \% on input line 4372.
-[201]
-LaTeX Info: Redefining \. on input line 4395.
-LaTeX Info: Redefining \% on input line 4395.
+[222]
+LaTeX Info: Redefining \. on input line 4893.
+LaTeX Info: Redefining \% on input line 4893.
+[223]
+LaTeX Info: Redefining \. on input line 4916.
+LaTeX Info: Redefining \% on input line 4916.
 
 Overfull \hbox (139.50711pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 202 \T1/lmr/m/sl/10 CAPÍTULO 12.  CORRECCIÓN DE SESGOS DEBIDOS A
+\T1/lmr/m/n/10 224 \T1/lmr/m/sl/10 CAPÍTULO 13.  CORRECCIÓN DE SESGOS DEBIDOS A
  LA AUSENCIA DE RESPUESTA DE UNIDAD
  []
 
-[202]
-LaTeX Info: Redefining \. on input line 4421.
-LaTeX Info: Redefining \% on input line 4421.
-[203]
-<Pics/c9.png, id=2072, 1445.4pt x 859.21pt>
+[224]
+LaTeX Info: Redefining \. on input line 4942.
+LaTeX Info: Redefining \% on input line 4942.
+[225]
+<Pics/c9.png, id=2282, 1445.4pt x 859.21pt>
 File: Pics/c9.png Graphic file (type png)
 <use Pics/c9.png>
-Package pdftex.def Info: Pics/c9.png  used on input line 4437.
+Package pdftex.def Info: Pics/c9.png  used on input line 4958.
 (pdftex.def)             Requested size: 344.9843pt x 205.074pt.
-LaTeX Info: Redefining \. on input line 4442.
-LaTeX Info: Redefining \% on input line 4442.
+LaTeX Info: Redefining \. on input line 4963.
+LaTeX Info: Redefining \% on input line 4963.
 
 Overfull \hbox (139.50711pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 204 \T1/lmr/m/sl/10 CAPÍTULO 12.  CORRECCIÓN DE SESGOS DEBIDOS A
+\T1/lmr/m/n/10 226 \T1/lmr/m/sl/10 CAPÍTULO 13.  CORRECCIÓN DE SESGOS DEBIDOS A
  LA AUSENCIA DE RESPUESTA DE UNIDAD
  []
 
-[204 <./Pics/c9.png>]
-<Pics/c10.png, id=2080, 1445.4pt x 858.20625pt>
+[226 <./Pics/c9.png>]
+<Pics/c10.png, id=2290, 1445.4pt x 858.20625pt>
 File: Pics/c10.png Graphic file (type png)
 <use Pics/c10.png>
-Package pdftex.def Info: Pics/c10.png  used on input line 4445.
+Package pdftex.def Info: Pics/c10.png  used on input line 4966.
 (pdftex.def)             Requested size: 344.9843pt x 204.83443pt.
-LaTeX Info: Redefining \. on input line 4462.
-LaTeX Info: Redefining \% on input line 4462.
-[205 <./Pics/c10.png>]
-<Pics/c12.png, id=2087, 1445.4pt x 858.20625pt>
+LaTeX Info: Redefining \. on input line 4983.
+LaTeX Info: Redefining \% on input line 4983.
+[227 <./Pics/c10.png>]
+<Pics/c12.png, id=2296, 1445.4pt x 858.20625pt>
 File: Pics/c12.png Graphic file (type png)
 <use Pics/c12.png>
-Package pdftex.def Info: Pics/c12.png  used on input line 4465.
+Package pdftex.def Info: Pics/c12.png  used on input line 4986.
 (pdftex.def)             Requested size: 344.9843pt x 204.83443pt.
-LaTeX Info: Redefining \. on input line 4480.
-LaTeX Info: Redefining \% on input line 4480.
+LaTeX Info: Redefining \. on input line 5001.
+LaTeX Info: Redefining \% on input line 5001.
 
 Overfull \hbox (139.50711pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 206 \T1/lmr/m/sl/10 CAPÍTULO 12.  CORRECCIÓN DE SESGOS DEBIDOS A
+\T1/lmr/m/n/10 228 \T1/lmr/m/sl/10 CAPÍTULO 13.  CORRECCIÓN DE SESGOS DEBIDOS A
  LA AUSENCIA DE RESPUESTA DE UNIDAD
  []
 
-[206 <./Pics/c12.png>]
-<Pics/calnr1.png, id=2094, 1571.8725pt x 1030.85126pt>
+[228 <./Pics/c12.png>]
+<Pics/calnr1.png, id=2303, 1571.8725pt x 1030.85126pt>
 File: Pics/calnr1.png Graphic file (type png)
 <use Pics/calnr1.png>
-Package pdftex.def Info: Pics/calnr1.png  used on input line 4491.
+Package pdftex.def Info: Pics/calnr1.png  used on input line 5012.
 (pdftex.def)             Requested size: 344.99754pt x 226.25317pt.
-<Pics/calnr2.png, id=2095, 1573.88pt x 998.73125pt>
+<Pics/calnr2.png, id=2304, 1573.88pt x 998.73125pt>
 File: Pics/calnr2.png Graphic file (type png)
 <use Pics/calnr2.png>
-Package pdftex.def Info: Pics/calnr2.png  used on input line 4499.
+Package pdftex.def Info: Pics/calnr2.png  used on input line 5020.
 (pdftex.def)             Requested size: 344.98186pt x 218.91386pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 4510.
-LaTeX Info: Redefining \% on input line 4510.
+LaTeX Info: Redefining \. on input line 5031.
+LaTeX Info: Redefining \% on input line 5031.
 
 Overfull \hbox (60.96115pt too wide) has occurred while \output is active
 \T1/lmr/m/sl/10 III.  LA PANDEMIA POR COVID-19 Y LA AUSENCIA DE RESPUESTA POR U
-NIDAD \T1/lmr/m/n/10 207
+NIDAD \T1/lmr/m/n/10 229
  []
 
-[207]
-LaTeX Info: Redefining \. on input line 4510.
-LaTeX Info: Redefining \% on input line 4510.
+[229]
+LaTeX Info: Redefining \. on input line 5031.
+LaTeX Info: Redefining \% on input line 5031.
 
 Overfull \hbox (139.50711pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 208 \T1/lmr/m/sl/10 CAPÍTULO 12.  CORRECCIÓN DE SESGOS DEBIDOS A
+\T1/lmr/m/n/10 230 \T1/lmr/m/sl/10 CAPÍTULO 13.  CORRECCIÓN DE SESGOS DEBIDOS A
  LA AUSENCIA DE RESPUESTA DE UNIDAD
  []
 
-[208 <./Pics/calnr1.png> <./Pics/calnr2.png>]
-LaTeX Info: Redefining \. on input line 4532.
-LaTeX Info: Redefining \% on input line 4532.
+[230 <./Pics/calnr1.png> <./Pics/calnr2.png>]
+LaTeX Info: Redefining \. on input line 5053.
+LaTeX Info: Redefining \% on input line 5053.
 
 Overfull \hbox (60.96115pt too wide) has occurred while \output is active
 \T1/lmr/m/sl/10 III.  LA PANDEMIA POR COVID-19 Y LA AUSENCIA DE RESPUESTA POR U
-NIDAD \T1/lmr/m/n/10 209
+NIDAD \T1/lmr/m/n/10 231
  []
 
-[209]
-LaTeX Info: Redefining \. on input line 4536.
-LaTeX Info: Redefining \% on input line 4536.
+[231]
+LaTeX Info: Redefining \. on input line 5057.
+LaTeX Info: Redefining \% on input line 5057.
 
 Overfull \hbox (139.50711pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 210 \T1/lmr/m/sl/10 CAPÍTULO 12.  CORRECCIÓN DE SESGOS DEBIDOS A
+\T1/lmr/m/n/10 232 \T1/lmr/m/sl/10 CAPÍTULO 13.  CORRECCIÓN DE SESGOS DEBIDOS A
  LA AUSENCIA DE RESPUESTA DE UNIDAD
  []
 
-[210]
-Cap\'{\i }tulo 13.
-[211
+[232]
+Cap\'{\i }tulo 14.
+[233
 
 ]
-LaTeX Info: Redefining \. on input line 4566.
-LaTeX Info: Redefining \% on input line 4566.
-[212]
-LaTeX Info: Redefining \. on input line 4600.
-LaTeX Info: Redefining \% on input line 4600.
-[213]
-LaTeX Info: Redefining \. on input line 4639.
-LaTeX Info: Redefining \% on input line 4639.
-[214]
-LaTeX Info: Redefining \. on input line 4668.
-LaTeX Info: Redefining \% on input line 4668.
-[215]
-LaTeX Info: Redefining \. on input line 4687.
-LaTeX Info: Redefining \% on input line 4687.
-[216]
-LaTeX Info: Redefining \. on input line 4731.
-LaTeX Info: Redefining \% on input line 4731.
-[217]
-<Pics/im1.png, id=2178, 1194.4625pt x 897.3525pt>
+LaTeX Info: Redefining \. on input line 5087.
+LaTeX Info: Redefining \% on input line 5087.
+[234]
+LaTeX Info: Redefining \. on input line 5121.
+LaTeX Info: Redefining \% on input line 5121.
+[235]
+LaTeX Info: Redefining \. on input line 5160.
+LaTeX Info: Redefining \% on input line 5160.
+[236]
+LaTeX Info: Redefining \. on input line 5189.
+LaTeX Info: Redefining \% on input line 5189.
+[237]
+LaTeX Info: Redefining \. on input line 5208.
+LaTeX Info: Redefining \% on input line 5208.
+[238]
+LaTeX Info: Redefining \. on input line 5252.
+LaTeX Info: Redefining \% on input line 5252.
+[239]
+<Pics/im1.png, id=2387, 1194.4625pt x 897.3525pt>
 File: Pics/im1.png Graphic file (type png)
 <use Pics/im1.png>
-Package pdftex.def Info: Pics/im1.png  used on input line 4774.
+Package pdftex.def Info: Pics/im1.png  used on input line 5295.
 (pdftex.def)             Requested size: 345.00008pt x 259.18492pt.
-LaTeX Info: Redefining \. on input line 4779.
-LaTeX Info: Redefining \% on input line 4779.
-[218]
-LaTeX Info: Redefining \. on input line 4779.
-LaTeX Info: Redefining \% on input line 4779.
-[219 <./Pics/im1.png>]
-<Pics/im2.png, id=2191, 1192.455pt x 898.35625pt>
+LaTeX Info: Redefining \. on input line 5300.
+LaTeX Info: Redefining \% on input line 5300.
+[240]
+LaTeX Info: Redefining \. on input line 5300.
+LaTeX Info: Redefining \% on input line 5300.
+[241 <./Pics/im1.png>]
+<Pics/im2.png, id=2401, 1192.455pt x 898.35625pt>
 File: Pics/im2.png Graphic file (type png)
 <use Pics/im2.png>
-Package pdftex.def Info: Pics/im2.png  used on input line 4802.
+Package pdftex.def Info: Pics/im2.png  used on input line 5323.
 (pdftex.def)             Requested size: 345.0025pt x 259.9135pt.
-<Pics/im3.png, id=2192, 1194.4625pt x 897.3525pt>
+<Pics/im3.png, id=2402, 1194.4625pt x 897.3525pt>
 File: Pics/im3.png Graphic file (type png)
 <use Pics/im3.png>
-Package pdftex.def Info: Pics/im3.png  used on input line 4830.
+Package pdftex.def Info: Pics/im3.png  used on input line 5351.
 (pdftex.def)             Requested size: 345.00008pt x 259.18492pt.
-LaTeX Info: Redefining \. on input line 4838.
-LaTeX Info: Redefining \% on input line 4838.
-[220]
-LaTeX Info: Redefining \. on input line 4838.
-LaTeX Info: Redefining \% on input line 4838.
-[221 <./Pics/im2.png>]
-LaTeX Info: Redefining \. on input line 4838.
-LaTeX Info: Redefining \% on input line 4838.
-[222 <./Pics/im3.png>]
-<Pics/im4.png, id=2209, 1187.43625pt x 894.34125pt>
+LaTeX Info: Redefining \. on input line 5359.
+LaTeX Info: Redefining \% on input line 5359.
+[242]
+LaTeX Info: Redefining \. on input line 5359.
+LaTeX Info: Redefining \% on input line 5359.
+[243 <./Pics/im2.png>]
+LaTeX Info: Redefining \. on input line 5359.
+LaTeX Info: Redefining \% on input line 5359.
+[244 <./Pics/im3.png>]
+<Pics/im4.png, id=2419, 1187.43625pt x 894.34125pt>
 File: Pics/im4.png Graphic file (type png)
 <use Pics/im4.png>
-Package pdftex.def Info: Pics/im4.png  used on input line 4870.
+Package pdftex.def Info: Pics/im4.png  used on input line 5391.
 (pdftex.def)             Requested size: 344.99997pt x 259.8436pt.
 
 Overfull \vbox (0.46106pt too high) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 4886.
-LaTeX Info: Redefining \% on input line 4886.
-[223]
-LaTeX Info: Redefining \. on input line 4886.
-LaTeX Info: Redefining \% on input line 4886.
-[224 <./Pics/im4.png>]
-LaTeX Info: Redefining \. on input line 4916.
-LaTeX Info: Redefining \% on input line 4916.
+LaTeX Info: Redefining \. on input line 5407.
+LaTeX Info: Redefining \% on input line 5407.
+[245]
+LaTeX Info: Redefining \. on input line 5407.
+LaTeX Info: Redefining \% on input line 5407.
+[246 <./Pics/im4.png>]
+LaTeX Info: Redefining \. on input line 5440.
+LaTeX Info: Redefining \% on input line 5440.
 
 Overfull \hbox (32.21289pt too wide) has occurred while \output is active
 \T1/lmr/m/sl/10 III.  EJEMPLO: IMPUTACIÓN EN UNA ENCUESTA DE INGRESOS Y GASTOS 
-\T1/lmr/m/n/10 225
+\T1/lmr/m/n/10 247
  []
 
-[225]
-LaTeX Info: Redefining \. on input line 4941.
-LaTeX Info: Redefining \% on input line 4941.
-[226]
-<Pics/10.png, id=2243, 1445.4pt x 857.2025pt>
+[247]
+LaTeX Info: Redefining \. on input line 5470.
+LaTeX Info: Redefining \% on input line 5470.
+[248]
+LaTeX Info: Redefining \. on input line 5493.
+LaTeX Info: Redefining \% on input line 5493.
+
+Overfull \hbox (32.21289pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/10 III.  EJEMPLO: IMPUTACIÓN EN UNA ENCUESTA DE INGRESOS Y GASTOS 
+\T1/lmr/m/n/10 249
+ []
+
+[249]
+<Pics/10.png, id=2460, 1445.4pt x 857.2025pt>
 File: Pics/10.png Graphic file (type png)
 <use Pics/10.png>
-Package pdftex.def Info: Pics/10.png  used on input line 4962.
+Package pdftex.def Info: Pics/10.png  used on input line 5510.
 (pdftex.def)             Requested size: 344.9843pt x 204.59485pt.
-LaTeX Info: Redefining \. on input line 4971.
-LaTeX Info: Redefining \% on input line 4971.
+LaTeX Info: Redefining \. on input line 5523.
+LaTeX Info: Redefining \% on input line 5523.
+[250]
+LaTeX Info: Redefining \. on input line 5536.
+LaTeX Info: Redefining \% on input line 5536.
 
 Overfull \hbox (32.21289pt too wide) has occurred while \output is active
 \T1/lmr/m/sl/10 III.  EJEMPLO: IMPUTACIÓN EN UNA ENCUESTA DE INGRESOS Y GASTOS 
-\T1/lmr/m/n/10 227
+\T1/lmr/m/n/10 251
  []
 
-[227]
-LaTeX Info: Redefining \. on input line 4982.
-LaTeX Info: Redefining \% on input line 4982.
-[228 <./Pics/10.png>]
-<Pics/11.png, id=2255, 1416.29124pt x 751.80875pt>
+[251 <./Pics/10.png>]
+<Pics/11.png, id=2472, 1416.29124pt x 751.80875pt>
 File: Pics/11.png Graphic file (type png)
 <use Pics/11.png>
-Package pdftex.def Info: Pics/11.png  used on input line 4991.
+Package pdftex.def Info: Pics/11.png  used on input line 5539.
 (pdftex.def)             Requested size: 344.99539pt x 183.13362pt.
-<Pics/12.png, id=2256, 1418.29875pt x 740.7675pt>
+<Pics/12.png, id=2473, 1418.29875pt x 740.7675pt>
 File: Pics/12.png Graphic file (type png)
 <use Pics/12.png>
-Package pdftex.def Info: Pics/12.png  used on input line 4999.
+Package pdftex.def Info: Pics/12.png  used on input line 5547.
 (pdftex.def)             Requested size: 344.98665pt x 180.1841pt.
-LaTeX Info: Redefining \. on input line 5008.
-LaTeX Info: Redefining \% on input line 5008.
-
-Overfull \hbox (32.21289pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10 III.  EJEMPLO: IMPUTACIÓN EN UNA ENCUESTA DE INGRESOS Y GASTOS 
-\T1/lmr/m/n/10 229
- []
-
-[229 <./Pics/11.png>]
-<Pics/13.png, id=2264, 1412.27625pt x 742.775pt>
+LaTeX Info: Redefining \. on input line 5556.
+LaTeX Info: Redefining \% on input line 5556.
+[252 <./Pics/11.png>]
+<Pics/13.png, id=2481, 1412.27625pt x 742.775pt>
 File: Pics/13.png Graphic file (type png)
 <use Pics/13.png>
-Package pdftex.def Info: Pics/13.png  used on input line 5015.
+Package pdftex.def Info: Pics/13.png  used on input line 5563.
 (pdftex.def)             Requested size: 344.9871pt x 181.4431pt.
-LaTeX Info: Redefining \. on input line 5017.
-LaTeX Info: Redefining \% on input line 5017.
-[230 <./Pics/12.png>]
-LaTeX Info: Redefining \. on input line 5020.
-LaTeX Info: Redefining \% on input line 5020.
+LaTeX Info: Redefining \. on input line 5568.
+LaTeX Info: Redefining \% on input line 5568.
 
 Overfull \hbox (32.21289pt too wide) has occurred while \output is active
 \T1/lmr/m/sl/10 III.  EJEMPLO: IMPUTACIÓN EN UNA ENCUESTA DE INGRESOS Y GASTOS 
-\T1/lmr/m/n/10 231
+\T1/lmr/m/n/10 253
  []
 
-[231 <./Pics/13.png>]
-LaTeX Info: Redefining \. on input line 5020.
-LaTeX Info: Redefining \% on input line 5020.
-[232
+[253 <./Pics/12.png>]
+LaTeX Info: Redefining \. on input line 5568.
+LaTeX Info: Redefining \% on input line 5568.
+[254 <./Pics/13.png>]
+Cap\'{\i }tulo 15.
+[255
 
 ]
-Cap\'{\i }tulo 14.
-[233]
-LaTeX Info: Redefining \. on input line 5079.
-LaTeX Info: Redefining \% on input line 5079.
-[234]
+LaTeX Info: Redefining \. on input line 5627.
+LaTeX Info: Redefining \% on input line 5627.
+[256]
 
-LaTeX Warning: Command \textendash invalid in math mode on input line 5085.
+LaTeX Warning: Command \textendash invalid in math mode on input line 5633.
 
-LaTeX Info: Redefining \. on input line 5115.
-LaTeX Info: Redefining \% on input line 5115.
-[235]
+LaTeX Info: Redefining \. on input line 5663.
+LaTeX Info: Redefining \% on input line 5663.
+[257]
 
-LaTeX Warning: Command \textendash invalid in math mode on input line 5143.
+LaTeX Warning: Command \textendash invalid in math mode on input line 5691.
 
 
-LaTeX Warning: Command \textendash invalid in math mode on input line 5143.
+LaTeX Warning: Command \textendash invalid in math mode on input line 5691.
 
 
-Overfull \hbox (5.13235pt too wide) detected at line 5144
+Overfull \hbox (5.13235pt too wide) detected at line 5692
 \OML/lmm/m/it/10 d[] \OT1/lmr/m/n/10 = \OML/lmm/m/it/10 max\OT1/lmr/m/n/10 (\OM
 L/lmm/m/it/10 E[]\OT1/lmr/m/n/10 ^^U\OML/lmm/m/it/10 E[] ;  \OMS/lmsy/m/n/10 j\
 OT1/lmr/m/n/10 0\OML/lmm/m/it/10 :\OT1/lmr/m/n/10 5 \OMS/lmsy/m/n/10 ^^B \OML/l
@@ -2303,89 +2405,98 @@ sy/m/n/10 j\OT1/lmr/m/n/10 )
  []
 
 
-LaTeX Warning: Command \textendash invalid in math mode on input line 5147.
+LaTeX Warning: Command \textendash invalid in math mode on input line 5695.
 
-LaTeX Info: Redefining \. on input line 5160.
-LaTeX Info: Redefining \% on input line 5160.
-[236]
-LaTeX Info: Redefining \. on input line 5187.
-LaTeX Info: Redefining \% on input line 5187.
-[237]
-LaTeX Info: Redefining \. on input line 5193.
-LaTeX Info: Redefining \% on input line 5193.
-[238]
-LaTeX Info: Redefining \. on input line 5241.
-LaTeX Info: Redefining \% on input line 5241.
-[239]
-<Pics/ou2.png, id=2340, 1433.355pt x 854.19125pt>
+LaTeX Info: Redefining \. on input line 5708.
+LaTeX Info: Redefining \% on input line 5708.
+[258]
+LaTeX Info: Redefining \. on input line 5735.
+LaTeX Info: Redefining \% on input line 5735.
+[259]
+LaTeX Info: Redefining \. on input line 5741.
+LaTeX Info: Redefining \% on input line 5741.
+[260]
+LaTeX Info: Redefining \. on input line 5789.
+LaTeX Info: Redefining \% on input line 5789.
+[261]
+<Pics/ou2.png, id=2552, 1433.355pt x 854.19125pt>
 File: Pics/ou2.png Graphic file (type png)
 <use Pics/ou2.png>
-Package pdftex.def Info: Pics/ou2.png  used on input line 5247.
+Package pdftex.def Info: Pics/ou2.png  used on input line 5795.
 (pdftex.def)             Requested size: 344.99643pt x 205.59662pt.
-<Pics/ou1.png, id=2341, 1426.32875pt x 851.18pt>
+<Pics/ou1.png, id=2553, 1426.32875pt x 851.18pt>
 File: Pics/ou1.png Graphic file (type png)
 <use Pics/ou1.png>
-Package pdftex.def Info: Pics/ou1.png  used on input line 5255.
+Package pdftex.def Info: Pics/ou1.png  used on input line 5803.
 (pdftex.def)             Requested size: 345.00287pt x 205.88489pt.
-LaTeX Info: Redefining \. on input line 5260.
-LaTeX Info: Redefining \% on input line 5260.
-[240 <./Pics/ou2.png>]
-LaTeX Info: Redefining \. on input line 5303.
-LaTeX Info: Redefining \% on input line 5303.
-[241 <./Pics/ou1.png>]
-LaTeX Info: Redefining \. on input line 5342.
-LaTeX Info: Redefining \% on input line 5342.
-[242]
-LaTeX Info: Redefining \. on input line 5368.
-LaTeX Info: Redefining \% on input line 5368.
-[243]
-LaTeX Info: Redefining \. on input line 5368.
-LaTeX Info: Redefining \% on input line 5368.
-[244
+LaTeX Info: Redefining \. on input line 5808.
+LaTeX Info: Redefining \% on input line 5808.
+[262 <./Pics/ou2.png>]
+LaTeX Info: Redefining \. on input line 5851.
+LaTeX Info: Redefining \% on input line 5851.
+[263 <./Pics/ou1.png>]
+LaTeX Info: Redefining \. on input line 5890.
+LaTeX Info: Redefining \% on input line 5890.
+[264]
+LaTeX Info: Redefining \. on input line 5916.
+LaTeX Info: Redefining \% on input line 5916.
+[265]
+LaTeX Info: Redefining \. on input line 5916.
+LaTeX Info: Redefining \% on input line 5916.
+[266
 
-] (./DiseÃ±o-y-anÃ¡lisis-de-encuestas-de-hogares.bbl [245]
+] (./DiseÃ±o-y-anÃ¡lisis-de-encuestas-de-hogares.bbl [267]
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
-[246
+[268
 
-] [247]
-LaTeX Info: Redefining \. on input line 174.
-LaTeX Info: Redefining \% on input line 174.
-[248]
-LaTeX Info: Redefining \. on input line 270.
-LaTeX Info: Redefining \% on input line 270.
-[249]
-LaTeX Info: Redefining \. on input line 359.
-LaTeX Info: Redefining \% on input line 359.
-[250]
-LaTeX Info: Redefining \. on input line 447.
-LaTeX Info: Redefining \% on input line 447.
-[251])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5373.
-LaTeX Info: Redefining \. on input line 5373.
-LaTeX Info: Redefining \% on input line 5373.
-[252]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 5373.
+] [269]
+LaTeX Info: Redefining \. on input line 172.
+LaTeX Info: Redefining \% on input line 172.
+[270]
+LaTeX Info: Redefining \. on input line 264.
+LaTeX Info: Redefining \% on input line 264.
+[271]
+LaTeX Info: Redefining \. on input line 361.
+LaTeX Info: Redefining \% on input line 361.
+[272]
+LaTeX Info: Redefining \. on input line 453.
+LaTeX Info: Redefining \% on input line 453.
+[273])
+
+Package natbib Warning: There were undefined citations.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5921.
+LaTeX Info: Redefining \. on input line 5921.
+LaTeX Info: Redefining \% on input line 5921.
+[274]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 5921.
 (./DiseÃ±o-y-anÃ¡lisis-de-encuestas-de-hogares.aux
 LaTeX Info: Redefining \. on input line 27.
 LaTeX Info: Redefining \% on input line 27.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 5373.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 5373.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 5921.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 5921.
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 17626 strings out of 480608
- 266172 string characters out of 5903631
- 611088 words of memory out of 5000000
- 31896 multiletter control sequences out of 15000+600000
- 657230 words of font info for 237 fonts, out of 8000000 for 9000
+ 17788 strings out of 480608
+ 268764 string characters out of 5903631
+ 612332 words of memory out of 5000000
+ 31970 multiletter control sequences out of 15000+600000
+ 660688 words of font info for 242 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,16n,42p,2600b,655s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.16} has been referenced but does not ex
+ 41i,17n,42p,2600b,655s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{Hfootnote.18} has been referenced but does not ex
 ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.17} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.16} has been referenced but does not exis
+t, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.15} has been referenced but does not exis
 t, replaced by a fixed one
@@ -2461,12 +2572,13 @@ sr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/t
 exlive/2020/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2020
 /texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2020/texmf-dist
 /fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2020/texmf-dist/fonts/typ
-e1/public/amsfonts/symbols/msbm10.pfb>
-Output written on DiseÃ±o-y-anÃ¡lisis-de-encuestas-de-hogares.pdf (252 pages, 7
-345067 bytes).
+e1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2020/texmf-dist/fonts
+/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on DiseÃ±o-y-anÃ¡lisis-de-encuestas-de-hogares.pdf (274 pages, 7
+884766 bytes).
 PDF statistics:
- 2932 PDF objects out of 2984 (max. 8388607)
- 2544 compressed objects within 26 object streams
- 973 named destinations out of 1000 (max. 500000)
- 23287 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 3178 PDF objects out of 3580 (max. 8388607)
+ 2758 compressed objects within 28 object streams
+ 1048 named destinations out of 1200 (max. 500000)
+ 23347 words of extra memory for PDF output out of 24883 (max. 10000000)
 

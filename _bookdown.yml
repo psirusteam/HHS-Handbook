@@ -6,22 +6,23 @@ new_session: yes
 rmd_files: [
   "index.Rmd",
   
-  "00Intro.Rmd",
+  "01Intro.Rmd",
   
-  "01Planeacion.Rmd",
-  "02Tipos.Rmd",
-  "03Marcos.Rmd",
-  "04Estratificar.Rmd",
-  "05Diseno.Rmd",
-  "06Deff.Rmd",
-  "07Tamano.Rmd",
+  "02Planeacion.Rmd",
+  "03Tipos.Rmd",
+  "04Marcos.Rmd",
+  "05Estratificar.Rmd",
+  "06Diseno.Rmd",
+  "07Deff.Rmd",
+  "08Tamano.Rmd",
   
-  "08Estimadores.Rmd",
-  "09Ponderadores.Rmd",
-  "10Ausencia.Rmd",
-  "11SesgoUnidad.Rmd",
-  "12Imputar.Rmd",
-  "13Outliers.Rmd",
+  "09Estimadores.Rmd",
+  "10Ponderadores.Rmd",
+  "11Varianza.Rmd",
+  "12Ausencia.Rmd",
+  "13SesgoUnidad.Rmd",
+  "14Imputar.Rmd",
+  "15Outliers.Rmd",
 
   "99Referencias.Rmd"
   ]

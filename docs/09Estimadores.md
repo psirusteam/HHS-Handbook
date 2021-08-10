@@ -113,10 +113,16 @@ $$
 
 #### El estimador HT en una encuesta de hogares regular {-}
 
-Bajo un diseño regular en una encuesta de hogares, en donde se tiene un esquema estratificado por regiones $h$ (agrupaciones de municipios), con tres etapas de selección dentro de cada estrato (la primera etapa con selección de municipios $i$ dentro del estrato, la segunda con selección de segmentos cartográficos $j$ y la última con selección de hogares $k$), entonces el peso de muestreo final y el estimador del total estará dado por la siguiente expresión
+Bajo un diseño regular en una encuesta de hogares, en donde se tiene un esquema estratificado por regiones $h$ (agrupaciones de municipios), con dos etapas de selección dentro de cada estrato (la primera etapa con selección de UPM $i$ dentro del estrato, la segunda con selección de hogares $k$), entonces el peso de muestreo final y el estimador del total estará dado por la siguiente expresión
 
 $$
-\hat{t}_y = \sum_s w_k y_k = \sum_h \sum_{i \in s_h} \sum_{j \in s_{hi}} \sum_{k \in s_{hij}} w_{hijk} y_{hijk}
+\hat{t}_y = \sum_s w_k y_k = \sum_h \sum_{i \in s_h} \sum_{k \in s_{hi}}  w_{hik} y_{hik}
+$$
+
+Por ejemplo, si dentro de cada estrato $U_h$ $h=1,\ldots, H$ existen $N_{Ih}$ unidades primarias de muestreo, de las cuales se selecciona una muestra $s_{Ih}$ de $n_{Ih}$ unidades mediante un diseño de muestreo aleatorio simple; y además, se considera que el sub-muestreo dentro de cada unidad primaria seleccionada es también aleatorio simple, de tal manera que para cada unidad primaria de muestreo seleccionada $i\in s_{Ih}$ de tamaño $N_i$ se selecciona una submuestra $s_i$ de elementos de tamaño $n_i$, entonces la forma final del estimador de Horvitz-Thompson para el total poblacional quedaría de la siguiente manera:
+
+$$
+\hat{t}_{y,\pi}=\sum_{h=1}^H\hat{t}_{yh,\pi}=\sum_{h=1}^H\left[\frac{N_{Ih}}{n_{Ih}}\sum_{i\in S_{Ih}}\frac{N_i}{n_i}\sum_{k\in S_i}y_k\right]
 $$
 
 
@@ -128,10 +134,17 @@ $$
 \hat{N} = \sum_s w_k 
 $$
 
-Bajo un diseño regular en una encuesta de hogares, con un esquema estratificado y tres etapas de selección, el estimador del tamaño poblacional estará dado por la siguiente expresión
+Bajo un diseño regular en una encuesta de hogares, con un esquema estratificado y dos etapas de selección, el estimador del tamaño poblacional estará dado por la siguiente expresión
 
 $$
-\hat{N} = \sum_s w_k = \sum_h \sum_{i \in s_h} \sum_{j \in s_{hi}} \sum_{k \in s_{hij}} w_{hijk} 
+\hat{N} = \sum_s w_k = \sum_h \sum_{i \in s_h} \sum_{k \in s_{hi}}  w_{hik} 
+$$
+
+
+Al asumir un diseño de muestreo estratificado bietápico, con selección aleatoria simple en cada etapa, entonces la forma final del estimador de Horvitz-Thompson para el tamaño poblacional quedaría de la siguiente manera:
+
+$$
+\hat{N}_{\pi}=\sum_{h=1}^H\left[\frac{N_{Ih}}{n_{Ih}}\sum_{i\in S_{Ih}}\frac{N_i}{n_i}\sum_{k\in S_i}1\right]
 $$
 
 Como lo afirma @Gutierrez_2016, en muchas investigaciones es necesario llevar a cabo estimaciones sobre la población en general, y también sobre subgrupos de ella (denominados dominios por la subcomisión en muestreo de las Naciones Unidas). La identificación de los dominios se logra una vez la información de los elementos ha sido registrada. Los dominios tienen que cumplir las siguientes características:

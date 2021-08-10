@@ -19,30 +19,21 @@ Este mecanismo conocido como ausencia de respuesta completamente aleatoria (MCAR
 
 Es decir que, cuando el investigador produzca estadísticas descriptivas sobre las personas que respondieron la encuestas, ese porcentaje de personas sea muy similar y tenga un comportamiento uniforme sobre todas las posibles covariables que afecten al individuo. El siguiente gráfico podría mostrar algunos indicios de que el patrón de ausencia de respuesta podría ser MCAR puesto que el porcentaje de respuesta es similar en las variables auxiliares.
 
-<div class="figure">
-<img src="10Ausencia_files/figure-html/unnamed-chunk-1-1.svg" alt="Patrón de respuesta MCAR" width="672" />
-<p class="caption">(\#fig:unnamed-chunk-1)Patrón de respuesta MCAR</p>
-</div>
+![(\#fig:unnamed-chunk-1)Patrón de respuesta MCAR](12Ausencia_files/figure-latex/unnamed-chunk-1-1.pdf) 
 
 
 #### MAR {-}
 
 La ausencia de respuesta aleatoria (MAR - *missing at random*) se establece cuando la probabilidad de que un individuo responda depende de algunas covariables auxiliares, pero no depende de la característica de interés.  Por ejemplo, en una encuesta de fuerza laboral, la ausencia de respuesta puede depender de la edad del respondientes, o del sexo, o incluso del nivel económico del individuo, pero no depende de su clasificación laboral. El siguiente gráfico muestra que el patrón de ausencia de respuesta podría ser MAR puesto que el sexo y la zona del respondiente están influenciando el porcentaje de respuesta, aunque no el estado de ocupación. 
 
-<div class="figure">
-<img src="10Ausencia_files/figure-html/unnamed-chunk-2-1.svg" alt="Patrón de respuesta MAR" width="672" />
-<p class="caption">(\#fig:unnamed-chunk-2)Patrón de respuesta MAR</p>
-</div>
+![(\#fig:unnamed-chunk-2)Patrón de respuesta MAR](12Ausencia_files/figure-latex/unnamed-chunk-2-1.pdf) 
 
 
 #### NMAR {-}
 
 Por último, la ausencia de respuesta no aleatoria (NMAR - *not missing at random*) se presenta cuando la ausencia de respuesta depende de la característica de interés. El siguiente gráfico muestra indicios de que el patrón de respuesta es NMAR, puesto que la condición de ocupación es la que influencia el porcentaje de respuesta. 
 
-<div class="figure">
-<img src="10Ausencia_files/figure-html/unnamed-chunk-3-1.svg" alt="Patrón de respuesta MNAR" width="672" />
-<p class="caption">(\#fig:unnamed-chunk-3)Patrón de respuesta MNAR</p>
-</div>
+![(\#fig:unnamed-chunk-3)Patrón de respuesta MNAR](12Ausencia_files/figure-latex/unnamed-chunk-3-1.pdf) 
 
 
 ### Ausencia de respuesta de registro y de unidad

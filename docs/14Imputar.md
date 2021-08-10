@@ -293,6 +293,33 @@ En resumen, a partir de esta simulación de Monte Carlo, se concluye rápidament
 |  Cobertura      |     0.83|      0.97 |       0.95|
 
 
+### Error de muestreo utilizando imputación múltiple
+
+Por ejemplo, si se quiere realizar mediciones de pobreza utilizando la imputación múltiple es necesario primero establecer un modelo sobre los ingresos $y_k$ y luego generar $Q$ posibles valores $y_k^q \ (q=1, \ldots, Q)$ para cada individuo que no respondió. Luego, utilizando los $Q$ conjuntos de datos completos, es necesario estimar la siguientes cantidades 
+
+$$
+\hat{F}_{\alpha}^{q}=\frac{1}{N}\sum_{k\in s} w_k 
+\left(\frac{l-y_k}{l}\right)^{\alpha}I(y_k<l) \ \ \ \ \ \ \ \ \ 
+q= 1,\ldots, Q.
+$$
+
+El estimador final basado en la técnica de imputación múltiple será el promedio simple de las anteriores estimaciones, dado por 
+
+$$
+\tilde{F}_{\alpha}=\frac{1}{Q}\sum_{q=1}^Q \hat{F}_{\alpha}^{q}
+$$
+
+La varianza de esta metodología se puede descomponer en dos componentes, el primero correspondiente a la variación dentro de cada conjunto de datos creado, y el segundo correspondiente a la variación entre cada estimación resultante. Por lo tanto, la varianza asociada a $\tilde{F}_{\alpha}$ es
+
+$$
+\hat{V}(\tilde{F}_{\alpha})
+= \frac{1}{Q}\sum_{q=1}^Q \hat{V}(\hat{F}_{\alpha}^{q})
++ \left(1+\frac{1}{Q}\right)\frac{1}{Q-1}\sum_{q=1}^Q (\hat{F}_{\alpha}^{q}-\tilde{F}_{\alpha})^2
+$$
+
+Nótese que, una vez se tienen los conjuntos de datos completos, es posible estimar $\hat{V}(\hat{F}_{\alpha}^{q})$ utilizando las técnicas del último conglomerado en conjunción con el Jackkinfe. Por último, existen otras formas de imputación no probabilística, tales como el vecino más cercano, técnicas de *hot-deck*, imputación lógica, entre otras. En resumen, la característica principal del proceso imputación es utilizar la información auxiliar para aproximar con precisión los valores faltantes. De esta forma, las estimaciones poblacionales de los parámetros de interés tendrán sesgo nulo o despreciable y la confiabilidad de la estrategia de muestreo se mantendrá como se planeó en una primera instancia.
+
+
 ## Ejemplo: imputación en una encuesta de ingresos y gastos
 
 Una vez que se ha discutido acerca de los propósitos de la imputación en una encuesta de hogares, se debe escoger un método (o métodos) de imputación y una vez establecido el mecanismo de imputación, generar el conjunto de datos rectangular y completo. En esta sección analizaremos, a la luz de las particularidades de una encuesta de hogares de ingresos y gastos, los pasos que se deben surtir para completar un proceso de imputación. Por sus características, este tipo de encuestas presenta tasas elevadas de ausencia de respuesta de registro, aunque también de individuo. 
