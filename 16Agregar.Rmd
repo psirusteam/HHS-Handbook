@@ -1,3 +1,7 @@
+# (PART) Procesamiento derivado en las encuestas de hogares {-}
+
+# Encuestas en dos fases
+
 # Agregación de encuestas
 
 Para producir indicadores sociales de forma anual, es común recurrir a la agregación de las bases de datos provenientes de las encuestas de hogares, cuya periodicidad puede ser mensual, trimestral o semestral. En este docuemnto se exploran algunas estrategias de estimación ligadas al tratamiento de los pesos inducidos por el diseño de muestreo complejo y al tratamiento de las unidades que se repiten en algún periodo debido al caracter rotativo de la medición.
@@ -334,5 +338,6 @@ df_{subpoblación} = \sum_{h=1}^H v_h(n_{Ih} - 1)
 $$
 
 En donde $v_h$ es una variable indicadora que toma el valor uno si el estrato $h$ contiene uno o mas casos de las subpoblaciones de interés y toma el valor cero en otro caso. 
+
 
 
