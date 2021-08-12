@@ -24,7 +24,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2021-08-10" />
+<meta name="date" content="2021-08-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,7 @@
   
 <link rel="prev" href="linealización-de-taylor.html"/>
 <link rel="next" href="enfrentando-la-ausencia-de-respuesta.html"/>
-<script src="libs/header-attrs-2.8/header-attrs.js"></script>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -413,7 +413,7 @@ Var(\hat{\theta}) = \frac{1}{A(1-\rho)^2}\sum_{a=1}^A(\hat{\theta}_a - \hat\thet
 <div id="método-de-bootstrap" class="section level4 unnumbered">
 <h4>Método de Bootstrap</h4>
 <p>En este apartado se presenta el método de Bootstrap <span class="citation">(<a href="#ref-EfroTibs93" role="doc-biblioref">Efron y Tibshirani 1993</a>)</span>, el cual es muy utilizado por su fácil implementación; además de ser flexible en términos del número de réplicas que se crean. Teniendo los pesos muestrales calibrados (denotados por <span class="math inline">\(w_k^{cal}\)</span>), se procede a crear las réplicas con el método de remuestreo con el fin de poder calcular estimaciones de indicadores junto con las varianzas de estimación. En el contexto de las encuestas de hogares, se trata de realizar un remuestreo a las unidades primarias de muestreo seleccionadas desde el marco de áreas.</p>
-<p><span class="citation"><a href="#ref-Rao_Wu_1984" role="doc-biblioref">Rao y Wu</a> (<a href="#ref-Rao_Wu_1984" role="doc-biblioref">1984</a>)</span> y <span class="citation"><a href="#ref-Rao_Wu_1988" role="doc-biblioref">Rao y Wu</a> (<a href="#ref-Rao_Wu_1988" role="doc-biblioref">1988</a>)</span> aconsejan seleccionar una muestra con reemplazo de <span class="math inline">\(n_I - 1\)</span> de las <span class="math inline">\(n_I\)</span> UPM de la muestra, teniendo en cuenta la probabilidad de selección del diseño complejo en la primera etapa. Dado que la selección es con reemplazo, una UPM puede quedar seleccionada más de una vez en esta nueva muestra. Por otro lado, también es posible realizar una selección sin reemplazo; en este caso, <span class="citation"><a href="#ref-Preston" role="doc-biblioref">Preston</a> (<a href="#ref-Preston" role="doc-biblioref">s. f.</a>)</span> recomiendan seleccionar una muestra con reemplazo de <span class="math inline">\(n_I/2\)</span> de las <span class="math inline">\(n_I\)</span> UPM de la muestra, teniendo en cuenta la probabilidad de selección del diseño complejo en la primera etapa.</p>
+<p><span class="citation"><a href="#ref-Rao_Wu_1984" role="doc-biblioref">Rao y Wu</a> (<a href="#ref-Rao_Wu_1984" role="doc-biblioref">1984</a>)</span> y <span class="citation"><a href="#ref-Rao_Wu_1988" role="doc-biblioref">Rao y Wu</a> (<a href="#ref-Rao_Wu_1988" role="doc-biblioref">1988</a>)</span> aconsejan seleccionar una muestra con reemplazo de <span class="math inline">\(n_I - 1\)</span> de las <span class="math inline">\(n_I\)</span> UPM de la muestra, teniendo en cuenta la probabilidad de selección del diseño complejo en la primera etapa. Dado que la selección es con reemplazo, una UPM puede quedar seleccionada más de una vez en esta nueva muestra. Por otro lado, también es posible realizar una selección sin reemplazo; en este caso, <span class="citation"><a href="#ref-Preston_2009" role="doc-biblioref">Preston</a> (<a href="#ref-Preston_2009" role="doc-biblioref">2009</a>)</span> recomiendan seleccionar una muestra con reemplazo de <span class="math inline">\(n_I/2\)</span> de las <span class="math inline">\(n_I\)</span> UPM de la muestra, teniendo en cuenta la probabilidad de selección del diseño complejo en la primera etapa.</p>
 <p>El Bootstrap es el método basado en réplicas más versatil para el cálculo de errores estándar. <span class="citation"><a href="#ref-Valliant_Dever_2017" role="doc-biblioref">Valliant y Dever</a> (<a href="#ref-Valliant_Dever_2017" role="doc-biblioref">2017</a>)</span> mencionan que es muy eficiente en la estimación de parámetros lineales y no lineales, a diferencia del Jackknife que no es eficiente en la estimación de percentiles. Funciona también para tamaños de muestra pequeños, a diferencia del método BRR que requiere una muestra de mínimo dos UPM por estrato. Este método requiere una cantidad de réplicas grande, usualmente mayor a 200.</p>
 <p>Siendo <span class="math inline">\(s_{BS}\)</span> la submuestra Bootstrap, el peso del individuo <span class="math inline">\(k\)</span> perteneciente a la UPM <span class="math inline">\(i\)</span> del estrato <span class="math inline">\(h\)</span> sigue la siguiente expresión:
 <span class="math display">\[
@@ -470,8 +470,8 @@ McCarthy, P. J. 1969. <span>«Pseudo-Replication: Half Samples»</span>. <em>Rev
 <div id="ref-mosteller1968data" class="csl-entry">
 Mosteller, F. 1968. <em>Data Analysis, Including Statistics</em>. <a href="https://books.google.cl/books?id=6ptDHQAACAAJ">https://books.google.cl/books?id=6ptDHQAACAAJ</a>.
 </div>
-<div id="ref-Preston" class="csl-entry">
-Preston, John. s. f. <span>«Rescaled bootstrap for stratified multistage sampling»</span>, n.º 12: 9.
+<div id="ref-Preston_2009" class="csl-entry">
+Preston, John. 2009. <span>«Rescaled bootstrap for stratified multistage sampling»</span>. <em>Survey Methodology</em> 35 (2): 227-34.
 </div>
 <div id="ref-Quenouille" class="csl-entry">
 Quenouille, M. H. 1956. <span>«Notes on Bias in Estimation»</span>. <em>Biometrika</em> 43 (3/4): 353-60.
