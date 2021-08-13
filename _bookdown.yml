@@ -23,6 +23,8 @@ rmd_files: [
   "13SesgoUnidad.Rmd",
   "14Imputar.Rmd",
   "15Outliers.Rmd",
+  
+  "16Agregar.Rmd",
 
   "99Referencias.Rmd"
   ]

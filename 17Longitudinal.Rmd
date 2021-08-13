@@ -1,1 +1,4 @@
 # Procesamiento longitudinal de las encuestas rotativas
+
+
+En conjunción con lo anterior y teniendo en cuenta que es posible que los INE ya hayan publicado las cifras oficiales de los parámetros de interés en los tiempos $t-1$ y $t$, podría ser plausible considerar que los totales fila coincidan con las estimaciones publicadas en el periodo $t-1$ y que los totales columna coincidan con las estimaciones publicadas en el periodo $t$. 

@@ -24,7 +24,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2021-08-11" />
+<meta name="date" content="2021-08-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -293,6 +293,15 @@ div.csl-indent {
 <li class="chapter" data-level="15.1" data-path="algunos-métodos-de-detección-de-valores-extremos.html"><a href="algunos-métodos-de-detección-de-valores-extremos.html"><i class="fa fa-check"></i><b>15.1</b> Algunos métodos de detección de valores extremos</a></li>
 <li class="chapter" data-level="15.2" data-path="valores-atípicos-en-una-encuesta-de-consumo.html"><a href="valores-atípicos-en-una-encuesta-de-consumo.html"><i class="fa fa-check"></i><b>15.2</b> Valores atípicos en una encuesta de consumo</a></li>
 </ul></li>
+<li class="part"><span><b>III Procesamiento derivado en las encuestas de hogares</b></span></li>
+<li class="chapter" data-level="16" data-path="agregación-de-encuestas.html"><a href="agregación-de-encuestas.html"><i class="fa fa-check"></i><b>16</b> Agregación de encuestas</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="esquemas-de-acumulación-de-muestras.html"><a href="esquemas-de-acumulación-de-muestras.html"><i class="fa fa-check"></i><b>16.1</b> Esquemas de acumulación de muestras</a></li>
+<li class="chapter" data-level="16.2" data-path="factores-de-expansión-y-estimadores-de-muestreo.html"><a href="factores-de-expansión-y-estimadores-de-muestreo.html"><i class="fa fa-check"></i><b>16.2</b> Factores de expansión y estimadores de muestreo</a></li>
+<li class="chapter" data-level="16.3" data-path="efecto-del-tipo-de-encuesta-en-la-eficiencia-de-los-indicadores.html"><a href="efecto-del-tipo-de-encuesta-en-la-eficiencia-de-los-indicadores.html"><i class="fa fa-check"></i><b>16.3</b> Efecto del tipo de encuesta en la eficiencia de los indicadores</a></li>
+<li class="chapter" data-level="16.4" data-path="agregación-de-encuestas-con-diferentes-tamaños-de-muestra.html"><a href="agregación-de-encuestas-con-diferentes-tamaños-de-muestra.html"><i class="fa fa-check"></i><b>16.4</b> Agregación de encuestas con diferentes tamaños de muestra</a></li>
+<li class="chapter" data-level="16.5" data-path="pruebas-de-hipótesis-sobre-indicadores-longitudinales.html"><a href="pruebas-de-hipótesis-sobre-indicadores-longitudinales.html"><i class="fa fa-check"></i><b>16.5</b> Pruebas de hipótesis sobre indicadores longitudinales</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
 <li class="divider"></li>
 <li><a Diseño y análisis de encuestas de hogares</a></li>
@@ -339,6 +348,18 @@ al intervalo <span class="math inline">\([-1, 1]\)</span>, el valor máximo del 
 \]</span></p>
 <p>A pesar de que este límite superior no se puede calcular en situaciones prácticas, sí es posible estimarlo utilizando los datos de la muestra y las probabilidades
 de respuesta estimadas. Nótese que si el mecanismo de ausencia de respuesta fuese MCAR, entonces el valor de <span class="math inline">\(R\left(\phi\right)\)</span> sería uno, y por consiguiente no habría sesgo. De la misma forma, en el caso extremo en el que la característica de interés fuese homogénea en toda la población, tampoco habría sesgo en el estimador, y bastaría con utilizar los datos de la muestra, sin ningún tipo de corrección.</p>
+<p>Además de las anteriores consideraciones, es posible evaluar las propuestas de escogencia de variables para calibración de <span class="citation"><a href="#ref-KaltonFloresCervantes_2003" role="doc-biblioref">Graham Kalton y Flores-Cervantes</a> (<a href="#ref-KaltonFloresCervantes_2003" role="doc-biblioref">2003</a>)</span> y de <span class="citation"><a href="#ref-Sarndal_2011" role="doc-biblioref">Sarndal</a> (<a href="#ref-Sarndal_2011" role="doc-biblioref">2011</a>)</span>. En particular, este último autor considera un indicador del sesgo por ausencia de respuesta sobre los estimadores de calibración, cuya lógica se basa en que, en el mejor de los casos, en el que no hubiese errores de cobertura ni ausencia de respuesta, el estimador de expansión <span class="math inline">\(\hat{t}_{y}\)</span> sería insesgado y la distancia que habría entre este y el estimador de calibración <span class="math inline">\(\hat{t}_{y,cal}\)</span> se podría cuantificar como <span class="math inline">\(\Delta_A = \frac{(\hat{t}_{y,cal} - \hat{t}_{y})}{N}\)</span>. Este indicador se sugiere como una posible herramienta para comparar potenciales variables de calibración, de tal forma que cuando el valor de <span class="math inline">\(|\Delta_A|\)</span> sea grande habría un indicio para preferir un vector de calibración sobre otro. Además, al estandarizarla, esta medida puede ser descompuesta en los siguiente tres factores:</p>
+<p><span class="math display">\[\frac{\Delta_A}{S_y} = cv_g \ \times R_{y,\mathbf{x}} \ \times R_{D,C}\]</span></p>
+<p>De esta forma, el primer factor representa el coeficiente de variación de los pesos <span class="math inline">\(g_k\)</span>; el segundo factor al cuadrado es el coeficiente de determinación de una regresión múltiple entre la variable de estudio y las variables del vector de calibración; el úlitmo factor al cuadrado es el coeficiente de determinación (proporción de varianza explicada) en una regresión ponderada que pasa por el origen entre las desviaciones de las covariables <span class="math inline">\(D_j = \hat{t}_{x} - t_x\)</span> y las covarianzas de la variable de estudio y las covaraibles <span class="math inline">\(C_j = cov(y, x_j)\)</span>.</p>
+</div>
+<h3>Referencias</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-KaltonFloresCervantes_2003" class="csl-entry">
+Kalton, Graham, y Ismael Flores-Cervantes. 2003. <span>«Weighting methods»</span>. <em>Journal of Official Statistics</em> 19 (2): 17.
+</div>
+<div id="ref-Sarndal_2011" class="csl-entry">
+Sarndal, Carl-Erik. 2011. <span>«Three Factors to Signal Non‐Response Bias With Applications to Categorical Auxiliary Variables»</span>. <em>International Statistical Review / Revue Internationale de Statistique</em> 79 (2).
+</div>
 </div>
             </section>
 
