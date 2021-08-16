@@ -449,3 +449,87 @@ En donde $\hat{\theta}_b$ es el estimador del parámetro de interés en la répl
 
 En general, es necesario reflejar el ajuste de los pesos en las réplicas, por esto es necesario trabajar con la muestra originalmente seleccionada, la cual contendrá unidades no elegibles y unidades que no respondieron. Los mismos ajustes que se hicieron a la muestra original se deben realizar en cada réplica. Si hubo calibración de pesos también debe ser incluida como un proceso en cada réplica, para asegurar que el error estándar inducido por estos métodos incluirá el incremento (o decremento) de la varianza inducida por estos ajustes a los pesos. 
 
+## Consideraciones adicionales  
+
+
+En la práctica del muestreo, existen algunos paradigmas que inducen la planeación y diseño de las encuestas. En esta sección se muestran ejemplos y contra-ejemplos que permiten ilustrar algunas paradojas en la estimación del error de muestreo de las encuestas de hogares. 
+
+
+La idea de que no pueden existir estimaciones negativas de la varianza se ha instalado como un razonamiento bastante lógico e intuitivo: dado que la varianza es un parámetro positivo, entonces no puede ser estimada con cantidades negativas. Sin embargo, en la inferencia basada en el diseño de muestreo, sí es posible obtener estimativas negativas de varianza para algunas estructuras poblacionales particulares y es por esto que se requiere una experiencia mayor por parte del equipo de muestreo, que debe conocer bajo qué condiciones se podría presentar esta situación para evadirla. 
+
+Nótese que se debe diferenciar entre estimador (que es una función de variables aleatorias) y parámetro (que es un valor real desconocido). En efecto, para la varianza del estimador HT (parámetro desconocido y siempre positivo) hay estimadores (función de variables aleatorias) que pueden arrojar estimaciones negativas. Es posible que las estimaciones de la varianza arrojen resultados negativos, que no pueden ser utilizados ni interpretados. Haciendo uso de la función `VarSYGHT` es posible ejemplificar esta situación. Considere el siguiente diseño de muestreo de tamaño fijo e igual a $n=2$.
+
+```{r}
+library(TeachingSampling)
+x = c(2.5, 2.0, 1.1, 0.5)
+N = 4
+n = 2
+p = c(0.31, 0.20, 0.14, 0.03, 0.01, 0.31)
+
+data.frame(I = Ik(4, 2), p = p)
+```
+
+En el anterior ejemplo, la probabilidad de obtener una muestra compuesta por los dos primeros elementos se fijó en 0.31; mientras que la probabilidad de obtener una muestra compuesta por el primer y el tercer elemento se fijó en 0.20 y así sucesivamente. Para esta configuración, y utilizando la función `VarSYGHT` del paquete `TeachingSampling` [@TS], se obtienen las estimaciones puntuales para cada una de las seis posibles muestras, así como las dos posibles estimaciones de la varianza. Nótese que para ambos escenarios existen estimaciones negativas.
+
+```{r}
+VarSYGHT(x, N, n, p)
+```
+
+A pesar de los resultados negativos para las varianzas, tanto el estimador del total como los dos estimadores de su varianza siguen siendo insesgados. En efecto al multiplicar la estimación puntual por la probabilidad del diseño de muestreo se obtienen los valores poblacionales
+
+```{r}
+# Insesgamiento para el estimador del total
+sum(x)
+sum(VarSYGHT(x, N, n, p)$p * VarSYGHT(x, N, n, p)$Est.HT)
+
+# Insesgamiento para los dos estimadores de varianza
+VarHT(x, N, n, p)
+sum(VarSYGHT(x, N, n, p)$p * VarSYGHT(x, N, n, p)$Est.Var1)
+sum(VarSYGHT(x, N, n, p)$p * VarSYGHT(x, N, n, p)$Est.Var2)
+```
+
+Para evitar estas estimativas negativas, @Gutierrez_2016 afirmar que es necesario garantizar que la covarianza ($\Delta_{kl}$) sea negativa para cada par de elementos en la población ($k \neq l$), lo cual no sucede con este esquema de muestreo, como se muestra a continuación:
+
+```{r}
+Deltakl(N, n, p)
+```
+
+Tal vez la idea de que la varianza deberá disminuir a medida que el tamaño de muestra crece se ha venido de la lógica intuitiva en donde el error de muestreo no debería existir si se realiza una medición completa de la población. Sin embargo, para algunas estrategias de muestreo es posible encontrar que existen situaciones en donde el tamaño de muestra crece, y con él la varianza del estimador. En esta sección se mostrará un ejemplo en donde sucede exactamente eso. 
+
+Para poder mostrar este hecho, vamos a utilizar un ejemplo reducido. Supongamos una población de $N = 3$ elementos $U=\{1, 2, 3\}$ y comparemos dos diseños de muestreo, el primero con un tamaño de muestra fijo de $n=1$ y el segundo con un tamaño de muestra fijo de $n=2$. En ambos casos la variable de interés es dicotómica que denota la presencia o ausencia del fenómeno en los individuos de la población.
+
+En el primer caso, el diseño de muestreo de tamaño de muestra $n=1$ es el siguiente:
+
+```{r}
+p1 <- c(0.5, 0.1, 0.4)
+Ind1 <- Ik(N = 3, n = 1)
+data.frame(I = Ind1, p = p1)
+```
+
+En este esquema de muestreo, la varianza del estimador de Horvitz-Thompson es igual a $Var(\hat t_{y, pi}) = 1,5$.
+
+```{r}
+z <- c(0, 0, 1)
+VarHT(z, N = 3, n = 1, p1)
+```
+
+En el segundo caso, el diseño de muestreo de tamaño de muestra $n=2$ es el siguiente:
+
+```{r}
+p2 = c(0.7, 0.2, 0.1)
+Ind2 <- Ik(N = 3, n = 2)
+data.frame(I = Ind2, p = p2)
+```
+
+En este esquema de muestreo, la varianza del estimador de Horvitz-Thompson es igual a $Var(\hat t_{y, pi}) = 2,3$.
+
+```{r}
+z <- c(0, 0, 1)
+VarHT(z, N = 3, n = 2, p2)
+```
+
+
+
+
+
+

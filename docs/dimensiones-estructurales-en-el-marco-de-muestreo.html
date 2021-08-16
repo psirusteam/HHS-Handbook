@@ -24,7 +24,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2021-08-13" />
+<meta name="date" content="2021-08-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -55,6 +55,70 @@
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
@@ -241,6 +305,7 @@ div.csl-indent {
 <li class="chapter" data-level="10.5.1" data-path="calibración-de-los-pesos.html"><a href="calibración-de-los-pesos.html#medidas-de-calidad-en-la-calibración"><i class="fa fa-check"></i><b>10.5.1</b> Medidas de calidad en la calibración</a></li>
 <li class="chapter" data-level="10.5.2" data-path="calibración-de-los-pesos.html"><a href="calibración-de-los-pesos.html#diferentes-niveles-de-calibración"><i class="fa fa-check"></i><b>10.5.2</b> Diferentes niveles de calibración</a></li>
 <li class="chapter" data-level="10.5.3" data-path="calibración-de-los-pesos.html"><a href="calibración-de-los-pesos.html#calibración-integrada-en-hogares"><i class="fa fa-check"></i><b>10.5.3</b> Calibración integrada en hogares</a></li>
+<li class="chapter" data-level="10.5.4" data-path="calibración-de-los-pesos.html"><a href="calibración-de-los-pesos.html#calibración-sobre-razones-medias-y-proporciones"><i class="fa fa-check"></i><b>10.5.4</b> Calibración sobre razones, medias y proporciones</a></li>
 </ul></li>
 <li class="chapter" data-level="10.6" data-path="recorte-de-los-pesos.html"><a href="recorte-de-los-pesos.html"><i class="fa fa-check"></i><b>10.6</b> Recorte de los pesos</a></li>
 <li class="chapter" data-level="10.7" data-path="redondeo-de-los-factores-de-expansión.html"><a href="redondeo-de-los-factores-de-expansión.html"><i class="fa fa-check"></i><b>10.7</b> Redondeo de los factores de expansión</a></li>
@@ -251,6 +316,7 @@ div.csl-indent {
 <li class="chapter" data-level="11.2" data-path="la-técnica-del-último-conglomerado.html"><a href="la-técnica-del-último-conglomerado.html"><i class="fa fa-check"></i><b>11.2</b> La técnica del último conglomerado</a></li>
 <li class="chapter" data-level="11.3" data-path="linealización-de-taylor.html"><a href="linealización-de-taylor.html"><i class="fa fa-check"></i><b>11.3</b> Linealización de Taylor</a></li>
 <li class="chapter" data-level="11.4" data-path="réplicas.html"><a href="réplicas.html"><i class="fa fa-check"></i><b>11.4</b> Réplicas</a></li>
+<li class="chapter" data-level="11.5" data-path="consideraciones-adicionales.html"><a href="consideraciones-adicionales.html"><i class="fa fa-check"></i><b>11.5</b> Consideraciones adicionales</a></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="enfrentando-la-ausencia-de-respuesta.html"><a href="enfrentando-la-ausencia-de-respuesta.html"><i class="fa fa-check"></i><b>12</b> Enfrentando la ausencia de respuesta</a>
 <ul>
@@ -302,6 +368,80 @@ div.csl-indent {
 <li class="chapter" data-level="16.4" data-path="agregación-de-encuestas-con-diferentes-tamaños-de-muestra.html"><a href="agregación-de-encuestas-con-diferentes-tamaños-de-muestra.html"><i class="fa fa-check"></i><b>16.4</b> Agregación de encuestas con diferentes tamaños de muestra</a></li>
 <li class="chapter" data-level="16.5" data-path="pruebas-de-hipótesis-sobre-indicadores-longitudinales.html"><a href="pruebas-de-hipótesis-sobre-indicadores-longitudinales.html"><i class="fa fa-check"></i><b>16.5</b> Pruebas de hipótesis sobre indicadores longitudinales</a></li>
 </ul></li>
+<li class="chapter" data-level="17" data-path="procesamiento-longitudinal-de-las-encuestas-rotativas.html"><a href="procesamiento-longitudinal-de-las-encuestas-rotativas.html"><i class="fa fa-check"></i><b>17</b> Procesamiento longitudinal de las encuestas rotativas</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="diseño-de-paneles-rotativos-en-las-encuestas-de-la-región.html"><a href="diseño-de-paneles-rotativos-en-las-encuestas-de-la-región.html"><i class="fa fa-check"></i><b>17.1</b> Diseño de paneles rotativos en las encuestas de la región</a></li>
+<li class="chapter" data-level="17.2" data-path="generación-de-bases-longitudinales-para-dos-periodos-consecutivos.html"><a href="generación-de-bases-longitudinales-para-dos-periodos-consecutivos.html"><i class="fa fa-check"></i><b>17.2</b> Generación de bases longitudinales para dos periodos consecutivos</a>
+<ul>
+<li class="chapter" data-level="17.2.1" data-path="generación-de-bases-longitudinales-para-dos-periodos-consecutivos.html"><a href="generación-de-bases-longitudinales-para-dos-periodos-consecutivos.html#creación-de-los-pesos-iniciales"><i class="fa fa-check"></i><b>17.2.1</b> Creación de los pesos iniciales</a></li>
+<li class="chapter" data-level="17.2.2" data-path="generación-de-bases-longitudinales-para-dos-periodos-consecutivos.html"><a href="generación-de-bases-longitudinales-para-dos-periodos-consecutivos.html#generación-de-los-pesos-longitudinales"><i class="fa fa-check"></i><b>17.2.2</b> Generación de los pesos longitudinales</a></li>
+</ul></li>
+<li class="chapter" data-level="17.3" data-path="generación-de-bases-longitudinales-anuales.html"><a href="generación-de-bases-longitudinales-anuales.html"><i class="fa fa-check"></i><b>17.3</b> Generación de bases longitudinales anuales</a></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="análisis-de-flujos-brutos.html"><a href="análisis-de-flujos-brutos.html"><i class="fa fa-check"></i><b>18</b> Análisis de flujos brutos</a>
+<ul>
+<li class="chapter" data-level="18.1" data-path="matrices-de-transición.html"><a href="matrices-de-transición.html"><i class="fa fa-check"></i><b>18.1</b> Matrices de transición</a></li>
+<li class="chapter" data-level="18.2" data-path="modelos-de-markov.html"><a href="modelos-de-markov.html"><i class="fa fa-check"></i><b>18.2</b> Modelos de Markov</a></li>
+<li class="chapter" data-level="18.3" data-path="estimación-de-las-matrices-de-transición.html"><a href="estimación-de-las-matrices-de-transición.html"><i class="fa fa-check"></i><b>18.3</b> Estimación de las matrices de transición</a></li>
+<li class="chapter" data-level="18.4" data-path="estimación-de-la-transición-en-subpoblaciones-de-interés.html"><a href="estimación-de-la-transición-en-subpoblaciones-de-interés.html"><i class="fa fa-check"></i><b>18.4</b> Estimación de la transición en subpoblaciones de interés</a></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="criterios-de-calidad-y-difusión.html"><a href="criterios-de-calidad-y-difusión.html"><i class="fa fa-check"></i><b>19</b> Criterios de calidad y difusión</a>
+<ul>
+<li class="chapter" data-level="19.1" data-path="medidas-de-calidad.html"><a href="medidas-de-calidad.html"><i class="fa fa-check"></i><b>19.1</b> Medidas de calidad</a></li>
+<li class="chapter" data-level="19.2" data-path="consideraciones-adicionales-1.html"><a href="consideraciones-adicionales-1.html"><i class="fa fa-check"></i><b>19.2</b> Consideraciones adicionales</a>
+<ul>
+<li class="chapter" data-level="19.2.1" data-path="consideraciones-adicionales-1.html"><a href="consideraciones-adicionales-1.html#variables-y-subpoblaciones"><i class="fa fa-check"></i><b>19.2.1</b> Variables y subpoblaciones</a></li>
+</ul></li>
+<li class="chapter" data-level="19.3" data-path="secuencia-lógica-para-crear-reglas-de-supresión.html"><a href="secuencia-lógica-para-crear-reglas-de-supresión.html"><i class="fa fa-check"></i><b>19.3</b> Secuencia lógica para crear reglas de supresión</a></li>
+</ul></li>
+<li class="chapter" data-level="20" data-path="part-apéndices.html"><a href="part-apéndices.html"><i class="fa fa-check"></i><b>20</b> (PART) Apéndices</a></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="una-perspectiva-regional-de-las-encuestas-de-hogares.html"><a href="una-perspectiva-regional-de-las-encuestas-de-hogares.html"><i class="fa fa-check"></i><b>A</b> Una perspectiva regional de las encuestas de hogares</a>
+<ul>
+<li class="chapter" data-level="A.1" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html"><i class="fa fa-check"></i><b>A.1</b> Descripción de algunas encuestas por países</a>
+<ul>
+<li class="chapter" data-level="" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#argentina"><i class="fa fa-check"></i>Argentina</a></li>
+<li class="chapter" data-level="" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#bolivia"><i class="fa fa-check"></i>Bolivia</a></li>
+<li class="chapter" data-level="" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#brasil"><i class="fa fa-check"></i>Brasil</a></li>
+<li class="chapter" data-level="" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#chile"><i class="fa fa-check"></i>Chile</a></li>
+<li class="chapter" data-level="" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#colombia"><i class="fa fa-check"></i>Colombia</a></li>
+<li class="chapter" data-level="" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#costa-rica"><i class="fa fa-check"></i>Costa Rica</a></li>
+<li class="chapter" data-level="" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#cuba"><i class="fa fa-check"></i>Cuba</a></li>
+<li class="chapter" data-level="" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#ecuador"><i class="fa fa-check"></i>Ecuador</a></li>
+<li class="chapter" data-level="" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#el-salvador"><i class="fa fa-check"></i>El Salvador</a></li>
+<li class="chapter" data-level="" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#guatemala"><i class="fa fa-check"></i>Guatemala</a></li>
+<li class="chapter" data-level="" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#honduras"><i class="fa fa-check"></i>Honduras</a></li>
+<li class="chapter" data-level="" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#méxico"><i class="fa fa-check"></i>México</a></li>
+<li class="chapter" data-level="" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#nicaragua"><i class="fa fa-check"></i>Nicaragua</a></li>
+<li class="chapter" data-level="" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#panamá"><i class="fa fa-check"></i>Panamá</a></li>
+<li class="chapter" data-level="" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#paraguay"><i class="fa fa-check"></i>Paraguay</a></li>
+<li class="chapter" data-level="" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#perú"><i class="fa fa-check"></i>Perú</a></li>
+<li class="chapter" data-level="" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#república-dominicana"><i class="fa fa-check"></i>República Dominicana</a></li>
+<li class="chapter" data-level="" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#uruguay"><i class="fa fa-check"></i>Uruguay</a></li>
+<li class="chapter" data-level="" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#venezuela"><i class="fa fa-check"></i>Venezuela</a></li>
+</ul></li>
+<li class="chapter" data-level="A.2" data-path="desafios-de-la-región.html"><a href="desafios-de-la-región.html"><i class="fa fa-check"></i><b>A.2</b> Desafios de la región</a></li>
+</ul></li>
+<li class="chapter" data-level="B" data-path="software.html"><a href="software.html"><i class="fa fa-check"></i><b>B</b> Software</a>
+<ul>
+<li class="chapter" data-level="" data-path="software.html"><a href="software.html#r"><i class="fa fa-check"></i>R</a></li>
+<li class="chapter" data-level="" data-path="software.html"><a href="software.html#spss"><i class="fa fa-check"></i>SPSS</a></li>
+<li class="chapter" data-level="" data-path="software.html"><a href="software.html#sas"><i class="fa fa-check"></i>SAS</a></li>
+<li class="chapter" data-level="" data-path="software.html"><a href="software.html#stata"><i class="fa fa-check"></i>STATA</a></li>
+</ul></li>
+<li class="chapter" data-level="C" data-path="recomendaciones-de-documentación-técnica-en-las-encuestas-de-hogares.html"><a href="recomendaciones-de-documentación-técnica-en-las-encuestas-de-hogares.html"><i class="fa fa-check"></i><b>C</b> Recomendaciones de documentación técnica en las encuestas de hogares</a>
+<ul>
+<li class="chapter" data-level="" data-path="recomendaciones-de-documentación-técnica-en-las-encuestas-de-hogares.html"><a href="recomendaciones-de-documentación-técnica-en-las-encuestas-de-hogares.html#características-y-objetivos-de-la-encuesta"><i class="fa fa-check"></i>Características y objetivos de la encuesta</a></li>
+<li class="chapter" data-level="" data-path="recomendaciones-de-documentación-técnica-en-las-encuestas-de-hogares.html"><a href="recomendaciones-de-documentación-técnica-en-las-encuestas-de-hogares.html#definición-de-la-población-objetivo"><i class="fa fa-check"></i>Definición de la población objetivo</a></li>
+<li class="chapter" data-level="" data-path="recomendaciones-de-documentación-técnica-en-las-encuestas-de-hogares.html"><a href="recomendaciones-de-documentación-técnica-en-las-encuestas-de-hogares.html#definición-de-los-parámetros-y-variables-de-diseño"><i class="fa fa-check"></i>Definición de los parámetros y variables de diseño</a></li>
+<li class="chapter" data-level="" data-path="recomendaciones-de-documentación-técnica-en-las-encuestas-de-hogares.html"><a href="recomendaciones-de-documentación-técnica-en-las-encuestas-de-hogares.html#consolidación-del-marco-de-muestreo"><i class="fa fa-check"></i>Consolidación del marco de muestreo</a></li>
+<li class="chapter" data-level="" data-path="recomendaciones-de-documentación-técnica-en-las-encuestas-de-hogares.html"><a href="recomendaciones-de-documentación-técnica-en-las-encuestas-de-hogares.html#diseño-de-muestreo"><i class="fa fa-check"></i>Diseño de muestreo</a></li>
+<li class="chapter" data-level="" data-path="recomendaciones-de-documentación-técnica-en-las-encuestas-de-hogares.html"><a href="recomendaciones-de-documentación-técnica-en-las-encuestas-de-hogares.html#cálculo-del-tamaño-de-muestra-1"><i class="fa fa-check"></i>Cálculo del tamaño de muestra</a></li>
+<li class="chapter" data-level="" data-path="recomendaciones-de-documentación-técnica-en-las-encuestas-de-hogares.html"><a href="recomendaciones-de-documentación-técnica-en-las-encuestas-de-hogares.html#definición-de-los-factores-de-expansión"><i class="fa fa-check"></i>Definición de los factores de expansión</a></li>
+<li class="chapter" data-level="" data-path="recomendaciones-de-documentación-técnica-en-las-encuestas-de-hogares.html"><a href="recomendaciones-de-documentación-técnica-en-las-encuestas-de-hogares.html#esquema-de-rotación-si-aplica"><i class="fa fa-check"></i>Esquema de rotación (si aplica)</a></li>
+<li class="chapter" data-level="" data-path="recomendaciones-de-documentación-técnica-en-las-encuestas-de-hogares.html"><a href="recomendaciones-de-documentación-técnica-en-las-encuestas-de-hogares.html#definición-de-los-estimadores"><i class="fa fa-check"></i>Definición de los estimadores</a></li>
+<li class="chapter" data-level="" data-path="recomendaciones-de-documentación-técnica-en-las-encuestas-de-hogares.html"><a href="recomendaciones-de-documentación-técnica-en-las-encuestas-de-hogares.html#cálculo-del-error-de-muestreo"><i class="fa fa-check"></i>Cálculo del error de muestreo</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
 <li class="divider"></li>
 <li><a Diseño y análisis de encuestas de hogares</a></li>
@@ -327,7 +467,7 @@ div.csl-indent {
 <h2><span class="header-section-number">5.1</span> Dimensiones estructurales en el marco de muestreo</h2>
 <p>El proceso de definición de un diseño de muestreo para las encuestas nacionales que necesita un país para responder a sus necesidades de información con miras en la elaboración de sus políticas públicas involucra varios procesos que hacen uso de los censos nacionales de población y el uso de una cartografía detallada del territorio nacional.</p>
 <p>Como se indicó en el capítulo anterior, un aspecto fundamental para el diseño y desarrollo de encuestas de hogares involucra la definición de las UPM, definidas como unidades cartográficas que dividen el territorio nacional y permiten llevar a cabo los procesos de levantamiento de información y de trabajo de campo de la manera más idónea posible, y que además se construyen con el fin de facilitar la obtención de estimaciones precisas y confiables de los indicadores y parámetros de interés que requieren los tomadores de decisiones y expertos en políticas públicas.</p>
-<p>Dependiendo de la planificación de las diferentes encuestas, las UPM pueden dar lugar a unidades secundarias de muestreo o permitir la selección directa de las unidades de análisis como las viviendas, los hogares y/o las personas. Independientemente de las unidades de muestreo y las jerarquías que se definan para llevar a cabo la implementación del diseño de muestreo para las encuestas, es fundamental llevar a cabo un proceso de estratificación de las UPM en grupos que sean en lo posible lo más homogéneos en cuanto a sus características socioeconómicas y de bienestar y que definan una partición del territorio nacional <span class="citation">(<a href="#ref-Gutierrez_2016" role="doc-biblioref">H. A. Gutiérrez 2016</a>)</span>.</p>
+<p>Dependiendo de la planificación de las diferentes encuestas, las UPM pueden dar lugar a unidades secundarias de muestreo o permitir la selección directa de las unidades de análisis como las viviendas, los hogares y/o las personas. Independientemente de las unidades de muestreo y las jerarquías que se definan para llevar a cabo la implementación del diseño de muestreo para las encuestas, es fundamental llevar a cabo un proceso de estratificación de las UPM en grupos que sean en lo posible lo más homogéneos en cuanto a sus características socioeconómicas y de bienestar y que definan una partición del territorio nacional <span class="citation">(<a href="#ref-Gutierrez_2016" role="doc-biblioref">Hugo Andrés Gutiérrez 2016a</a>)</span>.</p>
 <p>Estos grupos se denominan en la literatura estadística como estratos y su unión debe cubrir todo el territorio nacional. Como estos grupos determinan una partición, dos estratos cualesquiera deben ser mutuamente excluyentes. Los INE utilizan las particiones geográficas y cartográficas generadas en el levantamiento del censo con el fin de seleccionar muestras de hogares, mediante la ejecución de diseños de muestreo probabilísticos, estratificados y en varias etapas. En particular, para aumentar la eficiencia de la inferencia en las encuestas de hogares, es de particular interés que el marco de muestreo permita clasificar a las UPM de acuerdo con su estructura socioeconómica, con el fin de poder realizar selecciones independientes en cada categoría de la clasificación.</p>
 <p>De esta forma se garantiza la homogeneidad entre estratos y se disminuye la incertidumbre de la estimación. Este proceso se conoce con el nombre de estratificación y es un proceso fundamental para minimizar los errores de muestreo que se obtienen al ejecutar encuestas probabilísticas. En el caso particular de los países latinoamericanos, este proceso se lleva a cabo haciendo uso de la información censal a nivel de personas, hogares y viviendas, en diferentes constructos o dimensiones asociadas a la calidad de vida y bienestar (demografía, características de la vivienda, tenencia de enseres y servicios públicos entre otros). Las variables que se definan sobre estos constructos son agregadas partiendo de variables binarias que toman el un valor de uno, si el fenómeno en cuestión está asociado de forma positiva a mejores condiciones socioeconómicas. Por ejemplo:</p>
 <ul>
@@ -352,7 +492,7 @@ div.csl-indent {
 <h3>Referencias</h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Gutierrez_2016" class="csl-entry">
-Gutiérrez, Hugo Andrés. 2016. <em>Estrategias de muestreo: diseño de encuestas y estimación de parámetros</em>. Segunda edición. Ediciones de la U.
+———. 2016a. <em>Estrategias de muestreo: diseño de encuestas y estimación de parámetros</em>. Segunda edición. Ediciones de la U.
 </div>
 </div>
 <div class="footnotes">

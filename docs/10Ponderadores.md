@@ -396,6 +396,43 @@ x_{cN_I1} & x_{cN_I2} & \cdots & x_{cN_Ip}
 \end{bmatrix}
 $$
 
+### Calibración sobre razones, medias y proporciones
+
+@Gutierrez_Zhang_Rodriguez_2016 afirman que, además de utilizar ponderadores calibrados a tamaños o totales, también es posible imponer restricciones de calibración sobre razones, que a su vez son una generalización de medias y proporciones. Por ejemplo, considere $Q$ subgrupos de interés (dominios, estratos o post-estratos). Si las razones para dichos subgrupos fuesen conocidas, podemos encontrar pesos $w_k$ que satisfagan la siguiente restricción:
+
+$$
+\hat{\textbf{R}}_{cal} = (\hat{R}_{1,cal},...,\hat{R}_{Q,cal})'= (R_1,...,R_Q)'= \textbf{R}
+$$
+
+donde $\hat{R}_{q,cal} = \frac{\sum_{k \in s}w_ky_{qk}}{\sum_{k \in s}w_kx_{qk}}$. De esta forma, es posible imponer lo siguiente restricción en las ecuaciones de calibración: $\hat{\textbf{R}}_{cal} = \textbf{R}_U$. Es decir, para $q = 1,..., Q$,
+
+\begin{equation*}
+z_{qk} = 
+\begin{cases} 
+y_{qk} - R_qx_{qk} \ \ \ &\text{si} \ k \in s_h \\ 
+0 &\text{en otro caso}
+\end{cases}
+\end{equation*}
+
+En donde 
+$$
+t_{z_q} = \sum_{k \in U}z_{qk} = \sum_{k \in U}y_{qk} - R_qx_{qk} = 0
+$$
+
+Como caso particular, si las medias de los subgrupos son conocidas, la restricción queda como
+$$
+\bar{\textbf{y}}_{cal} = (\bar{y}_{1,cal},...,\bar{y}_{Q,cal})' = (\bar{y}_{1},...,\bar{y}_{Q})' = \bar{\textbf{y}}
+$$
+
+Así, la restricción para las ecuaciones de calibración, $\bar{\textbf{y}}_{cal} = \bar{\textbf{y}}$, para cada $q = 1,...,Q$, se define a partir de la siguiente variable de calibración:
+
+\begin{equation*}
+z_{qk} = 
+\begin{cases} 
+y_{qk} - \bar{y}_{q} \ \ \ &\text{si} \ k \in s_h \\ 
+0 &\text{en otro caso}
+\end{cases}
+\end{equation*}
 
 ## Recorte de los pesos
 

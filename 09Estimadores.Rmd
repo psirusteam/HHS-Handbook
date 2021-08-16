@@ -348,6 +348,7 @@ En general, los pesos calibrados se escriben de la siguiente manera:
 $$w_k = d_k \times exp(u_h) \times exp(v_g)$$
 En donde $u_h$ es una función de los totales marginales de las filas de la tabla cruzada y $v_g$ es una función de los totales marginales de las columnas. El *raking* permite utilizar variables que pueden ser predictoras de las variables de interés o explicar la probabilidad de responder del hogar (o persona), además de mejorar las tasas de cobertura del marco de muestreo.
 
+
 ### La calibración como un cambio de paradigma
 
 @Sar08 concluye que existen algunas ideas sobre las cuales vale la pena profundizar un poco más. A continuación se reproducen las ideas de @Gutierrez_2016 sobre estos criterios para enfatizar el uso práctico de los estimadores de calibración:
