@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>12.1 Clasificación de la ausencia de respuesta | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="12.1 Clasificación de la ausencia de respuesta | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2021-08-16" />
+<meta name="date" content="2021-12-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +33,9 @@
   
 <link rel="prev" href="enfrentando-la-ausencia-de-respuesta.html"/>
 <link rel="next" href="indicadores-de-representatividad.html"/>
-<script src="libs/header-attrs-2.10/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -42,7 +43,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
 
 
 
@@ -394,7 +394,7 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="19.3" data-path="secuencia-lógica-para-crear-reglas-de-supresión.html"><a href="secuencia-lógica-para-crear-reglas-de-supresión.html"><i class="fa fa-check"></i><b>19.3</b> Secuencia lógica para crear reglas de supresión</a></li>
 </ul></li>
-<li class="chapter" data-level="20" data-path="part-apéndices.html"><a href="part-apéndices.html"><i class="fa fa-check"></i><b>20</b> (PART) Apéndices</a></li>
+<li class="part"><span><b>IV Apéndices</b></span></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
 <li class="chapter" data-level="A" data-path="una-perspectiva-regional-de-las-encuestas-de-hogares.html"><a href="una-perspectiva-regional-de-las-encuestas-de-hogares.html"><i class="fa fa-check"></i><b>A</b> Una perspectiva regional de las encuestas de hogares</a>
 <ul>
@@ -470,7 +470,7 @@ div.csl-indent {
 <h4>MCAR</h4>
 <p>Este mecanismo conocido como ausencia de respuesta completamente aleatoria (MCAR - <em>missing completely at random</em>) se presenta cuando la probabilidad de que un individuo responda no depende de la característica de interés, ni de alguna otra covariable auxiliar. Por ejemplo, si la ausencia de respuesta en una encuesta laboral, no depende del estado actual de empleo del respondiente, ni de alguna característica auxiliar. De esta forma, la ausencia de respuesta está dispersa de manera uniforme sobre toda la población.</p>
 <p>Es decir que, cuando el investigador produzca estadísticas descriptivas sobre las personas que respondieron la encuestas, ese porcentaje de personas sea muy similar y tenga un comportamiento uniforme sobre todas las posibles covariables que afecten al individuo. El siguiente gráfico podría mostrar algunos indicios de que el patrón de ausencia de respuesta podría ser MCAR puesto que el porcentaje de respuesta es similar en las variables auxiliares.</p>
-<div class="figure"><span id="fig:unnamed-chunk-1"></span>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-1"></span>
 <img src="12Ausencia_files/figure-html/unnamed-chunk-1-1.svg" alt="Patrón de respuesta MCAR" width="672" />
 <p class="caption">
 Figura 0.1: Patrón de respuesta MCAR
@@ -480,7 +480,7 @@ Figura 0.1: Patrón de respuesta MCAR
 <div id="mar" class="section level4 unnumbered">
 <h4>MAR</h4>
 <p>La ausencia de respuesta aleatoria (MAR - <em>missing at random</em>) se establece cuando la probabilidad de que un individuo responda depende de algunas covariables auxiliares, pero no depende de la característica de interés. Por ejemplo, en una encuesta de fuerza laboral, la ausencia de respuesta puede depender de la edad del respondientes, o del sexo, o incluso del nivel económico del individuo, pero no depende de su clasificación laboral. El siguiente gráfico muestra que el patrón de ausencia de respuesta podría ser MAR puesto que el sexo y la zona del respondiente están influenciando el porcentaje de respuesta, aunque no el estado de ocupación.</p>
-<div class="figure"><span id="fig:unnamed-chunk-2"></span>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
 <img src="12Ausencia_files/figure-html/unnamed-chunk-2-1.svg" alt="Patrón de respuesta MAR" width="672" />
 <p class="caption">
 Figura 12.1: Patrón de respuesta MAR
@@ -490,7 +490,7 @@ Figura 12.1: Patrón de respuesta MAR
 <div id="nmar" class="section level4 unnumbered">
 <h4>NMAR</h4>
 <p>Por último, la ausencia de respuesta no aleatoria (NMAR - <em>not missing at random</em>) se presenta cuando la ausencia de respuesta depende de la característica de interés. El siguiente gráfico muestra indicios de que el patrón de respuesta es NMAR, puesto que la condición de ocupación es la que influencia el porcentaje de respuesta.</p>
-<div class="figure"><span id="fig:unnamed-chunk-3"></span>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
 <img src="12Ausencia_files/figure-html/unnamed-chunk-3-1.svg" alt="Patrón de respuesta MNAR" width="672" />
 <p class="caption">
 Figura 12.2: Patrón de respuesta MNAR
@@ -629,7 +629,6 @@ Särndal, Carl-Erik, Bengt Swensson, y Jan Wretman. 2003. <em>Model Assisted Sur
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -669,6 +668,10 @@ gitbook.start({
 "text": null
 },
 "download": ["Diseño y análisis de encuestas de hogares.pdf", "Diseño y análisis de encuestas de hogares.epub", "Diseño y análisis de encuestas de hogares.mobi"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section"
 },

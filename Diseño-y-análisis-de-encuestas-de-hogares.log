@@ -1,103 +1,107 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.8.9)  16 AUG 2021 15:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.26)  17 AUG 2021 12:58
 entering extended mode
 **./Dise√±o-y-an√°lisis-de-encuestas-de-hogares.tex
 (Dise√±o-y-an√°lisis-de-encuestas-de-hogares.tex
-LaTeX2e <2021-06-01> patch level 1
-L3 programming layer <2021-07-12> (C:\Users\agutierrez1\AppData\Local\Programs\
-MiKTeX\tex/latex/base\book.cls
-Document Class: book 2021/02/12 v1.4n Standard LaTeX document class
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/base\bk10.clo
-File: bk10.clo 2021/02/12 v1.4n Standard LaTeX file (size option)
+LaTeX2e <2018-12-01>
+
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\book.cl
+s"
+Document Class: book 2018/09/03 v1.4i Standard LaTeX document class
+
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\bk12.cl
+o"
+File: bk12.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
 )
-\c@part=\count182
-\c@chapter=\count183
-\c@section=\count184
-\c@subsection=\count185
-\c@subsubsection=\count186
-\c@paragraph=\count187
-\c@subparagraph=\count188
-\c@figure=\count189
-\c@table=\count190
-\abovecaptionskip=\skip47
-\belowcaptionskip=\skip48
-\bibindent=\dimen138
+\c@part=\count80
+\c@chapter=\count81
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@subparagraph=\count86
+\c@figure=\count87
+\c@table=\count88
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
 )
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.s
-ty
-Package: amsmath 2021/04/20 v2.17j AMS math features
-\@mathmargin=\skip49
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsm
+ath.sty"
+Package: amsmath 2018/12/01 v2.17b AMS math features
+\@mathmargin=\skip43
 For additional information on amsmath, use the `?' option.
 
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.s
-ty
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amst
+ext.sty"
 Package: amstext 2000/06/29 v2.01 AMS text
 
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.st
-y
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsg
+en.sty"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks16
-\ex@=\dimen139
+\@emptytoks=\toks14
+\ex@=\dimen103
 ))
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.st
-y
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsb
+sy.sty"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen140
+\pmbraise@=\dimen104
 )
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.st
-y
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amso
+pn.sty"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count191
-LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count192
-\leftroot@=\count193
-LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count194
-\DOTSCASE@=\count195
-LaTeX Info: Redefining \ldots on input line 496.
-LaTeX Info: Redefining \dots on input line 499.
-LaTeX Info: Redefining \cdots on input line 620.
-\Mathstrutbox@=\box50
-\strutbox@=\box51
-\big@size=\dimen141
-LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count196
-\c@MaxMatrixCols=\count197
-\dotsspace@=\muskip16
-\c@parentequation=\count198
-\dspbrk@lvl=\count199
-\tag@help=\toks17
-\row@=\count266
-\column@=\count267
-\maxfields@=\count268
-\andhelp@=\toks18
-\eqnshift@=\dimen142
-\alignsep@=\dimen143
-\tagshift@=\dimen144
-\tagwidth@=\dimen145
-\totwidth@=\dimen146
-\lineht@=\dimen147
-\@envbody=\toks19
-\multlinegap=\skip50
-\multlinetaggap=\skip51
-\mathdisplay@stack=\toks20
-LaTeX Info: Redefining \[ on input line 2923.
-LaTeX Info: Redefining \] on input line 2924.
+\inf@bad=\count89
+LaTeX Info: Redefining \frac on input line 223.
+\uproot@=\count90
+\leftroot@=\count91
+LaTeX Info: Redefining \overline on input line 385.
+\classnum@=\count92
+\DOTSCASE@=\count93
+LaTeX Info: Redefining \ldots on input line 482.
+LaTeX Info: Redefining \dots on input line 485.
+LaTeX Info: Redefining \cdots on input line 606.
+\Mathstrutbox@=\box27
+\strutbox@=\box28
+\big@size=\dimen105
+LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
+\macc@depth=\count94
+\c@MaxMatrixCols=\count95
+\dotsspace@=\muskip10
+\c@parentequation=\count96
+\dspbrk@lvl=\count97
+\tag@help=\toks15
+\row@=\count98
+\column@=\count99
+\maxfields@=\count100
+\andhelp@=\toks16
+\eqnshift@=\dimen106
+\alignsep@=\dimen107
+\tagshift@=\dimen108
+\tagwidth@=\dimen109
+\totwidth@=\dimen110
+\lineht@=\dimen111
+\@envbody=\toks17
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks18
+LaTeX Info: Redefining \[ on input line 2844.
+LaTeX Info: Redefining \] on input line 2845.
 )
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.
-sty
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\ams
+symb.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts
-.sty
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\ams
+fonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
-LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/lm\lmodern.sty
+))
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\lmodern.s
+ty"
 Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
@@ -132,100 +136,267 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
 )
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifxetex.s
-ty
-Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/generic/ifxetex\if
+xetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\i
+fluatex.sty"
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\fontenc
+.sty"
+Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
 
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
-Package: iftex 2020/03/06 v1.0d TeX engine tests
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\t1enc.d
+ef"
+File: t1enc.def 2018/08/11 v2.0j Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifluatex.
-sty
-Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
-) (C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.st
-y
-Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
-2.
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
-File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\inputen
+c.sty"
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks19
+\inpenc@posthook=\toks20
+)
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\textcom
+p.sty"
+Package: textcomp 2018/08/11 v2.0j Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
+
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ts1enc.
+def"
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+Now handling font encoding TS1 ...
+... processing UTF-8 mapping file for font encoding TS1
+
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ts1enc.
+dfu"
+File: ts1enc.dfu 2018/10/05 v1.2f UTF-8 support for inputenc
+   defining Unicode char U+00A2 (decimal 162)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00A4 (decimal 164)
+   defining Unicode char U+00A5 (decimal 165)
+   defining Unicode char U+00A6 (decimal 166)
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00A8 (decimal 168)
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AC (decimal 172)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00AF (decimal 175)
+   defining Unicode char U+00B0 (decimal 176)
+   defining Unicode char U+00B1 (decimal 177)
+   defining Unicode char U+00B2 (decimal 178)
+   defining Unicode char U+00B3 (decimal 179)
+   defining Unicode char U+00B4 (decimal 180)
+   defining Unicode char U+00B5 (decimal 181)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+00B9 (decimal 185)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+00BC (decimal 188)
+   defining Unicode char U+00BD (decimal 189)
+   defining Unicode char U+00BE (decimal 190)
+   defining Unicode char U+00D7 (decimal 215)
+   defining Unicode char U+00F7 (decimal 247)
+   defining Unicode char U+0192 (decimal 402)
+   defining Unicode char U+02C7 (decimal 711)
+   defining Unicode char U+02D8 (decimal 728)
+   defining Unicode char U+02DD (decimal 733)
+   defining Unicode char U+0E3F (decimal 3647)
+   defining Unicode char U+2016 (decimal 8214)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+203B (decimal 8251)
+   defining Unicode char U+203D (decimal 8253)
+   defining Unicode char U+2044 (decimal 8260)
+   defining Unicode char U+204E (decimal 8270)
+   defining Unicode char U+2052 (decimal 8274)
+   defining Unicode char U+20A1 (decimal 8353)
+   defining Unicode char U+20A4 (decimal 8356)
+   defining Unicode char U+20A6 (decimal 8358)
+   defining Unicode char U+20A9 (decimal 8361)
+   defining Unicode char U+20AB (decimal 8363)
+   defining Unicode char U+20AC (decimal 8364)
+   defining Unicode char U+20B1 (decimal 8369)
+   defining Unicode char U+2103 (decimal 8451)
+   defining Unicode char U+2116 (decimal 8470)
+   defining Unicode char U+2117 (decimal 8471)
+   defining Unicode char U+211E (decimal 8478)
+   defining Unicode char U+2120 (decimal 8480)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2126 (decimal 8486)
+   defining Unicode char U+2127 (decimal 8487)
+   defining Unicode char U+212E (decimal 8494)
+   defining Unicode char U+2190 (decimal 8592)
+   defining Unicode char U+2191 (decimal 8593)
+   defining Unicode char U+2192 (decimal 8594)
+   defining Unicode char U+2193 (decimal 8595)
+   defining Unicode char U+2329 (decimal 9001)
+   defining Unicode char U+232A (decimal 9002)
+   defining Unicode char U+2422 (decimal 9250)
+   defining Unicode char U+25E6 (decimal 9702)
+   defining Unicode char U+25EF (decimal 9711)
+   defining Unicode char U+266A (decimal 9834)
+   defining Unicode char U+FEFF (decimal 65279)
 ))
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
-Package: inputenc 2021/02/14 v1.3d Input encoding file
-\inpenc@prehook=\toks21
-\inpenc@posthook=\toks22
+LaTeX Info: Redefining \oldstylenums on input line 334.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 349.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 350.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 351.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 352.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 353.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 354.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 355.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 356.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 357.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 358.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 359.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 360.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 361.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 362.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 363.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 364.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 365.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 366.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 367.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 368.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 369.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 370.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 371.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 372.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 373.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 374.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 375.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 376.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 377.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 378.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 379.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 380.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 381.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 382.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 383.
+Package textcomp Info: Setting lmtt sub-encoding to TS1/0 on input line 384.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 385.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 386.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 387.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 388.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 389.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 390.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 391.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 392.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 393.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 394.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 395.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 396.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 397.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 398.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 399.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 400.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 401.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 402.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 403.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 404.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 405.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
 )
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
-Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
-)
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/upquote\upquote.s
-ty
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/upquote\upqu
+ote.sty"
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
 )
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microty
-pe.sty
-Package: microtype 2021/03/14 v2.8c Micro-typographical refinements (RS)
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\mi
+crotype.sty"
+Package: microtype 2019/02/28 v2.7b Micro-typographical refinements (RS)
 
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.s
-ty
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\key
+val.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks23
+\KV@toks@=\toks21
 )
-\MT@toks=\toks24
-\MT@count=\count269
+\MT@toks=\toks22
+\MT@count=\count101
 LaTeX Info: Redefining \textls on input line 790.
-\MT@outer@kern=\dimen148
-LaTeX Info: Redefining \textmicrotypecontext on input line 1374.
-\MT@listname@count=\count270
+\MT@outer@kern=\dimen112
+LaTeX Info: Redefining \textmicrotypecontext on input line 1336.
+\MT@listname@count=\count102
 
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microty
-pe-pdftex.def
-File: microtype-pdftex.def 2021/03/14 v2.8c Definitions specific to pdftex (RS)
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\mi
+crotype-pdftex.def"
+File: microtype-pdftex.def 2019/02/28 v2.7b Definitions specific to pdftex (RS)
 
-LaTeX Info: Redefining \lsstyle on input line 915.
-LaTeX Info: Redefining \lslig on input line 915.
-\MT@outer@space=\skip52
+LaTeX Info: Redefining \lsstyle on input line 914.
+LaTeX Info: Redefining \lslig on input line 914.
+\MT@outer@space=\skip46
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microty
-pe.cfg
-File: microtype.cfg 2021/03/14 v2.8c microtype main configuration file (RS)
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\mi
+crotype.cfg"
+File: microtype.cfg 2019/02/28 v2.7b microtype main configuration file (RS)
 ))
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/parskip\parskip.s
-ty
-Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/parskip\pars
+kip.sty"
+Package: parskip 2019-01-16 v2.0c non-zero parskip adjustments
 
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptio
-ns.sty
-Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\kvo
+ptions.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds
-.sty
-Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\l
+txcmds.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/generic/kvsetkeys\kvset
-keys.sty
-Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\k
+vsetkeys.sty"
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\i
+nfwarerr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\e
+texcmds.sty"
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+)))
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/etoolbox\eto
+olbox.sty"
+Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count103
 ))
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox
-.sty
-Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count271
-))
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xcolor\xcolo
+r.sty"
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\colo
-r.cfg
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg
+\color.cfg"
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
 
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdft
-ex.def
-File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def
+\pdftex.def"
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 )
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
@@ -237,412 +408,437 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/graphics\dvipsnam
-.def
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\dvi
+psnam.def"
 File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
 )
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\svgnam.def
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xcolor\svgna
+m.def"
 File: svgnam.def 2016/05/11 v2.12 Predefined colors according to SVG 1.1 (UK)
 )
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\x11nam.def
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xcolor\x11na
+m.def"
 File: x11nam.def 2016/05/11 v2.12 Predefined colors according to Unix/X11 (UK)
-)) (C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/xurl\xurl.sty
+))
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xurl\xurl.st
+y"
 Package: xurl 2020/12/30 v 0.09a modify URL breaks
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
-\Urlmuskip=\muskip17
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/url\url.sty"
+\Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 ))
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bookmark
-.sty
-Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\boo
+kmark.sty"
+Package: bookmark 2019/06/04 v1.27 PDF bookmarks (HO)
 
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref
-.sty
-Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\p
+dfescape.sty"
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
 
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdft
-excmds.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\p
+dftexcmds.sty"
+Package: pdftexcmds 2019/07/25 v0.30 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwa
-rerr.sty
-Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\i
+fpdf.sty"
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
 )
+Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
+))
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\i
+fvtex.sty"
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
 )
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kv
-definekeys.sty
-Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-)
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfes
-cape.sty
-Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
-)
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.s
-ty
-Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-)
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/letltxmacro\letlt
-xmacro.sty
-Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
-)
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.s
-ty
-Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
-)
-\@linkdim=\dimen149
-\Hy@linkcounter=\count272
-\Hy@pagecounter=\count273
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hyp
+erref.sty"
+Package: hyperref 2019/06/12 v6.88h Hypertext links for LaTeX
 
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.d
-ef
-File: pd1enc.def 2021-06-07 v7.00m Hyperref: PDFDocEncoding definition (HO)
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\h
+obsub-hyperref.sty"
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+
+
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\h
+obsub-generic.sty"
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package hobsub Info: Skipping package `ifluatex' (already loaded).
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package hobsub Info: Skipping package `etexcmds' (already loaded).
+Package hobsub Info: Skipping package `kvsetkeys' (already loaded).
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package hobsub Info: Skipping package `pdftexcmds' (already loaded).
+Package hobsub Info: Skipping package `pdfescape' (already loaded).
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+)
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\aux
+hook.sty"
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+\@linkdim=\dimen113
+\Hy@linkcounter=\count104
+\Hy@pagecounter=\count105
+
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\pd1
+enc.def"
+File: pd1enc.def 2019/06/12 v6.88h Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref
--langpatches.def
-File: hyperref-langpatches.def 2021-06-07 v7.00m Hyperref: patches for babel la
-nguages
-)
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc
-.sty
-Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
-)
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcm
-ds.sty
-Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
-)
-\Hy@SavedSpaceFactor=\count274
+\Hy@SavedSpaceFactor=\count106
 
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.de
-f
-File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/00miktex\hyp
+erref.cfg"
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Option `unicode' set `true' on input line 4424.
+
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\pue
+nc.def"
+File: puenc.def 2019/06/12 v6.88h Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
-Package hyperref Info: Option `unicode' set `true' on input line 4073.
-Package hyperref Info: Hyper figures OFF on input line 4192.
-Package hyperref Info: Link nesting OFF on input line 4197.
-Package hyperref Info: Hyper index ON on input line 4200.
-Package hyperref Info: Plain pages OFF on input line 4207.
-Package hyperref Info: Backreferencing OFF on input line 4212.
+Package hyperref Info: Hyper figures OFF on input line 4550.
+Package hyperref Info: Link nesting OFF on input line 4555.
+Package hyperref Info: Hyper index ON on input line 4558.
+Package hyperref Info: Plain pages OFF on input line 4565.
+Package hyperref Info: Backreferencing OFF on input line 4570.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4445.
-\c@Hy@tempcnt=\count275
-LaTeX Info: Redefining \url on input line 4804.
-\XeTeXLinkMargin=\dimen150
-
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.s
-ty
-Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
-
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigi
-ntcalc.sty
-Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
-)
-))
-\Fld@menulength=\count276
-\Field@Width=\dimen151
-\Fld@charsize=\dimen152
-Package hyperref Info: Hyper figures OFF on input line 6076.
-Package hyperref Info: Link nesting OFF on input line 6081.
-Package hyperref Info: Hyper index ON on input line 6084.
-Package hyperref Info: backreferencing OFF on input line 6091.
-Package hyperref Info: Link coloring OFF on input line 6096.
-Package hyperref Info: Link coloring with OCG OFF on input line 6101.
-Package hyperref Info: PDF/A mode OFF on input line 6106.
-LaTeX Info: Redefining \ref on input line 6146.
-LaTeX Info: Redefining \pageref on input line 6150.
-
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/base\atbegshi-ltx
-.sty
-Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
-package with kernel methods
-)
-\Hy@abspage=\count277
-\c@Item=\count278
-\c@Hfootnote=\count279
+Package hyperref Info: Bookmarks ON on input line 4803.
+\c@Hy@tempcnt=\count107
+LaTeX Info: Redefining \url on input line 5156.
+\XeTeXLinkMargin=\dimen114
+\Fld@menulength=\count108
+\Field@Width=\dimen115
+\Fld@charsize=\dimen116
+Package hyperref Info: Hyper figures OFF on input line 6411.
+Package hyperref Info: Link nesting OFF on input line 6416.
+Package hyperref Info: Hyper index ON on input line 6419.
+Package hyperref Info: backreferencing OFF on input line 6426.
+Package hyperref Info: Link coloring OFF on input line 6431.
+Package hyperref Info: Link coloring with OCG OFF on input line 6436.
+Package hyperref Info: PDF/A mode OFF on input line 6441.
+LaTeX Info: Redefining \ref on input line 6481.
+LaTeX Info: Redefining \pageref on input line 6485.
+\Hy@abspage=\count109
+\c@Item=\count110
+\c@Hfootnote=\count111
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.
-def
-File: hpdftex.def 2021-06-07 v7.00m Hyperref driver for pdfTeX
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hpd
+ftex.def"
+File: hpdftex.def 2019/06/12 v6.88h Hyperref driver for pdfTeX
+\Fld@listcount=\count112
+\c@bookmark@seq@number=\count113
 
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/base\atveryend-lt
-x.sty
-Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
-e
-with kernel methods
-)
-\Fld@listcount=\count280
-\c@bookmark@seq@number=\count281
-
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\re
-runfilecheck.sty
-Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
-
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\u
-niquecounter.sty
-Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
-)
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\rer
+unfilecheck.sty"
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
-86.
+82.
 )
-\Hy@SectionHShift=\skip53
+\Hy@SectionHShift=\skip47
 )
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bkm-pdft
-ex.def
-File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
-\BKM@id=\count282
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\bkm
+-pdftex.def"
+File: bkm-pdftex.def 2019/06/04 v1.27 bookmark driver for pdfTeX (HO)
+\BKM@id=\count114
 ))
 Package hyperref Info: Option `colorlinks' set `true' on input line 50.
 
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/fancyvrb\fancyvrb
-.sty
-Package: fancyvrb 2021/01/20 v3.7 verbatim text (tvz,hv)
-\FV@CodeLineNo=\count283
-\FV@InFile=\read2
-\FV@TabBox=\box52
-\c@FancyVerbLine=\count284
-\FV@StepNumber=\count285
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geo
+metry.sty"
+Package: geometry 2018/04/16 v5.8 Page Geometry
+\Gm@cnth=\count115
+\Gm@cntv=\count116
+\c@Gm@tempcnt=\count117
+\Gm@bindingoffset=\dimen117
+\Gm@wd@mp=\dimen118
+\Gm@odd@mp=\dimen119
+\Gm@even@mp=\dimen120
+\Gm@layoutwidth=\dimen121
+\Gm@layoutheight=\dimen122
+\Gm@layouthoffset=\dimen123
+\Gm@layoutvoffset=\dimen124
+\Gm@dimlist=\toks23
+
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geo
+metry.cfg"))
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fancyvrb\fan
+cyvrb.sty"
+Package: fancyvrb 2019/01/15
+Style option: `fancyvrb' v3.2a <2019/01/15> (tvz)
+\FV@CodeLineNo=\count118
+\FV@InFile=\read1
+\FV@TabBox=\box29
+\c@FancyVerbLine=\count119
+\FV@StepNumber=\count120
 \FV@OutFile=\write3
 )
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/framed\framed.sty
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/framed\frame
+d.sty"
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
-\OuterFrameSep=\skip54
-\fb@frw=\dimen153
-\fb@frh=\dimen154
-\FrameRule=\dimen155
-\FrameSep=\dimen156
+\OuterFrameSep=\skip48
+\fb@frw=\dimen125
+\fb@frh=\dimen126
+\FrameRule=\dimen127
+\FrameSep=\dimen128
 )
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.s
-ty
-Package: longtable 2021-05-07 v4.16 Multi-page Table package (DPC)
-\LTleft=\skip55
-\LTright=\skip56
-\LTpre=\skip57
-\LTpost=\skip58
-\LTchunksize=\count286
-\LTcapwidth=\dimen157
-\LT@head=\box53
-\LT@firsthead=\box54
-\LT@foot=\box55
-\LT@lastfoot=\box56
-\LT@gbox=\box57
-\LT@cols=\count287
-\LT@rows=\count288
-\c@LT@tables=\count289
-\c@LT@chunks=\count290
-\LT@p@ftn=\toks25
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\longta
+ble.sty"
+Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)+ FMi change
+\LTleft=\skip49
+\LTright=\skip50
+\LTpre=\skip51
+\LTpost=\skip52
+\LTchunksize=\count121
+\LTcapwidth=\dimen129
+\LT@head=\box30
+\LT@firsthead=\box31
+\LT@foot=\box32
+\LT@lastfoot=\box33
+\LT@cols=\count122
+\LT@rows=\count123
+\c@LT@tables=\count124
+\c@LT@chunks=\count125
+\LT@p@ftn=\toks24
 )
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs
-.sty
-Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen158
-\lightrulewidth=\dimen159
-\cmidrulewidth=\dimen160
-\belowrulesep=\dimen161
-\belowbottomsep=\dimen162
-\aboverulesep=\dimen163
-\abovetopsep=\dimen164
-\cmidrulesep=\dimen165
-\cmidrulekern=\dimen166
-\defaultaddspace=\dimen167
-\@cmidla=\count291
-\@cmidlb=\count292
-\@aboverulesep=\dimen168
-\@belowrulesep=\dimen169
-\@thisruleclass=\count293
-\@lastruleclass=\count294
-\@thisrulewidth=\dimen170
-) (C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
-Package: array 2021/04/20 v2.5e Tabular extension package (FMi)
-\col@sep=\dimen171
-\ar@mcellbox=\box58
-\extrarowheight=\dimen172
-\NC@list=\toks26
-\extratabsurround=\skip59
-\backup@length=\skip60
-\ar@cellbox=\box59
-) (C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/booktabs\boo
+ktabs.sty"
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen130
+\lightrulewidth=\dimen131
+\cmidrulewidth=\dimen132
+\belowrulesep=\dimen133
+\belowbottomsep=\dimen134
+\aboverulesep=\dimen135
+\abovetopsep=\dimen136
+\cmidrulesep=\dimen137
+\cmidrulekern=\dimen138
+\defaultaddspace=\dimen139
+\@cmidla=\count126
+\@cmidlb=\count127
+\@aboverulesep=\dimen140
+\@belowrulesep=\dimen141
+\@thisruleclass=\count128
+\@lastruleclass=\count129
+\@thisrulewidth=\dimen142
+)
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\array.
+sty"
+Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
+\col@sep=\dimen143
+\ar@mcellbox=\box34
+\extrarowheight=\dimen144
+\NC@list=\toks25
+\extratabsurround=\skip53
+\backup@length=\skip54
+\ar@cellbox=\box35
+)
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\calc.s
+ty"
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count295
-\calc@Bcount=\count296
-\calc@Adimen=\dimen173
-\calc@Bdimen=\dimen174
-\calc@Askip=\skip61
-\calc@Bskip=\skip62
+\calc@Acount=\count130
+\calc@Bcount=\count131
+\calc@Adimen=\dimen145
+\calc@Bdimen=\dimen146
+\calc@Askip=\skip55
+\calc@Bskip=\skip56
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count297
-\calc@Cskip=\skip63
+\calc@Ccount=\count132
+\calc@Cskip=\skip57
 )
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/footnotehyper\foo
-tnotehyper.sty
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/footnotehype
+r\footnotehyper.sty"
 Package: footnotehyper 2021/02/04 v1.1d hyperref aware footnote.sty (JFB)
-\FNH@notes=\box60
-\FNH@width=\dimen175
-\FNH@toks=\toks27
+\FNH@notes=\box36
+\FNH@width=\dimen147
+\FNH@toks=\toks26
 )
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx
-.sty
-Package: graphicx 2020/12/05 v1.2c Enhanced LaTeX Graphics (DPC,SPQR)
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\gra
+phicx.sty"
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics
-.sty
-Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\gra
+phics.sty"
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
 
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\tri
+g.sty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\grap
-hics.cfg
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg
+\graphics.cfg"
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 107.
+Package graphics Info: Driver file: pdftex.def on input line 99.
 )
-\Gin@req@height=\dimen176
-\Gin@req@width=\dimen177
+\Gin@req@height=\dimen148
+\Gin@req@width=\dimen149
 )
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace
-.sty
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/setspace\set
+space.sty"
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflsca
-pe.sty
-Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\pdf
+lscape.sty"
+Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
 
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.s
-ty
-Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\lsc
+ape.sty"
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.sty
-Package: amsthm 2020/05/29 v2.20.6
-\thm@style=\toks28
-\thm@bodyfont=\toks29
-\thm@headfont=\toks30
-\thm@notefont=\toks31
-\thm@headpunct=\toks32
-\thm@preskip=\skip64
-\thm@postskip=\skip65
-\thm@headsep=\skip66
-\dth@everypar=\toks33
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amscls\amsth
+m.sty"
+Package: amsthm 2017/10/31 v2.20.4
+\thm@style=\toks27
+\thm@bodyfont=\toks28
+\thm@headfont=\toks29
+\thm@notefont=\toks30
+\thm@headpunct=\toks31
+\thm@preskip=\skip58
+\thm@postskip=\skip59
+\thm@headsep=\skip60
+\dth@everypar=\toks32
 )
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/algorithm2e\algor
-ithm2e.sty
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/algorithm2e\
+algorithm2e.sty"
 Package: algorithm2e 2017/07/18 v5.2 algorithms environments
-\c@AlgoLine=\count298
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
-Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
-)
-\algocf@hangindent=\skip67
+\c@AlgoLine=\count133
 
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/ifoddpage\ifoddpa
-ge.sty
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ifthen.
+sty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\algocf@hangindent=\skip61
+
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ifoddpage\if
+oddpage.sty"
 Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
-\c@checkoddpage=\count299
-) (C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/tools\xspace.st
-y
+\c@checkoddpage=\count134
+)
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\xspace
+.sty"
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/relsize\relsize.s
-ty
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/relsize\rels
+ize.sty"
 Package: relsize 2013/03/29 ver 4.1
 )
-\skiptotal=\skip68
-\skiplinenumber=\skip69
-\skiprule=\skip70
-\skiphlne=\skip71
-\skiptext=\skip72
-\skiplength=\skip73
-\algomargin=\skip74
-\skipalgocfslide=\skip75
-\algowidth=\dimen178
-\inoutsize=\dimen179
-\inoutindent=\dimen180
-\interspacetitleruled=\dimen181
-\interspacealgoruled=\dimen182
-\interspacetitleboxruled=\dimen183
-\algocf@ruledwidth=\skip76
-\algocf@inoutbox=\box61
-\algocf@inputbox=\box62
-\AlCapSkip=\skip77
-\AlCapHSkip=\skip78
-\algoskipindent=\skip79
-\algocf@nlbox=\box63
-\algocf@hangingbox=\box64
-\algocf@untilbox=\box65
-\algocf@skipuntil=\skip80
-\algocf@capbox=\box66
-\algocf@lcaptionbox=\skip81
-\algoheightruledefault=\skip82
-\algoheightrule=\skip83
-\algotitleheightruledefault=\skip84
-\algotitleheightrule=\skip85
-\c@algocfline=\count300
-\c@algocfproc=\count301
-\c@algocf=\count302
-\algocf@algoframe=\box67
-\algocf@algobox=\box68
+\skiptotal=\skip62
+\skiplinenumber=\skip63
+\skiprule=\skip64
+\skiphlne=\skip65
+\skiptext=\skip66
+\skiplength=\skip67
+\algomargin=\skip68
+\skipalgocfslide=\skip69
+\algowidth=\dimen150
+\inoutsize=\dimen151
+\inoutindent=\dimen152
+\interspacetitleruled=\dimen153
+\interspacealgoruled=\dimen154
+\interspacetitleboxruled=\dimen155
+\algocf@ruledwidth=\skip70
+\algocf@inoutbox=\box37
+\algocf@inputbox=\box38
+\AlCapSkip=\skip71
+\AlCapHSkip=\skip72
+\algoskipindent=\skip73
+\algocf@nlbox=\box39
+\algocf@hangingbox=\box40
+\algocf@untilbox=\box41
+\algocf@skipuntil=\skip74
+\algocf@capbox=\box42
+\algocf@lcaptionbox=\skip75
+\algoheightruledefault=\skip76
+\algoheightrule=\skip77
+\algotitleheightruledefault=\skip78
+\algotitleheightrule=\skip79
+\c@algocfline=\count135
+\c@algocfproc=\count136
+\c@algocf=\count137
+\algocf@algoframe=\box43
+\algocf@algobox=\box44
 )
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
-Package: babel 2021/07/22 3.63 The Babel package
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babe
+l.sty"
+Package: babel 2019/07/19 3.33 The Babel package
 
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.def
-File: babel.def 2021/07/22 3.63 Babel common definitions
-\babel@savecnt=\count303
-\U@D=\dimen184
-\l@unhyphenated=\language79
-
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.
-def)
-\bbl@readstream=\read3
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\swit
+ch.def"
+File: switch.def 2019/07/19 3.33 Babel switching mechanism
 )
-\bbl@dirlevel=\count304
 *************************************
 * Local config file bblopts.cfg used
 *
 
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/arabi\bblopt
+s.cfg"
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
  babel
 )
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/babel-spanish\spa
-nish.ldf
-Language: spanish.ldf 2021/05/27 v5.0q Spanish support from the babel system
-\es@quottoks=\toks34
-\es@quotdepth=\count305
-Package babel Info: Making " an active character on input line 570.
-Package babel Info: Making . an active character on input line 675.
-Package babel Info: Making < an active character on input line 722.
-Package babel Info: Making > an active character on input line 722.
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/babel-spanis
+h\spanish.ldf"
+Language: spanish.ldf 2016/03/03 v5.0p Spanish support from the babel system
+
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babe
+l.def"
+File: babel.def 2019/07/19 3.33 Babel common definitions
+\babel@savecnt=\count138
+\U@D=\dimen156
+
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\txtb
+abel.def")
+\bbl@dirlevel=\count139
 )
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/babel-spanish\spa
-nish.ldf
-Language: spanish.ldf 2021/05/27 v5.0q Spanish support from the babel system
+\es@quottoks=\toks33
+\es@quotdepth=\count140
+Package babel Info: Making " an active character on input line 561.
+Package babel Info: Making . an active character on input line 662.
+Package babel Info: Making < an active character on input line 707.
+Package babel Info: Making > an active character on input line 707.
+)
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/babel-spanis
+h\spanish.ldf"
+Language: spanish.ldf 2016/03/03 v5.0p Spanish support from the babel system
 ))
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.sty
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/natbib\natbi
+b.sty"
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip86
-\bibsep=\skip87
+\bibhang=\skip80
+\bibsep=\skip81
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count306
-)
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backe
-nd-pdftex.def
-File: l3backend-pdftex.def 2021-08-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count307
-\l__pdf_internal_box=\box69
+\c@NAT@ctr=\count141
 ) (Dise√±o-y-an√°lisis-de-encuestas-de-hogares.aux
-LaTeX Info: Redefining \. on input line 28.
-LaTeX Info: Redefining \% on input line 28.
+LaTeX Info: Redefining \. on input line 26.
+LaTeX Info: Redefining \% on input line 26.
 
 LaTeX Warning: Label `fig:unnamed-chunk-1' multiply defined.
 
@@ -655,2572 +851,1831 @@ LaTeX Warning: Label `fig:unnamed-chunk-1' multiply defined.
 )
 \openout1 = `Dise√±o-y-an√°lisis-de-encuestas-de-hogares.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 157.
-LaTeX Font Info:    ... okay on input line 157.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 157.
-LaTeX Font Info:    ... okay on input line 157.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 157.
-LaTeX Font Info:    ... okay on input line 157.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 157.
-LaTeX Font Info:    ... okay on input line 157.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 157.
-LaTeX Font Info:    ... okay on input line 157.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 157.
-LaTeX Font Info:    ... okay on input line 157.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 157.
-LaTeX Font Info:    ... okay on input line 157.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 157.
-LaTeX Font Info:    ... okay on input line 157.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 157.
-LaTeX Font Info:    ... okay on input line 157.
-LaTeX Info: Redefining \microtypecontext on input line 157.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 158.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 158.
+
+
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ts1cmr.
+fd"
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 158.
+LaTeX Font Info:    ... okay on input line 158.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 158.
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\t1lmr.fd"
+File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Info: Redefining \microtypecontext on input line 158.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
-Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 157.
+Package microtype Info: Using default expansion set `basictext'.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
 
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.
-cfg
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\mt
+-cmr.cfg"
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-
-pdf.mkii
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\
+supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count308
-\scratchdimen=\dimen185
-\scratchbox=\box70
-\nofMPsegments=\count309
-\nofMParguments=\count310
-\everyMPshowfont=\toks35
-\MPscratchCnt=\count311
-\MPscratchDim=\dimen186
-\MPnumerator=\count312
-\makeMPintoPDFobject=\count313
-\everyMPtoPDFconversion=\toks36
+\scratchcounter=\count142
+\scratchdimen=\dimen157
+\scratchbox=\box45
+\nofMPsegments=\count143
+\nofMParguments=\count144
+\everyMPshowfont=\toks34
+\MPscratchCnt=\count145
+\MPscratchDim=\dimen158
+\MPnumerator=\count146
+\makeMPintoPDFobject=\count147
+\everyMPtoPDFconversion=\toks35
 )
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epst
-opdf-base.sty
-Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\eps
+topdf-base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\grf
+ext.sty"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-85.
-
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf
--sys.cfg
-File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
-))
-Package hyperref Info: Link coloring ON on input line 157.
-
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.
-sty
-Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
-
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount
-.sty
-Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
 )
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\
-gettitlestring.sty
-Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+\AtBeginShipoutBox=\box46
+Package hyperref Info: Link coloring ON on input line 158.
+
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nam
+eref.sty"
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
+
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\g
+ettitlestring.sty"
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count314
+\c@section@level=\count148
 )
-LaTeX Info: Redefining \ref on input line 157.
-LaTeX Info: Redefining \pageref on input line 157.
-LaTeX Info: Redefining \nameref on input line 157.
-LaTeX Info: Redefining \. on input line 157.
-LaTeX Info: Redefining \% on input line 157.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-59.
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
+LaTeX Info: Redefining \ref on input line 158.
+LaTeX Info: Redefining \pageref on input line 158.
+LaTeX Info: Redefining \nameref on input line 158.
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(56.9055pt, 500.484pt, 56.9055pt)
+* v-part:(T,H,B)=(56.9055pt, 681.15898pt, 56.9055pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=500.484pt
+* \textheight=681.15898pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-47.23828pt
+* \headheight=12.0pt
+* \headsep=19.8738pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=98.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Info: Redefining \. on input line 158.
+LaTeX Info: Redefining \% on input line 158.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 160.
+
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\ot1lmr.fd
+"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-59.
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 160.
+
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omllmm.fd
+"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-159.
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 160
+.
+
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omslmsy.f
+d"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-159.
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 160
+.
+
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omxlmex.f
+d"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 159.
+(Font)              <14.4> on input line 160.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 159.
+(Font)              <10> on input line 160.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 159.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 159
-.
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+(Font)              <7> on input line 160.
+LaTeX Font Info:    Try loading font information for U+msa on input line 160.
+
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\ums
+a.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.
-cfg
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\mt
+-msa.cfg"
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 159
-.
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+LaTeX Font Info:    Try loading font information for U+msb on input line 160.
+
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\ums
+b.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.
-cfg
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\mt
+-msb.cfg"
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 159.
+(Font)              <10.95> on input line 160.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 159.
+(Font)              <8> on input line 160.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 160.
 [1
 
 
-{C:/Users/agutierrez1/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [2
+{C:/Users/agutierrez1/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2
 
 ] (Dise√±o-y-an√°lisis-de-encuestas-de-hogares.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 11.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 11.
+(Font)              <12> on input line 11.
 [3]
-LaTeX Info: Redefining \. on input line 166.
-LaTeX Info: Redefining \% on input line 166.
-[4]
-Underfull \vbox (badness 6493) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 247.
-LaTeX Info: Redefining \% on input line 247.
-[5])
+LaTeX Info: Redefining \. on input line 180.
+LaTeX Info: Redefining \% on input line 180.
+[4])
 \tf@toc=\write4
 \openout4 = `Dise√±o-y-an√°lisis-de-encuestas-de-hogares.toc'.
 
-LaTeX Info: Redefining \. on input line 165.
-LaTeX Info: Redefining \% on input line 165.
-[6] (Dise√±o-y-an√°lisis-de-encuestas-de-hogares.lot
+LaTeX Info: Redefining \. on input line 166.
+LaTeX Info: Redefining \% on input line 166.
+[5]
+LaTeX Info: Redefining \. on input line 166.
+LaTeX Info: Redefining \% on input line 166.
+[6
+
+] (Dise√±o-y-an√°lisis-de-encuestas-de-hogares.lot
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 )
 \tf@lot=\write5
 \openout5 = `Dise√±o-y-an√°lisis-de-encuestas-de-hogares.lot'.
 
+[7]
+LaTeX Info: Redefining \. on input line 167.
+LaTeX Info: Redefining \% on input line 167.
+[8
 
-Underfull \vbox (badness 2096) has occurred while \output is active []
-
-[7
-
-]
-LaTeX Info: Redefining \. on input line 166.
-LaTeX Info: Redefining \% on input line 166.
-[8] (Dise√±o-y-an√°lisis-de-encuestas-de-hogares.lof
+] (Dise√±o-y-an√°lisis-de-encuestas-de-hogares.lof
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
-[9
 
-]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 3568) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 54.
-LaTeX Info: Redefining \% on input line 54.
-[10])
+[9])
 \tf@lof=\write6
 \openout6 = `Dise√±o-y-an√°lisis-de-encuestas-de-hogares.lof'.
 
-LaTeX Info: Redefining \. on input line 168.
-LaTeX Info: Redefining \% on input line 168.
-[11]
-LaTeX Info: Redefining \. on input line 168.
-LaTeX Info: Redefining \% on input line 168.
-[12
-
-]
-<Pics/CClicence.png, id=465, 97.0827pt x 33.9669pt>
+LaTeX Info: Redefining \. on input line 169.
+LaTeX Info: Redefining \% on input line 169.
+[10]
+<Pics/CClicence.png, id=428, 97.0827pt x 33.9669pt>
 File: Pics/CClicence.png Graphic file (type png)
 <use Pics/CClicence.png>
-Package pdftex.def Info: Pics/CClicence.png  used on input line 172.
+Package pdftex.def Info: Pics/CClicence.png  used on input line 173.
 (pdftex.def)             Requested size: 97.08688pt x 33.96835pt.
-[13 <./Pics/CClicence.png>]
-LaTeX Info: Redefining \. on input line 180.
-LaTeX Info: Redefining \% on input line 180.
-[14
+[11
 
-] [15]
-LaTeX Info: Redefining \. on input line 188.
-LaTeX Info: Redefining \% on input line 188.
-[16
+ <./Pics/CClicence.png>]
+LaTeX Info: Redefining \. on input line 181.
+LaTeX Info: Redefining \% on input line 181.
+[12
+
+] [13]
+LaTeX Info: Redefining \. on input line 189.
+LaTeX Info: Redefining \% on input line 189.
+[14
 
 ]
 Cap\'{\i }tulo 1.
-[17]
-LaTeX Info: Redefining \. on input line 226.
-LaTeX Info: Redefining \% on input line 226.
-[18] [19]
-LaTeX Info: Redefining \. on input line 261.
-LaTeX Info: Redefining \% on input line 261.
-[20]
-<Pics/Intro.png, id=552, 1325.95375pt x 1308.89pt>
+[15]
+LaTeX Info: Redefining \. on input line 231.
+LaTeX Info: Redefining \% on input line 231.
+[16] [17]
+<Pics/Intro.png, id=509, 1325.95375pt x 1308.89pt>
 File: Pics/Intro.png Graphic file (type png)
 <use Pics/Intro.png>
-Package pdftex.def Info: Pics/Intro.png  used on input line 269.
-(pdftex.def)             Requested size: 557.1598pt x 549.98969pt.
+Package pdftex.def Info: Pics/Intro.png  used on input line 270.
+(pdftex.def)             Requested size: 690.02597pt x 681.146pt.
 
-Overfull \hbox (212.1598pt too wide) in paragraph at lines 269--269
+Overfull \hbox (189.54198pt too wide) in paragraph at lines 270--270
 [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 35.93411pt on input line 270.
+LaTeX Warning: Float too large for page by 26.82033pt on input line 271.
 
-[21]
-LaTeX Info: Redefining \. on input line 273.
-LaTeX Info: Redefining \% on input line 273.
-[22 <./Pics/Intro.png>] [23]
-LaTeX Info: Redefining \. on input line 277.
-LaTeX Info: Redefining \% on input line 277.
-[24
+LaTeX Info: Redefining \. on input line 274.
+LaTeX Info: Redefining \% on input line 274.
+[18] [19 <./Pics/Intro.png>]
+LaTeX Info: Redefining \. on input line 278.
+LaTeX Info: Redefining \% on input line 278.
+[20] [21
 
-] [25] [26]
+] [22]
 Cap\'{\i }tulo 2.
-<Pics/Picture9.png, id=587, 677.4108pt x 352.6776pt>
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 285.
+<Pics/Picture9.png, id=539, 677.4108pt x 352.6776pt>
 File: Pics/Picture9.png Graphic file (type png)
 <use Pics/Picture9.png>
-Package pdftex.def Info: Pics/Picture9.png  used on input line 297.
-(pdftex.def)             Requested size: 344.99947pt x 179.61565pt.
-[27
+Package pdftex.def Info: Pics/Picture9.png  used on input line 298.
+(pdftex.def)             Requested size: 500.48024pt x 260.56296pt.
+[23
 
 ]
-LaTeX Info: Redefining \. on input line 322.
-LaTeX Info: Redefining \% on input line 322.
-[28 <./Pics/Picture9.png>]
-LaTeX Info: Redefining \. on input line 358.
-LaTeX Info: Redefining \% on input line 358.
-[29]
-LaTeX Info: Redefining \. on input line 403.
-LaTeX Info: Redefining \% on input line 403.
-[30]
-Underfull \vbox (badness 7649) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 421.
-LaTeX Info: Redefining \% on input line 421.
-[31]
-<Pics/Picture6.png, id=646, 590.6868pt x 333.4056pt>
+LaTeX Info: Redefining \. on input line 339.
+LaTeX Info: Redefining \% on input line 339.
+[24 <./Pics/Picture9.png>]
+LaTeX Info: Redefining \. on input line 379.
+LaTeX Info: Redefining \% on input line 379.
+[25]
+LaTeX Info: Redefining \. on input line 414.
+LaTeX Info: Redefining \% on input line 414.
+[26]
+<Pics/Picture6.png, id=593, 590.6868pt x 333.4056pt>
 File: Pics/Picture6.png Graphic file (type png)
 <use Pics/Picture6.png>
-Package pdftex.def Info: Pics/Picture6.png  used on input line 430.
-(pdftex.def)             Requested size: 345.0141pt x 194.73878pt.
+Package pdftex.def Info: Pics/Picture6.png  used on input line 431.
+(pdftex.def)             Requested size: 500.49983pt x 282.5007pt.
 
-Underfull \hbox (badness 1389) in paragraph at lines 429--431
-[]\T1/lmr/m/n/10 (+20) Atendiendo al mo-de-lo de [][]Gro-ves et al.[][] ([][]20
-09[][]), se pue-de afir-mar que
+Underfull \hbox (badness 1215) in paragraph at lines 430--432
+[]\T1/lmr/m/n/12 (+20) Atendiendo al mo-de-lo de [][]Gro-ves et al.[][] ([][]20
+09[][]), se pue-de afir-mar que en to-das la en-
  []
 
 
-Underfull \hbox (badness 1436) in paragraph at lines 429--431
-\T1/lmr/m/n/10 (+20) y el gru-pa. El pro-ce-so de in-fe-ren-cia in-di-vi-dual t
-ra-ta con los mis-mos
+Underfull \hbox (badness 1337) in paragraph at lines 430--432
+\T1/lmr/m/n/12 (+20) fe-ren-cia in-di-vi-dual tra-ta con los mis-mos res-pon-di
+en-tes que pro-veen la in-for-ma-ciÛn pri-
  []
 
 
-Underfull \vbox (badness 2253) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 440.
-LaTeX Info: Redefining \% on input line 440.
-[32 <./Pics/Picture6.png>]
-LaTeX Info: Redefining \. on input line 478.
-LaTeX Info: Redefining \% on input line 478.
-[33]
-LaTeX Info: Redefining \. on input line 509.
-LaTeX Info: Redefining \% on input line 509.
-[34]
-LaTeX Info: Redefining \. on input line 551.
-LaTeX Info: Redefining \% on input line 551.
-[35]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 5
-67.
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
-File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Info: Redefining \. on input line 619.
-LaTeX Info: Redefining \% on input line 619.
-[36]
-LaTeX Info: Redefining \. on input line 645.
-LaTeX Info: Redefining \% on input line 645.
-[37]
-LaTeX Info: Redefining \. on input line 675.
-LaTeX Info: Redefining \% on input line 675.
-[38]
-LaTeX Info: Redefining \. on input line 701.
-LaTeX Info: Redefining \% on input line 701.
-[39]
-LaTeX Info: Redefining \. on input line 701.
-LaTeX Info: Redefining \% on input line 701.
-[40
-
-]
-Cap\'{\i }tulo 3.
-[41]
-LaTeX Info: Redefining \. on input line 720.
-LaTeX Info: Redefining \% on input line 720.
-[42]
-LaTeX Info: Redefining \. on input line 729.
-LaTeX Info: Redefining \% on input line 729.
-[43]
-Overfull \hbox (14.58044pt too wide) in alignment at lines 730--735
- [] [] [] [] [] [] [] 
+Underfull \hbox (badness 1558) in paragraph at lines 430--432
+\T1/lmr/m/n/12 (+20) ma-ria en el es-tu-dio; mien-tras que el el pro-ce-so de i
+n-fe-ren-cia gru-pal, ba-sa-do en una
  []
 
 
-Overfull \hbox (14.58044pt too wide) in alignment at lines 735--739
- [] [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (14.58044pt too wide) in alignment at lines 739--747
- [] [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (14.58044pt too wide) in alignment at lines 754--759
- [] [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (14.58044pt too wide) in alignment at lines 759--763
- [] [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (14.58044pt too wide) in alignment at lines 763--771
- [] [] [] [] [] [] [] 
- []
-
-LaTeX Info: Redefining \. on input line 777.
-LaTeX Info: Redefining \% on input line 777.
-[44]
-Overfull \hbox (14.58044pt too wide) in alignment at lines 778--783
- [] [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (14.58044pt too wide) in alignment at lines 783--787
- [] [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (14.58044pt too wide) in alignment at lines 787--795
- [] [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (14.58044pt too wide) in alignment at lines 802--807
- [] [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (14.58044pt too wide) in alignment at lines 807--811
- [] [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (14.58044pt too wide) in alignment at lines 811--820
- [] [] [] [] [] [] [] 
- []
-
-LaTeX Info: Redefining \. on input line 820.
-LaTeX Info: Redefining \% on input line 820.
-[45]
-Overfull \hbox (14.58044pt too wide) in alignment at lines 827--832
- [] [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (14.58044pt too wide) in alignment at lines 832--836
- [] [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (14.58044pt too wide) in alignment at lines 836--846
- [] [] [] [] [] [] [] 
- []
-
-LaTeX Info: Redefining \. on input line 852.
-LaTeX Info: Redefining \% on input line 852.
-[46]
-LaTeX Info: Redefining \. on input line 890.
-LaTeX Info: Redefining \% on input line 890.
-[47]
-LaTeX Info: Redefining \. on input line 921.
-LaTeX Info: Redefining \% on input line 921.
-[48]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 931.
-LaTeX Info: Redefining \% on input line 931.
-[49]
-LaTeX Info: Redefining \. on input line 967.
-LaTeX Info: Redefining \% on input line 967.
-[50]
-LaTeX Info: Redefining \. on input line 984.
-LaTeX Info: Redefining \% on input line 984.
-[51]
-LaTeX Info: Redefining \. on input line 1000.
-LaTeX Info: Redefining \% on input line 1000.
-[52]
-LaTeX Info: Redefining \. on input line 1032.
-LaTeX Info: Redefining \% on input line 1032.
-[53]
-LaTeX Info: Redefining \. on input line 1044.
-LaTeX Info: Redefining \% on input line 1044.
-[54]
-LaTeX Info: Redefining \. on input line 1051.
-LaTeX Info: Redefining \% on input line 1051.
-[55]
-LaTeX Info: Redefining \. on input line 1051.
-LaTeX Info: Redefining \% on input line 1051.
-[56
+LaTeX Info: Redefining \. on input line 434.
+LaTeX Info: Redefining \% on input line 434.
+[27]
+LaTeX Info: Redefining \. on input line 463.
+LaTeX Info: Redefining \% on input line 463.
+[28 <./Pics/Picture6.png>]
+LaTeX Info: Redefining \. on input line 498.
+LaTeX Info: Redefining \% on input line 498.
+[29]
+LaTeX Info: Redefining \. on input line 559.
+LaTeX Info: Redefining \% on input line 559.
+[30]
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 568.
+
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\ts1lmr.fd
+"
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Info: Redefining \. on input line 628.
+LaTeX Info: Redefining \% on input line 628.
+[31]
+LaTeX Info: Redefining \. on input line 668.
+LaTeX Info: Redefining \% on input line 668.
+[32]
+LaTeX Info: Redefining \. on input line 699.
+LaTeX Info: Redefining \% on input line 699.
+[33]
+LaTeX Info: Redefining \. on input line 702.
+LaTeX Info: Redefining \% on input line 702.
+[34]
+Cap\'{\i }tulo 3.
+[35
+
+]
+LaTeX Info: Redefining \. on input line 725.
+LaTeX Info: Redefining \% on input line 725.
+[36]
+LaTeX Info: Redefining \. on input line 772.
+LaTeX Info: Redefining \% on input line 772.
+[37]
+LaTeX Info: Redefining \. on input line 802.
+LaTeX Info: Redefining \% on input line 802.
+[38]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 853.
+LaTeX Info: Redefining \% on input line 853.
+[39]
+LaTeX Info: Redefining \. on input line 891.
+LaTeX Info: Redefining \% on input line 891.
+[40]
+LaTeX Info: Redefining \. on input line 925.
+LaTeX Info: Redefining \% on input line 925.
+[41]
+Underfull \vbox (badness 1472) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 962.
+LaTeX Info: Redefining \% on input line 962.
+[42]
+LaTeX Info: Redefining \. on input line 978.
+LaTeX Info: Redefining \% on input line 978.
+[43]
+LaTeX Info: Redefining \. on input line 998.
+LaTeX Info: Redefining \% on input line 998.
+[44]
+LaTeX Info: Redefining \. on input line 1028.
+LaTeX Info: Redefining \% on input line 1028.
+[45]
+LaTeX Info: Redefining \. on input line 1045.
+LaTeX Info: Redefining \% on input line 1045.
+[46]
+LaTeX Info: Redefining \. on input line 1052.
+LaTeX Info: Redefining \% on input line 1052.
+[47]
+LaTeX Info: Redefining \. on input line 1052.
+LaTeX Info: Redefining \% on input line 1052.
+[48
 
 ]
 Cap\'{\i }tulo 4.
+[49]
+LaTeX Info: Redefining \. on input line 1092.
+LaTeX Info: Redefining \% on input line 1092.
+[50]
+LaTeX Info: Redefining \. on input line 1123.
+LaTeX Info: Redefining \% on input line 1123.
+[51]
+LaTeX Info: Redefining \. on input line 1129.
+LaTeX Info: Redefining \% on input line 1129.
+[52]
+LaTeX Info: Redefining \. on input line 1135.
+LaTeX Info: Redefining \% on input line 1135.
+[53]
+LaTeX Info: Redefining \. on input line 1158.
+LaTeX Info: Redefining \% on input line 1158.
+[54]
+LaTeX Info: Redefining \. on input line 1181.
+LaTeX Info: Redefining \% on input line 1181.
+[55]
+LaTeX Info: Redefining \. on input line 1213.
+LaTeX Info: Redefining \% on input line 1213.
+[56]
+LaTeX Info: Redefining \. on input line 1226.
+LaTeX Info: Redefining \% on input line 1226.
 [57]
-LaTeX Info: Redefining \. on input line 1084.
-LaTeX Info: Redefining \% on input line 1084.
-[58]
-LaTeX Info: Redefining \. on input line 1115.
-LaTeX Info: Redefining \% on input line 1115.
-[59]
-LaTeX Info: Redefining \. on input line 1122.
-LaTeX Info: Redefining \% on input line 1122.
-[60]
-LaTeX Info: Redefining \. on input line 1128.
-LaTeX Info: Redefining \% on input line 1128.
-[61]
-LaTeX Info: Redefining \. on input line 1134.
-LaTeX Info: Redefining \% on input line 1134.
-[62]
-LaTeX Info: Redefining \. on input line 1152.
-LaTeX Info: Redefining \% on input line 1152.
-[63]
-LaTeX Info: Redefining \. on input line 1167.
-LaTeX Info: Redefining \% on input line 1167.
-[64]
-LaTeX Info: Redefining \. on input line 1195.
-LaTeX Info: Redefining \% on input line 1195.
-[65]
-LaTeX Info: Redefining \. on input line 1214.
-LaTeX Info: Redefining \% on input line 1214.
-[66]
-LaTeX Info: Redefining \. on input line 1225.
-LaTeX Info: Redefining \% on input line 1225.
-[67]
-LaTeX Info: Redefining \. on input line 1225.
-LaTeX Info: Redefining \% on input line 1225.
-[68
+LaTeX Info: Redefining \. on input line 1226.
+LaTeX Info: Redefining \% on input line 1226.
+[58
 
 ]
 Cap\'{\i }tulo 5.
-[69]
-LaTeX Info: Redefining \. on input line 1256.
-LaTeX Info: Redefining \% on input line 1256.
-[70]
-LaTeX Info: Redefining \. on input line 1270.
-LaTeX Info: Redefining \% on input line 1270.
-[71]
-LaTeX Info: Redefining \. on input line 1294.
-LaTeX Info: Redefining \% on input line 1294.
-[72]
-LaTeX Info: Redefining \. on input line 1305.
-LaTeX Info: Redefining \% on input line 1305.
-[73]
-LaTeX Info: Redefining \. on input line 1323.
-LaTeX Info: Redefining \% on input line 1323.
-[74]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-324.
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
+[59]
+LaTeX Info: Redefining \. on input line 1261.
+LaTeX Info: Redefining \% on input line 1261.
+[60]
+LaTeX Info: Redefining \. on input line 1293.
+LaTeX Info: Redefining \% on input line 1293.
+[61]
+LaTeX Info: Redefining \. on input line 1306.
+LaTeX Info: Redefining \% on input line 1306.
+[62]
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 1325
+.
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\t1lmtt.fd
+"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Info: Redefining \. on input line 1335.
-LaTeX Info: Redefining \% on input line 1335.
-[75]
-<05Estratificar_files/figure-latex/unnamed-chunk-1-1.pdf, id=998, 469.755pt x 2
+LaTeX Info: Redefining \. on input line 1326.
+LaTeX Info: Redefining \% on input line 1326.
+[63]
+<05Estratificar_files/figure-latex/unnamed-chunk-1-1.pdf, id=916, 469.755pt x 2
 52.945pt>
 File: 05Estratificar_files/figure-latex/unnamed-chunk-1-1.pdf Graphic file (typ
 e pdf)
 <use 05Estratificar_files/figure-latex/unnamed-chunk-1-1.pdf>
 Package pdftex.def Info: 05Estratificar_files/figure-latex/unnamed-chunk-1-1.pd
-f  used on input line 1341.
-(pdftex.def)             Requested size: 344.997pt x 185.76761pt.
-LaTeX Info: Redefining \. on input line 1361.
-LaTeX Info: Redefining \% on input line 1361.
-[76 <./05Estratificar_files/figure-latex/unnamed-chunk-1-1.pdf>]
-LaTeX Info: Redefining \. on input line 1393.
-LaTeX Info: Redefining \% on input line 1393.
-
-Overfull \hbox (45.20146pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10 IV.  METODOLOGÕAS MULTIVARIADAS SOBRE LA MATRIZ DE INFORMACI”N 
-\T1/lmr/m/n/10 77
- []
-
-[77]
-LaTeX Info: Redefining \. on input line 1413.
-LaTeX Info: Redefining \% on input line 1413.
-[78]
-Overfull \hbox (6.81096pt too wide) in paragraph at lines 1443--1443
- []|\T1/lmr/m/n/8 (-20) DEFF|
+f  used on input line 1342.
+(pdftex.def)             Requested size: 469.75386pt x 252.94438pt.
+LaTeX Info: Redefining \. on input line 1359.
+LaTeX Info: Redefining \% on input line 1359.
+[64]
+LaTeX Info: Redefining \. on input line 1382.
+LaTeX Info: Redefining \% on input line 1382.
+[65 <./05Estratificar_files/figure-latex/unnamed-chunk-1-1.pdf>]
+LaTeX Info: Redefining \. on input line 1405.
+LaTeX Info: Redefining \% on input line 1405.
+[66]
+Overfull \hbox (1.36841pt too wide) in paragraph at lines 1444--1444
+ \T1/lmr/m/n/10 (-20) (H=3)|
  []
 
 
-Overfull \hbox (8.29655pt too wide) in paragraph at lines 1443--1443
- \T1/lmr/m/n/8 (-20) (H=3)|
+Overfull \hbox (1.36841pt too wide) in paragraph at lines 1444--1444
+ \T1/lmr/m/n/10 (-20) (H=4)|
  []
 
 
-Overfull \hbox (6.28766pt too wide) in paragraph at lines 1443--1443
- \T1/lmr/m/n/8 (-20) (H=3)|
- []
-
-
-Overfull \hbox (6.28766pt too wide) in paragraph at lines 1443--1443
- \T1/lmr/m/n/8 (-20) (H=3)|
- []
-
-
-Overfull \hbox (6.28766pt too wide) in paragraph at lines 1443--1443
- \T1/lmr/m/n/8 (-20) (H=3)|
- []
-
-
-Overfull \hbox (1.60912pt too wide) in paragraph at lines 1443--1443
- []|\T1/lmr/m/n/8 (-20) KmJ
- []
-
-
-Overfull \hbox (6.28766pt too wide) in paragraph at lines 1443--1443
- \T1/lmr/m/n/8 (-20) (H=3)|
- []
-
-
-Overfull \hbox (6.28766pt too wide) in paragraph at lines 1443--1443
- \T1/lmr/m/n/8 (-20) (H=3)|
- []
-
-
-Overfull \hbox (8.29655pt too wide) in paragraph at lines 1443--1443
- \T1/lmr/m/n/8 (-20) (H=4)|
- []
-
-
-Overfull \hbox (6.28766pt too wide) in paragraph at lines 1443--1443
- \T1/lmr/m/n/8 (-20) (H=4)|
- []
-
-
-Overfull \hbox (6.28766pt too wide) in paragraph at lines 1443--1443
- \T1/lmr/m/n/8 (-20) (H=4)|
- []
-
-
-Overfull \hbox (6.28766pt too wide) in paragraph at lines 1443--1443
- \T1/lmr/m/n/8 (-20) (H=4)|
- []
-
-
-Overfull \hbox (1.60912pt too wide) in paragraph at lines 1443--1443
- []|\T1/lmr/m/n/8 (-20) KmJ
- []
-
-
-Overfull \hbox (6.28766pt too wide) in paragraph at lines 1443--1443
- \T1/lmr/m/n/8 (-20) (H=4)|
- []
-
-
-Overfull \hbox (6.28766pt too wide) in paragraph at lines 1443--1444
- \T1/lmr/m/n/8 (-20) (H=4)|
- []
-
-
-Overfull \hbox (4.027pt too wide) in alignment at lines 1440--1445
+Overfull \hbox (7.14197pt too wide) in alignment at lines 1441--1446
  [] [] [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (6.81096pt too wide) in paragraph at lines 1447--1447
- []|\T1/lmr/m/n/8 (-20) DEFF|
+Overfull \hbox (1.36841pt too wide) in paragraph at lines 1448--1448
+ \T1/lmr/m/n/10 (-20) (H=3)|
  []
 
 
-Overfull \hbox (8.29655pt too wide) in paragraph at lines 1447--1447
- \T1/lmr/m/n/8 (-20) (H=3)|
+Overfull \hbox (1.36841pt too wide) in paragraph at lines 1448--1448
+ \T1/lmr/m/n/10 (-20) (H=4)|
  []
 
 
-Overfull \hbox (6.28766pt too wide) in paragraph at lines 1447--1447
- \T1/lmr/m/n/8 (-20) (H=3)|
- []
-
-
-Overfull \hbox (6.28766pt too wide) in paragraph at lines 1447--1447
- \T1/lmr/m/n/8 (-20) (H=3)|
- []
-
-
-Overfull \hbox (6.28766pt too wide) in paragraph at lines 1447--1447
- \T1/lmr/m/n/8 (-20) (H=3)|
- []
-
-
-Overfull \hbox (1.60912pt too wide) in paragraph at lines 1447--1447
- []|\T1/lmr/m/n/8 (-20) KmJ
- []
-
-
-Overfull \hbox (6.28766pt too wide) in paragraph at lines 1447--1447
- \T1/lmr/m/n/8 (-20) (H=3)|
- []
-
-
-Overfull \hbox (6.28766pt too wide) in paragraph at lines 1447--1447
- \T1/lmr/m/n/8 (-20) (H=3)|
- []
-
-
-Overfull \hbox (8.29655pt too wide) in paragraph at lines 1447--1447
- \T1/lmr/m/n/8 (-20) (H=4)|
- []
-
-
-Overfull \hbox (6.28766pt too wide) in paragraph at lines 1447--1447
- \T1/lmr/m/n/8 (-20) (H=4)|
- []
-
-
-Overfull \hbox (6.28766pt too wide) in paragraph at lines 1447--1447
- \T1/lmr/m/n/8 (-20) (H=4)|
- []
-
-
-Overfull \hbox (6.28766pt too wide) in paragraph at lines 1447--1447
- \T1/lmr/m/n/8 (-20) (H=4)|
- []
-
-
-Overfull \hbox (1.60912pt too wide) in paragraph at lines 1447--1447
- []|\T1/lmr/m/n/8 (-20) KmJ
- []
-
-
-Overfull \hbox (6.28766pt too wide) in paragraph at lines 1447--1447
- \T1/lmr/m/n/8 (-20) (H=4)|
- []
-
-
-Overfull \hbox (6.28766pt too wide) in paragraph at lines 1447--1448
- \T1/lmr/m/n/8 (-20) (H=4)|
- []
-
-
-Overfull \hbox (4.027pt too wide) in alignment at lines 1445--1449
+Overfull \hbox (7.14197pt too wide) in alignment at lines 1446--1450
  [] [] [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (0.73744pt too wide) in paragraph at lines 1450--1450
- []|\T1/lmr/m/n/8 (-20) 0.87|
- []
-
-
-Overfull \hbox (0.73744pt too wide) in paragraph at lines 1451--1451
- []|\T1/lmr/m/n/8 (-20) 0.89|
- []
-
-
-Overfull \hbox (0.73744pt too wide) in paragraph at lines 1451--1451
- []|\T1/lmr/m/n/8 (-20) 0.79|
- []
-
-
-Overfull \hbox (0.73744pt too wide) in paragraph at lines 1452--1452
- []|\T1/lmr/m/n/8 (-20) 0.87|
- []
-
-
-Overfull \hbox (0.73744pt too wide) in paragraph at lines 1452--1452
- []|\T1/lmr/m/n/8 (-20) 0.74|
- []
-
-
-Overfull \hbox (0.73744pt too wide) in paragraph at lines 1453--1453
- []|\T1/lmr/m/n/8 (-20) 0.92|
- []
-
-
-Overfull \hbox (0.73744pt too wide) in paragraph at lines 1453--1453
- []|\T1/lmr/m/n/8 (-20) 0.77|
- []
-
-
-Overfull \hbox (0.73744pt too wide) in paragraph at lines 1454--1454
- []|\T1/lmr/m/n/8 (-20) 0.85|
- []
-
-
-Overfull \hbox (0.73744pt too wide) in paragraph at lines 1455--1455
- []|\T1/lmr/m/n/8 (-20) 0.87|
- []
-
-
-Overfull \hbox (0.73744pt too wide) in paragraph at lines 1456--1456
- []|\T1/lmr/m/n/8 (-20) 0.87|
- []
-
-
-Overfull \hbox (0.73744pt too wide) in paragraph at lines 1456--1456
- []|\T1/lmr/m/n/8 (-20) 0.75|
- []
-
-
-Overfull \hbox (0.73744pt too wide) in paragraph at lines 1457--1457
- []|\T1/lmr/m/n/8 (-20) 0.93|
- []
-
-
-Overfull \hbox (0.73744pt too wide) in paragraph at lines 1457--1457
- []|\T1/lmr/m/n/8 (-20) 0.77|
- []
-
-
-Overfull \hbox (1.56125pt too wide) in paragraph at lines 1458--1458
- []|\T1/lmr/m/n/8 (-20) G(S)|
- []
-
-
-Overfull \hbox (0.73744pt too wide) in paragraph at lines 1458--1458
- []|\T1/lmr/m/n/8 (-20) 7.07|
- []
-
-
-Overfull \hbox (0.73744pt too wide) in paragraph at lines 1458--1458
- []|\T1/lmr/m/n/8 (-20) 6.22|
- []
-
-
-Overfull \hbox (4.027pt too wide) in alignment at lines 1449--1460
+Overfull \hbox (7.14197pt too wide) in alignment at lines 1450--1461
  [] [] [] [] [] [] [] [] [] [] [] [] [] 
  []
 
-LaTeX Info: Redefining \. on input line 1460.
-LaTeX Info: Redefining \% on input line 1460.
-[79]
-LaTeX Info: Redefining \. on input line 1484.
-LaTeX Info: Redefining \% on input line 1484.
-[80]
-<Pics/Estratificar.png, id=1070, 1740.5025pt x 806.01125pt>
+LaTeX Info: Redefining \. on input line 1461.
+LaTeX Info: Redefining \% on input line 1461.
+[67]
+LaTeX Info: Redefining \. on input line 1485.
+LaTeX Info: Redefining \% on input line 1485.
+[68]
+<Pics/Estratificar.png, id=993, 1740.5025pt x 806.01125pt>
 File: Pics/Estratificar.png Graphic file (type png)
 <use Pics/Estratificar.png>
-Package pdftex.def Info: Pics/Estratificar.png  used on input line 1486.
+Package pdftex.def Info: Pics/Estratificar.png  used on input line 1487.
 (pdftex.def)             Requested size: 803.00453pt x 371.86426pt.
 
-Overfull \hbox (458.00453pt too wide) in paragraph at lines 1486--1486
+Overfull \hbox (302.52054pt too wide) in paragraph at lines 1487--1487
 [][] 
  []
 
-LaTeX Info: Redefining \. on input line 1507.
-LaTeX Info: Redefining \% on input line 1507.
+
+Underfull \vbox (badness 3029) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 1496.
+LaTeX Info: Redefining \% on input line 1496.
+[69 <./Pics/Estratificar.png>]
+LaTeX Info: Redefining \. on input line 1516.
+LaTeX Info: Redefining \% on input line 1516.
+[70]
+Cap\'{\i }tulo 6.
+[71
+
+]
+LaTeX Info: Redefining \. on input line 1545.
+LaTeX Info: Redefining \% on input line 1545.
+[72]
+LaTeX Info: Redefining \. on input line 1571.
+LaTeX Info: Redefining \% on input line 1571.
+[73]
+LaTeX Info: Redefining \. on input line 1592.
+LaTeX Info: Redefining \% on input line 1592.
+[74]
+LaTeX Info: Redefining \. on input line 1608.
+LaTeX Info: Redefining \% on input line 1608.
+[75]
+LaTeX Info: Redefining \. on input line 1624.
+LaTeX Info: Redefining \% on input line 1624.
+[76]
+LaTeX Info: Redefining \. on input line 1640.
+LaTeX Info: Redefining \% on input line 1640.
+[77]
+LaTeX Info: Redefining \. on input line 1660.
+LaTeX Info: Redefining \% on input line 1660.
+[78]
+LaTeX Info: Redefining \. on input line 1673.
+LaTeX Info: Redefining \% on input line 1673.
+[79]
+Underfull \vbox (badness 7504) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 1702.
+LaTeX Info: Redefining \% on input line 1702.
+[80]
+LaTeX Info: Redefining \. on input line 1729.
+LaTeX Info: Redefining \% on input line 1729.
 [81]
-LaTeX Info: Redefining \. on input line 1507.
-LaTeX Info: Redefining \% on input line 1507.
-[82 <./Pics/Estratificar.png>]
-LaTeX Info: Redefining \. on input line 1515.
-LaTeX Info: Redefining \% on input line 1515.
+LaTeX Info: Redefining \. on input line 1748.
+LaTeX Info: Redefining \% on input line 1748.
+[82]
+LaTeX Info: Redefining \. on input line 1748.
+LaTeX Info: Redefining \% on input line 1748.
 [83]
-LaTeX Info: Redefining \. on input line 1515.
-LaTeX Info: Redefining \% on input line 1515.
+LaTeX Info: Redefining \. on input line 1748.
+LaTeX Info: Redefining \% on input line 1748.
 [84
 
 ]
-Cap\'{\i }tulo 6.
-[85]
-LaTeX Info: Redefining \. on input line 1538.
-LaTeX Info: Redefining \% on input line 1538.
-
-Overfull \hbox (12.0817pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 86 \T1/lmr/m/sl/10 CAPÕTULO 6.  DISE—O Y MECANISMO DE SELECCI”N 
-DE LA MUESTRA
- []
-
-[86]
-LaTeX Info: Redefining \. on input line 1547.
-LaTeX Info: Redefining \% on input line 1547.
-[87]
-LaTeX Info: Redefining \. on input line 1571.
-LaTeX Info: Redefining \% on input line 1571.
-
-Overfull \hbox (12.0817pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 88 \T1/lmr/m/sl/10 CAPÕTULO 6.  DISE—O Y MECANISMO DE SELECCI”N 
-DE LA MUESTRA
- []
-
-[88]
-LaTeX Info: Redefining \. on input line 1591.
-LaTeX Info: Redefining \% on input line 1591.
-[89]
-LaTeX Info: Redefining \. on input line 1605.
-LaTeX Info: Redefining \% on input line 1605.
-
-Overfull \hbox (12.0817pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 90 \T1/lmr/m/sl/10 CAPÕTULO 6.  DISE—O Y MECANISMO DE SELECCI”N 
-DE LA MUESTRA
- []
-
-[90]
-LaTeX Info: Redefining \. on input line 1621.
-LaTeX Info: Redefining \% on input line 1621.
-[91]
-LaTeX Info: Redefining \. on input line 1631.
-LaTeX Info: Redefining \% on input line 1631.
-
-Overfull \hbox (12.0817pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 92 \T1/lmr/m/sl/10 CAPÕTULO 6.  DISE—O Y MECANISMO DE SELECCI”N 
-DE LA MUESTRA
- []
-
-[92]
-LaTeX Info: Redefining \. on input line 1647.
-LaTeX Info: Redefining \% on input line 1647.
-[93]
-LaTeX Info: Redefining \. on input line 1666.
-LaTeX Info: Redefining \% on input line 1666.
-
-Overfull \hbox (12.0817pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 94 \T1/lmr/m/sl/10 CAPÕTULO 6.  DISE—O Y MECANISMO DE SELECCI”N 
-DE LA MUESTRA
- []
-
-[94]
-LaTeX Info: Redefining \. on input line 1678.
-LaTeX Info: Redefining \% on input line 1678.
-[95]
-Underfull \vbox (badness 1014) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 1701.
-LaTeX Info: Redefining \% on input line 1701.
-
-Overfull \hbox (12.0817pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 96 \T1/lmr/m/sl/10 CAPÕTULO 6.  DISE—O Y MECANISMO DE SELECCI”N 
-DE LA MUESTRA
- []
-
-[96]
-LaTeX Info: Redefining \. on input line 1721.
-LaTeX Info: Redefining \% on input line 1721.
-
-Overfull \hbox (37.1414pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10 II.  EL DISE—O DE MUESTREO EST¡NDAR EN UNA ENCUESTA DE HOGARES 
-\T1/lmr/m/n/10 97
- []
-
-[97]
-LaTeX Info: Redefining \. on input line 1743.
-LaTeX Info: Redefining \% on input line 1743.
-
-Overfull \hbox (12.0817pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 98 \T1/lmr/m/sl/10 CAPÕTULO 6.  DISE—O Y MECANISMO DE SELECCI”N 
-DE LA MUESTRA
- []
-
-[98]
-LaTeX Info: Redefining \. on input line 1747.
-LaTeX Info: Redefining \% on input line 1747.
-
-Overfull \hbox (37.1414pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10 II.  EL DISE—O DE MUESTREO EST¡NDAR EN UNA ENCUESTA DE HOGARES 
-\T1/lmr/m/n/10 99
- []
-
-[99]
-LaTeX Info: Redefining \. on input line 1747.
-LaTeX Info: Redefining \% on input line 1747.
-
-Overfull \hbox (17.0817pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 100 \T1/lmr/m/sl/10 CAPÕTULO 6.  DISE—O Y MECANISMO DE SELECCI”N
- DE LA MUESTRA
- []
-
-[100
-
-]
 Cap\'{\i }tulo 7.
-[101]
-LaTeX Info: Redefining \. on input line 1795.
-LaTeX Info: Redefining \% on input line 1795.
-[102]
-LaTeX Info: Redefining \. on input line 1817.
-LaTeX Info: Redefining \% on input line 1817.
-
-Overfull \hbox (74.36397pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10 II.  DESCOMPOSICI”N DEL EFECTO DE DISE—O EN LAS ENCUESTAS DE HO
-GARES \T1/lmr/m/n/10 103
- []
-
-[103]
-LaTeX Info: Redefining \. on input line 1847.
-LaTeX Info: Redefining \% on input line 1847.
-[104]
-Underfull \vbox (badness 1005) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 1882.
-LaTeX Info: Redefining \% on input line 1882.
-[105]
-LaTeX Info: Redefining \. on input line 1905.
-LaTeX Info: Redefining \% on input line 1905.
-[106]
-LaTeX Info: Redefining \. on input line 1939.
-LaTeX Info: Redefining \% on input line 1939.
-[107]
-LaTeX Info: Redefining \. on input line 1963.
-LaTeX Info: Redefining \% on input line 1963.
-[108]
-LaTeX Info: Redefining \. on input line 1971.
-LaTeX Info: Redefining \% on input line 1971.
-[109]
-LaTeX Info: Redefining \. on input line 1971.
-LaTeX Info: Redefining \% on input line 1971.
-[110
-
-]
+[85]
+LaTeX Info: Redefining \. on input line 1802.
+LaTeX Info: Redefining \% on input line 1802.
+[86]
+LaTeX Info: Redefining \. on input line 1835.
+LaTeX Info: Redefining \% on input line 1835.
+[87]
+LaTeX Info: Redefining \. on input line 1873.
+LaTeX Info: Redefining \% on input line 1873.
+[88]
+LaTeX Info: Redefining \. on input line 1906.
+LaTeX Info: Redefining \% on input line 1906.
+[89]
+LaTeX Info: Redefining \. on input line 1943.
+LaTeX Info: Redefining \% on input line 1943.
+[90]
+LaTeX Info: Redefining \. on input line 1966.
+LaTeX Info: Redefining \% on input line 1966.
+[91]
+LaTeX Info: Redefining \. on input line 1972.
+LaTeX Info: Redefining \% on input line 1972.
+[92]
 Cap\'{\i }tulo 8.
-
-Underfull \vbox (badness 2134) has occurred while \output is active []
-
-[111]
-LaTeX Info: Redefining \. on input line 2020.
-LaTeX Info: Redefining \% on input line 2020.
-[112]
-LaTeX Info: Redefining \. on input line 2032.
-LaTeX Info: Redefining \% on input line 2032.
-
-Overfull \hbox (65.26633pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10 II.  EL EFECTO DE DISE—O EN LA DETERMINACI”N DEL TAMA—O DE MUES
-TRA \T1/lmr/m/n/10 113
- []
-
-[113]
-LaTeX Info: Redefining \. on input line 2065.
-LaTeX Info: Redefining \% on input line 2065.
-[114]
-LaTeX Info: Redefining \. on input line 2088.
-LaTeX Info: Redefining \% on input line 2088.
-[115]
-LaTeX Info: Redefining \. on input line 2124.
-LaTeX Info: Redefining \% on input line 2124.
-[116]
-LaTeX Info: Redefining \. on input line 2151.
-LaTeX Info: Redefining \% on input line 2151.
-[117]
-Overfull \hbox (2.85278pt too wide) in alignment at lines 2182--2186
- [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (2.85278pt too wide) in alignment at lines 2186--2189
- [] [] [] [] [] [] 
- []
-
-LaTeX Info: Redefining \. on input line 2192.
-LaTeX Info: Redefining \% on input line 2192.
-[118]
-Overfull \hbox (2.85278pt too wide) in alignment at lines 2199--2203
- [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (2.85278pt too wide) in alignment at lines 2203--2214
- [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (2.85278pt too wide) in alignment at lines 2232--2236
- [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (2.85278pt too wide) in alignment at lines 2236--2239
- [] [] [] [] [] [] 
- []
-
-LaTeX Info: Redefining \. on input line 2242.
-LaTeX Info: Redefining \% on input line 2242.
-[119]
-Overfull \hbox (2.85278pt too wide) in alignment at lines 2249--2253
- [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (2.85278pt too wide) in alignment at lines 2253--2263
- [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (2.85278pt too wide) in alignment at lines 2281--2285
- [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (2.85278pt too wide) in alignment at lines 2285--2288
- [] [] [] [] [] [] 
- []
-
-LaTeX Info: Redefining \. on input line 2288.
-LaTeX Info: Redefining \% on input line 2288.
-[120]
-Overfull \hbox (2.85278pt too wide) in alignment at lines 2298--2302
- [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (2.85278pt too wide) in alignment at lines 2302--2312
- [] [] [] [] [] [] 
- []
-
-LaTeX Info: Redefining \. on input line 2325.
-LaTeX Info: Redefining \% on input line 2325.
-[121]
-LaTeX Info: Redefining \. on input line 2364.
-LaTeX Info: Redefining \% on input line 2364.
-[122]
-LaTeX Info: Redefining \. on input line 2395.
-LaTeX Info: Redefining \% on input line 2395.
-[123]
-LaTeX Info: Redefining \. on input line 2437.
-LaTeX Info: Redefining \% on input line 2437.
-[124]
-LaTeX Info: Redefining \. on input line 2480.
-LaTeX Info: Redefining \% on input line 2480.
-[125]
-LaTeX Info: Redefining \. on input line 2527.
-LaTeX Info: Redefining \% on input line 2527.
-[126]
-LaTeX Info: Redefining \. on input line 2575.
-LaTeX Info: Redefining \% on input line 2575.
-[127]
-LaTeX Info: Redefining \. on input line 2617.
-LaTeX Info: Redefining \% on input line 2617.
-[128]
-LaTeX Info: Redefining \. on input line 2662.
-LaTeX Info: Redefining \% on input line 2662.
-[129]
-LaTeX Info: Redefining \. on input line 2697.
-LaTeX Info: Redefining \% on input line 2697.
-[130]
-LaTeX Info: Redefining \. on input line 2726.
-LaTeX Info: Redefining \% on input line 2726.
-[131]
-Overfull \hbox (35.63612pt too wide) detected at line 2754
-[]
- []
-
-LaTeX Info: Redefining \. on input line 2754.
-LaTeX Info: Redefining \% on input line 2754.
-[132]
-LaTeX Info: Redefining \. on input line 2780.
-LaTeX Info: Redefining \% on input line 2780.
-[133]
-LaTeX Info: Redefining \. on input line 2800.
-LaTeX Info: Redefining \% on input line 2800.
-[134]
-LaTeX Info: Redefining \. on input line 2815.
-LaTeX Info: Redefining \% on input line 2815.
-[135]
-LaTeX Info: Redefining \. on input line 2823.
-LaTeX Info: Redefining \% on input line 2823.
-[136]
-LaTeX Info: Redefining \. on input line 2826.
-LaTeX Info: Redefining \% on input line 2826.
-[137]
-LaTeX Info: Redefining \. on input line 2826.
-LaTeX Info: Redefining \% on input line 2826.
-[138
-
-] [139] [140]
-Cap\'{\i }tulo 9.
-[141
+[93
 
 ]
-LaTeX Info: Redefining \. on input line 2894.
-LaTeX Info: Redefining \% on input line 2894.
-[142]
-LaTeX Info: Redefining \. on input line 2939.
-LaTeX Info: Redefining \% on input line 2939.
-[143]
-LaTeX Info: Redefining \. on input line 2974.
-LaTeX Info: Redefining \% on input line 2974.
-[144]
-LaTeX Info: Redefining \. on input line 3010.
-LaTeX Info: Redefining \% on input line 3010.
-[145]
-LaTeX Info: Redefining \. on input line 3040.
-LaTeX Info: Redefining \% on input line 3040.
-[146]
-LaTeX Info: Redefining \. on input line 3075.
-LaTeX Info: Redefining \% on input line 3075.
-[147]
-LaTeX Info: Redefining \. on input line 3096.
-LaTeX Info: Redefining \% on input line 3096.
-[148]
-LaTeX Info: Redefining \. on input line 3106.
-LaTeX Info: Redefining \% on input line 3106.
-[149]
-LaTeX Info: Redefining \. on input line 3144.
-LaTeX Info: Redefining \% on input line 3144.
-[150]
-LaTeX Info: Redefining \. on input line 3164.
-LaTeX Info: Redefining \% on input line 3164.
-[151]
-<Pics/c5.png, id=1633, 1445.4pt x 859.21pt>
+LaTeX Info: Redefining \. on input line 2025.
+LaTeX Info: Redefining \% on input line 2025.
+[94]
+LaTeX Info: Redefining \. on input line 2049.
+LaTeX Info: Redefining \% on input line 2049.
+[95]
+LaTeX Info: Redefining \. on input line 2080.
+LaTeX Info: Redefining \% on input line 2080.
+[96]
+LaTeX Info: Redefining \. on input line 2125.
+LaTeX Info: Redefining \% on input line 2125.
+[97]
+LaTeX Info: Redefining \. on input line 2162.
+LaTeX Info: Redefining \% on input line 2162.
+[98]
+Overfull \hbox (4.40912pt too wide) in alignment at lines 2183--2187
+ [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (4.40912pt too wide) in alignment at lines 2187--2190
+ [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (4.40912pt too wide) in alignment at lines 2200--2204
+ [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (4.40912pt too wide) in alignment at lines 2204--2215
+ [] [] [] [] [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 2215.
+LaTeX Info: Redefining \% on input line 2215.
+[99]
+Overfull \hbox (4.40912pt too wide) in alignment at lines 2233--2237
+ [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (4.40912pt too wide) in alignment at lines 2237--2240
+ [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (4.40912pt too wide) in alignment at lines 2250--2254
+ [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (4.40912pt too wide) in alignment at lines 2254--2264
+ [] [] [] [] [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 2264.
+LaTeX Info: Redefining \% on input line 2264.
+[100]
+Overfull \hbox (4.40912pt too wide) in alignment at lines 2282--2286
+ [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (4.40912pt too wide) in alignment at lines 2286--2289
+ [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (4.40912pt too wide) in alignment at lines 2299--2303
+ [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (4.40912pt too wide) in alignment at lines 2303--2313
+ [] [] [] [] [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 2313.
+LaTeX Info: Redefining \% on input line 2313.
+[101]
+LaTeX Info: Redefining \. on input line 2340.
+LaTeX Info: Redefining \% on input line 2340.
+[102]
+LaTeX Info: Redefining \. on input line 2387.
+LaTeX Info: Redefining \% on input line 2387.
+[103]
+Underfull \vbox (badness 1721) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 2432.
+LaTeX Info: Redefining \% on input line 2432.
+[104]
+LaTeX Info: Redefining \. on input line 2474.
+LaTeX Info: Redefining \% on input line 2474.
+[105]
+LaTeX Info: Redefining \. on input line 2528.
+LaTeX Info: Redefining \% on input line 2528.
+[106]
+LaTeX Info: Redefining \. on input line 2579.
+LaTeX Info: Redefining \% on input line 2579.
+[107]
+LaTeX Info: Redefining \. on input line 2631.
+LaTeX Info: Redefining \% on input line 2631.
+[108]
+LaTeX Info: Redefining \. on input line 2676.
+LaTeX Info: Redefining \% on input line 2676.
+[109]
+LaTeX Info: Redefining \. on input line 2714.
+LaTeX Info: Redefining \% on input line 2714.
+[110]
+LaTeX Info: Redefining \. on input line 2747.
+LaTeX Info: Redefining \% on input line 2747.
+[111]
+LaTeX Info: Redefining \. on input line 2781.
+LaTeX Info: Redefining \% on input line 2781.
+[112]
+LaTeX Info: Redefining \. on input line 2803.
+LaTeX Info: Redefining \% on input line 2803.
+[113]
+LaTeX Info: Redefining \. on input line 2821.
+LaTeX Info: Redefining \% on input line 2821.
+[114]
+LaTeX Info: Redefining \. on input line 2827.
+LaTeX Info: Redefining \% on input line 2827.
+[115]
+LaTeX Info: Redefining \. on input line 2827.
+LaTeX Info: Redefining \% on input line 2827.
+[116
+
+] [117] [118]
+Cap\'{\i }tulo 9.
+[119
+
+]
+LaTeX Info: Redefining \. on input line 2908.
+LaTeX Info: Redefining \% on input line 2908.
+[120]
+LaTeX Info: Redefining \. on input line 2959.
+LaTeX Info: Redefining \% on input line 2959.
+[121]
+LaTeX Info: Redefining \. on input line 2999.
+LaTeX Info: Redefining \% on input line 2999.
+[122]
+LaTeX Info: Redefining \. on input line 3038.
+LaTeX Info: Redefining \% on input line 3038.
+[123]
+LaTeX Info: Redefining \. on input line 3079.
+LaTeX Info: Redefining \% on input line 3079.
+[124]
+LaTeX Info: Redefining \. on input line 3099.
+LaTeX Info: Redefining \% on input line 3099.
+[125]
+LaTeX Info: Redefining \. on input line 3124.
+LaTeX Info: Redefining \% on input line 3124.
+[126]
+LaTeX Info: Redefining \. on input line 3162.
+LaTeX Info: Redefining \% on input line 3162.
+[127]
+<Pics/c5.png, id=1504, 1445.4pt x 859.21pt>
 File: Pics/c5.png Graphic file (type png)
 <use Pics/c5.png>
-Package pdftex.def Info: Pics/c5.png  used on input line 3170.
-(pdftex.def)             Requested size: 344.9843pt x 205.074pt.
-<Pics/c6.png, id=1634, 1445.4pt x 859.21pt>
+Package pdftex.def Info: Pics/c5.png  used on input line 3171.
+(pdftex.def)             Requested size: 500.47206pt x 297.50284pt.
+<Pics/c6.png, id=1505, 1445.4pt x 859.21pt>
 File: Pics/c6.png Graphic file (type png)
 <use Pics/c6.png>
-Package pdftex.def Info: Pics/c6.png  used on input line 3178.
-(pdftex.def)             Requested size: 344.9843pt x 205.074pt.
-<Pics/c7.png, id=1635, 1445.4pt x 859.21pt>
+Package pdftex.def Info: Pics/c6.png  used on input line 3179.
+(pdftex.def)             Requested size: 500.47206pt x 297.50284pt.
+<Pics/c7.png, id=1506, 1445.4pt x 859.21pt>
 File: Pics/c7.png Graphic file (type png)
 <use Pics/c7.png>
-Package pdftex.def Info: Pics/c7.png  used on input line 3186.
-(pdftex.def)             Requested size: 344.9843pt x 205.074pt.
-LaTeX Info: Redefining \. on input line 3191.
-LaTeX Info: Redefining \% on input line 3191.
-[152 <./Pics/c5.png>]
-LaTeX Info: Redefining \. on input line 3191.
-LaTeX Info: Redefining \% on input line 3191.
-[153 <./Pics/c6.png> <./Pics/c7.png>]
-<Pics/c8.png, id=1648, 1445.4pt x 858.20625pt>
+Package pdftex.def Info: Pics/c7.png  used on input line 3187.
+(pdftex.def)             Requested size: 500.47206pt x 297.50284pt.
+LaTeX Info: Redefining \. on input line 3189.
+LaTeX Info: Redefining \% on input line 3189.
+[128 <./Pics/c5.png>]
+<Pics/c8.png, id=1515, 1445.4pt x 858.20625pt>
 File: Pics/c8.png Graphic file (type png)
 <use Pics/c8.png>
-Package pdftex.def Info: Pics/c8.png  used on input line 3194.
-(pdftex.def)             Requested size: 344.9843pt x 204.83443pt.
-
-Underfull \vbox (badness 2753) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 3212.
-LaTeX Info: Redefining \% on input line 3212.
-[154 <./Pics/c8.png>]
-LaTeX Info: Redefining \. on input line 3239.
-LaTeX Info: Redefining \% on input line 3239.
-[155]
-LaTeX Info: Redefining \. on input line 3265.
-LaTeX Info: Redefining \% on input line 3265.
-[156]
-LaTeX Info: Redefining \. on input line 3277.
-LaTeX Info: Redefining \% on input line 3277.
-[157]
-LaTeX Info: Redefining \. on input line 3281.
-LaTeX Info: Redefining \% on input line 3281.
-[158]
-Cap\'{\i }tulo 10.
-[159
+Package pdftex.def Info: Pics/c8.png  used on input line 3195.
+(pdftex.def)             Requested size: 500.47206pt x 297.15527pt.
+LaTeX Info: Redefining \. on input line 3210.
+LaTeX Info: Redefining \% on input line 3210.
+[129 <./Pics/c6.png>]
+LaTeX Info: Redefining \. on input line 3210.
+LaTeX Info: Redefining \% on input line 3210.
+[130 <./Pics/c7.png> <./Pics/c8.png>]
+LaTeX Info: Redefining \. on input line 3246.
+LaTeX Info: Redefining \% on input line 3246.
+[131]
+LaTeX Info: Redefining \. on input line 3272.
+LaTeX Info: Redefining \% on input line 3272.
+[132]
+LaTeX Info: Redefining \. on input line 3282.
+LaTeX Info: Redefining \% on input line 3282.
+[133]
+LaTeX Info: Redefining \. on input line 3282.
+LaTeX Info: Redefining \% on input line 3282.
+[134
 
 ]
-LaTeX Info: Redefining \. on input line 3337.
-LaTeX Info: Redefining \% on input line 3337.
-
-Overfull \hbox (0.4164pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 160 \T1/lmr/m/sl/10 CAPÕTULO 10.  CONSTRUCCI”N DE LOS FACTORES D
-E EXPANSI”N
- []
-
-[160]
-<Pics/15.png, id=1719, 981.6675pt x 491.8375pt>
+Cap\'{\i }tulo 10.
+[135]
+LaTeX Info: Redefining \. on input line 3364.
+LaTeX Info: Redefining \% on input line 3364.
+[136]
+<Pics/15.png, id=1598, 981.6675pt x 491.8375pt>
 File: Pics/15.png Graphic file (type png)
 <use Pics/15.png>
-Package pdftex.def Info: Pics/15.png  used on input line 3375.
-(pdftex.def)             Requested size: 344.9968pt x 172.85115pt.
-LaTeX Info: Redefining \. on input line 3383.
-LaTeX Info: Redefining \% on input line 3383.
-[161]
-Underfull \vbox (badness 2351) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 3390.
-LaTeX Info: Redefining \% on input line 3390.
-
-Overfull \hbox (0.4164pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 162 \T1/lmr/m/sl/10 CAPÕTULO 10.  CONSTRUCCI”N DE LOS FACTORES D
-E EXPANSI”N
- []
-
-[162 <./Pics/15.png>]
-<Pics/16.png, id=1739, 1025.8325pt x 514.92375pt>
+Package pdftex.def Info: Pics/15.png  used on input line 3376.
+(pdftex.def)             Requested size: 500.47903pt x 250.75125pt.
+LaTeX Info: Redefining \. on input line 3384.
+LaTeX Info: Redefining \% on input line 3384.
+[137 <./Pics/15.png>]
+<Pics/16.png, id=1606, 1025.8325pt x 514.92375pt>
 File: Pics/16.png Graphic file (type png)
 <use Pics/16.png>
-Package pdftex.def Info: Pics/16.png  used on input line 3399.
-(pdftex.def)             Requested size: 344.99043pt x 173.17033pt.
-LaTeX Info: Redefining \. on input line 3420.
-LaTeX Info: Redefining \% on input line 3420.
-[163 <./Pics/16.png>]
-LaTeX Info: Redefining \. on input line 3469.
-LaTeX Info: Redefining \% on input line 3469.
-
-Overfull \hbox (0.4164pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 164 \T1/lmr/m/sl/10 CAPÕTULO 10.  CONSTRUCCI”N DE LOS FACTORES D
-E EXPANSI”N
- []
-
-[164]
-<Pics/18.png, id=1757, 1021.8175pt x 512.91624pt>
+Package pdftex.def Info: Pics/16.png  used on input line 3400.
+(pdftex.def)             Requested size: 500.48657pt x 251.2227pt.
+LaTeX Info: Redefining \. on input line 3422.
+LaTeX Info: Redefining \% on input line 3422.
+[138]
+LaTeX Info: Redefining \. on input line 3456.
+LaTeX Info: Redefining \% on input line 3456.
+[139 <./Pics/16.png>]
+<Pics/18.png, id=1623, 1021.8175pt x 512.91624pt>
 File: Pics/18.png Graphic file (type png)
 <use Pics/18.png>
-Package pdftex.def Info: Pics/18.png  used on input line 3482.
-(pdftex.def)             Requested size: 344.99664pt x 173.17612pt.
-LaTeX Info: Redefining \. on input line 3492.
-LaTeX Info: Redefining \% on input line 3492.
-[165 <./Pics/18.png>]
-LaTeX Info: Redefining \. on input line 3526.
-LaTeX Info: Redefining \% on input line 3526.
-
-Overfull \hbox (0.4164pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 166 \T1/lmr/m/sl/10 CAPÕTULO 10.  CONSTRUCCI”N DE LOS FACTORES D
-E EXPANSI”N
- []
-
-[166]
-<Pics/17.png, id=1779, 1023.825pt x 512.91624pt>
+Package pdftex.def Info: Pics/18.png  used on input line 3483.
+(pdftex.def)             Requested size: 500.47668pt x 251.22159pt.
+LaTeX Info: Redefining \. on input line 3500.
+LaTeX Info: Redefining \% on input line 3500.
+[140]
+LaTeX Info: Redefining \. on input line 3517.
+LaTeX Info: Redefining \% on input line 3517.
+[141 <./Pics/18.png>]
+LaTeX Info: Redefining \. on input line 3559.
+LaTeX Info: Redefining \% on input line 3559.
+[142]
+<Pics/17.png, id=1659, 1023.825pt x 512.91624pt>
 File: Pics/17.png Graphic file (type png)
 <use Pics/17.png>
-Package pdftex.def Info: Pics/17.png  used on input line 3561.
-(pdftex.def)             Requested size: 345.00267pt x 172.83957pt.
-LaTeX Info: Redefining \. on input line 3563.
-LaTeX Info: Redefining \% on input line 3563.
-[167]
-LaTeX Info: Redefining \. on input line 3578.
-LaTeX Info: Redefining \% on input line 3578.
-
-Overfull \hbox (0.4164pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 168 \T1/lmr/m/sl/10 CAPÕTULO 10.  CONSTRUCCI”N DE LOS FACTORES D
-E EXPANSI”N
- []
-
-[168 <./Pics/17.png>]
-LaTeX Info: Redefining \. on input line 3587.
-LaTeX Info: Redefining \% on input line 3587.
-[169]
-LaTeX Info: Redefining \. on input line 3614.
-LaTeX Info: Redefining \% on input line 3614.
-
-Overfull \hbox (0.4164pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 170 \T1/lmr/m/sl/10 CAPÕTULO 10.  CONSTRUCCI”N DE LOS FACTORES D
-E EXPANSI”N
- []
-
-[170]
-LaTeX Info: Redefining \. on input line 3640.
-LaTeX Info: Redefining \% on input line 3640.
-[171]
-LaTeX Info: Redefining \. on input line 3654.
-LaTeX Info: Redefining \% on input line 3654.
-
-Overfull \hbox (0.4164pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 172 \T1/lmr/m/sl/10 CAPÕTULO 10.  CONSTRUCCI”N DE LOS FACTORES D
-E EXPANSI”N
- []
-
-[172]
+Package pdftex.def Info: Pics/17.png  used on input line 3562.
+(pdftex.def)             Requested size: 500.47572pt x 250.72852pt.
+LaTeX Info: Redefining \. on input line 3580.
+LaTeX Info: Redefining \% on input line 3580.
+[143 <./Pics/17.png>]
+LaTeX Info: Redefining \. on input line 3596.
+LaTeX Info: Redefining \% on input line 3596.
+[144]
+LaTeX Info: Redefining \. on input line 3635.
+LaTeX Info: Redefining \% on input line 3635.
+[145]
+LaTeX Info: Redefining \. on input line 3652.
+LaTeX Info: Redefining \% on input line 3652.
+[146]
 LaTeX Info: Redefining \. on input line 3675.
 LaTeX Info: Redefining \% on input line 3675.
-[173]
-LaTeX Info: Redefining \. on input line 3702.
-LaTeX Info: Redefining \% on input line 3702.
-
-Overfull \hbox (0.4164pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 174 \T1/lmr/m/sl/10 CAPÕTULO 10.  CONSTRUCCI”N DE LOS FACTORES D
-E EXPANSI”N
- []
-
-[174]
-LaTeX Info: Redefining \. on input line 3729.
-LaTeX Info: Redefining \% on input line 3729.
-[175]
-LaTeX Info: Redefining \. on input line 3771.
-LaTeX Info: Redefining \% on input line 3771.
-
-Overfull \hbox (0.4164pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 176 \T1/lmr/m/sl/10 CAPÕTULO 10.  CONSTRUCCI”N DE LOS FACTORES D
-E EXPANSI”N
- []
-
-[176]
-LaTeX Info: Redefining \. on input line 3816.
-LaTeX Info: Redefining \% on input line 3816.
-[177]
-LaTeX Info: Redefining \. on input line 3851.
-LaTeX Info: Redefining \% on input line 3851.
-
-Overfull \hbox (0.4164pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 178 \T1/lmr/m/sl/10 CAPÕTULO 10.  CONSTRUCCI”N DE LOS FACTORES D
-E EXPANSI”N
- []
-
-[178]
-LaTeX Info: Redefining \. on input line 3895.
-LaTeX Info: Redefining \% on input line 3895.
-[179]
-Overfull \hbox (11.12169pt too wide) detected at line 3904
-\OML/lmm/m/it/10 E [] \OT1/lmr/m/n/10 = \OML/lmm/m/it/10 EE [] \OT1/lmr/m/n/10 
-= \OML/lmm/m/it/10 E [] \OT1/lmr/m/n/10 = \OML/lmm/m/it/10 E [] \OT1/lmr/m/n/10
- = \OML/lmm/m/it/10 t[]
- []
-
-LaTeX Info: Redefining \. on input line 3939.
-LaTeX Info: Redefining \% on input line 3939.
-
-Overfull \hbox (0.4164pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 180 \T1/lmr/m/sl/10 CAPÕTULO 10.  CONSTRUCCI”N DE LOS FACTORES D
-E EXPANSI”N
- []
-
-[180]
-LaTeX Info: Redefining \. on input line 3963.
-LaTeX Info: Redefining \% on input line 3963.
-[181]
-LaTeX Info: Redefining \. on input line 3990.
-LaTeX Info: Redefining \% on input line 3990.
-
-Overfull \hbox (0.4164pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 182 \T1/lmr/m/sl/10 CAPÕTULO 10.  CONSTRUCCI”N DE LOS FACTORES D
-E EXPANSI”N
- []
-
-[182]
-Cap\'{\i }tulo 11.
-
-Underfull \vbox (badness 2073) has occurred while \output is active []
-
-[183
+[147]
+LaTeX Info: Redefining \. on input line 3705.
+LaTeX Info: Redefining \% on input line 3705.
+[148]
+LaTeX Info: Redefining \. on input line 3741.
+LaTeX Info: Redefining \% on input line 3741.
+[149]
+LaTeX Info: Redefining \. on input line 3795.
+LaTeX Info: Redefining \% on input line 3795.
+[150]
+LaTeX Info: Redefining \. on input line 3843.
+LaTeX Info: Redefining \% on input line 3843.
+[151]
+LaTeX Info: Redefining \. on input line 3890.
+LaTeX Info: Redefining \% on input line 3890.
+[152]
+LaTeX Info: Redefining \. on input line 3940.
+LaTeX Info: Redefining \% on input line 3940.
+[153]
+LaTeX Info: Redefining \. on input line 3978.
+LaTeX Info: Redefining \% on input line 3978.
+[154]
+LaTeX Info: Redefining \. on input line 3991.
+LaTeX Info: Redefining \% on input line 3991.
+[155]
+LaTeX Info: Redefining \. on input line 3991.
+LaTeX Info: Redefining \% on input line 3991.
+[156
 
 ]
-LaTeX Info: Redefining \. on input line 4035.
-LaTeX Info: Redefining \% on input line 4035.
-[184]
-LaTeX Info: Redefining \. on input line 4064.
-LaTeX Info: Redefining \% on input line 4064.
-[185]
-LaTeX Info: Redefining \. on input line 4088.
-LaTeX Info: Redefining \% on input line 4088.
-[186]
-LaTeX Info: Redefining \. on input line 4141.
-LaTeX Info: Redefining \% on input line 4141.
-[187]
-Underfull \vbox (badness 2020) has occurred while \output is active []
+Cap\'{\i }tulo 11.
+[157]
+LaTeX Info: Redefining \. on input line 4051.
+LaTeX Info: Redefining \% on input line 4051.
+[158]
+LaTeX Info: Redefining \. on input line 4077.
+LaTeX Info: Redefining \% on input line 4077.
+[159]
+LaTeX Info: Redefining \. on input line 4130.
+LaTeX Info: Redefining \% on input line 4130.
+[160]
+Underfull \vbox (badness 1308) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 4173.
-LaTeX Info: Redefining \% on input line 4173.
-[188]
-LaTeX Info: Redefining \. on input line 4194.
-LaTeX Info: Redefining \% on input line 4194.
-[189]
-LaTeX Info: Redefining \. on input line 4221.
-LaTeX Info: Redefining \% on input line 4221.
-[190]
-LaTeX Info: Redefining \. on input line 4259.
-LaTeX Info: Redefining \% on input line 4259.
-[191]
-LaTeX Info: Redefining \. on input line 4289.
-LaTeX Info: Redefining \% on input line 4289.
-[192]
-LaTeX Info: Redefining \. on input line 4313.
-LaTeX Info: Redefining \% on input line 4313.
-[193]
-LaTeX Info: Redefining \. on input line 4332.
-LaTeX Info: Redefining \% on input line 4332.
-[194]
-LaTeX Info: Redefining \. on input line 4355.
-LaTeX Info: Redefining \% on input line 4355.
-[195]
-<Pics/20.png, id=2076, 806.01125pt x 368.37625pt>
+LaTeX Info: Redefining \. on input line 4174.
+LaTeX Info: Redefining \% on input line 4174.
+[161]
+LaTeX Info: Redefining \. on input line 4203.
+LaTeX Info: Redefining \% on input line 4203.
+[162]
+LaTeX Info: Redefining \. on input line 4236.
+LaTeX Info: Redefining \% on input line 4236.
+[163]
+LaTeX Info: Redefining \. on input line 4275.
+LaTeX Info: Redefining \% on input line 4275.
+[164]
+LaTeX Info: Redefining \. on input line 4312.
+LaTeX Info: Redefining \% on input line 4312.
+[165]
+LaTeX Info: Redefining \. on input line 4333.
+LaTeX Info: Redefining \% on input line 4333.
+[166]
+LaTeX Info: Redefining \. on input line 4359.
+LaTeX Info: Redefining \% on input line 4359.
+[167]
+<Pics/20.png, id=1930, 806.01125pt x 368.37625pt>
 File: Pics/20.png Graphic file (type png)
 <use Pics/20.png>
-Package pdftex.def Info: Pics/20.png  used on input line 4384.
-(pdftex.def)             Requested size: 345.00385pt x 157.6792pt.
-LaTeX Info: Redefining \. on input line 4394.
-LaTeX Info: Redefining \% on input line 4394.
-[196]
-<Pics/9.jpg, id=2088, 405.76593pt x 413.29407pt>
+Package pdftex.def Info: Pics/20.png  used on input line 4385.
+(pdftex.def)             Requested size: 500.48433pt x 228.7394pt.
+LaTeX Info: Redefining \. on input line 4407.
+LaTeX Info: Redefining \% on input line 4407.
+[168]
+<Pics/9.jpg, id=1943, 405.76593pt x 413.29407pt>
 File: Pics/9.jpg Graphic file (type jpg)
 <use Pics/9.jpg>
-Package pdftex.def Info: Pics/9.jpg  used on input line 4411.
-(pdftex.def)             Requested size: 345.00792pt x 351.40881pt.
-<Pics/21.png, id=2089, 628.3475pt x 369.38pt>
+Package pdftex.def Info: Pics/9.jpg  used on input line 4412.
+(pdftex.def)             Requested size: 405.77112pt x 413.29935pt.
+<Pics/21.png, id=1944, 628.3475pt x 369.38pt>
 File: Pics/21.png Graphic file (type png)
 <use Pics/21.png>
-Package pdftex.def Info: Pics/21.png  used on input line 4427.
-(pdftex.def)             Requested size: 344.99774pt x 202.81017pt.
-LaTeX Info: Redefining \. on input line 4434.
-LaTeX Info: Redefining \% on input line 4434.
-[197 <./Pics/20.png>]
-LaTeX Info: Redefining \. on input line 4434.
-LaTeX Info: Redefining \% on input line 4434.
-[198 <./Pics/9.jpg>]
-LaTeX Info: Redefining \. on input line 4452.
-LaTeX Info: Redefining \% on input line 4452.
-[199 <./Pics/21.png>]
-LaTeX Info: Redefining \. on input line 4475.
-LaTeX Info: Redefining \% on input line 4475.
-[200]
-<Pics/23.png, id=2125, 453.695pt x 262.9825pt>
+Package pdftex.def Info: Pics/21.png  used on input line 4428.
+(pdftex.def)             Requested size: 500.48308pt x 294.21368pt.
+LaTeX Info: Redefining \. on input line 4448.
+LaTeX Info: Redefining \% on input line 4448.
+[169 <./Pics/20.png>]
+LaTeX Info: Redefining \. on input line 4448.
+LaTeX Info: Redefining \% on input line 4448.
+[170 <./Pics/9.jpg>]
+LaTeX Info: Redefining \. on input line 4460.
+LaTeX Info: Redefining \% on input line 4460.
+[171 <./Pics/21.png>]
+<Pics/23.png, id=1973, 453.695pt x 262.9825pt>
 File: Pics/23.png Graphic file (type png)
 <use Pics/23.png>
-Package pdftex.def Info: Pics/23.png  used on input line 4492.
-(pdftex.def)             Requested size: 344.9987pt x 199.97711pt.
-LaTeX Info: Redefining \. on input line 4502.
-LaTeX Info: Redefining \% on input line 4502.
-[201 <./Pics/23.png>]
-LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
-4520.
-(C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmtt.fd
+Package pdftex.def Info: Pics/23.png  used on input line 4493.
+(pdftex.def)             Requested size: 453.6939pt x 262.98184pt.
+LaTeX Info: Redefining \. on input line 4503.
+LaTeX Info: Redefining \% on input line 4503.
+[172]
+LaTeX Font Info:    Try loading font information for TS1+lmtt on input line 452
+1.
+
+("C:\Users\agutierrez1\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\ts1lmtt.f
+d"
 File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Info: Redefining \. on input line 4557.
-LaTeX Info: Redefining \% on input line 4557.
-[202]
-LaTeX Info: Redefining \. on input line 4629.
-LaTeX Info: Redefining \% on input line 4629.
-[203]
-LaTeX Info: Redefining \. on input line 4683.
-LaTeX Info: Redefining \% on input line 4683.
-[204]
-LaTeX Info: Redefining \. on input line 4712.
-LaTeX Info: Redefining \% on input line 4712.
-[205]
-LaTeX Info: Redefining \. on input line 4712.
-LaTeX Info: Redefining \% on input line 4712.
-[206
+LaTeX Info: Redefining \. on input line 4527.
+LaTeX Info: Redefining \% on input line 4527.
+[173 <./Pics/23.png>]
+LaTeX Info: Redefining \. on input line 4591.
+LaTeX Info: Redefining \% on input line 4591.
+[174]
+LaTeX Info: Redefining \. on input line 4671.
+LaTeX Info: Redefining \% on input line 4671.
+[175]
+LaTeX Info: Redefining \. on input line 4713.
+LaTeX Info: Redefining \% on input line 4713.
+[176]
+Cap\'{\i }tulo 12.
+[177
 
 ]
-Cap\'{\i }tulo 12.
-[207]
-<12Ausencia_files/figure-latex/unnamed-chunk-1-1.pdf, id=2180, 469.755pt x 216.
+<12Ausencia_files/figure-latex/unnamed-chunk-1-1.pdf, id=2029, 469.755pt x 216.
 81pt>
 File: 12Ausencia_files/figure-latex/unnamed-chunk-1-1.pdf Graphic file (type pd
 f)
 <use 12Ausencia_files/figure-latex/unnamed-chunk-1-1.pdf>
 Package pdftex.def Info: 12Ausencia_files/figure-latex/unnamed-chunk-1-1.pdf  u
-sed on input line 4744.
-(pdftex.def)             Requested size: 344.997pt x 159.22937pt.
-LaTeX Info: Redefining \. on input line 4753.
-LaTeX Info: Redefining \% on input line 4753.
-[208]
-<12Ausencia_files/figure-latex/unnamed-chunk-2-1.pdf, id=2195, 469.755pt x 216.
+sed on input line 4745.
+(pdftex.def)             Requested size: 469.75386pt x 216.80946pt.
+LaTeX Info: Redefining \. on input line 4754.
+LaTeX Info: Redefining \% on input line 4754.
+[178 <./12Ausencia_files/figure-latex/unnamed-chunk-1-1.pdf>]
+<12Ausencia_files/figure-latex/unnamed-chunk-2-1.pdf, id=2046, 469.755pt x 216.
 81pt>
 File: 12Ausencia_files/figure-latex/unnamed-chunk-2-1.pdf Graphic file (type pd
 f)
 <use 12Ausencia_files/figure-latex/unnamed-chunk-2-1.pdf>
 Package pdftex.def Info: 12Ausencia_files/figure-latex/unnamed-chunk-2-1.pdf  u
-sed on input line 4756.
-(pdftex.def)             Requested size: 344.997pt x 159.22937pt.
-
-Underfull \vbox (badness 6204) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 4765.
-LaTeX Info: Redefining \% on input line 4765.
-[209 <./12Ausencia_files/figure-latex/unnamed-chunk-1-1.pdf> <./12Ausencia_file
-s/figure-latex/unnamed-chunk-2-1.pdf>]
-<12Ausencia_files/figure-latex/unnamed-chunk-3-1.pdf, id=2212, 469.755pt x 216.
+sed on input line 4757.
+(pdftex.def)             Requested size: 469.75386pt x 216.80946pt.
+<12Ausencia_files/figure-latex/unnamed-chunk-3-1.pdf, id=2047, 469.755pt x 216.
 81pt>
 File: 12Ausencia_files/figure-latex/unnamed-chunk-3-1.pdf Graphic file (type pd
 f)
 <use 12Ausencia_files/figure-latex/unnamed-chunk-3-1.pdf>
 Package pdftex.def Info: 12Ausencia_files/figure-latex/unnamed-chunk-3-1.pdf  u
-sed on input line 4768.
-(pdftex.def)             Requested size: 344.997pt x 159.22937pt.
-LaTeX Info: Redefining \. on input line 4778.
-LaTeX Info: Redefining \% on input line 4778.
-[210 <./12Ausencia_files/figure-latex/unnamed-chunk-3-1.pdf>]
-<Pics/j1.png, id=2230, 923.45pt x 693.59125pt>
+sed on input line 4769.
+(pdftex.def)             Requested size: 469.75386pt x 216.80946pt.
+LaTeX Info: Redefining \. on input line 4779.
+LaTeX Info: Redefining \% on input line 4779.
+[179 <./12Ausencia_files/figure-latex/unnamed-chunk-2-1.pdf>]
+Underfull \vbox (badness 1270) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 4784.
+LaTeX Info: Redefining \% on input line 4784.
+[180 <./12Ausencia_files/figure-latex/unnamed-chunk-3-1.pdf>]
+<Pics/j1.png, id=2076, 923.45pt x 693.59125pt>
 File: Pics/j1.png Graphic file (type png)
 <use Pics/j1.png>
-Package pdftex.def Info: Pics/j1.png  used on input line 4787.
+Package pdftex.def Info: Pics/j1.png  used on input line 4788.
 (pdftex.def)             Requested size: 225.84564pt x 169.62971pt.
-LaTeX Info: Redefining \. on input line 4802.
-LaTeX Info: Redefining \% on input line 4802.
-[211]
 LaTeX Info: Redefining \. on input line 4810.
 LaTeX Info: Redefining \% on input line 4810.
-[212 <./Pics/j1.png>]
-LaTeX Info: Redefining \. on input line 4852.
-LaTeX Info: Redefining \% on input line 4852.
-[213]
-<Pics/j3.png, id=2256, 924.45375pt x 694.595pt>
+[181 <./Pics/j1.png>]
+LaTeX Info: Redefining \. on input line 4853.
+LaTeX Info: Redefining \% on input line 4853.
+[182]
+<Pics/j3.png, id=2098, 924.45375pt x 694.595pt>
 File: Pics/j3.png Graphic file (type png)
 <use Pics/j3.png>
-Package pdftex.def Info: Pics/j3.png  used on input line 4861.
+Package pdftex.def Info: Pics/j3.png  used on input line 4862.
 (pdftex.def)             Requested size: 225.83722pt x 169.68442pt.
-LaTeX Info: Redefining \. on input line 4877.
-LaTeX Info: Redefining \% on input line 4877.
-[214 <./Pics/j3.png>]
-<Pics/j4.png, id=2264, 922.44624pt x 693.59125pt>
+LaTeX Info: Redefining \. on input line 4878.
+LaTeX Info: Redefining \% on input line 4878.
+[183 <./Pics/j3.png>]
+<Pics/j4.png, id=2106, 922.44624pt x 693.59125pt>
 File: Pics/j4.png Graphic file (type png)
 <use Pics/j4.png>
-Package pdftex.def Info: Pics/j4.png  used on input line 4880.
+Package pdftex.def Info: Pics/j4.png  used on input line 4881.
 (pdftex.def)             Requested size: 225.83943pt x 169.80963pt.
-LaTeX Info: Redefining \. on input line 4890.
-LaTeX Info: Redefining \% on input line 4890.
-[215 <./Pics/j4.png>]
-<Pics/j2.png, id=2272, 924.45375pt x 692.5875pt>
+<Pics/j2.png, id=2107, 924.45375pt x 692.5875pt>
 File: Pics/j2.png Graphic file (type png)
 <use Pics/j2.png>
-Package pdftex.def Info: Pics/j2.png  used on input line 4894.
+Package pdftex.def Info: Pics/j2.png  used on input line 4895.
 (pdftex.def)             Requested size: 225.83722pt x 169.194pt.
-LaTeX Info: Redefining \. on input line 4915.
-LaTeX Info: Redefining \% on input line 4915.
-[216 <./Pics/j2.png>]
-<Pics/j5.png, id=2280, 924.45375pt x 692.5875pt>
+LaTeX Info: Redefining \. on input line 4905.
+LaTeX Info: Redefining \% on input line 4905.
+[184 <./Pics/j4.png>]
+<Pics/j5.png, id=2117, 924.45375pt x 692.5875pt>
 File: Pics/j5.png Graphic file (type png)
 <use Pics/j5.png>
-Package pdftex.def Info: Pics/j5.png  used on input line 4920.
+Package pdftex.def Info: Pics/j5.png  used on input line 4921.
 (pdftex.def)             Requested size: 225.83722pt x 169.194pt.
-<Pics/nr5.png, id=2281, 924.45375pt x 692.5875pt>
+<Pics/nr5.png, id=2118, 924.45375pt x 692.5875pt>
 File: Pics/nr5.png Graphic file (type png)
 <use Pics/nr5.png>
-Package pdftex.def Info: Pics/nr5.png  used on input line 4926.
-(pdftex.def)             Requested size: 345.00479pt x 258.47264pt.
-LaTeX Info: Redefining \. on input line 4942.
-LaTeX Info: Redefining \% on input line 4942.
-[217 <./Pics/j5.png>]
-LaTeX Info: Redefining \. on input line 4942.
-LaTeX Info: Redefining \% on input line 4942.
-[218 <./Pics/nr5.png>]
-LaTeX Info: Redefining \. on input line 4974.
-LaTeX Info: Redefining \% on input line 4974.
-[219]
-LaTeX Info: Redefining \. on input line 5014.
-LaTeX Info: Redefining \% on input line 5014.
-[220]
-Underfull \hbox (badness 1147) in paragraph at lines 5037--5040
-[]\T1/lmr/m/n/10 (+20) Supongamos que se co-no-cen las pro-ba-bi-li-da-des de r
-es-pues-ta in-di-vi-dual
+Package pdftex.def Info: Pics/nr5.png  used on input line 4927.
+(pdftex.def)             Requested size: 500.48123pt x 374.95337pt.
+LaTeX Info: Redefining \. on input line 4943.
+LaTeX Info: Redefining \% on input line 4943.
+[185 <./Pics/j2.png>]
+LaTeX Info: Redefining \. on input line 4943.
+LaTeX Info: Redefining \% on input line 4943.
+[186 <./Pics/j5.png> <./Pics/nr5.png>]
+LaTeX Info: Redefining \. on input line 4975.
+LaTeX Info: Redefining \% on input line 4975.
+[187]
+LaTeX Info: Redefining \. on input line 5037.
+LaTeX Info: Redefining \% on input line 5037.
+[188]
+LaTeX Info: Redefining \. on input line 5073.
+LaTeX Info: Redefining \% on input line 5073.
+[189]
+LaTeX Info: Redefining \. on input line 5109.
+LaTeX Info: Redefining \% on input line 5109.
+[190]
+LaTeX Info: Redefining \. on input line 5118.
+LaTeX Info: Redefining \% on input line 5118.
+[191]
+LaTeX Info: Redefining \. on input line 5118.
+LaTeX Info: Redefining \% on input line 5118.
+[192
+
+]
+Cap\'{\i }tulo 13.
+[193]
+LaTeX Info: Redefining \. on input line 5169.
+LaTeX Info: Redefining \% on input line 5169.
+
+Overfull \hbox (68.68294pt too wide) has occurred while \output is active
+\T1/lmr/m/n/12 194 \T1/lmr/m/sl/12 CAPÕTULO 13.  CORRECCI”N DE SESGOS DEBIDOS A
+ LA AUSENCIA DE RESPUESTA DE UNIDAD
  []
 
-LaTeX Info: Redefining \. on input line 5055.
-LaTeX Info: Redefining \% on input line 5055.
-[221]
-LaTeX Info: Redefining \. on input line 5087.
-LaTeX Info: Redefining \% on input line 5087.
-[222]
-LaTeX Info: Redefining \. on input line 5111.
-LaTeX Info: Redefining \% on input line 5111.
-[223]
-LaTeX Info: Redefining \. on input line 5117.
-LaTeX Info: Redefining \% on input line 5117.
-[224]
-Cap\'{\i }tulo 13.
+[194]
+LaTeX Info: Redefining \. on input line 5207.
+LaTeX Info: Redefining \% on input line 5207.
+[195]
+LaTeX Info: Redefining \. on input line 5231.
+LaTeX Info: Redefining \% on input line 5231.
+
+Overfull \hbox (68.68294pt too wide) has occurred while \output is active
+\T1/lmr/m/n/12 196 \T1/lmr/m/sl/12 CAPÕTULO 13.  CORRECCI”N DE SESGOS DEBIDOS A
+ LA AUSENCIA DE RESPUESTA DE UNIDAD
+ []
+
+[196]
+LaTeX Info: Redefining \. on input line 5268.
+LaTeX Info: Redefining \% on input line 5268.
+[197]
+<Pics/c9.png, id=2236, 1445.4pt x 859.21pt>
+File: Pics/c9.png Graphic file (type png)
+<use Pics/c9.png>
+Package pdftex.def Info: Pics/c9.png  used on input line 5271.
+(pdftex.def)             Requested size: 500.47206pt x 297.50284pt.
+<Pics/c10.png, id=2237, 1445.4pt x 858.20625pt>
+File: Pics/c10.png Graphic file (type png)
+<use Pics/c10.png>
+Package pdftex.def Info: Pics/c10.png  used on input line 5279.
+(pdftex.def)             Requested size: 500.47206pt x 297.15527pt.
+LaTeX Info: Redefining \. on input line 5293.
+LaTeX Info: Redefining \% on input line 5293.
+
+Overfull \hbox (68.68294pt too wide) has occurred while \output is active
+\T1/lmr/m/n/12 198 \T1/lmr/m/sl/12 CAPÕTULO 13.  CORRECCI”N DE SESGOS DEBIDOS A
+ LA AUSENCIA DE RESPUESTA DE UNIDAD
+ []
+
+[198 <./Pics/c9.png>]
+<Pics/c12.png, id=2243, 1445.4pt x 858.20625pt>
+File: Pics/c12.png Graphic file (type png)
+<use Pics/c12.png>
+Package pdftex.def Info: Pics/c12.png  used on input line 5299.
+(pdftex.def)             Requested size: 500.47206pt x 297.15527pt.
+LaTeX Info: Redefining \. on input line 5308.
+LaTeX Info: Redefining \% on input line 5308.
+[199 <./Pics/c10.png>]
+LaTeX Info: Redefining \. on input line 5322.
+LaTeX Info: Redefining \% on input line 5322.
+
+Overfull \hbox (68.68294pt too wide) has occurred while \output is active
+\T1/lmr/m/n/12 200 \T1/lmr/m/sl/12 CAPÕTULO 13.  CORRECCI”N DE SESGOS DEBIDOS A
+ LA AUSENCIA DE RESPUESTA DE UNIDAD
+ []
+
+[200 <./Pics/c12.png>]
+<Pics/calnr1.png, id=2258, 1571.8725pt x 1030.85126pt>
+File: Pics/calnr1.png Graphic file (type png)
+<use Pics/calnr1.png>
+Package pdftex.def Info: Pics/calnr1.png  used on input line 5325.
+(pdftex.def)             Requested size: 500.49107pt x 328.22754pt.
+<Pics/calnr2.png, id=2259, 1573.88pt x 998.73125pt>
+File: Pics/calnr2.png Graphic file (type png)
+<use Pics/calnr2.png>
+Package pdftex.def Info: Pics/calnr2.png  used on input line 5333.
+(pdftex.def)             Requested size: 500.48186pt x 317.58893pt.
+LaTeX Info: Redefining \. on input line 5344.
+LaTeX Info: Redefining \% on input line 5344.
+[201 <./Pics/calnr1.png>]
+LaTeX Info: Redefining \. on input line 5344.
+LaTeX Info: Redefining \% on input line 5344.
+
+Overfull \hbox (68.68294pt too wide) has occurred while \output is active
+\T1/lmr/m/n/12 202 \T1/lmr/m/sl/12 CAPÕTULO 13.  CORRECCI”N DE SESGOS DEBIDOS A
+ LA AUSENCIA DE RESPUESTA DE UNIDAD
+ []
+
+[202 <./Pics/calnr2.png>]
+LaTeX Info: Redefining \. on input line 5370.
+LaTeX Info: Redefining \% on input line 5370.
+[203]
+LaTeX Info: Redefining \. on input line 5370.
+LaTeX Info: Redefining \% on input line 5370.
+
+Overfull \hbox (68.68294pt too wide) has occurred while \output is active
+\T1/lmr/m/n/12 204 \T1/lmr/m/sl/12 CAPÕTULO 13.  CORRECCI”N DE SESGOS DEBIDOS A
+ LA AUSENCIA DE RESPUESTA DE UNIDAD
+ []
+
+[204
+
+]
+Cap\'{\i }tulo 14.
+[205]
+LaTeX Info: Redefining \. on input line 5409.
+LaTeX Info: Redefining \% on input line 5409.
+[206]
+LaTeX Info: Redefining \. on input line 5455.
+LaTeX Info: Redefining \% on input line 5455.
+[207]
+LaTeX Info: Redefining \. on input line 5491.
+LaTeX Info: Redefining \% on input line 5491.
+[208]
+LaTeX Info: Redefining \. on input line 5518.
+LaTeX Info: Redefining \% on input line 5518.
+[209]
+LaTeX Info: Redefining \. on input line 5567.
+LaTeX Info: Redefining \% on input line 5567.
+[210]
+<Pics/im1.png, id=2334, 1194.4625pt x 897.3525pt>
+File: Pics/im1.png Graphic file (type png)
+<use Pics/im1.png>
+Package pdftex.def Info: Pics/im1.png  used on input line 5608.
+(pdftex.def)             Requested size: 500.48615pt x 375.99547pt.
+LaTeX Info: Redefining \. on input line 5630.
+LaTeX Info: Redefining \% on input line 5630.
+[211]
+<Pics/im2.png, id=2344, 1192.455pt x 898.35625pt>
+File: Pics/im2.png Graphic file (type png)
+<use Pics/im2.png>
+Package pdftex.def Info: Pics/im2.png  used on input line 5636.
+(pdftex.def)             Requested size: 500.48198pt x 377.0466pt.
+<Pics/im3.png, id=2345, 1194.4625pt x 897.3525pt>
+File: Pics/im3.png Graphic file (type png)
+<use Pics/im3.png>
+Package pdftex.def Info: Pics/im3.png  used on input line 5664.
+(pdftex.def)             Requested size: 500.48615pt x 375.99547pt.
+LaTeX Info: Redefining \. on input line 5681.
+LaTeX Info: Redefining \% on input line 5681.
+[212]
+LaTeX Info: Redefining \. on input line 5681.
+LaTeX Info: Redefining \% on input line 5681.
+[213 <./Pics/im1.png>]
+LaTeX Info: Redefining \. on input line 5681.
+LaTeX Info: Redefining \% on input line 5681.
+[214 <./Pics/im2.png>]
+LaTeX Info: Redefining \. on input line 5681.
+LaTeX Info: Redefining \% on input line 5681.
+[215 <./Pics/im3.png>]
+<Pics/im4.png, id=2366, 1187.43625pt x 894.34125pt>
+File: Pics/im4.png Graphic file (type png)
+<use Pics/im4.png>
+Package pdftex.def Info: Pics/im4.png  used on input line 5704.
+(pdftex.def)             Requested size: 500.47736pt x 376.94447pt.
+LaTeX Info: Redefining \. on input line 5737.
+LaTeX Info: Redefining \% on input line 5737.
+[216]
+LaTeX Info: Redefining \. on input line 5737.
+LaTeX Info: Redefining \% on input line 5737.
+[217 <./Pics/im4.png>]
+LaTeX Info: Redefining \. on input line 5757.
+LaTeX Info: Redefining \% on input line 5757.
+[218]
+LaTeX Info: Redefining \. on input line 5796.
+LaTeX Info: Redefining \% on input line 5796.
+[219]
+<Pics/10.png, id=2401, 1445.4pt x 857.2025pt>
+File: Pics/10.png Graphic file (type png)
+<use Pics/10.png>
+Package pdftex.def Info: Pics/10.png  used on input line 5823.
+(pdftex.def)             Requested size: 500.47206pt x 296.80772pt.
+LaTeX Info: Redefining \. on input line 5833.
+LaTeX Info: Redefining \% on input line 5833.
+[220]
+LaTeX Info: Redefining \. on input line 5849.
+LaTeX Info: Redefining \% on input line 5849.
+[221 <./Pics/10.png>]
+<Pics/11.png, id=2413, 1416.29124pt x 751.80875pt>
+File: Pics/11.png Graphic file (type png)
+<use Pics/11.png>
+Package pdftex.def Info: Pics/11.png  used on input line 5852.
+(pdftex.def)             Requested size: 500.48537pt x 265.67223pt.
+<Pics/12.png, id=2414, 1418.29875pt x 740.7675pt>
+File: Pics/12.png Graphic file (type png)
+<use Pics/12.png>
+Package pdftex.def Info: Pics/12.png  used on input line 5860.
+(pdftex.def)             Requested size: 500.4806pt x 261.3975pt.
+LaTeX Info: Redefining \. on input line 5870.
+LaTeX Info: Redefining \% on input line 5870.
+[222 <./Pics/11.png>]
+<Pics/13.png, id=2422, 1412.27625pt x 742.775pt>
+File: Pics/13.png Graphic file (type png)
+<use Pics/13.png>
+Package pdftex.def Info: Pics/13.png  used on input line 5876.
+(pdftex.def)             Requested size: 500.48883pt x 263.22795pt.
+LaTeX Info: Redefining \. on input line 5881.
+LaTeX Info: Redefining \% on input line 5881.
+[223 <./Pics/12.png>]
+LaTeX Info: Redefining \. on input line 5881.
+LaTeX Info: Redefining \% on input line 5881.
+[224 <./Pics/13.png>]
+Cap\'{\i }tulo 15.
 [225
 
 ]
-LaTeX Info: Redefining \. on input line 5161.
-LaTeX Info: Redefining \% on input line 5161.
 
-Overfull \hbox (139.50711pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 226 \T1/lmr/m/sl/10 CAPÕTULO 13.  CORRECCI”N DE SESGOS DEBIDOS A
- LA AUSENCIA DE RESPUESTA DE UNIDAD
- []
+LaTeX Warning: Command \textendash invalid in math mode on input line 5946.
 
+LaTeX Info: Redefining \. on input line 5958.
+LaTeX Info: Redefining \% on input line 5958.
 [226]
-LaTeX Info: Redefining \. on input line 5190.
-LaTeX Info: Redefining \% on input line 5190.
+LaTeX Info: Redefining \. on input line 6000.
+LaTeX Info: Redefining \% on input line 6000.
 [227]
-LaTeX Info: Redefining \. on input line 5218.
-LaTeX Info: Redefining \% on input line 5218.
 
-Overfull \hbox (139.50711pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 228 \T1/lmr/m/sl/10 CAPÕTULO 13.  CORRECCI”N DE SESGOS DEBIDOS A
- LA AUSENCIA DE RESPUESTA DE UNIDAD
- []
+LaTeX Warning: Command \textendash invalid in math mode on input line 6004.
 
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 6004.
+
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 6008.
+
+LaTeX Info: Redefining \. on input line 6043.
+LaTeX Info: Redefining \% on input line 6043.
 [228]
-LaTeX Info: Redefining \. on input line 5231.
-LaTeX Info: Redefining \% on input line 5231.
+LaTeX Info: Redefining \. on input line 6054.
+LaTeX Info: Redefining \% on input line 6054.
 [229]
-LaTeX Info: Redefining \. on input line 5267.
-LaTeX Info: Redefining \% on input line 5267.
-
-Overfull \hbox (139.50711pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 230 \T1/lmr/m/sl/10 CAPÕTULO 13.  CORRECCI”N DE SESGOS DEBIDOS A
- LA AUSENCIA DE RESPUESTA DE UNIDAD
- []
-
+LaTeX Info: Redefining \. on input line 6102.
+LaTeX Info: Redefining \% on input line 6102.
 [230]
-<Pics/c9.png, id=2401, 1445.4pt x 859.21pt>
-File: Pics/c9.png Graphic file (type png)
-<use Pics/c9.png>
-Package pdftex.def Info: Pics/c9.png  used on input line 5270.
-(pdftex.def)             Requested size: 344.9843pt x 205.074pt.
-<Pics/c10.png, id=2402, 1445.4pt x 858.20625pt>
-File: Pics/c10.png Graphic file (type png)
-<use Pics/c10.png>
-Package pdftex.def Info: Pics/c10.png  used on input line 5278.
-(pdftex.def)             Requested size: 344.9843pt x 204.83443pt.
-LaTeX Info: Redefining \. on input line 5292.
-LaTeX Info: Redefining \% on input line 5292.
-[231 <./Pics/c9.png>]
-<Pics/c12.png, id=2408, 1445.4pt x 858.20625pt>
-File: Pics/c12.png Graphic file (type png)
-<use Pics/c12.png>
-Package pdftex.def Info: Pics/c12.png  used on input line 5298.
-(pdftex.def)             Requested size: 344.9843pt x 204.83443pt.
-LaTeX Info: Redefining \. on input line 5306.
-LaTeX Info: Redefining \% on input line 5306.
+<Pics/ou2.png, id=2489, 1433.355pt x 854.19125pt>
+File: Pics/ou2.png Graphic file (type png)
+<use Pics/ou2.png>
+Package pdftex.def Info: Pics/ou2.png  used on input line 6108.
+(pdftex.def)             Requested size: 500.47885pt x 298.25455pt.
+<Pics/ou1.png, id=2490, 1426.32875pt x 851.18pt>
+File: Pics/ou1.png Graphic file (type png)
+<use Pics/ou1.png>
+Package pdftex.def Info: Pics/ou1.png  used on input line 6116.
+(pdftex.def)             Requested size: 500.48486pt x 298.67076pt.
+LaTeX Info: Redefining \. on input line 6141.
+LaTeX Info: Redefining \% on input line 6141.
+[231 <./Pics/ou2.png>]
+Overfull \vbox (327.63956pt too high) has occurred while \output is active []
 
-Overfull \hbox (139.50711pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 232 \T1/lmr/m/sl/10 CAPÕTULO 13.  CORRECCI”N DE SESGOS DEBIDOS A
- LA AUSENCIA DE RESPUESTA DE UNIDAD
- []
+LaTeX Info: Redefining \. on input line 6167.
+LaTeX Info: Redefining \% on input line 6167.
+[232 <./Pics/ou1.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[232 <./Pics/c10.png>]
-LaTeX Info: Redefining \. on input line 5319.
-LaTeX Info: Redefining \% on input line 5319.
+LaTeX Info: Redefining \. on input line 6206.
+LaTeX Info: Redefining \% on input line 6206.
+[233]
+LaTeX Info: Redefining \. on input line 6229.
+LaTeX Info: Redefining \% on input line 6229.
+[234] [235
 
-Overfull \hbox (60.96115pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10 III.  LA PANDEMIA POR COVID-19 Y LA AUSENCIA DE RESPUESTA POR U
-NIDAD \T1/lmr/m/n/10 233
- []
-
-[233 <./Pics/c12.png>]
-<Pics/calnr1.png, id=2422, 1571.8725pt x 1030.85126pt>
-File: Pics/calnr1.png Graphic file (type png)
-<use Pics/calnr1.png>
-Package pdftex.def Info: Pics/calnr1.png  used on input line 5324.
-(pdftex.def)             Requested size: 344.99754pt x 226.25317pt.
-<Pics/calnr2.png, id=2423, 1573.88pt x 998.73125pt>
-File: Pics/calnr2.png Graphic file (type png)
-<use Pics/calnr2.png>
-Package pdftex.def Info: Pics/calnr2.png  used on input line 5332.
-(pdftex.def)             Requested size: 344.98186pt x 218.91386pt.
-LaTeX Info: Redefining \. on input line 5337.
-LaTeX Info: Redefining \% on input line 5337.
-
-Overfull \hbox (139.50711pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 234 \T1/lmr/m/sl/10 CAPÕTULO 13.  CORRECCI”N DE SESGOS DEBIDOS A
- LA AUSENCIA DE RESPUESTA DE UNIDAD
- []
-
-[234 <./Pics/calnr1.png>]
-LaTeX Info: Redefining \. on input line 5347.
-LaTeX Info: Redefining \% on input line 5347.
-
-Overfull \hbox (60.96115pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10 III.  LA PANDEMIA POR COVID-19 Y LA AUSENCIA DE RESPUESTA POR U
-NIDAD \T1/lmr/m/n/10 235
- []
-
-[235 <./Pics/calnr2.png>]
-LaTeX Info: Redefining \. on input line 5369.
-LaTeX Info: Redefining \% on input line 5369.
-
-Overfull \hbox (139.50711pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 236 \T1/lmr/m/sl/10 CAPÕTULO 13.  CORRECCI”N DE SESGOS DEBIDOS A
- LA AUSENCIA DE RESPUESTA DE UNIDAD
- []
-
-[236]
-Cap\'{\i }tulo 14.
+] [236]
+Cap\'{\i }tulo 16.
 [237
 
 ]
-LaTeX Info: Redefining \. on input line 5399.
-LaTeX Info: Redefining \% on input line 5399.
+LaTeX Info: Redefining \. on input line 6352.
+LaTeX Info: Redefining \% on input line 6352.
 [238]
-LaTeX Info: Redefining \. on input line 5433.
-LaTeX Info: Redefining \% on input line 5433.
+LaTeX Info: Redefining \. on input line 6421.
+LaTeX Info: Redefining \% on input line 6421.
 [239]
-LaTeX Info: Redefining \. on input line 5472.
-LaTeX Info: Redefining \% on input line 5472.
+LaTeX Info: Redefining \. on input line 6481.
+LaTeX Info: Redefining \% on input line 6481.
 [240]
-LaTeX Info: Redefining \. on input line 5501.
-LaTeX Info: Redefining \% on input line 5501.
+LaTeX Info: Redefining \. on input line 6544.
+LaTeX Info: Redefining \% on input line 6544.
 [241]
-LaTeX Info: Redefining \. on input line 5524.
-LaTeX Info: Redefining \% on input line 5524.
+LaTeX Info: Redefining \. on input line 6610.
+LaTeX Info: Redefining \% on input line 6610.
 [242]
-LaTeX Info: Redefining \. on input line 5566.
-LaTeX Info: Redefining \% on input line 5566.
+LaTeX Info: Redefining \. on input line 6682.
+LaTeX Info: Redefining \% on input line 6682.
 [243]
-<Pics/im1.png, id=2499, 1194.4625pt x 897.3525pt>
-File: Pics/im1.png Graphic file (type png)
-<use Pics/im1.png>
-Package pdftex.def Info: Pics/im1.png  used on input line 5607.
-(pdftex.def)             Requested size: 345.00008pt x 259.18492pt.
-LaTeX Info: Redefining \. on input line 5629.
-LaTeX Info: Redefining \% on input line 5629.
+LaTeX Info: Redefining \. on input line 6731.
+LaTeX Info: Redefining \% on input line 6731.
 [244]
-LaTeX Info: Redefining \. on input line 5629.
-LaTeX Info: Redefining \% on input line 5629.
-[245 <./Pics/im1.png>]
-<Pics/im2.png, id=2512, 1192.455pt x 898.35625pt>
-File: Pics/im2.png Graphic file (type png)
-<use Pics/im2.png>
-Package pdftex.def Info: Pics/im2.png  used on input line 5635.
-(pdftex.def)             Requested size: 345.0025pt x 259.9135pt.
-<Pics/im3.png, id=2513, 1194.4625pt x 897.3525pt>
-File: Pics/im3.png Graphic file (type png)
-<use Pics/im3.png>
-Package pdftex.def Info: Pics/im3.png  used on input line 5663.
-(pdftex.def)             Requested size: 345.00008pt x 259.18492pt.
-LaTeX Info: Redefining \. on input line 5671.
-LaTeX Info: Redefining \% on input line 5671.
+LaTeX Info: Redefining \. on input line 6783.
+LaTeX Info: Redefining \% on input line 6783.
+[245]
+LaTeX Info: Redefining \. on input line 6855.
+LaTeX Info: Redefining \% on input line 6855.
 [246]
-LaTeX Info: Redefining \. on input line 5671.
-LaTeX Info: Redefining \% on input line 5671.
-[247 <./Pics/im2.png>]
-LaTeX Info: Redefining \. on input line 5671.
-LaTeX Info: Redefining \% on input line 5671.
-[248 <./Pics/im3.png>]
-<Pics/im4.png, id=2531, 1187.43625pt x 894.34125pt>
-File: Pics/im4.png Graphic file (type png)
-<use Pics/im4.png>
-Package pdftex.def Info: Pics/im4.png  used on input line 5703.
-(pdftex.def)             Requested size: 344.99997pt x 259.8436pt.
-LaTeX Info: Redefining \. on input line 5719.
-LaTeX Info: Redefining \% on input line 5719.
+LaTeX Info: Redefining \. on input line 6926.
+LaTeX Info: Redefining \% on input line 6926.
+[247]
+
+LaTeX Warning: Command \' invalid in math mode on input line 6988.
+
+LaTeX Info: Redefining \. on input line 6989.
+LaTeX Info: Redefining \% on input line 6989.
+[248]
+LaTeX Info: Redefining \. on input line 6996.
+LaTeX Info: Redefining \% on input line 6996.
 [249]
-LaTeX Info: Redefining \. on input line 5752.
-LaTeX Info: Redefining \% on input line 5752.
-[250]
-LaTeX Info: Redefining \. on input line 5752.
-LaTeX Info: Redefining \% on input line 5752.
-[251 <./Pics/im4.png>]
-LaTeX Info: Redefining \. on input line 5776.
-LaTeX Info: Redefining \% on input line 5776.
-[252]
-LaTeX Info: Redefining \. on input line 5801.
-LaTeX Info: Redefining \% on input line 5801.
-
-Overfull \hbox (32.21289pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10 III.  EJEMPLO: IMPUTACI”N EN UNA ENCUESTA DE INGRESOS Y GASTOS 
-\T1/lmr/m/n/10 253
- []
-
-[253]
-<Pics/10.png, id=2571, 1445.4pt x 857.2025pt>
-File: Pics/10.png Graphic file (type png)
-<use Pics/10.png>
-Package pdftex.def Info: Pics/10.png  used on input line 5822.
-(pdftex.def)             Requested size: 344.9843pt x 204.59485pt.
-LaTeX Info: Redefining \. on input line 5831.
-LaTeX Info: Redefining \% on input line 5831.
-[254]
-LaTeX Info: Redefining \. on input line 5842.
-LaTeX Info: Redefining \% on input line 5842.
-
-Overfull \hbox (32.21289pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10 III.  EJEMPLO: IMPUTACI”N EN UNA ENCUESTA DE INGRESOS Y GASTOS 
-\T1/lmr/m/n/10 255
- []
-
-[255 <./Pics/10.png>]
-<Pics/11.png, id=2583, 1416.29124pt x 751.80875pt>
-File: Pics/11.png Graphic file (type png)
-<use Pics/11.png>
-Package pdftex.def Info: Pics/11.png  used on input line 5851.
-(pdftex.def)             Requested size: 344.99539pt x 183.13362pt.
-<Pics/12.png, id=2584, 1418.29875pt x 740.7675pt>
-File: Pics/12.png Graphic file (type png)
-<use Pics/12.png>
-Package pdftex.def Info: Pics/12.png  used on input line 5859.
-(pdftex.def)             Requested size: 344.98665pt x 180.1841pt.
-LaTeX Info: Redefining \. on input line 5868.
-LaTeX Info: Redefining \% on input line 5868.
-[256 <./Pics/11.png>]
-<Pics/13.png, id=2591, 1412.27625pt x 742.775pt>
-File: Pics/13.png Graphic file (type png)
-<use Pics/13.png>
-Package pdftex.def Info: Pics/13.png  used on input line 5875.
-(pdftex.def)             Requested size: 344.9871pt x 181.4431pt.
-LaTeX Info: Redefining \. on input line 5877.
-LaTeX Info: Redefining \% on input line 5877.
-
-Overfull \hbox (32.21289pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10 III.  EJEMPLO: IMPUTACI”N EN UNA ENCUESTA DE INGRESOS Y GASTOS 
-\T1/lmr/m/n/10 257
- []
-
-[257 <./Pics/12.png>]
-LaTeX Info: Redefining \. on input line 5880.
-LaTeX Info: Redefining \% on input line 5880.
-[258 <./Pics/13.png>]
-Cap\'{\i }tulo 15.
-[259
-
-]
-LaTeX Info: Redefining \. on input line 5939.
-LaTeX Info: Redefining \% on input line 5939.
-[260]
-
-LaTeX Warning: Command \textendash invalid in math mode on input line 5945.
-
-LaTeX Info: Redefining \. on input line 5975.
-LaTeX Info: Redefining \% on input line 5975.
-[261]
-
-LaTeX Warning: Command \textendash invalid in math mode on input line 6003.
-
-
-LaTeX Warning: Command \textendash invalid in math mode on input line 6003.
-
-
-Overfull \hbox (5.13235pt too wide) detected at line 6004
-\OML/lmm/m/it/10 d[] \OT1/lmr/m/n/10 = \OML/lmm/m/it/10 max\OT1/lmr/m/n/10 (\OM
-L/lmm/m/it/10 E[]\OT1/lmr/m/n/10 \OML/lmm/m/it/10 E[] ;  \OMS/lmsy/m/n/10 j\OT
-1/lmr/m/n/10 0\OML/lmm/m/it/10 :\OT1/lmr/m/n/10 5 \OMS/lmsy/m/n/10  \OML/lmm/m
-/it/10 E[]\OMS/lmsy/m/n/10 j\OT1/lmr/m/n/10 )    \OML/lmm/m/it/10 y    d[] \OT1
-/lmr/m/n/10 = \OML/lmm/m/it/10 max\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 E[]\OT1/lmr
-/m/n/10 \OML/lmm/m/it/10 E[] ;  \OMS/lmsy/m/n/10 j\OT1/lmr/m/n/10 0\OML/lmm/m/
-it/10 :\OT1/lmr/m/n/10 5 \OMS/lmsy/m/n/10  \OML/lmm/m/it/10 E[]\OMS/lmsy/m/n/1
-0 j\OT1/lmr/m/n/10 )
- []
-
-
-LaTeX Warning: Command \textendash invalid in math mode on input line 6007.
-
-LaTeX Info: Redefining \. on input line 6020.
-LaTeX Info: Redefining \% on input line 6020.
-[262]
-LaTeX Info: Redefining \. on input line 6047.
-LaTeX Info: Redefining \% on input line 6047.
-[263]
-LaTeX Info: Redefining \. on input line 6053.
-LaTeX Info: Redefining \% on input line 6053.
-[264]
-LaTeX Info: Redefining \. on input line 6101.
-LaTeX Info: Redefining \% on input line 6101.
-[265]
-<Pics/ou2.png, id=2663, 1433.355pt x 854.19125pt>
-File: Pics/ou2.png Graphic file (type png)
-<use Pics/ou2.png>
-Package pdftex.def Info: Pics/ou2.png  used on input line 6107.
-(pdftex.def)             Requested size: 344.99643pt x 205.59662pt.
-<Pics/ou1.png, id=2664, 1426.32875pt x 851.18pt>
-File: Pics/ou1.png Graphic file (type png)
-<use Pics/ou1.png>
-Package pdftex.def Info: Pics/ou1.png  used on input line 6115.
-(pdftex.def)             Requested size: 345.00287pt x 205.88489pt.
-LaTeX Info: Redefining \. on input line 6120.
-LaTeX Info: Redefining \% on input line 6120.
-[266 <./Pics/ou2.png>]
-LaTeX Info: Redefining \. on input line 6143.
-LaTeX Info: Redefining \% on input line 6143.
-[267 <./Pics/ou1.png>]
-LaTeX Info: Redefining \. on input line 6168.
-LaTeX Info: Redefining \% on input line 6168.
-[268]
-LaTeX Info: Redefining \. on input line 6225.
-LaTeX Info: Redefining \% on input line 6225.
-[269]
-LaTeX Info: Redefining \. on input line 6228.
-LaTeX Info: Redefining \% on input line 6228.
-[270] [271
-
-] [272]
-Cap\'{\i }tulo 16.
-[273
-
-]
-LaTeX Info: Redefining \. on input line 6325.
-LaTeX Info: Redefining \% on input line 6325.
-[274]
-LaTeX Info: Redefining \. on input line 6387.
-LaTeX Info: Redefining \% on input line 6387.
-[275]
-LaTeX Info: Redefining \. on input line 6443.
-LaTeX Info: Redefining \% on input line 6443.
-[276]
-LaTeX Info: Redefining \. on input line 6482.
-LaTeX Info: Redefining \% on input line 6482.
-[277]
-LaTeX Info: Redefining \. on input line 6538.
-LaTeX Info: Redefining \% on input line 6538.
-[278]
-LaTeX Info: Redefining \. on input line 6596.
-LaTeX Info: Redefining \% on input line 6596.
-
-Overfull \hbox (63.73688pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10 III.  EFECTO DEL TIPO DE ENCUESTA EN LA EFICIENCIA DE LOS INDIC
-ADORES \T1/lmr/m/n/10 279
- []
-
-[279]
-LaTeX Info: Redefining \. on input line 6656.
-LaTeX Info: Redefining \% on input line 6656.
-[280]
-LaTeX Info: Redefining \. on input line 6706.
-LaTeX Info: Redefining \% on input line 6706.
-
-Overfull \hbox (63.73688pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10 III.  EFECTO DEL TIPO DE ENCUESTA EN LA EFICIENCIA DE LOS INDIC
-ADORES \T1/lmr/m/n/10 281
- []
-
-[281]
-LaTeX Info: Redefining \. on input line 6749.
-LaTeX Info: Redefining \% on input line 6749.
-[282]
-LaTeX Info: Redefining \. on input line 6806.
-LaTeX Info: Redefining \% on input line 6806.
-
-Overfull \hbox (54.85158pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10 IV.  AGREGACI”N DE ENCUESTAS CON DIFERENTES TAMA—OS DE MUESTRA 
-\T1/lmr/m/n/10 283
- []
-
-[283]
-LaTeX Info: Redefining \. on input line 6869.
-LaTeX Info: Redefining \% on input line 6869.
-[284]
-LaTeX Info: Redefining \. on input line 6925.
-LaTeX Info: Redefining \% on input line 6925.
-
-Overfull \hbox (12.4228pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10 V.  PRUEBAS DE HIP”TESIS SOBRE INDICADORES LONGITUDINALES \T1/l
-mr/m/n/10 285
- []
-
-[285]
-LaTeX Info: Redefining \. on input line 6985.
-LaTeX Info: Redefining \% on input line 6985.
-[286]
-
-LaTeX Warning: Command \' invalid in math mode on input line 6987.
-
-LaTeX Info: Redefining \. on input line 6995.
-LaTeX Info: Redefining \% on input line 6995.
-
-Overfull \hbox (12.4228pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10 V.  PRUEBAS DE HIP”TESIS SOBRE INDICADORES LONGITUDINALES \T1/l
-mr/m/n/10 287
- []
-
-[287]
-LaTeX Info: Redefining \. on input line 6995.
-LaTeX Info: Redefining \% on input line 6995.
-[288
+LaTeX Info: Redefining \. on input line 6996.
+LaTeX Info: Redefining \% on input line 6996.
+[250
 
 ]
 Cap\'{\i }tulo 17.
-[289]
-LaTeX Info: Redefining \. on input line 7021.
-LaTeX Info: Redefining \% on input line 7021.
-
-Overfull \hbox (78.26271pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 290 \T1/lmr/m/sl/10 CAPÕTULO 17.  PROCESAMIENTO LONGITUDINAL DE 
-LAS ENCUESTAS ROTATIVAS
- []
-
-[290]
-LaTeX Info: Redefining \. on input line 7061.
-LaTeX Info: Redefining \% on input line 7061.
-
-Overfull \hbox (23.39113pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10 I.  DISE—O DE PANELES ROTATIVOS EN LAS ENCUESTAS DE LA REGI”N \
-T1/lmr/m/n/10 291
- []
-
-[291]
-<Pics/el1.png, id=2854, 2400.97pt x 650.43pt>
+[251]
+LaTeX Info: Redefining \. on input line 7043.
+LaTeX Info: Redefining \% on input line 7043.
+[252]
+<Pics/el1.png, id=2662, 2400.97pt x 650.43pt>
 File: Pics/el1.png Graphic file (type png)
 <use Pics/el1.png>
-Package pdftex.def Info: Pics/el1.png  used on input line 7064.
-(pdftex.def)             Requested size: 344.99937pt x 93.46136pt.
-LaTeX Info: Redefining \. on input line 7076.
-LaTeX Info: Redefining \% on input line 7076.
-
-Overfull \hbox (78.26271pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 292 \T1/lmr/m/sl/10 CAPÕTULO 17.  PROCESAMIENTO LONGITUDINAL DE 
-LAS ENCUESTAS ROTATIVAS
- []
-
-[292 <./Pics/el1.png>]
-<Pics/el2.png, id=2864, 2498.33376pt x 1183.42125pt>
+Package pdftex.def Info: Pics/el1.png  used on input line 7065.
+(pdftex.def)             Requested size: 500.48174pt x 135.582pt.
+LaTeX Info: Redefining \. on input line 7075.
+LaTeX Info: Redefining \% on input line 7075.
+[253 <./Pics/el1.png>]
+LaTeX Info: Redefining \. on input line 7113.
+LaTeX Info: Redefining \% on input line 7113.
+[254]
+<Pics/el2.png, id=2680, 2498.33376pt x 1183.42125pt>
 File: Pics/el2.png Graphic file (type png)
 <use Pics/el2.png>
-Package pdftex.def Info: Pics/el2.png  used on input line 7115.
-(pdftex.def)             Requested size: 344.99916pt x 163.42065pt.
-LaTeX Info: Redefining \. on input line 7117.
-LaTeX Info: Redefining \% on input line 7117.
+Package pdftex.def Info: Pics/el2.png  used on input line 7116.
+(pdftex.def)             Requested size: 500.45847pt x 237.05927pt.
 
-Overfull \hbox (93.04564pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10 II.  GENERACI”N DE BASES LONGITUDINALES PARA DOS PERIODOS CONSE
-CUTIVOS \T1/lmr/m/n/10 293
+LaTeX Warning: Command \' invalid in math mode on input line 7131.
+
+LaTeX Info: Redefining \. on input line 7132.
+LaTeX Info: Redefining \% on input line 7132.
+
+Overfull \hbox (14.09518pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/12 II.  GENERACI”N DE BASES LONGITUDINALES PARA DOS PERIODOS CONSE
+CUTIVOS \T1/lmr/m/n/12 255
  []
 
-[293]
+[255 <./Pics/el2.png>]
 
-LaTeX Warning: Command \' invalid in math mode on input line 7130.
-
-LaTeX Info: Redefining \. on input line 7134.
-LaTeX Info: Redefining \% on input line 7134.
-
-Overfull \hbox (78.26271pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 294 \T1/lmr/m/sl/10 CAPÕTULO 17.  PROCESAMIENTO LONGITUDINAL DE 
-LAS ENCUESTAS ROTATIVAS
- []
-
-[294 <./Pics/el2.png>]
-
-LaTeX Warning: Command \' invalid in math mode on input line 7135.
+LaTeX Warning: Command \' invalid in math mode on input line 7136.
 
 
-LaTeX Warning: Command \' invalid in math mode on input line 7141.
+LaTeX Warning: Command \' invalid in math mode on input line 7142.
 
-LaTeX Info: Redefining \. on input line 7153.
-LaTeX Info: Redefining \% on input line 7153.
+LaTeX Info: Redefining \. on input line 7157.
+LaTeX Info: Redefining \% on input line 7157.
+[256]
 
-Overfull \hbox (93.04564pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10 II.  GENERACI”N DE BASES LONGITUDINALES PARA DOS PERIODOS CONSE
-CUTIVOS \T1/lmr/m/n/10 295
- []
+LaTeX Warning: Command \' invalid in math mode on input line 7159.
 
-[295]
-
-LaTeX Warning: Command \' invalid in math mode on input line 7158.
-
-LaTeX Info: Redefining \. on input line 7185.
-LaTeX Info: Redefining \% on input line 7185.
-
-Overfull \hbox (78.26271pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 296 \T1/lmr/m/sl/10 CAPÕTULO 17.  PROCESAMIENTO LONGITUDINAL DE 
-LAS ENCUESTAS ROTATIVAS
- []
-
-[296]
-<Pics/el3.png, id=2895, 2431.0825pt x 1184.425pt>
+<Pics/el3.png, id=2697, 2431.0825pt x 1184.425pt>
 File: Pics/el3.png Graphic file (type png)
 <use Pics/el3.png>
-Package pdftex.def Info: Pics/el3.png  used on input line 7189.
-(pdftex.def)             Requested size: 344.98615pt x 168.07747pt.
-LaTeX Info: Redefining \. on input line 7205.
-LaTeX Info: Redefining \% on input line 7205.
+Package pdftex.def Info: Pics/el3.png  used on input line 7190.
+(pdftex.def)             Requested size: 500.45248pt x 243.82077pt.
+LaTeX Info: Redefining \. on input line 7202.
+LaTeX Info: Redefining \% on input line 7202.
 
-Overfull \hbox (93.04564pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10 II.  GENERACI”N DE BASES LONGITUDINALES PARA DOS PERIODOS CONSE
-CUTIVOS \T1/lmr/m/n/10 297
+Overfull \hbox (14.09518pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/12 II.  GENERACI”N DE BASES LONGITUDINALES PARA DOS PERIODOS CONSE
+CUTIVOS \T1/lmr/m/n/12 257
  []
 
-[297 <./Pics/el3.png>]
-LaTeX Info: Redefining \. on input line 7232.
-LaTeX Info: Redefining \% on input line 7232.
+[257]
+LaTeX Info: Redefining \. on input line 7218.
+LaTeX Info: Redefining \% on input line 7218.
+[258 <./Pics/el3.png>]
+LaTeX Info: Redefining \. on input line 7246.
+LaTeX Info: Redefining \% on input line 7246.
 
-Overfull \hbox (78.26271pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 298 \T1/lmr/m/sl/10 CAPÕTULO 17.  PROCESAMIENTO LONGITUDINAL DE 
-LAS ENCUESTAS ROTATIVAS
+Overfull \hbox (14.09518pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/12 II.  GENERACI”N DE BASES LONGITUDINALES PARA DOS PERIODOS CONSE
+CUTIVOS \T1/lmr/m/n/12 259
  []
 
-[298]
-<Pics/el4.png, id=2912, 2549.525pt x 1250.6725pt>
+[259]
+<Pics/el4.png, id=2723, 2549.525pt x 1250.6725pt>
 File: Pics/el4.png Graphic file (type png)
 <use Pics/el4.png>
-Package pdftex.def Info: Pics/el4.png  used on input line 7254.
-(pdftex.def)             Requested size: 344.98798pt x 169.23425pt.
-LaTeX Info: Redefining \. on input line 7262.
-LaTeX Info: Redefining \% on input line 7262.
-[299]
+Package pdftex.def Info: Pics/el4.png  used on input line 7255.
+(pdftex.def)             Requested size: 500.48155pt x 245.51181pt.
+LaTeX Info: Redefining \. on input line 7265.
+LaTeX Info: Redefining \% on input line 7265.
+[260 <./Pics/el4.png>]
 
-LaTeX Warning: Command \' invalid in math mode on input line 7265.
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 7268.
+LaTeX Warning: Command \' invalid in math mode on input line 7266.
 
 
-LaTeX Warning: Command \' invalid in math mode on input line 7268.
+LaTeX Warning: Command \' invalid in math mode on input line 7269.
 
-LaTeX Info: Redefining \. on input line 7272.
-LaTeX Info: Redefining \% on input line 7272.
 
-Overfull \hbox (78.26271pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 300 \T1/lmr/m/sl/10 CAPÕTULO 17.  PROCESAMIENTO LONGITUDINAL DE 
-LAS ENCUESTAS ROTATIVAS
- []
+LaTeX Warning: Command \' invalid in math mode on input line 7269.
 
-[300 <./Pics/el4.png>]
-LaTeX Info: Redefining \. on input line 7326.
-LaTeX Info: Redefining \% on input line 7326.
-[301]
-LaTeX Info: Redefining \. on input line 7330.
-LaTeX Info: Redefining \% on input line 7330.
-
-Overfull \hbox (78.26271pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 302 \T1/lmr/m/sl/10 CAPÕTULO 17.  PROCESAMIENTO LONGITUDINAL DE 
-LAS ENCUESTAS ROTATIVAS
- []
-
-[302]
+LaTeX Info: Redefining \. on input line 7323.
+LaTeX Info: Redefining \% on input line 7323.
+[261]
+LaTeX Info: Redefining \. on input line 7331.
+LaTeX Info: Redefining \% on input line 7331.
+[262]
 Cap\'{\i }tulo 18.
-[303
+[263
 
 ]
-LaTeX Info: Redefining \. on input line 7353.
-LaTeX Info: Redefining \% on input line 7353.
-[304]
-Overfull \hbox (59.88637pt too wide) in paragraph at lines 7362--7371
- [][] 
- []
-
-LaTeX Info: Redefining \. on input line 7376.
-LaTeX Info: Redefining \% on input line 7376.
-[305]
-LaTeX Info: Redefining \. on input line 7416.
-LaTeX Info: Redefining \% on input line 7416.
-[306]
-Overfull \hbox (9.90263pt too wide) in paragraph at lines 7429--7439
- [][] 
- []
-
+LaTeX Info: Redefining \. on input line 7359.
+LaTeX Info: Redefining \% on input line 7359.
+[264]
+LaTeX Info: Redefining \. on input line 7405.
+LaTeX Info: Redefining \% on input line 7405.
+[265]
+LaTeX Info: Redefining \. on input line 7442.
+LaTeX Info: Redefining \% on input line 7442.
+[266]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Info: Redefining \. on input line 7444.
-LaTeX Info: Redefining \% on input line 7444.
-[307]
-Overfull \hbox (41.83318pt too wide) in paragraph at lines 7448--7456
- [][] 
- []
+LaTeX Info: Redefining \. on input line 7478.
+LaTeX Info: Redefining \% on input line 7478.
+[267]
+LaTeX Info: Redefining \. on input line 7499.
+LaTeX Info: Redefining \% on input line 7499.
+[268]
+LaTeX Info: Redefining \. on input line 7529.
+LaTeX Info: Redefining \% on input line 7529.
+[269]
+LaTeX Info: Redefining \. on input line 7529.
+LaTeX Info: Redefining \% on input line 7529.
+[270
 
-
-Overfull \hbox (14.0004pt too wide) in paragraph at lines 7464--7472
- [][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-LaTeX Info: Redefining \. on input line 7477.
-LaTeX Info: Redefining \% on input line 7477.
-[308]
-LaTeX Info: Redefining \. on input line 7498.
-LaTeX Info: Redefining \% on input line 7498.
-
-Overfull \hbox (29.98973pt too wide) has occurred while \output is active
-\T1/lmr/m/sl/10 IV.  ESTIMACI”N DE LA TRANSICI”N EN SUBPOBLACIONES DE INTER…S \
-T1/lmr/m/n/10 309
- []
-
-[309]
-Overfull \hbox (14.0004pt too wide) in paragraph at lines 7501--7509
- [][] 
- []
-
-
-Overfull \hbox (14.0004pt too wide) in paragraph at lines 7515--7523
- [][] 
- []
-
-LaTeX Info: Redefining \. on input line 7528.
-LaTeX Info: Redefining \% on input line 7528.
-[310]
+]
 Cap\'{\i }tulo 19.
-[311
-
-]
-LaTeX Info: Redefining \. on input line 7567.
-LaTeX Info: Redefining \% on input line 7567.
-[312]
-LaTeX Info: Redefining \. on input line 7613.
-LaTeX Info: Redefining \% on input line 7613.
-[313]
-LaTeX Info: Redefining \. on input line 7629.
-LaTeX Info: Redefining \% on input line 7629.
-[314]
-LaTeX Info: Redefining \. on input line 7649.
-LaTeX Info: Redefining \% on input line 7649.
-[315]
-LaTeX Info: Redefining \. on input line 7676.
-LaTeX Info: Redefining \% on input line 7676.
-[316]
-LaTeX Info: Redefining \. on input line 7696.
-LaTeX Info: Redefining \% on input line 7696.
-[317]
-<19Calidad_files/figure-latex/unnamed-chunk-1-1.pdf, id=3065, 469.755pt x 289.0
+[271]
+LaTeX Info: Redefining \. on input line 7595.
+LaTeX Info: Redefining \% on input line 7595.
+[272]
+LaTeX Info: Redefining \. on input line 7624.
+LaTeX Info: Redefining \% on input line 7624.
+[273]
+LaTeX Info: Redefining \. on input line 7647.
+LaTeX Info: Redefining \% on input line 7647.
+[274]
+LaTeX Info: Redefining \. on input line 7677.
+LaTeX Info: Redefining \% on input line 7677.
+[275]
+LaTeX Info: Redefining \. on input line 7699.
+LaTeX Info: Redefining \% on input line 7699.
+[276]
+<19Calidad_files/figure-latex/unnamed-chunk-1-1.pdf, id=2865, 469.755pt x 289.0
 8pt>
 File: 19Calidad_files/figure-latex/unnamed-chunk-1-1.pdf Graphic file (type pdf
 )
 <use 19Calidad_files/figure-latex/unnamed-chunk-1-1.pdf>
 Package pdftex.def Info: 19Calidad_files/figure-latex/unnamed-chunk-1-1.pdf  us
-ed on input line 7719.
-(pdftex.def)             Requested size: 344.997pt x 212.30583pt.
-LaTeX Info: Redefining \. on input line 7724.
-LaTeX Info: Redefining \% on input line 7724.
-[318]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+ed on input line 7720.
+(pdftex.def)             Requested size: 469.75386pt x 289.07928pt.
+LaTeX Info: Redefining \. on input line 7749.
+LaTeX Info: Redefining \% on input line 7749.
+[277]
+LaTeX Info: Redefining \. on input line 7771.
+LaTeX Info: Redefining \% on input line 7771.
+[278 <./19Calidad_files/figure-latex/unnamed-chunk-1-1.pdf>]
+LaTeX Info: Redefining \. on input line 7797.
+LaTeX Info: Redefining \% on input line 7797.
+[279]
+LaTeX Info: Redefining \. on input line 7828.
+LaTeX Info: Redefining \% on input line 7828.
+[280]
+LaTeX Info: Redefining \. on input line 7893.
+LaTeX Info: Redefining \% on input line 7893.
+[281]
+LaTeX Info: Redefining \. on input line 7937.
+LaTeX Info: Redefining \% on input line 7937.
+[282]
+LaTeX Info: Redefining \. on input line 7955.
+LaTeX Info: Redefining \% on input line 7955.
+[283]
 
-LaTeX Info: Redefining \. on input line 7748.
-LaTeX Info: Redefining \% on input line 7748.
-[319 <./19Calidad_files/figure-latex/unnamed-chunk-1-1.pdf>]
-LaTeX Info: Redefining \. on input line 7777.
-LaTeX Info: Redefining \% on input line 7777.
-[320]
-LaTeX Info: Redefining \. on input line 7806.
-LaTeX Info: Redefining \% on input line 7806.
-[321]
-LaTeX Info: Redefining \. on input line 7841.
-LaTeX Info: Redefining \% on input line 7841.
-[322]
-Overfull \hbox (35.55101pt too wide) detected at line 7852
-\OML/lmm/m/it/10 y[] \OT1/lmr/m/n/10 = []
- []
+LaTeX Warning: Reference `M1' on page 284 undefined on input line 7964.
 
-LaTeX Info: Redefining \. on input line 7895.
-LaTeX Info: Redefining \% on input line 7895.
-[323]
-Overfull \hbox (36.58125pt too wide) detected at line 7922
-\OML/lmm/m/it/10 z[] \OT1/lmr/m/n/10 = []
- []
-
-LaTeX Info: Redefining \. on input line 7936.
-LaTeX Info: Redefining \% on input line 7936.
-[324]
-LaTeX Info: Redefining \. on input line 7952.
-LaTeX Info: Redefining \% on input line 7952.
-[325]
-LaTeX Info: Redefining \. on input line 7963.
-LaTeX Info: Redefining \% on input line 7963.
-[326]
-
-LaTeX Warning: Reference `M1' on page 327 undefined on input line 7963.
-
-<Pics/CSj1.png, id=3141, 583.17876pt x 770.88pt>
+<Pics/CSj1.png, id=2930, 583.17876pt x 770.88pt>
 File: Pics/CSj1.png Graphic file (type png)
 <use Pics/CSj1.png>
-Package pdftex.def Info: Pics/CSj1.png  used on input line 7967.
+Package pdftex.def Info: Pics/CSj1.png  used on input line 7968.
 (pdftex.def)             Requested size: 225.83705pt x 298.52472pt.
-LaTeX Info: Redefining \. on input line 7972.
-LaTeX Info: Redefining \% on input line 7972.
-[327 <./Pics/CSj1.png>]
-LaTeX Info: Redefining \. on input line 7972.
-LaTeX Info: Redefining \% on input line 7972.
-[328
+LaTeX Info: Redefining \. on input line 7973.
+LaTeX Info: Redefining \% on input line 7973.
+[284]
+LaTeX Info: Redefining \. on input line 7973.
+LaTeX Info: Redefining \% on input line 7973.
+[285 <./Pics/CSj1.png>]
+LaTeX Info: Redefining \. on input line 7973.
+LaTeX Info: Redefining \% on input line 7973.
+[286
 
-] [329] [330]
+] [287] [288]
 Ap\'{e}ndice A.
-
-Underfull \vbox (badness 2600) has occurred while \output is active []
-
-[331
+[289
 
 ]
-LaTeX Info: Redefining \. on input line 8013.
-LaTeX Info: Redefining \% on input line 8013.
+LaTeX Info: Redefining \. on input line 8022.
+LaTeX Info: Redefining \% on input line 8022.
+[290]
+LaTeX Info: Redefining \. on input line 8038.
+LaTeX Info: Redefining \% on input line 8038.
+[291]
+LaTeX Info: Redefining \. on input line 8062.
+LaTeX Info: Redefining \% on input line 8062.
+[292]
+LaTeX Info: Redefining \. on input line 8086.
+LaTeX Info: Redefining \% on input line 8086.
+[293]
+Underfull \vbox (badness 3019) has occurred while \output is active []
 
-Overfull \hbox (64.98961pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 332 \T1/lmr/m/sl/10 AP…NDICE A.  UNA PERSPECTIVA REGIONAL DE LAS
- ENCUESTAS DE HOGARES
- []
-
-[332]
-LaTeX Info: Redefining \. on input line 8023.
-LaTeX Info: Redefining \% on input line 8023.
-[333]
-LaTeX Info: Redefining \. on input line 8045.
-LaTeX Info: Redefining \% on input line 8045.
-
-Overfull \hbox (64.98961pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 334 \T1/lmr/m/sl/10 AP…NDICE A.  UNA PERSPECTIVA REGIONAL DE LAS
- ENCUESTAS DE HOGARES
- []
-
-[334]
-LaTeX Info: Redefining \. on input line 8063.
-LaTeX Info: Redefining \% on input line 8063.
-[335]
-LaTeX Info: Redefining \. on input line 8085.
-LaTeX Info: Redefining \% on input line 8085.
-
-Overfull \hbox (64.98961pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 336 \T1/lmr/m/sl/10 AP…NDICE A.  UNA PERSPECTIVA REGIONAL DE LAS
- ENCUESTAS DE HOGARES
- []
-
-[336]
-LaTeX Info: Redefining \. on input line 8101.
-LaTeX Info: Redefining \% on input line 8101.
-[337]
-LaTeX Info: Redefining \. on input line 8115.
-LaTeX Info: Redefining \% on input line 8115.
-
-Overfull \hbox (64.98961pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 338 \T1/lmr/m/sl/10 AP…NDICE A.  UNA PERSPECTIVA REGIONAL DE LAS
- ENCUESTAS DE HOGARES
- []
-
-[338]
-LaTeX Info: Redefining \. on input line 8130.
-LaTeX Info: Redefining \% on input line 8130.
-[339]
-Overfull \hbox (4.5157pt too wide) in paragraph at lines 8142--8142
-[]|\T1/lmr/m/n/10 (-20) Periodicidad|  
+LaTeX Info: Redefining \. on input line 8108.
+LaTeX Info: Redefining \% on input line 8108.
+[294]
+LaTeX Info: Redefining \. on input line 8124.
+LaTeX Info: Redefining \% on input line 8124.
+[295]
+LaTeX Info: Redefining \. on input line 8131.
+LaTeX Info: Redefining \% on input line 8131.
+[296]
+Overfull \hbox (0.73137pt too wide) in paragraph at lines 8143--8143
+[]|\T1/lmr/m/n/12 (-20) Periodicidad|  
  []
 
 
-Overfull \hbox (3.9436pt too wide) in paragraph at lines 8142--8142
-[]|\T1/lmr/m/n/10 (-20) RotaciÛn|  
+Overfull \hbox (1.4525pt too wide) in paragraph at lines 8143--8143
+[]|\T1/lmr/m/n/12 (-20) RotaciÛn|  
  []
 
 
-Overfull \hbox (4.91226pt too wide) in alignment at lines 8139--8144
+Overfull \hbox (6.22708pt too wide) in alignment at lines 8140--8145
  [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (4.5157pt too wide) in paragraph at lines 8146--8146
-[]|\T1/lmr/m/n/10 (-20) Periodicidad|  
+Overfull \hbox (0.73137pt too wide) in paragraph at lines 8147--8147
+[]|\T1/lmr/m/n/12 (-20) Periodicidad|  
  []
 
 
-Overfull \hbox (3.9436pt too wide) in paragraph at lines 8146--8146
-[]|\T1/lmr/m/n/10 (-20) RotaciÛn|  
+Overfull \hbox (1.4525pt too wide) in paragraph at lines 8147--8147
+[]|\T1/lmr/m/n/12 (-20) RotaciÛn|  
  []
 
 
-Overfull \hbox (4.91226pt too wide) in alignment at lines 8144--8148
+Overfull \hbox (6.22708pt too wide) in alignment at lines 8145--8149
  [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (4.2214pt too wide) in paragraph at lines 8151--8151
-[]|\T1/lmr/m/n/10 (-20) Repetida|  
+Overfull \hbox (1.77887pt too wide) in paragraph at lines 8152--8152
+[]|\T1/lmr/m/n/12 (-20) Repetida|  
  []
 
 
-Overfull \hbox (4.2214pt too wide) in paragraph at lines 8153--8153
-[]|\T1/lmr/m/n/10 (-20) Repetida|  
+Overfull \hbox (1.77887pt too wide) in paragraph at lines 8154--8154
+[]|\T1/lmr/m/n/12 (-20) Repetida|  
  []
 
 
-Overfull \hbox (4.2214pt too wide) in paragraph at lines 8154--8154
-[]|\T1/lmr/m/n/10 (-20) Repetida|  
+Overfull \hbox (1.77887pt too wide) in paragraph at lines 8155--8155
+[]|\T1/lmr/m/n/12 (-20) Repetida|  
  []
 
 
-Overfull \hbox (4.2214pt too wide) in paragraph at lines 8155--8155
-[]|\T1/lmr/m/n/10 (-20) Repetida|  
+Overfull \hbox (1.77887pt too wide) in paragraph at lines 8156--8156
+[]|\T1/lmr/m/n/12 (-20) Repetida|  
  []
 
 
-Overfull \hbox (4.2214pt too wide) in paragraph at lines 8158--8158
-[]|\T1/lmr/m/n/10 (-20) Repetida|  
+Overfull \hbox (1.77887pt too wide) in paragraph at lines 8159--8159
+[]|\T1/lmr/m/n/12 (-20) Repetida|  
  []
 
 
-Overfull \hbox (4.2214pt too wide) in paragraph at lines 8159--8159
-[]|\T1/lmr/m/n/10 (-20) Repetida|  
+Overfull \hbox (1.77887pt too wide) in paragraph at lines 8160--8160
+[]|\T1/lmr/m/n/12 (-20) Repetida|  
  []
 
 
-Overfull \hbox (4.2214pt too wide) in paragraph at lines 8160--8160
-[]|\T1/lmr/m/n/10 (-20) Repetida|  
+Overfull \hbox (1.77887pt too wide) in paragraph at lines 8161--8161
+[]|\T1/lmr/m/n/12 (-20) Repetida|  
  []
 
 
-Overfull \hbox (4.2214pt too wide) in paragraph at lines 8161--8161
-[]|\T1/lmr/m/n/10 (-20) Repetida|  
+Overfull \hbox (1.77887pt too wide) in paragraph at lines 8162--8162
+[]|\T1/lmr/m/n/12 (-20) Repetida|  
  []
 
 
-Overfull \hbox (4.2214pt too wide) in paragraph at lines 8163--8163
-[]|\T1/lmr/m/n/10 (-20) Repetida|  
+Overfull \hbox (1.77887pt too wide) in paragraph at lines 8164--8164
+[]|\T1/lmr/m/n/12 (-20) Repetida|  
  []
 
 
-Overfull \hbox (4.2214pt too wide) in paragraph at lines 8164--8164
-[]|\T1/lmr/m/n/10 (-20) Repetida|  
+Overfull \hbox (1.77887pt too wide) in paragraph at lines 8165--8165
+[]|\T1/lmr/m/n/12 (-20) Repetida|  
  []
 
 
-Overfull \hbox (4.2214pt too wide) in paragraph at lines 8166--8166
-[]|\T1/lmr/m/n/10 (-20) Repetida|  
+Overfull \hbox (1.77887pt too wide) in paragraph at lines 8167--8167
+[]|\T1/lmr/m/n/12 (-20) Repetida|  
  []
 
 
-Overfull \hbox (4.2214pt too wide) in paragraph at lines 8168--8168
-[]|\T1/lmr/m/n/10 (-20) Repetida|  
+Overfull \hbox (1.77887pt too wide) in paragraph at lines 8169--8169
+[]|\T1/lmr/m/n/12 (-20) Repetida|  
  []
 
 
-Overfull \hbox (4.2214pt too wide) in paragraph at lines 8169--8169
-[]|\T1/lmr/m/n/10 (-20) Repetida|  
- []
-
-
-Overfull \hbox (4.91226pt too wide) in alignment at lines 8148--8171
+Overfull \hbox (6.22708pt too wide) in alignment at lines 8149--8170
  [] [] [] [] [] [] 
  []
 
-LaTeX Info: Redefining \. on input line 8171.
-LaTeX Info: Redefining \% on input line 8171.
 
-Overfull \hbox (64.98961pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 340 \T1/lmr/m/sl/10 AP…NDICE A.  UNA PERSPECTIVA REGIONAL DE LAS
- ENCUESTAS DE HOGARES
+Overfull \hbox (1.77887pt too wide) in paragraph at lines 8170--8170
+[]|\T1/lmr/m/n/12 (-20) Repetida|  
  []
 
-[340
+
+Overfull \hbox (6.22708pt too wide) in alignment at lines 8170--8172
+ [] [] [] [] [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 8174.
+LaTeX Info: Redefining \% on input line 8174.
+[297
 
 ]
-LaTeX Info: Redefining \. on input line 8173.
-LaTeX Info: Redefining \% on input line 8173.
-[341]
-LaTeX Info: Redefining \. on input line 8210.
-LaTeX Info: Redefining \% on input line 8210.
-
-Overfull \hbox (64.98961pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 342 \T1/lmr/m/sl/10 AP…NDICE A.  UNA PERSPECTIVA REGIONAL DE LAS
- ENCUESTAS DE HOGARES
- []
-
-[342]
-LaTeX Info: Redefining \. on input line 8228.
-LaTeX Info: Redefining \% on input line 8228.
-[343
+LaTeX Info: Redefining \. on input line 8211.
+LaTeX Info: Redefining \% on input line 8211.
+[298]
+LaTeX Info: Redefining \. on input line 8229.
+LaTeX Info: Redefining \% on input line 8229.
+[299
 
 ]
-LaTeX Info: Redefining \. on input line 8236.
-LaTeX Info: Redefining \% on input line 8236.
-
-Overfull \hbox (64.98961pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 344 \T1/lmr/m/sl/10 AP…NDICE A.  UNA PERSPECTIVA REGIONAL DE LAS
- ENCUESTAS DE HOGARES
- []
-
-[344]
-LaTeX Info: Redefining \. on input line 8238.
-LaTeX Info: Redefining \% on input line 8238.
-[345]
-LaTeX Info: Redefining \. on input line 8238.
-LaTeX Info: Redefining \% on input line 8238.
-
-Overfull \hbox (64.98961pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 346 \T1/lmr/m/sl/10 AP…NDICE A.  UNA PERSPECTIVA REGIONAL DE LAS
- ENCUESTAS DE HOGARES
- []
-
-[346
-
-]
+LaTeX Info: Redefining \. on input line 8239.
+LaTeX Info: Redefining \% on input line 8239.
+[300]
 Ap\'{e}ndice B.
-[347]
-LaTeX Info: Redefining \. on input line 8282.
-LaTeX Info: Redefining \% on input line 8282.
-[348] [349]
-LaTeX Info: Redefining \. on input line 8290.
-LaTeX Info: Redefining \% on input line 8290.
-[350
+[301
+
+]
+LaTeX Info: Redefining \. on input line 8289.
+LaTeX Info: Redefining \% on input line 8289.
+[302] [303]
+LaTeX Info: Redefining \. on input line 8291.
+LaTeX Info: Redefining \% on input line 8291.
+[304
 
 ]
 Ap\'{e}ndice C.
-[351]
-LaTeX Info: Redefining \. on input line 8382.
-LaTeX Info: Redefining \% on input line 8382.
+[305]
+LaTeX Info: Redefining \. on input line 8422.
+LaTeX Info: Redefining \% on input line 8422.
 
-Overfull \hbox (178.1136pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 352 \T1/lmr/m/sl/10 AP…NDICE C.  RECOMENDACIONES DE DOCUMENTACI”
+Overfull \hbox (114.02701pt too wide) has occurred while \output is active
+\T1/lmr/m/n/12 306 \T1/lmr/m/sl/12 AP…NDICE C.  RECOMENDACIONES DE DOCUMENTACI”
 N T…CNICA EN LAS ENCUESTAS DE HOGARES
  []
 
-[352] [353]
-LaTeX Info: Redefining \. on input line 8496.
-LaTeX Info: Redefining \% on input line 8496.
-
-Overfull \hbox (178.1136pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 354 \T1/lmr/m/sl/10 AP…NDICE C.  RECOMENDACIONES DE DOCUMENTACI”
-N T…CNICA EN LAS ENCUESTAS DE HOGARES
- []
-
-[354] [355]
-LaTeX Info: Redefining \. on input line 8636.
-LaTeX Info: Redefining \% on input line 8636.
-
-Overfull \hbox (178.1136pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 356 \T1/lmr/m/sl/10 AP…NDICE C.  RECOMENDACIONES DE DOCUMENTACI”
-N T…CNICA EN LAS ENCUESTAS DE HOGARES
- []
-
-[356] [357]
+[306]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 8761.
-LaTeX Info: Redefining \% on input line 8761.
+[307]
+LaTeX Info: Redefining \. on input line 8566.
+LaTeX Info: Redefining \% on input line 8566.
 
-Overfull \hbox (178.1136pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 358 \T1/lmr/m/sl/10 AP…NDICE C.  RECOMENDACIONES DE DOCUMENTACI”
+Overfull \hbox (114.02701pt too wide) has occurred while \output is active
+\T1/lmr/m/n/12 308 \T1/lmr/m/sl/12 AP…NDICE C.  RECOMENDACIONES DE DOCUMENTACI”
 N T…CNICA EN LAS ENCUESTAS DE HOGARES
  []
 
-[358] [359]
-LaTeX Info: Redefining \. on input line 8854.
-LaTeX Info: Redefining \% on input line 8854.
+[308] [309]
+LaTeX Info: Redefining \. on input line 8729.
+LaTeX Info: Redefining \% on input line 8729.
 
-Overfull \hbox (178.1136pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 360 \T1/lmr/m/sl/10 AP…NDICE C.  RECOMENDACIONES DE DOCUMENTACI”
+Overfull \hbox (114.02701pt too wide) has occurred while \output is active
+\T1/lmr/m/n/12 310 \T1/lmr/m/sl/12 AP…NDICE C.  RECOMENDACIONES DE DOCUMENTACI”
 N T…CNICA EN LAS ENCUESTAS DE HOGARES
  []
 
-[360
+[310] [311]
+LaTeX Info: Redefining \. on input line 8855.
+LaTeX Info: Redefining \% on input line 8855.
 
-] (Dise√±o-y-an√°lisis-de-encuestas-de-hogares.bbl [361]
+Overfull \hbox (114.02701pt too wide) has occurred while \output is active
+\T1/lmr/m/n/12 312 \T1/lmr/m/sl/12 AP…NDICE C.  RECOMENDACIONES DE DOCUMENTACI”
+N T…CNICA EN LAS ENCUESTAS DE HOGARES
+ []
+
+[312] (Dise√±o-y-an√°lisis-de-encuestas-de-hogares.bbl [313
+
+]
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 
-Overfull \hbox (178.1136pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 362 \T1/lmr/m/sl/10 AP…NDICE C.  RECOMENDACIONES DE DOCUMENTACI”
+Overfull \hbox (114.02701pt too wide) has occurred while \output is active
+\T1/lmr/m/n/12 314 \T1/lmr/m/sl/12 AP…NDICE C.  RECOMENDACIONES DE DOCUMENTACI”
 N T…CNICA EN LAS ENCUESTAS DE HOGARES
  []
 
-[362
+[314
 
-] [363]
-LaTeX Info: Redefining \. on input line 169.
-LaTeX Info: Redefining \% on input line 169.
-[364]
-LaTeX Info: Redefining \. on input line 261.
-LaTeX Info: Redefining \% on input line 261.
-[365]
-LaTeX Info: Redefining \. on input line 353.
-LaTeX Info: Redefining \% on input line 353.
-[366]
-LaTeX Info: Redefining \. on input line 452.
-LaTeX Info: Redefining \% on input line 452.
-[367]
-LaTeX Info: Redefining \. on input line 547.
-LaTeX Info: Redefining \% on input line 547.
-[368]
-LaTeX Info: Redefining \. on input line 637.
-LaTeX Info: Redefining \% on input line 637.
-[369]
-LaTeX Info: Redefining \. on input line 736.
-LaTeX Info: Redefining \% on input line 736.
-[370]
-LaTeX Info: Redefining \. on input line 830.
-LaTeX Info: Redefining \% on input line 830.
-[371])
-LaTeX Info: Redefining \. on input line 8859.
-LaTeX Info: Redefining \% on input line 8859.
-[372] (Dise√±o-y-an√°lisis-de-encuestas-de-hogares.aux
-LaTeX Info: Redefining \. on input line 28.
-LaTeX Info: Redefining \% on input line 28.
+] [315]
+LaTeX Info: Redefining \. on input line 201.
+LaTeX Info: Redefining \% on input line 201.
+[316]
+LaTeX Info: Redefining \. on input line 315.
+LaTeX Info: Redefining \% on input line 315.
+[317]
+LaTeX Info: Redefining \. on input line 434.
+LaTeX Info: Redefining \% on input line 434.
+[318]
+LaTeX Info: Redefining \. on input line 543.
+LaTeX Info: Redefining \% on input line 543.
+[319]
+LaTeX Info: Redefining \. on input line 660.
+LaTeX Info: Redefining \% on input line 660.
+[320]
+LaTeX Info: Redefining \. on input line 776.
+LaTeX Info: Redefining \% on input line 776.
+[321]
+LaTeX Info: Redefining \. on input line 893.
+LaTeX Info: Redefining \% on input line 893.
+[322])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 8860.
+LaTeX Info: Redefining \. on input line 8860.
+LaTeX Info: Redefining \% on input line 8860.
+[323]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 8860.
+(Dise√±o-y-an√°lisis-de-encuestas-de-hogares.aux
+LaTeX Info: Redefining \. on input line 26.
+LaTeX Info: Redefining \% on input line 26.
 )
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 8860.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 8860.
 
 LaTeX Warning: There were undefined references.
 
@@ -3229,13 +2684,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 19449 strings out of 478868
- 308928 string characters out of 2845966
- 700392 words of memory out of 3000000
- 35020 multiletter control sequences out of 15000+600000
- 540130 words of font info for 332 fonts, out of 8000000 for 9000
+ 19471 strings out of 492895
+ 300918 string characters out of 3120933
+ 457926 words of memory out of 3000000
+ 21291 multiletter control sequences out of 15000+200000
+ 135151 words of font info for 240 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 74i,19n,80p,2612b,767s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,19n,38p,2602b,784s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{Hfootnote.18} has been referenced but does not ex
 ist, replaced by a fixed one
 
@@ -3290,52 +2745,47 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
 , replaced by a fixed one
 
-{C:/Users/agutierrez1/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-maths
-y.enc}{C:/Users/agutierrez1/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm
--mathit.enc}{C:/Users/agutierrez1/AppData/Local/Programs/MiKTeX/fonts/enc/dvips
-/lm/lm-ec.enc}{C:/Users/agutierrez1/AppData/Local/Programs/MiKTeX/fonts/enc/dvi
-ps/lm/lm-ts1.enc}{C:/Users/agutierrez1/AppData/Local/Programs/MiKTeX/fonts/enc/
-dvips/lm/lm-rm.enc}{C:/Users/agutierrez1/AppData/Local/Programs/MiKTeX/fonts/en
-c/dvips/lm/lm-mathex.enc}<C:/Users/agutierrez1/AppData/Local/Programs/MiKTeX/fo
-nts/type1/public/lm/lmbsy10.pfb><C:/Users/agutierrez1/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/agutierrez1/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/agutierrez1/AppData/Local
-/Programs/MiKTeX/fonts/type1/public/lm/lmbx7.pfb><C:/Users/agutierrez1/AppData/
-Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/agutierrez1/Ap
-pData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/agutierr
-ez1/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/ag
-utierrez1/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi5.pfb><C:/Use
-rs/agutierrez1/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C
-:/Users/agutierrez1/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.p
-fb><C:/Users/agutierrez1/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lm
-mi8.pfb><C:/Users/agutierrez1/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-lm/lmmib10.pfb><C:/Users/agutierrez1/AppData/Local/Programs/MiKTeX/fonts/type1/
-public/lm/lmmib7.pfb><C:/Users/agutierrez1/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/lm/lmr10.pfb><C:/Users/agutierrez1/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/lm/lmr12.pfb><C:/Users/agutierrez1/AppData/Local/Programs/MiK
-TeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/agutierrez1/AppData/Local/Program
-s/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/agutierrez1/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/agutierrez1/AppData/Local
-/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/agutierrez1/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/agutierrez1/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/agutierrez1/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/agutier
-rez1/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri8.pfb><C:/Users/ag
-utierrez1/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmro10.pfb><C:/Us
-ers/agutierrez1/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
-<C:/Users/agutierrez1/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy5
-.pfb><C:/Users/agutierrez1/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/
-lmsy7.pfb><C:/Users/agutierrez1/AppData/Local/Programs/MiKTeX/fonts/type1/publi
-c/lm/lmtt10.pfb><C:/Users/agutierrez1/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/lm/lmtti10.pfb><C:/Users/agutierrez1/AppData/Local/Programs/MiKTeX/font
-s/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/agutierrez1/AppData/Local/
-Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Dise√±o-y-an√°lisis-de-encuestas-de-hogares.pdf (372 pages, 1
-0329212 bytes).
+{C:/Users/agutierrez1/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-m
+athsy.enc}{C:/Users/agutierrez1/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvi
+ps/lm/lm-ec.enc}{C:/Users/agutierrez1/AppData/Local/Programs/MiKTeX 2.9/fonts/e
+nc/dvips/lm/lm-ts1.enc}{C:/Users/agutierrez1/AppData/Local/Programs/MiKTeX 2.9/
+fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/agutierrez1/AppData/Local/Programs/M
+iKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/agutierrez1/AppData/Local/Prog
+rams/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}<C:/Users/agutierrez1/AppData/
+Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmbsy10.pfb><C:/Users/agutierre
+z1/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Users
+/agutierrez1/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmbx8.pfb>
+<C:/Users/agutierrez1/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/l
+mex10.pfb><C:/Users/agutierrez1/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
+ublic/lm/lmmi10.pfb><C:/Users/agutierrez1/AppData/Local/Programs/MiKTeX 2.9/fon
+ts/type1/public/lm/lmmi12.pfb><C:/Users/agutierrez1/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/public/lm/lmmi6.pfb><C:/Users/agutierrez1/AppData/Local/Prog
+rams/MiKTeX 2.9/fonts/type1/public/lm/lmmi7.pfb><C:/Users/agutierrez1/AppData/L
+ocal/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/Users/agutierrez1/
+AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmmib10.pfb><C:/Users/a
+gutierrez1/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C
+:/Users/agutierrez1/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr
+12.pfb><C:/Users/agutierrez1/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
+ic/lm/lmr17.pfb><C:/Users/agutierrez1/AppData/Local/Programs/MiKTeX 2.9/fonts/t
+ype1/public/lm/lmr6.pfb><C:/Users/agutierrez1/AppData/Local/Programs/MiKTeX 2.9
+/fonts/type1/public/lm/lmr7.pfb><C:/Users/agutierrez1/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Users/agutierrez1/AppData/Local/Pro
+grams/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Users/agutierrez1/AppData
+/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Users/agutierre
+z1/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmro12.pfb><C:/Users
+/agutierrez1/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb
+><C:/Users/agutierrez1/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/
+lmsy6.pfb><C:/Users/agutierrez1/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
+ublic/lm/lmsy8.pfb><C:/Users/agutierrez1/AppData/Local/Programs/MiKTeX 2.9/font
+s/type1/public/lm/lmtt12.pfb><C:/Users/agutierrez1/AppData/Local/Programs/MiKTe
+X 2.9/fonts/type1/public/lm/lmtti10.pfb><C:/Users/agutierrez1/AppData/Local/Pro
+grams/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/aguti
+errez1/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/ms
+bm10.pfb>
+Output written on Dise√±o-y-an√°lisis-de-encuestas-de-hogares.pdf (323 pages, 1
+0100477 bytes).
 PDF statistics:
- 4408 PDF objects out of 5155 (max. 8388607)
- 1491 named destinations out of 1728 (max. 500000)
- 72745 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 4109 PDF objects out of 4296 (max. 8388607)
+ 1442 named destinations out of 1728 (max. 500000)
+ 23593 words of extra memory for PDF output out of 24883 (max. 10000000)
 
-
-! pdflatex: major issue: So far, you have not checked for MiKTeX updates.
