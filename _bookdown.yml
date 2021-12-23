@@ -8,7 +8,7 @@ rmd_files: [
   
   "01Intro.Rmd",
   
-  # "02Planeacion.Rmd",
+  "02ErrorTotal.Rmd",
   # "03Tipos.Rmd",
   # "04Marcos.Rmd",
   # "05Estratificar.Rmd",

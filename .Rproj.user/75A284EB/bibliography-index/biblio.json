@@ -2955,6 +2955,27 @@
             "type": "book"
         },
         {
+            "author": [
+                {
+                    "family": "Likert",
+                    "given": "R."
+                }
+            ],
+            "container-title": "Archives of Psychology",
+            "id": "Likert_1932",
+            "issued": {
+                "date-parts": [
+                    [
+                        1932
+                    ]
+                ]
+            },
+            "page": "55-55",
+            "title": "A technique for the measurement of attitudes.",
+            "type": "article-journal",
+            "volume": "22 140"
+        },
+        {
             "DOI": "10.15446/rce.v39n2.55424",
             "ISSN": "2389-8976, 0120-1751",
             "author": [
