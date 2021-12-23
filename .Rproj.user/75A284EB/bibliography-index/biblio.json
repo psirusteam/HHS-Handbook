@@ -619,6 +619,152 @@
             "author": [
                 {
                     "family": "Fuller",
+                    "given": "W."
+                }
+            ],
+            "container-title": "Survey Methodology",
+            "id": "Fuller_1990",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        1990
+                    ]
+                ]
+            },
+            "page": "167-180",
+            "title": "Analysis of repeated surveys",
+            "type": "article-journal",
+            "volume": "16"
+        },
+        {
+            "ISBN": "978-1-4200-8066-7",
+            "author": [
+                {
+                    "family": "Heeringa",
+                    "given": "Steven G."
+                },
+                {
+                    "family": "West",
+                    "given": "Brady T."
+                },
+                {
+                    "family": "Berglund",
+                    "given": "Patricia A."
+                }
+            ],
+            "collection-title": "Chapman and hall CRC statistics in the social and behavioral sciences series",
+            "id": "Heeringa_West_Berglund_2017",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "publisher": "CRC Press",
+            "title": "Applied survey data analysis",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Kalton",
+                    "given": "Graham"
+                },
+                {
+                    "family": "Flores-Cervantes",
+                    "given": "Ismael"
+                }
+            ],
+            "container-title": "Journal of Official Statistics",
+            "id": "KaltonFloresCervantes_2003",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2003
+                    ]
+                ]
+            },
+            "page": "17",
+            "title": "Weighting methods",
+            "type": "article-journal",
+            "volume": "19"
+        },
+        {
+            "author": [
+                {
+                    "family": "Kish",
+                    "given": "Leslie"
+                }
+            ],
+            "container-title": "Survey Methodology",
+            "id": "Kish_1999",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        1999
+                    ]
+                ]
+            },
+            "page": "129-138",
+            "title": "Cumulating/combining population surveys",
+            "type": "article-journal",
+            "volume": "25"
+        },
+        {
+            "author": [
+                {
+                    "family": "Train",
+                    "given": "G."
+                },
+                {
+                    "family": "Cahoon",
+                    "given": "L."
+                },
+                {
+                    "family": "Makens",
+                    "given": "P."
+                }
+            ],
+            "id": "Train_Cahoon_Makens_1978",
+            "issued": {
+                "date-parts": [
+                    [
+                        1978
+                    ]
+                ]
+            },
+            "title": "The current population survey variances, inter-relationships and design effects",
+            "type": "paper-conference"
+        },
+        {
+            "author": [
+                {
+                    "family": "Sarndal",
+                    "given": "Carl-Erik"
+                }
+            ],
+            "container-title": "International Statistical Review / Revue Internationale de Statistique",
+            "id": "Sarndal_2011",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2011
+                    ]
+                ]
+            },
+            "title": "Three factors to signal non‐response bias with applications to categorical auxiliary variables",
+            "type": "article-journal",
+            "volume": "79"
+        },
+        {
+            "author": [
+                {
+                    "family": "Fuller",
                     "given": "W. A."
                 }
             ],
@@ -2005,6 +2151,34 @@
         {
             "author": [
                 {
+                    "family": "Verma",
+                    "given": "Vijay"
+                },
+                {
+                    "family": "Betti",
+                    "given": "Gianni"
+                },
+                {
+                    "family": "Ghellini",
+                    "given": "Giulio"
+                }
+            ],
+            "id": "Verma_Betti_Ghellini",
+            "issued": {
+                "date-parts": [
+                    [
+                        2006
+                    ]
+                ]
+            },
+            "page": "36",
+            "title": "Cross-sectional and longitudinal weighting in a rotational household panel: Applications to EU-SILC",
+            "title-short": "Cross-sectional and longitudinal weighting in a rotational household panel",
+            "type": "article-journal"
+        },
+        {
+            "author": [
+                {
                     "family": "Starick",
                     "given": "Rosslyn"
                 },
@@ -2122,13 +2296,68 @@
             "type": ""
         },
         {
+            "author": [
+                {
+                    "family": "Caceres",
+                    "given": "Maria Mercedes Jeria"
+                }
+            ],
+            "id": "Caceres_2015",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "publisher": "INE - Chile",
+            "title": "Diseño muestral casen 2015",
+            "type": "article-journal"
+        },
+        {
+            "author": [
+                {
+                    "family": "IBGE-BR"
+                }
+            ],
+            "id": "IBGE_2014",
+            "issued": {
+                "date-parts": [
+                    [
+                        2014
+                    ]
+                ]
+            },
+            "publisher": "IBGE",
+            "title": "Pesquisa nacional por amostra de domicilios continua - notas metodológicas",
+            "type": "article-journal"
+        },
+        {
+            "author": [
+                {
+                    "family": "INE-ES"
+                }
+            ],
+            "id": "INE_ES_2002",
+            "issued": {
+                "date-parts": [
+                    [
+                        2002
+                    ]
+                ]
+            },
+            "publisher": "INE - España",
+            "title": "Encuesta de población activa - informe técnico",
+            "type": "article-journal"
+        },
+        {
             "URL": "https://www.ibge.gov.br/estatisticas-novoportal/sociais/trabalho/9173-pesquisa-nacional-por-amostra-de-domicilios-continua-trimestral.html?redirect=1",
             "author": [
                 {
                     "family": "IBGE"
                 }
             ],
-            "id": "IBGE-BR_2017",
+            "id": "IBGEBR_2017",
             "issued": {
                 "date-parts": [
                     [
@@ -2173,6 +2402,36 @@
             },
             "title": "Metodología de la construcción del marco maestro de muestreo 2012 y del diseño de la muestra maestra 2012",
             "type": "article-journal"
+        },
+        {
+            "author": [
+                {
+                    "family": "Gutiérrez",
+                    "given": "Hugo Andrés"
+                },
+                {
+                    "family": "Trujillo",
+                    "given": "Leonardo"
+                },
+                {
+                    "family": "Silva",
+                    "given": "PL. d N."
+                }
+            ],
+            "container-title": "Survey Methodology",
+            "id": "Gutierrez_Trujillo_Silva_2014",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2014
+                    ]
+                ]
+            },
+            "page": "285-321",
+            "title": "The estimation of gross flows in complex surveys with random nonresponse",
+            "type": "article-journal",
+            "volume": "40"
         },
         {
             "URL": "https://www.inegi.org.mx/programas/enoe/15ymas/",
@@ -2694,6 +2953,39 @@
             "title": "TeachingSampling: Selection of samples and parameter estimation in finite population",
             "title-short": "TeachingSampling",
             "type": "book"
+        },
+        {
+            "DOI": "10.15446/rce.v39n2.55424",
+            "ISSN": "2389-8976, 0120-1751",
+            "author": [
+                {
+                    "family": "Gutierrez",
+                    "given": "Hugo Andres"
+                },
+                {
+                    "family": "Zhang",
+                    "given": "Hanwen"
+                },
+                {
+                    "family": "Rodriguez",
+                    "given": "Nelson"
+                }
+            ],
+            "container-title": "Revista Colombiana de Estadística",
+            "id": "Gutierrez_Zhang_Rodriguez_2016",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016,
+                        7
+                    ]
+                ]
+            },
+            "page": "281",
+            "title": "The performance of multivariate calibration on ratios, means and proportions",
+            "type": "article-journal",
+            "volume": "39"
         },
         {
             "DOI": "10.1007/0-387-34240-0",
@@ -3352,32 +3644,6 @@
         {
             "author": [
                 {
-                    "family": "Feinberg",
-                    "given": "Stephen"
-                },
-                {
-                    "family": "Stasny",
-                    "given": "Elizabeth"
-                }
-            ],
-            "container-title": "Survey Methodology",
-            "id": "Feinberg_Stasny_1983",
-            "issue": "1",
-            "issued": {
-                "date-parts": [
-                    [
-                        1983
-                    ]
-                ]
-            },
-            "page": "77-102",
-            "title": "Estimating monthly gross flows in labour force participation",
-            "type": "article-journal",
-            "volume": "9"
-        },
-        {
-            "author": [
-                {
                     "family": "Hansen",
                     "given": "Morris H"
                 },
@@ -3925,26 +4191,6 @@
             "type": "book"
         },
         {
-            "author": [
-                {
-                    "family": "Lumley",
-                    "given": "Thomas"
-                }
-            ],
-            "id": "TL",
-            "issued": {
-                "date-parts": [
-                    [
-                        2016
-                    ]
-                ]
-            },
-            "note": "R package version 3.32",
-            "title": "Survey: Analysis of complex survey samples",
-            "title-short": "Survey",
-            "type": ""
-        },
-        {
             "URL": "https://www.R-project.org/",
             "author": [
                 {
@@ -3963,209 +4209,6 @@
             "publisher-place": "Vienna, Austria",
             "title": "R: A language and environment for statistical computing",
             "title-short": "R",
-            "type": "book"
-        },
-        {
-            "author": [
-                {
-                    "family": "Lumley",
-                    "given": "Thomas"
-                }
-            ],
-            "id": "TL",
-            "issued": {
-                "date-parts": [
-                    [
-                        2016
-                    ]
-                ]
-            },
-            "note": "R package version 3.32",
-            "title": "Survey: Analysis of complex survey samples",
-            "title-short": "Survey",
-            "type": ""
-        },
-        {
-            "URL": "https://www.stata.com/manuals13/svy.pdf",
-            "author": [
-                {
-                    "family": "Stata"
-                }
-            ],
-            "id": "STATA_2017",
-            "issued": {
-                "date-parts": [
-                    [
-                        2013
-                    ]
-                ]
-            },
-            "title": "STATA survey data",
-            "type": "book"
-        },
-        {
-            "author": [
-                {
-                    "family": "Barnett-Walker",
-                    "given": "Kortnee C."
-                },
-                {
-                    "family": "Chromy",
-                    "given": "James R."
-                },
-                {
-                    "family": "Davis",
-                    "given": "Teresa R."
-                },
-                {
-                    "family": "Emrich",
-                    "given": "Steven L."
-                },
-                {
-                    "family": "Odom",
-                    "given": "Dawn M."
-                },
-                {
-                    "family": "Packer",
-                    "given": "Lisa E."
-                }
-            ],
-            "id": "Barnett_Walker_Chromy_Davis_Emrich_Odom_Packer_2003",
-            "issued": {
-                "date-parts": [
-                    [
-                        2003
-                    ]
-                ]
-            },
-            "title": "2001 national household survey on drug abuse",
-            "type": "article-journal"
-        },
-        {
-            "author": [
-                {
-                    "family": "Parker",
-                    "given": "JD"
-                },
-                {
-                    "family": "Talih",
-                    "given": "M"
-                },
-                {
-                    "family": "Malec",
-                    "given": "DJ"
-                }
-            ],
-            "container-title": "Vital Health Stat",
-            "id": "Parker_Talih_Malec_2017",
-            "issue": "175",
-            "issued": {
-                "date-parts": [
-                    [
-                        2017
-                    ]
-                ]
-            },
-            "title": "National center for health statistics data presentation standards for proportions",
-            "type": "article-journal",
-            "volume": "2"
-        },
-        {
-            "author": [
-                {
-                    "family": "Hornik",
-                    "given": "Robert"
-                },
-                {
-                    "family": "Maklan",
-                    "given": "David"
-                },
-                {
-                    "family": "Cadell",
-                    "given": "Diane"
-                },
-                {
-                    "family": "Prado",
-                    "given": "Amalia"
-                },
-                {
-                    "family": "Barmada",
-                    "given": "Carlin"
-                },
-                {
-                    "family": "Jacobsohn",
-                    "given": "Lela"
-                },
-                {
-                    "family": "Orwin",
-                    "given": "Robert"
-                },
-                {
-                    "family": "Sridharan",
-                    "given": "Sanjeev"
-                },
-                {
-                    "family": "Zador",
-                    "given": "Paul"
-                },
-                {
-                    "family": "Southwell",
-                    "given": "Brian"
-                },
-                {
-                    "dropping-particle": "et",
-                    "family": "al."
-                }
-            ],
-            "id": "Hornik_Maklan_Cadell_Prado_Barmada_Jacobsohn_Orwin_Sridharan_Zador_Southwell_etal",
-            "issued": {
-                "date-parts": [
-                    [
-                        2002
-                    ]
-                ]
-            },
-            "page": "740",
-            "title": "Evaluation of the national youth anti-drug media campaign: Fourth semi-annual report of findings",
-            "title-short": "Evaluation of the national youth anti-drug media campaign",
-            "type": "article-journal"
-        },
-        {
-            "author": [
-                {
-                    "family": "Naud",
-                    "given": "Jean-Francois"
-                }
-            ],
-            "id": "Naud_2002",
-            "issued": {
-                "date-parts": [
-                    [
-                        2002
-                    ]
-                ]
-            },
-            "publisher": "Statistics Canada",
-            "title": "Combined-panel longitudinal weighting - survey of labour and income dynamics",
-            "type": "book"
-        },
-        {
-            "author": [
-                {
-                    "family": "LaRoche",
-                    "given": "Silvia"
-                }
-            ],
-            "id": "LaRoche_2003",
-            "issued": {
-                "date-parts": [
-                    [
-                        2003
-                    ]
-                ]
-            },
-            "publisher": "Statistics Canada",
-            "title": "Longitudinal and cross-sectional weighting of the survey of labour and income dynamics",
             "type": "book"
         },
         {
