@@ -172,7 +172,10 @@ $$
 
 De manera similar, para mantener la simetría, cuando $P>0,5$ se realiza un ajuste definiendo $\hat{L} = -\log(1-\hat{P})$. Por lo tanto, para proporciones centrales, los coeficientes de variación de $\hat{P}$ y $\hat{L}$ serán comparables, puesto que $\hat{L}$ toma valores cercanos a uno cuando $P \in (0,2\ \ ,\ \ 0,8)$, y en este caso el $CV(\hat{L})$ será similar a $CV(\hat{P})$.
 
-![(\#fig:unnamed-chunk-1)\label{fig1}*Relación entre el tamaño de muestra y la precisión de un indicador utilizando la transformación Logit*.](19Calidad_files/figure-latex/unnamed-chunk-1-1.pdf) 
+<div class="figure">
+<img src="19Calidad_files/figure-html/unnamed-chunk-1-1.svg" alt="\label{fig1}*Relación entre el tamaño de muestra y la precisión de un indicador utilizando la transformación Logit*." width="672" />
+<p class="caption">(\#fig:unnamed-chunk-1)\label{fig1}*Relación entre el tamaño de muestra y la precisión de un indicador utilizando la transformación Logit*.</p>
+</div>
 
 La figura \ref{fig1} muestra que, al igual que con el coeficiente de variación original, el tamaño de muestra aumentará a medida que se requiera mayor precisión en la estimación; pero a diferencia del coeficiente de variación original, el tamaño de muestra será idéntico para los fenómenos que induzcan proporciones simétricas. Además, el tamaño de muestra necesario para estimar eficientemente la proporción $P$ con una precisión mayor a un determinado umbral del coeficiente de variación $\delta$ es:  
 
