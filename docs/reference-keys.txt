@@ -8,3 +8,8 @@ el-ciclo-de-vida-de-una-encuesta
 inferencia-individual
 inferencia-grupal
 el-proceso-de-respuesta
+elementos-básicos
+universo-muestra-y-unidades
+periodicidad-en-el-tiempo
+rotación-de-paneles
+parámetros-e-indicadores-de-interés

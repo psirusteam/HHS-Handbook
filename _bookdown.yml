@@ -9,7 +9,7 @@ rmd_files: [
   "01Intro.Rmd",
   
   "02ErrorTotal.Rmd",
-  # "03Tipos.Rmd",
+  "03Elementos.Rmd",
   # "04Marcos.Rmd",
   # "05Estratificar.Rmd",
   # "06Diseno.Rmd",
