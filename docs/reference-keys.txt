@@ -13,3 +13,7 @@ universo-muestra-y-unidades
 periodicidad-en-el-tiempo
 rotación-de-paneles
 parámetros-e-indicadores-de-interés
+definición-del-marco-muestral
+el-marco-de-muestreo
+los-censos-y-su-incidencia-en-los-marcos-de-muestreo
+construcción-de-las-upm
