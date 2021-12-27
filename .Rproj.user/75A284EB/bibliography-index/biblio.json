@@ -3289,6 +3289,36 @@
             "type": "book"
         },
         {
+            "author": [
+                {
+                    "family": "Baillargeon",
+                    "given": "Sophie"
+                },
+                {
+                    "family": "Rivest",
+                    "given": "Louis-Paul"
+                },
+                {
+                    "family": "Ferland",
+                    "given": "Michel"
+                }
+            ],
+            "collection-title": "Recueil de la section des méthodes d’enquête",
+            "container-title": "Assemblée annuelle de la SSC",
+            "id": "Baillargeon_Rivest_Ferland_2007",
+            "issued": {
+                "date-parts": [
+                    [
+                        2007
+                    ]
+                ]
+            },
+            "page": "8",
+            "title": "STRATIFICATION EN ENQUêTES ENTREPRISES: UNE REVUE ET QUELQUES AVANCéES",
+            "title-short": "STRATIFICATION EN ENQUêTES ENTREPRISES",
+            "type": "article-journal"
+        },
+        {
             "ISSN": "0033362X, 15375331",
             "author": [
                 {
