@@ -61,6 +61,7 @@ $$
 \hat{t}_{y,\pi}=t_x \ \sum_s\frac{y_k}{n\ x_k}
 $$
 
+Por último, no es cierto que la asignación de probabilidades desiguales en las unidades de muestreo induzca sesgo en la encuesta Por ejemplo, cuando se utiliza el estimador de expansión (Hansen-Hurwitz, para el caso de muestreos con reemplazo - Horvitz-Thompson, en muestreos sin reemplazo) el sesgo es nulo bajo estas condiciones. Sin embargo, si se utilizara un estimador que no haga uso de los factores de expansión, la inferencia sí estaría sesgada. Por ende, lo natural es que si el diseño es con probabilidades desiguales, éstas se utilicen dentro de un estimador que considere esta desigualdad; luego sería incorrecto que se utilice otro estimador diferente al estimador de expansión.
 
 #### Muestreo estratificado {-}
 
@@ -89,6 +90,7 @@ $$
 \hat{t}_{y,\pi}=\frac{N_I}{n_I}\sum_{S_I}t_{yi}
 $$
 
+Como se mencionó en los capítulos anteriores, definir los conglomerados con tamaños muy desiguales redunda en un aumento significativo de la varianza del estimador; es por esto que, en encuestas de hogares, se intenta crear conglomerados acotados, a nivel de manzana, o vereda. Esta es una práctica muy pertinente, puesto que la varianza del estimador de expansión estará en función de la varianza de los totales de los conglomerados; si existe una alta variación en los tamaños, habrá también una alta variación en los totales y, por consiguiente, la varianza del estimador será alta. De otra forma, si se tiene conocimiento de una característica de información auxiliar a nivel de los conglomerados (medida de tamaño), es posible hacer uso de esta información del marco para reducir la varianza en el estimador.
 
 #### Muestreo en dos etapas {-}
 

@@ -26,3 +26,6 @@ metodologías-univariadas-sobre-medidas-de-resumen
 metodologías-multivariadas-sobre-la-matriz-de-información
 evaluación-y-escogencia-de-la-mejor-estratificación
 estratificación-implícita
+diseño-y-mecanismo-de-selección-de-la-muestra
+diseños-de-muestreo
+el-diseño-de-muestreo-estándar-en-una-encuesta-de-hogares
