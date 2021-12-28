@@ -54,7 +54,7 @@ Var(\hat{t}_{y,\pi}) &= \frac{N^2}{n}\left(1-\frac{n}{N}\right)S^2_{y_U}
 \end{align*}
 
 Una variante de este tipo de esquemas de selección de muestras de hogares dentro de la UPM es el muestreo sistemático, en donde se ordena el marco con algún patrón predefinido y posteriormente se selecciona un primer hogar (como arranque aleatorio). A partir de ese primer hogar seleccionado, se incluyen los restantes hogares en la muestra mediante saltos sistemáticos equi-espaciados por el siguiente factor $a = \left \lfloor{N/n}\right \rfloor$, conocido como el intervalo de salto. Por ejemplo, una muestra sistemática podría ser:
-$$s=\{2, 12, 22, 32, 42\}$$.
+$$s=\{2, 12, 22, 32, 42\}.$$
 
 En donde el primer hogar elegido en la UPM fue el segundo y con saltos sistemáticos de diez hogares se va encuestando los restantes hogares en la lista. En este diseño la probabilidad de inclusión también es uniforme para cada hogar en la UPM y está dada por la siguiente expresión
 $$\pi_k = Pr(k \in s) = \frac{1}{a} \approx \frac{n}{N}$$

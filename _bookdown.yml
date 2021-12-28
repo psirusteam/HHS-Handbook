@@ -14,7 +14,7 @@ rmd_files: [
   "05Estratificar.Rmd",
   "06Diseno.Rmd",
   "07Deff.Rmd",
-  # "08Tamano.Rmd",
+  "08Tamano.Rmd",
   # 
   # "09Estimadores.Rmd",
   # "10Ponderadores.Rmd",
