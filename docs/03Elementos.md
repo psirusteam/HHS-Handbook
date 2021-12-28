@@ -212,10 +212,10 @@ En donde $y_k$ determina el ingreso del individuo $k$, $u$ se refiere al umbral 
 En este punto vale la pena resaltar que, en la definición de los parámetros básicos que se quieren estimar en una encuesta, el papel de los totales poblacionales es absolutamente relevante. De igual manera, existen otros parámetros que pueden ser considerados complejos - no por su forma funcional, sino por los procesos complejos que hay detrás del levantamiento de la información primaria - pero que al igual que los mencionados anteriormente resultan ser también una función de totales poblacionales. Por ejemplo, considere el **cambio neto** de los totales de la variable de interés $y$ en dos periodos de tiempo ($t_1$ y $t_2$) dado por la siguiente expresión:
 
 $$
-\Delta_y = t_{y}^2 - t_{y}^1
+\Delta_y = t_{y^{(2)}} - t_{y^{(1)}}
 $$
 
-En donde $t_{y}^2$ es el total de interes en el tiempo $t = 2$, y $t_{y}^1$ lo es en el tiempo $t=1$. Este tipo de parámetros son muy comunes en las encuestas que se realizan para conocer la estructura y los cambios del mercado de trabajo. Por ejemplo, la siguiente tabla muestra la composición del mercado de trabajo en una población observada en dos periodos de interés. De esta forma, los totales marginales de la tabla corresponden a los **cambios netos** que permiten una comparación simple con el periodo anterior. Específicamente, es posible observar que hay 313 mil empleados menos, 80 mil desempleados menos y 393 mil inactivos más en el segundo periodo, en comparación al primero.
+En donde $t_{y^{(2)}}$ es el total de interes en el tiempo $t = 2$, y $t_{y^{(1)}}$ lo es en el tiempo $t=1$. Este tipo de parámetros son muy comunes en las encuestas que se realizan para conocer la estructura y los cambios del mercado de trabajo. Por ejemplo, la siguiente tabla muestra la composición del mercado de trabajo en una población observada en dos periodos de interés. De esta forma, los totales marginales de la tabla corresponden a los **cambios netos** que permiten una comparación simple con el periodo anterior. Específicamente, es posible observar que hay 313 mil empleados menos, 80 mil desempleados menos y 393 mil inactivos más en el segundo periodo, en comparación al primero.
 
 | Condición    	| Ocupado 	| Desocupado  	| Inactivo 	| **Total** 	|
 |:------------:	|:------------:	|:----------:	|:-------:	|:-------:	|

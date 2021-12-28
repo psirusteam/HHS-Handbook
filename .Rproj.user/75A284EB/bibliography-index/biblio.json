@@ -2878,11 +2878,11 @@
                     "literal": "R Core Team"
                 }
             ],
-            "id": "R_2017",
+            "id": "R2020",
             "issued": {
                 "date-parts": [
                     [
-                        2017
+                        2020
                     ]
                 ]
             },
@@ -2913,22 +2913,21 @@
             "type": ""
         },
         {
-            "URL": "https://CRAN.R-project.org/package=samplesize4surveys",
             "author": [
                 {
-                    "family": "Gutiérrez",
-                    "given": "Hugo Andrés"
+                    "family": "Rojas",
+                    "given": "Hugo Andres Gutierrez"
                 }
             ],
             "id": "ss4s",
             "issued": {
                 "date-parts": [
                     [
-                        2016
+                        2020
                     ]
                 ]
             },
-            "note": "R package version 3.1.2.400",
+            "note": "R package version 4.1.1",
             "title": "samplesize4surveys: Sample size calculations for complex surveys",
             "title-short": "samplesize4surveys",
             "type": "book"

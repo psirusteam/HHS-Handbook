@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 9 Estimación de parámetros | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
+  <title>8.5 El tamaño de muestra frente al \(ME\), el \(MER\) y el \(CV\). | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Capítulo 9 Estimación de parámetros | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
+  <meta property="og:title" content="8.5 El tamaño de muestra frente al \(ME\), el \(MER\) y el \(CV\). | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 9 Estimación de parámetros | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
+  <meta name="twitter:title" content="8.5 El tamaño de muestra frente al \(ME\), el \(MER\) y el \(CV\). | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   
   <meta name="twitter:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="algunas-consideraciones-adicionales.html"/>
-<link rel="next" href="el-estimador-de-horvitz-thompson-para-totales-y-tamaños-poblacionales.html"/>
+<link rel="prev" href="otros-escenarios-de-interés.html"/>
+<link rel="next" href="algunas-consideraciones-adicionales.html"/>
 <script src="libs/header-attrs-2.8/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -213,10 +213,10 @@ div.csl-indent {
 <li class="chapter" data-level="8.4.2" data-path="otros-escenarios-de-interés.html"><a href="otros-escenarios-de-interés.html#tamaño-de-muestra-para-la-estimación-del-impacto-en-dos-mediciones-longitudinales"><i class="fa fa-check"></i><b>8.4.2</b> Tamaño de muestra para la estimación del impacto en dos mediciones longitudinales</a></li>
 <li class="chapter" data-level="8.4.3" data-path="otros-escenarios-de-interés.html"><a href="otros-escenarios-de-interés.html#tamaño-de-muestra-para-el-contraste-de-hipótesis-en-la-diferencia-de-proporciones"><i class="fa fa-check"></i><b>8.4.3</b> Tamaño de muestra para el contraste de hipótesis en la diferencia de proporciones</a></li>
 </ul></li>
-<li class="chapter" data-level="8.5" data-path="algunas-relaciones-de-interés-para-proporciones.html"><a href="algunas-relaciones-de-interés-para-proporciones.html"><i class="fa fa-check"></i><b>8.5</b> Algunas relaciones de interés para proporciones</a>
+<li class="chapter" data-level="8.5" data-path="el-tamaño-de-muestra-frente-al-me-el-mer-y-el-cv-.html"><a href="el-tamaño-de-muestra-frente-al-me-el-mer-y-el-cv-.html"><i class="fa fa-check"></i><b>8.5</b> El tamaño de muestra frente al <span class="math inline">\(ME\)</span>, el <span class="math inline">\(MER\)</span> y el <span class="math inline">\(CV\)</span>.</a>
 <ul>
-<li class="chapter" data-level="" data-path="algunas-relaciones-de-interés-para-proporciones.html"><a href="algunas-relaciones-de-interés-para-proporciones.html#estimación-de-proporciones"><i class="fa fa-check"></i>Estimación de proporciones</a></li>
-<li class="chapter" data-level="" data-path="algunas-relaciones-de-interés-para-proporciones.html"><a href="algunas-relaciones-de-interés-para-proporciones.html#cambios-netos"><i class="fa fa-check"></i>Cambios netos</a></li>
+<li class="chapter" data-level="" data-path="el-tamaño-de-muestra-frente-al-me-el-mer-y-el-cv-.html"><a href="el-tamaño-de-muestra-frente-al-me-el-mer-y-el-cv-.html#estimación-de-proporciones"><i class="fa fa-check"></i>Estimación de proporciones</a></li>
+<li class="chapter" data-level="" data-path="el-tamaño-de-muestra-frente-al-me-el-mer-y-el-cv-.html"><a href="el-tamaño-de-muestra-frente-al-me-el-mer-y-el-cv-.html#cambios-netos"><i class="fa fa-check"></i>Cambios netos</a></li>
 </ul></li>
 <li class="chapter" data-level="8.6" data-path="algunas-consideraciones-adicionales.html"><a href="algunas-consideraciones-adicionales.html"><i class="fa fa-check"></i><b>8.6</b> Algunas consideraciones adicionales</a>
 <ul>
@@ -235,11 +235,12 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="9.2" data-path="el-estimador-de-hájek-para-medias-y-proporciones.html"><a href="el-estimador-de-hájek-para-medias-y-proporciones.html"><i class="fa fa-check"></i><b>9.2</b> El estimador de Hájek para medias y proporciones</a></li>
 <li class="chapter" data-level="9.3" data-path="otros-estimadores-de-muestreo.html"><a href="otros-estimadores-de-muestreo.html"><i class="fa fa-check"></i><b>9.3</b> Otros estimadores de muestreo</a></li>
-<li class="chapter" data-level="9.4" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html"><i class="fa fa-check"></i><b>9.4</b> Estimadores de calibración</a>
+<li class="chapter" data-level="9.4" data-path="estimación-en-subgrupos-poblacionales.html"><a href="estimación-en-subgrupos-poblacionales.html"><i class="fa fa-check"></i><b>9.4</b> Estimación en subgrupos poblacionales</a></li>
+<li class="chapter" data-level="9.5" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html"><i class="fa fa-check"></i><b>9.5</b> Estimadores de calibración</a>
 <ul>
-<li class="chapter" data-level="9.4.1" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html#ganancia-en-eficiencia"><i class="fa fa-check"></i><b>9.4.1</b> Ganancia en eficiencia</a></li>
-<li class="chapter" data-level="9.4.2" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html#diferentes-formas-del-estimador-de-calibración"><i class="fa fa-check"></i><b>9.4.2</b> Diferentes formas del estimador de calibración</a></li>
-<li class="chapter" data-level="9.4.3" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html#la-calibración-como-un-cambio-de-paradigma"><i class="fa fa-check"></i><b>9.4.3</b> La calibración como un cambio de paradigma</a></li>
+<li class="chapter" data-level="9.5.1" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html#ganancia-en-eficiencia"><i class="fa fa-check"></i><b>9.5.1</b> Ganancia en eficiencia</a></li>
+<li class="chapter" data-level="9.5.2" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html#diferentes-formas-del-estimador-de-calibración"><i class="fa fa-check"></i><b>9.5.2</b> Diferentes formas del estimador de calibración</a></li>
+<li class="chapter" data-level="9.5.3" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html#la-calibración-como-un-cambio-de-paradigma"><i class="fa fa-check"></i><b>9.5.3</b> La calibración como un cambio de paradigma</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
@@ -263,51 +264,57 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="estimación-de-parámetros" class="section level1" number="9">
-<h1><span class="header-section-number">Capítulo 9</span> Estimación de parámetros</h1>
-<p>Un estimador se define como una función de la muestra aleatoria, el cual toma valores en los reales y solo depende de los elementos pertenecientes a la muestra. A su vez, un diseño de muestreo, se define por el soporte que es el conjunto <span class="math inline">\(Q\)</span> de todas las posibles muestras. Las propiedades estadísticas de un estimador están determinadas por la medida de probabilidad discreta inducida por el diseño de muestreo. Es decir, dada la probabilidad de selección de cada muestra <span class="math inline">\(s \in Q\)</span>, la esperanza, la varianza y otras propiedades de interés de los estimadores están definidas a partir de <span class="math inline">\(p(s)\)</span>. En particular, la esperanza de un estimador <span class="math inline">\(\hat\theta\)</span> sigue la siguiente expresión:</p>
-<p><span class="math display">\[
-E(\hat\theta) = \sum_{s\subset Q} \theta(s)p(s)
-\]</span></p>
-<p>Las propiedades más comúnmente buscadas en un estimador <span class="math inline">\(\hat\theta\)</span> son el insesgamiento, la eficiencia y la consistencias. De esta manera, el sesgo está definido por la siguiente expresión:</p>
-<p><span class="math display">\[
-B(\hat\theta)=E(\hat\theta)-\theta
-\]</span></p>
-<p>y el error cuadrático medio, dado por</p>
-<p><span class="math display">\[
-ECM(\hat\theta)=E[\hat\theta-\theta]^2=Var(\hat\theta)+B^2(\hat\theta).
-\]</span></p>
-<p>Si el sesgo de un estimador es nulo, se dice que el estimador es insesgado y cuando esto ocurre el error cuadrático medio se convierte en la varianza del estimador. Además si la varianza del estimador es pequeña en relación con otros estimadores, se dice que el estimador es eficiente. Por último, si cuando el tamaño de muestra crece, el valor del estimador se acerca al parámetro desconocido, se dice que el estimador es consistente. <span class="citation"><a href="#ref-Sarndal_Swensson_Wretman_2003" role="doc-biblioref">C.-E. Särndal, Swensson, y Wretman</a> (<a href="#ref-Sarndal_Swensson_Wretman_2003" role="doc-biblioref">2003</a>)</span> afirman que el objetivo en un estudio por muestreo es estimar uno a más parámetros poblacionales. <span class="citation"><a href="#ref-Gutierrez_2016" role="doc-biblioref">H. A. Gutiérrez</a> (<a href="#ref-Gutierrez_2016" role="doc-biblioref">2016</a>)</span> resalta que las decisiones más importantes a la hora de abordar un problema de estimación por muestreo son</p>
+<div id="el-tamaño-de-muestra-frente-al-me-el-mer-y-el-cv." class="section level2" number="8.5">
+<h2><span class="header-section-number">8.5</span> El tamaño de muestra frente al <span class="math inline">\(ME\)</span>, el <span class="math inline">\(MER\)</span> y el <span class="math inline">\(CV\)</span>.</h2>
+<p>Cuando se trata de estadísticas de la fuerza laboral, una variable clave para el diseño de una encuesta de hogares que mida la dinámica del mercado de trabajo es el estado de los individuos en la fuerza laboral. Para los gobiernos, es de interés proporcionar un conjunto de indicadores destinados a medir y rastrear la ocupación de los ciudadanos del país (o región). Por ejemplo, se puede obtener estimaciones de la tasa de desempleo actual (medida mensual o trimestralmente); asimismo, también son de interés la variación neta entre dos períodos y los flujos brutos entre categorías de empleo entre períodos.</p>
+<p>Es posible mencionar tres tipos de planificación en las encuestas de hogares desde las cuales es posible abordar adecuadamente las características particulares de los estudios de fuerza laboral. La primera es a través de las encuestas repetidas,donde se realizan mediciones similares en diferentes puntos del tiempo a diferentes personas cada vez. La segunda son las encuestas de panel, donde se realizan mediciones en diferentes puntos en el tiempo a las mismas personas cada vez. La tercera son las encuestas rotativas, donde se incluyen elementos y se siguen en la muestra durante un período específico, y a medida que salen de la muestra, se agregan nuevos elementos.</p>
+<p>Una regla general común para calcular el tamaño de la muestra afirma que como la variable de diseño es dicotómica (dependiendo del estado de empleo), la varianza de ese tipo de variables encuentra su máximo cuando la probabilidad de éxito es 0.5. Sin embargo, si las políticas públicas en un país se centran en lograr que la tasa de desempleo sea baja a través de algunas intervenciones gubernamentales que afectan (positivamente) a la fuerza laboral, y si esas estrategias son efectivas, entonces la probabilidad de éxito de la variable de diseño cambia y puede afectar el tamaño de la muestra de las encuestas de hogares.</p>
+<p>En esta sección documento, centramos nuestra atención en el tamaño de la muestra inducido por el control del margen de error; en donde a medida que la proporción disminuye, el tamaño de la muestra aumenta sustancialmente. Sin embargo, al controlar el margen de error, debido a que la función de varianza detrás de este enfoque es simétrica alrededor de 0.5, se puede encontrar que el mismo tamaño de muestra necesario para cumplir con los requisitos de calidad para cualquier proporción <span class="math inline">\((P_d)\)</span> es el mismo que el requerido para satisfacer los requisitos de calidad para su complemento aditivo <span class="math inline">\((1 - P_d)\)</span>.</p>
+<p>A continuación se proporciona varios ejemplos que tipifican algunos escenarios que se pueden encontrar en la práctica. Los cálculos se pueden reproducir empleando el software estadístico <code>R</code> <span class="citation">(<a href="#ref-R2020" role="doc-biblioref">R Core Team 2020</a>)</span>, mediante el uso de la biblioteca <code>samplesize4surveys</code> <span class="citation">(<a href="#ref-ss4s" role="doc-biblioref">Rojas 2020</a>)</span>, utilizando específicamente las funciones <code>ss4p</code> y <code>ss4dp</code></p>
+<div id="estimación-de-proporciones" class="section level3 unnumbered">
+<h3>Estimación de proporciones</h3>
 <ol style="list-style-type: decimal">
-<li>La escogencia de un diseño de muestreo y un algoritmo de selección que permita implementar el diseño.</li>
-<li>La elección de una fórmula matemática o estimador que calcule una estimación del parámetro de interés en la muestra seleccionada.</li>
+<li><p>Primer escenario: si la tasa de desempleo es baja, digamos <span class="math inline">\({P}=0.05\)</span> y el margen de error se fija en <span class="math inline">\(ME = 0.0025\)</span>, entonces el intervalo de confianza esperado sería <span class="math inline">\(IC=0.05\pm0.0025=(0.0475,0.0525)\)</span>. En este caso el tamaño de muestra requerido es de alrededor de 55169.</p></li>
+<li><p>Segundoescenario: si la tasa de desempleo es alta, digamos <span class="math inline">\({P}=0.2\)</span>, y el margen de error de error se fija en <span class="math inline">\(ME = 0.01\)</span>, entonces el intervalo de confianza sería <span class="math inline">\(IC=0.2\pm0.01=(0.19,0.21)\)</span>, y el tamaño de muestra requerido es 12144.</p></li>
 </ol>
-<p>Las anteriores no son decisiones independientes. Es decir, la escogencia de un estimador dependerá, usualmente, del diseño de muestreo utilizado. De hecho, si <span class="math inline">\(\hat\theta\)</span> es un estimador del parámetro <span class="math inline">\(\theta\)</span> y <span class="math inline">\(p_s(\cdot)\)</span> un diseño de muestreo definido sobre un soporte <span class="math inline">\(Q\)</span>, entonces la estrategia de muestreo será la dupla <span class="math inline">\((p(\cdot),\hat{T})\)</span>. A continuación se presentan algunos estimadores comúnmente usados en el procesamiento de las encuestas de hogares en la región.</p>
-<p>Aunque el marco de referencia de la teoría de muestreo es la estimación de un parámetro de interés, lo cierto es que en la práctica no solo se necesitan estimaciones que cobijen la población entera sino que también son indispensables estimaciones que involucren subgrupos poblacionales, puesto que estos inducen una partición de la población de interés. En general, es bien sabido que cuando se habla de subgrupos poblacionales se está haciendo referencia a dominios de interés, estratos o postestratos. Cuando el investigador se enfrenta a una encuesta que tiene en cuenta subgrupos poblacionales (es decir, siempre) es indispensable conocer en qué se diferencian cada uno de ellos, pues de esto depende que la investigación arroje resultados confiables mediante el planteamiento de la mejor estrategia de muestreo.</p>
-<p>Asumiendo que <span class="math inline">\(U_1, \ldots, U_g, \ldots, U_G\)</span> denotan los subgrupos poblacionales tales que <span class="math inline">\(\bigcup_{g=1}^GU_g=U\)</span>, y siendo <span class="math inline">\(N_g\)</span> el tamaño absoluto del subgrupo <span class="math inline">\(U_g\)</span>, entonces se tiene que <span class="math inline">\(\sum_{g=1}^G N_g=N\)</span>. A partir de las anteriores definiciones, se pueden plantear algunas diferencias y similitudes entre cada uno de ellos. A continuación se resumen:</p>
+<p>Nótese que ambos escenarios dan lugar al mismo margen de error relativo (MER), definido como <span class="math inline">\(MER=\frac{ME}{{P}}\)</span>. En efecto, para el primero, tenemos <span class="math inline">\(MER=(0.0025/0.05)\times 100\%=5\%\)</span>, y para el segundo, tenemos <span class="math inline">\(MER=(0.01/0.2)\times 100\%=5\%\)</span>. Por lo tanto, incluso para el mismo margen de error relativo, el tamaño de la muestra debe ser mayor si el fenómeno que nos interesa tiene una baja incidencia en la población finita. De hecho, es posible definir una función de información para saber si el tamaño de su muestra es suficiente para cumplir con los requisitos de calidad para una proporción determinada. Esto es útil porque no se sabe exactamente qué valor tomará la proporción. Además, si la encuesta de hogares intenta estimar otras proporciones (como en una encuesta multipropósito), se encontrará rápidamente si su tamaño de muestra actual es adecuado para todo el estudio.</p>
+<ol start="3" style="list-style-type: decimal">
+<li><p>Tercer escenario: si el tamaño de la muestra se define como <span class="math inline">\(n = 10000\)</span>, y la proporción es <span class="math inline">\(P=0.2\)</span>, entonces el coeficiente de variación será de 2,8% y el margen de error será del 1.1%. Es posible notar que todas las proporciones estimadas tendrán un margen de error inferior al 1.4%.</p></li>
+<li><p>Cuarto escenario: si el tamaño de la muestra se define como <span class="math inline">\(n = 40000\)</span>, y la proporción se centra en <span class="math inline">\(P=0.05\)</span>, entonces el coeficiente de variación será del 3% y el margen de error será de 0.2%. Es posible notar que todas las proporciones estimadas tendrán un margen de error inferior al 0.7%.</p></li>
+</ol>
+<p>Teniendo en cuenta que, para una proporción <span class="math inline">\(P\)</span> dada, el tamaño de muestra requerido para lograr un margen de error particular es el mismo que para su complemento aditivo <span class="math inline">\(1-P\)</span>, como es de esperar, si un tamaño de muestra alcanza los requisitos para una proporción establecida, también alcanzará los requisitos de calidad para cualquier proporción superior.</p>
+<p>Sin embargo, para una proporción <span class="math inline">\(P\)</span>, el tamaño muestral requerido para lograr un coeficiente de variación particular no es el mismo que para su complemento aditivo <span class="math inline">\(1-P\)</span>. Luego, para una proporción baja, se puede encontrar que con un tamaño de muestra dado el coeficiente de variación será mayor que para su complemento aditivo. Sobre la base de los resultados encontrados en esta sección, y bajo un <span class="math inline">\(MER\)</span> fijo (5% en todos los casos), encontramos que al intentar estimar proporciones (como la tasa de desempleo):</p>
 <ul>
-<li><p><em>Dominios de interés</em>: este tipo de subgrupos poblacionales son aquellos para los cuales se requieren estimaciones separadas. Estos requerimientos se planean en la etapa de diseño para asegurar que el diseño de la muestra sea tal que al momento de la recolección de la información exista una cobertura apropiada en cada uno de los dominios de interés. Por lo general, lo anterior sólo se puede lograr ampliando el tamaño de muestra <span class="math inline">\((n)\)</span>, puesto que el marco de muestreo no informa acerca de la pertenencia de los individuos a los dominios de interés. Un aspecto importante de esta clase de subgrupos poblacionales es que el número de individuos en la muestra que pertenecen a un dominio de interés es siempre aleatorio, y para algunos dominios particulares puede llegar a ser muy pequeño. Por otro lado el tamaño absoluto de cada dominio no se conoce ni antes de la etapa de diseño ni después de la etapa de estimación. Un ejemplo claro de estos subgrupos es la condición de ocupación, la condición de pobreza, la rama de actividad, entre otros.</p></li>
-<li><p><em>Estratos</em>: cuando el marco de muestreo permite conocer la pertenencia de todos los individuos de la población a un subgrupo poblacional, se dice que esta clase de subgrupos se llaman estratos. Más aun, cuando se sabe que la característica de interés tiene un comportamiento distinto en cada uno de los estratos y se planea un diseño de muestreo que tenga en cuenta este aspecto mediante la selección aleatoria de unidades en cada uno de los estratos, se dice que el diseño de muestreo es estratificado. El aspecto fundamental de esta clase de subgrupos poblacionales es que el conocimiento de la pertenencia de los individuos a los estratos se incorpora en la etapa de diseño de la muestra. Nótese que a diferencia de los dominios, en los estrato se conoce el tamaño poblacional y se controla el tamaño de muestra antes de la etapa de estimación. Un ejemplo claro de estos subgrupos son las zonas urbanas o rurales, regiones y municipios.</p></li>
-<li><p><em>Postestratos</em>: la propiedad que caracteriza a este tipo de subgrupos poblacionales es que aunque en la etapa de diseño el tamaño del postestrato es conocido, se desconoce el número de individuos que pertenecerán al postestrato en la muestra seleccionada. Un ejemplo claro de estos subgrupos son los grupos etarios, el sexo o la etnia que, si bien no siempre son utilizadas en la fase de diseño, sí se utilizan sus proyecciones demográficas en la fase de análisis para analizar mejorar la eficiencia de los estimadores. Al respecto <span class="citation"><a href="#ref-Sarndal_Swensson_Wretman_2003" role="doc-biblioref">C.-E. Särndal, Swensson, y Wretman</a> (<a href="#ref-Sarndal_Swensson_Wretman_2003" role="doc-biblioref">2003</a>)</span> afirman que existen dos situaciones en las cuales se presenta esta situación, llamada comúnmente postestratificación:</p>
-<ul>
-<li>Cuando el marco de muestreo es tal que se conoce la pertenencia de todos los elementos a los subgrupos poblacionales pero el investigador decide no utilizar esta información en la etapa de diseño. Las razones para esto son diversas pero principalmente se decide obviar este tipo de información por practicidad logística. Una vez que se ha realizado la selección de la muestra, se observa la característica de interés <span class="math inline">\(y_k\)</span> en los individuos de la muestra. El investigador decide utilizar la información auxiliar de pertenencia a los postestratos en la etapa de estimación para mejorar la eficiencia de la estrategia de muestreo, en particular del estimador propuesto.</li>
-<li>Mediante alguna fuente de información confiable se conocen los tamaños absolutos <span class="math inline">\(N_g\)</span> de cada subgrupo poblacional aunque se desconoce la pertenencia de los individuos a los subgrupos, pues el marco de muestreo presenta esta deficiencia. Después de la etapa de diseño, se observa la característica de interés y se pregunta acerca de la pertenencia de los individuos seleccionados en los postestratos de tal forma que en la etapa estimación se utiliza esta información para mejorar la eficiencia de los estimadores de los parámetros de interés.</li>
-</ul></li>
+<li>Si la proporción es baja, anticipamos un gran tamaño de muestra.</li>
+<li>Si la proporción es alta, esperamos un tamaño de muestra pequeño.</li>
 </ul>
-<p>Es posible afirmar que el análisis apropiado de una encuesta no puede pasar por alto las diferencias de estos subgrupos. Es más, el diseño y rediseño de las encuestas se basan fundamentalmente en la búsqueda de estos subgrupos en la población. En todas las encuestas de hogares que se planean en América Latina se busca investigar fenómenos asociados a subgrupos poblacionales que se encuentran dispersos en la geografía de los países y, en general, se podría especificar los siguientes aspectos:</p>
-<ol style="list-style-type: decimal">
-<li>El tamaño de muestra de una encuesta casi siempre se basa en la incidencia de un fenómeno que clasifica a la población en algún dominio de interés.</li>
-<li>Este tamaño de muestra se reparte entre los diferentes estratos geográficos para mejorar la eficiencia del levantamiento de la información y del diseño de muestreo.</li>
-<li>En muchas ocasiones, las proyecciones demográficas sobre los post-estratos son utilizadas en la fase de estimación para mejorar la precisión de los estimadores.</li>
+</div>
+<div id="cambios-netos" class="section level3 unnumbered">
+<h3>Cambios netos</h3>
+<p>Ahora dirigimos nuestra atención a los cambios netos en la tasa de desempleo durante dos períodos, <span class="math inline">\(\Delta= |P_{1}-P_{2}|\)</span>. Este tipo de parámetro se puede estimar utilizando una encuesta repetida, rotativa o de panel. Sin embargo, como se evidenció en las anteriores secciones, hay una reducción en el tamaño de la muestra si se intentan estimar los cambios netos desde una encuesta rotativa o de panel. Como no estamos estimando una proporción, sino un cambio neto,tenemos que considerar qué valores son adecuados para el establecer el margen de error absoluto.</p>
+<ol start="5" style="list-style-type: decimal">
+<li><p>Quinto escenario: si no esperamos cambios significativos entre ambos períodos, y las tasas de desempleo son altas, por ejemplo <span class="math inline">\(\Delta \approx |0.22-0.20|=0.02\)</span>, y el margen de error se fija en <span class="math inline">\(ME = 0.001\)</span>, entonces el intervalo de confianza sería <span class="math inline">\(IC=0.02 \pm 0.001=(0.019,0.021)\)</span>, y el tamaño de muestra requerido estaría alrededor de 96224.</p></li>
+<li><p>Sextoescenario: si no esperamos cambios significativos entre períodos, y las tasas de desempleo son bajas, por ejemplo <span class="math inline">\(\Delta \approx |0.05-0.03| =0.02\)</span>, y el margen de error se fija en <span class="math inline">\(ME = 0.001\)</span>, entonces el intervalo de confianza sería <span class="math inline">\(IC=0.02\pm0.001=(0.019,0.021)\)</span>, y el tamaño de muestra requerido debería ser de 59536.</p></li>
+<li><p>Séptimo escenario: si esperamos cambios significativos entre períodos, y las tasas de desempleo difierenpor ejemplo <span class="math inline">\(\Delta \approx|0.05-0.20|=0.15\)</span> y el margen de error se fija en <span class="math inline">\(ME = 0.0075\)</span>, entonces el intervalo de confianza sería <span class="math inline">\(IC=0.15\pm0.0075=(0.1425,0.1575)\)</span>, y el tamaño de muestra requerido estaría alrededor de 22083.</p></li>
 </ol>
+<p>Nótese qeu los escenarios quinto, sexto y séptimo dan como resultado el mismo <span class="math inline">\(MER\)</span>, definido como
+<span class="math inline">\(MER=\frac{ME}{\mathrm{\Delta}}\)</span>. En efecto, para el séptimo escenario tenemos <span class="math inline">\(MER=\)</span>(0.0075/0.15)%=5%, y para el quinto y sexto, tenemos <span class="math inline">\(MER=\)</span>(0.001/0.02)%=5%. Por lo tanto, incluso para el mismo valor del cambio neto, el tamaño de la muestra no será el mismo y variará dependiendo de la configuración de las proporciones. Por supuesto, hay que esperar cambios más drásticos si varía la porción del traslape y la correlación entre períodos.</p>
+<p>Además, se debe tener en cuenta que es posible encontrar diferentes configuraciones de proporciones en ambos periodos que induzcan el mismo valor en el cambio neto. Contrariamente a lo que se esperaría, si un tamaño de muestra alcanza los requisitos de calidad para un parámetro <span class="math inline">\(\Delta\)</span>, no necesariamente cumplirá con los requisitos de calidad para el mismo valor nominal del cambio neto bajo una configuración diferente en las proporciones involucradas.</p>
+<p>Para cumplir con los requisitos de calidad, bajo el mismo <span class="math inline">\(MER\)</span>, se necesitará un mayor tamaño de muestra si no se esperan cambios significativos en las tasas de desempleo entre los períodos involucrados. Si el cambio neto sigue siendo el mismo para ambos períodos, para cumplir con los requisitos de calidad, bajo el mismo <span class="math inline">\(MER\)</span>, se necesitará un mayor tamaño de muestra si el fenómeno del desempleo es alto. Ahora, al intentar estimar los cambios netos de proporciones (como el cambio anual o mensual en las tasas de desempleo), encontramos que:</p>
+<ul>
+<li>Si las tasas son significativamente diferentes, esperamos un tamaño de muestra pequeño.</li>
+<li>Si las tasas son similares y las proporciones son bajas, requerimos un tamaño de muestra moderado.</li>
+<li>Si las tasas son similares, y las proporciones son grandes, esperamos un gran tamaño de muestra.</li>
+</ul>
+</div>
 </div>
 <h3>Referencias</h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-Gutierrez_2016" class="csl-entry">
-Gutiérrez, Hugo Andrés. 2016. <em>Estrategias de muestreo: diseño de encuestas y estimación de parámetros</em>. Segunda edición. Ediciones de la U.
+<div id="ref-R2020" class="csl-entry">
+R Core Team. 2020. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.
 </div>
-<div id="ref-Sarndal_Swensson_Wretman_2003" class="csl-entry">
-Särndal, Carl-Erik, Bengt Swensson, y Jan Wretman. 2003. <em>Model Assisted Survey Sampling</em>. Springer Science; Business Media.
+<div id="ref-ss4s" class="csl-entry">
+Rojas, Hugo Andres Gutierrez. 2020. <em>samplesize4surveys: Sample Size Calculations for Complex Surveys</em>.
 </div>
 </div>
             </section>
@@ -315,8 +322,8 @@ Särndal, Carl-Erik, Bengt Swensson, y Jan Wretman. 2003. <em>Model Assisted Sur
           </div>
         </div>
       </div>
-<a href="algunas-consideraciones-adicionales.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="el-estimador-de-horvitz-thompson-para-totales-y-tamaños-poblacionales.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="otros-escenarios-de-interés.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="algunas-consideraciones-adicionales.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -348,7 +355,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/psirusteam/HHS-Handbook/09Estimadores.Rmd",
+"link": "https://github.com/psirusteam/HHS-Handbook/08Tamano.Rmd",
 "text": "Edit"
 },
 "history": {

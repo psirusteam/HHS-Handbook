@@ -46,7 +46,7 @@ El tamaño de muestra dependerá del tipo de error que se quiera minimizar. Por 
 
 ## El efecto de diseño en la determinación del tamaño de muestra
 
-Al momento de diseñar un estudio por muestreo con encuestas de hogares, es importante establecer el número mínimo de encuestas que se deben realizar. Esto es necesario para determinar el costo del estudio; y en el aspecto técnico, permite tener control desde la fase de diseño sobre la calidad estadística de los resultados esperados en el estudio. Como se mencionó anteriormente, esta calidad puede ser medida en términos del error muestral, con indicadores tales como el margen de error absoluto, el margen de error relativo o el coeficiente de variación. Todas estas medidas dependen de la varianza del estimador bajo el diseño muestral complejo; por lo tanto, contar con un valor aproximado para el efecto de diseño $DEFF$ nos permite obtener una aproximación a dicha varianza, y acercarnos al error muestral del estudio en la fase del diseño.
+Al momento de diseñar un estudio por muestreo con encuestas de hogares, es importante establecer el número mínimo de encuestas que se deben realizar. Esto es necesario para determinar el costo del estudio; y en el aspecto técnico, permite tener control desde la fase de diseño sobre la calidad estadística de los resultados esperados en el estudio. Como se mencionó anterioMERnte, esta calidad puede ser medida en términos del error muestral, con indicadores tales como el margen de error, el margen de error relativo o el coeficiente de variación. Todas estas medidas dependen de la varianza del estimador bajo el diseño muestral complejo; por lo tanto, contar con un valor aproximado para el efecto de diseño $DEFF$ nos permite obtener una aproximación a dicha varianza, y acercarnos al error muestral del estudio en la fase del diseño.
 
 Uno de los primeros paradigmas con el que se debe lidiar es el de la independencia entre las observaciones. Este es un supuesto que gobierna gran parte de la teoría de análisis estadístico, pero que infortunadamente no se aplica en el contexto de las encuestas de hogares. Ante los retos que se debe enfrentar y las diversas estrategias de recolección de información, las fórmulas que se desprenden del supuesto de que los observaciones corresponden a una muestra de variables independientes e idénticamente distribuidas no son plausibles. 
 
@@ -124,7 +124,7 @@ Para simplificar los cálculos y mantener la atención del lector, las expresion
 
 ### Tamaño de muestra para UPM, hogares y personas
 
-Cuando la unidad de observación sean las personas, sin importar que la variable de interés esté a nivel de hogar, será necesario siempre basar nuestros cálculos en el tamaño de muestra de las personas. Por ejemplo, para tener una inferencia apropiada al estimar el ingreso medio percápita, el porcentaje de personas pobres o el porcentaje de personas con una característica particular es necesario definir a la población objetivo como todas las personas que componen un hogar para posteriormente medir la variable de interés que será observada para todas ellas.
+Cuando la unidad de observación sean las personas, sin importar que la variable de interés esté a nivel de hogar, será necesario siempre basar nuestros cálculos en el tamaño de muestra de las personas. Por ejemplo, para tener una inferencia apropiada al estimar el ingreso medio percápita, el porcentaje de personas pobres o el porcentaje de personas con una característica particular es necesario definir a la población objetivo como todas las personas que componen un hogar para posterioMERnte medir la variable de interés que será observada para todas ellas.
 
 Con estos elementos es posible realizar simulaciones de algunos escenarios de muestreo, que indiquen el tamaño de muestra necesario en cada una de las etapas de la selección de la muestra. Si fuese posible sistematizar los elementos más importantes a la hora de calcular el tamaño de muestra en una encuesta de hogares, sería necesario recurrir a los siguientes pasos de manera ordenada: 
 
@@ -483,7 +483,7 @@ $$
 
 En primer lugar, suponga que se quiere comparar la tasa de desempleo entre hombres y mujeres en un mismo mes. En este escenario no existe independencia en el muestreo de hombres y mujeres puesto que estos grupos no son estratos de muestreo. En este caso $T_1$ es la proporción de hombres y $T_2$ es la proporción de mujeres. Nótese que $T_1 \neq T_2$. 
 
-Como se comentó anteriormente, existe una correlación natural entre las UPM que fueron seleccionadas y que contienen tanto a hombres como a mujeres, por lo tanto $R_{12} \neq 0$. Note que esta correlación se calcula sobre todos los individuos pertenecientes a la fuerza de trabajo y sobre la variable dicotómica que induce la tasa de desempleo. En resumen, el término de covarianza en este caso sería igual a:
+Como se comentó anterioMERnte, existe una correlación natural entre las UPM que fueron seleccionadas y que contienen tanto a hombres como a mujeres, por lo tanto $R_{12} \neq 0$. Note que esta correlación se calcula sobre todos los individuos pertenecientes a la fuerza de trabajo y sobre la variable dicotómica que induce la tasa de desempleo. En resumen, el término de covarianza en este caso sería igual a:
 
 $$
 Cov(\hat{P}_1, \hat{P}_2) = \sqrt{Var(\hat{P}_1)}\sqrt{Var(\hat{P}_2)}\sqrt{T_1}\sqrt{T_2}R_{1,2}
@@ -519,7 +519,7 @@ $$
 
 En donde $T$ corresponde a la tasa de traslape ($T=1$ corresponde a un panel completo, $T=0.5$ a un semi-panel con traslape del 50\% y el caso extremo $T=0$ a una encuesta en donde no hay traslape) y $R$ se define como la correlación entre las dos oleadas ($R=0$ implica que no hay correlación entre los dos momentos, $R=-1$ implica una máxima correlación negativa entre los dos momentos y $R=1$ implica una correlación positiva máxima entre los dos momentos). 
 
-Por ejemplo, en una encuesta de fuerza laboral intermediada por alguna intervención gubernamental, puede ser de interés la evaluación del efecto de esa política de asistencia laboral entre hombres y mujeres en dos periodos de tiempo. 
+Por ejemplo, en una encuesta de fuerza laboral inteMERdiada por alguna intervención gubernamental, puede ser de interés la evaluación del efecto de esa política de asistencia laboral entre hombres y mujeres en dos periodos de tiempo. 
 
 ### Tamaño de muestra para el contraste de hipótesis en la diferencia de proporciones
 
@@ -569,6 +569,60 @@ $$
 n \geq \dfrac{DEFF(P_1Q_1+P_2Q_2)}{\dfrac{D^2}{(z_{1-\alpha}+z_{\beta})^2}+\dfrac{DEFF(P_1Q_1+P_2Q_2)}{N}}
 $$
 
+
+## Algunas relaciones de interés para proporciones
+
+Cuando se trata de estadísticas de la fuerza laboral, una variable clave para el diseño de una encuesta de hogares que mida la dinámica del mercado de trabajo es el estado de los individuos en la fuerza laboral. Para los gobiernos, es de interés proporcionar un conjunto de indicadores destinados a medir y rastrear la ocupación de los ciudadanos del país (o región). Por ejemplo, se puede obtener estimaciones de la tasa de desempleo actual (medida mensual o trimestralmente); asimismo, también son de interés la variación neta entre dos períodos y los flujos brutos entre categorías de empleo entre períodos.
+
+Es posible mencionar tres tipos de planificación en las encuestas de hogares desde las cuales es posible abordar adecuadamente las características particulares de los estudios de fuerza laboral. La primera es a través de las encuestas repetidas,donde se realizan mediciones similares en diferentes puntos del tiempo a diferentes personas cada vez. La segunda son las encuestas de panel, donde se realizan mediciones en diferentes puntos en el tiempo a las mismas personas cada vez. La tercera son las encuestas rotativas, donde se incluyen elementos y se siguen en la muestra durante un período específico, y a medida que salen de la muestra, se agregan nuevos elementos.
+
+Una regla general común para calcular el tamaño de la muestra afirma que como la variable de diseño es dicotómica (dependiendo del estado de empleo), la varianza de ese tipo de variables encuentra su máximo cuando la probabilidad de éxito es 0.5. Sin embargo, si las políticas públicas en un país se centran en lograr que la tasa de desempleo sea baja a través de algunas intervenciones gubernamentales que afectan (positivamente) a la fuerza laboral, y si esas estrategias son efectivas, entonces la probabilidad de éxito de la variable de diseño cambia y puede afectar el tamaño de la muestra de las encuestas de hogares.
+
+En esta sección  documento, centramos nuestra atención en el tamaño de la muestra inducido por el control del margen de error; en donde a medida que la proporción disminuye, el tamaño de la muestra aumenta sustancialmente. Sin embargo, al controlar el margen de error, debido a que la función de varianza detrás de este enfoque es simétrica alrededor de 0.5, se puede encontrar que el mismo tamaño de muestra necesario para cumplir con los requisitos de calidad para cualquier proporción $(P_d)$ es el mismo que el requerido para satisfacer los requisitos de calidad para su complemento aditivo $(1 - P_d)$.
+
+A continuación se proporciona varios ejemplos que tipifican algunos escenarios que se pueden encontrar en la práctica. Los cálculos se pueden reproducir empleando el software estadístico `R` [@R2020], mediante el uso de la biblioteca `samplesize4surveys` [@ss4s], utilizando específicamente las funciones `ss4p` y `ss4dp`
+
+### Estimación de proporciones {-}
+
+1. Primer escenario: si la tasa de desempleo es baja, digamos ${P}=0.05$ y el margen de error se fija en $ME = 0.0025$, entonces el intervalo de confianza esperado sería $IC=0.05\pm0.0025=(0.0475,0.0525)$. En este caso el tamaño de muestra requerido es de alrededor de 55169.
+
+2. Segundoescenario: si la tasa de desempleo es alta, digamos  ${P}=0.2$, y el margen de error de error se fija en $ME = 0.01$, entonces el intervalo de confianza sería $IC=0.2\pm0.01=(0.19,0.21)$, y el tamaño de muestra requerido es 12144.
+
+Nótese que ambos escenarios dan lugar al mismo margen de error relativo (MER), definido como $MER=\frac{ME}{{P}}$. En efecto, para el primero, tenemos $MER=(0.0025/0.05)\times 100\%=5\%$, y para el segundo, tenemos  $MER=(0.01/0.2)\times 100\%=5\%$. Por lo tanto, incluso para el mismo margen de error relativo, el tamaño de la muestra debe ser mayor si el fenómeno que nos interesa tiene una baja incidencia en la población finita. De hecho, es posible definir una función de información para saber si el tamaño de su muestra es suficiente para cumplir con los requisitos de calidad para una proporción determinada. Esto es útil porque no se sabe exactamente qué valor tomará la proporción. Además, si la encuesta de hogares intenta estimar otras proporciones (como en una encuesta multipropósito), se encontrará rápidamente si su tamaño de muestra actual es adecuado para todo el estudio.
+
+3. Tercer escenario: si el tamaño de la muestra se define como $n = 10000$, y la proporción es $P=0.2$, entonces el coeficiente de variación será de 2,8% y el margen de error será del 1.1%. Es posible notar que todas las proporciones estimadas tendrán un margen de error inferior al 1.4%.
+
+4. Cuarto escenario: si el tamaño de la muestra se define como $n = 40000$, y la proporción se centra en $P=0.05$, entonces el coeficiente de variación será del 3% y el margen de error será de 0.2%. Es posible notar que todas las proporciones estimadas tendrán un margen de error inferior al 0.7%.
+
+Teniendo en cuenta que, para una proporción $P$ dada, el tamaño de muestra requerido para lograr un margen de error particular es el mismo que para su complemento aditivo $1-P$, como es de esperar, si un tamaño de muestra alcanza los requisitos para una proporción establecida, también alcanzará los requisitos de calidad para cualquier proporción superior.
+
+Sin embargo, para una proporción $P$, el tamaño muestral requerido para lograr un coeficiente de variación particular no es el mismo que para su complemento aditivo $1-P$. Luego, para una proporción baja, se puede encontrar que con un tamaño de muestra dado el coeficiente de variación será mayor que para su complemento aditivo. Sobre la base de los resultados encontrados en esta sección, y bajo un $MER$ fijo (5% en todos los  casos), encontramos que al intentar estimar proporciones (como la tasa de desempleo):
+
+* Si la proporción es baja, anticipamos un gran tamaño de muestra.
+* Si la proporción es alta, esperamos un tamaño de muestra pequeño.
+
+### Cambios netos {-}
+
+Ahora dirigimos nuestra atención a los cambios netos en la tasa de desempleo durante dos períodos, $\Delta= |P_{1}-P_{2}|$. Este tipo de parámetro se puede estimar utilizando una encuesta repetida, rotativa o de panel.  Sin embargo, como se evidenció en las anteriores secciones, hay una reducción en el tamaño de la muestra si se intentan estimar los cambios netos desde una encuesta rotativa o de panel. Como no estamos  estimando una proporción, sino un cambio neto,tenemos que considerar qué valores son adecuados para el establecer el margen de error absoluto.  
+
+5. Quinto escenario: si no esperamos cambios significativos entre ambos períodos, y las tasas de desempleo son altas, por ejemplo $\Delta \approx |0.22-0.20|=0.02$, y el margen de error se fija en $ME = 0.001$, entonces el intervalo de confianza sería $IC=0.02 \pm 0.001=(0.019,0.021)$, y el tamaño de muestra requerido estaría alrededor de 96224.
+
+6. Sextoescenario: si no esperamos cambios significativos entre períodos, y las tasas de desempleo son bajas, por ejemplo $\Delta \approx |0.05-0.03| =0.02$, y el margen de error se fija en $ME = 0.001$, entonces el intervalo de confianza sería $IC=0.02\pm0.001=(0.019,0.021)$, y el tamaño de muestra requerido debería ser de 59536.
+
+7. Séptimo escenario: si esperamos cambios significativos entre períodos, y las tasas de desempleo difierenpor ejemplo $\Delta \approx|0.05-0.20|=0.15$ y el margen de error se fija en $ME = 0.0075$, entonces el intervalo de confianza sería $IC=0.15\pm0.0075=(0.1425,0.1575)$, y el tamaño de muestra requerido estaría alrededor de 22083.
+
+
+Nótese qeu los escenarios quinto, sexto y séptimo dan como resultado el mismo $MER$, definido como
+$MER=\frac{ME}{\mathrm{\Delta}}$. En efecto, para el séptimo escenario tenemos $MER=$(0.0075/0.15)%=5%, y para el quinto y sexto, tenemos  $MER=$(0.001/0.02)%=5%. Por lo tanto, incluso para el mismo valor del cambio neto, el tamaño de la muestra no será el mismo y variará dependiendo de la configuración de las proporciones. Por supuesto, hay que esperar cambios más drásticos si varía la porción del traslape y la correlación entre períodos. 
+
+Además, se debe tener en cuenta que es posible encontrar diferentes configuraciones de proporciones en ambos periodos que induzcan el mismo valor en el cambio neto.	Contrariamente a lo que se esperaría, si un tamaño de muestra alcanza los requisitos de calidad para un parámetro $\Delta$, no necesariamente cumplirá con los requisitos de calidad para el mismo valor nominal del cambio neto bajo una configuración diferente en las proporciones involucradas.
+
+Para cumplir con los requisitos de calidad, bajo el mismo $MER$, se necesitará un mayor tamaño de muestra si no se esperan cambios significativos en las tasas de desempleo entre los períodos involucrados. Si el cambio neto sigue siendo el mismo para ambos períodos, para cumplir con los requisitos de calidad, bajo el mismo $MER$, se necesitará un mayor tamaño de muestra si el fenómeno del desempleo es alto. Ahora, al intentar estimar los cambios netos de proporciones (como el cambio anual o mensual en las tasas de desempleo), encontramos que:
+
+* Si las tasas son significativamente diferentes, esperamos un tamaño de muestra pequeño.
+* Si las tasas son similares y las proporciones son bajas, requerimos un tamaño de muestra moderado.
+* Si las tasas son similares, y las proporciones son grandes, esperamos un gran tamaño de muestra.
+
 ## Algunas consideraciones adicionales
 
 Cuando la encuesta se ha planeado para que tenga representatividad para algún conjunto de estratos, es necesario replicar estas mismas expresiones en cada uno de los subgrupos de interés. Por otro lado, las anteriores aproximaciones al cálculo de tamaño de muestra son insuficientes ante la realidad de la ausencia de respuesta y las desactualizaciones de los marcos de muestreo. En esta sección se profundizará en estos tópicos. 
@@ -590,13 +644,13 @@ n_h=n\dfrac{N_hS_{yU_h}}{\sum_{h=1}^HN_hS_{yU_h}}
 $$
 donde $S_{yU_h}=\sqrt{S_{yU_h}^2}$ es la raíz de la varianza de la característica de interés en cada estrato. @Gutierrez_2016 afirma que, con respecto a la asignación de Neyman, es recomendable redondear el tamaño de muestra en cada estrato al entero más próximo. 
 
-1. Asignación de Kish: al usar la asignación proporcional en los estratos pequeños, la muestra puede resultar muy pequeña, generando problemas de eficiencia y pérdida de precisión. Por otro lado, utilizar una asignación uniforme (selección del mismo número de elementos en cada estrato $n_h = c$) tendrá como consecuencia una variación sustancial en las fracciones de muestreo entre los estratos y, por ende, una fracción de muestreo muy grande del estrato más pequeño. Un punto intermedio entre la asignación proporcional y la asignación uniforme es la asignación propuesta por Kish, la cual toma la siguiente expresión:
+1. Asignación de Kish: al usar la asignación proporcional en los estratos pequeños, la muestra puede resultar muy pequeña, generando problemas de eficiencia y pérdida de precisión. Por otro lado, utilizar una asignación unifoMER (selección del mismo número de elementos en cada estrato $n_h = c$) tendrá como consecuencia una variación sustancial en las fracciones de muestreo entre los estratos y, por ende, una fracción de muestreo muy grande del estrato más pequeño. Un punto inteMERdio entre la asignación proporcional y la asignación unifoMER es la asignación propuesta por Kish, la cual toma la siguiente expresión:
 
 $$
 n_h=n\frac{\sqrt{\frac{1}{H^2}+I\ W_h^2}}{\sum_{h=1}^{H}\sqrt{\frac{1}{H^2}+I\ W_h^2}}
 $$
 
-En donde $W_h=N_h/N$, e $I \geq 0$ es el índice de asignación de Kish, que denota la importancia relativa entre las estimaciones nacionales y las de cada estrato. A medida que este índice se hace más pequeño, menor importancia se le dará a las estimaciones nacionales. La asignación de Kish proporciona un balance entre la asignación uniforme y la proporcional. Cuando $I=0$, se reduce a la asignación uniforme, mientras que si $I \rightarrow \infty$ tiende a un enfoque de asignación proporcional. Usualmente se utiliza $I = 1$ para garantizar que la precisión de las características de interés en lo nacional y en los estratos sea aproximadamente la misma. 
+En donde $W_h=N_h/N$, e $I \geq 0$ es el índice de asignación de Kish, que denota la importancia relativa entre las estimaciones nacionales y las de cada estrato. A medida que este índice se hace más pequeño, menor importancia se le dará a las estimaciones nacionales. La asignación de Kish proporciona un balance entre la asignación unifoMER y la proporcional. Cuando $I=0$, se reduce a la asignación unifoMER, mientras que si $I \rightarrow \infty$ tiende a un enfoque de asignación proporcional. Usualmente se utiliza $I = 1$ para garantizar que la precisión de las características de interés en lo nacional y en los estratos sea aproximadamente la misma. 
 
 
 ### Ajustes de subcobertura
