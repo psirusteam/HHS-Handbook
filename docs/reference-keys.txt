@@ -60,3 +60,13 @@ estimadores-de-calibración
 ganancia-en-eficiencia
 diferentes-formas-del-estimador-de-calibración
 la-calibración-como-un-cambio-de-paradigma
+construcción-de-los-factores-de-expansión
+creación-de-los-pesos-básicos
+ajuste-por-elegibilidad-desconocida
+descarte-de-las-unidades-no-elegibles
+ajuste-por-ausencia-de-respuesta
+calibración-de-los-factores-de-expansión
+medidas-de-calidad-en-la-calibración
+calibración-integrada-para-hogares-y-personas
+calibración-sobre-razones-medias-y-proporciones
+recorte-y-redondeo

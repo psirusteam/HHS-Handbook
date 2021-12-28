@@ -53,7 +53,7 @@ Es posible afirmar que el análisis apropiado de una encuesta no puede pasar por
 La mayoría de indicadores sociales a nivel nacional pueden verse como funciones de totales de una o más variables de interés. Por ejemplo, si el interés está en estimar un total $t_y=\sum_U y_k$, el estimador de Horvitz-Thompson (HT) provee una metodología que induce insesgamiento.
 
 $$
-\hat{t}_y = \sum_s d_k y_k
+\hat{t}_{y, \pi} = \sum_s d_k y_k
 $$
 
 En donde la muestra $s$ hace referencia al subconjunto de la población que fue seleccionado siguiendo un diseño de muestreo probabilístico que induce los pesos de muestreo $d_k$, los cuales expanden el valor de la variable de interés $y_k$ para el $k$-ésimo individuo. Nótese que $d_k$ es el inverso multiplicativo de la probabilidad de inclusión de $k$-ésimo individuo en la muestra, $d_k = \pi_k^{-1}$. 
@@ -152,7 +152,7 @@ En la anterior expresión, $\pi_{ak}$ denota la probabilidad de inclusión del e
 Suponga un diseño regular en una encuesta de hogares; por ejemplo, asuma que se tiene un esquema estratificado de $H$ estratos, con dos etapas de selección dentro de cada estrato (la primera etapa con selección de UPM dentro del estrato, la segunda con selección de hogares), entonces el peso de muestreo final y el estimador del total estará dado por la siguiente expresión
 
 $$
-\hat{t}_y = \sum_s d_k y_k = \sum_h \sum_{i \in s_{Ih}} \sum_{k \in s_{hi}}  w_{hik} y_{hik}
+\hat{t}_{y, \pi} = \sum_s d_k y_k = \sum_h \sum_{i \in s_{Ih}} \sum_{k \in s_{hi}}  w_{hik} y_{hik}
 $$
 
 Por ejemplo, si dentro de cada estrato $U_h$ $h=1,\ldots, H$ existen $N_{Ih}$ unidades primarias de muestreo, de las cuales se selecciona una muestra $s_{Ih}$ de $n_{Ih}$ unidades mediante un diseño de muestreo aleatorio simple; y además, se considera que el sub-muestreo dentro de cada unidad primaria seleccionada es también aleatorio simple, de tal manera que para cada unidad primaria de muestreo seleccionada $U_i\in s_{Ih}$ de tamaño $N_i$ se selecciona una submuestra $s_i$ de elementos de tamaño $n_i$, entonces la forma final del estimador de Horvitz-Thompson para el total poblacional quedaría expresada de la siguiente manera:
@@ -232,7 +232,7 @@ Las demás expresiones para los estimadores de proporciones o medias en una subp
 En presencia de información auxiliar es posible mejorar la eficiencia de la estimación acudiendo a diferentes formas funcionales que estiman el total; por ejemplo, con el estimador de razón:
 
 $$
-\hat{t}_y = t_x \frac{\sum_s d_k y_k}{\sum_s d_k x_k}
+\hat{t}_{y, r} = t_x \frac{\sum_s d_k y_k}{\sum_s d_k x_k}
 $$
 
 En donde $t_x$ denota el total poblacional, que se supone conocido para toda la población, de una variable auxiliar $x$ que es preguntada en la encuesta de hogares. Por supuesto, en el análisis de este tipo de encuestas es común realizar inferencias sobre parámetros que tienen una forma no lineal. Uno de los más básicos es la razón poblacional $R_U = t_{y_1} / t_{y_2}$ cuya estimación se lleva a cabo estimando ambos componentes de la fracción 

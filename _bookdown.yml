@@ -17,7 +17,7 @@ rmd_files: [
   "08Tamano.Rmd",
    
   "09Estimadores.Rmd",
-  # "10Ponderadores.Rmd",
+  "10Pesos.Rmd",
   # "11Varianza.Rmd",
   # "12Ausencia.Rmd",
   # "13SesgoUnidad.Rmd",
