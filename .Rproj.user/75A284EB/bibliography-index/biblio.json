@@ -143,6 +143,77 @@
             "type": "book"
         },
         {
+            "author": [
+                {
+                    "family": "Horvitz",
+                    "given": "D. G."
+                },
+                {
+                    "family": "Thompson",
+                    "given": "D. J."
+                }
+            ],
+            "container-title": "Journal of the American Statistical Association",
+            "id": "HT",
+            "issued": {
+                "date-parts": [
+                    [
+                        1952
+                    ]
+                ]
+            },
+            "page": "663-685",
+            "title": "A generalization of sampling without replacement from a finite universe",
+            "type": "article-journal",
+            "volume": "47"
+        },
+        {
+            "author": [
+                {
+                    "family": "Sen",
+                    "given": "A. R."
+                }
+            ],
+            "container-title": "Journal of the Indian Society of Agricultural Statistics",
+            "id": "Sen",
+            "issued": {
+                "date-parts": [
+                    [
+                        1953
+                    ]
+                ]
+            },
+            "page": "119-127",
+            "title": "On the estimate of the variance in sampling with varying probabilities",
+            "type": "article-journal",
+            "volume": "5"
+        },
+        {
+            "author": [
+                {
+                    "family": "Yates",
+                    "given": "F."
+                },
+                {
+                    "family": "Grundy",
+                    "given": "P. M."
+                }
+            ],
+            "container-title": "Journal of the Royal Statistical Society B",
+            "id": "YG",
+            "issued": {
+                "date-parts": [
+                    [
+                        1953
+                    ]
+                ]
+            },
+            "page": "253-261",
+            "title": "Selection without replacement from within strata with probability proportional to size",
+            "type": "article-journal",
+            "volume": "15"
+        },
+        {
             "id": "VanBuuren",
             "issued": {
                 "date-parts": [

@@ -70,3 +70,9 @@ medidas-de-calidad-en-la-calibración
 calibración-integrada-para-hogares-y-personas
 calibración-sobre-razones-medias-y-proporciones
 recorte-y-redondeo
+estimación-del-error-de-muestreo
+fórmulas-exactas-y-linealización-de-taylor
+la-técnica-del-último-conglomerado
+linealización-de-taylor
+pesos-replicados
+consideraciones-adicionales

@@ -15,9 +15,9 @@ En la mayoría de casos de interés se pueden encontrar las fórmulas exactas qu
 
 La estimación de la varianza en una estrategia de muestreo es una tarea no siempre sencilla. A partir de la teoría se establece un camino lógico basado en las probabilidades de inclusión de primer y segundo orden. En general, para cualquier diseño de muestreo sin reemplazo, la fórmula exacta para calcular una varianza del estimador de Horvitz-Thompson está dada por:
 
-$$Var(\hat{t}_y) = \sum_U\sum_U \Delta_{kl}\frac{y_k}{\pi_k}\frac{y_l}{\pi_l}$$
+$$Var(\hat{t}_{y,\pi}) = \sum_U\sum_U \Delta_{kl}\frac{y_k}{\pi_k}\frac{y_l}{\pi_l}$$
 
-En donde $\Delta_{kl} = \pi_{kl} - \pi_l \pi_l$. Además, la probabilidad de inclusión de segundo orden se denota análogamente como $\pi_{kl}$ y define la probabilidad de que los elementos $k$ y $l$ pertenezcan a la muestra al mismo tiempo.
+En donde $\Delta_{kl} = \pi_{kl} - \pi_l \pi_l$. Además, la probabilidad de inclusión de segundo orden se denota análogamente como $\pi_{kl}$ y define la probabilidad de que los elementos $k$ y $l$ pertenezcan a la muestra al mismo tiempo; esto es,
 
 $$
 \pi_{kl}=Pr(k\in s, \  l\in s)=Pr(I_k\ I_l=1)=\sum_{s \ni k, l} p(s).
@@ -28,7 +28,7 @@ En donde el subíndice ${s \ni k, l}$ se refiere a la suma sobre todas las muest
 En la práctica de las encuestas de hogares nunca se podrá contar con la varianza exacta de un estimador; por consiguiente, para tener una estimación de la precisión de la estrategia de muestreo se debe estimar la varianza del estimador. @Gutierrez_2016 afrima que un estimador insesgado para esta varianza está dada por la siguiente expresión:
 
 $$
-    \widehat{Var}_1(\hat{t}_{y,\pi})=\sum\sum_S \dfrac{\Delta_{kl}}{\pi_{kl}}\frac{y_k}{\pi_k}\frac{y_l}{\pi_l}
+\widehat{Var}_1(\hat{t}_{y,\pi})=\sum\sum_S \dfrac{\Delta_{kl}}{\pi_{kl}}\frac{y_k}{\pi_k}\frac{y_l}{\pi_l}
 $$
 
 Asimismo, si el diseño es de tamaño de muestra fijo, un estimador insesgado está dado por
@@ -44,23 +44,23 @@ $$
 
 donde $z_{1-\alpha / 2}$ se refiere al percentil $(1-\alpha / 2)$ de una variable aleatoria con distribución normal estándar. Como cada diseño de muestreo induce una forma cerrada para las probabilidades de inclusión de primer y segundo orden, las fórmulas de la estimación de la varianza se reducen ostensiblemente. Por ejemplo, si el diseño de muestreo es aleatorio simple, la fórmula de la estimación de la varianza es
  
- $$
- \widehat Var(\hat{t}_{y\pi}) = \frac{N^2}{n} \left( 1- \frac{n}{N} \right) S^2_{yS}
- $$
+$$
+\widehat Var(\hat{t}_{y\pi}) = \frac{N^2}{n} \left( 1- \frac{n}{N} \right) S^2_{y_s}
+$$
  
-En donde $S^2_{yS}$ es la varianza muestral de los valores de la característica de interés en la muestra aleatoria $S$, dada por
+En donde $S^2_{y_s}$ es la varianza de los valores de la característica de interés en la muestra aleatoria $s$, dada por
 
 $$
-S^2_{yS}=\frac{1}{n-1}\sum_{k\in S}(y_k-\bar{y}_S)^2
+S^2_{y_s}=\frac{1}{n-1}\sum_{k\in S}(y_k-\bar{y}_s)^2
 $$
 
-Por otro lado, si el diseño de muestreo es aleatorio estratificado y el parámetro de interés es una media, la fórmula del estimador de Horvitz-Thompson es $\bar{y}_{\pi} = \frac{1}{N}\sum_s d_k y_k = \sum_{h=1}^H W_h \bar{y}_h$. Ahora, siendo $S^2_{yh}$ la varianza muestral en el estrato $h$ de los valores de la característica de interés, la fórmula de la estimación de su varianza es
+Por otro lado, si el diseño de muestreo es aleatorio estratificado y el parámetro de interés es una media, la fórmula del estimador de Horvitz-Thompson es $\bar{y}_{\pi} = \frac{1}{N}\sum_s d_k y_k = \sum_{h=1}^H W_h \bar{y}_h$; en donde $W_h = N_h/N$. Ahora, siendo $S^2_{yh}$ la varianza muestral en el estrato $h$ de los valores de la característica de interés y definiendo $w_h = n_h/n$, la fórmula de la estimación de la varianza es
  
  $$
 \widehat Var(\bar{y}_{\pi}) = \sum_{h=1}^H w_h^2 \frac{1-f_h}{n_h}S^2_{yh}
  $$
- 
-Por otro lado, cuando el diseño de muestreo se complejiza, también lo hace la estimación de la varianza. Por ejemplo, si el diseño de muestreo es estratificada y bietápico, de tal forma que dentro de cada estrato $U_h$ $h=1,\ldots, H$ existen $N_{Ih}$ unidades primarias de muestreo, de las cuales se selecciona una muestra $s_{Ih}$ de $n_{Ih}$ unidades mediante un diseño de muestreo aleatorio simple; y además, se considera que el sub-muestreo dentro de cada unidad primaria seleccionada es también aleatorio simple, de tal manera que para cada unidad primaria de muestreo seleccionada $i\in s_{Ih}$ de tamaño $N_i$ se selecciona una submuestra $s_i$ de elementos de tamaño $n_i$, entonces la forma final del estimador de la varianza del estimador de Horvitz-Thompson para el total poblacional quedaría de la siguiente manera:
+
+Cuando el diseño de muestreo se complejiza, también lo hace la estimación de la varianza. Por ejemplo, si el diseño de muestreo es estratificada y bietápico, de tal forma que dentro de cada estrato $U_h$ $h=1,\ldots, H$ existen $N_{Ih}$ unidades primarias de muestreo, de las cuales se selecciona una muestra $s_{Ih}$ de $n_{Ih}$ unidades mediante un diseño de muestreo aleatorio simple; y además, se considera que el sub-muestreo dentro de cada unidad primaria seleccionada es también aleatorio simple, de tal manera que para cada unidad primaria de muestreo seleccionada $i\in s_{Ih}$ de tamaño $N_i$ se selecciona una submuestra $s_i$ de elementos de tamaño $n_i$, entonces la forma final del estimador de la varianza del estimador de Horvitz-Thompson para el total poblacional quedaría de la siguiente manera:
 
 $$
 \widehat{Var}(\hat{t}_{y,\pi})=
@@ -74,38 +74,36 @@ Las fórmulas computacionales requeridas para estimar la varianza de estadístic
 
 ## La técnica del último conglomerado
 
-Debido a las dificultades algebraicas y computacionales, estimar la varianza en encuestas complejas que contemplan esquemas de conglomeración, selección en varias etapas y estratificación, puede tornarse bastante tedioso, costoso y además muy demorado. En este documento se explica por qué la técnica del último conglomerado resulta ser una buena opción a la hora de aproximar la varianza en una encuesta compleja.
+Debido a las dificultades algebraicas y computacionales, estimar la varianza en encuestas complejas que contemplan esquemas de conglomeración, selección en varias etapas y estratificación, puede tornarse bastante tedioso, costoso y además muy demorado. En esta sección se explica por qué la técnica del último conglomerado resulta ser una buena opción a la hora de aproximar la varianza en una encuesta compleja.
 
-Para la estimación de la varianza de los estimadores de interés en encuestas multi-etápicas, los programas computacionales existentes utilizan una aproximación conocida como la técnica del último conglomerado. Esta aproximación, que sólo tiene en cuenta la varianza de los estimadores en la primera etapa, supone que ese muestreo fue realizado con reemplazo. Los procedimientos de muestreo en etapas posteriores de la selección son ignorados a menos que el factor de corrección para poblaciones finitas sea importante a nivel municipal. 
+Para la estimación de la varianza de los estimadores de interés en encuestas multietápicas, los programas computacionales existentes utilizan una aproximación conocida como la técnica del último conglomerado (*ultimate cluster*). Esta aproximación, que sólo tiene en cuenta la varianza de los estimadores en la primera etapa, supone que ese muestreo fue realizado con reemplazo. Los procedimientos de muestreo en etapas posteriores de la selección son ignorados a menos que el factor de corrección para poblaciones finitas no sea despreciable a nivel de la primera etapa de muestreo. 
 
-En particular considere cualquier estimador del total poblacional dado por la siguiente combinación lineal
+En particular, considere cualquier estimador del total poblacional dado por la siguiente combinación lineal
 
-\begin{equation}
-\label{est}
-\hat{t}_{y}=\sum_{k\in s} d_k y_k = \sum_{k\in U} I_k d_k y_k 
-\end{equation}
+$$
+\hat{t}_{y,\pi}=\sum_{k\in s} d_k y_k = \sum_{k\in U} I_k d_k y_k 
+$$
 
-En donde $I_k$ son variables indicadoras de la pertenecia del elemento $k$ a la muestra $s$. Ahora, asumamos que el factor de expansión de la encuesta $d_k$ cumple con los supuestos básicos de un ponderador que hace insesgado a $\hat{t}_{y}$, es decir:
+En donde $I_k$ son variables indicadoras de la pertenencia del elemento $k$ a la muestra $s$. Ahora, asumiendo que el factor de expansión de la encuesta $d_k$ cumple con los supuestos básicos de un ponderador que hace insesgado a $\hat{t}_{y}$, es decir:
 
-\begin{equation*}
+$$
 E_p(I_k d_k) = 1
-\end{equation*}
+$$
 
-Se supone un diseño de muestreo en varias etapas (dos o más) en donde la primera etapa supone la selección de una muestra $s_I$ de $m_I$ unidades primarias de muestreo (UPM) $U_i$ ($i\in s_I$) de tal forma que
+Suponiendo un diseño de muestreo en varias etapas (dos o más) en donde la primera etapa supone la selección de una muestra $s_I$ de $m_I$ unidades primarias de muestreo (UPM) $U_i$ ($i\in s_I$) de tal forma que
 
-- Si la selección se realizó con reeemplazo, la $i$-ésima UPM tiene probabhilidad de selección $p_{I_i}$.
+- Si la selección se realizó con reeemplazo, la $i$-ésima UPM tiene probabilidad de selección $p_{I_i}$.
 - Si la selección se realizó sin reeemplazo, la $i$-ésima UPM tiene probabilidad de inclusión $\pi_{I_i}$.
 
 En las subsiguientes etapas de muestreo, se procede a seleccionar una muestra de elementos para cada una de las UPM seleccionadas en la primera etapa de muestreo. Dentro de la $i$-ésima UPM se selecciona una muestra $s_i$ de elementos; en particular la probabilidad condicional de que el $k$-ésimo elemento pertenzca a la muestra dada que la UPM que la contiene ha sido seleccionada en la muestra de la primera etapa está dada por la siguiente expresión:
 
-\begin{equation*}
+$$
 \pi_{k|i} = Pr(k \in s_i | i \in s_I)
-\end{equation*}
+$$
 
 Por ejemplo, si el muestreo es sin reemplazo en todas sus etapas, la probabilidad de inclusión del $k$-ésimo elemento a la muestra $s$ está dada por
 
 \begin{align*}
-\label{piki}
 \pi_k & = Pr(k \in s)\\ 
 & = Pr(k \in s_i, i \in s_I) \\
 & = Pr(k \in s_i | i \in s_I) Pr(i \in s_I) = \pi_{k|i} \times \pi_{I_i}
@@ -113,48 +111,49 @@ Por ejemplo, si el muestreo es sin reemplazo en todas sus etapas, la probabilida
 
 Dado que el inverso de las probabilidades de inclusión son un ponderador natural, entonces se definen las siguientes cantidades:
 
-1. $d_{I_i} = \frac{1}{\pi_I}$, que es el factor de expansión de la $i$-ésima UPM.
+1. $d_{I_i} = \frac{1}{\pi_{I_i}}$, que es el factor de expansión de la $i$-ésima UPM.
 2. $d_{k|i} = \frac{1}{\pi_{k|i}}$, que es el factor de expansión del $k$-ésimo elemento dentro para la $i$-ésima UPM.
 3. $d_k = d_{I_i} \times d_{k|i}$, que es el factor de expansión final del $k$-ésimo elemento para toda la población $U$.
 
-**Resultado**: *Bajo un diseño de muestreo en varias etapas, el estimador de Hansen-Hurwitz para el total poblacional está dada por:*
-\begin{equation}
-\label{HH}
+Desde la teoría de muestreo, es posible evidenciar que si el diseño de muestreo es con reemplazo entonces, además del estimador HT, existe otro estimador insesgado que puede considerarse, conocido como el estimador de Hansen-Hurwitz (HH) [@Gutierrez_2016]. A diferencia del estimador HT, el estimador HH tiene una expresión de varianza muy sencilla de calcular, y por consiguiente las expresiones de la estimación de la varianza del estimador HH son más manejables desde el punto de vista computacional. En efecto, bajo un diseño de muestreo en varias etapas, el estimador de Hansen-Hurwitz para el total poblacional está dada por la siguiente expresión:
+
+$$
 \hat{t}_{y,p}=\frac{1}{m_I}\sum_{i=1}^{m_I}\frac{\hat{t}_{y_i}}{p_{I_i}}
-\end{equation}
+$$
 
-*Y su varianza estimada es:*
-\begin{equation}
-\label{var}
+En donde $p_{Ii}$ corresponde a la probabilidad de selección de la unidad $i$, mientras que $m_I$ es el tamaño de muestra (con reemplazo) del muestreo en la primera etapa. En este caso, la varianza estimada del estimador HH es:
+
+$$
 \widehat{Var}(\hat{t}_{y,p})=\frac{1}{m_I(m_I-1)}\sum_{i=1}^{m_I}\left(\frac{\hat{t}_{y_i}}{p_{I_i}}-\hat{t}_{y,p}\right)^2
-\end{equation}
+$$
 
-Supongamos ahora que la encuesta tiene un diseño complejo $p(s)$ que no contempla reeemplazo en la primera etapa. Por lo tanto, algunas cantidades deben ser equiparadas para poder utilizar esta aproximación. En principio, nótese que las cantidades $\hat{t}_{y_i}$ representan lo totales estimados de la variable de intereés en la $i$-ésima UPM y están dados por:
 
-\begin{equation}
+En donde las cantidades $\hat{t}_{y_i}$ representan lo totales estimados de la variable de interés en la $i$-ésima UPM y están dados por:
+
+$$
 \hat{t}_{y_i} = \sum_{k \in s_i} \frac{y_k}{\pi_{k|i}}
 = \sum_{k \in s_i} d_{k|i} y_k 
-\end{equation}
+$$
 
-Utilizar la aproximación de la varianza requiere equiparar los términos de manera apropiada. En primer lugar, fijémonos en los estimadores dados por \eqref{HH} y \eqref{est}. Para realizar esta comparación, se requiere que
+El espíritu de la técnica del último conglomerado consiste en utilizar la expresión de la estimación de la varianza del estimador HH en vez de la expresión exacta en diseños de muestreo complejos que no contemplan selecciones con reemplazo en la primera etapa. Para lograrlo, algunas cantidades deben ser equiparadas antes de poder utilizar esta aproximación. 
+Utilizar la aproximación de la varianza requiere equiparar los términos de manera apropiada. En primer lugar, fijémonos en los estimadores $\hat{t}_{y,p}$ y $\hat{t}_{y,\pi}$. Para realizar esta comparación, se requiere que
 se asuma la siguiente igualdad en las probabilidades de inclusión de la primera etapa:
 
-\begin{equation}
-\label{cons}
+$$
 \pi_{I_i} = p_{I_i} \times m_I 
-\end{equation}
+$$
 
-Por lo tanto, el estimador del total poblacional quedaría definido desde \eqref{est} como un estimador tipo Hanwen-Hurwitz.
+Por lo tanto, el estimador del total poblacional quedaría definido como un estimador tipo Hanwen-Hurwitz. En efecto,
 
-\begin{align*}
-\hat{t}_{y} =\sum_{k\in s} d_k y_k  
+$$
+\hat{t}_{y,\pi} =\sum_{k\in s} d_k y_k  
 = \sum_{i=1}^{m_I}\sum_{k \in s_i} d_k y_k 
 = \sum_{i=1}^{m_I}\sum_{k \in s_i} \frac{1}{\pi_{I_i} \pi_{k|i}} y_k 
 = \sum_{i=1}^{m_I}\frac{\hat{t}_{y_i}}{\pi_{I_i}} 
 \approx \frac{1}{m_I}\sum_{i=1}^{m_I}\frac{\hat{t}_{y_i}}{p_{I_i}}
-\end{align*}
+$$
 
-Ahora, dado que la forma del estimador ha sido equiparada con un estimador tipo Hanwen-Hurwitz, es posible utilizar su estimación de varianza. Aún más, después de un poco de álgebra y tuilizando la equiparación dada por \eqref{cons}, es posible tener la siguiente aproximación, cuya gran ventaja es que sólo hace uso de los factores de expansión finales $d_k$, que suelen ser reportados por los Institutos Nacionales de Estadística cuando liberan los microdatos de sus encuestas, en vez de los factores de expansión de la primera etapa o los factores de expansión condicionales dentro de las UPM. 
+Ahora, dado que la forma del estimador ha sido equiparada con un estimador tipo Hanwen-Hurwitz, es posible utilizar su estimación de varianza. Aún más, después de un poco de álgebra es posible tener la siguiente aproximación, cuya gran ventaja es que sólo hace uso de los factores de expansión finales $d_k$, que suelen ser reportados por los INE cuando liberan los microdatos de sus encuestas, en vez de los factores de expansión de la primera etapa o los factores de expansión condicionales dentro de las UPM. 
 
 \begin{align*}
 \widehat{Var}(\hat{t}_{y,p})&=\frac{1}{m_I(m_I-1)}\sum_{i=1}^{m_I}\left(\frac{\hat{t}_{y_i}}{p_{I_i}}-\hat{t}_{y}\right)^2\\
@@ -164,7 +163,7 @@ Ahora, dado que la forma del estimador ha sido equiparada con un estimador tipo 
 &=\frac{m_I}{m_I-1}\sum_{i=1}^{m_I}\left( \sum_{k \in s_i} d_k y_k -\frac{1}{m_I}\sum_{i=1}^{m_I}\sum_{k \in s_i} d_k y_k \right)^2 
 \end{align*}
 
-Basado en lo anterior, al definir $\breve{t}_{y_i} = \sum_{k \in s_i} d_k y_k$ como la contribución^[Note que la suma de estas contribuciones en la muestra de la primera etapa da como resultado la estimación $\hat{t}_y$.] de la $i$-ésima UPM a la estimación del total poblacional y $\bar{\breve{t}}_{y}=\frac{1}{m_I}\sum_{i=1}^{m_I}\breve{t}_{y_i}$ como la contribución promedio en el muestreo de la primera etapa, entonces el estimador de varianza toma la siguiente forma, conocida como el estimador de varianza del **último conglomerado**.
+Basado en lo anterior, al definir $\breve{t}_{y_i} = \sum_{k \in s_i} d_k y_k$ como la contribución^[Note que la suma de estas contribuciones en la muestra de la primera etapa da como resultado la estimación $\hat{t}_y$.] de la $i$-ésima UPM a la estimación del total poblacional y $\bar{\breve{t}}_{y}=\frac{1}{m_I}\sum_{i=1}^{m_I}\breve{t}_{y_i}$ como la contribución promedio en el muestreo de la primera etapa, entonces el estimador de varianza toma la siguiente forma, conocida como el estimador de varianza del *último conglomerado*.
 
 \begin{align}
 \label{UC}
@@ -174,18 +173,18 @@ Basado en lo anterior, al definir $\breve{t}_{y_i} = \sum_{k \in s_i} d_k y_k$ c
 \end{align}
 
 
-Siguiendo con el escenario de muestreo planteado en las secciones anteriores, si el diseño de la encuesta es estratificado por regiones $h$, con tres etapas de selección dentro de cada estrato, entonces al utilizar la técnica del último conglomerado, el estimador de la varianza de $\hat{t}_{y}$ estaría dado por
+Por ejemplo, si el escenario de muestreo planteado en la encuesta es estratificado, con tres etapas de selección dentro de cada estrato, entonces al utilizar la técnica del último conglomerado, la aproximación del estimador de la varianza estaría dada por
 
 $$
-\hat{V}(\hat{t}_{y}) = 
+\widehat{Var}(\hat{t}_{y,p}) = 
 \sum_h\frac{n_h}{n_h-1}\sum_{i\in s_h}\left(\hat{t}_{y_i}-\bar{\hat{t}}_{y_h}\right)^2
 $$
 
 En donde $\hat{t}_{y_i} = \sum_{k \in s_{hi}} w_k y_k$, $\bar{\hat{t}}_{y_h}=(1/n_h)\sum_{i \in s_h}\hat{t}_{y_i}$ y $n_h$ es el número de UPMs seleccionadas en el estrato $h$. Este procedimiento, propuesto por @hansen1953sample tiende a sobrestimar la varianza verdadera, aunque resulta ser una técnica apetecida por los investigadores puesto que utiliza directamente los pesos finales de muestreo o factores de expansión que son publicados por los INE.
 
-Utilizar la técnica del **último conglomerado** es una salida práctica al problema de la estimación de la varianza que, para la mayoría de encuestas que brindan estadísticas oficiales a los países, puede tornarse bastante complejo. Si bien, la expresión \eqref{UC} no brinda estimaciones de varianza estrictamente insesgadas, sí constituye una aproximación bastante precisa. 
+Utilizar la técnica del último conglomerado es una salida práctica al problema de la estimación de la varianza que, para la mayoría de encuestas que brindan estadísticas oficiales a los países, puede tornarse bastante complejo. Si bien, la expresión del estimador de la varianza no constituye un estimador estrictamente insesgado, sí se considera una aproximación bastante precisa. 
 
-¿Qué es un **último conglomerado**? Es la primera unidad de muestreo en un diseño complejo. Por ejemplo, considere el siguiente diseño de muestreo en cuatro etapas:
+Por último, es importante reflexionar acerca de la definición práctica y el concepto que envuelven esta aproximación ¿Qué es un **último conglomerado**? Es la primera unidad de muestreo en un diseño complejo. Por ejemplo, considere el siguiente diseño de muestreo en cuatro etapas:
 
 \begin{equation*}
 \underbrace{\textbf{Municipio}}_{\text{UPM}} \Rrightarrow
@@ -196,8 +195,7 @@ Utilizar la técnica del **último conglomerado** es una salida práctica al pro
 
 En la primera las unidades primarias de muestreo (UPM) son los municipios; dentro de cada municipio, se seleccionan unidades secundarias de muestreo (USM) que corresponden a sectores cartográficos; de esta forma, el submuestreo continua hasta seleccionar las unidades finales de muestreo (UFM) que son los hogares. 
 
-Ahora, por lo general, la primera etapa de muestreo de una encuesta está inducida por dos tipos de diseños: estratificado o con probabilidad de selección proporcional al tamaño del municipio. En cualquiera de los dos casos, se cren subgrupos de inclusión forzosa. En el muestreo estratificado serán las ciudades grandes y en el muestreo proporcional también, puesto que la medida de tamaño inducira probabilidades de inclusión mayores a uno. 
-Luego, los municipios pertenecientes a este subgrupo de inclusión forzosa no pueden ser condierados como UPM, sino como un estrato de ciudades grandes. En cada ciudad de este estrato se realizará un muestreo de la siguiente manera:
+Ahora, por lo general, la primera etapa de muestreo de una encuesta está inducida por dos tipos de diseños: estratificado o con probabilidad de selección proporcional al tamaño del municipio. En cualquiera de los dos casos, se crean subgrupos de inclusión forzosa. En el muestreo estratificado serán las ciudades grandes y en el muestreo proporcional también, puesto que la medida de tamaño inducirá probabilidades de inclusión mayores a uno. Luego, para poder aplicar la aproximación en este caso, los municipios pertenecientes a este subgrupo de inclusión forzosa no serán considerados UPM, sino que inducirán un estrato de ciudades grandes. En cada ciudad de este estrato se realizará un muestreo de la siguiente manera:
 
 \begin{equation*}
 \underbrace{\textbf{Sector}}_{\text{UPM}} \Rrightarrow
@@ -205,35 +203,34 @@ Luego, los municipios pertenecientes a este subgrupo de inclusión forzosa no pu
 \underbrace{\textbf{Hogar}}_{\text{UFM}}
 \end{equation*}
 
-Es necesario tener en cuenta esta particularidad de las encuestas para poder aplicar correctamente esta técnica de aproximación de varianzas. En resumen, para aquellas ciudades que pertenecen al estrato de inclusión forsoza, las UPM serán los sectores cartográficos, y para el resto del país, las UPM serán los municipios cuya probabilidad de inclusión en la muestra de la primera etapa es menor a uno. 
+Es necesario tener en cuenta esta particularidad de algunas encuestas para poder aplicar correctamente esta técnica de aproximación de varianzas. En resumen, para aquellas ciudades que pertenecen al estrato de inclusión forzosa, las UPM serán los sectores cartográficos, y para el resto del país, las UPM serán los municipios cuya probabilidad de inclusión en la muestra de la primera etapa es menor a uno. 
 
 ## Linealización de Taylor
 
-Cuando se trata de estimar parámetros que tienen una forma no lineal, es posible recurrir al uso de las herramientas del análisis matemático para aproximar sus varianzas con el fin de publicar las cifras oficiales con sus respectivos errores estándar. @Valliant_Dever_Kreuter_2013 mencionan que esta técnica se basa en expresar el estimador como función de estimadores lineales de totales. Por ejemplo, si el interés recae en estimar un parámetro poblacional $\theta$ que a su vez depende de $p$ estimadores lineales, entonces su estimador de muestreo se debe expresar como
-
-$$
-\hat{\theta}=f(\hat{t}_1, \ldots, \hat{t}_p)
-$$
+Cuando se trata de estimar parámetros que tienen una forma no lineal, es posible recurrir al uso de las herramientas del análisis matemático para aproximar sus varianzas con el fin de publicar las cifras oficiales con sus respectivos errores estándar. @Valliant_Dever_Kreuter_2013 mencionan que esta técnica se basa en expresar el estimador como función de estimadores lineales de totales. Por ejemplo, si el interés recae en estimar un parámetro poblacional $\theta$ que a su vez depende de $Q$ estimadores de totales $(t_1, t_2, \ldots, t_Q)$, entonces su estimador de muestreo se debe expresar como $\hat{\theta}=f(\hat{t}_1, \ldots, \hat{t}_Q)$.
 
 En donde $\hat{t}_j=\sum_{k\in s}w_k y_{jk}$ es un estimador del $j$-ésimo total. Por consiguiente, si el estimador de interés no es una función lineal de totales, entonces las propiedades estadísticas comunes como insesgamiento, eficiencia y precisión de los estimadores deben ser aproximadas. Es común usar la técnica de la linealización de Taylor para encontrar aproximaciones lineales de primer orden. @Gutierrez_2016[, capitulo 8] presenta una explicación detallada de esta técnica aplicada a diferentes escenarios de estimación, en donde se consideran los siguientes pasos para construir un estimador linealizado de la varianza de una función no lineal de totales:
 
-1. Expresar el estimador del parámetro de interés $\hat{\theta}$ como una función de estimadores de totales insesgados. Así, $\hat{\theta}=f(\hat{t}_1, \hat{t}_2,\ldots,\hat{t}_Q)$.
-1. Determinar todas las derivadas parciales de $f$ con respecto a cada total estimado $\hat{t}_{q,\pi}$ y evaluar el resultado en las cantidades poblacionales $t_q$. Así
+1. Expresar el estimador del parámetro de interés $\hat{\theta}$ como una función de estimadores de totales insesgados. Así, 
+$$
+\hat{\theta}=f(\hat{t}_1, \hat{t}_2,\ldots,\hat{t}_Q).
+$$
+2. Determinar todas las derivadas parciales de $f$ con respecto a cada total estimado $\hat{t}_{q}$ y evaluar el resultado en las cantidades poblacionales $t_q$. Así
 $$
 a_q=\left.\dfrac{\partial f(\hat{t}_1,\ldots,\hat{t}_Q)}{\partial \hat{t}_{q}}\right|_{\hat{t}_1=t_1,\ldots,\hat{t}_Q=t_Q}
 $$
-1. Aplicar el teorema de Taylor para funciones vectoriales para linealizar la estimación $\hat{\theta}$ con $\mathbf{a}=(t_1,t_2,\cdots,t_Q)'$. En el paso anterior, se vio que $\bigtriangledown\hat{\theta}'=(a_1,\cdots,a_Q)$. Por consiguiente se tiene que
+3. Aplicar el teorema de Taylor para funciones vectoriales para linealizar la estimación $\hat{\theta}$ con $\mathbf{a}=(t_1,t_2,\cdots,t_Q)'$. En el paso anterior, se vio que $\bigtriangledown\hat{\theta}=(a_1,\cdots,a_Q)$. Por consiguiente se tiene que
 $$
-\hat{\theta}=f(\hat{t}_1,\ldots,\hat{t}_Q) \cong B+\sum_{q=1}^Qa_q(\hat{t}_{q}-t_q)
+\hat{\theta}=f(\hat{t}_1,\ldots,\hat{t}_Q) \cong \theta +\sum_{q=1}^Qa_q(\hat{t}_{q}-t_q)
 $$
-1. Definir una nueva variable $E_k$ con $k\in S$ al nivel de cada elemento observado en la muestra aleatoria.
+4. Definir una nueva variable $E_k$ con $k\in s$ al nivel de cada elemento observado en la muestra aleatoria, así:
 $$
 E_k=\sum_{q=1}^Qa_qy_{qk}
 $$
-1. Si los estimadores $\hat{t}_{q}$ son estimadores de Horvitz-Thompson, una expresión que aproxima la varianza de $\hat{\theta}$ está dada por
+5. Si los estimadores $\hat{t}_{q}$ son estimadores de Horvitz-Thompson, una expresión que aproxima la varianza de $\hat{\theta}$ está dada por
 $$
 AVar(\hat{\theta})=Var\left(\sum_{q=1}^Qa_q\hat{t}_{q,\pi}\right)
-=Var\left(\sum_S\frac{E_k}{\pi_k}\right)=\sum\sum_U\Delta_{kl}\frac{E_k}{\pi_k}\frac{E_l}{\pi_l}.
+=Var\left(\sum_S\frac{E_k}{\pi_k}\right)=\sum_U\sum_U\Delta_{kl}\frac{E_k}{\pi_k}\frac{E_l}{\pi_l}.
 $$
 
 Tal como se advirtió anteriormente, @Gutierrez_2016 afirma que, para encontrar una estimación de la varianza de $\hat{\theta}$, no es posible utilizar directamente los valores $E_k$, porque éstos dependen de los totales poblacionales (las derivadas $a_q$ se evalúan en los totales poblacionales que son desconocidos). Por consiguiente, los valores $E_k$ se aproximan reemplazando los totales desconocidos por los estimadores de los mismos. Siendo $e_k$ la aproximación de la variable linealizada dada por
@@ -241,7 +238,7 @@ $$
 e_k=\sum_{q=1}^Q\hat{a}_qy_{qk}
 $$
 
-donde $\hat{a}_q$ corresponde a un estimador de $a_q$. Si los estimadores $\hat{t}_{q}$, la aproximación de Taylor para el estimador la varianza del estimador de Horvitz-Thompson para un total está dado por la siguiente expresión 
+donde $\hat{a}_q$ corresponde a un estimador de $a_q$. La aproximación de Taylor para el estimador la varianza del estimador de Horvitz-Thompson para un total está dado por la siguiente expresión 
 
 $$
     \widehat{Var}(\hat{t}_{y,\pi})=\sum\sum_S \dfrac{\Delta_{kl}}{\pi_{kl}}\frac{e_k}{\pi_k}\frac{e_l}{\pi_l}
@@ -259,10 +256,9 @@ $$
 \frac{N_{I}}{n_{I}}\sum_{i\in S_{I}}\frac{N_i^2}{n_i}\left(1-\frac{n_i}{N_i}\right)S^2_{e_{S_i}}
 $$
 
-En donde $S^2_{\hat{t}_{e}S_I}$ es la varianza muestral de los totales estimados $t_{ei}$ $i\in s_I$ de las UPM seleccionadas en la primera etapa del muestreo y $S^2_{e_{S_i}}$ es la varianza muestral entre los valores $e_k$ para los elementos incluidos en la submuestra dentro de cada unidad primaria de muestreo seleccionada en la primera etapa.
-De la misma manera, para el caso particular de la estimación de un promedio utilizando el estimador de Hájek, las anteriores expresiones pueden adaptarse convenientemente.
+En donde $S^2_{\hat{t}_{e}S_I}$ es la varianza muestral de los totales estimados $t_{ei}$ de las UPM seleccionadas en la primera etapa del muestreo y $S^2_{e_{S_i}}$ es la varianza muestral entre los valores $e_k$ para los elementos incluidos en la submuestra dentro de cada UPM seleccionada en la primera etapa. De la misma manera, para el caso particular de la estimación de un promedio utilizando el estimador de Hájek, las anteriores expresiones pueden adaptarse convenientemente.
 
-Si se utiliza un estimador de calibración para el total poblacional de la característica de interés $t_y$, entonces la varianza estimada del estimador utilizando la técnica de linealización de Taylor haría uso de las siguientes variables linealizadas
+Si se utiliza un estimador de calibración para el total poblacional de la característica de interés $t_y$, entonces siguiendo los lineamientos de @Gutierrez_2016[sección 10.6], la varianza estimada del estimador utilizando la técnica de linealización de Taylor haría uso de las siguientes variables linealizadas
 
 $$
 e_k=y_k-\mathbf{x}_k'\mathbf{\hat{\theta}}
@@ -270,7 +266,7 @@ $$
 
 En donde $\mathbf{x}_k$ son las variables relacionadas con el vector de totales auxiliares $\mathbf{t}_{\mathbf{x}}$, medidas en la misma encuesta y $\mathbf{\hat{\theta}}$ es el vector estimado de coeficientes de regresión entre los valores que toman la característica de interés $y_k$ y el vector de información auxiliar $\mathbf{x}_k$.
 
-En la región la *Pesquisa Nacional por Amostra de Domicilios Continua*, en Brasil, y la *Encuesta de Caracterización Socioeconómica Nacional*, en Chile, utilizan esquemas de linealización de Taylor en conjunción con el acercamiento del último conglomerado. En resumen, la linealización de Taylor supone que es posible definir una aproximación lineal de $\hat{\theta}$ así
+En la región, tanto la *Pesquisa Nacional por Amostra de Domicilios Continua*, en Brasil, como la *Encuesta de Caracterización Socioeconómica Nacional*, en Chile, utilizan esquemas de linealización de Taylor en conjunción con el acercamiento del último conglomerado. En resumen, la linealización de Taylor supone que es posible definir una aproximación lineal de $\hat{\theta}$ así
 
 $$
 \hat{\theta} - \theta 
@@ -278,16 +274,16 @@ $$
 = \sum_{k\in s} w_k e_k + c
 $$
 
-En donde $e_k= \sum_{j=1}^p \frac{\partial f(\hat{t}_1, \ldots, \hat{t}_p) }{\partial \hat{t}_j} y_{jk}$ son variables linealizadas y $c$ son constantes determinísticas que por consiguiente no aportan a la varianza de $\hat{\theta}$. Nótese lo conveniente de expresar esta aproximación de esta manera puesto que al final, las cantidades que intervienen en la varianza se pueden expresar como una suma ponderada de las variables $e_k$ y por consiguiente es posible aplicar todos los principios establecidos anteriormente. De esta forma, asumiendo el escenario de muestreo planteado en las secciones anteriores, el estimador de la varianza de la  aproximación lineal de $\hat{\theta}$ está dado por
+En donde $e_k= \sum_{j=1}^p \frac{\partial f(\hat{t}_1, \ldots, \hat{t}_p) }{\partial \hat{t}_j} y_{jk}$ son variables linealizadas, mientras que las cantidad $c$ representa una constante determinística que no aporta a la varianza de $\hat{\theta}$. Nótese lo conveniente de expresar esta aproximación de esta manera puesto que al final, las cantidades que intervienen en la varianza se pueden expresar como una suma ponderada de las variables $e_k$ y por consiguiente es posible aplicar todos los principios establecidos anteriormente. De esta forma, asumiendo el escenario de muestreo planteado en las secciones anteriores, el estimador de la varianza de la  aproximación lineal de $\hat{\theta}$ está dado por
 
 $$
-\hat{V}(\hat{\theta}) = 
+\widehat{Var}(\hat{\theta}) = 
 \sum_h\frac{n_h}{n_h-1}\sum_{i\in s_h}\left(\hat{t}_{e_i}-\bar{\hat{t}}_{e_h}\right)^2
 $$
 
 En donde $\hat{t}_{e_i} = \sum_{k \in s_{hi}} w_k e_k$ y $\bar{\hat{t}}_{e_h}=(1/n_h)\sum_{i \in s_h}\hat{t}_{e_i}$. Por ejemplo, si el interés estuviera en estimar una razón, entonces las nuevas variables linealizadas son $e_k=(1/\hat{t}_{y_2})(y_{1k}-\hat{\theta} \ y_{2k})$.
 
-## Réplicas
+## Pesos replicados
 
 Las complicaciones en el cálculo de los errores de muestreo pueden ser mayores dependiendo de la escogencia del estimador y del diseño de muestreo asumido para la recolección de la información primaria. En algunas ocasiones, el proceso de linealización puede resultar complicado, por lo que es posible optar por una estrategia computacional aproximada que permite pasar por alto el proceso teórico de definición de las cantidades que estiman la varianza del estimador. Este conjunto de métodos supone la idea de la selección sistemática de *submuestras* que son utilizadas para estimar el parámetro de interés, utilizando los mismos principios de estimación que con la muestra completa. Por lo anterior, se obtienen estimaciones puntuales para cada réplica, las cuales son utilizadas para estimar la varianza del estimador de interés. 
 
@@ -296,17 +292,17 @@ En ausencia de fórmulas adecuadas, en los últimos años han aparecido una vari
 1. Dividir la toda la muestra en pequeños subconjutnos (réplicas).
 2. Repetir los mismos procesos de ajuste de ponderadores en cada réplica. 
 3. Hacer la estimación en cada subgrupo.
-4. La varianza del estimador se calcula de manera simple como la deviación de todas las estimaciones en cada réplica.
+4. La varianza del estimador se calcula de manera simple como la varianza muestral de todas las estimaciones en cada réplica.
 
-Usando esta metodología, no se requiere que las bases de datos públicas contengan la información asociada a los estratos o UPM y esto protege la anonimización de los respondientes. Además, no se requiere conocer el diseño de muestreo utilizado en la encuesta, puesto que al proveer las réplicas en las bases de datos, los investigadores pueden estimar el error de muestreo de forma automatizada y sin necesidad de intrincadas fórmulas matemáticas. Estos métodos ha demostrado ser eficientes y precisos para la mayoría de parámetros de interés, algunas encuestas que utilizan estas metodologías son la American Community Survey, la American Housing Survey y la Current Population Survey.
+Usando esta metodología, no se requiere que las bases de datos públicas contengan la información asociada a los estratos o UPM y esto protege la anonimización de los respondientes. Además, no se requiere conocer el diseño de muestreo utilizado en la encuesta, puesto que al proveer los pesos replicados en las bases de datos, los investigadores pueden estimar el error de muestreo de forma automatizada y sin necesidad de intrincadas fórmulas matemáticas. Estos métodos ha demostrado ser eficientes y precisos para la mayoría de parámetros de interés, algunas encuestas que utilizan estas metodologías son la American Community Survey, la American Housing Survey y la Current Population Survey. En América Latina la PNADC de Brasil, la ENE de Chile y la ENEMDU de Ecuador han hecho uso de estas técnicas para la estimación de la varianza de algunos estimadores complejos. 
 
-En particular, hay tres metodologías que abordan este problema: las réplicas repetidas balanceadas [@McCarthy_1969; @Judkins_1990], el Jackknife [@Krewski_Rao_1981] y el Bootstrap [@Rao_Wu_1988]. La idea general detrás de estos métodos es que, partiendo de la muestra completa, en cada réplica se seleccione un conjunto de UPMs manteniendo todas las unidades que hayan sido seleccionadas dentro de esas UPMs. Luego, es necesario reponderar los pesos de muestreo para que se conserve la representatividad; de esta manera, para cada réplica se obtendrá un nuevo conjunto de pesos de muestreo. Con estos pesos, se calcula la estimación de interés, obteniendo tantas estimaciones como réplicas definidas. @Wolter_2007 provee todos los detalles teóricos referentes al problema de la estimación de la varianza utilizando réplicas. 
+En particular, hay tres metodologías que abordan este problema: los pesos replicados repetidas balanceadas [@McCarthy_1969; @Judkins_1990], el Jackknife [@Krewski_Rao_1981] y el Bootstrap [@Rao_Wu_1988]. La idea general detrás de estos métodos es que, partiendo de la muestra completa, en cada réplica se seleccione un conjunto de UPMs manteniendo todas las unidades que hayan sido seleccionadas dentro de esas UPMs. Luego, es necesario reponderar los pesos de muestreo para que se conserve la representatividad; de esta manera, para cada réplica se obtendrá un nuevo conjunto de pesos de muestreo. Con estos pesos, se calcula la estimación de interés, obteniendo tantas estimaciones como réplicas definidas. @Wolter_2007 provee todos los detalles teóricos referentes al problema de la estimación de la varianza utilizando los pesos replicados. 
 
-En lo concerniente con las técnicas de remuestreo y la utilización de las réplicas para el cálculo de los errores de muestreo se recalca que la técnica de *Jackknife* es útil para estimar parámetros lineales, pero no tiene un buen comportamiento cuando se trata de estimar percentiles o funciones de distribución. La técnica de *réplicas repetidas balanceadas* es útil para estimar parámetros lineales y no lineales, pero puede ser deficiente cuando se tienen dominios pequeños que pueden inducir estimaciones nulas en la configuración de los pesos. Sin embargo, el ajuste de Fay a la técnica anterior resulta palear todos los anteriores inconvenientes. En este caso es importante utilizar una matriz de Hadammard que induzca no más de 120 réplicas para que la publicación de la base de datos no se sobrecargue. Por último, el *bootstrap* debe ser utilizado con con detenimiento porque debe replicar el diseño de muestreo exacto y esto se hace construyendo una población a partir de los pesos de muestreo. 
+En lo concerniente con las técnicas de remuestreo y la utilización de los pesos replicados para el cálculo de los errores de muestreo se recalca que la técnica de *Jackknife* es útil para estimar parámetros lineales, pero no tiene un buen comportamiento cuando se trata de estimar percentiles o funciones de distribución. La técnica de *réplicas repetidas balanceadas* es útil para estimar parámetros lineales y no lineales, pero puede ser deficiente cuando se tienen dominios pequeños que pueden inducir estimaciones nulas en la configuración de los pesos. Sin embargo, como se explicará más adelante, el ajuste de Fay a la técnica anterior resulta palear todos los anteriores inconvenientes. En este caso es importante utilizar una matriz de Hadammard que induzca no más de 120 conjuntos de pesos replicados para que la publicación de la base de datos no se sobrecargue. Por último, el *bootstrap* debe ser utilizado con con detenimiento porque debe replicar el diseño de muestreo exacto y esto se logra construyendo una población a partir de los pesos de muestreo. 
 
 #### La técnica de Jackknife {-}
 
-Este método provee estimaciones eficientes para estimadores lineales y no lineales (a excepción de los percentiles). En su forma más básica, los pesos replicados se crean al retirar una UPM del análisis. Por ende, se tendrán tantas réplicas como UPM existan en la muestra. Además, cuando una UPM se retira en la réplica, todas las unidades dentro de esa UPM también se retiran. El desarrollo del procedimiento de Jackknife se remonta a un método utilizado por @Quenouille para reducir el sesgo de las estimaciones. El refinamiento ulterior del método [@mosteller1968data] llevó a su aplicación en una serie de situaciones de las ciencias sociales en las que las fórmulas no están fácilmente disponibles para el cálculo de errores de muestreo. 
+Este método provee estimaciones eficientes para estimadores lineales y no lineales (a excepción de los percentiles). En su forma más básica, los pesos replicados se crean al retirar una UPM del análisis. Por ende, se tendrán tantos pesos replicados como UPM existan en la muestra. Además, cuando una UPM se retira en la réplica, todas las unidades dentro de esa UPM también se retiran. El desarrollo del procedimiento de Jackknife se remonta a un método utilizado por @Quenouille para reducir el sesgo de las estimaciones. El refinamiento ulterior del método [@mosteller1968data] llevó a su aplicación en una serie de situaciones de las ciencias sociales en las que las fórmulas no están fácilmente disponibles para el cálculo de errores de muestreo. 
 
 Este procedimiento ofrece mayor flexibilidad, pues el Jackknife puede implementarse en una amplia variedad de diseños muestrales; además de facilidad de uso, puesto que no requiere de software especializado. El concepto principal de esta técnica parte de una muestra de tamaño $n$, la cual se divide en $A$ grupos de igual tamaño $m=n/A$, a partir de esta división, la varianza de un estimador $\hat{\theta}$ se estima a partir de la varianza observada en los $A$ grupos.
 
@@ -320,60 +316,75 @@ $$\hat{\theta}_{JK}=\dfrac{1}{A}\sum_{a=1}^{A}\hat{\theta}_{a}$$
 
 mientras que el estimador de la varianza obtenido mediante Jackknife se obtiene como: 
 
-$$\hat{V}_{JK1}=\dfrac{1}{A(A-1)}\sum_{a=1}^{A}\left(\hat{\theta}_{a}-\hat{\theta}_{JK}\right)^{2}$$
+$$\widehat{Var}_{JK1}=\dfrac{1}{A(A-1)}\sum_{a=1}^{A}\left(\hat{\theta}_{a}-\hat{\theta}_{JK}\right)^{2}$$
 
 También es posible utilizar como estimador alternativo: 
 
-$$\hat{V}_{JK2}=\dfrac{1}{A(A-1)}\sum_{a=1}^{A}\left(\hat{\theta}_{a}-\hat{\theta}\right)^{2}$$
+$$\widehat{Var}_{JK2}=\dfrac{1}{A(A-1)}\sum_{a=1}^{A}\left(\hat{\theta}_{a}-\hat{\theta}\right)^{2}$$
 
 Para diseños estratificados y multietápicos en los cuales las unidades primarias de muestreo han sido seleccionadas en el estrato $h$, para $h=1, \ldots, H$, el estimador de varianza de Jackknife para la estimación de un parámetro poblacional  está dado por
 
-$$ \hat{V}_{JK}(\hat{\theta}) = \sum_{h=1}^H \frac{n_h - 1}{n_h} \sum_{i=1}^{n_h}
-(\hat{\theta}_{(hi)}-\hat{\theta})^2$$
+$$ 
+\widehat{Var}_{JK}(\hat{\theta}) = \sum_{h=1}^H \frac{n_{Ih} - 1}{n_{Ih}} \sum_{i=1}^{n_{Ih}}
+(\hat{\theta}_{h(i)}-\hat{\theta})^2
+$$
 
-donde $\hat{\theta}_{(hi)}$ es la estimación de $\theta$ usando los datos de la muestra excluyendo las observaciones en la $i$-ésima unidad primaria de muestreo [@Korn_Graubard_1999, pg. 29 – 30]. @shao2012jackknife[, Teorema 6.2] garantiza la convergencia en probabilidad de este estimador hacia la varianza teórica, de donde se puede concluir que es un estimador aproximadamente insesgado para la varianza teórica. Los pesos de la unidad $k$ que pertenece a la UPM $U_i$, en el estrato $U_h$ están dados por la siguiente expresión:
+donde $\hat{\theta}_{h(i)}$ es la estimación de $\theta$ usando los datos de la muestra excluyendo las observaciones en la $i$-ésima unidad primaria de muestreo [@Korn_Graubard_1999, pg. 29 – 30]. @shao2012jackknife[, Teorema 6.2] garantiza la convergencia en probabilidad de este estimador hacia la varianza teórica, de donde se puede concluir que es un estimador aproximadamente insesgado para la varianza teórica. Los pesos de la unidad $k$ que pertenece a la UPM $U_i$, en el estrato $U_h$ están dados por la siguiente expresión:
 
 $$
 d_{hk}^i = 
 \begin{cases}
 0, \ \text{si $U_i \in U_h$ y $k \in U_i$ }\\
 d_k, \ \text{si $k \notin U_h$}\\
-\frac{m_h}{m_h-1}d_k, \ \text{si $U_i \in U_h$ y $k \notin U_i$}
+\frac{n_{Ih}}{n_{Ih}-1}d_k, \ \text{si $U_i \in U_h$ y $k \notin U_i$}
 \end{cases}
 $$
 
-En donde $m_h$ es el número de UPM en el estrato $U_h$. Por último, para reducir el número de réplicas s pueden conformar *unidades de varianza*, uniendo varias UPM dentro de un mismo estrato, y también *estratos de varianza*, colapsando estratos dentro de la muestra. En el primer caso, se podrían emparejar las UPM en cada estrato de acuerdo a la medida de tamaño. En este caso, el estimador de varianza está dado por la siguientes expresión
+En donde $n_{Ih}$ es el número de UPM seleccionadas en el estrato $U_h$. Por último, para reducir el número de pesos replicados, se pueden conformar *unidades de varianza*, uniendo varias UPM dentro de un mismo estrato, y también *estratos de varianza*, colapsando estratos dentro de la muestra. En el primer caso, se podrían emparejar las UPM en cada estrato de acuerdo a la medida de tamaño. En este caso, el estimador de varianza está dado por la siguiente expresión
 
 $$
-Var(\hat{\theta}) = \sum_h \frac{m_h-m_{hg}}{m_h} 
-\sum_{i \in s_{hg}} (\hat{\theta}_{hg} - \hat{\theta})^2
+\widehat{Var}_{JK}(\hat{\theta}) = \sum_h \frac{n_{Ih}-n_{Ihg}}{n_{Ih}} 
+\sum_{i \in s_{hg}} (\hat{\theta}_{h(g)} - \hat{\theta})^2
 $$
 
-En donde $\hat{\theta}_{hg}$ es el estimador del parámetro retirando el $g$-ésimo grupo del estrato $U_h$.
+En donde $\hat{\theta}_{hg}$ es el estimador del parámetro retirando el $g$-ésimo subgrupo del estrato $U_h$ y $n_{Ihg}$ es el tamaño del subgrupo en la muestra denotado como $s_{hg}$. A continuación se ejemplifica la estructura final de una base de datos de pesos replicados con esta técnica en un conjunto reducido de tan solo ocho unidades muestrales divididas en cuatro UPM y dos estratos. Se enfatiza que habrán tantos conjuntos (columnas) de pesos replicados Jackknife como UPM existentes en la muestra de la primera etapa.
 
-![*Primeras ocho réplicas del método de JacKnife.*](Pics/20.png)
-
-
-#### El método de las Réplicas Repetidas Balanceadas {-}
-
-
-Esta técnica se desarrolló para diseños en donde dos UPM son seleccionadas por estrato. Funciona consistentemente para la estimación de parámetros lineales y no lineales (incluidos los percentiles)y, además, asegura máxima dispersión de las UPM a través de las regiones geográficas (estratos) [@Valliant_Dever_2017]. Si el submuestreo en cada estrato es $m_h = 2$, entonces es posible hacer $2^H$ posibles réplicas al seleccionar aleatoriamente una UPM en cada estrato. 
-
-Es posible lograr la misma eficiencia reduciendo el número de réplicas utilizando un enfoque ortogonal con matrices de Hadamard, que son matrices cuadradas cuyas columnas deben ser ortogonales. Considere la siguiente figura, en donde el valor +1 implica que la primera UPM se mantiene^[Las UPM que se mantienen en cada réplica se llaman *half-samples*.] como parte de la réplica y la segunda UPM es retirada de la réplica; el valor -1 implica que la segunda UPM se mantiene como parte de la réplica y la primera UPM es retirada de la réplica. Por tanto, en cada réplica se retira una UPM por estrato. Esto implica que:
-
-- El producto punto entre cualquier combinación de dos columnas deber ser igual a cero. 
-- Por ejemplo, tomando las columnas 3 y 7, se tiene que
-\begin{align*}
-&(1, 1, -1, -1, 1, 1, -1, -1)' \cdot (1, 1, -1,-1,-1,-1,1,1)'  \\ 
-&=  1 + 1 + 1 + 1 -1 - 1 - 1 -1  \\
-&=0 
-\end{align*}
+| $k$ |  Estrato |  UPM | $d_k^{(1)}$ | $d_k^{(2)}$ | $d_k^{(3)}$ | $d_k^{(4)}$ |
+|:---:|:--------:|:----:|:-----------:|:-----------:|:-----------:|:-----------:|
+|  1  | Estrato1 | UPM1 |      0      |     1,03    |     1,03    |     1,03    |
+|  2  | Estrato1 | UPM1 |      0      |     1,03    |     1,03    |     1,03    |
+|  3  | Estrato1 | UPM2 |     1,03    |      0      |     1,03    |     1,03    |
+|  4  | Estrato1 | UPM2 |     1,03    |      0      |     1,03    |     1,03    |
+|  5  | Estrato2 | UPM3 |     1,03    |     1,03    |      0      |     1,03    |
+|  6  | Estrato2 | UPM3 |     1,03    |     1,03    |      0      |     1,03    |
+|  7  | Estrato2 | UPM4 |     1,03    |     1,03    |     1,03    |      0      |
+|  8  | Estrato2 | UPM4 |     1,03    |     1,03    |     1,03    |      0      |
 
 
-![Matriz de Hadamard con 8 réplicas](Pics/9.jpg)
+#### El método de las réplicas repetidas balanceadas {-}
 
 
-De esta forma, el número de réplicas ortogonales será igual al *menor múltiplo de 4 mayor o igual al número de estratos*. Por consiguiente, el peso de los individuos en la UPM que se mantiene se multiplica por un factor de 2. Por tanto, se tiene que
+Esta técnica conocida como BRR se desarrolló para diseños en donde dos UPM son seleccionadas por estrato. Este método funciona consistentemente para la estimación de parámetros lineales y no lineales (incluidos los percentiles) y, además, asegura máxima dispersión de las UPM a través de las regiones geográficas (estratos) [@Valliant_Dever_2017]. Nótese que si el submuestreo en cada estrato es $n_{Ih} = 2$, entonces al utilizar la técnica de Jackknife deberíamos definir $2^H$ posibles réplicas al seleccionar aleatoriamente una UPM en cada estrato, lo cual puede ser intratable computacionalmente. 
+
+Es posible lograr la misma eficiencia reduciendo el número de pesos replicados utilizando un enfoque ortogonal con matrices de Hadamard, que son matrices cuadradas cuyas columnas deben ser ortogonales. Por ejemplo, considere la siguiente matriz: 
+
+$$
+\begin{pmatrix}
++1 & +1 & +1 & +1 \\
++1 & -1 & +1 & -1 \\
++1 & +1 & -1 & -1 \\
++1 & -1 & -1 & +1
+\end{pmatrix}
+$$
+
+Asumiendo que el valor +1 implica que la primera UPM se mantiene como parte de la réplica y la segunda UPM es retirada de la réplica; el valor -1 implica que la segunda UPM se mantiene como parte de la réplica y la primera UPM es retirada de la réplica. Por tanto, en cada réplica se retira una UPM por estrato. Esto implica que el producto punto entre cualquier combinación de dos columnas deber ser igual a cero. Por ejemplo, tomando las columnas 2 y 4, se tiene que
+
+$$
+(+1, -1, +1, -1)' \cdot (+1, -1, -1, +1) 
+=  1 + 1 - 1 -1 = 0 
+$$
+
+De esta forma, el número de réplicas ortogonales será igual al *menor múltiplo de 4 mayor o igual al número de estratos*. Las UPM que se mantienen en cada réplica se conocen como *half-samples*. Por consiguiente, el peso de los individuos en la UPM que se mantiene se multiplica por un factor de 2. Entonces, se tiene que
 
 $$
 d_{k} = 
@@ -383,270 +394,189 @@ d_{k} =
 \end{cases}
 $$
 
+Bajo esta metodología BRR, el estimador de la varianza toma la siguiente forma:
 
-![*Primeras ocho réplicas del método de las Réplicas Repetidas Balanceadas.*](Pics/21.png)
-
-Bajo la metodología BRR, el estimador de la varianza toma la siguiente forma:
 $$
-Var(\hat{\theta}) = \frac{1}{A}\sum_{a=1}^A(\hat{\theta}_a - \hat\theta )^2
+\widehat{Var}_{BRR}(\hat{\theta}) = \frac{1}{A}\sum_{a=1}^A(\hat{\theta}_a - \hat\theta )^2
 $$
-En donde $\hat{\theta}_a$ es el estimador del parámetro de interés en la réplica $a$. 
 
-Una desventaja del método BRR es que las unidades en dominios con muestra pequeña pueden estar ausentes en algunas combinaciones de réplicas por el diseño ortogonal. Lo anterior conlleva una pérdida de precisión en el cálculo del error estándar. Una solución a este problema es modificar los pesos en las réplicas. Para la aplicación de la Réplicas Repetidas Balanceadas es recomendable usar el método de Fay, en donde se siguen los lineamientos basados en la matriz de Hadamard, aunque las UPM no son retiradas completamente, sino que su peso se modifica de la siguiente manera:
+En donde $\hat{\theta}_a$ es el estimador del parámetro de interés en la réplica $a$. A continuación se ejemplifica la estructura final de una base de datos de pesos replicados con esta técnica en el mismo conjunto reducido, considerando que hay dos estratos.
+
+| $k$ |  Estrato |  UPM | $d_k^{(1)}$ | $d_k^{(2)}$ |
+|:---:|:--------:|:----:|:-----------:|:-----------:|
+|  1  | Estrato1 | UPM1 |      2      |      0      |
+|  2  | Estrato1 | UPM1 |      2      |      0      |
+|  3  | Estrato1 | UPM2 |      0      |      2      |
+|  4  | Estrato1 | UPM2 |      0      |      2      |
+|  5  | Estrato2 | UPM3 |      2      |      0      |
+|  6  | Estrato2 | UPM3 |      2      |      0      |
+|  7  | Estrato2 | UPM4 |      0      |      2      |
+|  8  | Estrato2 | UPM4 |      0      |      2      |
+
+
+Una desventaja de este método BRR es que las unidades en dominios con muestra pequeña pueden estar ausentes en algunas combinaciones de pesos replicados por el diseño ortogonal. Lo anterior conlleva una pérdida de precisión en el cálculo del error estándar. Una solución a este problema es modificar los pesos en los pesos replicados. Para la aplicación de la Réplicas Repetidas Balanceadas es recomendable usar el método de Fay, en donde se siguen los lineamientos basados en la matriz de Hadamard, aunque las UPM no son retiradas completamente, sino que su peso se modifica de la siguiente manera:
+
 $$
 d_k^a=
 \begin{cases}
-\rho*d_k\\ \text{si $k$ no pertenece a la *half-sample*}
-(2-\rho)d_k \text{en otro caso}
+\rho*d_k,\ \ \ \  \ \ \ \ \ \ \text{si $k$ pertence a la UPM que fue retirada} \\
+(2-\rho)d_k, \ \ \ \ \text{en otro caso.}
 \end{cases}
 $$
 
 En donde $0<\rho<1$. Algunos estudios por simulación han mostrado una buena eficiencia para valores de $\rho$ iguales a 0.3, 0.5 o 0.7. Bajo la metodología BRR con el ajuste de Fay, el estimador de la varianza toma la siguiente forma:
 $$
-Var(\hat{\theta}) = \frac{1}{A(1-\rho)^2}\sum_{a=1}^A(\hat{\theta}_a - \hat\theta )^2
+\widehat{Var}_{Fay}(\hat{\theta}) = \frac{1}{A(1-\rho)^2}\sum_{a=1}^A(\hat{\theta}_a - \hat\theta )^2
 $$
 
-En donde $\hat{\theta}_a$ es el estimador del parámetro de interés en la réplica $a$. Para la aplicación de este método, los pesos de muestreo se ajustan para generar los pesos de repetición y, posteriormente, se repiten los ajustes por ausencia de respuesta  y calibración para estos nuevos pesos. Con esta metodología se estiman los errores de muestreo y la varianza de muestreo, incluyendo el impacto de la ausencia de respuesta, el cual se espera que sea pequeño, pero relevante en el momento de calcular estimadores más precisos. Retomando las observaciones hechas anteriormente, en el caso en el que la encuesta cuente con estratos en donde se encuentre una sola UPM, el método de las réplicas repetidas balanceadas no es aplicable puesto que al eliminar una unidad, algunos estratos quedarán vacíos. 
+En donde $\hat{\theta}_a$ es el estimador del parámetro de interés en la réplica $a$. A continuación se ejemplifica la estructura final de una base de datos de pesos replicados con el ajuste de Fay en el mismo conjunto reducido.
+
+| $k$ |  Estrato |  UPM | $d_k^{(1)}$ | $d_k^{(2)}$ |
+|:---:|:--------:|:----:|:-----------:|:-----------:|
+|  1  | Estrato1 | UPM1 |     1.5     |     0.5     |
+|  2  | Estrato1 | UPM1 |     1.5     |     0.5     |
+|  3  | Estrato1 | UPM2 |     0.5     |     1.5     |
+|  4  | Estrato1 | UPM2 |     0.5     |     1.5     |
+|  5  | Estrato2 | UPM3 |     1.5     |     0.5     |
+|  6  | Estrato2 | UPM3 |     1.5     |     0.5     |
+|  7  | Estrato2 | UPM4 |     0.5     |     1.5     |
+|  8  | Estrato2 | UPM4 |     0.5     |     1.5     |
+
+En general, para la aplicación de estos métodos, los pesos de muestreo se ajustan para generar los pesos replicados y, posteriormente, se repiten los ajustes por ausencia de respuesta  y calibración para estos nuevos pesos. Con esta metodología se estiman los errores de muestreo y la varianza de muestreo, incluyendo el impacto de la ausencia de respuesta, el cual se espera que sea pequeño, pero relevante en el momento de calcular estimadores más precisos. Retomando las observaciones hechas anteriormente, en el caso en el que la encuesta cuente con estratos en donde se encuentre una sola UPM, el método de los pesos replicados repetidas balanceadas no es aplicable puesto que al eliminar una unidad, algunos estratos quedarán vacíos. 
 
 #### Método de Bootstrap {-}
 
-En este apartado se presenta el método de Bootstrap [@EfroTibs93], el cual es muy utilizado por su fácil implementación; además de ser flexible en términos del número de réplicas que se crean. Teniendo los pesos muestrales calibrados (denotados por $w_k^{cal}$), se procede a crear las réplicas con el método de remuestreo con el fin de poder calcular estimaciones de indicadores junto con las varianzas de estimación. En el contexto de las encuestas de hogares, se trata de realizar un remuestreo a las unidades primarias de muestreo seleccionadas desde el marco de áreas. 
+En este apartado se presenta el método de Bootstrap [@EfroTibs93], el cual es muy utilizado por su fácil implementación; además de ser flexible en términos del número de pesos replicados que se crean. Teniendo los pesos muestrales se procede a crear los pesos replicados con el método de remuestreo con el fin de poder calcular estimaciones de indicadores junto con las estimación de las varianzas. En el contexto de las encuestas de hogares, se trata de realizar un remuestreo a las unidades primarias de muestreo seleccionadas desde el marco de áreas. 
 
-@Rao_Wu_1984 y @Rao_Wu_1988 aconsejan seleccionar una muestra con reemplazo de $n_I - 1$ de las $n_I$ UPM de la muestra, teniendo en cuenta la probabilidad de selección del diseño complejo en la primera etapa. Dado que la selección es con reemplazo, una UPM puede quedar seleccionada más de una vez en esta nueva muestra. Por otro lado, también es posible realizar una selección sin reemplazo; en este caso, @Preston_2009 recomiendan seleccionar una muestra con reemplazo de $n_I/2$ de las $n_I$ UPM de la muestra, teniendo en cuenta la probabilidad de selección del diseño complejo en la primera etapa.
+El Bootstrap es el método basado en réplicas más versatil para el cálculo de errores estándar. @Valliant_Dever_2017 mencionan que es muy eficiente en la estimación de parámetros lineales y no lineales, a diferencia del Jackknife que no es eficiente en la estimación de percentiles. Funciona también para tamaños de muestra pequeños, a diferencia del método BRR que requiere una muestra de mínimo dos UPM por estrato. Este método requiere una cantidad de pesos replicados grande, usualmente mayor a 200. 
 
-El Bootstrap es el método basado en réplicas más versatil para el cálculo de errores estándar. @Valliant_Dever_2017 mencionan que es muy eficiente en la estimación de parámetros lineales y no lineales, a diferencia del Jackknife que no es eficiente en la estimación de percentiles. Funciona también para tamaños de muestra pequeños, a diferencia del método BRR que requiere una muestra de mínimo dos UPM por estrato. Este método requiere una cantidad de réplicas grande, usualmente mayor a 200.
-
-
-Siendo $s_{BS}$ la submuestra Bootstrap, el peso del individuo $k$ perteneciente a la UPM $i$ del estrato $h$ sigue la siguiente expresión:
+Siendo $s_{BS}$ la submuestra Bootstrap, el peso replicado del individuo $k$ perteneciente a la UPM $i$ del estrato $h$ sigue la siguiente expresión:
 $$
-d_{k} = 
+d_k^b = 
 \begin{cases}
 0, \text{\ si la UPM $i$ no pertence a $s_{BS}$} \\
-d_k\left[1 - \sqrt{\frac{m^*_h}{m_h-1}}+\sqrt{\frac{m^*_h}{m_h-1}}
-\frac{m_h}{m^*_h}m^*_{hi}
+d_k\left[1 - \sqrt{\frac{n_{Ih}^*}{n_{Ih}-1}}+\sqrt{\frac{n_{Ih}^*}{n_{Ih}-1}}
+\frac{n_{Ih}}{n_{Ih}^*}n_{Ihi}^*
 \right], \text{\ en otro caso} 
 \end{cases}
 $$
 
-En donde $m_h$ es el úmero de UPM en la muestra original del estrato $h$, $m^*_h$ es el número de UPM en la muestra Bootstrap y $m^*_{hi}$ es el número de veces que la UPM $i$ fue seleccionada en la muestra Bootstrap. En este caso se selecciona una muestra Bootstrap con $m^*_h = m_h - 1$, y los pesos toman la siguiente forma
+En donde $n_{Ih}$ es el úmero de UPM en la muestra original del estrato $h$, $n_{Ih}^*$ es el número de UPM en la muestra Bootstrap y $n_{Ihi}^*$ es el número de veces que la UPM $i$ fue seleccionada en la muestra Bootstrap. En este caso se selecciona una muestra Bootstrap con $m^*_h = m_h - 1$, y los pesos toman la siguiente forma
 
 $$
-d_{k} = 
+d_k^a = 
 \begin{cases}
-0, \text{\ si la UPM $i$ no pertence a $s_{BS}$} \\
-d_k \left[\frac{m^*_h}{m_h-1} m^*_{hi}\right], \text{\ en otro caso} 
+0,  \ \ \  \ \ \ \ \ \  \ \ \  \ \ \  \ \ \  \ \ \  \ \ \  \ \ \  \ \ \  \ \ \  \ \ \  \ \ \  \ \ \  \ \ \  \ \ \ \ \ \  \ \ \  \ \ \  \ \ \  \ \ \ \text{si la UPM $i$ no pertence a $s_{BS}$} \\
+d_k\left[1 - \sqrt{\frac{n_{Ih}^*}{n_{Ih}-1}}+\sqrt{\frac{n_{Ih}^*}{n_{Ih}-1}}
+\frac{n_{Ih}}{n_{Ih}^*}n_{Ihi}^*
+\right],  \ \ \  \ \ \text{en otro caso} 
 \end{cases}
 $$
 
-
-Bajo la metodología Bootstrap, el estimador de la varianza toma la siguiente forma:
+Bajo la metodología Bootstrap (BS), el estimador de la varianza toma la siguiente forma:
 $$
-Var(\hat{\theta}) = \frac{1}{B}\sum_{b=1}^B(\hat{\theta}_b - \hat\theta )^2
+\widehat{Var}_{BS}(\hat{\theta}) = \frac{1}{B}\sum_{b=1}^B(\hat{\theta}_b - \hat\theta )^2
 $$
-En donde $\hat{\theta}_b$ es el estimador del parámetro de interés en la réplica $b$ inducida por la muestra Bootstrap. En resumen, para la $i$-ésima réplica, se tiene los pesos muestrales $w_1^i,w_2^i, \cdots, w_n^i$, con $i=1,\cdots,200$, y estos pesos serán utilizados para calcular las estimaciones de totales, proporciones, promedios y razones y sus respectivas varianzas o desviaciones. 
+En donde $\hat{\theta}_b$ es el estimador del parámetro de interés en la réplica $b$ inducida por la muestra Bootstrap. En resumen, para la $b$-ésima réplica con los pesos resultantesse podrán calcular las estimaciones de totales, proporciones, promedios y razones y sus respectivas varianzas o desviaciones. En general, es necesario reflejar el ajuste de los pesos en los pesos replicados, por esto es necesario trabajar con la muestra originalmente seleccionada, la cual contendrá unidades no elegibles y unidades que no respondieron. Los mismos ajustes que se hicieron a la muestra original se deben realizar en cada réplica. Si hubo calibración de pesos también debe ser incluida como un proceso en cada réplica, para asegurar que el error estándar inducido por estos métodos incluirá el incremento (o decremento) de la varianza inducida por estos ajustes a los pesos. A continuación se ejemplifica la estructura final de una base de datos de pesos replicados con la metodología de bootstrap en el mismo conjunto reducido.
 
-![*Primeras ocho réplicas del método de Bootstrap.*](Pics/23.png)
 
-En general, es necesario reflejar el ajuste de los pesos en las réplicas, por esto es necesario trabajar con la muestra originalmente seleccionada, la cual contendrá unidades no elegibles y unidades que no respondieron. Los mismos ajustes que se hicieron a la muestra original se deben realizar en cada réplica. Si hubo calibración de pesos también debe ser incluida como un proceso en cada réplica, para asegurar que el error estándar inducido por estos métodos incluirá el incremento (o decremento) de la varianza inducida por estos ajustes a los pesos. 
+
+| $k$ |  Estrato |  UPM | $d_k^{(1)}$ | $d_k^{(2)}$ | $d_k^{(3)}$ | $d_k^{(4)}$ |
+|:---:|:--------:|:----:|:-----------:|:-----------:|:-----------:|:-----------:|
+|  1  | Estrato1 | UPM1 |      2      |      0      |      1      |      1      |
+|  2  | Estrato1 | UPM1 |      2      |      0      |      1      |      1      |
+|  3  | Estrato1 | UPM2 |      0      |      2      |      1      |      1      |
+|  4  | Estrato1 | UPM2 |      0      |      2      |      1      |      1      |
+|  5  | Estrato2 | UPM3 |      1      |      1      |      2      |      0      |
+|  6  | Estrato2 | UPM3 |      1      |      1      |      2      |      0      |
+|  7  | Estrato2 | UPM4 |      1      |      1      |      0      |      2      |
+|  8  | Estrato2 | UPM4 |      1      |      1      |      0      |      2      |
+
+
+
+
+@Rao_Wu_1984 y @Rao_Wu_1988 aconsejan seleccionar una muestra con reemplazo de $n_I - 1$ de las $n_I$ UPM de la muestra, teniendo en cuenta la probabilidad de selección del diseño complejo en la primera etapa. Dado que la selección es con reemplazo, una UPM puede ser seleccionada más de una vez en esta nueva muestra. Por otro lado, también es posible realizar una selección sin reemplazo; en este caso, @Preston_2009 recomiendan seleccionar una muestra con reemplazo de $n_I/2$ de las $n_I$ UPM de la muestra, teniendo en cuenta la probabilidad de selección del diseño complejo en la primera etapa.
 
 ## Consideraciones adicionales  
 
+En la práctica del muestreo, existen algunos paradigmas que inducen la planeación y diseño de las encuestas. En esta sección se muestran ejemplos y contra-ejemplos que permiten ilustrar algunas mitos en la estimación del error de muestreo de las encuestas de hogares. Para esto, consideremos la varianza del esimador HT, dada a continuación:
 
-En la práctica del muestreo, existen algunos paradigmas que inducen la planeación y diseño de las encuestas. En esta sección se muestran ejemplos y contra-ejemplos que permiten ilustrar algunas paradojas en la estimación del error de muestreo de las encuestas de hogares. 
+$$
+Var(\hat{t}_{y, \pi})=
+\sum_{k\in U}\sum_{l\in U} \Delta_{kl}\frac{y_k}{\pi_k}\frac{y_l}{\pi_l}
+$$
 
+En donde $\Delta_{kl} = (\pi_{kl}-\pi_k\pi_l)$ y $\pi_{kl}$ denota la probabilidad de inclusión conjunta de los elementos $k$ y $l$ pertenezcan a la muestra $s$. Bajo diseños de muestreo de tamaño fijo, existen dos estimadores insesgados para esta varianza, el primero originalmente propuesto por @HT y dado por
+
+$$
+\widehat{Var}_1(\hat{t}_{y, \pi})=
+\sum_{k\in s}\sum_{l\in s} \frac{\Delta_{kl}}{\pi_{kl}}\frac{y_k}{\pi_k}\frac{y_l}{\pi_l}
+$$
+
+El segundo estimador propuesto por @Sen y @YG, está dado por la siguiente expresión:
+
+$$
+\widehat{Var}_2(\hat{t}_{y, \pi})=-\frac{1}{2}
+\sum_{k\in s}\sum_{l\in s} \frac{\Delta_{kl}}{\pi_{kl}}\left(\frac{y_k}{\pi_k}-\frac{y_l}{\pi_l}\right)^2
+$$
+
+#### Estimaciones negativas de varianza {-}
 
 La idea de que no pueden existir estimaciones negativas de la varianza se ha instalado como un razonamiento bastante lógico e intuitivo: dado que la varianza es un parámetro positivo, entonces no puede ser estimada con cantidades negativas. Sin embargo, en la inferencia basada en el diseño de muestreo, sí es posible obtener estimativas negativas de varianza para algunas estructuras poblacionales particulares y es por esto que se requiere una experiencia mayor por parte del equipo de muestreo, que debe conocer bajo qué condiciones se podría presentar esta situación para evadirla. 
 
-Nótese que se debe diferenciar entre estimador (que es una función de variables aleatorias) y parámetro (que es un valor real desconocido). En efecto, para la varianza del estimador HT (parámetro desconocido y siempre positivo) hay estimadores (función de variables aleatorias) que pueden arrojar estimaciones negativas. Es posible que las estimaciones de la varianza arrojen resultados negativos, que no pueden ser utilizados ni interpretados. Haciendo uso de la función `VarSYGHT` es posible ejemplificar esta situación. Considere el siguiente diseño de muestreo de tamaño fijo e igual a $n=2$.
+Nótese que se debe diferenciar entre estimador (que es una función de variables aleatorias) y parámetro (que es un valor real desconocido). En efecto, para la varianza del estimador HT (parámetro desconocido y siempre positivo) hay estimadores (función de variables aleatorias) que pueden arrojar estimaciones negativas. Es posible que las estimaciones de la varianza arrojen resultados negativos, que no pueden ser utilizados ni interpretados. Considere el siguiente diseño de muestreo de tamaño fijo e igual a $n=2$, el cual induce seis posibles muestras.
 
 
-```r
-library(TeachingSampling)
-```
+| $s$| $I_1$| $I_2$| $I_3$| $I_4$|  $p(s)$|
+|---:|---:|---:|---:|---:|----:|
+|   $s_1$|   1|   1|   0|   0| 0.31|
+|   $s_2$|   1|   0|   1|   0| 0.20|
+|   $s_3$|   1|   0|   0|   1| 0.14|
+|   $s_4$|   0|   1|   1|   0| 0.03|
+|   $s_5$|   0|   1|   0|   1| 0.01|
+|   $s_6$|   0|   0|   1|   1| 0.31|
 
-```
-## Loading required package: dplyr
-```
+En el anterior ejemplo, la probabilidad de obtener una muestra compuesta por los dos primeros elementos se fijó en 0.31; mientras que la probabilidad de obtener una muestra compuesta por el primer y el tercer elemento se fijó en 0.20 y así sucesivamente. Para esta configuración se obtienen las estimaciones puntuales para cada una de las seis posibles muestras, así como las dos posibles estimaciones de la varianza. Nótese que para ambos escenarios existen estimaciones negativas.
 
-```
-## 
-## Attaching package: 'dplyr'
-```
+|$s$|$I_1$|$I_2$|$I_3$|$I_4$|$p(s)$|$\hat{t}_{y, \pi}$|$\widehat{Var}_1(\hat{t}_{y, \pi})$|$\widehat{Var}_2(\hat{t}_{y, \pi})$|
+|---:|---:|---:|---:|---:|----:|--------:|-----------:|-----------:|
+|   $s_1$|   1|   1|   0|   0| 0.31| 9.560440|   38.099984|  -0.9287681|
+|   $s_2$|   1|   0|   1|   0| 0.20| 5.883191|   -4.744190|   2.4710422|
+|   $s_3$|   1|   0|   0|   1| 0.14| 4.933110|   -3.680428|   8.6463858|
+|   $s_4$|   0|   1|   1|   0| 0.03| 7.751323| -100.252974|  71.6674365|
+|   $s_5$|   0|   1|   0|   1| 0.01| 6.801242| -165.715154| 323.3238494|
+|   $s_6$|   0|   0|   1|   1| 0.31| 3.123994|    3.426730|  -0.1793659|
 
-```
-## The following objects are masked from 'package:stats':
-## 
-##     filter, lag
-```
+A pesar de los resultados negativos para las varianzas, tanto el estimador del total como los dos estimadores de su varianza siguen siendo insesgados. En efecto al multiplicar la estimación puntual por la probabilidad del diseño de muestreo se obtienen los valores poblacionales. La varianza del estimador HT para este diseño en particular es 6.744442, la cual corresponde con la esperanza de ambos estimadores de varianza. Para evitar estas estimativas negativas, @Gutierrez_2016 afirma que es necesario garantizar que la covarianza ($\Delta_{kl}$) sea negativa para cada par de elementos en la población ($k \neq l$), lo cual no sucede con este esquema de muestreo, puesto que:
 
-```
-## The following objects are masked from 'package:base':
-## 
-##     intersect, setdiff, setequal, union
-```
+$$
+\Delta_{kl} =
+\begin{bmatrix}
+0.2275  & 0.0825  & -0.1510 & -0.1590 \\
+0.0825  & 0.2275  & -0.1590 & -0.1510 \\
+-0.1510 & -0.1590 & 0.2484  & 0.0616 \\
+-0.1590 & -0.1510 & 0.0616  &  0.2484
+\end{bmatrix}
+$$
 
-```
-## Loading required package: magrittr
-```
+#### Disminución de la varianza ante el aumento del tamaño de muestra {-}
 
-```r
-x = c(2.5, 2.0, 1.1, 0.5)
-N = 4
-n = 2
-p = c(0.31, 0.20, 0.14, 0.03, 0.01, 0.31)
+Por otro lado, Tal vez la idea de que la varianza deberá disminuir a medida que el tamaño de muestra crece se ha venido de la lógica intuitiva en donde el error de muestreo no debería existir si se realiza una medición completa de la población. Sin embargo, para algunas estrategias de muestreo es posible encontrar que existen situaciones en donde el tamaño de muestra crece, y con él la varianza del estimador. En esta sección se mostrará un ejemplo en donde sucede exactamente eso. 
 
-data.frame(I = Ik(4, 2), p = p)
-```
+Para poder mostrar este hecho, vamos a utilizar un ejemplo reducido. Supongamos una población de $N = 3$ elementos $U=\{1, 2, 3\}$ y comparemos dos diseños de muestreo, el primero con un tamaño de muestra fijo de $n=1$ y el segundo con un tamaño de muestra fijo de $n=2$. En ambos casos la variable de interés es dicotómica que denota la presencia o ausencia del fenómeno en los individuos de la población. En el primer caso, el diseño de muestreo de tamaño de muestra $n=1$ es el siguiente:
 
-```
-##   I.1 I.2 I.3 I.4    p
-## 1   1   1   0   0 0.31
-## 2   1   0   1   0 0.20
-## 3   1   0   0   1 0.14
-## 4   0   1   1   0 0.03
-## 5   0   1   0   1 0.01
-## 6   0   0   1   1 0.31
-```
+| $s$| $I_1$| $I_2$| $I_3$|   $p(s)$|
+|--:|---:|---:|---:|---:|
+|  $s_1$|   1|   0|   0| 0.5|
+|  $s_2$|   0|   1|   0| 0.1|
+|  $s_3$|   0|   0|   1| 0.4|
 
-En el anterior ejemplo, la probabilidad de obtener una muestra compuesta por los dos primeros elementos se fijó en 0.31; mientras que la probabilidad de obtener una muestra compuesta por el primer y el tercer elemento se fijó en 0.20 y así sucesivamente. Para esta configuración, y utilizando la función `VarSYGHT` del paquete `TeachingSampling` [@TS], se obtienen las estimaciones puntuales para cada una de las seis posibles muestras, así como las dos posibles estimaciones de la varianza. Nótese que para ambos escenarios existen estimaciones negativas.
+En este esquema de muestreo, la varianza del estimador de Horvitz-Thompson es igual a $Var(\hat t_{y, \pi}) = 1.5$. Sin embargo, en un segundo caso, considere el siguiente diseño de muestreo de tamaño de muestra $n=2$:
 
+| $s$| $I_1$| $I_2$| $I_3$|   $p(s)$|
+|--:|---:|---:|---:|---:|
+| $s_1$|   1|   1|   0| 0.7|
+| $s_2$|   1|   0|   1| 0.2|
+| $s_3$|   0|   1|   1| 0.1|
 
-```r
-VarSYGHT(x, N, n, p)
-```
-
-```
-##   I.1 I.2 I.3 I.4    p   Est.HT    Est.Var1    Est.Var2
-## 1   1   1   0   0 0.31 9.560440   38.099984  -0.9287681
-## 2   1   0   1   0 0.20 5.883191   -4.744190   2.4710422
-## 3   1   0   0   1 0.14 4.933110   -3.680428   8.6463858
-## 4   0   1   1   0 0.03 7.751323 -100.252974  71.6674365
-## 5   0   1   0   1 0.01 6.801242 -165.715154 323.3238494
-## 6   0   0   1   1 0.31 3.123994    3.426730  -0.1793659
-```
-
-A pesar de los resultados negativos para las varianzas, tanto el estimador del total como los dos estimadores de su varianza siguen siendo insesgados. En efecto al multiplicar la estimación puntual por la probabilidad del diseño de muestreo se obtienen los valores poblacionales
-
-
-```r
-# Insesgamiento para el estimador del total
-sum(x)
-```
-
-```
-## [1] 6.1
-```
-
-```r
-sum(VarSYGHT(x, N, n, p)$p * VarSYGHT(x, N, n, p)$Est.HT)
-```
-
-```
-## [1] 6.1
-```
-
-```r
-# Insesgamiento para los dos estimadores de varianza
-VarHT(x, N, n, p)
-```
-
-```
-## [1] 6.744442
-```
-
-```r
-sum(VarSYGHT(x, N, n, p)$p * VarSYGHT(x, N, n, p)$Est.Var1)
-```
-
-```
-## [1] 6.744442
-```
-
-```r
-sum(VarSYGHT(x, N, n, p)$p * VarSYGHT(x, N, n, p)$Est.Var2)
-```
-
-```
-## [1] 6.744442
-```
-
-Para evitar estas estimativas negativas, @Gutierrez_2016 afirmar que es necesario garantizar que la covarianza ($\Delta_{kl}$) sea negativa para cada par de elementos en la población ($k \neq l$), lo cual no sucede con este esquema de muestreo, como se muestra a continuación:
-
-
-```r
-Deltakl(N, n, p)
-```
-
-```
-##         [,1]    [,2]    [,3]    [,4]
-## [1,]  0.2275  0.0825 -0.1510 -0.1590
-## [2,]  0.0825  0.2275 -0.1590 -0.1510
-## [3,] -0.1510 -0.1590  0.2484  0.0616
-## [4,] -0.1590 -0.1510  0.0616  0.2484
-```
-
-Tal vez la idea de que la varianza deberá disminuir a medida que el tamaño de muestra crece se ha venido de la lógica intuitiva en donde el error de muestreo no debería existir si se realiza una medición completa de la población. Sin embargo, para algunas estrategias de muestreo es posible encontrar que existen situaciones en donde el tamaño de muestra crece, y con él la varianza del estimador. En esta sección se mostrará un ejemplo en donde sucede exactamente eso. 
-
-Para poder mostrar este hecho, vamos a utilizar un ejemplo reducido. Supongamos una población de $N = 3$ elementos $U=\{1, 2, 3\}$ y comparemos dos diseños de muestreo, el primero con un tamaño de muestra fijo de $n=1$ y el segundo con un tamaño de muestra fijo de $n=2$. En ambos casos la variable de interés es dicotómica que denota la presencia o ausencia del fenómeno en los individuos de la población.
-
-En el primer caso, el diseño de muestreo de tamaño de muestra $n=1$ es el siguiente:
-
-
-```r
-p1 <- c(0.5, 0.1, 0.4)
-Ind1 <- Ik(N = 3, n = 1)
-data.frame(I = Ind1, p = p1)
-```
-
-```
-##   I.1 I.2 I.3   p
-## 1   1   0   0 0.5
-## 2   0   1   0 0.1
-## 3   0   0   1 0.4
-```
-
-En este esquema de muestreo, la varianza del estimador de Horvitz-Thompson es igual a $Var(\hat t_{y, pi}) = 1,5$.
-
-
-```r
-z <- c(0, 0, 1)
-VarHT(z, N = 3, n = 1, p1)
-```
-
-```
-## [1] 1.5
-```
-
-En el segundo caso, el diseño de muestreo de tamaño de muestra $n=2$ es el siguiente:
-
-
-```r
-p2 = c(0.7, 0.2, 0.1)
-Ind2 <- Ik(N = 3, n = 2)
-data.frame(I = Ind2, p = p2)
-```
-
-```
-##   I.1 I.2 I.3   p
-## 1   1   1   0 0.7
-## 2   1   0   1 0.2
-## 3   0   1   1 0.1
-```
-
-En este esquema de muestreo, la varianza del estimador de Horvitz-Thompson es igual a $Var(\hat t_{y, pi}) = 2,3$.
-
-
-```r
-z <- c(0, 0, 1)
-VarHT(z, N = 3, n = 2, p2)
-```
-
-```
-## [1] 2.333333
-```
-
-
-
-
-
-
+Nótese que en este esquema de muestreo, la varianza del estimador de Horvitz-Thompson es igual a $Var(\hat t_{y, \pi}) = 2.3$. Por tanto, no es exacto afirmar que siempre que un diseño de muestreo contemple un tamaño de muestra más grande se tendrá obligatoriamente una reducción de la varianza. 

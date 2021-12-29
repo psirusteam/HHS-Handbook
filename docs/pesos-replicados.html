@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3.2 Periodicidad en el tiempo | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
+  <title>11.4 Pesos replicados | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3.2 Periodicidad en el tiempo | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
+  <meta property="og:title" content="11.4 Pesos replicados | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3.2 Periodicidad en el tiempo | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
+  <meta name="twitter:title" content="11.4 Pesos replicados | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   
   <meta name="twitter:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="universo-muestra-y-unidades.html"/>
-<link rel="next" href="rotación-de-paneles.html"/>
+<link rel="prev" href="linealización-de-taylor.html"/>
+<link rel="next" href="consideraciones-adicionales.html"/>
 <script src="libs/header-attrs-2.8/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -289,413 +289,484 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="periodicidad-en-el-tiempo" class="section level2" number="3.2">
-<h2><span class="header-section-number">3.2</span> Periodicidad en el tiempo</h2>
-<p>Las Oficinas Nacionales de Estadística - que son los entes encargados de administrar, diseñar, analizar y difundir los resultados de las encuestas - no realizan este tipo de levantamientos de manera aislada; de hecho una característica fundamental de estas operaciones estadísticas es que se han convertido en un insumo fundamental para realizar un seguimiento periódico de muchos indicadores de interés. Por lo tanto, muchas encuestas de hogares se realizan de forma sistemática en el tiempo, aunque algunas otras no tienen una periodicidad predefinida. Es por esto que la planeación de la encuesta debe contemplar este tipo de esquemas continuos para que el levantamiento de la información primaria en campo se haga de manera más eficiente y, de la misma forma, que la estimación de los indicadores de interés se pueda realizar ajustándose a los recursos de la operación. Como se mencionó anteriormente, dado que la población es dinámica en el tiempo, la planeación y análisis de este tipo de encuestas es desafiante, puesto que si la composición de la población y las características de los elementos se considerara fija, una encuesta transversal (realizada una sola vez en un periodo de tiempo largo) sería suficiente para realizar estimaciones precisas que resuelvan los objetivos del estudio.</p>
-<p>En algunas ocasiones, basta con realizar un medición simple en un punto específico del tiempo para completar los objetivos de la investigación. Este es el caso de las encuestas de ingresos y gastos cuya periodicidad es, en general, no menor a cinco años y las cuales son utilizadas para, entre muchos otros propósitos, actualizar la canasta básica familiar, de la cual se derivan los insumos básicos para la medición de la pobreza <span class="citation">(<a href="#ref-CEPAL_2018" role="doc-biblioref">CEPAL 2018</a>)</span>. Para otro tipo de problemáticas, como por ejemplo el seguimiento a las estadísticas derivadas del mercado de trabajo, es necesario recurrir a la medición periódica a través de encuestas de hogares, en donde los cambios naturales en las características de la población hacen que realizar una medición simple en un punto del tiempo sea insuficiente a la luz del seguimiento y monitoreo de los indicadores de interés.</p>
-<p>Por consiguiente, al momento de realizar la planeación de una encuesta continua o periódica se debe tener en cuenta que, a pesar de que crezca la dificultad en el diseño, es posible obtener información más oportuna para la toma de decisiones y la formulación de políticas públicas. De esta manera, y teniendo en cuenta que el tiempo hace que la estructura de las poblaciones cambie, sin importar si la constituyen individuos, hogares, familias, negocios, etc., las unidades de observación deben ser consideradas como parte de la población de interés cuando nacen, inmigran o alcanzan un umbral predefinido de edad. Asimismo, las unidades ya no harán parte de la población de interés cuando mueran, emigren, o se involucren en instituciones (como el servicio militar). Por ejemplo, si las unidades de interés son los hogares, es evidente que la población no es la misma en diferentes puntos del tiempo (por ejemplo, en dos años distintos) puesto que se crean nuevas unidades cuando los jóvenes dejan a sus padres y forman nuevos hogares independientes, o cuando ocurre una separación o un divorcio; en donde un hogar se divide en dos. Además, los hogares en donde todos sus miembros han fallecido dejan de ser parte de la población objetivo. De la misma forma, dos hogares dejan de ser parte de la población objetivo cuando se unen a través de un matrimonio o algún otro tipo de unión civil. Teniendo en cuenta el papel dinámico de las poblaciones y los objetivos de investigación es posible plantear diferentes tipos de levantamientos; a continuación enumeramos algunas categorías de encuestas que las ONE realizan en la región.</p>
-<div id="encuestas-transversales" class="section level3 unnumbered">
-<h3>Encuestas transversales</h3>
-<p>Este tipo de encuestas son diseñadas para recolectar información únicamente en un punto específico del tiempo, o sobre un periodo de referencia, y proveen toda la información pertinente acerca de la población particular restringida a un tiempo y periodo de recolección específico. Puesto que el propósito fundamental de este tipo de encuestas no se centra en las comparaciones intertemporales, no es posible estimar cambios de ningún tipo, a no ser que se realicen indagaciones retrospectivas. La siguiente tabla muestra un esquema de este tipo de operaciones estadísticas en donde se observa una muestra de una población específica en un periodo de tiempo específico (Tiempo 2). Dado que es una muestra transversal, no hay un patrón de repetición en los restantes periodos.</p>
+<div id="pesos-replicados" class="section level2" number="11.4">
+<h2><span class="header-section-number">11.4</span> Pesos replicados</h2>
+<p>Las complicaciones en el cálculo de los errores de muestreo pueden ser mayores dependiendo de la escogencia del estimador y del diseño de muestreo asumido para la recolección de la información primaria. En algunas ocasiones, el proceso de linealización puede resultar complicado, por lo que es posible optar por una estrategia computacional aproximada que permite pasar por alto el proceso teórico de definición de las cantidades que estiman la varianza del estimador. Este conjunto de métodos supone la idea de la selección sistemática de <em>submuestras</em> que son utilizadas para estimar el parámetro de interés, utilizando los mismos principios de estimación que con la muestra completa. Por lo anterior, se obtienen estimaciones puntuales para cada réplica, las cuales son utilizadas para estimar la varianza del estimador de interés.</p>
+<p>En ausencia de fórmulas adecuadas, en los últimos años han aparecido una variedad de técnicas empíricas que proporcionan <em>varianzas aproximadas que parecen satisfactorias para fines prácticos</em> <span class="citation">(<a href="#ref-Kish_1965" role="doc-biblioref">Kish 1965</a>)</span>. Estos métodos utilizan una muestra de datos para construir submuestras y generar una distribución para las estimaciones de los parámetros de interés utilizando cada submuestra. Los resultados de la submuestra se analizan para obtener una estimación del parámetro, así como intervalos de confianza para esa estimación. El enfoque general de esta técnicas computacional se basa en:</p>
+<ol style="list-style-type: decimal">
+<li>Dividir la toda la muestra en pequeños subconjutnos (réplicas).</li>
+<li>Repetir los mismos procesos de ajuste de ponderadores en cada réplica.</li>
+<li>Hacer la estimación en cada subgrupo.</li>
+<li>La varianza del estimador se calcula de manera simple como la varianza muestral de todas las estimaciones en cada réplica.</li>
+</ol>
+<p>Usando esta metodología, no se requiere que las bases de datos públicas contengan la información asociada a los estratos o UPM y esto protege la anonimización de los respondientes. Además, no se requiere conocer el diseño de muestreo utilizado en la encuesta, puesto que al proveer los pesos replicados en las bases de datos, los investigadores pueden estimar el error de muestreo de forma automatizada y sin necesidad de intrincadas fórmulas matemáticas. Estos métodos ha demostrado ser eficientes y precisos para la mayoría de parámetros de interés, algunas encuestas que utilizan estas metodologías son la American Community Survey, la American Housing Survey y la Current Population Survey. En América Latina la PNADC de Brasil, la ENE de Chile y la ENEMDU de Ecuador han hecho uso de estas técnicas para la estimación de la varianza de algunos estimadores complejos.</p>
+<p>En particular, hay tres metodologías que abordan este problema: los pesos replicados repetidas balanceadas <span class="citation">(<a href="#ref-McCarthy_1969" role="doc-biblioref">McCarthy 1969</a>; <a href="#ref-Judkins_1990" role="doc-biblioref">Judkins 1990</a>)</span>, el Jackknife <span class="citation">(<a href="#ref-Krewski_Rao_1981" role="doc-biblioref">Krewski y Rao 1981</a>)</span> y el Bootstrap <span class="citation">(<a href="#ref-Rao_Wu_1988" role="doc-biblioref">Rao y Wu 1988</a>)</span>. La idea general detrás de estos métodos es que, partiendo de la muestra completa, en cada réplica se seleccione un conjunto de UPMs manteniendo todas las unidades que hayan sido seleccionadas dentro de esas UPMs. Luego, es necesario reponderar los pesos de muestreo para que se conserve la representatividad; de esta manera, para cada réplica se obtendrá un nuevo conjunto de pesos de muestreo. Con estos pesos, se calcula la estimación de interés, obteniendo tantas estimaciones como réplicas definidas. <span class="citation"><a href="#ref-Wolter_2007" role="doc-biblioref">Wolter</a> (<a href="#ref-Wolter_2007" role="doc-biblioref">2007</a>)</span> provee todos los detalles teóricos referentes al problema de la estimación de la varianza utilizando los pesos replicados.</p>
+<p>En lo concerniente con las técnicas de remuestreo y la utilización de los pesos replicados para el cálculo de los errores de muestreo se recalca que la técnica de <em>Jackknife</em> es útil para estimar parámetros lineales, pero no tiene un buen comportamiento cuando se trata de estimar percentiles o funciones de distribución. La técnica de <em>réplicas repetidas balanceadas</em> es útil para estimar parámetros lineales y no lineales, pero puede ser deficiente cuando se tienen dominios pequeños que pueden inducir estimaciones nulas en la configuración de los pesos. Sin embargo, como se explicará más adelante, el ajuste de Fay a la técnica anterior resulta palear todos los anteriores inconvenientes. En este caso es importante utilizar una matriz de Hadammard que induzca no más de 120 conjuntos de pesos replicados para que la publicación de la base de datos no se sobrecargue. Por último, el <em>bootstrap</em> debe ser utilizado con con detenimiento porque debe replicar el diseño de muestreo exacto y esto se logra construyendo una población a partir de los pesos de muestreo.</p>
+<div id="la-técnica-de-jackknife" class="section level4 unnumbered">
+<h4>La técnica de Jackknife</h4>
+<p>Este método provee estimaciones eficientes para estimadores lineales y no lineales (a excepción de los percentiles). En su forma más básica, los pesos replicados se crean al retirar una UPM del análisis. Por ende, se tendrán tantos pesos replicados como UPM existan en la muestra. Además, cuando una UPM se retira en la réplica, todas las unidades dentro de esa UPM también se retiran. El desarrollo del procedimiento de Jackknife se remonta a un método utilizado por <span class="citation"><a href="#ref-Quenouille" role="doc-biblioref">Quenouille</a> (<a href="#ref-Quenouille" role="doc-biblioref">1956</a>)</span> para reducir el sesgo de las estimaciones. El refinamiento ulterior del método <span class="citation">(<a href="#ref-mosteller1968data" role="doc-biblioref">Mosteller 1968</a>)</span> llevó a su aplicación en una serie de situaciones de las ciencias sociales en las que las fórmulas no están fácilmente disponibles para el cálculo de errores de muestreo.</p>
+<p>Este procedimiento ofrece mayor flexibilidad, pues el Jackknife puede implementarse en una amplia variedad de diseños muestrales; además de facilidad de uso, puesto que no requiere de software especializado. El concepto principal de esta técnica parte de una muestra de tamaño <span class="math inline">\(n\)</span>, la cual se divide en <span class="math inline">\(A\)</span> grupos de igual tamaño <span class="math inline">\(m=n/A\)</span>, a partir de esta división, la varianza de un estimador <span class="math inline">\(\hat{\theta}\)</span> se estima a partir de la varianza observada en los <span class="math inline">\(A\)</span> grupos.</p>
+<p>Para cada grupo <span class="math inline">\((a=1,2,...,A)\)</span>, se calcula <span class="math inline">\(\hat{\theta}_{(a)}\)</span>, una estimación para el parámetro <span class="math inline">\(\theta\)</span>, calculada de la misma forma que la estimación <span class="math inline">\(\hat{\theta}\)</span> obtenida con la muestra completa, pero solo con la información restante (luego de la eliminación del grupo <span class="math inline">\(a\)</span>). Para <span class="math inline">\(a=1,2,...,A\)</span> se define</p>
+<p><span class="math display">\[\hat{\theta}_{a}=A\hat{\theta}-(A-1)\hat{\theta}_{(a)}\]</span></p>
+<p>como un pseudovalor de <span class="math inline">\(\theta\)</span>. El estimador obtenido mediante Jackknife se presenta como una alternativa a <span class="math inline">\(\hat{\theta}\)</span> y se define como:</p>
+<p><span class="math display">\[\hat{\theta}_{JK}=\dfrac{1}{A}\sum_{a=1}^{A}\hat{\theta}_{a}\]</span></p>
+<p>mientras que el estimador de la varianza obtenido mediante Jackknife se obtiene como:</p>
+<p><span class="math display">\[\widehat{Var}_{JK1}=\dfrac{1}{A(A-1)}\sum_{a=1}^{A}\left(\hat{\theta}_{a}-\hat{\theta}_{JK}\right)^{2}\]</span></p>
+<p>También es posible utilizar como estimador alternativo:</p>
+<p><span class="math display">\[\widehat{Var}_{JK2}=\dfrac{1}{A(A-1)}\sum_{a=1}^{A}\left(\hat{\theta}_{a}-\hat{\theta}\right)^{2}\]</span></p>
+<p>Para diseños estratificados y multietápicos en los cuales las unidades primarias de muestreo han sido seleccionadas en el estrato <span class="math inline">\(h\)</span>, para <span class="math inline">\(h=1, \ldots, H\)</span>, el estimador de varianza de Jackknife para la estimación de un parámetro poblacional está dado por</p>
+<p><span class="math display">\[ 
+\widehat{Var}_{JK}(\hat{\theta}) = \sum_{h=1}^H \frac{n_{Ih} - 1}{n_{Ih}} \sum_{i=1}^{n_{Ih}}
+(\hat{\theta}_{h(i)}-\hat{\theta})^2
+\]</span></p>
+<p>donde <span class="math inline">\(\hat{\theta}_{h(i)}\)</span> es la estimación de <span class="math inline">\(\theta\)</span> usando los datos de la muestra excluyendo las observaciones en la <span class="math inline">\(i\)</span>-ésima unidad primaria de muestreo <span class="citation">(<a href="#ref-Korn_Graubard_1999" role="doc-biblioref">Korn y Graubard 1999</a>, pg. 29 – 30)</span>. <span class="citation"><a href="#ref-shao2012jackknife" role="doc-biblioref">Shao y Tu</a> (<a href="#ref-shao2012jackknife" role="doc-biblioref">2012</a>, Teorema 6.2)</span> garantiza la convergencia en probabilidad de este estimador hacia la varianza teórica, de donde se puede concluir que es un estimador aproximadamente insesgado para la varianza teórica. Los pesos de la unidad <span class="math inline">\(k\)</span> que pertenece a la UPM <span class="math inline">\(U_i\)</span>, en el estrato <span class="math inline">\(U_h\)</span> están dados por la siguiente expresión:</p>
+<p><span class="math display">\[
+d_{hk}^i = 
+\begin{cases}
+0, \ \text{si $U_i \in U_h$ y $k \in U_i$ }\\
+d_k, \ \text{si $k \notin U_h$}\\
+\frac{n_{Ih}}{n_{Ih}-1}d_k, \ \text{si $U_i \in U_h$ y $k \notin U_i$}
+\end{cases}
+\]</span></p>
+<p>En donde <span class="math inline">\(n_{Ih}\)</span> es el número de UPM seleccionadas en el estrato <span class="math inline">\(U_h\)</span>. Por último, para reducir el número de pesos replicados, se pueden conformar <em>unidades de varianza</em>, uniendo varias UPM dentro de un mismo estrato, y también <em>estratos de varianza</em>, colapsando estratos dentro de la muestra. En el primer caso, se podrían emparejar las UPM en cada estrato de acuerdo a la medida de tamaño. En este caso, el estimador de varianza está dado por la siguiente expresión</p>
+<p><span class="math display">\[
+\widehat{Var}_{JK}(\hat{\theta}) = \sum_h \frac{n_{Ih}-n_{Ihg}}{n_{Ih}} 
+\sum_{i \in s_{hg}} (\hat{\theta}_{h(g)} - \hat{\theta})^2
+\]</span></p>
+<p>En donde <span class="math inline">\(\hat{\theta}_{hg}\)</span> es el estimador del parámetro retirando el <span class="math inline">\(g\)</span>-ésimo subgrupo del estrato <span class="math inline">\(U_h\)</span> y <span class="math inline">\(n_{Ihg}\)</span> es el tamaño del subgrupo en la muestra denotado como <span class="math inline">\(s_{hg}\)</span>. A continuación se ejemplifica la estructura final de una base de datos de pesos replicados con esta técnica en un conjunto reducido de tan solo ocho unidades muestrales divididas en cuatro UPM y dos estratos. Se enfatiza que habrán tantos conjuntos (columnas) de pesos replicados Jackknife como UPM existentes en la muestra de la primera etapa.</p>
 <table>
-<caption><em>Esquema de una encuesta transversal.</em></caption>
 <thead>
 <tr class="header">
-<th align="center">Hogar</th>
-<th align="center">Tiempo 1</th>
-<th align="center">Tiempo 2</th>
-<th align="center">Tiempo 3</th>
-<th align="center">Tiempo 4</th>
-<th align="center">…</th>
-<th align="center">Tiempo <span class="math inline">\(T\)</span></th>
+<th align="center"><span class="math inline">\(k\)</span></th>
+<th align="center">Estrato</th>
+<th align="center">UPM</th>
+<th align="center"><span class="math inline">\(d_k^{(1)}\)</span></th>
+<th align="center"><span class="math inline">\(d_k^{(2)}\)</span></th>
+<th align="center"><span class="math inline">\(d_k^{(3)}\)</span></th>
+<th align="center"><span class="math inline">\(d_k^{(4)}\)</span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td align="center">1</td>
-<td align="center"></td>
-<td align="center"><strong>x</strong></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
+<td align="center">Estrato1</td>
+<td align="center">UPM1</td>
+<td align="center">0</td>
+<td align="center">1,03</td>
+<td align="center">1,03</td>
+<td align="center">1,03</td>
 </tr>
 <tr class="even">
 <td align="center">2</td>
-<td align="center"></td>
-<td align="center"><strong>x</strong></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
+<td align="center">Estrato1</td>
+<td align="center">UPM1</td>
+<td align="center">0</td>
+<td align="center">1,03</td>
+<td align="center">1,03</td>
+<td align="center">1,03</td>
 </tr>
 <tr class="odd">
 <td align="center">3</td>
-<td align="center"></td>
-<td align="center"><strong>x</strong></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
+<td align="center">Estrato1</td>
+<td align="center">UPM2</td>
+<td align="center">1,03</td>
+<td align="center">0</td>
+<td align="center">1,03</td>
+<td align="center">1,03</td>
 </tr>
 <tr class="even">
 <td align="center">4</td>
-<td align="center"></td>
-<td align="center"><strong>x</strong></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr class="odd">
-<td align="center">…</td>
-<td align="center"></td>
-<td align="center"><strong>x</strong></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr class="even">
-<td align="center"><span class="math inline">\(n\)</span></td>
-<td align="center"></td>
-<td align="center"><strong>x</strong></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="encuestas-repetidas" class="section level3 unnumbered">
-<h3>Encuestas repetidas</h3>
-<p>Cuando existe interés en realizar un seguimiento del fenómeno en observación durante el tiempo, se utilizan encuestas repetidas que recolectan información de manera periódica. Este tipo de encuestas proveen información acerca de la dinámica de la composición de la población en el tiempo. De esta forma, en cada levantamiento se observa una muestra de la población en un tiempo determinado. Por ejemplo, la siguiente tabla muestra un acercamiento gráfico a este tipo de encuestas en donde se evidencia el carácter sistemático de estas operaciones estadísticas; además de mostrar que no es posible medir cambios individuales porque las muestras son independientes en el tiempo.</p>
-<table>
-<caption><em>Esquema de una encuesta repetida.</em></caption>
-<thead>
-<tr class="header">
-<th align="center">Hogar</th>
-<th align="center">Tiempo 1</th>
-<th align="center">Tiempo 2</th>
-<th align="center">Tiempo 3</th>
-<th align="center">Tiempo 4</th>
-<th align="center">…</th>
-<th align="center">Tiempo <span class="math inline">\(T\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center">1</td>
-<td align="center"><strong>x</strong></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr class="even">
-<td align="center">2</td>
-<td align="center"></td>
-<td align="center"><strong>x</strong></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr class="odd">
-<td align="center">3</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"><strong>x</strong></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr class="even">
-<td align="center">4</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"><strong>x</strong></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr class="odd">
-<td align="center">…</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"><strong>x</strong></td>
-<td align="center"></td>
-</tr>
-<tr class="even">
-<td align="center"><span class="math inline">\(n\)</span></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"><strong>x</strong></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="encuestas-panel" class="section level3 unnumbered">
-<h3>Encuestas panel</h3>
-<p>Las encuestas en panel están diseñadas para recolectar información periódica sobre la misma muestra en diferentes puntos del tiempo. Por definición, las unidades de muestreo son las mismas en los diferentes periodos de tiempo y, de manera general, se miden las mismas variables en cada levantamiento. Por la caracterización propia de este tipo de encuestas, sí es posible estimar los cambios individuales, así como los cambios netos sobre la población. Sin embargo, como la muestra no cambia en ningún momento del tiempo, las inferencias que se realicen estarán supeditadas a la población de la cual se seleccionó la muestra en un principio (Tiempo 1). Si la población cambia su estructura, no será posible captar este cambio puesto que las inferencias resultantes de este tipo de encuestas no son representativas de la población actual. La siguiente tabla muestra un esquema propio de las encuestas de panel en donde los individuos que fueron seleccionados la primera vez son observados a lo largo del tiempo.</p>
-<table>
-<caption><em>Esquema de una encuesta tipo panel.</em></caption>
-<thead>
-<tr class="header">
-<th align="center">Hogar</th>
-<th align="center">Tiempo 1</th>
-<th align="center">Tiempo 2</th>
-<th align="center">Tiempo 3</th>
-<th align="center">Tiempo 4</th>
-<th align="center">…</th>
-<th align="center">Tiempo <span class="math inline">\(T\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center">1</td>
-<td align="center"><strong>x</strong></td>
-<td align="center"><strong>x</strong></td>
-<td align="center"><strong>x</strong></td>
-<td align="center"><strong>x</strong></td>
-<td align="center"><strong>x</strong></td>
-<td align="center"><strong>x</strong></td>
-</tr>
-<tr class="even">
-<td align="center">2</td>
-<td align="center"><strong>x</strong></td>
-<td align="center"><strong>x</strong></td>
-<td align="center"><strong>x</strong></td>
-<td align="center"><strong>x</strong></td>
-<td align="center"><strong>x</strong></td>
-<td align="center"><strong>x</strong></td>
-</tr>
-<tr class="odd">
-<td align="center">3</td>
-<td align="center"><strong>x</strong></td>
-<td align="center"><strong>x</strong></td>
-<td align="center"><strong>x</strong></td>
-<td align="center"><strong>x</strong></td>
-<td align="center"><strong>x</strong></td>
-<td align="center"><strong>x</strong></td>
-</tr>
-<tr class="even">
-<td align="center">4</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr class="odd">
-<td align="center">…</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr class="even">
-<td align="center"><span class="math inline">\(n\)</span></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="encuestas-de-panel-dividido" class="section level3 unnumbered">
-<h3>Encuestas de panel dividido</h3>
-<p>Para hacerle frente a las dificultades propias de las encuestas de panel y poder observar tanto los cambios individuales, como los cambios en la estructura de la población, se definen las encuestas de panel dividido. Estas operaciones estadísticas son una combinación del diseño de panel puro y del diseño repetido y su objetivo es realizar inferencias precisas acerca de los cambios de una cohorte a través del tiempo y, al mismo tiempo, del cambio en estructura de la población actual. De esta forma, se realiza el seguimiento continuo, periódico y sistemático de una muestra a través del tiempo, pero en cada levantamiento se incluyen nuevos elementos seleccionados de la población actual. Como se señalará más adelante, este tipo de encuestas cubre con eficiencia la mayoría de indicadores de interés en un estudio de investigación social. La siguiente tabla muestra una caracterización de estos levantamientos que fijan una muestra de panel a lo largo del tiempo, y a la vez que se añaden nuevas observaciones.</p>
-<table>
-<caption><em>Esquema de una encuesta de panel dividido.</em></caption>
-<thead>
-<tr class="header">
-<th align="center">Hogar</th>
-<th align="center">Tiempo 1</th>
-<th align="center">Tiempo 2</th>
-<th align="center">Tiempo 3</th>
-<th align="center">Tiempo 4</th>
-<th align="center">…</th>
-<th align="center">Tiempo <span class="math inline">\(T\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center">1</td>
-<td align="center"><strong>x</strong></td>
-<td align="center"><strong>x</strong></td>
-<td align="center"><strong>x</strong></td>
-<td align="center"><strong>x</strong></td>
-<td align="center"><strong>x</strong></td>
-<td align="center"><strong>x</strong></td>
-</tr>
-<tr class="even">
-<td align="center">2</td>
-<td align="center"><strong>x</strong></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr class="odd">
-<td align="center">3</td>
-<td align="center"></td>
-<td align="center"><strong>x</strong></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr class="even">
-<td align="center">4</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"><strong>x</strong></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
+<td align="center">Estrato1</td>
+<td align="center">UPM2</td>
+<td align="center">1,03</td>
+<td align="center">0</td>
+<td align="center">1,03</td>
+<td align="center">1,03</td>
 </tr>
 <tr class="odd">
 <td align="center">5</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"><strong>x</strong></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr class="even">
-<td align="center">…</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"><strong>x</strong></td>
-<td align="center"></td>
-</tr>
-<tr class="odd">
-<td align="center"><span class="math inline">\(n\)</span></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"><strong>x</strong></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="encuestas-de-panel-rotativo" class="section level3 unnumbered">
-<h3>Encuestas de panel rotativo</h3>
-<p>Mantener una muestra de panel es un proceso costoso desde una perspectiva económica y logística, pero también se debe tener en cuenta el desgaste de la fuente, que tenderá a brindar menos información a medida que avanza el estudio. Además, es evidente que a medida que el tiempo transcurra la propensión a responder será más baja, puesto que el entrevistado se sentirá agotado al ser visitado una y otra vez. Por lo tanto, se definen las encuestas de panel rotativo para poder realizar inferencias parciales - restringidas a periodos de tiempo específicos - del cambio individual y a la vez captar el cambio estructural de la población. Estas encuestas incorporan nuevos elementos de la población y a la vez mantienen elementos comunes con mediciones anteriores. Obviando las dificultades que acarrea la ausencia de respuesta, las encuestas panel definen un traslape completo entre las muestras de dos puntos cualesquiera en el tiempo; sin embargo, en las encuestas rotativas existe un traslape parcial, por lo que se reduce el efecto del desgaste del panel (sobre la población inicial) y el efecto de la pérdida de muestra. Además, la inclusión de nuevos elementos en la muestra provee información pertinente del cambio en la composición estructural de la población. La siguiente tabla ejemplifica el diseño de las encuestas rotativas.</p>
-<table>
-<caption><em>Esquema de una encuesta de panel rotativo.</em></caption>
-<thead>
-<tr class="header">
-<th align="center">Hogar</th>
-<th align="center">Tiempo 1</th>
-<th align="center">Tiempo 2</th>
-<th align="center">Tiempo 3</th>
-<th align="center">Tiempo 4</th>
-<th align="center">Tiempo 5</th>
-<th align="center">Tiempo 6</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center">1</td>
-<td align="center"><strong>x</strong></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr class="even">
-<td align="center">2</td>
-<td align="center"><strong>x</strong></td>
-<td align="center"><strong>x</strong></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr class="odd">
-<td align="center">3</td>
-<td align="center"><strong>x</strong></td>
-<td align="center"><strong>x</strong></td>
-<td align="center"><strong>x</strong></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr class="even">
-<td align="center">4</td>
-<td align="center"></td>
-<td align="center"><strong>x</strong></td>
-<td align="center"><strong>x</strong></td>
-<td align="center"><strong>x</strong></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr class="odd">
-<td align="center">5</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"><strong>x</strong></td>
-<td align="center"><strong>x</strong></td>
-<td align="center"><strong>x</strong></td>
-<td align="center"></td>
+<td align="center">Estrato2</td>
+<td align="center">UPM3</td>
+<td align="center">1,03</td>
+<td align="center">1,03</td>
+<td align="center">0</td>
+<td align="center">1,03</td>
 </tr>
 <tr class="even">
 <td align="center">6</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"><strong>x</strong></td>
-<td align="center"><strong>x</strong></td>
-<td align="center"><strong>x</strong></td>
+<td align="center">Estrato2</td>
+<td align="center">UPM3</td>
+<td align="center">1,03</td>
+<td align="center">1,03</td>
+<td align="center">0</td>
+<td align="center">1,03</td>
 </tr>
 <tr class="odd">
-<td align="center">…</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"><strong>x</strong></td>
-<td align="center"><strong>x</strong></td>
+<td align="center">7</td>
+<td align="center">Estrato2</td>
+<td align="center">UPM4</td>
+<td align="center">1,03</td>
+<td align="center">1,03</td>
+<td align="center">1,03</td>
+<td align="center">0</td>
 </tr>
 <tr class="even">
-<td align="center"><span class="math inline">\(n\)</span></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"><strong>x</strong></td>
+<td align="center">8</td>
+<td align="center">Estrato2</td>
+<td align="center">UPM4</td>
+<td align="center">1,03</td>
+<td align="center">1,03</td>
+<td align="center">1,03</td>
+<td align="center">0</td>
 </tr>
 </tbody>
 </table>
+</div>
+<div id="el-método-de-las-réplicas-repetidas-balanceadas" class="section level4 unnumbered">
+<h4>El método de las réplicas repetidas balanceadas</h4>
+<p>Esta técnica conocida como BRR se desarrolló para diseños en donde dos UPM son seleccionadas por estrato. Este método funciona consistentemente para la estimación de parámetros lineales y no lineales (incluidos los percentiles) y, además, asegura máxima dispersión de las UPM a través de las regiones geográficas (estratos) <span class="citation">(<a href="#ref-Valliant_Dever_2017" role="doc-biblioref">Valliant y Dever 2017</a>)</span>. Nótese que si el submuestreo en cada estrato es <span class="math inline">\(n_{Ih} = 2\)</span>, entonces al utilizar la técnica de Jackknife deberíamos definir <span class="math inline">\(2^H\)</span> posibles réplicas al seleccionar aleatoriamente una UPM en cada estrato, lo cual puede ser intratable computacionalmente.</p>
+<p>Es posible lograr la misma eficiencia reduciendo el número de pesos replicados utilizando un enfoque ortogonal con matrices de Hadamard, que son matrices cuadradas cuyas columnas deben ser ortogonales. Por ejemplo, considere la siguiente matriz:</p>
+<p><span class="math display">\[
+\begin{pmatrix}
++1 &amp; +1 &amp; +1 &amp; +1 \\
++1 &amp; -1 &amp; +1 &amp; -1 \\
++1 &amp; +1 &amp; -1 &amp; -1 \\
++1 &amp; -1 &amp; -1 &amp; +1
+\end{pmatrix}
+\]</span></p>
+<p>Asumiendo que el valor +1 implica que la primera UPM se mantiene como parte de la réplica y la segunda UPM es retirada de la réplica; el valor -1 implica que la segunda UPM se mantiene como parte de la réplica y la primera UPM es retirada de la réplica. Por tanto, en cada réplica se retira una UPM por estrato. Esto implica que el producto punto entre cualquier combinación de dos columnas deber ser igual a cero. Por ejemplo, tomando las columnas 2 y 4, se tiene que</p>
+<p><span class="math display">\[
+(+1, -1, +1, -1)&#39; \cdot (+1, -1, -1, +1) 
+=  1 + 1 - 1 -1 = 0 
+\]</span></p>
+<p>De esta forma, el número de réplicas ortogonales será igual al <em>menor múltiplo de 4 mayor o igual al número de estratos</em>. Las UPM que se mantienen en cada réplica se conocen como <em>half-samples</em>. Por consiguiente, el peso de los individuos en la UPM que se mantiene se multiplica por un factor de 2. Entonces, se tiene que</p>
+<p><span class="math display">\[
+d_{k} = 
+\begin{cases}
+0, \ \text{si $k$ pertence a la UPM que fue retirada}\\
+2d_k, \ \text{en otro caso.}
+\end{cases}
+\]</span></p>
+<p>Bajo esta metodología BRR, el estimador de la varianza toma la siguiente forma:</p>
+<p><span class="math display">\[
+\widehat{Var}_{BRR}(\hat{\theta}) = \frac{1}{A}\sum_{a=1}^A(\hat{\theta}_a - \hat\theta )^2
+\]</span></p>
+<p>En donde <span class="math inline">\(\hat{\theta}_a\)</span> es el estimador del parámetro de interés en la réplica <span class="math inline">\(a\)</span>. A continuación se ejemplifica la estructura final de una base de datos de pesos replicados con esta técnica en el mismo conjunto reducido, considerando que hay dos estratos.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(k\)</span></th>
+<th align="center">Estrato</th>
+<th align="center">UPM</th>
+<th align="center"><span class="math inline">\(d_k^{(1)}\)</span></th>
+<th align="center"><span class="math inline">\(d_k^{(2)}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">Estrato1</td>
+<td align="center">UPM1</td>
+<td align="center">2</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center">Estrato1</td>
+<td align="center">UPM1</td>
+<td align="center">2</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">Estrato1</td>
+<td align="center">UPM2</td>
+<td align="center">0</td>
+<td align="center">2</td>
+</tr>
+<tr class="even">
+<td align="center">4</td>
+<td align="center">Estrato1</td>
+<td align="center">UPM2</td>
+<td align="center">0</td>
+<td align="center">2</td>
+</tr>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">Estrato2</td>
+<td align="center">UPM3</td>
+<td align="center">2</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center">6</td>
+<td align="center">Estrato2</td>
+<td align="center">UPM3</td>
+<td align="center">2</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center">7</td>
+<td align="center">Estrato2</td>
+<td align="center">UPM4</td>
+<td align="center">0</td>
+<td align="center">2</td>
+</tr>
+<tr class="even">
+<td align="center">8</td>
+<td align="center">Estrato2</td>
+<td align="center">UPM4</td>
+<td align="center">0</td>
+<td align="center">2</td>
+</tr>
+</tbody>
+</table>
+<p>Una desventaja de este método BRR es que las unidades en dominios con muestra pequeña pueden estar ausentes en algunas combinaciones de pesos replicados por el diseño ortogonal. Lo anterior conlleva una pérdida de precisión en el cálculo del error estándar. Una solución a este problema es modificar los pesos en los pesos replicados. Para la aplicación de la Réplicas Repetidas Balanceadas es recomendable usar el método de Fay, en donde se siguen los lineamientos basados en la matriz de Hadamard, aunque las UPM no son retiradas completamente, sino que su peso se modifica de la siguiente manera:</p>
+<p><span class="math display">\[
+d_k^a=
+\begin{cases}
+\rho*d_k,\ \ \ \  \ \ \ \ \ \ \text{si $k$ pertence a la UPM que fue retirada} \\
+(2-\rho)d_k, \ \ \ \ \text{en otro caso.}
+\end{cases}
+\]</span></p>
+<p>En donde <span class="math inline">\(0&lt;\rho&lt;1\)</span>. Algunos estudios por simulación han mostrado una buena eficiencia para valores de <span class="math inline">\(\rho\)</span> iguales a 0.3, 0.5 o 0.7. Bajo la metodología BRR con el ajuste de Fay, el estimador de la varianza toma la siguiente forma:
+<span class="math display">\[
+\widehat{Var}_{Fay}(\hat{\theta}) = \frac{1}{A(1-\rho)^2}\sum_{a=1}^A(\hat{\theta}_a - \hat\theta )^2
+\]</span></p>
+<p>En donde <span class="math inline">\(\hat{\theta}_a\)</span> es el estimador del parámetro de interés en la réplica <span class="math inline">\(a\)</span>. A continuación se ejemplifica la estructura final de una base de datos de pesos replicados con el ajuste de Fay en el mismo conjunto reducido.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(k\)</span></th>
+<th align="center">Estrato</th>
+<th align="center">UPM</th>
+<th align="center"><span class="math inline">\(d_k^{(1)}\)</span></th>
+<th align="center"><span class="math inline">\(d_k^{(2)}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">Estrato1</td>
+<td align="center">UPM1</td>
+<td align="center">1.5</td>
+<td align="center">0.5</td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center">Estrato1</td>
+<td align="center">UPM1</td>
+<td align="center">1.5</td>
+<td align="center">0.5</td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">Estrato1</td>
+<td align="center">UPM2</td>
+<td align="center">0.5</td>
+<td align="center">1.5</td>
+</tr>
+<tr class="even">
+<td align="center">4</td>
+<td align="center">Estrato1</td>
+<td align="center">UPM2</td>
+<td align="center">0.5</td>
+<td align="center">1.5</td>
+</tr>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">Estrato2</td>
+<td align="center">UPM3</td>
+<td align="center">1.5</td>
+<td align="center">0.5</td>
+</tr>
+<tr class="even">
+<td align="center">6</td>
+<td align="center">Estrato2</td>
+<td align="center">UPM3</td>
+<td align="center">1.5</td>
+<td align="center">0.5</td>
+</tr>
+<tr class="odd">
+<td align="center">7</td>
+<td align="center">Estrato2</td>
+<td align="center">UPM4</td>
+<td align="center">0.5</td>
+<td align="center">1.5</td>
+</tr>
+<tr class="even">
+<td align="center">8</td>
+<td align="center">Estrato2</td>
+<td align="center">UPM4</td>
+<td align="center">0.5</td>
+<td align="center">1.5</td>
+</tr>
+</tbody>
+</table>
+<p>En general, para la aplicación de estos métodos, los pesos de muestreo se ajustan para generar los pesos replicados y, posteriormente, se repiten los ajustes por ausencia de respuesta y calibración para estos nuevos pesos. Con esta metodología se estiman los errores de muestreo y la varianza de muestreo, incluyendo el impacto de la ausencia de respuesta, el cual se espera que sea pequeño, pero relevante en el momento de calcular estimadores más precisos. Retomando las observaciones hechas anteriormente, en el caso en el que la encuesta cuente con estratos en donde se encuentre una sola UPM, el método de los pesos replicados repetidas balanceadas no es aplicable puesto que al eliminar una unidad, algunos estratos quedarán vacíos.</p>
+</div>
+<div id="método-de-bootstrap" class="section level4 unnumbered">
+<h4>Método de Bootstrap</h4>
+<p>En este apartado se presenta el método de Bootstrap <span class="citation">(<a href="#ref-EfroTibs93" role="doc-biblioref">Efron y Tibshirani 1993</a>)</span>, el cual es muy utilizado por su fácil implementación; además de ser flexible en términos del número de pesos replicados que se crean. Teniendo los pesos muestrales se procede a crear los pesos replicados con el método de remuestreo con el fin de poder calcular estimaciones de indicadores junto con las estimación de las varianzas. En el contexto de las encuestas de hogares, se trata de realizar un remuestreo a las unidades primarias de muestreo seleccionadas desde el marco de áreas.</p>
+<p>El Bootstrap es el método basado en réplicas más versatil para el cálculo de errores estándar. <span class="citation"><a href="#ref-Valliant_Dever_2017" role="doc-biblioref">Valliant y Dever</a> (<a href="#ref-Valliant_Dever_2017" role="doc-biblioref">2017</a>)</span> mencionan que es muy eficiente en la estimación de parámetros lineales y no lineales, a diferencia del Jackknife que no es eficiente en la estimación de percentiles. Funciona también para tamaños de muestra pequeños, a diferencia del método BRR que requiere una muestra de mínimo dos UPM por estrato. Este método requiere una cantidad de pesos replicados grande, usualmente mayor a 200.</p>
+<p>Siendo <span class="math inline">\(s_{BS}\)</span> la submuestra Bootstrap, el peso replicado del individuo <span class="math inline">\(k\)</span> perteneciente a la UPM <span class="math inline">\(i\)</span> del estrato <span class="math inline">\(h\)</span> sigue la siguiente expresión:
+<span class="math display">\[
+d_k^b = 
+\begin{cases}
+0, \text{\ si la UPM $i$ no pertence a $s_{BS}$} \\
+d_k\left[1 - \sqrt{\frac{n_{Ih}^*}{n_{Ih}-1}}+\sqrt{\frac{n_{Ih}^*}{n_{Ih}-1}}
+\frac{n_{Ih}}{n_{Ih}^*}n_{Ihi}^*
+\right], \text{\ en otro caso} 
+\end{cases}
+\]</span></p>
+<p>En donde <span class="math inline">\(n_{Ih}\)</span> es el úmero de UPM en la muestra original del estrato <span class="math inline">\(h\)</span>, <span class="math inline">\(n_{Ih}^*\)</span> es el número de UPM en la muestra Bootstrap y <span class="math inline">\(n_{Ihi}^*\)</span> es el número de veces que la UPM <span class="math inline">\(i\)</span> fue seleccionada en la muestra Bootstrap. En este caso se selecciona una muestra Bootstrap con <span class="math inline">\(m^*_h = m_h - 1\)</span>, y los pesos toman la siguiente forma</p>
+<p><span class="math display">\[
+d_k^a = 
+\begin{cases}
+0,  \ \ \  \ \ \ \ \ \  \ \ \  \ \ \  \ \ \  \ \ \  \ \ \  \ \ \  \ \ \  \ \ \  \ \ \  \ \ \  \ \ \  \ \ \  \ \ \ \ \ \  \ \ \  \ \ \  \ \ \  \ \ \ \text{si la UPM $i$ no pertence a $s_{BS}$} \\
+d_k\left[1 - \sqrt{\frac{n_{Ih}^*}{n_{Ih}-1}}+\sqrt{\frac{n_{Ih}^*}{n_{Ih}-1}}
+\frac{n_{Ih}}{n_{Ih}^*}n_{Ihi}^*
+\right],  \ \ \  \ \ \text{en otro caso} 
+\end{cases}
+\]</span></p>
+<p>Bajo la metodología Bootstrap (BS), el estimador de la varianza toma la siguiente forma:
+<span class="math display">\[
+\widehat{Var}_{BS}(\hat{\theta}) = \frac{1}{B}\sum_{b=1}^B(\hat{\theta}_b - \hat\theta )^2
+\]</span>
+En donde <span class="math inline">\(\hat{\theta}_b\)</span> es el estimador del parámetro de interés en la réplica <span class="math inline">\(b\)</span> inducida por la muestra Bootstrap. En resumen, para la <span class="math inline">\(b\)</span>-ésima réplica con los pesos resultantesse podrán calcular las estimaciones de totales, proporciones, promedios y razones y sus respectivas varianzas o desviaciones. En general, es necesario reflejar el ajuste de los pesos en los pesos replicados, por esto es necesario trabajar con la muestra originalmente seleccionada, la cual contendrá unidades no elegibles y unidades que no respondieron. Los mismos ajustes que se hicieron a la muestra original se deben realizar en cada réplica. Si hubo calibración de pesos también debe ser incluida como un proceso en cada réplica, para asegurar que el error estándar inducido por estos métodos incluirá el incremento (o decremento) de la varianza inducida por estos ajustes a los pesos. A continuación se ejemplifica la estructura final de una base de datos de pesos replicados con la metodología de bootstrap en el mismo conjunto reducido.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(k\)</span></th>
+<th align="center">Estrato</th>
+<th align="center">UPM</th>
+<th align="center"><span class="math inline">\(d_k^{(1)}\)</span></th>
+<th align="center"><span class="math inline">\(d_k^{(2)}\)</span></th>
+<th align="center"><span class="math inline">\(d_k^{(3)}\)</span></th>
+<th align="center"><span class="math inline">\(d_k^{(4)}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">Estrato1</td>
+<td align="center">UPM1</td>
+<td align="center">2</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center">Estrato1</td>
+<td align="center">UPM1</td>
+<td align="center">2</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">Estrato1</td>
+<td align="center">UPM2</td>
+<td align="center">0</td>
+<td align="center">2</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr class="even">
+<td align="center">4</td>
+<td align="center">Estrato1</td>
+<td align="center">UPM2</td>
+<td align="center">0</td>
+<td align="center">2</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">Estrato2</td>
+<td align="center">UPM3</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center">6</td>
+<td align="center">Estrato2</td>
+<td align="center">UPM3</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center">7</td>
+<td align="center">Estrato2</td>
+<td align="center">UPM4</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">2</td>
+</tr>
+<tr class="even">
+<td align="center">8</td>
+<td align="center">Estrato2</td>
+<td align="center">UPM4</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">2</td>
+</tr>
+</tbody>
+</table>
+<p><span class="citation"><a href="#ref-Rao_Wu_1984" role="doc-biblioref">Rao y Wu</a> (<a href="#ref-Rao_Wu_1984" role="doc-biblioref">1984</a>)</span> y <span class="citation"><a href="#ref-Rao_Wu_1988" role="doc-biblioref">Rao y Wu</a> (<a href="#ref-Rao_Wu_1988" role="doc-biblioref">1988</a>)</span> aconsejan seleccionar una muestra con reemplazo de <span class="math inline">\(n_I - 1\)</span> de las <span class="math inline">\(n_I\)</span> UPM de la muestra, teniendo en cuenta la probabilidad de selección del diseño complejo en la primera etapa. Dado que la selección es con reemplazo, una UPM puede ser seleccionada más de una vez en esta nueva muestra. Por otro lado, también es posible realizar una selección sin reemplazo; en este caso, <span class="citation"><a href="#ref-Preston_2009" role="doc-biblioref">Preston</a> (<a href="#ref-Preston_2009" role="doc-biblioref">2009</a>)</span> recomiendan seleccionar una muestra con reemplazo de <span class="math inline">\(n_I/2\)</span> de las <span class="math inline">\(n_I\)</span> UPM de la muestra, teniendo en cuenta la probabilidad de selección del diseño complejo en la primera etapa.</p>
 </div>
 </div>
 <h3>Referencias</h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-CEPAL_2018" class="csl-entry">
-CEPAL. 2018. <em>Medición de la pobreza por ingresos - Actualización metodológica y resultados</em>. Metodologías de la CEPAL. <a href="http://repositorio.cepal.org/bitstream/handle/11362/44314/1/S1800852_es.pdf">http://repositorio.cepal.org/bitstream/handle/11362/44314/1/S1800852_es.pdf</a>.
+<div id="ref-EfroTibs93" class="csl-entry">
+Efron, Bradley, y Robert J. Tibshirani. 1993. <em>An Introduction to the Bootstrap</em>. Monographs on Statistics y Applied Probability 57. Boca Raton, Florida, USA: Chapman &amp; Hall/CRC.
+</div>
+<div id="ref-Judkins_1990" class="csl-entry">
+Judkins, David R. 1990. <span>«Fay’s Method for Variance Estimation»</span>. <em>Journal of Official Statistics; Stockholm</em> 6 (3): 223.
+</div>
+<div id="ref-Kish_1965" class="csl-entry">
+Kish, Leslie. 1965. <em>Survey Sampling</em>. John Wiley; Sons.
+</div>
+<div id="ref-Korn_Graubard_1999" class="csl-entry">
+Korn, Edward Lee, y Barry I. Graubard. 1999. <em>Analysis of health surveys</em>. Wiley.
+</div>
+<div id="ref-Krewski_Rao_1981" class="csl-entry">
+Krewski, D., y J. N. K. Rao. 1981. <span>«Inference From Stratified Samples: Properties of the Linearization, Jackknife and Balanced Repeated Replication Methods»</span>. <em>The Annals of Statistics</em> 9 (5): 1010-19.
+</div>
+<div id="ref-McCarthy_1969" class="csl-entry">
+McCarthy, P. J. 1969. <span>«Pseudo-Replication: Half Samples»</span>. <em>Revue de l’Institut International de Statistique / Review of the International Statistical Institute</em> 37 (3): 239-64. <a href="https://doi.org/10.2307/1402116">https://doi.org/10.2307/1402116</a>.
+</div>
+<div id="ref-mosteller1968data" class="csl-entry">
+Mosteller, F. 1968. <em>Data Analysis, Including Statistics</em>. <a href="https://books.google.cl/books?id=6ptDHQAACAAJ">https://books.google.cl/books?id=6ptDHQAACAAJ</a>.
+</div>
+<div id="ref-Preston_2009" class="csl-entry">
+Preston, John. 2009. <span>«Rescaled bootstrap for stratified multistage sampling»</span>. <em>Survey Methodology</em> 35 (2): 227-34.
+</div>
+<div id="ref-Quenouille" class="csl-entry">
+Quenouille, M. H. 1956. <span>«Notes on Bias in Estimation»</span>. <em>Biometrika</em> 43 (3/4): 353-60.
+</div>
+<div id="ref-Rao_Wu_1984" class="csl-entry">
+Rao, J. N. K., y C. F. J. Wu. 1984. <span>«BOOTSTRAP INFERENCE FOR SAMPLE SURVEYS»</span>. En <em>Procedings of the Survey Research Methods Section</em>, 106-12. American Statistical Association.
+</div>
+<div id="ref-Rao_Wu_1988" class="csl-entry">
+———. 1988. <span>«Resampling Inference with Complex Survey Data»</span>. <em>Journal of the American Statistical Association</em> 83 (401): 231-41. <a href="https://doi.org/10.1080/01621459.1988.10478591">https://doi.org/10.1080/01621459.1988.10478591</a>.
+</div>
+<div id="ref-shao2012jackknife" class="csl-entry">
+Shao, J., y D. Tu. 2012. <em>The Jackknife and Bootstrap</em>. Springer Series en Statistics. Springer New York.
+</div>
+<div id="ref-Valliant_Dever_2017" class="csl-entry">
+Valliant, Richard, y Jill A. Dever. 2017. <em>Survey Weights: A Step-by-step Guide to Calculation</em>. 1 edition. Stata Press.
+</div>
+<div id="ref-Wolter_2007" class="csl-entry">
+Wolter, Kirk M. 2007. <em>Introduction to variance estimation</em>. 2nd ed. Statistics for social y behavioral sciences. Springer.
 </div>
 </div>
             </section>
@@ -703,8 +774,8 @@ CEPAL. 2018. <em>Medición de la pobreza por ingresos - Actualización metodoló
           </div>
         </div>
       </div>
-<a href="universo-muestra-y-unidades.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="rotación-de-paneles.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="linealización-de-taylor.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="consideraciones-adicionales.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -736,7 +807,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/psirusteam/HHS-Handbook/03Elementos.Rmd",
+"link": "https://github.com/psirusteam/HHS-Handbook/11Varianza.Rmd",
 "text": "Edit"
 },
 "history": {

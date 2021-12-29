@@ -24,7 +24,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2021-12-28" />
+<meta name="date" content="2021-12-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="calibración-de-los-factores-de-expansión.html"/>
-<link rel="next" href="referencias.html"/>
+<link rel="next" href="estimación-del-error-de-muestreo.html"/>
 <script src="libs/header-attrs-2.8/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -260,6 +260,14 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="recorte-y-redondeo.html"><a href="recorte-y-redondeo.html#el-problema-del-redondeo-de-los-factores-de-expansión"><i class="fa fa-check"></i>El problema del redondeo de los factores de expansión</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="11" data-path="estimación-del-error-de-muestreo.html"><a href="estimación-del-error-de-muestreo.html"><i class="fa fa-check"></i><b>11</b> Estimación del error de muestreo</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="fórmulas-exactas-y-linealización-de-taylor.html"><a href="fórmulas-exactas-y-linealización-de-taylor.html"><i class="fa fa-check"></i><b>11.1</b> Fórmulas exactas y linealización de Taylor</a></li>
+<li class="chapter" data-level="11.2" data-path="la-técnica-del-último-conglomerado.html"><a href="la-técnica-del-último-conglomerado.html"><i class="fa fa-check"></i><b>11.2</b> La técnica del último conglomerado</a></li>
+<li class="chapter" data-level="11.3" data-path="linealización-de-taylor.html"><a href="linealización-de-taylor.html"><i class="fa fa-check"></i><b>11.3</b> Linealización de Taylor</a></li>
+<li class="chapter" data-level="11.4" data-path="pesos-replicados.html"><a href="pesos-replicados.html"><i class="fa fa-check"></i><b>11.4</b> Pesos replicados</a></li>
+<li class="chapter" data-level="11.5" data-path="consideraciones-adicionales.html"><a href="consideraciones-adicionales.html"><i class="fa fa-check"></i><b>11.5</b> Consideraciones adicionales</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
 <li class="divider"></li>
 <li><a Diseño y análisis de encuestas de hogares</a></li>
@@ -372,7 +380,7 @@ E \left( \sum_s \tilde d_k y_k \right)
 <span class="math display">\[
 \sum_s \tilde w_k \mathbf{x}_k \cong  \mathbf{t_x}
 \]</span></p>
-<p>Nótese que el redondeo aleatorio depende de la selección de la submuestra <span class="math inline">\(s_a\)</span> para completar los restos de la parte entera. En esta selección intervienen diferentes algoritmos de muestreo que se pueden aplicar fácilmente utilizando la librería <code>sampling</code> <span class="citation">(<a href="#ref-Matei" role="doc-biblioref">Tillé y Matei 2016a</a>)</span>. Por ejemplo, suponga una muestra de tamaño <span class="math inline">\(n= 200\)</span> que fue seleccionada de una población de tamaño <span class="math inline">\(N=9200\)</span> con factores de expansión desiguales que no están calibrados. Asuma que el vector de probabilidades de inclusión en la muestra toman la siguiente forma</p>
+<p>Nótese que el redondeo aleatorio depende de la selección de la submuestra <span class="math inline">\(s_a\)</span> para completar los restos de la parte entera. En esta selección intervienen diferentes algoritmos de muestreo que se pueden aplicar fácilmente utilizando la librería <code>sampling</code> <span class="citation">(<a href="#ref-Matei" role="doc-biblioref">Tillé y Matei 2016</a>)</span>. Por ejemplo, suponga una muestra de tamaño <span class="math inline">\(n= 200\)</span> que fue seleccionada de una población de tamaño <span class="math inline">\(N=9200\)</span> con factores de expansión desiguales que no están calibrados. Asuma que el vector de probabilidades de inclusión en la muestra toman la siguiente forma</p>
 <p><span class="math display">\[
 \boldsymbol{\pi}_s = (\underbrace{15/500}_{50 \ veces},
 \ldots,
@@ -394,8 +402,7 @@ E \left( \sum_s \tilde d_k y_k \right)
 \ldots,
 \underbrace{0.66667}_{70 \ veces})&#39;
 \]</span></p>
-<p>Luego del cálculo de <span class="math inline">\(\phi_k\)</span>, se selecciona la submuestra <span class="math inline">\(s_a\)</span>. En particular, en este caso se utiliza el algoritmo de Brewer, puesto que <span class="math inline">\(\sum_s\phi_k = 90\)</span> y es entero. Al final del proceso de redondeo aleatorio la suma de los nuevos factores coincidirá con la suma de los factores originales.</p>
-<p>Por último, si en una segunda instancia, se considera que los pesos están calibrados mediante sendas covariables de calibración, entonces es posible utilizar el método del cubo, en particular la función <code>samplecube</code> del paquete <code>sampling</code> <span class="citation">(<a href="#ref-Yves" role="doc-biblioref">Tillé y Matei 2016b</a>)</span> de <code>R</code>, para que la submuestra esté balanceada y los pesos redondeados sigan las restricciones de calibración bajo una tolerancia predefinida.</p>
+<p>Luego del cálculo de <span class="math inline">\(\phi_k\)</span>, se selecciona la submuestra <span class="math inline">\(s_a\)</span>. En particular, en este caso se utiliza el algoritmo de Brewer, puesto que <span class="math inline">\(\sum_s\phi_k = 90\)</span> y es entero. Al final del proceso de redondeo aleatorio la suma de los nuevos factores coincidirá con la suma de los factores originales. Por último, si en una segunda instancia, se considera que los pesos están calibrados mediante sendas covariables de calibración, entonces es posible utilizar el método del cubo, para que la submuestra esté balanceada y los pesos redondeados sigan las restricciones de calibración bajo una tolerancia predefinida.</p>
 
 </div>
 </div>
@@ -418,10 +425,7 @@ Tillé, Yves. 2006b. <em>Sampling Algorithms</em>. Springer Series en Statistics
 ———. 2019. <span>«A Simple and Efficient Way of Rounding Calibration Weights»</span>, 3.
 </div>
 <div id="ref-Matei" class="csl-entry">
-Tillé, Yves, y Alina Matei. 2016a. <em>sampling: Survey Sampling</em>. <a href="https://CRAN.R-project.org/package=sampling">https://CRAN.R-project.org/package=sampling</a>.
-</div>
-<div id="ref-Yves" class="csl-entry">
-———. 2016b. <em>sampling: Survey Sampling</em>. <a href="https://CRAN.R-project.org/package=sampling">https://CRAN.R-project.org/package=sampling</a>.
+Tillé, Yves, y Alina Matei. 2016. <em>sampling: Survey Sampling</em>. <a href="https://CRAN.R-project.org/package=sampling">https://CRAN.R-project.org/package=sampling</a>.
 </div>
 <div id="ref-Valliant_Dever_Kreuter_2018" class="csl-entry">
 ———. 2018. <em>Practical Tools for Designing and Weighting Survey Samples</em>. Statistics for Social y Behavioral Sciences. Springer International Publishing. <a href="https://doi.org/10.1007/978-3-319-93632-1">https://doi.org/10.1007/978-3-319-93632-1</a>.
@@ -433,7 +437,7 @@ Tillé, Yves, y Alina Matei. 2016a. <em>sampling: Survey Sampling</em>. <a href=
         </div>
       </div>
 <a href="calibración-de-los-factores-de-expansión.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="referencias.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="estimación-del-error-de-muestreo.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

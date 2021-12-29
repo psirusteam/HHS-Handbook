@@ -531,11 +531,5 @@ $$
 \underbrace{0.66667}_{70 \ veces})'
 $$
 
-Luego del cálculo de $\phi_k$, se selecciona la submuestra $s_a$. En particular, en este caso se utiliza el algoritmo de Brewer, puesto que $\sum_s\phi_k = 90$ y es entero. Al final del proceso de redondeo aleatorio la suma de los nuevos factores coincidirá con la suma de los factores originales. 
-
-Por último, si en una segunda instancia, se considera que los pesos están calibrados mediante sendas covariables de calibración, entonces es posible utilizar el método del cubo, en particular la función `samplecube` del paquete `sampling` [@Yves] de `R`, para que la submuestra esté balanceada y los pesos redondeados sigan las restricciones de calibración bajo una tolerancia predefinida. 
-
-
-
-
+Luego del cálculo de $\phi_k$, se selecciona la submuestra $s_a$. En particular, en este caso se utiliza el algoritmo de Brewer, puesto que $\sum_s\phi_k = 90$ y es entero. Al final del proceso de redondeo aleatorio la suma de los nuevos factores coincidirá con la suma de los factores originales. Por último, si en una segunda instancia, se considera que los pesos están calibrados mediante sendas covariables de calibración, entonces es posible utilizar el método del cubo, para que la submuestra esté balanceada y los pesos redondeados sigan las restricciones de calibración bajo una tolerancia predefinida. 
 
