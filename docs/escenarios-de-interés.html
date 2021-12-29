@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="es" xml:lang="es">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>8.3 Escenarios de interés | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
+  <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="8.3 Escenarios de interés | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
+  <meta name="github-repo" content="psirusteam/HHS-Handbook" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="8.3 Escenarios de interés | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
+  
+  <meta name="twitter:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
+  
+
+<meta name="author" content="Andrés Gutiérrez" />
+
+
+<meta name="date" content="2021-12-29" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="el-efecto-de-diseño-en-la-determinación-del-tamaño-de-muestra.html"/>
+<link rel="next" href="otros-escenarios-de-interés.html"/>
+<script src="libs/header-attrs-2.8/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Diseño y análisis de encuestas de hogares</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefacio</a></li>
+<li class="chapter" data-level="" data-path="resumen.html"><a href="resumen.html"><i class="fa fa-check"></i>Resumen</a></li>
+<li class="chapter" data-level="1" data-path="introducción.html"><a href="introducción.html"><i class="fa fa-check"></i><b>1</b> Introducción</a>
+<ul>
+<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html#objetivos-de-desarrollo-sostenible"><i class="fa fa-check"></i>Objetivos de Desarrollo Sostenible</a></li>
+<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html#mercado-de-trabajo"><i class="fa fa-check"></i>Mercado de Trabajo</a></li>
+<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html#ingresos-y-gastos"><i class="fa fa-check"></i>Ingresos y gastos</a></li>
+<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html#esquema-del-documento"><i class="fa fa-check"></i>Esquema del documento</a></li>
+</ul></li>
+<li class="part"><span><b>I Diseño estadístico de las encuestas de hogares</b></span></li>
+<li class="chapter" data-level="2" data-path="el-paradigma-del-error-total.html"><a href="el-paradigma-del-error-total.html"><i class="fa fa-check"></i><b>2</b> El paradigma del error total</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="qué-es-una-encuesta.html"><a href="qué-es-una-encuesta.html"><i class="fa fa-check"></i><b>2.1</b> ¿Qué es una encuesta?</a></li>
+<li class="chapter" data-level="2.2" data-path="sesgos-generados-en-las-encuestas.html"><a href="sesgos-generados-en-las-encuestas.html"><i class="fa fa-check"></i><b>2.2</b> Sesgos generados en las encuestas</a>
+<ul>
+<li class="chapter" data-level="" data-path="sesgos-generados-en-las-encuestas.html"><a href="sesgos-generados-en-las-encuestas.html#sesgo-de-selección"><i class="fa fa-check"></i>Sesgo de selección</a></li>
+<li class="chapter" data-level="" data-path="sesgos-generados-en-las-encuestas.html"><a href="sesgos-generados-en-las-encuestas.html#sesgo-de-medición"><i class="fa fa-check"></i>Sesgo de medición</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="evolución-de-las-encuestas-estandarizadas.html"><a href="evolución-de-las-encuestas-estandarizadas.html"><i class="fa fa-check"></i><b>2.3</b> Evolución de las encuestas estandarizadas</a>
+<ul>
+<li class="chapter" data-level="" data-path="evolución-de-las-encuestas-estandarizadas.html"><a href="evolución-de-las-encuestas-estandarizadas.html#inicio-de-los-cuestionarios-estandarizados"><i class="fa fa-check"></i>Inicio de los cuestionarios estandarizados</a></li>
+<li class="chapter" data-level="" data-path="evolución-de-las-encuestas-estandarizadas.html"><a href="evolución-de-las-encuestas-estandarizadas.html#inicio-de-los-métodos-de-muestreo"><i class="fa fa-check"></i>Inicio de los métodos de muestreo</a></li>
+<li class="chapter" data-level="" data-path="evolución-de-las-encuestas-estandarizadas.html"><a href="evolución-de-las-encuestas-estandarizadas.html#inicio-de-la-recolección-de-datos"><i class="fa fa-check"></i>Inicio de la recolección de datos</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="el-ciclo-de-vida-de-una-encuesta.html"><a href="el-ciclo-de-vida-de-una-encuesta.html"><i class="fa fa-check"></i><b>2.4</b> El ciclo de vida de una encuesta</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="el-ciclo-de-vida-de-una-encuesta.html"><a href="el-ciclo-de-vida-de-una-encuesta.html#inferencia-individual"><i class="fa fa-check"></i><b>2.4.1</b> Inferencia individual</a></li>
+<li class="chapter" data-level="2.4.2" data-path="el-ciclo-de-vida-de-una-encuesta.html"><a href="el-ciclo-de-vida-de-una-encuesta.html#inferencia-grupal"><i class="fa fa-check"></i><b>2.4.2</b> Inferencia grupal</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="el-proceso-de-respuesta.html"><a href="el-proceso-de-respuesta.html"><i class="fa fa-check"></i><b>2.5</b> El proceso de respuesta</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="elementos-básicos.html"><a href="elementos-básicos.html"><i class="fa fa-check"></i><b>3</b> Elementos básicos</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="universo-muestra-y-unidades.html"><a href="universo-muestra-y-unidades.html"><i class="fa fa-check"></i><b>3.1</b> Universo, muestra y unidades</a></li>
+<li class="chapter" data-level="3.2" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html"><i class="fa fa-check"></i><b>3.2</b> Periodicidad en el tiempo</a>
+<ul>
+<li class="chapter" data-level="" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-transversales"><i class="fa fa-check"></i>Encuestas transversales</a></li>
+<li class="chapter" data-level="" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-repetidas"><i class="fa fa-check"></i>Encuestas repetidas</a></li>
+<li class="chapter" data-level="" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-panel"><i class="fa fa-check"></i>Encuestas panel</a></li>
+<li class="chapter" data-level="" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-de-panel-dividido"><i class="fa fa-check"></i>Encuestas de panel dividido</a></li>
+<li class="chapter" data-level="" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-de-panel-rotativo"><i class="fa fa-check"></i>Encuestas de panel rotativo</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="rotación-de-paneles.html"><a href="rotación-de-paneles.html"><i class="fa fa-check"></i><b>3.3</b> Rotación de paneles</a></li>
+<li class="chapter" data-level="3.4" data-path="parámetros-e-indicadores-de-interés.html"><a href="parámetros-e-indicadores-de-interés.html"><i class="fa fa-check"></i><b>3.4</b> Parámetros e indicadores de interés</a>
+<ul>
+<li class="chapter" data-level="" data-path="parámetros-e-indicadores-de-interés.html"><a href="parámetros-e-indicadores-de-interés.html#algunos-ejemplos-de-indicadores-de-interés-y-su-relación-con-los-tipos-de-encuestas"><i class="fa fa-check"></i>Algunos ejemplos de indicadores de interés y su relación con los tipos de encuestas</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="definición-del-marco-muestral.html"><a href="definición-del-marco-muestral.html"><i class="fa fa-check"></i><b>4</b> Definición del marco muestral</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="el-marco-de-muestreo.html"><a href="el-marco-de-muestreo.html"><i class="fa fa-check"></i><b>4.1</b> El marco de muestreo</a></li>
+<li class="chapter" data-level="4.2" data-path="los-censos-y-su-incidencia-en-los-marcos-de-muestreo.html"><a href="los-censos-y-su-incidencia-en-los-marcos-de-muestreo.html"><i class="fa fa-check"></i><b>4.2</b> Los censos y su incidencia en los marcos de muestreo</a></li>
+<li class="chapter" data-level="4.3" data-path="construcción-de-las-upm.html"><a href="construcción-de-las-upm.html"><i class="fa fa-check"></i><b>4.3</b> Construcción de las UPM</a>
+<ul>
+<li class="chapter" data-level="" data-path="construcción-de-las-upm.html"><a href="construcción-de-las-upm.html#actualización-continua-del-marco-de-muestreo"><i class="fa fa-check"></i>Actualización continua del marco de muestreo</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="metodologías-de-estratificación.html"><a href="metodologías-de-estratificación.html"><i class="fa fa-check"></i><b>5</b> Metodologías de estratificación</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="dimensiones-estructurales-en-el-marco-de-muestreo.html"><a href="dimensiones-estructurales-en-el-marco-de-muestreo.html"><i class="fa fa-check"></i><b>5.1</b> Dimensiones estructurales en el marco de muestreo</a></li>
+<li class="chapter" data-level="5.2" data-path="información-a-nivel-de-upm.html"><a href="información-a-nivel-de-upm.html"><i class="fa fa-check"></i><b>5.2</b> Información a nivel de UPM</a></li>
+<li class="chapter" data-level="5.3" data-path="metodologías-univariadas-sobre-medidas-de-resumen.html"><a href="metodologías-univariadas-sobre-medidas-de-resumen.html"><i class="fa fa-check"></i><b>5.3</b> Metodologías univariadas sobre medidas de resumen</a>
+<ul>
+<li class="chapter" data-level="" data-path="metodologías-univariadas-sobre-medidas-de-resumen.html"><a href="metodologías-univariadas-sobre-medidas-de-resumen.html#partición-en-cuantiles-q"><i class="fa fa-check"></i>Partición en cuantiles (Q)</a></li>
+<li class="chapter" data-level="" data-path="metodologías-univariadas-sobre-medidas-de-resumen.html"><a href="metodologías-univariadas-sobre-medidas-de-resumen.html#método-de-raíz-de-frecuencia-acumulada-dh"><i class="fa fa-check"></i>Método de raíz de frecuencia acumulada (DH)</a></li>
+<li class="chapter" data-level="" data-path="metodologías-univariadas-sobre-medidas-de-resumen.html"><a href="metodologías-univariadas-sobre-medidas-de-resumen.html#estratificación-óptima-lh"><i class="fa fa-check"></i>Estratificación óptima (LH)</a></li>
+<li class="chapter" data-level="" data-path="metodologías-univariadas-sobre-medidas-de-resumen.html"><a href="metodologías-univariadas-sobre-medidas-de-resumen.html#estratificación-geométrica-gh"><i class="fa fa-check"></i>Estratificación geométrica (GH)</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="metodologías-multivariadas-sobre-la-matriz-de-información.html"><a href="metodologías-multivariadas-sobre-la-matriz-de-información.html"><i class="fa fa-check"></i><b>5.4</b> Metodologías multivariadas sobre la matriz de información</a>
+<ul>
+<li class="chapter" data-level="" data-path="metodologías-multivariadas-sobre-la-matriz-de-información.html"><a href="metodologías-multivariadas-sobre-la-matriz-de-información.html#k-medias-de-jarque-kmj"><i class="fa fa-check"></i>K-medias de Jarque (KmJ)</a></li>
+<li class="chapter" data-level="" data-path="metodologías-multivariadas-sobre-la-matriz-de-información.html"><a href="metodologías-multivariadas-sobre-la-matriz-de-información.html#partición-genética-bb"><i class="fa fa-check"></i>Partición genética (BB)</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="evaluación-y-escogencia-de-la-mejor-estratificación.html"><a href="evaluación-y-escogencia-de-la-mejor-estratificación.html"><i class="fa fa-check"></i><b>5.5</b> Evaluación y escogencia de la mejor estratificación</a></li>
+<li class="chapter" data-level="5.6" data-path="estratificación-implícita.html"><a href="estratificación-implícita.html"><i class="fa fa-check"></i><b>5.6</b> Estratificación implícita</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="diseño-y-mecanismo-de-selección-de-la-muestra.html"><a href="diseño-y-mecanismo-de-selección-de-la-muestra.html"><i class="fa fa-check"></i><b>6</b> Diseño y mecanismo de selección de la muestra</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html"><i class="fa fa-check"></i><b>6.1</b> Diseños de muestreo</a>
+<ul>
+<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-aleatorio-simple"><i class="fa fa-check"></i>Muestreo aleatorio simple</a></li>
+<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-proporcional-al-tamaño"><i class="fa fa-check"></i>Muestreo proporcional al tamaño</a></li>
+<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-estratificado"><i class="fa fa-check"></i>Muestreo estratificado</a></li>
+<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-de-conglomerados"><i class="fa fa-check"></i>Muestreo de conglomerados</a></li>
+<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-en-varias-etapas"><i class="fa fa-check"></i>Muestreo en varias etapas</a></li>
+<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-en-dos-fases"><i class="fa fa-check"></i>Muestreo en dos fases</a></li>
+<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-balanceado"><i class="fa fa-check"></i>Muestreo balanceado</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="el-diseño-de-muestreo-estándar-en-una-encuesta-de-hogares.html"><a href="el-diseño-de-muestreo-estándar-en-una-encuesta-de-hogares.html"><i class="fa fa-check"></i><b>6.2</b> El diseño de muestreo estándar en una encuesta de hogares</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="el-efecto-de-diseño.html"><a href="el-efecto-de-diseño.html"><i class="fa fa-check"></i><b>7</b> El efecto de diseño</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="estimación-del-efecto-de-diseño.html"><a href="estimación-del-efecto-de-diseño.html"><i class="fa fa-check"></i><b>7.1</b> Estimación del efecto de diseño</a></li>
+<li class="chapter" data-level="7.2" data-path="descomposición-del-efecto-de-diseño-en-las-encuestas-de-hogares.html"><a href="descomposición-del-efecto-de-diseño-en-las-encuestas-de-hogares.html"><i class="fa fa-check"></i><b>7.2</b> Descomposición del efecto de diseño en las encuestas de hogares</a></li>
+<li class="chapter" data-level="7.3" data-path="formas-comunes-del-efecto-de-diseño.html"><a href="formas-comunes-del-efecto-de-diseño.html"><i class="fa fa-check"></i><b>7.3</b> Formas comunes del efecto de diseño</a></li>
+<li class="chapter" data-level="7.4" data-path="otras-consideraciones.html"><a href="otras-consideraciones.html"><i class="fa fa-check"></i><b>7.4</b> Otras consideraciones</a>
+<ul>
+<li class="chapter" data-level="" data-path="otras-consideraciones.html"><a href="otras-consideraciones.html#el-efecto-de-diseño-en-subpoblaciones"><i class="fa fa-check"></i>El efecto de diseño en subpoblaciones</a></li>
+<li class="chapter" data-level="" data-path="otras-consideraciones.html"><a href="otras-consideraciones.html#el-efecto-de-diseño-general"><i class="fa fa-check"></i>El efecto de diseño general</a></li>
+<li class="chapter" data-level="" data-path="otras-consideraciones.html"><a href="otras-consideraciones.html#el-efecto-de-diseño-en-las-encuestas-de-hogares-de-la-región"><i class="fa fa-check"></i>El efecto de diseño en las encuestas de hogares de la región</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="cálculo-del-tamaño-de-muestra.html"><a href="cálculo-del-tamaño-de-muestra.html"><i class="fa fa-check"></i><b>8</b> Cálculo del tamaño de muestra</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="confiabilidad-y-precisión.html"><a href="confiabilidad-y-precisión.html"><i class="fa fa-check"></i><b>8.1</b> Confiabilidad y precisión</a></li>
+<li class="chapter" data-level="8.2" data-path="el-efecto-de-diseño-en-la-determinación-del-tamaño-de-muestra.html"><a href="el-efecto-de-diseño-en-la-determinación-del-tamaño-de-muestra.html"><i class="fa fa-check"></i><b>8.2</b> El efecto de diseño en la determinación del tamaño de muestra</a></li>
+<li class="chapter" data-level="8.3" data-path="escenarios-de-interés.html"><a href="escenarios-de-interés.html"><i class="fa fa-check"></i><b>8.3</b> Escenarios de interés</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="escenarios-de-interés.html"><a href="escenarios-de-interés.html#tamaño-de-muestra-para-upm-hogares-y-personas"><i class="fa fa-check"></i><b>8.3.1</b> Tamaño de muestra para UPM, hogares y personas</a></li>
+<li class="chapter" data-level="8.3.2" data-path="escenarios-de-interés.html"><a href="escenarios-de-interés.html#tamaño-de-muestra-para-upm-y-hogares"><i class="fa fa-check"></i><b>8.3.2</b> Tamaño de muestra para UPM y hogares</a></li>
+<li class="chapter" data-level="8.3.3" data-path="escenarios-de-interés.html"><a href="escenarios-de-interés.html#tamaño-de-muestra-para-upm-y-personas"><i class="fa fa-check"></i><b>8.3.3</b> Tamaño de muestra para UPM y personas</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="otros-escenarios-de-interés.html"><a href="otros-escenarios-de-interés.html"><i class="fa fa-check"></i><b>8.4</b> Otros escenarios de interés</a>
+<ul>
+<li class="chapter" data-level="8.4.1" data-path="otros-escenarios-de-interés.html"><a href="otros-escenarios-de-interés.html#tamaño-de-muestra-para-la-estimación-de-la-diferencia-de-dos-proporciones"><i class="fa fa-check"></i><b>8.4.1</b> Tamaño de muestra para la estimación de la diferencia de dos proporciones</a></li>
+<li class="chapter" data-level="8.4.2" data-path="otros-escenarios-de-interés.html"><a href="otros-escenarios-de-interés.html#tamaño-de-muestra-para-la-estimación-del-impacto-en-dos-mediciones-longitudinales"><i class="fa fa-check"></i><b>8.4.2</b> Tamaño de muestra para la estimación del impacto en dos mediciones longitudinales</a></li>
+<li class="chapter" data-level="8.4.3" data-path="otros-escenarios-de-interés.html"><a href="otros-escenarios-de-interés.html#tamaño-de-muestra-para-el-contraste-de-hipótesis-en-la-diferencia-de-proporciones"><i class="fa fa-check"></i><b>8.4.3</b> Tamaño de muestra para el contraste de hipótesis en la diferencia de proporciones</a></li>
+</ul></li>
+<li class="chapter" data-level="8.5" data-path="algunas-relaciones-de-interés-para-proporciones.html"><a href="algunas-relaciones-de-interés-para-proporciones.html"><i class="fa fa-check"></i><b>8.5</b> Algunas relaciones de interés para proporciones</a>
+<ul>
+<li class="chapter" data-level="" data-path="algunas-relaciones-de-interés-para-proporciones.html"><a href="algunas-relaciones-de-interés-para-proporciones.html#estimación-de-proporciones"><i class="fa fa-check"></i>Estimación de proporciones</a></li>
+<li class="chapter" data-level="" data-path="algunas-relaciones-de-interés-para-proporciones.html"><a href="algunas-relaciones-de-interés-para-proporciones.html#cambios-netos"><i class="fa fa-check"></i>Cambios netos</a></li>
+</ul></li>
+<li class="chapter" data-level="8.6" data-path="algunas-consideraciones-adicionales.html"><a href="algunas-consideraciones-adicionales.html"><i class="fa fa-check"></i><b>8.6</b> Algunas consideraciones adicionales</a>
+<ul>
+<li class="chapter" data-level="8.6.1" data-path="algunas-consideraciones-adicionales.html"><a href="algunas-consideraciones-adicionales.html#asignación-del-tamaño-de-muestra-en-los-estratos-de-muestreo"><i class="fa fa-check"></i><b>8.6.1</b> Asignación del tamaño de muestra en los estratos de muestreo</a></li>
+<li class="chapter" data-level="8.6.2" data-path="algunas-consideraciones-adicionales.html"><a href="algunas-consideraciones-adicionales.html#ajustes-de-subcobertura"><i class="fa fa-check"></i><b>8.6.2</b> Ajustes de subcobertura</a></li>
+<li class="chapter" data-level="8.6.3" data-path="algunas-consideraciones-adicionales.html"><a href="algunas-consideraciones-adicionales.html#sustituciones-y-reemplazos"><i class="fa fa-check"></i><b>8.6.3</b> Sustituciones y reemplazos</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>II Procesamiento transversal de las encuestas de hogares</b></span></li>
+<li class="chapter" data-level="9" data-path="estimación-de-parámetros.html"><a href="estimación-de-parámetros.html"><i class="fa fa-check"></i><b>9</b> Estimación de parámetros</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="el-estimador-de-horvitz-thompson-para-totales-y-tamaños-poblacionales.html"><a href="el-estimador-de-horvitz-thompson-para-totales-y-tamaños-poblacionales.html"><i class="fa fa-check"></i><b>9.1</b> El estimador de Horvitz-Thompson para totales y tamaños poblacionales</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="el-estimador-de-horvitz-thompson-para-totales-y-tamaños-poblacionales.html"><a href="el-estimador-de-horvitz-thompson-para-totales-y-tamaños-poblacionales.html#estimación-para-totales"><i class="fa fa-check"></i><b>9.1.1</b> Estimación para totales</a></li>
+<li class="chapter" data-level="9.1.2" data-path="el-estimador-de-horvitz-thompson-para-totales-y-tamaños-poblacionales.html"><a href="el-estimador-de-horvitz-thompson-para-totales-y-tamaños-poblacionales.html#estimación-para-tamaños-y-totales-en-dominios"><i class="fa fa-check"></i><b>9.1.2</b> Estimación para tamaños y totales en dominios</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="el-estimador-de-hájek-para-medias-y-proporciones.html"><a href="el-estimador-de-hájek-para-medias-y-proporciones.html"><i class="fa fa-check"></i><b>9.2</b> El estimador de Hájek para medias y proporciones</a></li>
+<li class="chapter" data-level="9.3" data-path="otros-estimadores-de-muestreo.html"><a href="otros-estimadores-de-muestreo.html"><i class="fa fa-check"></i><b>9.3</b> Otros estimadores de muestreo</a></li>
+<li class="chapter" data-level="9.4" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html"><i class="fa fa-check"></i><b>9.4</b> Estimadores de calibración</a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html#ganancia-en-eficiencia"><i class="fa fa-check"></i><b>9.4.1</b> Ganancia en eficiencia</a></li>
+<li class="chapter" data-level="9.4.2" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html#diferentes-formas-del-estimador-de-calibración"><i class="fa fa-check"></i><b>9.4.2</b> Diferentes formas del estimador de calibración</a></li>
+<li class="chapter" data-level="9.4.3" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html#la-calibración-como-un-cambio-de-paradigma"><i class="fa fa-check"></i><b>9.4.3</b> La calibración como un cambio de paradigma</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="construcción-de-los-factores-de-expansión.html"><a href="construcción-de-los-factores-de-expansión.html"><i class="fa fa-check"></i><b>10</b> Construcción de los factores de expansión</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="creación-de-los-pesos-básicos.html"><a href="creación-de-los-pesos-básicos.html"><i class="fa fa-check"></i><b>10.1</b> Creación de los pesos básicos</a></li>
+<li class="chapter" data-level="10.2" data-path="ajuste-por-elegibilidad-desconocida.html"><a href="ajuste-por-elegibilidad-desconocida.html"><i class="fa fa-check"></i><b>10.2</b> Ajuste por elegibilidad desconocida</a></li>
+<li class="chapter" data-level="10.3" data-path="descarte-de-las-unidades-no-elegibles.html"><a href="descarte-de-las-unidades-no-elegibles.html"><i class="fa fa-check"></i><b>10.3</b> Descarte de las unidades no elegibles</a></li>
+<li class="chapter" data-level="10.4" data-path="ajuste-por-ausencia-de-respuesta.html"><a href="ajuste-por-ausencia-de-respuesta.html"><i class="fa fa-check"></i><b>10.4</b> Ajuste por ausencia de respuesta</a></li>
+<li class="chapter" data-level="10.5" data-path="calibración-de-los-factores-de-expansión.html"><a href="calibración-de-los-factores-de-expansión.html"><i class="fa fa-check"></i><b>10.5</b> Calibración de los factores de expansión</a>
+<ul>
+<li class="chapter" data-level="10.5.1" data-path="calibración-de-los-factores-de-expansión.html"><a href="calibración-de-los-factores-de-expansión.html#medidas-de-calidad-en-la-calibración"><i class="fa fa-check"></i><b>10.5.1</b> Medidas de calidad en la calibración</a></li>
+<li class="chapter" data-level="10.5.2" data-path="calibración-de-los-factores-de-expansión.html"><a href="calibración-de-los-factores-de-expansión.html#calibración-integrada-para-hogares-y-personas"><i class="fa fa-check"></i><b>10.5.2</b> Calibración integrada para hogares y personas</a></li>
+<li class="chapter" data-level="10.5.3" data-path="calibración-de-los-factores-de-expansión.html"><a href="calibración-de-los-factores-de-expansión.html#calibración-sobre-razones-medias-y-proporciones"><i class="fa fa-check"></i><b>10.5.3</b> Calibración sobre razones, medias y proporciones</a></li>
+</ul></li>
+<li class="chapter" data-level="10.6" data-path="recorte-y-redondeo.html"><a href="recorte-y-redondeo.html"><i class="fa fa-check"></i><b>10.6</b> Recorte y redondeo</a>
+<ul>
+<li class="chapter" data-level="" data-path="recorte-y-redondeo.html"><a href="recorte-y-redondeo.html#recorte-de-pesos-extremos"><i class="fa fa-check"></i>Recorte de pesos extremos</a></li>
+<li class="chapter" data-level="" data-path="recorte-y-redondeo.html"><a href="recorte-y-redondeo.html#el-problema-del-redondeo-de-los-factores-de-expansión"><i class="fa fa-check"></i>El problema del redondeo de los factores de expansión</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="estimación-del-error-de-muestreo.html"><a href="estimación-del-error-de-muestreo.html"><i class="fa fa-check"></i><b>11</b> Estimación del error de muestreo</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="fórmulas-exactas-y-linealización-de-taylor.html"><a href="fórmulas-exactas-y-linealización-de-taylor.html"><i class="fa fa-check"></i><b>11.1</b> Fórmulas exactas y linealización de Taylor</a></li>
+<li class="chapter" data-level="11.2" data-path="la-técnica-del-último-conglomerado.html"><a href="la-técnica-del-último-conglomerado.html"><i class="fa fa-check"></i><b>11.2</b> La técnica del último conglomerado</a></li>
+<li class="chapter" data-level="11.3" data-path="linealización-de-taylor.html"><a href="linealización-de-taylor.html"><i class="fa fa-check"></i><b>11.3</b> Linealización de Taylor</a></li>
+<li class="chapter" data-level="11.4" data-path="pesos-replicados.html"><a href="pesos-replicados.html"><i class="fa fa-check"></i><b>11.4</b> Pesos replicados</a></li>
+<li class="chapter" data-level="11.5" data-path="consideraciones-adicionales.html"><a href="consideraciones-adicionales.html"><i class="fa fa-check"></i><b>11.5</b> Consideraciones adicionales</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="ausencia-de-respuesta-y-representatividad.html"><a href="ausencia-de-respuesta-y-representatividad.html"><i class="fa fa-check"></i><b>12</b> Ausencia de respuesta y representatividad</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="clasificación-de-la-ausencia-de-respuesta.html"><a href="clasificación-de-la-ausencia-de-respuesta.html"><i class="fa fa-check"></i><b>12.1</b> Clasificación de la ausencia de respuesta</a>
+<ul>
+<li class="chapter" data-level="12.1.1" data-path="clasificación-de-la-ausencia-de-respuesta.html"><a href="clasificación-de-la-ausencia-de-respuesta.html#ausencia-de-respuesta-de-registro-y-de-unidad"><i class="fa fa-check"></i><b>12.1.1</b> Ausencia de respuesta de registro y de unidad</a></li>
+<li class="chapter" data-level="12.1.2" data-path="clasificación-de-la-ausencia-de-respuesta.html"><a href="clasificación-de-la-ausencia-de-respuesta.html#efectos-y-consecuencias-de-la-ausencia-de-respuesta"><i class="fa fa-check"></i><b>12.1.2</b> Efectos y consecuencias de la ausencia de respuesta</a></li>
+<li class="chapter" data-level="12.1.3" data-path="clasificación-de-la-ausencia-de-respuesta.html"><a href="clasificación-de-la-ausencia-de-respuesta.html#posibles-soluciones"><i class="fa fa-check"></i><b>12.1.3</b> Posibles soluciones</a></li>
+</ul></li>
+<li class="chapter" data-level="12.2" data-path="indicadores-de-representatividad.html"><a href="indicadores-de-representatividad.html"><i class="fa fa-check"></i><b>12.2</b> Indicadores de representatividad</a>
+<ul>
+<li class="chapter" data-level="12.2.1" data-path="indicadores-de-representatividad.html"><a href="indicadores-de-representatividad.html#el-concepto-de-representatividad"><i class="fa fa-check"></i><b>12.2.1</b> El concepto de representatividad</a></li>
+<li class="chapter" data-level="12.2.2" data-path="indicadores-de-representatividad.html"><a href="indicadores-de-representatividad.html#indicadores-r"><i class="fa fa-check"></i><b>12.2.2</b> Indicadores <span class="math inline">\(R\)</span></a></li>
+<li class="chapter" data-level="12.2.3" data-path="indicadores-de-representatividad.html"><a href="indicadores-de-representatividad.html#el-indicador-r-en-la-práctica"><i class="fa fa-check"></i><b>12.2.3</b> El indicador <span class="math inline">\(R\)</span> en la práctica</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="ausencia-de-respuesta-de-unidad.html"><a href="ausencia-de-respuesta-de-unidad.html"><i class="fa fa-check"></i><b>13</b> Ausencia de respuesta de unidad</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="sesgo-sobre-los-estimadores.html"><a href="sesgo-sobre-los-estimadores.html"><i class="fa fa-check"></i><b>13.1</b> Sesgo sobre los estimadores</a></li>
+<li class="chapter" data-level="13.2" data-path="soluciones.html"><a href="soluciones.html"><i class="fa fa-check"></i><b>13.2</b> Soluciones</a>
+<ul>
+<li class="chapter" data-level="13.2.1" data-path="soluciones.html"><a href="soluciones.html#propensity-score"><i class="fa fa-check"></i><b>13.2.1</b> Propensity Score</a></li>
+<li class="chapter" data-level="13.2.2" data-path="soluciones.html"><a href="soluciones.html#calibración"><i class="fa fa-check"></i><b>13.2.2</b> Calibración</a></li>
+</ul></li>
+<li class="chapter" data-level="13.3" data-path="la-pandemia-por-covid-19.html"><a href="la-pandemia-por-covid-19.html"><i class="fa fa-check"></i><b>13.3</b> La pandemia por COVID-19</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
+<li class="divider"></li>
+<li><a Diseño y análisis de encuestas de hogares</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Diseño y análisis estadístico en las encuestas de hogares de América Latina</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="escenarios-de-interés" class="section level2" number="8.3">
+<h2><span class="header-section-number">8.3</span> Escenarios de interés</h2>
+<p>En general, en encuestas de hogares se parte de un marco de muestreo de áreas que agrupa a toda la población de un país. Estas áreas están definidas como agregaciones cartográficas o UPM y contienen a su vez a los hogares en donde se encuentran las personas que son susceptibles de ser entrevistadas. Sin embargo, debido a la agrupación natural de las personas en hogares, a veces los cálculos se hacen complejos, máxime conociendo que la población de interés es un subconjunto de los habitantes de los hogares. Por otro lado, debido a que el marco de muestreo comúnmente usado por las INE es una lista de UPM, se hace necesario más allá de calcular el tamaño de muestra de las personas, también calcular el tamaño de muestra de UPM y hogares en la muestra. Por lo tanto, en este documento se pretende sintetizar los mecanismos de asignación de muestra en tres escenarios que son comunes en la práctica estadística del diseño de encuestas de hogares:</p>
+<ol style="list-style-type: decimal">
+<li><p>Primer escenario: asignación del tamaño de muestra en problemas de inferencia que tienen que ver con la estimación de parámetros de personas. En este escenario se presenta la metodología apropiada para calcular el tamaño de muestra de UPM, hogares y finalmente personas.</p></li>
+<li><p>Segundo escenario: cuando la variable de diseño y en general, las variables más importantes de la encuestas están presentes a nivel de hogar, entonces no es necesario realizar un submuestreo de personas. Partiendo de la lógica presentada en el escenario anterior, se presenta la metodología adecuada para calcular el tamaño de muestra de UPM y de hogares.</p></li>
+<li><p>Tercer escenario: un caso menos común en los países de América Latina se presenta cuando el marco de muestreo empadrona las personas dentro de las UPM y además la encuesta sólo pretende observar características asociadas a los habitantes del hogar (y por tanto no intenta observar características ni del hogar ni de la vivienda). En este caso no hay un submuestreo de hogares.</p></li>
+</ol>
+<p>En general, al definir las expresiones de tamaño de muestra, se debe ser cuidadoso con la notación, para lo cual suponemos una población <span class="math inline">\(U\)</span> de <span class="math inline">\(N\)</span> elementos sobre la que se desea seleccionar una muestra <span class="math inline">\(s\)</span> de <span class="math inline">\(n\)</span> elementos en los cuales se quiere medir una característica de interés. En algunos casos, la población <span class="math inline">\(U\)</span> no constituye la población de interés sino que la contiene; es decir, si se define a <span class="math inline">\(U_d\)</span> como la población de interés, entonces <span class="math inline">\(U_d \subseteq U\)</span>. En términos de notación, se tiene lo siguiente:</p>
+<ul>
+<li><span class="math inline">\(N\)</span> es el tamaño de la población <span class="math inline">\(U\)</span>.</li>
+<li><span class="math inline">\(n\)</span> es el tamaño de la muestra <span class="math inline">\(s\)</span>.</li>
+<li><span class="math inline">\(N_{I}\)</span> es el número de UPM en el marco de muestreo.</li>
+<li><span class="math inline">\(n_{I}\)</span> es el número de UPM que se selecciona en la muestra de la primera etapa <span class="math inline">\(s_i\)</span>.</li>
+<li><span class="math inline">\(N_{II}\)</span> es el número de hogares existentes en el país.</li>
+<li><span class="math inline">\(n_{II}\)</span> es el número de hogares seleccionados en la muestra de la segunda etapa <span class="math inline">\(s_{II}\)</span>.</li>
+<li><span class="math inline">\(\bar{n}\)</span> es el número promedio de personas que se van a seleccionar en cada UPM.</li>
+<li><span class="math inline">\(\bar{n}_{II}\)</span> es el número promedio de hogares que se van a seleccionar en cada UPM.</li>
+<li><span class="math inline">\(\rho_y\)</span> es el coeficiente de correlación intraclase, calculado para la variable de interés sobre las UPM.</li>
+<li><span class="math inline">\(b\)</span> es el número promedio de personas por hogar.</li>
+<li><span class="math inline">\(r\)</span> es el porcentaje promedio de personas en el hogar susceptibles de ser observadas para la característica de interés.</li>
+<li><span class="math inline">\(z_{1-\alpha/2}\)</span> es el percentil (<span class="math inline">\(1- \alpha/2\)</span>) asociado a una distribución normal estándar y a la confianza que se requiera en la inferencia.</li>
+</ul>
+<p>Para introducir las metodologías apropiadas, junto con las expresiones adecuadas, en cada escenario se definirán las cantidades de interés, se dará una breve introducción al problema y se realizarán los cálculos detenidamente con ejemplos de encuestas reales. Para mantener la uniformidad en los cálculos, todos los ejemplos suponen una población de tamaño <span class="math inline">\(N=50\)</span> millones, con <span class="math inline">\(N_{II} = 12\)</span> millones de hogares, para el cual se desea obtener una muestra con una confianza del 90%. En cada escenario se supone que el país está dividido en <span class="math inline">\(N_{I} =30\)</span> mil UPM, conformadas por segmentos cartográficos (agregaciones de manzanas).</p>
+<p>Para simplificar los cálculos y mantener la atención del lector, las expresiones que se presentarán en este capítulo corresponden al número de individuos que deberían ser seleccionados a nivel nacional, o para un solo subgrupo de interés. Por lo tanto, estos cálculos deben ser hechos tantas veces como dominios de representatividad exista en la encuesta. Por ejemplo, si el interés está en hacer inferencia en dos estratos: el rural y el urbano, entonces se debe calcular estas expresiones dos veces, una para cada área. Al final, el tamaño de muestra nacional será la sumatoria de los tamaños de muestra en cada uno de los estratos del país.</p>
+<div id="tamaño-de-muestra-para-upm-hogares-y-personas" class="section level3" number="8.3.1">
+<h3><span class="header-section-number">8.3.1</span> Tamaño de muestra para UPM, hogares y personas</h3>
+<p>Cuando la unidad de observación sean las personas, sin importar que la variable de interés esté a nivel de hogar, será necesario siempre basar nuestros cálculos en el tamaño de muestra de las personas. Por ejemplo, para tener una inferencia apropiada al estimar el ingreso medio percápita, el porcentaje de personas pobres o el porcentaje de personas con una característica particular es necesario definir a la población objetivo como todas las personas que componen un hogar para posterioMERnte medir la variable de interés que será observada para todas ellas.</p>
+<p>Con estos elementos es posible realizar simulaciones de algunos escenarios de muestreo, que indiquen el tamaño de muestra necesario en cada una de las etapas de la selección de la muestra. Si fuese posible sistematizar los elementos más importantes a la hora de calcular el tamaño de muestra en una encuesta de hogares, sería necesario recurrir a los siguientes pasos de manera ordenada:</p>
+<ul>
+<li><p><strong>Definir la población de interés de manera explícita</strong>. En particular, es necesario aclarar si la unidad de análisis son las personas o los hogares. De esta forma, se debe fijar los valores para <span class="math inline">\(r\)</span> y <span class="math inline">\(b\)</span>. Si la unidad de análisis son todas las personas del hogar, entonces el porcentaje de personas con la característica de interés será <span class="math inline">\(r = 1\)</span>, de otra forma <span class="math inline">\(r&lt;1\)</span>. Por otro lado, el número promedio de personas por hogar <span class="math inline">\(b\)</span> dependerá del dominio de representatividad en el que se requiera el cálculo.</p></li>
+<li><p><strong>Definir el número promedio de hogares</strong>. El número promedio de hogares que se desea encuestar en cada una de las UPM está dado por <span class="math inline">\(\bar{n}_{II}\)</span>. Este proceso debería ser repetido de forma iterativa en los pasos subsiguientes para poder evaluar la calidad del diseño. De las varias opciones de <span class="math inline">\(\bar{n}_{II}\)</span> será necesario escoger solo una.</p></li>
+<li><p><strong>Calcular el número promedio de personas que serán encuestadas</strong>. Al igual que en el paso anterior es necesario probar varios escenarios que redundarán en la escogencia de un número óptimo de personas por UPM. Los valores de <span class="math inline">\(\bar{n}\)</span> dependen directamente del paso anterior al escoger <span class="math inline">\(\bar{n}_{II}\)</span>. Debido a que la selección de las personas está supeditada a la selección de los hogares, entonces <span class="math inline">\(\bar{n}\)</span> se puede descomponer manteniendo la relación con <span class="math inline">\(r\)</span> y <span class="math inline">\(b\)</span>, de la siguiente manera:</p></li>
+</ul>
+<p><span class="math display">\[
+\bar{n} = \bar{n}_{II} \times r \times b
+\]</span></p>
+<ul>
+<li><p><strong>Calcular el efecto de diseño</strong>. Es necesario definir (o calcular con encuestas o censos anteriores) la correlación intraclase de la variable de interés con el agrupamiento por UPM <span class="math inline">\(\rho_y\)</span>. Luego de esto, se debe calcular el efecto de diseño <span class="math inline">\(DEFF\)</span> como función de <span class="math inline">\(\rho_y\)</span> y de <span class="math inline">\(\bar{n}\)</span>; esto es <span class="math inline">\(DEFF \approx 1 + (\bar{n} - 1)\rho_y\)</span>. Nótese que esta cifra sólo se calcula sobre la población de interés.</p></li>
+<li><p><strong>Calcular el tamaño de muestra de personas</strong>. A partir de las expresiones de tamaño de muestra para diseños de muestreo complejos, calcular el tamaño de muestra necesario para lograr una precisión adecuada en la inferencia. En primer lugar, si lo que se quiere estimar es un promedio <span class="math inline">\(\bar{y}_U\)</span>, el tamaño de muestra necesario para alcanzar un margen de error relativo máximo de <span class="math inline">\(MER \times 100\%\)</span> es de</p></li>
+</ul>
+<p><span class="math display">\[
+n \geq \dfrac{S^2_{y_U}DEFF}{\dfrac{MER^2 \bar{y}_U^2}{z_{1 - \alpha/2}^2}+\dfrac{S^2_{y_U}DEFF}{N}}
+\]</span></p>
+<p>Por otro lado, si lo que se quiere estimar es una proporción <span class="math inline">\(P\)</span>, y se utiliza el margen de error, entonces la expresión apropiada para calcular el tamaño de muestra estará dada por</p>
+<p><span class="math display">\[
+n \geq \dfrac{P\ (1-P)\ DEFF}{\dfrac{MER^2P^2}{z_{1-\alpha/2}^2}+\dfrac{P\ (1-P) \ DEFF}{N}}
+\]</span></p>
+<ul>
+<li><strong>Calcular el tamaño de muestra de hogares</strong>. Es necesario calcular el número total de hogares que deben ser seleccionados para lograr entrevistar a todas las personas que serán observadas en el punto anterior. El número de hogares que deben ser seleccionados estará determinado por las cantidades <span class="math inline">\(n\)</span>, <span class="math inline">\(b\)</span> y <span class="math inline">\(r\)</span>, de la siguiente forma</li>
+</ul>
+<p><span class="math display">\[
+n_{II} = \dfrac{n}{r \times b}
+\]</span></p>
+<ul>
+<li><strong>Calcular el número de UPM</strong>. Los hogares y las personas se observan a partir de las UPM. En este paso final es necesario calcular el número de UPM que deben ser seleccionadas en el muestreo a partir de la relación</li>
+</ul>
+<p><span class="math display">\[
+n_{I} = \frac{n}{\bar{n}} 
+= \frac{n_{II}}{\bar{n}_{II}}
+\]</span></p>
+<div id="ejemplo-proporción-de-personas-pobres" class="section level4 unnumbered">
+<h4>Ejemplo: proporción de personas pobres</h4>
+<p>Suponga que el parámetro de interés es el porcentaje de personas pobres (cuyo ingreso está por debajo de un umbral preestablecido) y se quiere hacer inferencia con un margen de error relativo máximo del 5%. Por estudios anteriores en este país, se ha estimado que la proporción de personas pobres está alrededor de <span class="math inline">\(P = 4\)</span>%. Nótese que la población objetivo está conformada por todos los habitantes del hogar puesto que <span class="math inline">\(r = 100\)</span>%. En este país se ha estimado que el tamaño promedio del hogar es de alrededor de <span class="math inline">\(b = 3.5\)</span> personas. Por último, según levantamientos anteriores, la correlación intraclase de la característica de interés con las unidades primarias de muestreo es <span class="math inline">\(\rho_y = 0.034\)</span>.</p>
+<p>La siguiente tabla resume los resultados del ejercicio para <span class="math inline">\(\bar{n}_{II} =\)</span> 10 hogares por UPM, los cuales implican que por cada UPM se entrevistarían en promedio a <span class="math inline">\(\bar{n} = 10 * 1 * 3.5 = 35\)</span> personas. Con lo anterior se obtendría un efecto de diseño <span class="math inline">\(DEFF =\)</span> 2.2, para un total de personas en la muestra de <span class="math inline">\(n = 55936\)</span> que serán observados a partir de la selección de <span class="math inline">\(n_{II} = 55936/(1 * 3.5) = 15982\)</span> hogares en <span class="math inline">\(n_{I} = 55936 / 35 = 1598\)</span> UPM.</p>
+<table>
+<colgroup>
+<col width="19%" />
+<col width="22%" />
+<col width="10%" />
+<col width="15%" />
+<col width="15%" />
+<col width="15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Hogares promedio por UPM <span class="math inline">\((\bar{n}_{II})\)</span></th>
+<th align="center">Personas promedio por UPM <span class="math inline">\((\bar n)\)</span></th>
+<th align="center">DEFF</th>
+<th align="center">Muestra de UPM <span class="math inline">\((n_I)\)</span></th>
+<th align="center">Muestra de hogares <span class="math inline">\((n_{II})\)</span></th>
+<th align="center">Muestra de personas <span class="math inline">\((n)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">10</td>
+<td align="center">35</td>
+<td align="center">2.2</td>
+<td align="center">1598</td>
+<td align="center">15982</td>
+<td align="center">55936</td>
+</tr>
+</tbody>
+</table>
+<p>Por supuesto que es posible plantear otros escenarios a medida que se evalúe el efecto que conlleva el cambio del número de hogares que se seleccionan en cada UPM. Por ejemplo, el investigador podría proponer que se seleccionarán en promedio 5 hogares por UPM, lo cual cambiaría el número de UPM que serían seleccionadas en la muestra de la primera etapa, así como también el número total de personas que serían seleccionadas en todo el operativo. Debido a que el efecto de diseño es una función del número de hogares promedio a seleccionar en las UPM, esta cifra también variará. A continuación se muestran algunos resultados que permiten establecer estos escenarios cuando se varía el tamaño de muestra promedio de hogares por UPM. La escogencia del escenario ideal se debe dar en términos de la conveniencia logística y presupuestal en el estudio. Siguiendo las recomendaciones internacionales, se desestimarían los escenarios con efectos de diseño mayores a 3.</p>
+<table>
+<colgroup>
+<col width="19%" />
+<col width="22%" />
+<col width="10%" />
+<col width="15%" />
+<col width="15%" />
+<col width="15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Hogares promedio por UPM <span class="math inline">\((\bar{n}_{II})\)</span></th>
+<th align="center">Personas promedio por UPM <span class="math inline">\((\bar n)\)</span></th>
+<th align="center">DEFF</th>
+<th align="center">Muestra de UPM <span class="math inline">\((n_I)\)</span></th>
+<th align="center">Muestra de hogares <span class="math inline">\((n_{II})\)</span></th>
+<th align="center">Muestra de personas <span class="math inline">\((n)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">18</td>
+<td align="center">1.6</td>
+<td align="center">2315</td>
+<td align="center">11575</td>
+<td align="center">40512</td>
+</tr>
+<tr class="even">
+<td align="center">10</td>
+<td align="center">35</td>
+<td align="center">2.2</td>
+<td align="center">1598</td>
+<td align="center">15982</td>
+<td align="center">55936</td>
+</tr>
+<tr class="odd">
+<td align="center">15</td>
+<td align="center">52</td>
+<td align="center">2.8</td>
+<td align="center">1359</td>
+<td align="center">20386</td>
+<td align="center">71351</td>
+</tr>
+<tr class="even">
+<td align="center">20</td>
+<td align="center">70</td>
+<td align="center">3.4</td>
+<td align="center">1239</td>
+<td align="center">24787</td>
+<td align="center">86756</td>
+</tr>
+<tr class="odd">
+<td align="center">25</td>
+<td align="center">88</td>
+<td align="center">3.9</td>
+<td align="center">1167</td>
+<td align="center">29186</td>
+<td align="center">102152</td>
+</tr>
+<tr class="even">
+<td align="center">30</td>
+<td align="center">105</td>
+<td align="center">4.5</td>
+<td align="center">1119</td>
+<td align="center">33582</td>
+<td align="center">117538</td>
+</tr>
+<tr class="odd">
+<td align="center">35</td>
+<td align="center">122</td>
+<td align="center">5.1</td>
+<td align="center">1085</td>
+<td align="center">37976</td>
+<td align="center">132915</td>
+</tr>
+<tr class="even">
+<td align="center">40</td>
+<td align="center">140</td>
+<td align="center">5.7</td>
+<td align="center">1059</td>
+<td align="center">42366</td>
+<td align="center">148282</td>
+</tr>
+<tr class="odd">
+<td align="center">45</td>
+<td align="center">158</td>
+<td align="center">6.3</td>
+<td align="center">1039</td>
+<td align="center">46754</td>
+<td align="center">163640</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="ejemplo-ingreso-promedio-por-persona" class="section level4 unnumbered">
+<h4>Ejemplo: ingreso promedio por persona</h4>
+<p>Suponga que se desea estimar el ingreso promedio por hogar con un margen de error relativo máximo del 2%. La variable de interés (ingreso) es continua y se estima que la media oscila alrededor de <span class="math inline">\(\bar{y}_U=1180\)</span> dólares con una varianza de <span class="math inline">\(S^2_{y_U}=1845.94^2\)</span>. En este caso, la población objetivo son todos los habitantes del hogar, por lo cual <span class="math inline">\(r = 100\%\)</span>. La composición del hogar se calcula en <span class="math inline">\(b = 3.79\)</span> personas por hogar. Por último, según levantamientos anteriores, la correlación intraclase de la característica de interés es <span class="math inline">\(\rho_y = 0.035\)</span>. Nótese que la correlación intraclase cambia con respecto a la característica que se desee medir.</p>
+<p>La siguiente tabla muestra los resultados del ejercicio al seleccionar <span class="math inline">\(\bar{n}_{II} =\)</span> 15 hogares por UPM, que a su vez implica que por cada UPM se encontrarían en promedio <span class="math inline">\(\bar{n}= 15 * 1 * 3.79 \cong 57\)</span> personas por UPM. Con lo anterior se obtendría un efecto de diseño <span class="math inline">\(DEFF =\)</span> 3, para un total de personas en la muestra de <span class="math inline">\(n = 48861\)</span> que serán observados a partir de la selección de <span class="math inline">\(n_{II} = 48861 / (1 * 3.79) = 12892\)</span> hogares en <span class="math inline">\(n_{I} =\)</span> 859 UPM.</p>
+<table>
+<colgroup>
+<col width="19%" />
+<col width="22%" />
+<col width="10%" />
+<col width="15%" />
+<col width="15%" />
+<col width="15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Hogares promedio por UPM <span class="math inline">\((\bar{n}_{II})\)</span></th>
+<th align="center">Personas promedio por UPM <span class="math inline">\((\bar n)\)</span></th>
+<th align="center">DEFF</th>
+<th align="center">Muestra de UPM <span class="math inline">\((n_I)\)</span></th>
+<th align="center">Muestra de hogares <span class="math inline">\((n_{II})\)</span></th>
+<th align="center">Muestra de personas <span class="math inline">\((n)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">15</td>
+<td align="center">57</td>
+<td align="center">3</td>
+<td align="center">859</td>
+<td align="center">12892</td>
+<td align="center">48861</td>
+</tr>
+</tbody>
+</table>
+<p>A continuación se muestran algunos resultados que permiten establecer otros escenarios de muestreo cuando se varía el tamaño de muestra promedio de hogares por UPM. Recuérdese que cualquiera de estos escenarios es válido, desde el punto de vista de la eficiencia estadística, aunque no todos serán válidos si se tienen en cuenta otros aspectos como los logísticos o presupuestales. Por ejemplo, si se escogiera el penúltimo escenario, entonces para 50 hogares por UPM, se debería encuestar en promedio a 190 personas, lo cual reduciría el número de UPM a 662, pero aumentaría el tamaño de muestra general a 33098 personas, lo cual involucraría mayores costos de contratación de encuestadores, supervisores y seguramente un operativo de campo de más días de duración. Siguiendo las recomendaciones internacionales, se desestimarían los escenarios con efectos de diseño mayores a 3.</p>
+<table>
+<colgroup>
+<col width="19%" />
+<col width="22%" />
+<col width="10%" />
+<col width="15%" />
+<col width="15%" />
+<col width="15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Hogares promedio por UPM <span class="math inline">\((\bar{n}_{II})\)</span></th>
+<th align="center">Personas promedio por UPM <span class="math inline">\((\bar n)\)</span></th>
+<th align="center">DEFF</th>
+<th align="center">Muestra de UPM <span class="math inline">\((n_I)\)</span></th>
+<th align="center">Muestra de hogares <span class="math inline">\((n_{II})\)</span></th>
+<th align="center">Muestra de personas <span class="math inline">\((n)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">19</td>
+<td align="center">1.6</td>
+<td align="center">1422</td>
+<td align="center">7108</td>
+<td align="center">26938</td>
+</tr>
+<tr class="even">
+<td align="center">10</td>
+<td align="center">38</td>
+<td align="center">2.3</td>
+<td align="center">1000</td>
+<td align="center">10001</td>
+<td align="center">37902</td>
+</tr>
+<tr class="odd">
+<td align="center">15</td>
+<td align="center">57</td>
+<td align="center">3.0</td>
+<td align="center">859</td>
+<td align="center">12892</td>
+<td align="center">48861</td>
+</tr>
+<tr class="even">
+<td align="center">20</td>
+<td align="center">76</td>
+<td align="center">3.6</td>
+<td align="center">789</td>
+<td align="center">15783</td>
+<td align="center">59816</td>
+</tr>
+<tr class="odd">
+<td align="center">25</td>
+<td align="center">95</td>
+<td align="center">4.3</td>
+<td align="center">747</td>
+<td align="center">18672</td>
+<td align="center">70766</td>
+</tr>
+<tr class="even">
+<td align="center">30</td>
+<td align="center">114</td>
+<td align="center">4.9</td>
+<td align="center">719</td>
+<td align="center">21560</td>
+<td align="center">81711</td>
+</tr>
+<tr class="odd">
+<td align="center">50</td>
+<td align="center">190</td>
+<td align="center">7.6</td>
+<td align="center">662</td>
+<td align="center">33098</td>
+<td align="center">125443</td>
+</tr>
+<tr class="even">
+<td align="center">100</td>
+<td align="center">379</td>
+<td align="center">14.2</td>
+<td align="center">619</td>
+<td align="center">61857</td>
+<td align="center">234439</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="ejemplo-tasa-de-desocupación-en-adultos-mayores" class="section level4 unnumbered">
+<h4>Ejemplo: tasa de desocupación en adultos mayores</h4>
+<p>Suponga que la incidencia de la desocupación está alrededor de <span class="math inline">\(P = 5.5\)</span>% en la población objetivo, que son las personas económicamente activas (PEA) mayores de 60 años; en este país, se ha estimado que en promedio hay <span class="math inline">\(r = 4.6\)</span>% de adultos mayores por hogar que pertenecen a la PEA, cuyo tamaño promedio es de alrededor de <span class="math inline">\(b = 5\)</span> personas. Además, se quiere hacer inferencia con un margen de error relativo máximo del 15%. Por último, según levantamientos anteriores, la correlación intraclase de la característica de interés es <span class="math inline">\(\rho_y = 0.7\)</span>.</p>
+<p>La siguiente tabla muestra los resultados del ejercicio, que implica que seleccionar <span class="math inline">\(\bar{n}_{II} =\)</span> 20 hogares por UPM implicaría un promedio de <span class="math inline">\(\bar{n} = 20 * 0.046 * 5 = 4.6\)</span> adultos mayores en la PEA (personas de interés) por UPM. Con lo anterior se obtendría un efecto de diseño <span class="math inline">\(DEFF =\)</span> 3.5, para un total de <span class="math inline">\(n = 7272\)</span> adultos mayores en la PEA que serán observados en la muestra a partir de la selección de <span class="math inline">\(n_{II} = 7272 / (0.046 * 5) \cong 31617\)</span> hogares en <span class="math inline">\(n_{I} = 7272 / 4.6 \cong 1581\)</span> UPM.</p>
+<table>
+<colgroup>
+<col width="19%" />
+<col width="22%" />
+<col width="10%" />
+<col width="15%" />
+<col width="15%" />
+<col width="15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Hogares promedio por UPM <span class="math inline">\((\bar{n}_{II})\)</span></th>
+<th align="center">Personas promedio por UPM <span class="math inline">\((\bar n)\)</span></th>
+<th align="center">DEFF</th>
+<th align="center">Muestra de UPM <span class="math inline">\((n_I)\)</span></th>
+<th align="center">Muestra de hogares <span class="math inline">\((n_{II})\)</span></th>
+<th align="center">Muestra de personas <span class="math inline">\((n)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">20</td>
+<td align="center">4.6</td>
+<td align="center">3.5</td>
+<td align="center">1581</td>
+<td align="center">31617</td>
+<td align="center">7272</td>
+</tr>
+</tbody>
+</table>
+<p>En este caso la muestra en los 31617 hogares induce un operativo muy grande que implicaría la observación de <span class="math inline">\(31617 * 5 = 158085\)</span> personas en los hogares, de las cuales <span class="math inline">\(n = 7272\)</span> serían los casos de interés. Como se ha visto en los anteriores ejemplos, es posible plantear otros escenarios a medida que se evalúe el efecto que conlleva el cambio del número de hogares que se seleccionan en cada UPM. A continuación se muestran algunos resultados que permite establecer estos escenarios cuando se varía el tamaño de muestra promedio de hogares por UPM. Siguiendo las recomendaciones internacionales, se desestimarían los escenarios con efectos de diseño mayores a 3.</p>
+<table>
+<colgroup>
+<col width="19%" />
+<col width="22%" />
+<col width="10%" />
+<col width="15%" />
+<col width="15%" />
+<col width="15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Hogares promedio por UPM <span class="math inline">\((\bar{n}_{II})\)</span></th>
+<th align="center">Personas promedio por UPM <span class="math inline">\((\bar n)\)</span></th>
+<th align="center">DEFF</th>
+<th align="center">Muestra de UPM <span class="math inline">\((n_I)\)</span></th>
+<th align="center">Muestra de hogares <span class="math inline">\((n_{II})\)</span></th>
+<th align="center">Muestra de personas <span class="math inline">\((n)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">1.1</td>
+<td align="center">1.1</td>
+<td align="center">1985</td>
+<td align="center">9926</td>
+<td align="center">2283</td>
+</tr>
+<tr class="even">
+<td align="center">10</td>
+<td align="center">2.3</td>
+<td align="center">1.9</td>
+<td align="center">1716</td>
+<td align="center">17157</td>
+<td align="center">3946</td>
+</tr>
+<tr class="odd">
+<td align="center">15</td>
+<td align="center">3.5</td>
+<td align="center">2.7</td>
+<td align="center">1626</td>
+<td align="center">24387</td>
+<td align="center">5609</td>
+</tr>
+<tr class="even">
+<td align="center">20</td>
+<td align="center">4.6</td>
+<td align="center">3.5</td>
+<td align="center">1581</td>
+<td align="center">31617</td>
+<td align="center">7272</td>
+</tr>
+<tr class="odd">
+<td align="center">25</td>
+<td align="center">5.8</td>
+<td align="center">4.3</td>
+<td align="center">1554</td>
+<td align="center">38848</td>
+<td align="center">8935</td>
+</tr>
+<tr class="even">
+<td align="center">30</td>
+<td align="center">6.9</td>
+<td align="center">5.1</td>
+<td align="center">1536</td>
+<td align="center">46074</td>
+<td align="center">10597</td>
+</tr>
+<tr class="odd">
+<td align="center">50</td>
+<td align="center">11.5</td>
+<td align="center">8.3</td>
+<td align="center">1500</td>
+<td align="center">74983</td>
+<td align="center">17246</td>
+</tr>
+<tr class="even">
+<td align="center">100</td>
+<td align="center">23.0</td>
+<td align="center">16.4</td>
+<td align="center">1472</td>
+<td align="center">147222</td>
+<td align="center">33861</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="tamaño-de-muestra-para-upm-y-hogares" class="section level3" number="8.3.2">
+<h3><span class="header-section-number">8.3.2</span> Tamaño de muestra para UPM y hogares</h3>
+<p>En algunas ocasiones la variable de interés y la unidad de observación están a nivel de hogar. Por ejemplo, cuando todas las variables de interés se miden a nivel de la vivienda o del hogar. En este caso es posible modificar el algoritmo de la sección anterior para seleccionar únicamente a las viviendas u hogares en la muestra, sin necesidad de realizar un submuestreo de personas. En este caso algunas cantidades desaparecen porque no son objeto de la población de hogares, como lo son <span class="math inline">\(r\)</span> y <span class="math inline">\(b\)</span>; algunas otras expresiones deben ser redefinidas al contexto de los hogares, como por ejemplo, el coeficiente de correlación intraclase <span class="math inline">\(\rho_y\)</span>, el efecto de diseño y todas las expresiones de tamaños de muestra. En todo caso, la adaptación del algoritmo se describe a continuación.</p>
+<ul>
+<li><p><strong>Definir el número promedio de hogares</strong>. El número promedio de hogares que se desea encuestar en cada una de las UPM está dado por <span class="math inline">\(\bar{n}_{II}\)</span>. Esta cifra sigue siendo el insumo más importante del algoritmo y se propone crear escenarios de muestreo a partir de su modificación y evaluación del tamaño de muestra final.</p></li>
+<li><p><strong>Calcular el efecto de diseño</strong>. Es necesario definir (o calcular con encuestas o censos anteriores) la correlación intraclase <span class="math inline">\(\rho_y\)</span> de la variable de interés <em>a nivel del hogar</em> con el agrupamiento por UPM definido por la división cartográfica del último censo. De igual forma, el efecto de diseño <span class="math inline">\(DEFF \approx 1 + (\bar{n}_{II} - 1)\rho_y\)</span> sigue siendo función del tamaño de muestra promedio de hogares por UPM <span class="math inline">\((\bar{n}_{II})\)</span>.</p></li>
+<li><p><strong>Tamaño de muestra de hogares</strong>. Partiendo de las expresiones de tamaño de muestra generales para muestreos complejos y teniendo en cuenta que la población de interés son los hogares y que la variable de interés está a nivel de hogar, entonces el tamaño de muestra necesario para alcanzar un margen de error relativo máximo de <span class="math inline">\(MER\)</span> % es de</p></li>
+</ul>
+<p><span class="math display">\[
+n_{II} \geq \dfrac{S^2_{y}DEFF}{\dfrac{MER^2 \bar{y}^2}{z_{1-\alpha/2}^2}+\dfrac{S^2_{y_U}DEFF}{N_{II}}}
+\]</span></p>
+<p>La expresión apropiada para calcular el tamaño de muestra para una proporción estará dada por
+<span class="math display">\[
+n_{II} \geq \dfrac{P\ (1-P)\ DEFF}{\dfrac{MER^2P^2}{z_{1-\alpha/2}^2}+\dfrac{P\ (1-P) \ DEFF}{N_{II}}}
+\]</span></p>
+<ul>
+<li><strong>Cálculo del número de UPM</strong>. Los hogares se observan a partir de las UPM. En este paso final es necesario calcular el número de UPM que deben ser seleccionadas en el muestreo a partir de la relación
+<span class="math display">\[
+n_{I} = \frac{n_{II}}{\bar{n}_{II}}
+\]</span></li>
+</ul>
+<div id="ejemplo-gasto-promedio-del-hogar" class="section level4 unnumbered">
+<h4>Ejemplo: gasto promedio del hogar</h4>
+<p>Suponga que se desea estimar el promedio de gasto anual en dólares en los hogares del país con un margen de error relativo máximo admisible del 3.5%. La variable de interés (gasto) es continua y se estima que la media oscila alrededor de <span class="math inline">\(\bar{y}_U=1407\)</span> dólares con una varianza de <span class="math inline">\(S^2_{y_U}=2228^2\)</span>. En este ejemplo se supone que el país está dividido en <span class="math inline">\(N_I = 10\)</span> mil UPM y la correlación intraclase de la característica de interés, medida a nivel del hogar, con las UPM es de <span class="math inline">\(\rho_y = 0.173\)</span>.</p>
+<p>La siguiente tabla muestra los resultados del ejercicio para <span class="math inline">\(\bar{n}_{II} = 12\)</span> hogares promedio por UPM, que serán observados a partir de la selección de <span class="math inline">\(n_{II} = 16056\)</span> hogares y <span class="math inline">\(n_{I} = 16056 / 12 = 1338\)</span> UPM, los cuales inducen un efecto de diseño <span class="math inline">\(DEFF =\)</span> 2.9.</p>
+<table>
+<colgroup>
+<col width="38%" />
+<col width="17%" />
+<col width="17%" />
+<col width="26%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Hogares promedio por UPM <span class="math inline">\((\bar{n}_{II})\)</span></th>
+<th align="center">DEFF</th>
+<th align="center">Muestra de UPM <span class="math inline">\((n_I)\)</span></th>
+<th align="center">Muestra de hogares <span class="math inline">\((n_{II})\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">12</td>
+<td align="center">2.9</td>
+<td align="center">1338</td>
+<td align="center">16056</td>
+</tr>
+</tbody>
+</table>
+<p>A continuación se muestran algunos resultados que permiten establecer otros escenarios de muestreo al variar el tamaño de muestra promedio de hogares por UPM. Nótese que, por ejemplo, en el caso de seleccionar 20 hogares por UPM, se debería seleccionar una muestra de 23695 hogares en tan solo 1185 UPM. Por otro lado, si sólo se seleccionaran 2 hogares por UPM, se tendrían que visitar 3246 UPM en todo el país, aunque el número de encuestas totales descendería a 6493.</p>
+<p>Para este tipo de operativos, en donde los cuestionarios de gasto de los hogares están acompañados de un operativo exhaustivo que le permite al investigador conocer los hábitos de consumo del hogar de forma desagregada, y en donde se visita el hogar durante un periodo de tiempo determinado, tal vez sea más conveniente estudiar la viabilidad de seleccionar más hogares por UPM y menos UPM para que el operativo de campo no exija la contratación de demasiado personal en campo. Al estar agrupados en menos UPM, se podría definir un mejor levantamiento de la información con un equipo mediano de personas; de lo contrario, se debería contratar bastante más personal que cubra las UPM dispersas a lo largo del país. Siguiendo las recomendaciones internacionales, se desestimarían los escenarios con efectos de diseño mayores a 3.</p>
+<table>
+<colgroup>
+<col width="38%" />
+<col width="17%" />
+<col width="17%" />
+<col width="26%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Hogares promedio por UPM <span class="math inline">\((\bar{n}_{II})\)</span></th>
+<th align="center">DEFF</th>
+<th align="center">Muestra de UPM <span class="math inline">\((n_I)\)</span></th>
+<th align="center">Muestra de hogares <span class="math inline">\((n_{II})\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">2</td>
+<td align="center">1.2</td>
+<td align="center">3246</td>
+<td align="center">6493</td>
+</tr>
+<tr class="even">
+<td align="center">4</td>
+<td align="center">1.5</td>
+<td align="center">2102</td>
+<td align="center">8407</td>
+</tr>
+<tr class="odd">
+<td align="center">6</td>
+<td align="center">1.9</td>
+<td align="center">1720</td>
+<td align="center">10320</td>
+</tr>
+<tr class="even">
+<td align="center">8</td>
+<td align="center">2.2</td>
+<td align="center">1529</td>
+<td align="center">12233</td>
+</tr>
+<tr class="odd">
+<td align="center">10</td>
+<td align="center">2.6</td>
+<td align="center">1414</td>
+<td align="center">14145</td>
+</tr>
+<tr class="even">
+<td align="center">12</td>
+<td align="center">2.9</td>
+<td align="center">1338</td>
+<td align="center">16056</td>
+</tr>
+<tr class="odd">
+<td align="center">14</td>
+<td align="center">3.2</td>
+<td align="center">1283</td>
+<td align="center">17967</td>
+</tr>
+<tr class="even">
+<td align="center">16</td>
+<td align="center">3.6</td>
+<td align="center">1242</td>
+<td align="center">19877</td>
+</tr>
+<tr class="odd">
+<td align="center">18</td>
+<td align="center">3.9</td>
+<td align="center">1210</td>
+<td align="center">21787</td>
+</tr>
+<tr class="even">
+<td align="center">20</td>
+<td align="center">4.3</td>
+<td align="center">1185</td>
+<td align="center">23695</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="ejemplo-proporción-de-hogares-sin-agua-potable" class="section level4 unnumbered">
+<h4>Ejemplo: proporción de hogares sin agua potable</h4>
+<p>Suponga que se desea obtener una muestra con un margen de error relativo máximo admisible del 10% sobre la variable de interés (necesidades básicas insatisfechas en agua) y el parámetro de interés es el porcentaje de hogares con esta carencia. En este país, se estima que la proporción de hogares con esta condición asciende a <span class="math inline">\(P = 7.5\)</span>%. En este ejemplo se supone que la correlación intraclase de la característica de interés con las UPM es de <span class="math inline">\(\rho_y = 0.045\)</span>.</p>
+<p>La siguiente tabla muestra los resultados del ejercicio para <span class="math inline">\(\bar{n}_{II} =\)</span> 10 hogares por UPM, que serán observados a partir de la selección de <span class="math inline">\(n_{II} = 4360\)</span> hogares en <span class="math inline">\(n_{I} = 4360/10 = 436\)</span> UPM, que inducen un efecto de diseño <span class="math inline">\(DEFF =\)</span> 1.3.</p>
+<table>
+<colgroup>
+<col width="38%" />
+<col width="17%" />
+<col width="17%" />
+<col width="26%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Hogares promedio por UPM <span class="math inline">\((\bar{n}_{II})\)</span></th>
+<th align="center">DEFF</th>
+<th align="center">Muestra de UPM <span class="math inline">\((n_I)\)</span></th>
+<th align="center">Muestra de hogares <span class="math inline">\((n_{II})\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">10</td>
+<td align="center">1.3</td>
+<td align="center">436</td>
+<td align="center">4360</td>
+</tr>
+</tbody>
+</table>
+<p>A continuación se muestran algunos resultados que permiten establecer otros escenarios de muestreo al variar el tamaño de muestra promedio de hogares por UPM. Observe que el efecto de diseño DEFF es directamente proporcional al número de hogares entrevistados por UPM y al tamaño de muestra de hogares final; de la misma manera, es inversamente proporcional al número de UPM.</p>
+<table>
+<colgroup>
+<col width="38%" />
+<col width="17%" />
+<col width="17%" />
+<col width="26%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Hogares promedio por UPM <span class="math inline">\((\bar{n}_{II})\)</span></th>
+<th align="center">DEFF</th>
+<th align="center">Muestra de UPM <span class="math inline">\((n_I)\)</span></th>
+<th align="center">Muestra de hogares <span class="math inline">\((n_{II})\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">1.1</td>
+<td align="center">758</td>
+<td align="center">3790</td>
+</tr>
+<tr class="even">
+<td align="center">10</td>
+<td align="center">1.3</td>
+<td align="center">436</td>
+<td align="center">4360</td>
+</tr>
+<tr class="odd">
+<td align="center">15</td>
+<td align="center">1.5</td>
+<td align="center">328</td>
+<td align="center">4924</td>
+</tr>
+<tr class="even">
+<td align="center">20</td>
+<td align="center">1.6</td>
+<td align="center">274</td>
+<td align="center">5490</td>
+</tr>
+<tr class="odd">
+<td align="center">25</td>
+<td align="center">1.8</td>
+<td align="center">242</td>
+<td align="center">6057</td>
+</tr>
+<tr class="even">
+<td align="center">30</td>
+<td align="center">2.0</td>
+<td align="center">221</td>
+<td align="center">6624</td>
+</tr>
+<tr class="odd">
+<td align="center">35</td>
+<td align="center">2.2</td>
+<td align="center">205</td>
+<td align="center">7190</td>
+</tr>
+<tr class="even">
+<td align="center">40</td>
+<td align="center">2.3</td>
+<td align="center">194</td>
+<td align="center">7757</td>
+</tr>
+<tr class="odd">
+<td align="center">45</td>
+<td align="center">2.5</td>
+<td align="center">185</td>
+<td align="center">8323</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="tamaño-de-muestra-para-upm-y-personas" class="section level3" number="8.3.3">
+<h3><span class="header-section-number">8.3.3</span> Tamaño de muestra para UPM y personas</h3>
+<p>En algunos casos en donde la variable de interés esté a nivel de persona y el cuestionario de la encuesta no induzca preguntas acerca del hogar, y además exista un inventario detallado de las personas que residen en cada UPM, es posible evadir la selección de los hogares e ir directamente a la selección de personas. En este caso, la lógica del cálculo del tamaño de muestra se mantiene modificando en cierta manera el algoritmo de las secciones anteriores, tal como se ilustra a continuación.</p>
+<ul>
+<li><p><strong>Definir la población de interés de manera explícita</strong>. En este caso solo se mantiene la expresión correspondiente a <span class="math inline">\(r\)</span> que denota el porcentaje de personas con la característica de interés en la población.</p></li>
+<li><p><strong>Definir el número promedio de personas</strong>. El número promedio de personas (casos de la población objetivo) que se desean encuestar por cada UPM está dado por <span class="math inline">\(\bar{n}\)</span>. Al igual que en las secciones anteriores, se recomienda hacer una evaluación sobre esta cantidad para determinar posibles escenarios de muestreo.</p></li>
+<li><p><strong>Calcular el efecto de diseño</strong>. Es necesario definir el efecto de diseño <span class="math inline">\(DEFF\)</span> como una función de la correlación existente entre la variable de interés y la conformación de las UPM. De esta forma, <span class="math inline">\(DEFF \approx 1 + (\bar{n} - 1)\rho_y\)</span>. Nótese que esta cifra solo podrá ser calculada sobre la población de interés.</p></li>
+<li><p><strong>Tamaño de muestra de personas</strong>. A partir de las expresiones de tamaño de muestra para muestreos complejos, calcular el tamaño de muestra necesario para lograr una precisión adecuada en la inferencia. En este caso, las expresiones de tamaño de muestra coinciden con las del primer escenario.</p></li>
+<li><p><strong>Tamaño de muestra final</strong>. Es necesario calcular el número total de personas que deben ser seleccionados para lograr observar a quienes hacen parte de la población objetivo. Esta cantidad está dada por <span class="math inline">\(n / r\)</span>.</p></li>
+<li><p><strong>Cálculo del número de UPM</strong>. Finalmente, las personas se observan a partir de las UPM. En este paso final es necesario calcular el número de UPM que deben ser seleccionadas en el muestreo a partir de la relación.
+<span class="math display">\[
+n_{I} = \frac{n}{\bar{n}} 
+\]</span></p></li>
+</ul>
+<div id="ejemplo-ingreso-promedio-en-personas-empleadas" class="section level4 unnumbered">
+<h4>Ejemplo: ingreso promedio en personas empleadas</h4>
+<p>Suponga que se desea estimar el ingreso promedio en las personas empleadas con un margen de error relativo máximo admisible del 2%. La variable de interés (ingreso) es continua y se estima que la media oscila alrededor de <span class="math inline">\(\bar{y}_U=1458\)</span> dólares con una varianza de <span class="math inline">\(S^2_{y_U}=2191^2\)</span>. Nótese que la población objetivo son todas las personas empleadas, cuya proporción se estima en <span class="math inline">\(r = 46\)</span>%. La correlación intraclase de la característica de interés es <span class="math inline">\(\rho_y = 0.038\)</span>.</p>
+<p>La siguiente tabla muestra los resultados del ejercicio al seleccionar <span class="math inline">\(\bar{n} = 23\)</span> personas de la población de interés por UPM, que a su vez implica que por cada UPM se deberían seleccionar y enlistar en promedio <span class="math inline">\(23/0.46 = 50\)</span> personas por UPM. Con lo anterior se esperarían <span class="math inline">\(n = 28029\)</span> personas empleadas en la muestra repartidas en <span class="math inline">\(n_{I} = 28029 / 23 \cong 1219\)</span> UPM; en este caso se obtendría un efecto de diseño <span class="math inline">\(DEFF = 1.8\)</span>. Nótese que en este escenario, el operativo de campo abarcaría la selección y enlistamiento de <span class="math inline">\(28029/0.46 \cong 60933\)</span> personas, de las cuales se esperaría que 28029 fueran de la población de interés (personas empleadas).</p>
+<table>
+<colgroup>
+<col width="20%" />
+<col width="23%" />
+<col width="9%" />
+<col width="14%" />
+<col width="14%" />
+<col width="17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Personas seleccionadas por UPM <span class="math inline">\((\bar{n} / r )\)</span></th>
+<th align="center">Personas empleadas por UPM <span class="math inline">\(\bar{n}\)</span></th>
+<th align="center">DEFF</th>
+<th align="center">Muestra de UPM <span class="math inline">\((n_I)\)</span></th>
+<th align="center">Muestra de personas empleadas <span class="math inline">\((n)\)</span></th>
+<th align="center">Muestra de personas <span class="math inline">\((n/r)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">50</td>
+<td align="center">23</td>
+<td align="center">1.8</td>
+<td align="center">1219</td>
+<td align="center">28029</td>
+<td align="center">60933</td>
+</tr>
+</tbody>
+</table>
+<p>A continuación se muestran algunos resultados que permiten establecer otros escenarios de muestreo cuando se varía el tamaño de muestra promedio de hogares por UPM. Siguiendo las recomendaciones internacionales, se desestimarían los escenarios con efectos de diseño mayores a 3.</p>
+<table>
+<colgroup>
+<col width="20%" />
+<col width="23%" />
+<col width="9%" />
+<col width="14%" />
+<col width="14%" />
+<col width="17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Personas seleccionadas por UPM <span class="math inline">\((\bar{n} / r )\)</span></th>
+<th align="center">Personas empleadas por UPM <span class="math inline">\(\bar{n}\)</span></th>
+<th align="center">DEFF</th>
+<th align="center">Muestra de UPM <span class="math inline">\((n_I)\)</span></th>
+<th align="center">Muestra de personas empleadas <span class="math inline">\((n)\)</span></th>
+<th align="center">Muestra de personas <span class="math inline">\((n/r)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">25</td>
+<td align="center">12</td>
+<td align="center">1.4</td>
+<td align="center">1857</td>
+<td align="center">21360</td>
+<td align="center">46435</td>
+</tr>
+<tr class="even">
+<td align="center">50</td>
+<td align="center">23</td>
+<td align="center">1.8</td>
+<td align="center">1219</td>
+<td align="center">28029</td>
+<td align="center">60933</td>
+</tr>
+<tr class="odd">
+<td align="center">75</td>
+<td align="center">34</td>
+<td align="center">2.3</td>
+<td align="center">1006</td>
+<td align="center">34695</td>
+<td align="center">75424</td>
+</tr>
+<tr class="even">
+<td align="center">100</td>
+<td align="center">46</td>
+<td align="center">2.7</td>
+<td align="center">899</td>
+<td align="center">41360</td>
+<td align="center">89913</td>
+</tr>
+<tr class="odd">
+<td align="center">125</td>
+<td align="center">58</td>
+<td align="center">3.1</td>
+<td align="center">835</td>
+<td align="center">48023</td>
+<td align="center">104398</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="ejemplo-proporción-de-analfabetas-pobres" class="section level4 unnumbered">
+<h4>Ejemplo: proporción de analfabetas pobres</h4>
+<p>Suponga que se quiere estimar la proporción de incidencia de la pobreza sobre la población analfabeta con un margen de error relativo máximo admisible del 15%. Se ha estimado que alrededor del <span class="math inline">\(r = 14\)</span>% de las personas del país no saben leer ni escribir. Por otro lado, tal como se vio en un ejemplo anterior, el fenómeno de la pobreza está estimado en <span class="math inline">\(P = 4\)</span>%. y la correlación intraclase de la característica de interés es <span class="math inline">\(\rho_y = 0.0454\)</span>.</p>
+<p>La siguiente tabla muestra los resultados del ejercicio al seleccionar un promedio de <span class="math inline">\(\bar{n} = 14\)</span> personas por UPM que no saben leer ni escribir; esto implica la selección y enlistamiento de <span class="math inline">\(14 / 0.14 = 100\)</span> personas por UPM. Con lo anterior se obtendría un efecto de diseño <span class="math inline">\(DEFF =\)</span> 1.6, para un total de personas en la muestra de <span class="math inline">\(n = 4574\)</span> personas analfabetas, de una muestra 32671 personas enlistadas y repartidas en <span class="math inline">\(n_{I} = 4574/14 \cong 327\)</span> UPM.</p>
+<table>
+<colgroup>
+<col width="20%" />
+<col width="23%" />
+<col width="9%" />
+<col width="14%" />
+<col width="14%" />
+<col width="17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Personas seleccionadas por UPM <span class="math inline">\((\bar{n} / r)\)</span></th>
+<th align="center">Personas analfabetas por UPM <span class="math inline">\((\bar{n})\)</span></th>
+<th align="center">DEFF</th>
+<th align="center">Muestra de UPM <span class="math inline">\((n_I)\)</span></th>
+<th align="center">Muestra de personas analfabetas <span class="math inline">\((n)\)</span></th>
+<th align="center">Muestra de personas <span class="math inline">\((n/r)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">100</td>
+<td align="center">14</td>
+<td align="center">1.6</td>
+<td align="center">327</td>
+<td align="center">4574</td>
+<td align="center">32671</td>
+</tr>
+</tbody>
+</table>
+<p>Es posible plantear otros escenarios a medida que se evalúe el efecto que conlleva el cambio del número de hogares que se seleccionan en cada UPM. A continuación se muestran algunos resultados que permite establecer estos escenarios cuando se varía el tamaño de muestra promedio de hogares por UPM.</p>
+<table>
+<colgroup>
+<col width="20%" />
+<col width="23%" />
+<col width="9%" />
+<col width="14%" />
+<col width="14%" />
+<col width="17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Personas seleccionadas por UPM <span class="math inline">\((\bar{n} / r )\)</span></th>
+<th align="center">Personas analfabetas por UPM <span class="math inline">\((\bar{n})\)</span></th>
+<th align="center">DEFF</th>
+<th align="center">Muestra de UPM <span class="math inline">\((n_I)\)</span></th>
+<th align="center">Muestra de personas analfabetas <span class="math inline">\((n)\)</span></th>
+<th align="center">Muestra de personas <span class="math inline">\((n/r)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">25</td>
+<td align="center">3.5</td>
+<td align="center">1.1</td>
+<td align="center">917</td>
+<td align="center">3211</td>
+<td align="center">22936</td>
+</tr>
+<tr class="even">
+<td align="center">50</td>
+<td align="center">7.0</td>
+<td align="center">1.3</td>
+<td align="center">524</td>
+<td align="center">3665</td>
+<td align="center">26179</td>
+</tr>
+<tr class="odd">
+<td align="center">75</td>
+<td align="center">10.5</td>
+<td align="center">1.4</td>
+<td align="center">392</td>
+<td align="center">4120</td>
+<td align="center">29429</td>
+</tr>
+<tr class="even">
+<td align="center">100</td>
+<td align="center">14.0</td>
+<td align="center">1.6</td>
+<td align="center">327</td>
+<td align="center">4574</td>
+<td align="center">32671</td>
+</tr>
+<tr class="odd">
+<td align="center">125</td>
+<td align="center">17.5</td>
+<td align="center">1.7</td>
+<td align="center">287</td>
+<td align="center">5029</td>
+<td align="center">35921</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="el-efecto-de-diseño-en-la-determinación-del-tamaño-de-muestra.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="otros-escenarios-de-interés.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/psirusteam/HHS-Handbook/08Tamano.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Diseño y análisis de encuestas de hogares.pdf", "Diseño y análisis de encuestas de hogares.epub", "Diseño y análisis de encuestas de hogares.mobi"],
+"toc": {
+"collapse": "section"
+},
+"tconfig": null
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
