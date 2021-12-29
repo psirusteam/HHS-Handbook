@@ -1,6 +1,14 @@
 fig:unnamed-chunk-1
 fig:MedRes
 fig:estrata
+fig:mcar
+fig:mar
+fig:nmar
+fig:figbaseincom
+fig:figimptotal
+fig:figpondtotal
+fig:figelimtotal
+fig:figenfcomb
 introducción
 el-paradigma-del-error-total
 qué-es-una-encuesta
@@ -76,3 +84,12 @@ la-técnica-del-último-conglomerado
 linealización-de-taylor
 pesos-replicados
 consideraciones-adicionales
+ausencia-de-respuesta-y-representatividad
+clasificación-de-la-ausencia-de-respuesta
+ausencia-de-respuesta-de-registro-y-de-unidad
+efectos-y-consecuencias-de-la-ausencia-de-respuesta
+posibles-soluciones
+indicadores-de-representatividad
+el-concepto-de-representatividad
+indicadores-r
+el-indicador-r-en-la-práctica

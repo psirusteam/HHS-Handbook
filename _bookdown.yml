@@ -19,7 +19,7 @@ rmd_files: [
   "09Estimadores.Rmd",
   "10Pesos.Rmd",
   "11Varianza.Rmd",
-  # "12Ausencia.Rmd",
+  "12Ausencia.Rmd",
   # "13SesgoUnidad.Rmd",
   # "14Imputar.Rmd",
   # "15Outliers.Rmd",

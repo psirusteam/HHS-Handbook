@@ -1,4 +1,4 @@
-# Enfrentando la ausencia de respuesta
+# Ausencia de respuesta y representatividad
 
 El problema de la ausencia de respuesta es una faceta normal, aunque no deseable, en el desarrollo de una encuesta. Todas las encuestas de hogares sufren del fenómeno de la ausencia de respuesta en algunas de las variables de interés. En algunas ocasiones y aún después de un diseño cuidadoso y una planificación logística exhaustiva, esta problemática puede ser tan grande que los resultados de la encuesta pueden quedar en entredicho. Por esta razón, este problema debe ser considerado en la planificación y el diseño de todos los levantamientos de información a través de encuestas y se debe contemplar varios ajustes que prevean las consecuencias de este fenómeno. Es por esto que en los capítulos anteriores se abordó el tema del ajuste de subcobertura, que garantiza que el tamaño de muestra efectivo sea el adecuado para realizar un inferencia precisa. De otra forma, si el diseño de la encuesta no tiene en cuenta estos ajustes, el tamaño de muestra final se verá reducido puesto que muchos hogares no contestarán algunas preguntas del cuestionarios, y en algunos casos, muchos hogares no contestarán la totalidad del cuestionario. 
 
@@ -17,45 +17,45 @@ Por otra parte, @Lund aclaran que existe una gran cantidad de literatura acerca 
 
 Este mecanismo conocido como ausencia de respuesta completamente aleatoria (MCAR - *missing completely at random*) se presenta cuando la probabilidad de que un individuo responda no depende de la característica de interés, ni de alguna otra covariable auxiliar. Por ejemplo, si la ausencia de respuesta en una encuesta laboral, no depende del estado actual de empleo del respondiente, ni de alguna característica auxiliar. De esta forma, la ausencia de respuesta está dispersa de manera uniforme sobre toda la población. 
 
-Es decir que, cuando el investigador produzca estadísticas descriptivas sobre las personas que respondieron la encuestas, ese porcentaje de personas sea muy similar y tenga un comportamiento uniforme sobre todas las posibles covariables que afecten al individuo. El siguiente gráfico podría mostrar algunos indicios de que el patrón de ausencia de respuesta podría ser MCAR puesto que el porcentaje de respuesta es similar en las variables auxiliares.
+Es decir que, cuando el investigador produzca estadísticas descriptivas sobre las personas que respondieron la encuesta, ese porcentaje de personas sea muy similar y tenga un comportamiento uniforme sobre todas las posibles covariables que afecten al individuo. El gráfico \@ref(fig:mcar) podría mostrar algunos indicios de que el patrón de ausencia de respuesta podría ser MCAR puesto que el porcentaje de respuesta es similar en las variables auxiliares.
 
-```{r, echo=FALSE, fig.height = 3, fig.cap="Patrón de respuesta MCAR"}
+```{r, mcar, echo=FALSE, fig.height = 3, fig.cap="Patrón de respuesta MCAR"}
 par(mfrow=c(1, 3))
 counts.G <- c(Hombre = 95, Mujer = 94)
 barplot(counts.G, xlab = "Sexo", ylab = "Porcentaje de respuesta")
 counts.Z <- c(Urbano = 93, Rural = 95)
 barplot(counts.Z, xlab = "Zona", ylab = "Porcentaje de respuesta")
-counts.T <- c(Inactivo = 95, Ocupado = 96, Desocupado = 94)
+counts.T <- c(Ocupado = 96, Desocupado = 94)
 barplot(counts.T, xlab = "Condición de ocupación", ylab = "Porcentaje de respuesta")
 ```
 
 
 #### MAR {-}
 
-La ausencia de respuesta aleatoria (MAR - *missing at random*) se establece cuando la probabilidad de que un individuo responda depende de algunas covariables auxiliares, pero no depende de la característica de interés.  Por ejemplo, en una encuesta de fuerza laboral, la ausencia de respuesta puede depender de la edad del respondientes, o del sexo, o incluso del nivel económico del individuo, pero no depende de su clasificación laboral. El siguiente gráfico muestra que el patrón de ausencia de respuesta podría ser MAR puesto que el sexo y la zona del respondiente están influenciando el porcentaje de respuesta, aunque no el estado de ocupación. 
+La ausencia de respuesta aleatoria (MAR - *missing at random*) se establece cuando la probabilidad de que un individuo responda depende de algunas covariables auxiliares, pero no depende de la característica de interés.  Por ejemplo, en una encuesta de fuerza laboral, la ausencia de respuesta puede depender de la edad del respondientes, o del sexo, o incluso del nivel económico del individuo, pero no depende de su clasificación laboral. El gráfico \@ref(fig:mar) muestra que el patrón de ausencia de respuesta podría ser MAR puesto que el sexo y la zona del respondiente están influenciando el porcentaje de respuesta, aunque no el estado de ocupación. 
 
-```{r, echo=FALSE, fig.height = 3, fig.cap="Patrón de respuesta MAR"}
+```{r, mar, echo=FALSE, fig.height = 3, fig.cap="Patrón de respuesta MAR"}
 par(mfrow=c(1, 3))
-counts.G <- c(Hombre = 70, Mujer = 95)
+counts.G <- c(Hombre = 50, Mujer = 95)
 barplot(counts.G, xlab = "Sexo", ylab = "Porcentaje de respuesta")
-counts.Z <- c(Urbano = 98, Rural = 62)
+counts.Z <- c(Urbano = 98, Rural = 42)
 barplot(counts.Z, xlab = "Zona", ylab = "Porcentaje de respuesta")
-counts.T <- c(Inactivo = 95, Ocupado = 96, Desocupado = 94)
+counts.T <- c(Ocupado = 96, Desocupado = 94)
 barplot(counts.T, xlab = "Condición de ocupación", ylab = "Porcentaje de respuesta")
 ```
 
 
 #### NMAR {-}
 
-Por último, la ausencia de respuesta no aleatoria (NMAR - *not missing at random*) se presenta cuando la ausencia de respuesta depende de la característica de interés. El siguiente gráfico muestra indicios de que el patrón de respuesta es NMAR, puesto que la condición de ocupación es la que influencia el porcentaje de respuesta. 
+Por último, la ausencia de respuesta no aleatoria (NMAR - *not missing at random*) se presenta cuando la ausencia de respuesta depende de la característica de interés. El gráfico \@ref(fig:nmar) muestra indicios de que el patrón de respuesta es NMAR, puesto que la condición de ocupación es la que influencia el porcentaje de respuesta; esto es contraproducente porque no existirá una forma simple de mitigar el sesgo generado por esta clase de ausencia de respuesta. 
 
-```{r, echo=FALSE, fig.height = 3, fig.cap="Patrón de respuesta MNAR"}
+```{r, nmar, echo=FALSE, fig.height = 3, fig.cap="Patrón de respuesta MNAR"}
 par(mfrow=c(1, 3))
 counts.G <- c(Hombre = 80, Mujer = 82)
 barplot(counts.G, xlab = "Sexo", ylab = "Porcentaje de respuesta")
 counts.Z <- c(Urbano = 83, Rural = 79)
 barplot(counts.Z, xlab = "Zona", ylab = "Porcentaje de respuesta")
-counts.T <- c(Inactivo = 50, Ocupado = 20, Desocupado = 94)
+counts.T <- c(Ocupado = 10, Desocupado = 90)
 barplot(counts.T, xlab = "Condición de ocupación", ylab = "Porcentaje de respuesta")
 ```
 
@@ -70,20 +70,16 @@ En general se puede afirmar que existen dos tipos de ausencia de respuesta: la p
 
 Nótese que, el primer escenario se evidencia porque en la base de datos inicial falta toda la unidad de observación y sus correspondientes registros. Suele suceder porque el encuestador no pudo establecer contacto con el hogar, o porque la persona seleccionada está enferma o simplemente porque se rehúsa a participar. En esta etapa es recomendable que el encuestador pueda determinar algunas características demográficas del hogar para poder realizar los ajustes pertinentes en el proceso de análisis. El segundo escenario puede deberse a muchas más causas y se evidencia en la base de datos inicial porque faltan algunos registros de la unidad de observación, aunque otros si están efectivamente respondidos. Suele suceder porque el respondiente se sintió agotado en algún momento del cuestionario, o porque alguna pregunta en particular no fue respondida por considerarse sensible.
 
-La siguiente figura ilustra cómo, después de la recolección de datos, hay individuos que no respondieron a una o todas las variables de la encuesta. En esta ilustración, las unidades están representadas por las filas y las variables por las columnas. Observe que lo primeros tres individuos contestaron a todas las preguntas del cuestionario; el cuarto individuo no contestó las últimas dos preguntas; el quinto individuo no contestó ni la primera ni la última pregunta; el sexto individuo no contesto a la tercera pregunta; y así sucesivamente, hasta llegar a los últimos dos individuos quienes no contestaron a ninguna pregunta del cuestionario. Para este ejemplo particular, se observa que $I=8$, $n=\#(s)=14$, $\#(r_1)=10$, $\#(r_1)=10$, $\#(r_2)=9$, $\#(r_3)=10$, $\#(r_4)=10$, $\#(r_5)=11$, $\#(r_6)=10$, $\#(r_7)=10$, $\#(r_8)=8$ y $\#(r_8)=12$.
-
-![*Un conjunto de datos después del proceso de observación.*](Pics/j1.png){width=300px}
-
 
 ### Efectos y consecuencias de la ausencia de respuesta
 
 En general, es posible hacer frente a este fenómeno indeseado desde varias perspectiva. Los siguientes son algunos puntos de vista para enfrentar la ausencia de respuesta:
 
 1. *Ignorancia*: lamentablemente, no es raro que se pretenda ignorar la ausencia de respuesta en la encuesta y realizar inferencias con los datos recopilados de las unidades respondientes, sin realizar ningún tipo de acercamiento estadístico para ajustar la inferencia.
-2. *Prevención*: diseñar la encuesta de modo que la ausencia de respuesta sea pequeña. Éste es el mejor método de enfrentarla. La capacitación al equipo encuestador, la redacción de las preguntas, la longitud del cuestionario, las revisitas y el agendamiento de las entrevistas pueden palear las altas tasas de asusencia de respuesta. 
+2. *Prevención*: diseñar la encuesta de modo que la ausencia de respuesta sea pequeña. Éste es el mejor método de enfrentarla. La capacitación al equipo encuestador, la redacción de las preguntas, la longitud del cuestionario, las revisitas y el agendamiento de las entrevistas pueden palear las altas tasas de ausencia de respuesta. 
 3. *Reacción*: utilizar herramientas para analizar la encuesta de modo que se corrijan los sesgos causados por la ausencia de respuesta. En este caso es posible ajustar los ponderadores de las unidades, o establecer procedimientos de imputación en los registros.
 
-Ignorar la ausencia de respuesta puede tener consecuencias graves en la entendimiento del constructo de interés en la encuesta. Más aún, puede llevar a tomar decisiones erradas de política pública. Por ejemplo, si se omite el efecto de la ausencia de respuesta en una encuesta de ingresos y gastos, se podría subestimar el ingreso medio y el ingreso total en un país; si se omite el efecto de la ausencia de respuesta en una encuesta de desempleo, se podría subestimar el número total de desempleados; además, si se omite el efecto de la ausencia de respuesta en una encuesta de victimización, se podría subestimar el número total de víctimas.
+Ignorar la ausencia de respuesta puede tener consecuencias graves en el entendimiento del constructo de interés en la encuesta. Más aún, puede llevar a tomar decisiones erradas de política pública. Por ejemplo, si se omite el efecto de la ausencia de respuesta en una encuesta de ingresos y gastos, se podría subestimar el ingreso medio y el ingreso total en un país; si se omite el efecto de la ausencia de respuesta en una encuesta de desempleo, se podría subestimar el número total de desempleados; además, si se omite el efecto de la ausencia de respuesta en una encuesta de victimización, se podría subestimar el número total de víctimas.
 
 La ausencia de repuesta conlleva grandes efectos de sesgo en los resultados de calidad de las estimaciones. Debe contemplarse muy bien la mejor estrategia para hacer frente a sus consecuencias. Por ejemplo, si se aumentara el tamaño de muestra para enfrentar la ausencia de respuesta, es posible que nos encontremos con una mayor cantidad de personas de la misma clase de respondientes (homogeneidad). En este caso, el sesgo puede aumentar porque se malgastaron recursos que hubiesen servido para remediar la ausencia de respuesta con otras medidas. 
 
@@ -103,7 +99,17 @@ $$
 r_i\subseteq r \subseteq s
 $$
 
-Finalmente, si se supone que $y_k$ es faltante y se considera para la imputación, entonces $\hat{y}_k$ denotará su valor imputado
+Finalmente, si se supone que $y_k$ es faltante y se considera para la imputación, entonces $\hat{y}_k$ denotará su valor imputado. La figura \@ref(fig:figbaseincom) ilustra cómo, después de la recolección de datos, hay individuos que no respondieron a una o todas las variables de la encuesta. En esta ilustración, las unidades están representadas por las filas y las variables por las columnas. Observe que lo primeros tres individuos contestaron a todas las preguntas del cuestionario; el cuarto individuo no contestó las últimas dos preguntas; el quinto individuo no contestó ni la primera ni la última pregunta; el sexto individuo no contestó a la tercera pregunta; y así sucesivamente, hasta llegar a los últimos dos individuos quienes no contestaron a ninguna pregunta del cuestionario. Para este ejemplo particular, se observa que:
+
+* El número de variables de interés en la encuesta de hogares es $I=8$.
+* El número de unidades incluidas en la muestra $s$ es $n=\#(s)=14$.
+* El número de respondientes efectivos en la primera variable es $\#(r_1)=10$, en la segunda variable es $\#(r_2)=9$, y así sucesivamente hasta notar que el número de respondientes efectivos en la última variable de la base de datos es de $\#(r_8)=8$. 
+
+
+```{r, figbaseincom, fig.cap="Un conjunto de datos después del proceso de observación.", echo=FALSE, out.width='50%'}
+knitr::include_graphics("Pics/j1.png")
+```
+
 
 #### Imputación total {-}
 
@@ -124,9 +130,12 @@ $$
 = \sum_{r_i}d_{k}y_k + \sum_{s - r_i}d_{k}\hat{y}_k
 $$
 
-La siguiente figura muestra un ejemplo de las unidades que serían consideradas para el análisis después de la imputación. Nótese entonces que las tres unidades que respondieron todas las preguntas del cuestionario entran al análisis sin ningún ajuste; mientras que las nueve unidades que no respondieron a todo el cuestionario entran al análisis habiéndose imputado las celdas correspondientes a la ausencia de respuesta; además, las dos unidades que no respondieron ninguna pregunta del cuestionario también entran al análisis puesto que todas sus respuestas fueron imputadas. Luego, en este enfoque todas las unidades en el conjunto $s$ se consideran para el análisis posterior. 
+La figura \@ref(fig:figimptotal) muestra un ejemplo de las unidades que serían consideradas para el análisis después de la imputación. Nótese entonces que las tres unidades que respondieron todas las preguntas del cuestionario entran al análisis sin ningún ajuste; mientras que las nueve unidades que no respondieron a todo el cuestionario entran al análisis habiéndose imputado las celdas correspondientes a la ausencia de respuesta; además, las dos unidades que no respondieron ninguna pregunta del cuestionario también entran al análisis puesto que todas sus respuestas fueron imputadas. Luego, en este enfoque todas las unidades en el conjunto $s$ se consideran para el análisis posterior. 
 
-![*Imputation total: todas las unidades que no están en $s-r$ son imputadas (las celdas en gris indican los valores que fueron imputados).*](Pics/j3.png){width=300px}
+```{r, figimptotal, fig.cap="Imputación total: todas las unidades que no respondieron son imputadas (las celdas en gris indican los valores que fueron imputados).", echo=FALSE, out.width='50%'}
+knitr::include_graphics("Pics/j2.png")
+```
+
 
 #### Ponderación total {-}
 
@@ -137,21 +146,32 @@ $$
 \sum_{r_i}d_k F_{ik} y_k
 $$
 
-Si todos los $r_i$ son diferentes, entonces cada variable de estudio requerirá un conjunto de ponderadores diferentes. Al final este enfoque induce un número no uniforme de casos por variable. Para este esquema, se utilizan pesos $w_k^{(i)}$ para cada variable $i \in I$ que compensan la ausencia de respuesta de la unidad. Si todos los $r_i$ son diferentes, cada variable de estudio requirá un peso diferente. Siguiendo con los ejemplos de las ilustraciones, se nota que la primera variable del cuestionario fue respondida por 10 personas, y cuatro personas no respondieron esta pregunta. Por lo tanto, en este enfoque se crearán pesos $w_k^{(1)}$ para cada $k\in s$ que ponderen satisfactoriamente la información recolectada en esta variable. Sin emabrgo, este conjunto de pesos no será único, puesto que, en particular, la segunda variable del cuestionario fue respondida por nueve personas, y tres personas no respondieron esta pregunta. Por lo tanto, en este enfoque se crearán pesos $w_k^{(2)}$ para cada $k\in s$ que ponderen esta información recolectada en esta variable. Nótese que en general $w_k^{(1)} \neq w_k^{(2)}$ y, por ende, cada una de las $I=8$ variables del estudio tendrá su propio conjunto de ponderadores. 
+Si todos los $r_i$ son diferentes, entonces cada variable de estudio requerirá un conjunto de ponderadores diferentes. Al final este enfoque induce un número no uniforme de casos por variable. Para este esquema, se utilizan pesos $w_k^{(i)}$ para cada variable $i \in I$ que compensan la ausencia de respuesta de la unidad. Si todos los $r_i$ son diferentes, cada variable de estudio requerirá un conjunto de pesos diferente. 
 
-![*Ponderación total: cada variable tendrá un conjunto de pesos diferente. No se utiliza ningún método de imputación.*](Pics/j4.png){width=300px}
+Siguiendo con el ejemplo, a partir de la figura \@ref(fig:figpondtotal) se nota que la primera variable del cuestionario fue respondida por 10 personas, y cuatro personas no respondieron esta pregunta. Por lo tanto, en este enfoque se crearán pesos $w_k^{(1)}$ para cada $k\in r_1$ que ponderen satisfactoriamente la información recolectada en esta variable. Sin embargo, este conjunto de pesos no será único, puesto que, en particular, la segunda variable del cuestionario fue respondida por nueve personas, y tres personas no respondieron esta pregunta. Por lo tanto, en este enfoque se crearán pesos $w_k^{(2)}$ para cada $k\in r_2$ que ponderen esta información recolectada en esta variable. Nótese que en general $w_k^{(1)} \neq w_k^{(2)}$ y, por ende, cada una de las $I=8$ variables del estudio tendrá su propio conjunto de ponderadores. 
+
+```{r, figpondtotal, fig.cap="Ponderación total: cada variable tendrá un conjunto de pesos diferente. No se utiliza ningún método de imputación.", echo=FALSE, out.width='50%'}
+knitr::include_graphics("Pics/j3.png")
+```
 
 #### Eliminación total {-}
 
-En este enfoque se eliminarán de la base de datos todas las unidades que contengan al menos un registro perdido. En este caso, tendríamos una pérdida considerable del tamaño de muestra, aunque induciría un solo conjunto de ponderadores. Se recomienda fuertemente abstenerse de tomar este camino. Note que en este enfoque sólo las unidades del conjunto $r$ se consideran para el análisis posterior. Por supuesto, en general, esto no es aconsejable puesto que trae problemas de sesgo, dado que las unidades que contestaron todo el cuestionario generalmente difieren de forma estructural de las unidades que no contestaron; además trae problemas de eficiencia estadística, puesto que el tamaño de la muestra efectiva, después de la eliminación de unidades, será insuficiente para garantizar los mínimos requeridos en la inferencia. 
+En este enfoque se eliminarán de la base de datos todas las unidades que contengan al menos un registro perdido. En este caso, tendríamos una pérdida considerable del tamaño de muestra, aunque induciría un solo conjunto de ponderadores. Se recomienda fuertemente abstenerse de tomar este camino. Note que en este enfoque sólo las unidades del conjunto de respondientes efectivos en todas las variables se consideran para el análisis posterior de la encuesta. Este subgrupo de individuos está dado por:
+$$
+\bigcap_{i=1}^I r_i
+$$ 
+Por supuesto, en general, esto no es aconsejable puesto que trae problemas de sesgo, dado que las unidades que contestaron todo el cuestionario generalmente difieren de forma estructural de las unidades que no contestaron; además trae problemas de eficiencia estadística, puesto que el tamaño de la muestra efectiva, después de la eliminación de unidades, será insuficiente para garantizar los mínimos requeridos en la inferencia. 
 
-La siguiente gráfica representa este enfoque en donde es evidente que el decrecimiento en el tamaño de muestra podría tener repercusiones nefastas en la inferencia de la encuesta. Teniendo en cuenta el ejemplo anterior, solo tres unidades serían tenidas en cuenta para el análisis de la información, mientras que nueve unidades, que no contestaron al menos una pregunta, más las tres unidades que no contestaron ninguna pregunta, serían eliminadas del análisis estadístico. Es decir, la mayoría de unidades de la muestra inicial serían descartadas. 
+La gráfica \@ref(fig:figelimtotal) representa este enfoque en donde es evidente que el decrecimiento en el tamaño de muestra podría tener repercusiones nefastas en la inferencia de la encuesta. Teniendo en cuenta el ejemplo anterior, solo tres unidades serían tenidas en cuenta para el análisis de la información, mientras que nueve unidades, que no contestaron al menos una pregunta, más las dos unidades que no contestaron ninguna pregunta, serían eliminadas del análisis estadístico. Es decir, la mayoría de unidades de la muestra inicial serían descartadas.
 
-![*Enfoque de eliminación: todas las unidades que no pertencen a $r$ con eliminadas.*](Pics/j2.png){width=300px}
+```{r, figelimtotal, fig.cap="Enfoque de eliminación: únicamente se consideran las unidades que respondedieron a todas las varaibles.", echo=FALSE, out.width='50%'}
+knitr::include_graphics("Pics/j4.png")
+```
+
 
 #### Enfoque combinado {-}
 
-Por el contrario, es recomendable escoger un camino parsimonioso que combine estas estrategias de forma diferencial a lo largo de la encuesta. El enfoque combinado usa la imputación para afrontar la ausencia de respuesta por registro para las variables específicas que lo necesiten y luego utiliza un ajuste a los factores de ponderación para afrontar la ausencia de respuesta por unidad. Usualmente, los pesos finales se producen utilizando un enfoque de calibración que hace uso de información auxiliar externa. 
+Por el contrario, es recomendable escoger un camino parsimonioso que combine estas estrategias de forma diferencial a lo largo de la encuesta. El enfoque combinado usa la imputación para afrontar la ausencia de respuesta por registro para las variables (columnas de la base de datos) específicas que lo necesiten y luego utiliza un ajuste a los factores de ponderación para afrontar la ausencia de respuesta por unidad (filas de la base de datos). Usualmente, los pesos finales se producen utilizando un enfoque de calibración que hace uso de información auxiliar externa. 
 
 Cuando se presenta ausencia de respuesta por registro y por unidad, el enfoque combinado imputa primero para luego obtener una matriz rectangular completa. Luego de lo anterior se procede a realizar un ajuste a los ponderadores. El conjunto de datos completo para la variable de interés $y$ está dado por $\{y_{\circ \  k}: k\in r\}$
 
@@ -163,13 +183,15 @@ y_k, \ \text{for $k \in r_i$} \\
 \end{cases}
 $$
 
-En donde $\hat{y}_k$ es el valor imputado. Note que en el enfoque de imputación total, también se imputa para $k \in s-r$. La siguiente gráfica representa este enfoque parsimonioso en donde los valores imputados (en gris) entran a ser parte de la inferencia y las unidades que nunca respondieron (en negro) y que tienen todos sus registros faltantes son retiradas de la base de datos final.
+En donde $\hat{y}_k$ es el valor imputado. Note que en el enfoque de imputación total, también se imputa para $k \in s-r$. La gráfica \@ref(fig:figenfcomb) representa este enfoque parsimonioso en donde los valores imputados (en gris) entran a ser parte de la inferencia y las unidades que nunca respondieron (en negro) y que tienen todos sus registros faltantes son retiradas de la base de datos final.
 
-Retomando el ejemplo, el siguiente gráfico permite observar que los dos últimos individuos de la muestra fueron totalmente descartados puesto que no contestaron ninguna pregunta del cuestionario; además, para la primera variable, los valores del quinto y noveno individuo fueron imputados. De la misma manera, para la segunda variable, los valores de lso individuos 10, 11 y 12, fueron imputados; y así sucesivamente, hasta llegar a la última variable en donde los valores de los indivioduos tres, cuatro, seis y ocho fueron imputados. 
+Se observa que los dos últimos individuos de la muestra fueron totalmente descartados puesto que no contestaron ninguna pregunta del cuestionario; además, para la primera variable, los valores del quinto y noveno individuo fueron imputados. De la misma manera, para la segunda variable, los valores de los individuos diez, once y doce fueron imputados; y así sucesivamente, hasta llegar a la última variable en donde los valores de los individuos cuatro, cinco, siete y nueve fueron imputados. 
 
-![*Enfoque combinado: las unidades que no respondieron a ningún ítem son eliminadas del análisis y los respondientes parciales son imputados.*](Pics/j5.png){width=300px}
+```{r, figenfcomb, fig.cap="Enfoque combinado: las unidades que no respondieron a ningún ítem son eliminadas del análisis y los respondientes parciales son imputados.", echo=FALSE, out.width='50%'}
+knitr::include_graphics("Pics/j5.png")
+```
 
-![*Enfoque combinado*](Pics/nr5.png)
+Los capítulos anteriores profundizaron en el tema de la creación de factores de expansión para los individuos presentes en la base de datos final. De tal forma que en los capítulos posteriores se abordará algunas metodologías de imputación que pueden ser recomendables a la hora de completar una base de datos estructurada y rectangular cuyas entradas estén completas. Antes de introducir estos temas se presentarán algunas medidas descriptivas que pueden ser usadas para generar alertas sobre la pérdida de representatividad debido a la ausencia de respuesta. 
 
 
 ## Indicadores de representatividad
@@ -186,15 +208,15 @@ por Computadora) si tenían un teléfono fijo en la lista. El segundo mes de tra
 
 Adicional a la tasa de no respuesta, se necesitan indicadores
 de calidad de la encuesta que proporcionen más información sobre el
-posible riesgo de estimadores sesgados. Por ejemplo, @Shlomo_Skinner_Schouten_2012 estudian el uso de los *indicadores R* o indicadores de *representatividad*, los cuales miden qué tan representativa es la respuesta de la encuesta, y cómo la composición
-de la respuesta en la muestra diferiría de la composición de la población finita. Estos indicadores han probado ser una guía importante para determinar en qué medida el sesgo causado por la ausencia de respuesta afecta la encuesta. De hecho, en Europa el proyecto RISQ (*Representativity Indicators for Survey Quality*) está basado en este enfoque y pretende desarrollar y probar indicadores R en varias encuestas de interés. Los socios que participan en este proyecto son Las oficinas nacionales de estadística de Holanda, Noruega y Eslovenia, en conjunto con las universidad de Southampton (Reino Unido) y la Universidad de Lovaina (Bélgica). Este proyecto es financiado por la Unión Europea y su sitio web es [www.r-indicator.eu.](www.r-indicator.eu.).
+posible riesgo de estimadores sesgados. Por ejemplo, @Shlomo_Skinner_Schouten_2012 estudian el uso de los *indicadores de representatividad* que permiten conocer qué tanto la muestra de respondientes efectivos representa a la población y cómo la composición
+de la respuesta en la muestra diferiría de la composición de la población finita. Estos indicadores han probado ser una guía importante para determinar en qué medida el sesgo causado por la ausencia de respuesta afecta la encuesta. De hecho, en Europa el proyecto RISQ (*Representativity Indicators for Survey Quality*) está basado en este enfoque y pretende desarrollar y probar indicadores R en varias encuestas de interés. Los países que participan en este proyecto Holanda, Noruega y Eslovenia, en conjunto con las universidad de Southampton (Reino Unido) y la Universidad de Lovaina (Bélgica). 
 
 
 ### El concepto de representatividad
 
 El concepto de representatividad se utiliza a menudo en la investigación
 de encuestas, pero por lo general no está claro qué significa. En particular Kruskal y Mosteller presentan una amplia descripción
-de lo que se supone que significa representativo [@KruskalMosteller1, @KruskalMosteller2, @KruskalMosteller3, @KruskalMosteller4]. El concepto de muestra representativa no está del todo estandarizado, @Bethlehem_Cobben_Schouten_2009 menciona que algunos de estos conceptos son muy vagos e imprecisos; por ejemplo:
+de lo que se supone que significa el adjetivo representativo [@KruskalMosteller1, @KruskalMosteller2, @KruskalMosteller3, @KruskalMosteller4]. El concepto de muestra representativa no está del todo estandarizado; @Bethlehem_Cobben_Schouten_2009 menciona que algunos de estos conceptos son muy vagos e imprecisos; por ejemplo:
 
 - Reconocimiento general de los datos.
 - Ausencia de fuerzas selectivas en la muestra.
@@ -229,10 +251,10 @@ Se debe tener en cuenta que la representatividad fuerte se garantiza cuando el m
 
 #### Representatividad débil {-}
 
-Suponga que hay una variable auxiliar categórica $X$ que tiene $L$
-categorías y divide la población en $L$ estratos (subpoblaciones).
+Suponga que hay una variable auxiliar categórica $X$ que tiene $H$
+categorías y divide la población en $H$ estratos (subpoblaciones).
 El número de elementos en el estrato $h$ se denota por $N_{h}$,
-para $h=1,2,\ldots,L$. Se asume que esta variable ha sido medida
+para $h=1,2,\ldots,H$. Se asume que esta variable ha sido medida
 en la encuesta y que su valor está disponible para cada encuestado
 y no encuestado. La probabilidad de respuesta del elemento $k$ en
 el estrato $h$ está definida por $\phi_{hk}$.
@@ -244,14 +266,12 @@ de respuesta promedio es la misma en cada estrato, es decir,
 $$
 \bar{\phi}_{h} =  
 \frac{1}{N_{h}}\sum_{k=1}^{N_{h}}\phi_{hk} =
-\phi \ \ \ \ \ \ \ \ \ \  h=1,2,\ldots,L
+\phi \ \ \ \ \ \ \ \ \ \  h=1,2,\ldots,H
 $$
 
 La representatividad débil significa que no es posible distinguir
 a los encuestados de los no encuestados simplemente usando información
-con respecto a $X$. Si la respuesta es débilmente representativa con respecto a muchas variables auxiliares $X$, existirán relaciones fuertes entre las variables objetivo y las variables auxiliares. Nótese que es posible estimar las medias de las probabilidades de respuesta
-en los estratos y, por lo tanto, se puede comprobar en la práctica
-el supuesto de representatividad débil.
+con respecto a $X$. Si la respuesta es débilmente representativa con respecto a muchas variables auxiliares $X$, existirán relaciones fuertes entre las variables objetivo y las variables auxiliares. Nótese que es posible estimar las medias de las probabilidades de respuesta en los estratos y, por lo tanto, se puede comprobar en la práctica el supuesto de representatividad débil.
 
 
 ### Indicadores $R$
@@ -288,7 +308,7 @@ las probabilidades de respuesta estimadas para las unidades en la muestra.
 Entonces, la probabilidad de respuesta media se puede estimar mediante
 
 $$
-\hat{\bar{\phi}}  =  \frac{1}{N}\sum_{i=1}^{n}\frac{\hat{\phi}_{i}}{\pi_{i}}
+\hat{\bar{\phi}}  =  \frac{1}{N}\sum_{k=1}^{n}\frac{\hat{\phi}_{k}}{\pi_{k}}
 $$
 
 y
@@ -298,7 +318,7 @@ $$
 $$
 
 Nótese que el indicador $R$ mide la desviación de la representatividad débil y no de la representatividad fuerte. Por ende, este enfoque no es capaz de detectar y cuantificar las diferencias
-entre las probabilidades de respuesta individual dentro de las clases obtenidas al cruzar las variables auxiliares. Suponiendo que las clases están definidas por una variable auxiliar $X$ que tiene $L$ categorías. Sea $N_{h}$ el tamaño de la clase $h$ y sea $\bar{\phi}_{h}$ la media poblacional de las probabilidades de respuesta en el estrato $h$. Si se utiliza un modelo estándar como la regresión logística, el indicador $R$ se calcula como:
+entre las probabilidades de respuesta individual dentro de las clases obtenidas al cruzar las variables auxiliares. Suponiendo que las clases están definidas por una variable auxiliar $X$ que tiene $H$ categorías. Sea $N_{h}$ el tamaño de la clase $h$ y sea $\bar{\phi}_{h}$ la media poblacional de las probabilidades de respuesta en el estrato $h$. Si se utiliza un modelo estándar como la regresión logística, el indicador $R$ se calcula como:
 
 $$
 R_{x}\left(\phi\right)  =  1-2\sqrt{\frac{1}{n-1}\sum_{h=1}^{H}N_{h}\left(\bar{\phi}_{h}-\bar{\phi}\right)^{2}}
@@ -308,20 +328,15 @@ En este caso, $R_{x}\left(\phi\right)$ mide la variación de las probabilidades 
 
 ### El indicador $R$ en la práctica
 
-@Bethlehem_Cobben_Schouten_2009 mencionan que de julio a diciembre de 2005, Statistics Netherlands realizó un seguimiento a gran escala entre los no encuestados en la Encuesta de población activa holandesa (EPA). En el estudio, se abordó una vez más a dos muestras de personas
-que no respondieron en la EPA utilizando: el enfoque de devolución
-de llamada con el cuestionario completo de la EPA o el enfoque de preguntas básicas con un cuestionario muy corto que contiene solo algunas preguntas
-básicas. Se usó CAPI en el enfoque de devolución de llamada, y el enfoque de preguntas básicas utilizó un diseño de modo mixto que involucró cuestionarios *online* y recolección presencial con papel y CATI. Los indicadores R se estimaron utilizando modelos de regresión logística que incluían una gran cantidad de variables explicativas que medían características demográficas, geográficas y socioeconómicas
-de los hogares. Los resultados de este estudio se dan a continuación:
+@Bethlehem_Cobben_Schouten_2009 mencionan que de julio a diciembre de 2005, Statistics Netherlands realizó un seguimiento a gran escala entre los no encuestados en la Encuesta de Población Activa (EPA) de Holanda. En el estudio, se abordó a dos muestras de personas que no respondieron en la EPA utilizando, por un lado, el enfoque de devolución de llamada con el cuestionario completo de la EPA y, por el otro lado, el enfoque de preguntas básicas con un cuestionario muy corto. Se usó CATI en el enfoque de devolución de llamada, y el enfoque de preguntas básicas se utilizó un diseño de recolección mixto que involucró cuestionarios *online* y recolección presencial con papel y CAPI. Los indicadores R se estimaron utilizando modelos de regresión logística que incluían una gran cantidad de variables explicativas que medían características demográficas, geográficas y socioeconómicas en los hogares. Los resultados de este estudio se dan a continuación:
 
-1. Se reportó que el valor del indicador $R$ para la respuesta inicial de la EPA es igual a 0.8, que es menor que el valor ideal de 1,00. Entonces, esta respuesta no es fuertemente representativa. La aplicación del enfoque de devolución de llamada aumentó la
-tasa de respuesta del 62.2% al 76.9%. Pero, el valor del indicador $R$ también aumentó, de 0.8 a 0.85. Como los intervalos de confianza no se superponen, hay indicios de que la respuesta adicional mejora la composición del conjunto de datos.
-1. La aplicación del enfoque de preguntas básicas da como resultado
-una conclusión diferente. Aunque la tasa de respuesta aumenta del 62.2% al 75.6%, el valor del indicador $R$ disminuye de 0.80 a 0.78. Los intervalos para la EPA inicial y la EPA, incluido el enfoque de preguntas básicas, se superponen. Por lo tanto, aparentemente, el enfoque de preguntas básicas no mejora la composición del conjunto de datos. 
+1. Se reportó que el valor del indicador $R$ para la respuesta inicial de la EPA es igual a 0.8, que es menor que el valor ideal de 1. Entonces, esta respuesta no es fuertemente representativa. La aplicación del enfoque de devolución de llamada aumentó la
+tasa de respuesta del 62.2% al 76.9%. Luego de esto, el valor del indicador $R$ aumentó de 0.8 a 0.85. Como los intervalos de confianza no se superponían, hubo indicios de que la respuesta adicional mejoró la composición del conjunto de datos.
+1. La aplicación del enfoque de preguntas básicas dio como resultado
+una conclusión diferente. Aunque la tasa de respuesta aumentó del 62.2% al 75.6%, el valor del indicador $R$ disminuyó de 0.80 a 0.78. Los intervalos para la EPA inicial y la EPA con preguntas básicas, se superpusieron. Por lo tanto, aparentemente, el enfoque de preguntas básicas no mejoró la composición del conjunto de datos. 
 
-Este último enfoque ofrece *más de lo mismo* y, por lo tanto, agudiza el contraste entre respondientes y no respondientes. Dado que las probabilidades de respuesta estimadas se utilizan para calcular
-el indicador $R$ y esta estimación se basa en un modelo de
-regresión logística que utiliza un conjunto de variables auxiliares como variables explicativas. 
+Este último enfoque no es novedoso y agudiza el contraste entre respondientes y no respondientes. Dado que las probabilidades de respuesta estimadas se utilizan para calcular
+el indicador $R$ y esta estimación se basa en un modelo lineal que utiliza un conjunto de variables auxiliares como variables explicativas. 
 
 La dependencia del indicador $R$ del conjunto de variables auxiliares utilizadas tiene implicaciones para comparar diferentes conjuntos de datos (por ejemplo, en el tiempo o en dominios). Un enfoque apropiado podría ser fijar el conjunto de variables auxiliares de antemano y mantenerlas iguales para todos los conjuntos de datos. Para ello, debe elegirse el máximo posible de variables. Por otro lado, debido al sobreajuste, el error estándar (estimado) puede verse
 afectado, pero las probabilidades de respuesta estimadas no serán sesgadas.
@@ -331,8 +346,6 @@ mayor sea la muestra, más variables del modelo tendrán una contribución signi
 
 
 Con esta metodología es posible determinar si la composición de la muestra de respondientes efectivos difiere o no de la de la muestra inicial. Los resultados de este proceso de seguimiento pueden ayudar a sustentar
-la decisión de iniciar esfuerzos adicionales para obtener datos para grupos específicos de la población objetivo; Este enfoque también puede resultar útil para evaluar si volver a abordar una muestra de personas que no respondieron sería una buena estrategia para acotar el sesgo, o si con un enfoque de preguntas básicas sería suficiente.
+la decisión de iniciar esfuerzos adicionales para obtener datos para grupos específicos de la población objetivo; este enfoque también puede resultar útil para evaluar si volver a abordar una muestra de personas que no respondieron sería una buena estrategia para acotar el sesgo, o si con un enfoque de preguntas básicas sería suficiente.
 
-El uso de un indicador $R$ durante la fase de recopilación
-de datos puede revelar que la composición de los datos recolectados se está desviando cada vez más de la representatividad. Esto podría llevar a la decisión de enfocar el resto del proceso de recopilación
-de datos en grupos que están subrepresentados. Estos cambios mitad de la encuesta se conocen en la literatura especializada como *diseños receptivos*. Otra forma de utilizar el indicador $R$ para controlar el proceso de la encuesta es analizar la representatividad de una versión anterior de la encuesta. Los resultados de dicho análisis pueden proporcionar información para implementar una estrategia mejorada de recopilación de datos para una nueva versión de la encuesta. 
+El uso de esta metodología durante la fase de recolección de datos podría revelar que la composición de los datos observados se está desviando cada vez más de la estructura poblacional esperada. Esto podría llevar a la decisión de enfocar el resto del proceso de recolección en los grupos que están subrepresentados. Estos cambios en medio de la encuesta se conocen en la literatura especializada como *diseños receptivos*. Otra forma de utilizar el indicador $R$ para controlar el proceso de la encuesta es analizar la representatividad de una versión anterior de la encuesta. Los resultados de dicho análisis pueden proporcionar información para implementar una estrategia mejorada de recopilación de datos para una nueva versión de la encuesta. 
