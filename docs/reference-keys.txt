@@ -9,6 +9,11 @@ fig:figimptotal
 fig:figpondtotal
 fig:figelimtotal
 fig:figenfcomb
+fig:fightcal
+fig:fightcaldist
+fig:fightcal2dist
+fig:fight3dist
+fig:fight4dist
 introducción
 el-paradigma-del-error-total
 qué-es-una-encuesta
@@ -93,3 +98,9 @@ indicadores-de-representatividad
 el-concepto-de-representatividad
 indicadores-r
 el-indicador-r-en-la-práctica
+ausencia-de-respuesta-de-unidad
+sesgo-sobre-los-estimadores
+soluciones
+propensity-score
+calibración
+la-pandemia-por-covid-19

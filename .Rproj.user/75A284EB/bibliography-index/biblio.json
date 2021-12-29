@@ -22,6 +22,29 @@
             "type": "paper-conference"
         },
         {
+            "DOI": "10.18356/9789210054263",
+            "ISBN": "978-92-1-005426-3",
+            "URL": "https://www.un-ilibrary.org/content/books/9789210054263",
+            "author": [
+                {
+                    "family": "CEPAL"
+                }
+            ],
+            "collection-title": "Informes COVID-19 de la CEPAL",
+            "id": "CEPAL_sesgos2020",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020,
+                        11
+                    ]
+                ]
+            },
+            "publisher": "United Nations",
+            "title": "Recomendaciones para eliminar el sesgo de selección en las encuestas de hogares en la coyuntura de la enfermedad por coronavirus (COVID-19)",
+            "type": "book"
+        },
+        {
             "DOI": "10.1007/978-3-319-93632-1",
             "ISBN": "978-3-319-93631-4",
             "URL": "http://link.springer.com/10.1007/978-3-319-93632-1",
