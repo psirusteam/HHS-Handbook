@@ -24,7 +24,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2021-12-29" />
+<meta name="date" content="2021-12-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -304,6 +304,15 @@ div.csl-indent {
 <li class="chapter" data-level="15.1" data-path="algunos-métodos-de-detección-de-valores-extremos.html"><a href="algunos-métodos-de-detección-de-valores-extremos.html"><i class="fa fa-check"></i><b>15.1</b> Algunos métodos de detección de valores extremos</a></li>
 <li class="chapter" data-level="15.2" data-path="valores-atípicos-en-una-encuesta-de-consumo.html"><a href="valores-atípicos-en-una-encuesta-de-consumo.html"><i class="fa fa-check"></i><b>15.2</b> Valores atípicos en una encuesta de consumo</a></li>
 </ul></li>
+<li class="part"><span><b>III Procesamiento derivado en las encuestas de hogares</b></span></li>
+<li class="chapter" data-level="16" data-path="agregación-de-encuestas.html"><a href="agregación-de-encuestas.html"><i class="fa fa-check"></i><b>16</b> Agregación de encuestas</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="esquemas-de-acumulación-de-muestras.html"><a href="esquemas-de-acumulación-de-muestras.html"><i class="fa fa-check"></i><b>16.1</b> Esquemas de acumulación de muestras</a></li>
+<li class="chapter" data-level="16.2" data-path="factores-de-expansión-y-estimadores-de-muestreo.html"><a href="factores-de-expansión-y-estimadores-de-muestreo.html"><i class="fa fa-check"></i><b>16.2</b> Factores de expansión y estimadores de muestreo</a></li>
+<li class="chapter" data-level="16.3" data-path="agregación-de-encuestas-con-diferentes-tamaños-de-muestra.html"><a href="agregación-de-encuestas-con-diferentes-tamaños-de-muestra.html"><i class="fa fa-check"></i><b>16.3</b> Agregación de encuestas con diferentes tamaños de muestra</a></li>
+<li class="chapter" data-level="16.4" data-path="efecto-del-tipo-de-encuesta-en-la-eficiencia-de-los-indicadores.html"><a href="efecto-del-tipo-de-encuesta-en-la-eficiencia-de-los-indicadores.html"><i class="fa fa-check"></i><b>16.4</b> Efecto del tipo de encuesta en la eficiencia de los indicadores</a></li>
+<li class="chapter" data-level="16.5" data-path="pruebas-de-hipótesis-sobre-indicadores-agregados.html"><a href="pruebas-de-hipótesis-sobre-indicadores-agregados.html"><i class="fa fa-check"></i><b>16.5</b> Pruebas de hipótesis sobre indicadores agregados</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
 <li class="divider"></li>
 <li><a Diseño y análisis de encuestas de hogares</a></li>
@@ -333,7 +342,7 @@ div.csl-indent {
 <li>Se define la ausencia de respuesta ignorable cuando la probabilidad de que un individuo responda no depende de la característica de interés. Nótese que el adjetivo ignorable hace referencia a que un modelo puede explicar el mecanismo de ausencia de respuesta y que ésta se puede ignorar después de que el modelo la toma en cuenta.</li>
 <li>Por otra parte, la ausencia de respuesta se dice no ignorable cuando la probabilidad de que un individuo responda depende de la característica de interés. Por ejemplo, si en una encuesta de fuerza laboral, se desea estimar el número de personas empleadas o desempleadas, la ausencia de respuesta es no ignorable cuando depende de la clasificación laboral del individuo.</li>
 </ol>
-<p>En términos de literatura, el fenómeno de la ausencia de respuesta y sus recpercusiones negativas sobre la calidad de las estimaciones ha sido ampliamente estudiado. Por ejemplo, <span class="citation"><a href="#ref-Lumley_2010" role="doc-biblioref">Lumley</a> (<a href="#ref-Lumley_2010" role="doc-biblioref">2010, cap. 9</a>)</span> hace un análisis detallado con la ausencia de respuesta individual, en donde existen datos parciales para un respondiente, considerando un enfoque que está basado en el diseño de muestreo al ajustar los pesos muestrales. <span class="citation"><a href="#ref-Fuller" role="doc-biblioref">Fuller</a> (<a href="#ref-Fuller" role="doc-biblioref">2009, cap. 5</a>)</span> cita algunas técnicas de imputación para el tratamiento de la ausencia de respuesta y conjuga modelos probabilísticos junto con los pesos del diseño de muestreo para mitigar los efectos de este problema. <span class="citation"><a href="#ref-Sar1" role="doc-biblioref">C. Särndal</a> (<a href="#ref-Sar1" role="doc-biblioref">2011</a>)</span> considera un enfoque asistido por modelos, en donde toma conjuntos balanceados para lograr mayor representatividad de las estimaciones. De la misma forma, <span class="citation"><a href="#ref-Sar2" role="doc-biblioref">C. Särndal y Lundstrom</a> (<a href="#ref-Sar2" role="doc-biblioref">2010</a>)</span> propone un conjunto de indicadores para juzgar la efectividad de la información auxiliar utilizada para controlar el sesgo generado por la ausencia de respuesta.</p>
+<p>En términos de literatura, el fenómeno de la ausencia de respuesta y sus recpercusiones negativas sobre la calidad de las estimaciones ha sido ampliamente estudiado. Por ejemplo, <span class="citation"><a href="#ref-Lumley_2010" role="doc-biblioref">Lumley</a> (<a href="#ref-Lumley_2010" role="doc-biblioref">2010, cap. 9</a>)</span> hace un análisis detallado con la ausencia de respuesta individual, en donde existen datos parciales para un respondiente, considerando un enfoque que está basado en el diseño de muestreo al ajustar los pesos muestrales. <span class="citation"><a href="#ref-Fuller" role="doc-biblioref">W. A. Fuller</a> (<a href="#ref-Fuller" role="doc-biblioref">2009, cap. 5</a>)</span> cita algunas técnicas de imputación para el tratamiento de la ausencia de respuesta y conjuga modelos probabilísticos junto con los pesos del diseño de muestreo para mitigar los efectos de este problema. <span class="citation"><a href="#ref-Sar1" role="doc-biblioref">C. Särndal</a> (<a href="#ref-Sar1" role="doc-biblioref">2011</a>)</span> considera un enfoque asistido por modelos, en donde toma conjuntos balanceados para lograr mayor representatividad de las estimaciones. De la misma forma, <span class="citation"><a href="#ref-Sar2" role="doc-biblioref">C. Särndal y Lundstrom</a> (<a href="#ref-Sar2" role="doc-biblioref">2010</a>)</span> propone un conjunto de indicadores para juzgar la efectividad de la información auxiliar utilizada para controlar el sesgo generado por la ausencia de respuesta.</p>
 </div>
 <h3>Referencias</h3>
 <div id="refs" class="references csl-bib-body hanging-indent">

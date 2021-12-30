@@ -24,14 +24,14 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2021-12-29" />
+<meta name="date" content="2021-12-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="valores-atípicos-en-una-encuesta-de-consumo.html"/>
+<link rel="prev" href="pruebas-de-hipótesis-sobre-indicadores-agregados.html"/>
 
 <script src="libs/header-attrs-2.8/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
@@ -304,6 +304,15 @@ div.csl-indent {
 <li class="chapter" data-level="15.1" data-path="algunos-métodos-de-detección-de-valores-extremos.html"><a href="algunos-métodos-de-detección-de-valores-extremos.html"><i class="fa fa-check"></i><b>15.1</b> Algunos métodos de detección de valores extremos</a></li>
 <li class="chapter" data-level="15.2" data-path="valores-atípicos-en-una-encuesta-de-consumo.html"><a href="valores-atípicos-en-una-encuesta-de-consumo.html"><i class="fa fa-check"></i><b>15.2</b> Valores atípicos en una encuesta de consumo</a></li>
 </ul></li>
+<li class="part"><span><b>III Procesamiento derivado en las encuestas de hogares</b></span></li>
+<li class="chapter" data-level="16" data-path="agregación-de-encuestas.html"><a href="agregación-de-encuestas.html"><i class="fa fa-check"></i><b>16</b> Agregación de encuestas</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="esquemas-de-acumulación-de-muestras.html"><a href="esquemas-de-acumulación-de-muestras.html"><i class="fa fa-check"></i><b>16.1</b> Esquemas de acumulación de muestras</a></li>
+<li class="chapter" data-level="16.2" data-path="factores-de-expansión-y-estimadores-de-muestreo.html"><a href="factores-de-expansión-y-estimadores-de-muestreo.html"><i class="fa fa-check"></i><b>16.2</b> Factores de expansión y estimadores de muestreo</a></li>
+<li class="chapter" data-level="16.3" data-path="agregación-de-encuestas-con-diferentes-tamaños-de-muestra.html"><a href="agregación-de-encuestas-con-diferentes-tamaños-de-muestra.html"><i class="fa fa-check"></i><b>16.3</b> Agregación de encuestas con diferentes tamaños de muestra</a></li>
+<li class="chapter" data-level="16.4" data-path="efecto-del-tipo-de-encuesta-en-la-eficiencia-de-los-indicadores.html"><a href="efecto-del-tipo-de-encuesta-en-la-eficiencia-de-los-indicadores.html"><i class="fa fa-check"></i><b>16.4</b> Efecto del tipo de encuesta en la eficiencia de los indicadores</a></li>
+<li class="chapter" data-level="16.5" data-path="pruebas-de-hipótesis-sobre-indicadores-agregados.html"><a href="pruebas-de-hipótesis-sobre-indicadores-agregados.html"><i class="fa fa-check"></i><b>16.5</b> Pruebas de hipótesis sobre indicadores agregados</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
 <li class="divider"></li>
 <li><a Diseño y análisis de encuestas de hogares</a></li>
@@ -343,6 +352,9 @@ Ballin, Marco, y Giulio Barcaroli. 2013. <span>«Joint determination of optimal 
 </div>
 <div class="csl-entry">
 Barcaroli, Giulio. 2014. <span>«SamplingStrata: An R Package for the Optimization of Stratified Sampling»</span>. <em>Journal of Statistical Software</em> 61 (1): 1-24. <a href="https://doi.org/10.18637/jss.v061.i04">https://doi.org/10.18637/jss.v061.i04</a>.
+</div>
+<div class="csl-entry">
+Bell, Phillip. 2001. <span>«Comparison of Alternative Labour Force Survey Estimators»</span>. <em>Survey Methodology</em> 27 (1): 53-63.
 </div>
 <div class="csl-entry">
 Bethlehem, Jelke, Fannie Cobben, y Barry Schouten. 2009. <span>«Indicators for the Representativeness of Survey Response»</span>. En <em>Statistics Canada’s International Symposium</em>, 10.
@@ -390,6 +402,9 @@ Filzmoser, P., J. Gussenbauer, y M. Templ. 2016. <em>Detecting outliers in house
 Foster, James, Joel Greer, y Erik Thorbecke. 1984. <span>«A Class of Decomposable Poverty Measures»</span>. <em>Econometrica</em> 52 (3): 761-66. <a href="https://doi.org/10.2307/1913475">https://doi.org/10.2307/1913475</a>.
 </div>
 <div class="csl-entry">
+Fuller, W. 1990. <span>«Analysis of Repeated Surveys»</span>. <em>Survey Methodology</em> 16 (2): 167-80.
+</div>
+<div class="csl-entry">
 Fuller, W. A. 2009. <em>Sampling Statistics</em>. Wiley.
 </div>
 <div class="csl-entry">
@@ -403,6 +418,9 @@ Groves, Robert, Floyd Fowler, Mick Couper, James Lepkowski, Eleanor Singer, y Ro
 </div>
 <div class="csl-entry">
 Gunning, Patricia, y Jane M Horgan. 2004. <span>«A New Algorithm for the Construction of Stratum Boundaries in Skewed Populations»</span>. <em>Survey Methodology</em> 30 (2): 159-66.
+</div>
+<div class="csl-entry">
+Gurney, M., y J. Daly. 1965. <span>«A Multivariate Approach to Estimation in Periodic Sample Surveys»</span>. En <em>Proceedings of the Social Statistics Section, American Statistical Association</em>, 242-57.
 </div>
 <div class="csl-entry">
 Gutierrez, Hugo Andres, Hanwen Zhang, y Nelson Rodriguez. 2016. <span>«The Performance of Multivariate Calibration on Ratios, Means and Proportions»</span>. <em>Revista Colombiana de Estadística</em> 39 (2): 281. <a href="https://doi.org/10.15446/rce.v39n2.55424">https://doi.org/10.15446/rce.v39n2.55424</a>.
@@ -465,6 +483,9 @@ Kim, Jae Kwang, y Minsun Kim Riddles. 2012. <span>«Some theory for propensity-s
 Kish, Leslie. 1965. <em>Survey Sampling</em>. John Wiley; Sons.
 </div>
 <div class="csl-entry">
+———. 1999. <span>«Cumulating/combining population surveys»</span>. <em>Survey Methodology</em> 25 (2): 129-38.
+</div>
+<div class="csl-entry">
 ———. 2004. <em>Statistical Design for Research</em>. Wiley classic biblioteca edición. Wiley. <a href="https://www.wiley.com/en-us/Statistical+Design+for+Research-p-9780471691204">https://www.wiley.com/en-us/Statistical+Design+for+Research-p-9780471691204</a>.
 </div>
 <div class="csl-entry">
@@ -493,6 +514,12 @@ Lavallée, Pierre, y Michael A. Hidiroglou. 1988. <span>«On the Stratification 
 </div>
 <div class="csl-entry">
 Lemaitre, G, y Johane Dufour. 1987. <span>«An integrated method for weighting persons and families»</span>. <em>Survey Methodology</em> 13 (2).
+</div>
+<div class="csl-entry">
+Lent, Janice, Stephen M. Miller, y Martha Duff. 1999. <span>«Effects of Composite Weights on Some Estimates from the Current Population Survey»</span>. <em>Journal of Official Statistics; Stockholm</em> 15 (3): 431.
+</div>
+<div class="csl-entry">
+Lewis, Taylor. 2017. <span>«Estimation Strategies Involving Pooled Survey Data»</span>. En <em>SAS Global Forum</em>.
 </div>
 <div class="csl-entry">
 Likert, R. 1932. <span>«A technique for the measurement of attitudes.»</span>. <em>Archives of Psychology</em> 22 140: 55-55.
@@ -609,6 +636,9 @@ Silva, PL. d N. 2004. <span>«Calibration estimation: when and why, how much and
 Starick, Rosslyn, y Nicole Watson. 2011. <span>«Evaluation of Alternative Income Imputation Methods for the HILDA Survey»</span>. <em>Working paper</em>, 38.
 </div>
 <div class="csl-entry">
+Steel, D., y C. McLaren. 2008. <span>«Design and Analysis of Repeated Surveys»</span>.
+</div>
+<div class="csl-entry">
 Sun, Claire. 2010. <span>«HILDA Expenditure imputation»</span>. <em>Working paper</em>.
 </div>
 <div class="csl-entry">
@@ -622,6 +652,9 @@ Tillé, Yves. 2006b. <em>Sampling Algorithms</em>. Springer Series en Statistics
 </div>
 <div class="csl-entry">
 Tillé, Yves, y Alina Matei. 2016. <em>sampling: Survey Sampling</em>. <a href="https://CRAN.R-project.org/package=sampling">https://CRAN.R-project.org/package=sampling</a>.
+</div>
+<div class="csl-entry">
+Train, G., L. Cahoon, y P. Makens. 1978. <span>«The Current Population Survey Variances, Inter-Relationships and Design Effects»</span>. En.
 </div>
 <div class="csl-entry">
 UN. 2005. <em>Household surveys in developing and transition countries</em>. Studies en methods / United Nations, Department of Economic y Social Affairs, Statistics Division Series F.
@@ -675,7 +708,7 @@ Yates, F., y P. M. Grundy. 1953. <span>«Selection without replacement from with
           </div>
         </div>
       </div>
-<a href="valores-atípicos-en-una-encuesta-de-consumo.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="pruebas-de-hipótesis-sobre-indicadores-agregados.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>

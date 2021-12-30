@@ -127,18 +127,12 @@ Para mostrar cómo el ajuste a los factores de expansión, con las dos metodolog
 
 En primera instancia, cabe mencionar que la población se definió a partir del ingreso del hogar, y se creó usando variables auxiliares disponibles (sexo). De esta forma, se le dio una probabilidad de respuesta diferencial entre los grupos correspondientes al cruce de las categorías de estas dos variables. Como resultado de las simulaciones, se generaron estimaciones para el estimador de Horvitz-Thompson sin ajuste de ningún tipo y para un estimador de calibración que tuvo en cuenta los conteos poblacionales censales para cada las dos categorías de la variables sexo. La figura \@ref(fig:fightcal) muestra el comportamiento de ambas estimaciones. La línea roja refleja el parámetro desconocido, los puntos negros indican las estimaciones del estimador de calibración en cada iteración de la simulación, mientras que los puntos grises muestran las estimaciones del estimador de Horvitz-Thompson en cada iteración de la simulación
 
-<div class="figure">
-<img src="Pics/c9.png" alt="Estimaciones de Horvtiz-Thompson y de calibración." width="50%" />
-<p class="caption">(\#fig:fightcal)Estimaciones de Horvtiz-Thompson y de calibración.</p>
-</div>
+![(\#fig:fightcal)Estimaciones de Horvtiz-Thompson y de calibración.](Pics/c9.png){width=50%}
 
 
 En conjunto con la gráfica anterior, la figura \@ref(fig:fightcaldist) muestra la distribución sesgada del estimador de Horvitz-Thompson (gris) en comparación con el insesgamiento del estimador de calibración (negro). Bajo este esquema de respuesta, incluir en la calibración las variables pertinentes corrige el sesgo generado por la ausencia de respuesta. En este estudió se encontró que el estimador ingenuo (HT) produjo sesgo para la estimación de los tamaños de hombres y mujeres, para el tamaño de la población, para los ingresos de hombres y mujeres y para los ingresos de la población.
 
-<div class="figure">
-<img src="Pics/c10.png" alt="Distribuciones del estimador de Horvtiz-Thompson y del estimador de calibración" width="50%" />
-<p class="caption">(\#fig:fightcaldist)Distribuciones del estimador de Horvtiz-Thompson y del estimador de calibración</p>
-</div>
+![(\#fig:fightcaldist)Distribuciones del estimador de Horvtiz-Thompson y del estimador de calibración](Pics/c10.png){width=50%}
 
 Como se mencionó anteriormente, hay mejores formas de calibrar, puesto que el problema de la calibración se reduce a cómo introducir la información auxiliar en la estructura de estimación de la encuesta, es posible que existan variables que reduzcan el sesgo, pero no todas las variables inducirán el mismo nivel de precisión. Al momento de escoger, se deberían seleccionar aquellas variables que reduzcan el sesgo y que además reduzcan la varianza. Por tanto, las variables auxiliares que se usen como insumo en los procesos de calibración deben:
 
@@ -149,10 +143,7 @@ Como se mencionó anteriormente, hay mejores formas de calibrar, puesto que el p
 
 En particular al introducir otras covariables en la calibración (grupo de edad, escolaridad, región, área), además de la corrección del sesgo se evidencia un aumento de la precisión en las nuevas estimaciones, tal como lo muestra las distribuciones de los estimadores en la figura \@ref(fig:fightcal2dist), en donde se consideran tres estimadores: el estimador de Horvitz-Thompson (gris claro), el estimador de calibración con restricción de sexo (negro) y el estimador de calibración con todas las restricciones (gris oscuro).
 
-<div class="figure">
-<img src="Pics/c12.png" alt="Distribuciones del estimador de Horvtiz-Thompson y de dos estimadores de calibración" width="50%" />
-<p class="caption">(\#fig:fightcal2dist)Distribuciones del estimador de Horvtiz-Thompson y de dos estimadores de calibración</p>
-</div>
+![(\#fig:fightcal2dist)Distribuciones del estimador de Horvtiz-Thompson y de dos estimadores de calibración](Pics/c12.png){width=50%}
 
 
 ## La pandemia por COVID-19
@@ -168,17 +159,11 @@ Haciendo cálculos gruesos, si suponemos que la cobertura de la submuestra que s
 
 La figura \@ref(fig:fight3dist) presenta tres posibles escenarios que los INE pudieron encontrar en esta búsqueda. En el diagrama de la izquierda se verifica la ausencia de sesgo, en el diagrama del centro y en el de la derecha se confirma que la magnitud del sesgo es significativa. Nótese que la línea horizontal azul correspondería a la estimación publicada en el mes en el que se seleccionó la muestra maestra, mientras que la línea roja horizontal representa el promedio de las simulaciones con la muestra efectiva. Cada uno de los resultados de las simulaciones está representado por las fluctuaciones punteadas.
 
-<div class="figure">
-<img src="Pics/calnr1.png" alt="Distribuciones del estimador de Horvtiz-Thompson en tres escenarios de interés." width="50%" />
-<p class="caption">(\#fig:fight3dist)Distribuciones del estimador de Horvtiz-Thompson en tres escenarios de interés.</p>
-</div>
+![(\#fig:fight3dist)Distribuciones del estimador de Horvtiz-Thompson en tres escenarios de interés.](Pics/calnr1.png){width=50%}
 
 La figura \@ref(fig:fight4dist) muestra un escenario simulado en donde se contempla el uso del estimador ajustado con la técnica de *propensity score* (línea verde) y el estimador de calibración en dos etapas (línea azul) comparado con el estimador sin ningún tipo de ajuste (línea negra). Lo que se esperaría es que es estimador ingenuo subestime los tamaños poblacionales y los indicadores de interés; mientras que los estimadores ajustados, siempre que el mecanismo de ausencia de respuesta sea MAR o MCAR, elimina este sesgo. 
 
-<div class="figure">
-<img src="Pics/calnr2.png" alt="Distribuciones del estimador de Horvtiz-Thompson y de dos estimadores ajustados." width="50%" />
-<p class="caption">(\#fig:fight4dist)Distribuciones del estimador de Horvtiz-Thompson y de dos estimadores ajustados.</p>
-</div>
+![(\#fig:fight4dist)Distribuciones del estimador de Horvtiz-Thompson y de dos estimadores ajustados.](Pics/calnr2.png){width=50%}
 
 Los caminos que se deben seguir luego de corroborar la presencia (o ausencia) de sesgo dependerán de la estrategia de levantamiento de información que los países hayan decidido hacer. En el escenario más optimista, ante la ausencia de sesgo, se estaría en una buena posición para replicar los procesos usuales de inferencia. Sin embargo, ante la sospecha de que sí existe sesgo - posición parsimoniosa y recomendada por @CEPAL_sesgos2020 -, y dependiendo de la información auxiliar disponible, los INE pudieron disponer de las dos alternativas metodológicas que se describieron anteriormente. 
 

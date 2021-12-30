@@ -4,10 +4,22 @@ Después de que la muestra fue seleccionada y luego de realizar el proceso de me
 
 Aunque la escogencia del diseño de muestreo y el estimador sean de libre elección para los investigadores, no lo es el cálculo de las medidas de confiabilidad y precisión. Dado que la base científica sobre la cual descansa el muestreo es la inferencia estadística, se deben respetar las normas básicas para la asignación y posterior cálculo del margen de error, que constituye una medida unificada del error total de muestreo que cuantifica la incertidumbre acerca de las estimaciones en una encuesta. La forma de estimar el error estándar depende de:
 
-- La complejidad del diseño de muestreo: estratifiación, selección proporcional al tamaño, múltiples etapas. 
+- La complejidad del diseño de muestreo: estratificación, selección proporcional al tamaño, múltiples etapas. 
 - La complejidad del estimador: ajuste de pesos por ausencia de respuesta, calibración, razón de totales, medias, percentiles, coeficientes de regresión. 
 
 En general, podría afirmase que existen tres alternativas para calcular el error estándar de las estimaciones en una encuesta. Basados en la estrategia de muestreo es posible encontrar las *fórmulas exactas* que describan la varianza del estimador; sin embargo cuando el estimador utilizado no es una función lineal de totales, puede ser posible utilizar un enfoque de *linealización de Taylor* para aproximar la varianza del estimador a una función lineal. Por último, es posible apoyarse en en los métodos computacionales moderno y aplicar los principios de los *pesos replicados* para aproximar la varianza de cualquier estimador en una encuesta de hogares. 
+
+Actualmente, los softwares estadísticos más comúnmente utilizados incluyen
+procedimientos para la estimación de la varianza teniendo en cuenta
+diseños de muestreo complejos. Una forma sencilla de usarlos es
+siguiendo estos pasos en una base de datos agregada:
+
+1.  Modificar los pesos, de tal forma que cumplan las restricciones
+    poblacionales básicas.
+2.  Definir los estratos de interés en donde el diseño de muestreo se
+    realiza de forma independiente.
+3.  Definir estrictamente las UPM como aglomerados poblacionales que
+    incluyen a los hogares y personas (con sus múltiples entrevistas).
 
 ## Fórmulas exactas y linealización de Taylor
 

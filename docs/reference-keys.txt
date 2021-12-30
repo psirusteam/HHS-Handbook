@@ -120,3 +120,9 @@ consideraciones-sobre-la-imputación-múltiple
 detección-de-datos-atípicos
 algunos-métodos-de-detección-de-valores-extremos
 valores-atípicos-en-una-encuesta-de-consumo
+agregación-de-encuestas
+esquemas-de-acumulación-de-muestras
+factores-de-expansión-y-estimadores-de-muestreo
+agregación-de-encuestas-con-diferentes-tamaños-de-muestra
+efecto-del-tipo-de-encuesta-en-la-eficiencia-de-los-indicadores
+pruebas-de-hipótesis-sobre-indicadores-agregados

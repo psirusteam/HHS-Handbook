@@ -47,6 +47,19 @@ La figura anterior ejemplifica tres esquemas longitudinales que pueden ser cread
 
 El análisis longitudinal de las encuestas de hogares es un insumo valioso en la toma de decisiones puesto que permite obtener proveer una visión complementaria a los fenómenos sociales que no se puede obtener por otros medios. El seguimiento continuo a las unidades de observación no puede ser llevado a cabo en todas las encuestas continuas de la región, sino solamente en aquellas que contemplen esquemas rotativos en su planificación. Dado que en algunas encuestas, se contempla la asignación de la muestra a diferentes grupo de rotación, es posible analizar el comportamiento de los flujos brutos sobre indicadores tan importantes como los relacionados a la situación en la ocupación, la pobreza, entre otros.
 
+En un contexto de estimación de cambios brutos con la definición de tablas de contingencia, @Feinberg_Stasny_1983 asumen que las diferencias entre los pesos de muestreo en dos periodos de tiempo distintos ocurren solamente como resultado de los flujos naturales de entrada y
+salida de la población de interés. Por ejemplo, si el individuo es
+clasificado como empleado en ambos tiempos y $w_k^{t-1}=300$ y
+$w_k^{t}=305$, entonces el peso mínimo, 300, se añade a la celda
+(Empleado - Empleado) de la tabla de cambios brutos y la diferencia
+entre los pesos, 5, se añade a la celda (Fuera - Empleado). Si por el
+contrario, $w_k^{t-1}=305$ y $w_k^{t}=300$, entonces el peso mínimo,
+300, se añade a la celda (Empleado - Empleado) de la tabla de cambios
+brutos y la diferencia entre los pesos, 5, se añade a la celda (Empleado
+- Fuera). Este enfoque supone que las diferencias entre los pesos están
+supeditadas a las fluctuaciones que se puedan presentar en la fuerza de
+trabajo. 
+
 El objetivo de esta sección es generar pesos longitudinales para todos los individuos pertenecientes a los paneles incumbentes de la muestra original en los dos primeros trimestre del 2020. Siguiendo la metodología de @Verma_Betti_Ghellini, es necesario seguir un procedimiento secuencial para la creación de los factores de expansión en el panel. En este orden de ideas, primero es necesario crear el conjunto de pesos iniciales (trasnversales en el primer periodo) para luego definir los pesos finales (longitudinales en el primer y segundo periodo). A continuación se resume el procedieminto:
 
 1. Creación de pesos iniciales: teniendo en cuenta los pormenores del diseño de muestreo, la ENE selecciona una muestra de hogares y de personas que son miembros de estos hogares. Las ponderaciones iniciales se definen a partir de los factores de expansión transversales. Este proceso plantea al menos los siguientes pasos:
@@ -80,9 +93,14 @@ $$
 d_{1, k}^{básico} = \frac{d_{1, k}}{Pr(\text{selección de paneles})}
 $$
 
-Al realizar la combinación de los dos primeros trimestres del 2020 en nuestro ejemeplo es evidente que hay tres paneles coincidentes y como la muestra transversal contiene cuatro paneles, entonces $Pr(\text{selección de paneles}) = \frac{3}{4}$. En cambio, por las condiciones asumidas para enfrentar la pandemia, cuando se realiza la combinación del segundo y tercer trimestre en el ejemplo se tiene que $Pr(\text{selección de paneles}) = \frac{4}{4} = 1$.
+Al realizar la combinación de los dos primeros trimestres del 2020 en nuestro ejemplo es evidente que hay tres paneles coincidentes y como la muestra transversal contiene cuatro paneles, entonces $Pr(\text{selección de paneles}) = \frac{3}{4}$. En cambio, por las condiciones asumidas para enfrentar la pandemia, cuando se realiza la combinación del segundo y tercer trimestre en el ejemplo se tiene que $Pr(\text{selección de paneles}) = \frac{4}{4} = 1$.
 
 Es importante notar que al combinar paneles, la inferencia que se realiza está supeditada al periodo del primer panel. Además, en este paso es indispensable corroborar que la suma de los pesos básicos esté cercana al tamaño de la población que se quiere representar. Es decir, $\sum_{s^{(1)}} d_{1, k}^{básico} \approxeq N$; en donde $s^{(1)}$ se define como el conjunto de respondientes en el primer periodo que pertenecen a los paneles coincidentes en la muestra para los periodos combinados.
+
+De la misma forma, la metodología de la
+encuesta *Survey of Labour and Income Dynamics* [@Naud_2002;
+@LaRoche_2003] plantea que un primer paso para crear los pesos longitudinales es mediante el ajuste por el inverso de la probabilidad de traslape). 
+
 
 #### Ajuste por ausencia de respuesta {-}
 
