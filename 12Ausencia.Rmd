@@ -1,4 +1,4 @@
-# Ausencia de respuesta y representatividad
+# Representatividad y ausencia de respuesta
 
 El problema de la ausencia de respuesta es una faceta normal, aunque no deseable, en el desarrollo de una encuesta. Todas las encuestas de hogares sufren del fenómeno de la ausencia de respuesta en algunas de las variables de interés. En algunas ocasiones y aún después de un diseño cuidadoso y una planificación logística exhaustiva, esta problemática puede ser tan grande que los resultados de la encuesta pueden quedar en entredicho. Por esta razón, este problema debe ser considerado en la planificación y el diseño de todos los levantamientos de información a través de encuestas y se debe contemplar varios ajustes que prevean las consecuencias de este fenómeno. Es por esto que en los capítulos anteriores se abordó el tema del ajuste de subcobertura, que garantiza que el tamaño de muestra efectivo sea el adecuado para realizar un inferencia precisa. De otra forma, si el diseño de la encuesta no tiene en cuenta estos ajustes, el tamaño de muestra final se verá reducido puesto que muchos hogares no contestarán algunas preguntas del cuestionarios, y en algunos casos, muchos hogares no contestarán la totalidad del cuestionario. 
 
@@ -7,7 +7,164 @@ Existe un consenso general de que la ausencia de respuesta puede perjudicar seve
 1. Se define la ausencia de respuesta ignorable cuando la probabilidad de que un individuo responda no depende de la característica de interés. Nótese que el adjetivo ignorable hace referencia a que un modelo puede explicar el mecanismo de ausencia de respuesta y que ésta se puede ignorar después de que el modelo la toma en cuenta.
 1. Por otra parte, la ausencia de respuesta se dice no ignorable cuando la probabilidad de que un individuo responda depende de la característica de interés. Por ejemplo, si en una encuesta de fuerza laboral, se desea estimar el número de personas empleadas o desempleadas, la ausencia de respuesta es no ignorable cuando depende de la clasificación laboral del individuo.
 
-Además, @Lumley_2010[, capítulo 9] hace un análisis detallado con la ausencia de respuesta individual, en donde existen datos parciales para un respondiente, considerando un enfoque que está basado en el diseño de muestreo al ajustar los pesos muestrales. @Fuller[, capítulo 5] cita algunas técnicas de imputación para el tratamiento de la ausencia de respuesta y conjuga modelos probabilísticos junto con los pesos del diseño de muestreo para mitigar los efectos de este problema. @Sar1 considera un enfoque asistido por modelos, en donde toma conjuntos balanceados para lograr mayor representatividad de las estimaciones. De la misma forma, @Sar2 propone un conjunto de indicadores para juzgar la efectividad de la información auxiliar utilizada para controlar el sesgo generado por la ausencia de respuesta. 
+En términos de literatura, el fenómeno de la ausencia de respuesta y sus recpercusiones negativas sobre la calidad de las estimaciones ha sido ampliamente estudiado. Por ejemplo, @Lumley_2010[, capítulo 9] hace un análisis detallado con la ausencia de respuesta individual, en donde existen datos parciales para un respondiente, considerando un enfoque que está basado en el diseño de muestreo al ajustar los pesos muestrales. @Fuller[, capítulo 5] cita algunas técnicas de imputación para el tratamiento de la ausencia de respuesta y conjuga modelos probabilísticos junto con los pesos del diseño de muestreo para mitigar los efectos de este problema. @Sar1 considera un enfoque asistido por modelos, en donde toma conjuntos balanceados para lograr mayor representatividad de las estimaciones. De la misma forma, @Sar2 propone un conjunto de indicadores para juzgar la efectividad de la información auxiliar utilizada para controlar el sesgo generado por la ausencia de respuesta. 
+
+## Indicadores de representatividad
+
+Como se mencionó anteriormente, la mayoría de las encuestas adolecen de falta de respuesta y este fenómeno puede afectar seriamente la calidad de
+los resultados de una encuesta. De hecho, las estimaciones de las características de la población estarán sesgadas si, debido a la falta de respuesta, algunos grupos de la población quedan sobre-representados o sub-representados; el problema se agrava cuando estos grupos
+se comportan de manera diferente con respecto a las variables de la
+encuesta. En referencia a la ausencia de respuesta de unidad, en general los INE de la región a menudo usan la tasa de respuesta de la encuesta como un indicador de la calidad de la encuesta. 
+
+Dado que una tasa de respuesta baja no implica necesariamente que la precisión de las estimaciones de la encuesta sea deficiente, centrarse solo en la tasa de respuesta como indicador de la calidad de la encuesta puede ser engañoso. Por ejemplo, @Bethlehem_Cobben_Schouten_2009 ilustran esta situación con un ejemplo de la encuesta holandesa POLS en 1998 (Encuesta Integrada de Condiciones de Vida de los Hogares). Después de un mes de trabajo de campo, la tasa de respuesta fue del 47,2%, mientras que después del período completo de dos meses, la tasa había aumentado al 59,7%. El modo de recolección de datos en el primer mes fue CAPI (entrevista
+personal asistida por computadora). Los que no respondieron fueron
+contactados en el segundo mes con CATI (Entrevista Telefónica Asistida
+por Computadora) si tenían un teléfono fijo en la lista. El segundo mes de trabajo de campo aumentó la respuesta en un 12,5%. Sin embargo, esto no resultó en mejores estimaciones puesto que el sesgo de los estimadores aumentó a partir del segundo mes, dado que las personas que habían reportado un número telefónico diferían de las que no reportaron este contacto.
+
+Adicional a la tasa de no respuesta, se necesitan indicadores
+de calidad de la encuesta que proporcionen más información sobre el
+posible riesgo de estimadores sesgados. Por ejemplo, @Shlomo_Skinner_Schouten_2012 estudian el uso de los *indicadores de representatividad* que permiten conocer qué tanto la muestra de respondientes efectivos representa a la población y cómo la composición
+de la respuesta en la muestra diferiría de la composición de la población finita. Estos indicadores han probado ser una guía importante para determinar en qué medida el sesgo causado por la ausencia de respuesta afecta la encuesta. De hecho, en Europa el proyecto RISQ (*Representativity Indicators for Survey Quality*) está basado en este enfoque y pretende desarrollar y probar indicadores R en varias encuestas de interés. Los países que participan en este proyecto Holanda, Noruega y Eslovenia, en conjunto con las universidad de Southampton (Reino Unido) y la Universidad de Lovaina (Bélgica). 
+
+
+### El concepto de representatividad
+
+El concepto de representatividad se utiliza a menudo en la investigación
+de encuestas, pero por lo general no está claro qué significa. En particular Kruskal y Mosteller presentan una amplia descripción
+de lo que se supone que significa el adjetivo representativo [@KruskalMosteller1, @KruskalMosteller2, @KruskalMosteller3, @KruskalMosteller4]. El concepto de muestra representativa no está del todo estandarizado; @Bethlehem_Cobben_Schouten_2009 menciona que algunos de estos conceptos son muy vagos e imprecisos; por ejemplo:
+
+- Reconocimiento general de los datos.
+- Ausencia de fuerzas selectivas en la muestra.
+- Una muestra que sea una miniatura de la población.
+- Una muestra que contenga casos típicos o ideales.
+- Cobertura suficiente de la población,
+- Que permite una buena estimación,
+- Suficientemente bueno para un propósito particular.
+
+En términos de notación, supongamos que se selecciona una muestra probabilística $s$ de tamaño $n$ sin reemplazo de una población finita $U$ de tamaño $N$. La muestra puede verse como un vector de $N$ indicadores $s=(I_{1},I_{2},\ldots,I_{N})$, donde el indicador $I_{k}=1$ si se selecciona el elemento $k$ en la muestra, y $I_{k}=0$ en caso contrario ($k=1,2,\ldots,N$). El fenómeno de la ausencia de respuesta se modela por medio de las probabilidades de respuesta. Para esto, se supone que cada elemento $k$ en la población tiene una cierta probabilidad desconocida $\phi_{k}$ de responder cuando se selecciona en la muestra. La respuesta a la encuesta se puede representar mediante el vector de indicadores $D=(D_{1},D_{2},\ldots,D_{N})$, donde $D_{k}=1$ si el elemento $k$ fue seleccionado en la muestra $(I_{k}=1)$ y respondió. De lo contrario, $D_{k}=0$. Por ende, se deduce que
+
+$$
+\phi_{k}=P\left(D_{k}=1\mid I_{k}=1\right)
+$$
+
+Para poder definir un indicador de representatividad, el concepto
+de representatividad que mejor se acomoda se define como \emph{la ausencia de fuerzas selectivas}. Está claro que no existen fuerzas selectivas si todas las probabilidades de respuesta son uniformes. Esta observación forma la base de la primera definición de representatividad.
+
+#### Representatividad fuerte {-}
+
+La respuesta a una encuesta se denomina representativa fuerte con
+respecto a la muestra, si las probabilidades de respuesta de todos
+los elementos de la población son iguales y si la respuesta de un
+elemento es independiente de la respuesta de todos los demás elementos.
+En otras palabras:
+
+$$
+\phi_{k} = P\left(D_{k}=1\mid I_{k}=1\right) =  \phi  \ \ \ \ \ \ \ \ \ \ k=1,2,\ldots,N
+$$
+
+Se debe tener en cuenta que la representatividad fuerte se garantiza cuando el mecanismo de datos faltantes es MCAR para cada variable objetivo en el estudio. En este caso, la falta de respuesta no provoca que los estimadores estén sesgados. Esta es una definición atractiva, pero no es muy útil ya que en la práctica no es posible comparar las probabilidades de respuesta individual.
+
+#### Representatividad débil {-}
+
+Suponga que hay una variable auxiliar categórica $X$ que tiene $H$
+categorías y divide la población en $H$ estratos (subpoblaciones).
+El número de elementos en el estrato $h$ se denota por $N_{h}$,
+para $h=1,2,\ldots,H$. Se asume que esta variable ha sido medida
+en la encuesta y que su valor está disponible para cada encuestado
+y no encuestado. La probabilidad de respuesta del elemento $k$ en
+el estrato $h$ está definida por $\phi_{hk}$.
+
+La respuesta a una encuesta se denomina débilmente representativa
+con respecto a la muestra para la variable auxiliar $X$ si la probabilidad
+de respuesta promedio es la misma en cada estrato, es decir,
+
+$$
+\bar{\phi}_{h} =  
+\frac{1}{N_{h}}\sum_{k=1}^{N_{h}}\phi_{hk} =
+\phi \ \ \ \ \ \ \ \ \ \  h=1,2,\ldots,H
+$$
+
+La representatividad débil significa que no es posible distinguir
+a los encuestados de los no encuestados simplemente usando información
+con respecto a $X$. Si la respuesta es débilmente representativa con respecto a muchas variables auxiliares $X$, existirán relaciones fuertes entre las variables objetivo y las variables auxiliares. Nótese que es posible estimar las medias de las probabilidades de respuesta en los estratos y, por lo tanto, se puede comprobar en la práctica el supuesto de representatividad débil.
+
+
+### Indicadores $R$
+
+Los indicadores $R$ miden hasta qué punto la composición de
+la respuesta a una encuesta se desvía de la muestra original. Si todas las probabilidades de respuesta son iguales, la respuesta
+es fuertemente representativa y no habrá diferencias sistemáticas
+entre la composición de la respuesta y la muestra. Por el contrario, si las probabilidades de respuesta no son iguales, es importante
+establecer en qué medida se ve afectada la composición de la respuesta. Esto se logra mediante la definición de una función de distancia
+que mide en qué medida las probabilidades de respuesta individuales
+difieren de la probabilidad de respuesta media.
+
+Supongamos que se conocen las probabilidades de respuesta individual
+$\phi_{1},\phi_{2},\ldots,\phi_{N}$ de todos los elementos de la población.
+Entonces la desviación estándar es
+
+$$
+S\left(\phi\right)  =  \sqrt{\frac{1}{N-1}\sum_{k=1}^{N}\left(\phi_{k}-\bar{\phi}\right)^{2}}
+$$
+
+Nótese que $S\left(\phi\right)=0$ si todas las probabilidades de respuesta
+son iguales y el valor de $S\left(\phi\right)$ será mayor a medida
+que haya más variación en los valores de las probabilidades de respuesta. Además, el valor máximo de $S\left(\phi\right)$ es igual a 0.5. Por ende, el indicador $R$ se define como: 
+
+$$
+R\left(\phi\right)=1-2\,S\left(\phi\right)
+$$
+
+Este indicador asume valores en el intervalo $\left[0,1\right]$. De esta manera, un valor de uno implica una fuerte representatividad. Cuanto menor es su valor, más se desvía la composición de respuesta
+de la composición de la muestra. En general, los valores de las probabilidades de respuesta individuales se desconocen en la práctica. Este problema se resuelve estimando las probabilidades de respuesta. Esto se puede lograr si se dispone de información auxiliar adecuada; es decir, de variables que se han medido tanto para los encuestados como para los no encuestados. Para estimar estas probabilidades es posible utilizar varias técnicas, por ejemplo, modelos logísticos o probit, árboles de clasificación, entre otras. 
+
+Al suponer que $\hat{\phi}_{1},\hat{\phi}_{2},\ldots,\hat{\phi}_{n}$ son
+las probabilidades de respuesta estimadas para las unidades en la muestra.
+Entonces, la probabilidad de respuesta media se puede estimar mediante
+
+$$
+\hat{\bar{\phi}}  =  \frac{1}{N}\sum_{k=1}^{n}\frac{\hat{\phi}_{k}}{\pi_{k}}
+$$
+
+y
+
+$$
+\hat{R}\left(\phi\right)  =  1-2\sqrt{\frac{1}{N-1}\sum_{k=1}^{n}\frac{\left(\hat{\phi}_{k}-\hat{\bar{\phi}}\right)^{2}}{\pi_{k}}}
+$$
+
+Nótese que el indicador $R$ mide la desviación de la representatividad débil y no de la representatividad fuerte. Por ende, este enfoque no es capaz de detectar y cuantificar las diferencias
+entre las probabilidades de respuesta individual dentro de las clases obtenidas al cruzar las variables auxiliares. Suponiendo que las clases están definidas por una variable auxiliar $X$ que tiene $H$ categorías. Sea $N_{h}$ el tamaño de la clase $h$ y sea $\bar{\phi}_{h}$ la media poblacional de las probabilidades de respuesta en el estrato $h$. Si se utiliza un modelo estándar como la regresión logística, el indicador $R$ se calcula como:
+
+$$
+R_{x}\left(\phi\right)  =  1-2\sqrt{\frac{1}{n-1}\sum_{h=1}^{H}N_{h}\left(\bar{\phi}_{h}-\bar{\phi}\right)^{2}}
+$$
+
+En este caso, $R_{x}\left(\phi\right)$ mide la variación de las probabilidades de respuesta entre clases $X$. Si se supone que la variación dentro de la clase es cero en todas las clases, entonces $R_{x}\left(\phi\right) = R\left(\phi\right)$. 
+
+### El indicador $R$ en la práctica
+
+@Bethlehem_Cobben_Schouten_2009 mencionan que de julio a diciembre de 2005, Statistics Netherlands realizó un seguimiento a gran escala entre los no encuestados en la Encuesta de Población Activa (EPA) de Holanda. En el estudio, se abordó a dos muestras de personas que no respondieron en la EPA utilizando, por un lado, el enfoque de devolución de llamada con el cuestionario completo de la EPA y, por el otro lado, el enfoque de preguntas básicas con un cuestionario muy corto. Se usó CATI en el enfoque de devolución de llamada, y el enfoque de preguntas básicas se utilizó un diseño de recolección mixto que involucró cuestionarios *online* y recolección presencial con papel y CAPI. Los indicadores R se estimaron utilizando modelos de regresión logística que incluían una gran cantidad de variables explicativas que medían características demográficas, geográficas y socioeconómicas en los hogares. Los resultados de este estudio se dan a continuación:
+
+1. Se reportó que el valor del indicador $R$ para la respuesta inicial de la EPA es igual a 0.8, que es menor que el valor ideal de 1. Entonces, esta respuesta no es fuertemente representativa. La aplicación del enfoque de devolución de llamada aumentó la
+tasa de respuesta del 62.2% al 76.9%. Luego de esto, el valor del indicador $R$ aumentó de 0.8 a 0.85. Como los intervalos de confianza no se superponían, hubo indicios de que la respuesta adicional mejoró la composición del conjunto de datos.
+1. La aplicación del enfoque de preguntas básicas dio como resultado
+una conclusión diferente. Aunque la tasa de respuesta aumentó del 62.2% al 75.6%, el valor del indicador $R$ disminuyó de 0.80 a 0.78. Los intervalos para la EPA inicial y la EPA con preguntas básicas, se superpusieron. Por lo tanto, aparentemente, el enfoque de preguntas básicas no mejoró la composición del conjunto de datos. 
+
+Este último enfoque no es novedoso y agudiza el contraste entre respondientes y no respondientes. Dado que las probabilidades de respuesta estimadas se utilizan para calcular
+el indicador $R$ y esta estimación se basa en un modelo lineal que utiliza un conjunto de variables auxiliares como variables explicativas. 
+
+La dependencia del indicador $R$ del conjunto de variables auxiliares utilizadas tiene implicaciones para comparar diferentes conjuntos de datos (por ejemplo, en el tiempo o en dominios). Un enfoque apropiado podría ser fijar el conjunto de variables auxiliares de antemano y mantenerlas iguales para todos los conjuntos de datos. Para ello, debe elegirse el máximo posible de variables. Por otro lado, debido al sobreajuste, el error estándar (estimado) puede verse
+afectado, pero las probabilidades de respuesta estimadas no serán sesgadas.
+
+Otro enfoque que se recomienda, podría ser intentar encontrar el mejor modelo para cada conjunto de datos utilizando técnicas de selección de modelos. Esto hace que los modelos dependan del tamaño de la muestra: cuanto
+mayor sea la muestra, más variables del modelo tendrán una contribución significativa. Las muestras pequeñas simplemente no permiten una estimación adecuada de las probabilidades de respuesta y conducirán a una visión más optimista de la representatividad.
+
+
+Con esta metodología es posible determinar si la composición de la muestra de respondientes efectivos difiere o no de la de la muestra inicial. Los resultados de este proceso de seguimiento pueden ayudar a sustentar
+la decisión de iniciar esfuerzos adicionales para obtener datos para grupos específicos de la población objetivo; este enfoque también puede resultar útil para evaluar si volver a abordar una muestra de personas que no respondieron sería una buena estrategia para acotar el sesgo, o si con un enfoque de preguntas básicas sería suficiente.
+
+El uso de esta metodología durante la fase de recolección de datos podría revelar que la composición de los datos observados se está desviando cada vez más de la estructura poblacional esperada. Esto podría llevar a la decisión de enfocar el resto del proceso de recolección en los grupos que están subrepresentados. Estos cambios en medio de la encuesta se conocen en la literatura especializada como *diseños receptivos*. Otra forma de utilizar el indicador $R$ para controlar el proceso de la encuesta es analizar la representatividad de una versión anterior de la encuesta. Los resultados de dicho análisis pueden proporcionar información para implementar una estrategia mejorada de recopilación de datos para una nueva versión de la encuesta. 
+
 
 ## Clasificación de la ausencia de respuesta
 
@@ -194,158 +351,3 @@ knitr::include_graphics("Pics/j5.png")
 Los capítulos anteriores profundizaron en el tema de la creación de factores de expansión para los individuos presentes en la base de datos final. De tal forma que en los capítulos posteriores se abordará algunas metodologías de imputación que pueden ser recomendables a la hora de completar una base de datos estructurada y rectangular cuyas entradas estén completas. Antes de introducir estos temas se presentarán algunas medidas descriptivas que pueden ser usadas para generar alertas sobre la pérdida de representatividad debido a la ausencia de respuesta. 
 
 
-## Indicadores de representatividad
-
-Como se mencionó anteriormente, la mayoría de las encuestas adolecen de falta de respuesta y este fenómeno puede afectar seriamente la calidad de
-los resultados de una encuesta. De hecho, las estimaciones de las características de la población estarán sesgadas si, debido a la falta de respuesta, algunos grupos de la población quedan sobre-representados o sub-representados; el problema se agrava cuando estos grupos
-se comportan de manera diferente con respecto a las variables de la
-encuesta. En referencia a la ausencia de respuesta de unidad, en general los INE de la región a menudo usan la tasa de respuesta de la encuesta como un indicador de la calidad de la encuesta. 
-
-Dado que una tasa de respuesta baja no implica necesariamente que la precisión de las estimaciones de la encuesta sea deficiente, centrarse solo en la tasa de respuesta como indicador de la calidad de la encuesta puede ser engañoso. Por ejemplo, @Bethlehem_Cobben_Schouten_2009 ilustran esta situación con un ejemplo de la encuesta holandesa POLS en 1998 (Encuesta Integrada de Condiciones de Vida de los Hogares). Después de un mes de trabajo de campo, la tasa de respuesta fue del 47,2%, mientras que después del período completo de dos meses, la tasa había aumentado al 59,7%. El modo de recolección de datos en el primer mes fue CAPI (entrevista
-personal asistida por computadora). Los que no respondieron fueron
-contactados en el segundo mes con CATI (Entrevista Telefónica Asistida
-por Computadora) si tenían un teléfono fijo en la lista. El segundo mes de trabajo de campo aumentó la respuesta en un 12,5%. Sin embargo, esto no resultó en mejores estimaciones puesto que el sesgo de los estimadores aumentó a partir del segundo mes, dado que las personas que habían reportado un número telefónico diferían de las que no reportaron este contacto.
-
-Adicional a la tasa de no respuesta, se necesitan indicadores
-de calidad de la encuesta que proporcionen más información sobre el
-posible riesgo de estimadores sesgados. Por ejemplo, @Shlomo_Skinner_Schouten_2012 estudian el uso de los *indicadores de representatividad* que permiten conocer qué tanto la muestra de respondientes efectivos representa a la población y cómo la composición
-de la respuesta en la muestra diferiría de la composición de la población finita. Estos indicadores han probado ser una guía importante para determinar en qué medida el sesgo causado por la ausencia de respuesta afecta la encuesta. De hecho, en Europa el proyecto RISQ (*Representativity Indicators for Survey Quality*) está basado en este enfoque y pretende desarrollar y probar indicadores R en varias encuestas de interés. Los países que participan en este proyecto Holanda, Noruega y Eslovenia, en conjunto con las universidad de Southampton (Reino Unido) y la Universidad de Lovaina (Bélgica). 
-
-
-### El concepto de representatividad
-
-El concepto de representatividad se utiliza a menudo en la investigación
-de encuestas, pero por lo general no está claro qué significa. En particular Kruskal y Mosteller presentan una amplia descripción
-de lo que se supone que significa el adjetivo representativo [@KruskalMosteller1, @KruskalMosteller2, @KruskalMosteller3, @KruskalMosteller4]. El concepto de muestra representativa no está del todo estandarizado; @Bethlehem_Cobben_Schouten_2009 menciona que algunos de estos conceptos son muy vagos e imprecisos; por ejemplo:
-
-- Reconocimiento general de los datos.
-- Ausencia de fuerzas selectivas en la muestra.
-- Una muestra que sea una miniatura de la población.
-- Una muestra que contenga casos típicos o ideales.
-- Cobertura suficiente de la población,
-- Que permite una buena estimación,
-- Suficientemente bueno para un propósito particular.
-
-En términos de notación, supongamos que se selecciona una muestra probabilística $s$ de tamaño $n$ sin reemplazo de una población finita $U$ de tamaño $N$. La muestra puede verse como un vector de $N$ indicadores $s=(I_{1},I_{2},\ldots,I_{N})$, donde el indicador $I_{k}=1$ si se selecciona el elemento $k$ en la muestra, y $I_{k}=0$ en caso contrario ($k=1,2,\ldots,N$). El fenómeno de la ausencia de respuesta se modela por medio de las probabilidades de respuesta. Para esto, se supone que cada elemento $k$ en la población tiene una cierta probabilidad desconocida $\phi_{k}$ de responder cuando se selecciona en la muestra. La respuesta a la encuesta se puede representar mediante el vector de indicadores $D=(D_{1},D_{2},\ldots,D_{N})$, donde $D_{k}=1$ si el elemento $k$ fue seleccionado en la muestra $(I_{k}=1)$ y respondió. De lo contrario, $D_{k}=0$. Por ende, se deduce que
-
-$$
-\phi_{k}=P\left(D_{k}=1\mid I_{k}=1\right)
-$$
-
-Para poder definir un indicador de representatividad, el concepto
-de representatividad que mejor se acomoda se define como \emph{la ausencia de fuerzas selectivas}. Está claro que no existen fuerzas selectivas si todas las probabilidades de respuesta son uniformes. Esta observación forma la base de la primera definición de representatividad.
-
-#### Representatividad fuerte {-}
-
-La respuesta a una encuesta se denomina representativa fuerte con
-respecto a la muestra, si las probabilidades de respuesta de todos
-los elementos de la población son iguales y si la respuesta de un
-elemento es independiente de la respuesta de todos los demás elementos.
-En otras palabras:
-
-$$
-\phi_{k} = P\left(D_{k}=1\mid I_{k}=1\right) =  \phi  \ \ \ \ \ \ \ \ \ \ k=1,2,\ldots,N
-$$
-
-Se debe tener en cuenta que la representatividad fuerte se garantiza cuando el mecanismo de datos faltantes es MCAR para cada variable objetivo en el estudio. En este caso, la falta de respuesta no provoca que los estimadores estén sesgados. Esta es una definición atractiva, pero no es muy útil ya que en la práctica no es posible comparar las probabilidades de respuesta individual.
-
-#### Representatividad débil {-}
-
-Suponga que hay una variable auxiliar categórica $X$ que tiene $H$
-categorías y divide la población en $H$ estratos (subpoblaciones).
-El número de elementos en el estrato $h$ se denota por $N_{h}$,
-para $h=1,2,\ldots,H$. Se asume que esta variable ha sido medida
-en la encuesta y que su valor está disponible para cada encuestado
-y no encuestado. La probabilidad de respuesta del elemento $k$ en
-el estrato $h$ está definida por $\phi_{hk}$.
-
-La respuesta a una encuesta se denomina débilmente representativa
-con respecto a la muestra para la variable auxiliar $X$ si la probabilidad
-de respuesta promedio es la misma en cada estrato, es decir,
-
-$$
-\bar{\phi}_{h} =  
-\frac{1}{N_{h}}\sum_{k=1}^{N_{h}}\phi_{hk} =
-\phi \ \ \ \ \ \ \ \ \ \  h=1,2,\ldots,H
-$$
-
-La representatividad débil significa que no es posible distinguir
-a los encuestados de los no encuestados simplemente usando información
-con respecto a $X$. Si la respuesta es débilmente representativa con respecto a muchas variables auxiliares $X$, existirán relaciones fuertes entre las variables objetivo y las variables auxiliares. Nótese que es posible estimar las medias de las probabilidades de respuesta en los estratos y, por lo tanto, se puede comprobar en la práctica el supuesto de representatividad débil.
-
-
-### Indicadores $R$
-
-Los indicadores $R$ miden hasta qué punto la composición de
-la respuesta a una encuesta se desvía de la muestra original. Si todas las probabilidades de respuesta son iguales, la respuesta
-es fuertemente representativa y no habrá diferencias sistemáticas
-entre la composición de la respuesta y la muestra. Por el contrario, si las probabilidades de respuesta no son iguales, es importante
-establecer en qué medida se ve afectada la composición de la respuesta. Esto se logra mediante la definición de una función de distancia
-que mide en qué medida las probabilidades de respuesta individuales
-difieren de la probabilidad de respuesta media.
-
-Supongamos que se conocen las probabilidades de respuesta individual
-$\phi_{1},\phi_{2},\ldots,\phi_{N}$ de todos los elementos de la población.
-Entonces la desviación estándar es
-
-$$
-S\left(\phi\right)  =  \sqrt{\frac{1}{N-1}\sum_{k=1}^{N}\left(\phi_{k}-\bar{\phi}\right)^{2}}
-$$
-
-Nótese que $S\left(\phi\right)=0$ si todas las probabilidades de respuesta
-son iguales y el valor de $S\left(\phi\right)$ será mayor a medida
-que haya más variación en los valores de las probabilidades de respuesta. Además, el valor máximo de $S\left(\phi\right)$ es igual a 0.5. Por ende, el indicador $R$ se define como: 
-
-$$
-R\left(\phi\right)=1-2\,S\left(\phi\right)
-$$
-
-Este indicador asume valores en el intervalo $\left[0,1\right]$. De esta manera, un valor de uno implica una fuerte representatividad. Cuanto menor es su valor, más se desvía la composición de respuesta
-de la composición de la muestra. En general, los valores de las probabilidades de respuesta individuales se desconocen en la práctica. Este problema se resuelve estimando las probabilidades de respuesta. Esto se puede lograr si se dispone de información auxiliar adecuada; es decir, de variables que se han medido tanto para los encuestados como para los no encuestados. Para estimar estas probabilidades es posible utilizar varias técnicas, por ejemplo, modelos logísticos o probit, árboles de clasificación CHAID, entre otras. 
-
-Al suponer que $\hat{\phi}_{1},\hat{\phi}_{2},\ldots,\hat{\phi}_{n}$ son
-las probabilidades de respuesta estimadas para las unidades en la muestra.
-Entonces, la probabilidad de respuesta media se puede estimar mediante
-
-$$
-\hat{\bar{\phi}}  =  \frac{1}{N}\sum_{k=1}^{n}\frac{\hat{\phi}_{k}}{\pi_{k}}
-$$
-
-y
-
-$$
-\hat{R}\left(\phi\right)  =  1-2\sqrt{\frac{1}{N-1}\sum_{k=1}^{n}\frac{\left(\hat{\phi}_{k}-\hat{\bar{\phi}}\right)^{2}}{\pi_{k}}}
-$$
-
-Nótese que el indicador $R$ mide la desviación de la representatividad débil y no de la representatividad fuerte. Por ende, este enfoque no es capaz de detectar y cuantificar las diferencias
-entre las probabilidades de respuesta individual dentro de las clases obtenidas al cruzar las variables auxiliares. Suponiendo que las clases están definidas por una variable auxiliar $X$ que tiene $H$ categorías. Sea $N_{h}$ el tamaño de la clase $h$ y sea $\bar{\phi}_{h}$ la media poblacional de las probabilidades de respuesta en el estrato $h$. Si se utiliza un modelo estándar como la regresión logística, el indicador $R$ se calcula como:
-
-$$
-R_{x}\left(\phi\right)  =  1-2\sqrt{\frac{1}{n-1}\sum_{h=1}^{H}N_{h}\left(\bar{\phi}_{h}-\bar{\phi}\right)^{2}}
-$$
-
-En este caso, $R_{x}\left(\phi\right)$ mide la variación de las probabilidades de respuesta entre clases $X$. Si se supone que la variación dentro de la clase es cero en todas las clases, entonces $R_{x}\left(\phi\right) = R\left(\phi\right)$. 
-
-### El indicador $R$ en la práctica
-
-@Bethlehem_Cobben_Schouten_2009 mencionan que de julio a diciembre de 2005, Statistics Netherlands realizó un seguimiento a gran escala entre los no encuestados en la Encuesta de Población Activa (EPA) de Holanda. En el estudio, se abordó a dos muestras de personas que no respondieron en la EPA utilizando, por un lado, el enfoque de devolución de llamada con el cuestionario completo de la EPA y, por el otro lado, el enfoque de preguntas básicas con un cuestionario muy corto. Se usó CATI en el enfoque de devolución de llamada, y el enfoque de preguntas básicas se utilizó un diseño de recolección mixto que involucró cuestionarios *online* y recolección presencial con papel y CAPI. Los indicadores R se estimaron utilizando modelos de regresión logística que incluían una gran cantidad de variables explicativas que medían características demográficas, geográficas y socioeconómicas en los hogares. Los resultados de este estudio se dan a continuación:
-
-1. Se reportó que el valor del indicador $R$ para la respuesta inicial de la EPA es igual a 0.8, que es menor que el valor ideal de 1. Entonces, esta respuesta no es fuertemente representativa. La aplicación del enfoque de devolución de llamada aumentó la
-tasa de respuesta del 62.2% al 76.9%. Luego de esto, el valor del indicador $R$ aumentó de 0.8 a 0.85. Como los intervalos de confianza no se superponían, hubo indicios de que la respuesta adicional mejoró la composición del conjunto de datos.
-1. La aplicación del enfoque de preguntas básicas dio como resultado
-una conclusión diferente. Aunque la tasa de respuesta aumentó del 62.2% al 75.6%, el valor del indicador $R$ disminuyó de 0.80 a 0.78. Los intervalos para la EPA inicial y la EPA con preguntas básicas, se superpusieron. Por lo tanto, aparentemente, el enfoque de preguntas básicas no mejoró la composición del conjunto de datos. 
-
-Este último enfoque no es novedoso y agudiza el contraste entre respondientes y no respondientes. Dado que las probabilidades de respuesta estimadas se utilizan para calcular
-el indicador $R$ y esta estimación se basa en un modelo lineal que utiliza un conjunto de variables auxiliares como variables explicativas. 
-
-La dependencia del indicador $R$ del conjunto de variables auxiliares utilizadas tiene implicaciones para comparar diferentes conjuntos de datos (por ejemplo, en el tiempo o en dominios). Un enfoque apropiado podría ser fijar el conjunto de variables auxiliares de antemano y mantenerlas iguales para todos los conjuntos de datos. Para ello, debe elegirse el máximo posible de variables. Por otro lado, debido al sobreajuste, el error estándar (estimado) puede verse
-afectado, pero las probabilidades de respuesta estimadas no serán sesgadas.
-
-Otro enfoque que se recomienda, podría ser intentar encontrar el mejor modelo para cada conjunto de datos utilizando técnicas de selección de modelos. Esto hace que los modelos dependan del tamaño de la muestra: cuanto
-mayor sea la muestra, más variables del modelo tendrán una contribución significativa. Las muestras pequeñas simplemente no permiten una estimación adecuada de las probabilidades de respuesta y conducirán a una visión más optimista de la representatividad.
-
-
-Con esta metodología es posible determinar si la composición de la muestra de respondientes efectivos difiere o no de la de la muestra inicial. Los resultados de este proceso de seguimiento pueden ayudar a sustentar
-la decisión de iniciar esfuerzos adicionales para obtener datos para grupos específicos de la población objetivo; este enfoque también puede resultar útil para evaluar si volver a abordar una muestra de personas que no respondieron sería una buena estrategia para acotar el sesgo, o si con un enfoque de preguntas básicas sería suficiente.
-
-El uso de esta metodología durante la fase de recolección de datos podría revelar que la composición de los datos observados se está desviando cada vez más de la estructura poblacional esperada. Esto podría llevar a la decisión de enfocar el resto del proceso de recolección en los grupos que están subrepresentados. Estos cambios en medio de la encuesta se conocen en la literatura especializada como *diseños receptivos*. Otra forma de utilizar el indicador $R$ para controlar el proceso de la encuesta es analizar la representatividad de una versión anterior de la encuesta. Los resultados de dicho análisis pueden proporcionar información para implementar una estrategia mejorada de recopilación de datos para una nueva versión de la encuesta. 

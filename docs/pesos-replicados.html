@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="es" xml:lang="es">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>11.4 Pesos replicados | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
+  <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="11.4 Pesos replicados | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
+  <meta name="github-repo" content="psirusteam/HHS-Handbook" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="11.4 Pesos replicados | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
+  
+  <meta name="twitter:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
+  
+
+<meta name="author" content="Andrés Gutiérrez" />
+
+
+<meta name="date" content="2021-12-29" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="linealización-de-taylor.html"/>
+<link rel="next" href="consideraciones-adicionales.html"/>
+<script src="libs/header-attrs-2.8/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Diseño y análisis de encuestas de hogares</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefacio</a></li>
+<li class="chapter" data-level="" data-path="resumen.html"><a href="resumen.html"><i class="fa fa-check"></i>Resumen</a></li>
+<li class="chapter" data-level="1" data-path="introducción.html"><a href="introducción.html"><i class="fa fa-check"></i><b>1</b> Introducción</a>
+<ul>
+<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html#objetivos-de-desarrollo-sostenible"><i class="fa fa-check"></i>Objetivos de Desarrollo Sostenible</a></li>
+<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html#mercado-de-trabajo"><i class="fa fa-check"></i>Mercado de Trabajo</a></li>
+<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html#ingresos-y-gastos"><i class="fa fa-check"></i>Ingresos y gastos</a></li>
+<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html#esquema-del-documento"><i class="fa fa-check"></i>Esquema del documento</a></li>
+</ul></li>
+<li class="part"><span><b>I Diseño estadístico de las encuestas de hogares</b></span></li>
+<li class="chapter" data-level="2" data-path="el-paradigma-del-error-total.html"><a href="el-paradigma-del-error-total.html"><i class="fa fa-check"></i><b>2</b> El paradigma del error total</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="qué-es-una-encuesta.html"><a href="qué-es-una-encuesta.html"><i class="fa fa-check"></i><b>2.1</b> ¿Qué es una encuesta?</a></li>
+<li class="chapter" data-level="2.2" data-path="sesgos-generados-en-las-encuestas.html"><a href="sesgos-generados-en-las-encuestas.html"><i class="fa fa-check"></i><b>2.2</b> Sesgos generados en las encuestas</a>
+<ul>
+<li class="chapter" data-level="" data-path="sesgos-generados-en-las-encuestas.html"><a href="sesgos-generados-en-las-encuestas.html#sesgo-de-selección"><i class="fa fa-check"></i>Sesgo de selección</a></li>
+<li class="chapter" data-level="" data-path="sesgos-generados-en-las-encuestas.html"><a href="sesgos-generados-en-las-encuestas.html#sesgo-de-medición"><i class="fa fa-check"></i>Sesgo de medición</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="evolución-de-las-encuestas-estandarizadas.html"><a href="evolución-de-las-encuestas-estandarizadas.html"><i class="fa fa-check"></i><b>2.3</b> Evolución de las encuestas estandarizadas</a>
+<ul>
+<li class="chapter" data-level="" data-path="evolución-de-las-encuestas-estandarizadas.html"><a href="evolución-de-las-encuestas-estandarizadas.html#inicio-de-los-cuestionarios-estandarizados"><i class="fa fa-check"></i>Inicio de los cuestionarios estandarizados</a></li>
+<li class="chapter" data-level="" data-path="evolución-de-las-encuestas-estandarizadas.html"><a href="evolución-de-las-encuestas-estandarizadas.html#inicio-de-los-métodos-de-muestreo"><i class="fa fa-check"></i>Inicio de los métodos de muestreo</a></li>
+<li class="chapter" data-level="" data-path="evolución-de-las-encuestas-estandarizadas.html"><a href="evolución-de-las-encuestas-estandarizadas.html#inicio-de-la-recolección-de-datos"><i class="fa fa-check"></i>Inicio de la recolección de datos</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="el-ciclo-de-vida-de-una-encuesta.html"><a href="el-ciclo-de-vida-de-una-encuesta.html"><i class="fa fa-check"></i><b>2.4</b> El ciclo de vida de una encuesta</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="el-ciclo-de-vida-de-una-encuesta.html"><a href="el-ciclo-de-vida-de-una-encuesta.html#inferencia-individual"><i class="fa fa-check"></i><b>2.4.1</b> Inferencia individual</a></li>
+<li class="chapter" data-level="2.4.2" data-path="el-ciclo-de-vida-de-una-encuesta.html"><a href="el-ciclo-de-vida-de-una-encuesta.html#inferencia-grupal"><i class="fa fa-check"></i><b>2.4.2</b> Inferencia grupal</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="el-proceso-de-respuesta.html"><a href="el-proceso-de-respuesta.html"><i class="fa fa-check"></i><b>2.5</b> El proceso de respuesta</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="elementos-básicos.html"><a href="elementos-básicos.html"><i class="fa fa-check"></i><b>3</b> Elementos básicos</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="universo-muestra-y-unidades.html"><a href="universo-muestra-y-unidades.html"><i class="fa fa-check"></i><b>3.1</b> Universo, muestra y unidades</a></li>
+<li class="chapter" data-level="3.2" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html"><i class="fa fa-check"></i><b>3.2</b> Periodicidad en el tiempo</a>
+<ul>
+<li class="chapter" data-level="" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-transversales"><i class="fa fa-check"></i>Encuestas transversales</a></li>
+<li class="chapter" data-level="" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-repetidas"><i class="fa fa-check"></i>Encuestas repetidas</a></li>
+<li class="chapter" data-level="" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-panel"><i class="fa fa-check"></i>Encuestas panel</a></li>
+<li class="chapter" data-level="" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-de-panel-dividido"><i class="fa fa-check"></i>Encuestas de panel dividido</a></li>
+<li class="chapter" data-level="" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-de-panel-rotativo"><i class="fa fa-check"></i>Encuestas de panel rotativo</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="rotación-de-paneles.html"><a href="rotación-de-paneles.html"><i class="fa fa-check"></i><b>3.3</b> Rotación de paneles</a></li>
+<li class="chapter" data-level="3.4" data-path="parámetros-e-indicadores-de-interés.html"><a href="parámetros-e-indicadores-de-interés.html"><i class="fa fa-check"></i><b>3.4</b> Parámetros e indicadores de interés</a>
+<ul>
+<li class="chapter" data-level="" data-path="parámetros-e-indicadores-de-interés.html"><a href="parámetros-e-indicadores-de-interés.html#algunos-ejemplos-de-indicadores-de-interés-y-su-relación-con-los-tipos-de-encuestas"><i class="fa fa-check"></i>Algunos ejemplos de indicadores de interés y su relación con los tipos de encuestas</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="definición-del-marco-muestral.html"><a href="definición-del-marco-muestral.html"><i class="fa fa-check"></i><b>4</b> Definición del marco muestral</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="el-marco-de-muestreo.html"><a href="el-marco-de-muestreo.html"><i class="fa fa-check"></i><b>4.1</b> El marco de muestreo</a></li>
+<li class="chapter" data-level="4.2" data-path="los-censos-y-su-incidencia-en-los-marcos-de-muestreo.html"><a href="los-censos-y-su-incidencia-en-los-marcos-de-muestreo.html"><i class="fa fa-check"></i><b>4.2</b> Los censos y su incidencia en los marcos de muestreo</a></li>
+<li class="chapter" data-level="4.3" data-path="construcción-de-las-upm.html"><a href="construcción-de-las-upm.html"><i class="fa fa-check"></i><b>4.3</b> Construcción de las UPM</a>
+<ul>
+<li class="chapter" data-level="" data-path="construcción-de-las-upm.html"><a href="construcción-de-las-upm.html#actualización-continua-del-marco-de-muestreo"><i class="fa fa-check"></i>Actualización continua del marco de muestreo</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="metodologías-de-estratificación.html"><a href="metodologías-de-estratificación.html"><i class="fa fa-check"></i><b>5</b> Metodologías de estratificación</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="dimensiones-estructurales-en-el-marco-de-muestreo.html"><a href="dimensiones-estructurales-en-el-marco-de-muestreo.html"><i class="fa fa-check"></i><b>5.1</b> Dimensiones estructurales en el marco de muestreo</a></li>
+<li class="chapter" data-level="5.2" data-path="información-a-nivel-de-upm.html"><a href="información-a-nivel-de-upm.html"><i class="fa fa-check"></i><b>5.2</b> Información a nivel de UPM</a></li>
+<li class="chapter" data-level="5.3" data-path="metodologías-univariadas-sobre-medidas-de-resumen.html"><a href="metodologías-univariadas-sobre-medidas-de-resumen.html"><i class="fa fa-check"></i><b>5.3</b> Metodologías univariadas sobre medidas de resumen</a>
+<ul>
+<li class="chapter" data-level="" data-path="metodologías-univariadas-sobre-medidas-de-resumen.html"><a href="metodologías-univariadas-sobre-medidas-de-resumen.html#partición-en-cuantiles-q"><i class="fa fa-check"></i>Partición en cuantiles (Q)</a></li>
+<li class="chapter" data-level="" data-path="metodologías-univariadas-sobre-medidas-de-resumen.html"><a href="metodologías-univariadas-sobre-medidas-de-resumen.html#método-de-raíz-de-frecuencia-acumulada-dh"><i class="fa fa-check"></i>Método de raíz de frecuencia acumulada (DH)</a></li>
+<li class="chapter" data-level="" data-path="metodologías-univariadas-sobre-medidas-de-resumen.html"><a href="metodologías-univariadas-sobre-medidas-de-resumen.html#estratificación-óptima-lh"><i class="fa fa-check"></i>Estratificación óptima (LH)</a></li>
+<li class="chapter" data-level="" data-path="metodologías-univariadas-sobre-medidas-de-resumen.html"><a href="metodologías-univariadas-sobre-medidas-de-resumen.html#estratificación-geométrica-gh"><i class="fa fa-check"></i>Estratificación geométrica (GH)</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="metodologías-multivariadas-sobre-la-matriz-de-información.html"><a href="metodologías-multivariadas-sobre-la-matriz-de-información.html"><i class="fa fa-check"></i><b>5.4</b> Metodologías multivariadas sobre la matriz de información</a>
+<ul>
+<li class="chapter" data-level="" data-path="metodologías-multivariadas-sobre-la-matriz-de-información.html"><a href="metodologías-multivariadas-sobre-la-matriz-de-información.html#k-medias-de-jarque-kmj"><i class="fa fa-check"></i>K-medias de Jarque (KmJ)</a></li>
+<li class="chapter" data-level="" data-path="metodologías-multivariadas-sobre-la-matriz-de-información.html"><a href="metodologías-multivariadas-sobre-la-matriz-de-información.html#partición-genética-bb"><i class="fa fa-check"></i>Partición genética (BB)</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="evaluación-y-escogencia-de-la-mejor-estratificación.html"><a href="evaluación-y-escogencia-de-la-mejor-estratificación.html"><i class="fa fa-check"></i><b>5.5</b> Evaluación y escogencia de la mejor estratificación</a></li>
+<li class="chapter" data-level="5.6" data-path="estratificación-implícita.html"><a href="estratificación-implícita.html"><i class="fa fa-check"></i><b>5.6</b> Estratificación implícita</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="diseño-y-mecanismo-de-selección-de-la-muestra.html"><a href="diseño-y-mecanismo-de-selección-de-la-muestra.html"><i class="fa fa-check"></i><b>6</b> Diseño y mecanismo de selección de la muestra</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html"><i class="fa fa-check"></i><b>6.1</b> Diseños de muestreo</a>
+<ul>
+<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-aleatorio-simple"><i class="fa fa-check"></i>Muestreo aleatorio simple</a></li>
+<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-proporcional-al-tamaño"><i class="fa fa-check"></i>Muestreo proporcional al tamaño</a></li>
+<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-estratificado"><i class="fa fa-check"></i>Muestreo estratificado</a></li>
+<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-de-conglomerados"><i class="fa fa-check"></i>Muestreo de conglomerados</a></li>
+<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-en-varias-etapas"><i class="fa fa-check"></i>Muestreo en varias etapas</a></li>
+<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-en-dos-fases"><i class="fa fa-check"></i>Muestreo en dos fases</a></li>
+<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-balanceado"><i class="fa fa-check"></i>Muestreo balanceado</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="el-diseño-de-muestreo-estándar-en-una-encuesta-de-hogares.html"><a href="el-diseño-de-muestreo-estándar-en-una-encuesta-de-hogares.html"><i class="fa fa-check"></i><b>6.2</b> El diseño de muestreo estándar en una encuesta de hogares</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="el-efecto-de-diseño.html"><a href="el-efecto-de-diseño.html"><i class="fa fa-check"></i><b>7</b> El efecto de diseño</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="estimación-del-efecto-de-diseño.html"><a href="estimación-del-efecto-de-diseño.html"><i class="fa fa-check"></i><b>7.1</b> Estimación del efecto de diseño</a></li>
+<li class="chapter" data-level="7.2" data-path="descomposición-del-efecto-de-diseño-en-las-encuestas-de-hogares.html"><a href="descomposición-del-efecto-de-diseño-en-las-encuestas-de-hogares.html"><i class="fa fa-check"></i><b>7.2</b> Descomposición del efecto de diseño en las encuestas de hogares</a></li>
+<li class="chapter" data-level="7.3" data-path="formas-comunes-del-efecto-de-diseño.html"><a href="formas-comunes-del-efecto-de-diseño.html"><i class="fa fa-check"></i><b>7.3</b> Formas comunes del efecto de diseño</a></li>
+<li class="chapter" data-level="7.4" data-path="otras-consideraciones.html"><a href="otras-consideraciones.html"><i class="fa fa-check"></i><b>7.4</b> Otras consideraciones</a>
+<ul>
+<li class="chapter" data-level="" data-path="otras-consideraciones.html"><a href="otras-consideraciones.html#el-efecto-de-diseño-en-subpoblaciones"><i class="fa fa-check"></i>El efecto de diseño en subpoblaciones</a></li>
+<li class="chapter" data-level="" data-path="otras-consideraciones.html"><a href="otras-consideraciones.html#el-efecto-de-diseño-general"><i class="fa fa-check"></i>El efecto de diseño general</a></li>
+<li class="chapter" data-level="" data-path="otras-consideraciones.html"><a href="otras-consideraciones.html#el-efecto-de-diseño-en-las-encuestas-de-hogares-de-la-región"><i class="fa fa-check"></i>El efecto de diseño en las encuestas de hogares de la región</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="cálculo-del-tamaño-de-muestra.html"><a href="cálculo-del-tamaño-de-muestra.html"><i class="fa fa-check"></i><b>8</b> Cálculo del tamaño de muestra</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="confiabilidad-y-precisión.html"><a href="confiabilidad-y-precisión.html"><i class="fa fa-check"></i><b>8.1</b> Confiabilidad y precisión</a></li>
+<li class="chapter" data-level="8.2" data-path="el-efecto-de-diseño-en-la-determinación-del-tamaño-de-muestra.html"><a href="el-efecto-de-diseño-en-la-determinación-del-tamaño-de-muestra.html"><i class="fa fa-check"></i><b>8.2</b> El efecto de diseño en la determinación del tamaño de muestra</a></li>
+<li class="chapter" data-level="8.3" data-path="escenarios-de-interés.html"><a href="escenarios-de-interés.html"><i class="fa fa-check"></i><b>8.3</b> Escenarios de interés</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="escenarios-de-interés.html"><a href="escenarios-de-interés.html#tamaño-de-muestra-para-upm-hogares-y-personas"><i class="fa fa-check"></i><b>8.3.1</b> Tamaño de muestra para UPM, hogares y personas</a></li>
+<li class="chapter" data-level="8.3.2" data-path="escenarios-de-interés.html"><a href="escenarios-de-interés.html#tamaño-de-muestra-para-upm-y-hogares"><i class="fa fa-check"></i><b>8.3.2</b> Tamaño de muestra para UPM y hogares</a></li>
+<li class="chapter" data-level="8.3.3" data-path="escenarios-de-interés.html"><a href="escenarios-de-interés.html#tamaño-de-muestra-para-upm-y-personas"><i class="fa fa-check"></i><b>8.3.3</b> Tamaño de muestra para UPM y personas</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="otros-escenarios-de-interés.html"><a href="otros-escenarios-de-interés.html"><i class="fa fa-check"></i><b>8.4</b> Otros escenarios de interés</a>
+<ul>
+<li class="chapter" data-level="8.4.1" data-path="otros-escenarios-de-interés.html"><a href="otros-escenarios-de-interés.html#tamaño-de-muestra-para-la-estimación-de-la-diferencia-de-dos-proporciones"><i class="fa fa-check"></i><b>8.4.1</b> Tamaño de muestra para la estimación de la diferencia de dos proporciones</a></li>
+<li class="chapter" data-level="8.4.2" data-path="otros-escenarios-de-interés.html"><a href="otros-escenarios-de-interés.html#tamaño-de-muestra-para-la-estimación-del-impacto-en-dos-mediciones-longitudinales"><i class="fa fa-check"></i><b>8.4.2</b> Tamaño de muestra para la estimación del impacto en dos mediciones longitudinales</a></li>
+<li class="chapter" data-level="8.4.3" data-path="otros-escenarios-de-interés.html"><a href="otros-escenarios-de-interés.html#tamaño-de-muestra-para-el-contraste-de-hipótesis-en-la-diferencia-de-proporciones"><i class="fa fa-check"></i><b>8.4.3</b> Tamaño de muestra para el contraste de hipótesis en la diferencia de proporciones</a></li>
+</ul></li>
+<li class="chapter" data-level="8.5" data-path="algunas-relaciones-de-interés-para-proporciones.html"><a href="algunas-relaciones-de-interés-para-proporciones.html"><i class="fa fa-check"></i><b>8.5</b> Algunas relaciones de interés para proporciones</a>
+<ul>
+<li class="chapter" data-level="" data-path="algunas-relaciones-de-interés-para-proporciones.html"><a href="algunas-relaciones-de-interés-para-proporciones.html#estimación-de-proporciones"><i class="fa fa-check"></i>Estimación de proporciones</a></li>
+<li class="chapter" data-level="" data-path="algunas-relaciones-de-interés-para-proporciones.html"><a href="algunas-relaciones-de-interés-para-proporciones.html#cambios-netos"><i class="fa fa-check"></i>Cambios netos</a></li>
+</ul></li>
+<li class="chapter" data-level="8.6" data-path="algunas-consideraciones-adicionales.html"><a href="algunas-consideraciones-adicionales.html"><i class="fa fa-check"></i><b>8.6</b> Algunas consideraciones adicionales</a>
+<ul>
+<li class="chapter" data-level="8.6.1" data-path="algunas-consideraciones-adicionales.html"><a href="algunas-consideraciones-adicionales.html#asignación-del-tamaño-de-muestra-en-los-estratos-de-muestreo"><i class="fa fa-check"></i><b>8.6.1</b> Asignación del tamaño de muestra en los estratos de muestreo</a></li>
+<li class="chapter" data-level="8.6.2" data-path="algunas-consideraciones-adicionales.html"><a href="algunas-consideraciones-adicionales.html#ajustes-de-subcobertura"><i class="fa fa-check"></i><b>8.6.2</b> Ajustes de subcobertura</a></li>
+<li class="chapter" data-level="8.6.3" data-path="algunas-consideraciones-adicionales.html"><a href="algunas-consideraciones-adicionales.html#sustituciones-y-reemplazos"><i class="fa fa-check"></i><b>8.6.3</b> Sustituciones y reemplazos</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>II Procesamiento transversal de las encuestas de hogares</b></span></li>
+<li class="chapter" data-level="9" data-path="estimación-de-parámetros.html"><a href="estimación-de-parámetros.html"><i class="fa fa-check"></i><b>9</b> Estimación de parámetros</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="el-estimador-de-horvitz-thompson-para-totales-y-tamaños-poblacionales.html"><a href="el-estimador-de-horvitz-thompson-para-totales-y-tamaños-poblacionales.html"><i class="fa fa-check"></i><b>9.1</b> El estimador de Horvitz-Thompson para totales y tamaños poblacionales</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="el-estimador-de-horvitz-thompson-para-totales-y-tamaños-poblacionales.html"><a href="el-estimador-de-horvitz-thompson-para-totales-y-tamaños-poblacionales.html#estimación-para-totales"><i class="fa fa-check"></i><b>9.1.1</b> Estimación para totales</a></li>
+<li class="chapter" data-level="9.1.2" data-path="el-estimador-de-horvitz-thompson-para-totales-y-tamaños-poblacionales.html"><a href="el-estimador-de-horvitz-thompson-para-totales-y-tamaños-poblacionales.html#estimación-para-tamaños-y-totales-en-dominios"><i class="fa fa-check"></i><b>9.1.2</b> Estimación para tamaños y totales en dominios</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="el-estimador-de-hájek-para-medias-y-proporciones.html"><a href="el-estimador-de-hájek-para-medias-y-proporciones.html"><i class="fa fa-check"></i><b>9.2</b> El estimador de Hájek para medias y proporciones</a></li>
+<li class="chapter" data-level="9.3" data-path="otros-estimadores-de-muestreo.html"><a href="otros-estimadores-de-muestreo.html"><i class="fa fa-check"></i><b>9.3</b> Otros estimadores de muestreo</a></li>
+<li class="chapter" data-level="9.4" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html"><i class="fa fa-check"></i><b>9.4</b> Estimadores de calibración</a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html#ganancia-en-eficiencia"><i class="fa fa-check"></i><b>9.4.1</b> Ganancia en eficiencia</a></li>
+<li class="chapter" data-level="9.4.2" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html#diferentes-formas-del-estimador-de-calibración"><i class="fa fa-check"></i><b>9.4.2</b> Diferentes formas del estimador de calibración</a></li>
+<li class="chapter" data-level="9.4.3" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html#la-calibración-como-un-cambio-de-paradigma"><i class="fa fa-check"></i><b>9.4.3</b> La calibración como un cambio de paradigma</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="construcción-de-los-factores-de-expansión.html"><a href="construcción-de-los-factores-de-expansión.html"><i class="fa fa-check"></i><b>10</b> Construcción de los factores de expansión</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="creación-de-los-pesos-básicos.html"><a href="creación-de-los-pesos-básicos.html"><i class="fa fa-check"></i><b>10.1</b> Creación de los pesos básicos</a></li>
+<li class="chapter" data-level="10.2" data-path="ajuste-por-elegibilidad-desconocida.html"><a href="ajuste-por-elegibilidad-desconocida.html"><i class="fa fa-check"></i><b>10.2</b> Ajuste por elegibilidad desconocida</a></li>
+<li class="chapter" data-level="10.3" data-path="descarte-de-las-unidades-no-elegibles.html"><a href="descarte-de-las-unidades-no-elegibles.html"><i class="fa fa-check"></i><b>10.3</b> Descarte de las unidades no elegibles</a></li>
+<li class="chapter" data-level="10.4" data-path="ajuste-por-ausencia-de-respuesta.html"><a href="ajuste-por-ausencia-de-respuesta.html"><i class="fa fa-check"></i><b>10.4</b> Ajuste por ausencia de respuesta</a></li>
+<li class="chapter" data-level="10.5" data-path="calibración-de-los-factores-de-expansión.html"><a href="calibración-de-los-factores-de-expansión.html"><i class="fa fa-check"></i><b>10.5</b> Calibración de los factores de expansión</a>
+<ul>
+<li class="chapter" data-level="10.5.1" data-path="calibración-de-los-factores-de-expansión.html"><a href="calibración-de-los-factores-de-expansión.html#medidas-de-calidad-en-la-calibración"><i class="fa fa-check"></i><b>10.5.1</b> Medidas de calidad en la calibración</a></li>
+<li class="chapter" data-level="10.5.2" data-path="calibración-de-los-factores-de-expansión.html"><a href="calibración-de-los-factores-de-expansión.html#calibración-integrada-para-hogares-y-personas"><i class="fa fa-check"></i><b>10.5.2</b> Calibración integrada para hogares y personas</a></li>
+<li class="chapter" data-level="10.5.3" data-path="calibración-de-los-factores-de-expansión.html"><a href="calibración-de-los-factores-de-expansión.html#calibración-sobre-razones-medias-y-proporciones"><i class="fa fa-check"></i><b>10.5.3</b> Calibración sobre razones, medias y proporciones</a></li>
+</ul></li>
+<li class="chapter" data-level="10.6" data-path="recorte-y-redondeo.html"><a href="recorte-y-redondeo.html"><i class="fa fa-check"></i><b>10.6</b> Recorte y redondeo</a>
+<ul>
+<li class="chapter" data-level="" data-path="recorte-y-redondeo.html"><a href="recorte-y-redondeo.html#recorte-de-pesos-extremos"><i class="fa fa-check"></i>Recorte de pesos extremos</a></li>
+<li class="chapter" data-level="" data-path="recorte-y-redondeo.html"><a href="recorte-y-redondeo.html#el-problema-del-redondeo-de-los-factores-de-expansión"><i class="fa fa-check"></i>El problema del redondeo de los factores de expansión</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="estimación-del-error-de-muestreo.html"><a href="estimación-del-error-de-muestreo.html"><i class="fa fa-check"></i><b>11</b> Estimación del error de muestreo</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="fórmulas-exactas-y-linealización-de-taylor.html"><a href="fórmulas-exactas-y-linealización-de-taylor.html"><i class="fa fa-check"></i><b>11.1</b> Fórmulas exactas y linealización de Taylor</a></li>
+<li class="chapter" data-level="11.2" data-path="la-técnica-del-último-conglomerado.html"><a href="la-técnica-del-último-conglomerado.html"><i class="fa fa-check"></i><b>11.2</b> La técnica del último conglomerado</a></li>
+<li class="chapter" data-level="11.3" data-path="linealización-de-taylor.html"><a href="linealización-de-taylor.html"><i class="fa fa-check"></i><b>11.3</b> Linealización de Taylor</a></li>
+<li class="chapter" data-level="11.4" data-path="pesos-replicados.html"><a href="pesos-replicados.html"><i class="fa fa-check"></i><b>11.4</b> Pesos replicados</a></li>
+<li class="chapter" data-level="11.5" data-path="consideraciones-adicionales.html"><a href="consideraciones-adicionales.html"><i class="fa fa-check"></i><b>11.5</b> Consideraciones adicionales</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="representatividad-y-ausencia-de-respuesta.html"><a href="representatividad-y-ausencia-de-respuesta.html"><i class="fa fa-check"></i><b>12</b> Representatividad y ausencia de respuesta</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="indicadores-de-representatividad.html"><a href="indicadores-de-representatividad.html"><i class="fa fa-check"></i><b>12.1</b> Indicadores de representatividad</a>
+<ul>
+<li class="chapter" data-level="12.1.1" data-path="indicadores-de-representatividad.html"><a href="indicadores-de-representatividad.html#el-concepto-de-representatividad"><i class="fa fa-check"></i><b>12.1.1</b> El concepto de representatividad</a></li>
+<li class="chapter" data-level="12.1.2" data-path="indicadores-de-representatividad.html"><a href="indicadores-de-representatividad.html#indicadores-r"><i class="fa fa-check"></i><b>12.1.2</b> Indicadores <span class="math inline">\(R\)</span></a></li>
+<li class="chapter" data-level="12.1.3" data-path="indicadores-de-representatividad.html"><a href="indicadores-de-representatividad.html#el-indicador-r-en-la-práctica"><i class="fa fa-check"></i><b>12.1.3</b> El indicador <span class="math inline">\(R\)</span> en la práctica</a></li>
+</ul></li>
+<li class="chapter" data-level="12.2" data-path="clasificación-de-la-ausencia-de-respuesta.html"><a href="clasificación-de-la-ausencia-de-respuesta.html"><i class="fa fa-check"></i><b>12.2</b> Clasificación de la ausencia de respuesta</a>
+<ul>
+<li class="chapter" data-level="12.2.1" data-path="clasificación-de-la-ausencia-de-respuesta.html"><a href="clasificación-de-la-ausencia-de-respuesta.html#ausencia-de-respuesta-de-registro-y-de-unidad"><i class="fa fa-check"></i><b>12.2.1</b> Ausencia de respuesta de registro y de unidad</a></li>
+<li class="chapter" data-level="12.2.2" data-path="clasificación-de-la-ausencia-de-respuesta.html"><a href="clasificación-de-la-ausencia-de-respuesta.html#efectos-y-consecuencias-de-la-ausencia-de-respuesta"><i class="fa fa-check"></i><b>12.2.2</b> Efectos y consecuencias de la ausencia de respuesta</a></li>
+<li class="chapter" data-level="12.2.3" data-path="clasificación-de-la-ausencia-de-respuesta.html"><a href="clasificación-de-la-ausencia-de-respuesta.html#posibles-soluciones"><i class="fa fa-check"></i><b>12.2.3</b> Posibles soluciones</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="ausencia-de-respuesta-de-unidad.html"><a href="ausencia-de-respuesta-de-unidad.html"><i class="fa fa-check"></i><b>13</b> Ausencia de respuesta de unidad</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="sesgo-sobre-los-estimadores.html"><a href="sesgo-sobre-los-estimadores.html"><i class="fa fa-check"></i><b>13.1</b> Sesgo sobre los estimadores</a></li>
+<li class="chapter" data-level="13.2" data-path="soluciones.html"><a href="soluciones.html"><i class="fa fa-check"></i><b>13.2</b> Soluciones</a>
+<ul>
+<li class="chapter" data-level="13.2.1" data-path="soluciones.html"><a href="soluciones.html#propensity-score"><i class="fa fa-check"></i><b>13.2.1</b> Propensity Score</a></li>
+<li class="chapter" data-level="13.2.2" data-path="soluciones.html"><a href="soluciones.html#calibración"><i class="fa fa-check"></i><b>13.2.2</b> Calibración</a></li>
+</ul></li>
+<li class="chapter" data-level="13.3" data-path="la-pandemia-por-covid-19.html"><a href="la-pandemia-por-covid-19.html"><i class="fa fa-check"></i><b>13.3</b> La pandemia por COVID-19</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="ausencia-de-respuesta-por-registro.html"><a href="ausencia-de-respuesta-por-registro.html"><i class="fa fa-check"></i><b>14</b> Ausencia de respuesta por registro</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="modelos-para-la-imputación.html"><a href="modelos-para-la-imputación.html"><i class="fa fa-check"></i><b>14.1</b> Modelos para la imputación</a></li>
+<li class="chapter" data-level="14.2" data-path="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html"><a href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html"><i class="fa fa-check"></i><b>14.2</b> Ejemplo de imputación en una encuesta de ingresos y gastos</a></li>
+<li class="chapter" data-level="14.3" data-path="consideraciones-sobre-la-imputación-múltiple.html"><a href="consideraciones-sobre-la-imputación-múltiple.html"><i class="fa fa-check"></i><b>14.3</b> Consideraciones sobre la imputación múltiple</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="detección-de-datos-atípicos.html"><a href="detección-de-datos-atípicos.html"><i class="fa fa-check"></i><b>15</b> Detección de datos atípicos</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="algunos-métodos-de-detección-de-valores-extremos.html"><a href="algunos-métodos-de-detección-de-valores-extremos.html"><i class="fa fa-check"></i><b>15.1</b> Algunos métodos de detección de valores extremos</a></li>
+<li class="chapter" data-level="15.2" data-path="valores-atípicos-en-una-encuesta-de-consumo.html"><a href="valores-atípicos-en-una-encuesta-de-consumo.html"><i class="fa fa-check"></i><b>15.2</b> Valores atípicos en una encuesta de consumo</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
+<li class="divider"></li>
+<li><a Diseño y análisis de encuestas de hogares</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Diseño y análisis estadístico en las encuestas de hogares de América Latina</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="pesos-replicados" class="section level2" number="11.4">
+<h2><span class="header-section-number">11.4</span> Pesos replicados</h2>
+<p>Las complicaciones en el cálculo de los errores de muestreo pueden ser mayores dependiendo de la escogencia del estimador y del diseño de muestreo asumido para la recolección de la información primaria. En algunas ocasiones, el proceso de linealización puede resultar complicado, por lo que es posible optar por una estrategia computacional aproximada que permite pasar por alto el proceso teórico de definición de las cantidades que estiman la varianza del estimador. Este conjunto de métodos supone la idea de la selección sistemática de <em>submuestras</em> que son utilizadas para estimar el parámetro de interés, utilizando los mismos principios de estimación que con la muestra completa. Por lo anterior, se obtienen estimaciones puntuales para cada réplica, las cuales son utilizadas para estimar la varianza del estimador de interés.</p>
+<p>En ausencia de fórmulas adecuadas, en los últimos años han aparecido una variedad de técnicas empíricas que proporcionan <em>varianzas aproximadas que parecen satisfactorias para fines prácticos</em> <span class="citation">(<a href="#ref-Kish_1965" role="doc-biblioref">Kish 1965</a>)</span>. Estos métodos utilizan una muestra de datos para construir submuestras y generar una distribución para las estimaciones de los parámetros de interés utilizando cada submuestra. Los resultados de la submuestra se analizan para obtener una estimación del parámetro, así como intervalos de confianza para esa estimación. El enfoque general de esta técnicas computacional se basa en:</p>
+<ol style="list-style-type: decimal">
+<li>Dividir la toda la muestra en pequeños subconjutnos (réplicas).</li>
+<li>Repetir los mismos procesos de ajuste de ponderadores en cada réplica.</li>
+<li>Hacer la estimación en cada subgrupo.</li>
+<li>La varianza del estimador se calcula de manera simple como la varianza muestral de todas las estimaciones en cada réplica.</li>
+</ol>
+<p>Usando esta metodología, no se requiere que las bases de datos públicas contengan la información asociada a los estratos o UPM y esto protege la anonimización de los respondientes. Además, no se requiere conocer el diseño de muestreo utilizado en la encuesta, puesto que al proveer los pesos replicados en las bases de datos, los investigadores pueden estimar el error de muestreo de forma automatizada y sin necesidad de intrincadas fórmulas matemáticas. Estos métodos ha demostrado ser eficientes y precisos para la mayoría de parámetros de interés, algunas encuestas que utilizan estas metodologías son la American Community Survey, la American Housing Survey y la Current Population Survey. En América Latina la PNADC de Brasil, la ENE de Chile y la ENEMDU de Ecuador han hecho uso de estas técnicas para la estimación de la varianza de algunos estimadores complejos.</p>
+<p>En particular, hay tres metodologías que abordan este problema: los pesos replicados repetidas balanceadas <span class="citation">(<a href="#ref-McCarthy_1969" role="doc-biblioref">McCarthy 1969</a>; <a href="#ref-Judkins_1990" role="doc-biblioref">Judkins 1990</a>)</span>, el Jackknife <span class="citation">(<a href="#ref-Krewski_Rao_1981" role="doc-biblioref">Krewski y Rao 1981</a>)</span> y el Bootstrap <span class="citation">(<a href="#ref-Rao_Wu_1988" role="doc-biblioref">Rao y Wu 1988</a>)</span>. La idea general detrás de estos métodos es que, partiendo de la muestra completa, en cada réplica se seleccione un conjunto de UPMs manteniendo todas las unidades que hayan sido seleccionadas dentro de esas UPMs. Luego, es necesario reponderar los pesos de muestreo para que se conserve la representatividad; de esta manera, para cada réplica se obtendrá un nuevo conjunto de pesos de muestreo. Con estos pesos, se calcula la estimación de interés, obteniendo tantas estimaciones como réplicas definidas. <span class="citation"><a href="#ref-Wolter_2007" role="doc-biblioref">Wolter</a> (<a href="#ref-Wolter_2007" role="doc-biblioref">2007</a>)</span> provee todos los detalles teóricos referentes al problema de la estimación de la varianza utilizando los pesos replicados.</p>
+<p>En lo concerniente con las técnicas de remuestreo y la utilización de los pesos replicados para el cálculo de los errores de muestreo se recalca que la técnica de <em>Jackknife</em> es útil para estimar parámetros lineales, pero no tiene un buen comportamiento cuando se trata de estimar percentiles o funciones de distribución. La técnica de <em>réplicas repetidas balanceadas</em> es útil para estimar parámetros lineales y no lineales, pero puede ser deficiente cuando se tienen dominios pequeños que pueden inducir estimaciones nulas en la configuración de los pesos. Sin embargo, como se explicará más adelante, el ajuste de Fay a la técnica anterior resulta palear todos los anteriores inconvenientes. En este caso es importante utilizar una matriz de Hadammard que induzca no más de 120 conjuntos de pesos replicados para que la publicación de la base de datos no se sobrecargue. Por último, el <em>bootstrap</em> debe ser utilizado con con detenimiento porque debe replicar el diseño de muestreo exacto y esto se logra construyendo una población a partir de los pesos de muestreo.</p>
+<div id="la-técnica-de-jackknife" class="section level4 unnumbered">
+<h4>La técnica de Jackknife</h4>
+<p>Este método provee estimaciones eficientes para estimadores lineales y no lineales (a excepción de los percentiles). En su forma más básica, los pesos replicados se crean al retirar una UPM del análisis. Por ende, se tendrán tantos pesos replicados como UPM existan en la muestra. Además, cuando una UPM se retira en la réplica, todas las unidades dentro de esa UPM también se retiran. El desarrollo del procedimiento de Jackknife se remonta a un método utilizado por <span class="citation"><a href="#ref-Quenouille" role="doc-biblioref">Quenouille</a> (<a href="#ref-Quenouille" role="doc-biblioref">1956</a>)</span> para reducir el sesgo de las estimaciones. El refinamiento ulterior del método <span class="citation">(<a href="#ref-mosteller1968data" role="doc-biblioref">Mosteller 1968</a>)</span> llevó a su aplicación en una serie de situaciones de las ciencias sociales en las que las fórmulas no están fácilmente disponibles para el cálculo de errores de muestreo.</p>
+<p>Este procedimiento ofrece mayor flexibilidad, pues el Jackknife puede implementarse en una amplia variedad de diseños muestrales; además de facilidad de uso, puesto que no requiere de software especializado. El concepto principal de esta técnica parte de una muestra de tamaño <span class="math inline">\(n\)</span>, la cual se divide en <span class="math inline">\(A\)</span> grupos de igual tamaño <span class="math inline">\(m=n/A\)</span>, a partir de esta división, la varianza de un estimador <span class="math inline">\(\hat{\theta}\)</span> se estima a partir de la varianza observada en los <span class="math inline">\(A\)</span> grupos.</p>
+<p>Para cada grupo <span class="math inline">\((a=1,2,...,A)\)</span>, se calcula <span class="math inline">\(\hat{\theta}_{(a)}\)</span>, una estimación para el parámetro <span class="math inline">\(\theta\)</span>, calculada de la misma forma que la estimación <span class="math inline">\(\hat{\theta}\)</span> obtenida con la muestra completa, pero solo con la información restante (luego de la eliminación del grupo <span class="math inline">\(a\)</span>). Para <span class="math inline">\(a=1,2,...,A\)</span> se define</p>
+<p><span class="math display">\[\hat{\theta}_{a}=A\hat{\theta}-(A-1)\hat{\theta}_{(a)}\]</span></p>
+<p>como un pseudovalor de <span class="math inline">\(\theta\)</span>. El estimador obtenido mediante Jackknife se presenta como una alternativa a <span class="math inline">\(\hat{\theta}\)</span> y se define como:</p>
+<p><span class="math display">\[\hat{\theta}_{JK}=\dfrac{1}{A}\sum_{a=1}^{A}\hat{\theta}_{a}\]</span></p>
+<p>mientras que el estimador de la varianza obtenido mediante Jackknife se obtiene como:</p>
+<p><span class="math display">\[\widehat{Var}_{JK1}=\dfrac{1}{A(A-1)}\sum_{a=1}^{A}\left(\hat{\theta}_{a}-\hat{\theta}_{JK}\right)^{2}\]</span></p>
+<p>También es posible utilizar como estimador alternativo:</p>
+<p><span class="math display">\[\widehat{Var}_{JK2}=\dfrac{1}{A(A-1)}\sum_{a=1}^{A}\left(\hat{\theta}_{a}-\hat{\theta}\right)^{2}\]</span></p>
+<p>Para diseños estratificados y multietápicos en los cuales las unidades primarias de muestreo han sido seleccionadas en el estrato <span class="math inline">\(h\)</span>, para <span class="math inline">\(h=1, \ldots, H\)</span>, el estimador de varianza de Jackknife para la estimación de un parámetro poblacional está dado por</p>
+<p><span class="math display">\[ 
+\widehat{Var}_{JK}(\hat{\theta}) = \sum_{h=1}^H \frac{n_{Ih} - 1}{n_{Ih}} \sum_{i=1}^{n_{Ih}}
+(\hat{\theta}_{h(i)}-\hat{\theta})^2
+\]</span></p>
+<p>donde <span class="math inline">\(\hat{\theta}_{h(i)}\)</span> es la estimación de <span class="math inline">\(\theta\)</span> usando los datos de la muestra excluyendo las observaciones en la <span class="math inline">\(i\)</span>-ésima unidad primaria de muestreo <span class="citation">(<a href="#ref-Korn_Graubard_1999" role="doc-biblioref">Korn y Graubard 1999</a>, pg. 29 – 30)</span>. <span class="citation"><a href="#ref-shao2012jackknife" role="doc-biblioref">Shao y Tu</a> (<a href="#ref-shao2012jackknife" role="doc-biblioref">2012</a>, Teorema 6.2)</span> garantiza la convergencia en probabilidad de este estimador hacia la varianza teórica, de donde se puede concluir que es un estimador aproximadamente insesgado para la varianza teórica. Los pesos de la unidad <span class="math inline">\(k\)</span> que pertenece a la UPM <span class="math inline">\(U_i\)</span>, en el estrato <span class="math inline">\(U_h\)</span> están dados por la siguiente expresión:</p>
+<p><span class="math display">\[
+d_{hk}^i = 
+\begin{cases}
+0, \ \text{si $U_i \in U_h$ y $k \in U_i$ }\\
+d_k, \ \text{si $k \notin U_h$}\\
+\frac{n_{Ih}}{n_{Ih}-1}d_k, \ \text{si $U_i \in U_h$ y $k \notin U_i$}
+\end{cases}
+\]</span></p>
+<p>En donde <span class="math inline">\(n_{Ih}\)</span> es el número de UPM seleccionadas en el estrato <span class="math inline">\(U_h\)</span>. Por último, para reducir el número de pesos replicados, se pueden conformar <em>unidades de varianza</em>, uniendo varias UPM dentro de un mismo estrato, y también <em>estratos de varianza</em>, colapsando estratos dentro de la muestra. En el primer caso, se podrían emparejar las UPM en cada estrato de acuerdo a la medida de tamaño. En este caso, el estimador de varianza está dado por la siguiente expresión</p>
+<p><span class="math display">\[
+\widehat{Var}_{JK}(\hat{\theta}) = \sum_h \frac{n_{Ih}-n_{Ihg}}{n_{Ih}} 
+\sum_{i \in s_{hg}} (\hat{\theta}_{h(g)} - \hat{\theta})^2
+\]</span></p>
+<p>En donde <span class="math inline">\(\hat{\theta}_{hg}\)</span> es el estimador del parámetro retirando el <span class="math inline">\(g\)</span>-ésimo subgrupo del estrato <span class="math inline">\(U_h\)</span> y <span class="math inline">\(n_{Ihg}\)</span> es el tamaño del subgrupo en la muestra denotado como <span class="math inline">\(s_{hg}\)</span>. A continuación se ejemplifica la estructura final de una base de datos de pesos replicados con esta técnica en un conjunto reducido de tan solo ocho unidades muestrales divididas en cuatro UPM y dos estratos. Se enfatiza que habrán tantos conjuntos (columnas) de pesos replicados Jackknife como UPM existentes en la muestra de la primera etapa.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(k\)</span></th>
+<th align="center">Estrato</th>
+<th align="center">UPM</th>
+<th align="center"><span class="math inline">\(d_k^{(1)}\)</span></th>
+<th align="center"><span class="math inline">\(d_k^{(2)}\)</span></th>
+<th align="center"><span class="math inline">\(d_k^{(3)}\)</span></th>
+<th align="center"><span class="math inline">\(d_k^{(4)}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">Estrato1</td>
+<td align="center">UPM1</td>
+<td align="center">0</td>
+<td align="center">1,03</td>
+<td align="center">1,03</td>
+<td align="center">1,03</td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center">Estrato1</td>
+<td align="center">UPM1</td>
+<td align="center">0</td>
+<td align="center">1,03</td>
+<td align="center">1,03</td>
+<td align="center">1,03</td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">Estrato1</td>
+<td align="center">UPM2</td>
+<td align="center">1,03</td>
+<td align="center">0</td>
+<td align="center">1,03</td>
+<td align="center">1,03</td>
+</tr>
+<tr class="even">
+<td align="center">4</td>
+<td align="center">Estrato1</td>
+<td align="center">UPM2</td>
+<td align="center">1,03</td>
+<td align="center">0</td>
+<td align="center">1,03</td>
+<td align="center">1,03</td>
+</tr>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">Estrato2</td>
+<td align="center">UPM3</td>
+<td align="center">1,03</td>
+<td align="center">1,03</td>
+<td align="center">0</td>
+<td align="center">1,03</td>
+</tr>
+<tr class="even">
+<td align="center">6</td>
+<td align="center">Estrato2</td>
+<td align="center">UPM3</td>
+<td align="center">1,03</td>
+<td align="center">1,03</td>
+<td align="center">0</td>
+<td align="center">1,03</td>
+</tr>
+<tr class="odd">
+<td align="center">7</td>
+<td align="center">Estrato2</td>
+<td align="center">UPM4</td>
+<td align="center">1,03</td>
+<td align="center">1,03</td>
+<td align="center">1,03</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center">8</td>
+<td align="center">Estrato2</td>
+<td align="center">UPM4</td>
+<td align="center">1,03</td>
+<td align="center">1,03</td>
+<td align="center">1,03</td>
+<td align="center">0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="el-método-de-las-réplicas-repetidas-balanceadas" class="section level4 unnumbered">
+<h4>El método de las réplicas repetidas balanceadas</h4>
+<p>Esta técnica conocida como BRR se desarrolló para diseños en donde dos UPM son seleccionadas por estrato. Este método funciona consistentemente para la estimación de parámetros lineales y no lineales (incluidos los percentiles) y, además, asegura máxima dispersión de las UPM a través de las regiones geográficas (estratos) <span class="citation">(<a href="#ref-Valliant_Dever_2017" role="doc-biblioref">Valliant y Dever 2017</a>)</span>. Nótese que si el submuestreo en cada estrato es <span class="math inline">\(n_{Ih} = 2\)</span>, entonces al utilizar la técnica de Jackknife deberíamos definir <span class="math inline">\(2^H\)</span> posibles réplicas al seleccionar aleatoriamente una UPM en cada estrato, lo cual puede ser intratable computacionalmente.</p>
+<p>Es posible lograr la misma eficiencia reduciendo el número de pesos replicados utilizando un enfoque ortogonal con matrices de Hadamard, que son matrices cuadradas cuyas columnas deben ser ortogonales. Por ejemplo, considere la siguiente matriz:</p>
+<p><span class="math display">\[
+\begin{pmatrix}
++1 &amp; +1 &amp; +1 &amp; +1 \\
++1 &amp; -1 &amp; +1 &amp; -1 \\
++1 &amp; +1 &amp; -1 &amp; -1 \\
++1 &amp; -1 &amp; -1 &amp; +1
+\end{pmatrix}
+\]</span></p>
+<p>Asumiendo que el valor +1 implica que la primera UPM se mantiene como parte de la réplica y la segunda UPM es retirada de la réplica; el valor -1 implica que la segunda UPM se mantiene como parte de la réplica y la primera UPM es retirada de la réplica. Por tanto, en cada réplica se retira una UPM por estrato. Esto implica que el producto punto entre cualquier combinación de dos columnas deber ser igual a cero. Por ejemplo, tomando las columnas 2 y 4, se tiene que</p>
+<p><span class="math display">\[
+(+1, -1, +1, -1)&#39; \cdot (+1, -1, -1, +1) 
+=  1 + 1 - 1 -1 = 0 
+\]</span></p>
+<p>De esta forma, el número de réplicas ortogonales será igual al <em>menor múltiplo de 4 mayor o igual al número de estratos</em>. Las UPM que se mantienen en cada réplica se conocen como <em>half-samples</em>. Por consiguiente, el peso de los individuos en la UPM que se mantiene se multiplica por un factor de 2. Entonces, se tiene que</p>
+<p><span class="math display">\[
+d_{k} = 
+\begin{cases}
+0, \ \text{si $k$ pertence a la UPM que fue retirada}\\
+2d_k, \ \text{en otro caso.}
+\end{cases}
+\]</span></p>
+<p>Bajo esta metodología BRR, el estimador de la varianza toma la siguiente forma:</p>
+<p><span class="math display">\[
+\widehat{Var}_{BRR}(\hat{\theta}) = \frac{1}{A}\sum_{a=1}^A(\hat{\theta}_a - \hat\theta )^2
+\]</span></p>
+<p>En donde <span class="math inline">\(\hat{\theta}_a\)</span> es el estimador del parámetro de interés en la réplica <span class="math inline">\(a\)</span>. A continuación se ejemplifica la estructura final de una base de datos de pesos replicados con esta técnica en el mismo conjunto reducido, considerando que hay dos estratos.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(k\)</span></th>
+<th align="center">Estrato</th>
+<th align="center">UPM</th>
+<th align="center"><span class="math inline">\(d_k^{(1)}\)</span></th>
+<th align="center"><span class="math inline">\(d_k^{(2)}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">Estrato1</td>
+<td align="center">UPM1</td>
+<td align="center">2</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center">Estrato1</td>
+<td align="center">UPM1</td>
+<td align="center">2</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">Estrato1</td>
+<td align="center">UPM2</td>
+<td align="center">0</td>
+<td align="center">2</td>
+</tr>
+<tr class="even">
+<td align="center">4</td>
+<td align="center">Estrato1</td>
+<td align="center">UPM2</td>
+<td align="center">0</td>
+<td align="center">2</td>
+</tr>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">Estrato2</td>
+<td align="center">UPM3</td>
+<td align="center">2</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center">6</td>
+<td align="center">Estrato2</td>
+<td align="center">UPM3</td>
+<td align="center">2</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center">7</td>
+<td align="center">Estrato2</td>
+<td align="center">UPM4</td>
+<td align="center">0</td>
+<td align="center">2</td>
+</tr>
+<tr class="even">
+<td align="center">8</td>
+<td align="center">Estrato2</td>
+<td align="center">UPM4</td>
+<td align="center">0</td>
+<td align="center">2</td>
+</tr>
+</tbody>
+</table>
+<p>Una desventaja de este método BRR es que las unidades en dominios con muestra pequeña pueden estar ausentes en algunas combinaciones de pesos replicados por el diseño ortogonal. Lo anterior conlleva una pérdida de precisión en el cálculo del error estándar. Una solución a este problema es modificar los pesos en los pesos replicados. Para la aplicación de la Réplicas Repetidas Balanceadas es recomendable usar el método de Fay, en donde se siguen los lineamientos basados en la matriz de Hadamard, aunque las UPM no son retiradas completamente, sino que su peso se modifica de la siguiente manera:</p>
+<p><span class="math display">\[
+d_k^a=
+\begin{cases}
+\rho*d_k,\ \ \ \  \ \ \ \ \ \ \text{si $k$ pertence a la UPM que fue retirada} \\
+(2-\rho)d_k, \ \ \ \ \text{en otro caso.}
+\end{cases}
+\]</span></p>
+<p>En donde <span class="math inline">\(0&lt;\rho&lt;1\)</span>. Algunos estudios por simulación han mostrado una buena eficiencia para valores de <span class="math inline">\(\rho\)</span> iguales a 0.3, 0.5 o 0.7. Bajo la metodología BRR con el ajuste de Fay, el estimador de la varianza toma la siguiente forma:
+<span class="math display">\[
+\widehat{Var}_{Fay}(\hat{\theta}) = \frac{1}{A(1-\rho)^2}\sum_{a=1}^A(\hat{\theta}_a - \hat\theta )^2
+\]</span></p>
+<p>En donde <span class="math inline">\(\hat{\theta}_a\)</span> es el estimador del parámetro de interés en la réplica <span class="math inline">\(a\)</span>. A continuación se ejemplifica la estructura final de una base de datos de pesos replicados con el ajuste de Fay en el mismo conjunto reducido.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(k\)</span></th>
+<th align="center">Estrato</th>
+<th align="center">UPM</th>
+<th align="center"><span class="math inline">\(d_k^{(1)}\)</span></th>
+<th align="center"><span class="math inline">\(d_k^{(2)}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">Estrato1</td>
+<td align="center">UPM1</td>
+<td align="center">1.5</td>
+<td align="center">0.5</td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center">Estrato1</td>
+<td align="center">UPM1</td>
+<td align="center">1.5</td>
+<td align="center">0.5</td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">Estrato1</td>
+<td align="center">UPM2</td>
+<td align="center">0.5</td>
+<td align="center">1.5</td>
+</tr>
+<tr class="even">
+<td align="center">4</td>
+<td align="center">Estrato1</td>
+<td align="center">UPM2</td>
+<td align="center">0.5</td>
+<td align="center">1.5</td>
+</tr>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">Estrato2</td>
+<td align="center">UPM3</td>
+<td align="center">1.5</td>
+<td align="center">0.5</td>
+</tr>
+<tr class="even">
+<td align="center">6</td>
+<td align="center">Estrato2</td>
+<td align="center">UPM3</td>
+<td align="center">1.5</td>
+<td align="center">0.5</td>
+</tr>
+<tr class="odd">
+<td align="center">7</td>
+<td align="center">Estrato2</td>
+<td align="center">UPM4</td>
+<td align="center">0.5</td>
+<td align="center">1.5</td>
+</tr>
+<tr class="even">
+<td align="center">8</td>
+<td align="center">Estrato2</td>
+<td align="center">UPM4</td>
+<td align="center">0.5</td>
+<td align="center">1.5</td>
+</tr>
+</tbody>
+</table>
+<p>En general, para la aplicación de estos métodos, los pesos de muestreo se ajustan para generar los pesos replicados y, posteriormente, se repiten los ajustes por ausencia de respuesta y calibración para estos nuevos pesos. Con esta metodología se estiman los errores de muestreo y la varianza de muestreo, incluyendo el impacto de la ausencia de respuesta, el cual se espera que sea pequeño, pero relevante en el momento de calcular estimadores más precisos. Retomando las observaciones hechas anteriormente, en el caso en el que la encuesta cuente con estratos en donde se encuentre una sola UPM, el método de los pesos replicados repetidas balanceadas no es aplicable puesto que al eliminar una unidad, algunos estratos quedarán vacíos.</p>
+</div>
+<div id="método-de-bootstrap" class="section level4 unnumbered">
+<h4>Método de Bootstrap</h4>
+<p>En este apartado se presenta el método de Bootstrap <span class="citation">(<a href="#ref-EfroTibs93" role="doc-biblioref">Efron y Tibshirani 1993</a>)</span>, el cual es muy utilizado por su fácil implementación; además de ser flexible en términos del número de pesos replicados que se crean. Teniendo los pesos muestrales se procede a crear los pesos replicados con el método de remuestreo con el fin de poder calcular estimaciones de indicadores junto con las estimación de las varianzas. En el contexto de las encuestas de hogares, se trata de realizar un remuestreo a las unidades primarias de muestreo seleccionadas desde el marco de áreas.</p>
+<p>El Bootstrap es el método basado en réplicas más versatil para el cálculo de errores estándar. <span class="citation"><a href="#ref-Valliant_Dever_2017" role="doc-biblioref">Valliant y Dever</a> (<a href="#ref-Valliant_Dever_2017" role="doc-biblioref">2017</a>)</span> mencionan que es muy eficiente en la estimación de parámetros lineales y no lineales, a diferencia del Jackknife que no es eficiente en la estimación de percentiles. Funciona también para tamaños de muestra pequeños, a diferencia del método BRR que requiere una muestra de mínimo dos UPM por estrato. Este método requiere una cantidad de pesos replicados grande, usualmente mayor a 200.</p>
+<p>Siendo <span class="math inline">\(s_{BS}\)</span> la submuestra Bootstrap, el peso replicado del individuo <span class="math inline">\(k\)</span> perteneciente a la UPM <span class="math inline">\(i\)</span> del estrato <span class="math inline">\(h\)</span> sigue la siguiente expresión:
+<span class="math display">\[
+d_k^b = 
+\begin{cases}
+0, \text{\ si la UPM $i$ no pertence a $s_{BS}$} \\
+d_k\left[1 - \sqrt{\frac{n_{Ih}^*}{n_{Ih}-1}}+\sqrt{\frac{n_{Ih}^*}{n_{Ih}-1}}
+\frac{n_{Ih}}{n_{Ih}^*}n_{Ihi}^*
+\right], \text{\ en otro caso} 
+\end{cases}
+\]</span></p>
+<p>En donde <span class="math inline">\(n_{Ih}\)</span> es el úmero de UPM en la muestra original del estrato <span class="math inline">\(h\)</span>, <span class="math inline">\(n_{Ih}^*\)</span> es el número de UPM en la muestra Bootstrap y <span class="math inline">\(n_{Ihi}^*\)</span> es el número de veces que la UPM <span class="math inline">\(i\)</span> fue seleccionada en la muestra Bootstrap. En este caso se selecciona una muestra Bootstrap con <span class="math inline">\(m^*_h = m_h - 1\)</span>, y los pesos toman la siguiente forma</p>
+<p><span class="math display">\[
+d_k^a = 
+\begin{cases}
+0,  \ \ \  \ \ \ \ \ \  \ \ \  \ \ \  \ \ \  \ \ \  \ \ \  \ \ \  \ \ \  \ \ \  \ \ \  \ \ \  \ \ \  \ \ \  \ \ \ \ \ \  \ \ \  \ \ \  \ \ \  \ \ \ \text{si la UPM $i$ no pertence a $s_{BS}$} \\
+d_k\left[1 - \sqrt{\frac{n_{Ih}^*}{n_{Ih}-1}}+\sqrt{\frac{n_{Ih}^*}{n_{Ih}-1}}
+\frac{n_{Ih}}{n_{Ih}^*}n_{Ihi}^*
+\right],  \ \ \  \ \ \text{en otro caso} 
+\end{cases}
+\]</span></p>
+<p>Bajo la metodología Bootstrap (BS), el estimador de la varianza toma la siguiente forma:
+<span class="math display">\[
+\widehat{Var}_{BS}(\hat{\theta}) = \frac{1}{B}\sum_{b=1}^B(\hat{\theta}_b - \hat\theta )^2
+\]</span>
+En donde <span class="math inline">\(\hat{\theta}_b\)</span> es el estimador del parámetro de interés en la réplica <span class="math inline">\(b\)</span> inducida por la muestra Bootstrap. En resumen, para la <span class="math inline">\(b\)</span>-ésima réplica con los pesos resultantesse podrán calcular las estimaciones de totales, proporciones, promedios y razones y sus respectivas varianzas o desviaciones. En general, es necesario reflejar el ajuste de los pesos en los pesos replicados, por esto es necesario trabajar con la muestra originalmente seleccionada, la cual contendrá unidades no elegibles y unidades que no respondieron. Los mismos ajustes que se hicieron a la muestra original se deben realizar en cada réplica. Si hubo calibración de pesos también debe ser incluida como un proceso en cada réplica, para asegurar que el error estándar inducido por estos métodos incluirá el incremento (o decremento) de la varianza inducida por estos ajustes a los pesos. A continuación se ejemplifica la estructura final de una base de datos de pesos replicados con la metodología de bootstrap en el mismo conjunto reducido.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(k\)</span></th>
+<th align="center">Estrato</th>
+<th align="center">UPM</th>
+<th align="center"><span class="math inline">\(d_k^{(1)}\)</span></th>
+<th align="center"><span class="math inline">\(d_k^{(2)}\)</span></th>
+<th align="center"><span class="math inline">\(d_k^{(3)}\)</span></th>
+<th align="center"><span class="math inline">\(d_k^{(4)}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">Estrato1</td>
+<td align="center">UPM1</td>
+<td align="center">2</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center">Estrato1</td>
+<td align="center">UPM1</td>
+<td align="center">2</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">Estrato1</td>
+<td align="center">UPM2</td>
+<td align="center">0</td>
+<td align="center">2</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr class="even">
+<td align="center">4</td>
+<td align="center">Estrato1</td>
+<td align="center">UPM2</td>
+<td align="center">0</td>
+<td align="center">2</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">Estrato2</td>
+<td align="center">UPM3</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center">6</td>
+<td align="center">Estrato2</td>
+<td align="center">UPM3</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center">7</td>
+<td align="center">Estrato2</td>
+<td align="center">UPM4</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">2</td>
+</tr>
+<tr class="even">
+<td align="center">8</td>
+<td align="center">Estrato2</td>
+<td align="center">UPM4</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">2</td>
+</tr>
+</tbody>
+</table>
+<p><span class="citation"><a href="#ref-Rao_Wu_1984" role="doc-biblioref">Rao y Wu</a> (<a href="#ref-Rao_Wu_1984" role="doc-biblioref">1984</a>)</span> y <span class="citation"><a href="#ref-Rao_Wu_1988" role="doc-biblioref">Rao y Wu</a> (<a href="#ref-Rao_Wu_1988" role="doc-biblioref">1988</a>)</span> aconsejan seleccionar una muestra con reemplazo de <span class="math inline">\(n_I - 1\)</span> de las <span class="math inline">\(n_I\)</span> UPM de la muestra, teniendo en cuenta la probabilidad de selección del diseño complejo en la primera etapa. Dado que la selección es con reemplazo, una UPM puede ser seleccionada más de una vez en esta nueva muestra. Por otro lado, también es posible realizar una selección sin reemplazo; en este caso, <span class="citation"><a href="#ref-Preston_2009" role="doc-biblioref">Preston</a> (<a href="#ref-Preston_2009" role="doc-biblioref">2009</a>)</span> recomiendan seleccionar una muestra con reemplazo de <span class="math inline">\(n_I/2\)</span> de las <span class="math inline">\(n_I\)</span> UPM de la muestra, teniendo en cuenta la probabilidad de selección del diseño complejo en la primera etapa.</p>
+</div>
+</div>
+<h3>Referencias</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-EfroTibs93" class="csl-entry">
+Efron, Bradley, y Robert J. Tibshirani. 1993. <em>An Introduction to the Bootstrap</em>. Monographs on Statistics y Applied Probability 57. Boca Raton, Florida, USA: Chapman &amp; Hall/CRC.
+</div>
+<div id="ref-Judkins_1990" class="csl-entry">
+Judkins, David R. 1990. <span>«Fay’s Method for Variance Estimation»</span>. <em>Journal of Official Statistics; Stockholm</em> 6 (3): 223.
+</div>
+<div id="ref-Kish_1965" class="csl-entry">
+Kish, Leslie. 1965. <em>Survey Sampling</em>. John Wiley; Sons.
+</div>
+<div id="ref-Korn_Graubard_1999" class="csl-entry">
+Korn, Edward Lee, y Barry I. Graubard. 1999. <em>Analysis of health surveys</em>. Wiley.
+</div>
+<div id="ref-Krewski_Rao_1981" class="csl-entry">
+Krewski, D., y J. N. K. Rao. 1981. <span>«Inference From Stratified Samples: Properties of the Linearization, Jackknife and Balanced Repeated Replication Methods»</span>. <em>The Annals of Statistics</em> 9 (5): 1010-19.
+</div>
+<div id="ref-McCarthy_1969" class="csl-entry">
+McCarthy, P. J. 1969. <span>«Pseudo-Replication: Half Samples»</span>. <em>Revue de l’Institut International de Statistique / Review of the International Statistical Institute</em> 37 (3): 239-64. <a href="https://doi.org/10.2307/1402116">https://doi.org/10.2307/1402116</a>.
+</div>
+<div id="ref-mosteller1968data" class="csl-entry">
+Mosteller, F. 1968. <em>Data Analysis, Including Statistics</em>. <a href="https://books.google.cl/books?id=6ptDHQAACAAJ">https://books.google.cl/books?id=6ptDHQAACAAJ</a>.
+</div>
+<div id="ref-Preston_2009" class="csl-entry">
+Preston, John. 2009. <span>«Rescaled bootstrap for stratified multistage sampling»</span>. <em>Survey Methodology</em> 35 (2): 227-34.
+</div>
+<div id="ref-Quenouille" class="csl-entry">
+Quenouille, M. H. 1956. <span>«Notes on Bias in Estimation»</span>. <em>Biometrika</em> 43 (3/4): 353-60.
+</div>
+<div id="ref-Rao_Wu_1984" class="csl-entry">
+Rao, J. N. K., y C. F. J. Wu. 1984. <span>«BOOTSTRAP INFERENCE FOR SAMPLE SURVEYS»</span>. En <em>Procedings of the Survey Research Methods Section</em>, 106-12. American Statistical Association.
+</div>
+<div id="ref-Rao_Wu_1988" class="csl-entry">
+———. 1988. <span>«Resampling Inference with Complex Survey Data»</span>. <em>Journal of the American Statistical Association</em> 83 (401): 231-41. <a href="https://doi.org/10.1080/01621459.1988.10478591">https://doi.org/10.1080/01621459.1988.10478591</a>.
+</div>
+<div id="ref-shao2012jackknife" class="csl-entry">
+Shao, J., y D. Tu. 2012. <em>The Jackknife and Bootstrap</em>. Springer Series en Statistics. Springer New York.
+</div>
+<div id="ref-Valliant_Dever_2017" class="csl-entry">
+Valliant, Richard, y Jill A. Dever. 2017. <em>Survey Weights: A Step-by-step Guide to Calculation</em>. 1 edition. Stata Press.
+</div>
+<div id="ref-Wolter_2007" class="csl-entry">
+Wolter, Kirk M. 2007. <em>Introduction to variance estimation</em>. 2nd ed. Statistics for social y behavioral sciences. Springer.
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="linealización-de-taylor.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="consideraciones-adicionales.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/psirusteam/HHS-Handbook/11Varianza.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Diseño y análisis de encuestas de hogares.pdf", "Diseño y análisis de encuestas de hogares.epub", "Diseño y análisis de encuestas de hogares.mobi"],
+"toc": {
+"collapse": "section"
+},
+"tconfig": null
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
