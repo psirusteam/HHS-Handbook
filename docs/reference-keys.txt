@@ -26,6 +26,8 @@ fig:figim3
 fig:figou2
 fig:figou1
 fig:figel1
+fig:fig1fig
+fig:figCSj1
 introducción
 el-paradigma-del-error-total
 qué-es-una-encuesta
@@ -135,3 +137,14 @@ generación-de-bases-longitudinales-para-dos-periodos-consecutivos
 creación-de-los-pesos-iniciales
 generación-de-los-pesos-longitudinales
 generación-de-bases-longitudinales-anuales
+análisis-de-flujos-brutos
+matrices-de-transición
+modelos-de-markov
+estimación-de-las-matrices-de-transición
+criterios-de-calidad-y-difusión
+medidas-de-calidad
+consideraciones-adicionales-1
+una-perspectiva-regional-de-las-encuestas-de-hogares
+descripción-de-algunas-encuestas-por-países
+desafios-de-la-región
+software

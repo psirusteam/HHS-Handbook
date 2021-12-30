@@ -222,7 +222,7 @@ $$
 s^{(1234)}=s^1 \cap s^2 \cap s^3 \cap s^4
 $$
 
-La muestra $s^{(1234)}$ es representativa de la población longitudinal en los periodos combinados. En esta etapa, el factor de expansión longitudinal básico se define como idéntico al peso resultante de la sección anterior; es decir
+La muestra $s^{(1234)}$ es representativa de la población longitudinal en los periodos combinados. En esta etapa, el factor de expansión longitudinal inicial se define como idéntico al peso resultante de la sección anterior; es decir
 
 $$
 d_{(1234,k)}^{inicial}=d_{(1,k)}^{inicial}

@@ -26,10 +26,10 @@ rmd_files: [
   
   "16Agregar.Rmd",
   "17Longitudinal.Rmd",
-  # "18Transicion.Rmd",
-  # "19Calidad.Rmd",
-  # 
-  # "20Apendice.Rmd",
+  "18Transicion.Rmd",
+  "19Calidad.Rmd",
+  
+  "20Apendice.Rmd",
 
   "99Referencias.Rmd"
   ]

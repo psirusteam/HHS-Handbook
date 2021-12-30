@@ -574,7 +574,7 @@
             "author": [
                 {
                     "family": "Gutiérrez",
-                    "given": "Hugo Andrés"
+                    "given": "H. A."
                 }
             ],
             "edition": "Segunda edición",
@@ -4330,28 +4330,7 @@
             "issued": {
                 "date-parts": [
                     [
-                        2019
-                    ]
-                ]
-            },
-            "publisher": "R Foundation for Statistical Computing",
-            "publisher-place": "Vienna, Austria",
-            "title": "R: A language and environment for statistical computing",
-            "title-short": "R",
-            "type": "book"
-        },
-        {
-            "URL": "https://www.R-project.org/",
-            "author": [
-                {
-                    "literal": "R Core Team"
-                }
-            ],
-            "id": "R_2019",
-            "issued": {
-                "date-parts": [
-                    [
-                        2019
+                        2020
                     ]
                 ]
             },
