@@ -75,6 +75,31 @@ $$
 
 En resumen, si se tiene acceso a información auxiliar (contenida en el marco de muestreo o en otras preguntas de la encuesta), y si se considera que el mecanismo que genera la ausencia de respuesta en la encuesta de hogares es MAR o MCAR, es posible ajustar un modelo de *propensity score* para la ausencia de respuesta (en donde la variable dependiente es una variable indicadora de la respuesta del individuo por lo general supeditado a una distribución Bernoulli o Binomial).
 
+Siempre es muy importante realizar una validación exhaustiva de los modelos utilizados para estimar la probabilidad de respuesta. En general, es necesario que el modelo satisfaga las siguientes dos condiciones:
+
+1. *Soporte común*: al igual que en un experimento aleatorizado, es necesario garantizar que ninguna combinación de las covariables induzca un estado (respuesta o ausencia de respuesta) de forma determinística. Es decir sobre todas las combinaciones en las covariables deben existir respondientes y no respondientes. Esta condición se puede escribir como:
+$$
+0 < Pr(D_{1,k} = 1 |\mathbf{x}_{1}) < 1 
+$$
+2. *Balanceo*: como la respuesta de las unidades de muestreo no provienen de un estudio aleatorizado, es necesario garantizar que la distribución de las $\hat\phi_k$ sea similar entre respondientes y no respondientes. De esta forma, es posible expandir el subconjunto de respondientes efectivos a la muestra original (que incluye a las unidades no respondientes), la cual a su vez expande a toda la población de interés. Esta condición se puede escribir como:
+
+\begin{align*}
+\hat\phi_{1, k} &= Pr[D_{1, k} | I_{1, k} = 1,\mathbf{x}] \\
+&= Pr[D_{1, k} | k \in s_r, I_{1, k} = 1, \mathbf{x}] \\
+&= Pr[D_{1, k} | k \notin s_r, I_{1, k} = 1, \mathbf{x}]
+\end{align*}
+
+Por último, se debe corroborar que la suma de los pesos ajustados por la ausencia de respuesta esté cercana al tamaño de la población que se quiere representar. La figura \@ref(fig:figel3a) permite ilustrar el soporte común entre respondientes y no respodientes para un modelo de *propensity score*; notese que ambas distribuciones son similiares, por lo que es posible concluir que efectivamente las covariables usadas están representando bien la estructura estocástica en respondientes y no respondientes. 
+
+```{r, figel3a, fig.cap="Distribución de las probabilidades estimadas de respuesta: respondientes (arriba), no respondientes (medio), ambos (abajo).", echo=FALSE, out.width='50%'}
+knitr::include_graphics("Pics/el3a.png")
+```
+
+Además, la figura \@ref(fig:figel3b) muestra la propiedad de balanceo en el modelo; véase cómo ambas distribuciones se alejan de los extremos (ceros y uno) y presentan una caracterización similar. 
+
+```{r, figel3b, fig.cap="Balanceo entre respondientes y no respondientes", echo=FALSE, out.width='50%'}
+knitr::include_graphics("Pics/el3b.png")
+```
 
 ### Calibración 
 

@@ -25,7 +25,7 @@ rmd_files: [
   "15Outliers.Rmd",
   
   "16Agregar.Rmd",
-  # "17Longitudinal.Rmd",
+  "17Longitudinal.Rmd",
   # "18Transicion.Rmd",
   # "19Calidad.Rmd",
   # 

@@ -9,6 +9,8 @@ fig:figimptotal
 fig:figpondtotal
 fig:figelimtotal
 fig:figenfcomb
+fig:figel3a
+fig:figel3b
 fig:fightcal
 fig:fightcaldist
 fig:fightcal2dist
@@ -23,6 +25,7 @@ fig:figim2
 fig:figim3
 fig:figou2
 fig:figou1
+fig:figel1
 introducción
 el-paradigma-del-error-total
 qué-es-una-encuesta
@@ -126,3 +129,9 @@ factores-de-expansión-y-estimadores-de-muestreo
 agregación-de-encuestas-con-diferentes-tamaños-de-muestra
 efecto-del-tipo-de-encuesta-en-la-eficiencia-de-los-indicadores
 pruebas-de-hipótesis-sobre-indicadores-agregados
+procesamiento-longitudinal-de-las-encuestas-rotativas
+diseño-de-paneles-rotativos-en-las-encuestas-de-la-región
+generación-de-bases-longitudinales-para-dos-periodos-consecutivos
+creación-de-los-pesos-iniciales
+generación-de-los-pesos-longitudinales
+generación-de-bases-longitudinales-anuales

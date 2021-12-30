@@ -1954,6 +1954,12 @@
         },
         {
             "ISBN": "978-0-470-01871-2",
+            "author": [
+                {
+                    "family": "Lynn",
+                    "given": "P."
+                }
+            ],
             "collection-title": "Wiley series in survey methodology",
             "id": "Lynn_2009",
             "issued": {

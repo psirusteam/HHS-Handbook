@@ -4,9 +4,9 @@ Para algunos INE puede ser necesario contar con una estructura de ponderación l
 
 @Lynn_2009 plantea que una encuesta longitudinal es aquella que recolecta los datos de los mismos elementos muestrales en múltiples ocasiones a través del tiempo. Por ejemplo, una encuesta trimestral con un esquema rotativo 4(1)0 permitiría realizar observaciones continuas en el 25% de las viviendas durante todo un año. Cuando se requiere la generación de un sistema de ponderación longitudinal es necesario centrar la atención en la estimación del cambio del indicador en dos periodos de tiempo consecutivos, y su correspondiente estimación de la varianza. Cabe resaltar que este proceso debe tener en cuenta que las muestras no son independientes y por lo tanto se debe calcular la varianza de la primera ronda, la varianza de la segunda ronda y la correlación entre las dos rondas de interés. Estos tres componentes deben intervenir en el cálculo de los coeficientes de variación, así como en la determinación del tamaño de muestra en cada ronda.
 
-Asimismo, con el análisis de los datos longitudinales es posible hacer otro tipo de análisis como por ejemplo: 
+Asimismo, con el análisis de los datos longitudinales es posible hacer otros tipos de análisis como por ejemplo: 
 
-* Inferencia sobre la caracterización de las unidades observacionales que han cambiado de un estatus o otro: desde las bases de datos longitudinales es posible determinar las características de los hogares o personas que han sufrido algún cambio en las variables de interes. Por ejemplo, es posible determinar las características de los hogares que han salido (o entrado) de (a) la pobreza extrema, sin importar si se muestra un cambio neto significativo en el periodo de estudio.
+* Inferencia sobre la caracterización de las unidades observacionales que han cambiado de un estatus a otro: desde las bases de datos longitudinales es posible determinar las características de los hogares o personas que han sufrido algún cambio en las variables de interes. Por ejemplo, es posible determinar las características de los hogares que han salido (o entrado) de (a) la pobreza extrema, sin importar si se muestra un cambio neto significativo en el periodo de estudio.
 * Inferencia acerca de la estabilidad (o inestabilidad) de características de interés sobre las observaciones longitudinales: combinando varios periodos de seguimiento es posible detectar que algunas unidades observacionales experimentan periodos de estabilidad (o fluctuación) sobre el fenómeno de interés. Por ejemplo, el análisis de este tipo de problemáticas puede propiciar un mejor entendimiento de las situaciones que confluyen para que un hogar entre a la pobreza extrema y se mantenga en ese estado por un periodo determinado.
 * Caracterización de los eventos y fenómenos: con las encuestas longitudinales es posible entender a profundidad la duración de los periodos en los que una unidad observacional cambia de un estado a otro y persiste en este último. Por ejemplo, entrar a la pobreza, entrar a la inactividad económica, entrar a la desocupación, abandonar la educación, entre otros.
 * Análisis de impactos, efectos y relaciones causales: los datos longitudinales pueden usarse muy efectivamente a la hora de establecer relaciones causales entre una intervención y un fenómeno de interés. Por ejemplo, es posible evaluar la magnitud del impacto que la pandemia por COVID-19 trajo sobre la tasa de desocupación y sus efectos a lo largo del año. 
@@ -15,37 +15,44 @@ Asimismo, con el análisis de los datos longitudinales es posible hacer otro tip
 
 Algunas encuestas de hogares en América Latina permiten que un hogar sea visitado en más de una ocasión con el fin de tener estimaciones precisas acerca de los cambios de estado que el hogar o las personas que lo habitan puedan sufrir. Por ejemplo, en las encuestas de fuerza laboral, una persona puede pasar de estar ocupada en un periodo a inactiva en el siguiente periodo. Estos cambios y la dinámica propia que conllevan son de interés para los investigadores y deben ser contemplados desde una perspectiva más amplia en cuanto a su diseño. Nótese que este tipo de variaciones sobre los individuos es captada a través del componente longitudinal de la encuesta, constituido por los respondientes efectivos que fueron observados de forma sistemática en los periodos de interés.
 
-Por ejemplo, la Encuesta Continua de Empleo (ECE), aplicada por el Instituto Nacional de Estadística de Bolivia, hace uso de una metodología mixta que permite el seguimiento continuo y transversal a la tasa de desocupación y a la tasa de subocupación, así como el seguimiento a los cambios que se presentan entre los periodos de interés (trimestres y semestres), a través del análisis longitudinal de los datos en el sector urbano (pues el diseño no es rotativo en el sector rural, debido a la baja incidencia de desempleo en esta zona). La ECE cuenta con un esquema rotacional 4(0)1, en donde una vivienda es entrevistada durante cuatro trimestres consecutivos, y luego sale del panel definitivamente. Un ejemplo de este tipo de esquemas se presenta en el siguiente cuadro. 
+Por ejemplo, considere una encuesta continua de hogares que cuenta con un esquema rotacional 4(0)1, en donde una vivienda es entrevistada durante cuatro trimestres consecutivos, y luego sale del panel definitivamente. Un ejemplo de este tipo de esquemas se presenta en el siguiente cuadro. 
 
-| Año  	| Trimestre 	| Panel 1  	| Panel 2  	| Panel 3  	| Panel 4  	|
-|------	|-----------	|----	|----	|----	|----	|
-| 2019 	| T1        	| $A$ 	| $B$ 	| $C$ 	| $D$ 	|
-|      	| T2        	| $B$ 	| $C$ 	| $D$ 	| $E$ 	|
-|      	| T3        	| $C$ 	| $D$ 	| $E$ 	| $F$ 	|
-|      	| T4        	| $D$ 	| $E$ 	| $F$ 	| $G$ 	|
+| Trimestre | Panel 1 | Panel 2	| Panel 3 | Panel 4	|
+|:---------:|:-------:|:-------:|:-------:|:-------:|
+| T1        | $a_1$   | $b_1$ 	| $c_1$ 	| $d_1$ 	|
+| T2        | $b_1$   | $c_1$ 	| $d_1$ 	| $a_2$ 	|
+| T3        | $c_1$   | $d_1$ 	| $a_2$ 	| $b_2$ 	|
+| T4        | $d_1$   | $a_2$ 	| $b_2$ 	| $c_2$ 	|
+| T5        | $a_2$   | $b_2$ 	| $c_2$ 	| $d_2$ 	|
+| T6        | $b_2$   | $c_2$ 	| $d_2$ 	| $a_3$ 	|
 Table: *Rotación de páneles para un diseño 4(0)1.*
 
-Nótese que entre el primer y el segundo periodo de medición hay un traslape del 75% de hogares. En particular, entre 2019-T1 y 2019-T2, la muestra se conserva en tres cuartas partes puesto que $B$, $C$ y $D$ se repiten. Esto mismo sucede en cada trimestre del esquema rotacional. Por otro lado, entre el primer y el tercer periodo habrá un traslape del 50%. Nótese que entre 2019-T1 y 2019-T3, la mitad de la muestra se conserva puesto que $C$ y $D$ se repiten. Este mismo patrón se encuentra a lo largo del esquema rotacional. Además, entre el primer y el cuarto periodo se tendrá un 25% de traslape. Nótese, por ejemplo, que entre 2019-T1 y 2019-T4, $D$ se repite. Finalmente, entre el primer trimestre de 2019 y el primero de 2020 no se tiene ningún tipo de traslape. 
+Nótese que entre el primer y el segundo periodo de medición hay un traslape del 75% de hogares. En particular, entre T1 y T2, la muestra se conserva en tres cuartas partes puesto que $b_1$, $c_1$ y $d_1$ se repiten. Esto mismo sucede en cada trimestre del esquema rotacional. Por otro lado, entre el primer y el tercer periodo habrá un traslape del 50%. Nótese que entre T1 y T3, la mitad de la muestra se conserva puesto que $c_1$ y $d_1$ se repiten. Este mismo patrón se encuentra a lo largo del esquema rotacional. Además, entre el primer y el cuarto periodo se tendrá un 25% de traslape. Nótese, por ejemplo, que entre T1 y T4, $d_1$ se repite. Finalmente, entre T1 y T5 no se tiene ningún tipo de traslape. 
 
-Sin embargo, debido a la pandemia por COVID-19, el año 2020 fue un año atípico para los levantamientos de las encuestas de hogares en los INE de la región.  puesto que la crisis de salud trajo consigo muchos retos en términos de la consecución de la información primaria. Debido a las restricciones de movilidad que los gobiernos tuvieron que imponer para hacerle frente a la pandemia, en algunos trimestres se optó por replicar el mismo esquema de trimestres anteriores. En nuestro ejemplo, no se incluyó el 25% adicional que se tenía planeado, sino que la muestra fue exactamente la misma que en el primer trimestre. Además, cabe resaltar que en casí toda la región, la muestra de hogares se contactó, no de manera presencial, sino telefónica, disminuyendo la tasa de cobertura y de respuesta efectiva. 
+La figura \@ref(fig:figel1) ejemplifica tres esquemas longitudinales que pueden ser creados para el año 2019. El primero de ellos (a la izquierda de la figura) representa la combinación del primer y segundo trimestre, que se define a través de la agregación de las dos mediciones en el primer y segundo trimestre de los paneles $b_1$, $c_1$ y $d_1$. El segundo esquema (centro) muestra la combinación de los primeros tres trimestres del año, definidos por los paneles $c_1$ y $d_1$. Por último, la base longitudinal anual parte de la combinación de las cuatro mediciones del panel $d_1$. 
 
-| Año  	| Trimestre 	| Panel 1  	| Panel 2  	| Panel 3  	| Panel 4  	|
-|------	|-----------	|----	|----	|----	|----	|
-| 2020 	| T1        	| $E$ 	| $F$ 	| $G$ 	| $H$ 	|
-|      	| T2        	| $F$ 	| $G$ 	| $H$ 	| $I$ 	|
-|      	| T3        	| $F$ 	| $G$ 	| $H$ 	| $I$ 	|
-|      	| T4        	| $G$ 	| $H$ 	| $I$ 	| $J$ 	|
+```{r, figel1, fig.cap="Tres escenarios longitudinales en un esquema rotativo 4(0)1.", echo=FALSE, out.width='50%'}
+knitr::include_graphics("Pics/el1.png")
+```
+
+
+Como se mencionó en capítulos anteriores, la pandemia por COVID-19 hizo que el año 2020 fuese un año atípico para los levantamientos de las encuestas de hogares en los INE de la región, puesto que la crisis de salud trajo consigo muchos retos en términos de la consecución de la información primaria. Debido a las restricciones de movilidad que los gobiernos tuvieron que imponer para hacerle frente a la pandemia, en algunos trimestres se optó por replicar el mismo esquema de trimestres anteriores. En nuestro ejemplo, asuma que no se incluyó el 25% adicional que se tenía planeado, sino que la muestra fue exactamente la misma que en el primer trimestre. Recuérdese además que en casi toda la región, la muestra de hogares se contactó, no de manera presencial, sino telefónica, disminuyendo la tasa de cobertura y de respuesta efectiva. 
+
+| Año  	| Trimestre | Panel 1 | Panel 2	| Panel 3 | Panel 4	|
+|:-----:|:---------:|:-------:|:-------:|:-------:|:-------:|
+| 2020 	| T1        	| $a_1$   | $b_1$ 	| $c_1$ 	| $d_1$ 	|
+|      	| T2        	| $b_1$   | $c_1$ 	| $d_1$ 	| $a_2$ 	|
+|      	| T3        	| $b_1$   | $c_1$ 	| $d_1$ 	| $a_2$ 	|
+|      	| T4        	| $c_1$   | $d_1$ 	| $a_2$ 	| $b_2$ 	|
 Table: *Rotación de páneles en el diseño 4(0)1 para 2020.*
 
-En este ejemplo, el traslape de la muestra de hogares entre el primer y el segundo trimestre de 2020 fue completo. Sin embargo, sí se presentaron variaciones significativas en las tasas de respuesta de ambos periodos puesto que en el primer trimestre la recolección de la información fue presencial, mientras que a partir del segundo trimestre fue telefónica. Además, entre el primer y el tercer trimestre del 2020 hubo un 75% de traslape; mientras que entre el primer trimestre y el último del 2020 hubo un 50% de traslape.
 
-![Tres escenarios longitudinales en un esquema rotativo 4(0)1](Pics/el1.png)
+En este ejemplo, el traslape de la muestra de hogares entre el segundo y el tercer trimestre de 2020 fue completo. Además, entre el primer y el tercer trimestre del 2020 hubo un 75% de traslape; mientras que entre el primer trimestre y el último del 2020 hubo un 50% de traslape.
 
-La figura anterior ejemplifica tres esquemas longitudinales que pueden ser creados para el año 2019. El primero de ellos (a la izquierda de la figura) representa la combinación del primer y segundo trimestre, que se define a través de la agregación de las dos mediciones en el primer y segundo trimestre de los paneles $b_1$, $c_1$ y $d_1$. El segundo esquema (centro) muestra la combinación de los primeros tres trimestres del año, definidos por los paneles $c_1$ y $d_1$. Por último, la base longitudinal anual parte de la combinación de las cuatro mediciones del panel $d_1$. 
 
 ## Generación de bases longitudinales para dos periodos consecutivos
 
-El análisis longitudinal de las encuestas de hogares es un insumo valioso en la toma de decisiones puesto que permite obtener proveer una visión complementaria a los fenómenos sociales que no se puede obtener por otros medios. El seguimiento continuo a las unidades de observación no puede ser llevado a cabo en todas las encuestas continuas de la región, sino solamente en aquellas que contemplen esquemas rotativos en su planificación. Dado que en algunas encuestas, se contempla la asignación de la muestra a diferentes grupo de rotación, es posible analizar el comportamiento de los flujos brutos sobre indicadores tan importantes como los relacionados a la situación en la ocupación, la pobreza, entre otros.
+El análisis longitudinal de las encuestas de hogares es un insumo valioso en la toma de decisiones puesto que permite proveer una visión complementaria a los fenómenos sociales que no se puede obtener por otros medios. El seguimiento continuo a las unidades de observación no puede ser llevado a cabo en todas las encuestas continuas de la región, sino solamente en aquellas que contemplen esquemas rotativos en su planificación. Dado que en algunas encuestas, se contempla la asignación de la muestra a diferentes grupo de rotación, es posible analizar el comportamiento de los flujos brutos sobre indicadores tan importantes como los relacionados a la situación en la ocupación, la pobreza, entre otros.
 
 En un contexto de estimación de cambios brutos con la definición de tablas de contingencia, @Feinberg_Stasny_1983 asumen que las diferencias entre los pesos de muestreo en dos periodos de tiempo distintos ocurren solamente como resultado de los flujos naturales de entrada y
 salida de la población de interés. Por ejemplo, si el individuo es
@@ -60,26 +67,24 @@ brutos y la diferencia entre los pesos, 5, se añade a la celda (Empleado
 supeditadas a las fluctuaciones que se puedan presentar en la fuerza de
 trabajo. 
 
-El objetivo de esta sección es generar pesos longitudinales para todos los individuos pertenecientes a los paneles incumbentes de la muestra original en los dos primeros trimestre del 2020. Siguiendo la metodología de @Verma_Betti_Ghellini, es necesario seguir un procedimiento secuencial para la creación de los factores de expansión en el panel. En este orden de ideas, primero es necesario crear el conjunto de pesos iniciales (trasnversales en el primer periodo) para luego definir los pesos finales (longitudinales en el primer y segundo periodo). A continuación se resume el procedieminto:
+El objetivo de esta sección es generar pesos longitudinales para todos los individuos pertenecientes a los paneles incumbentes de la muestra original en los dos primeros trimestre del 2020. Siguiendo la metodología de @Verma_Betti_Ghellini, es necesario seguir un procedimiento secuencial para la creación de los factores de expansión en el panel. En este orden de ideas, primero es necesario crear el conjunto de pesos iniciales (trasnversales en el primer periodo) para luego definir los pesos finales (longitudinales en el primer y segundo periodo). A continuación, se resume el procedimiento:
 
-1. Creación de pesos iniciales: teniendo en cuenta los pormenores del diseño de muestreo, la ENE selecciona una muestra de hogares y de personas que son miembros de estos hogares. Las ponderaciones iniciales se definen a partir de los factores de expansión transversales. Este proceso plantea al menos los siguientes pasos:
+1. Creación de pesos iniciales: teniendo en cuenta los pormenores del diseño de muestreo de la encuesta que selecciona una muestra de hogares y de personas que son miembros de estos hogares. Las ponderaciones iniciales se definen a partir de los factores de expansión transversales. Este proceso plantea al menos los siguientes pasos:
     - Determinación de los pesos básicos con el ajuste de selección de paneles rotativos.
     - Ajuste por ausencia de respuesta y cobertura.
 
 2. Generación de los pesos longitudinales: la muestra debe ser modificada y ajustada para que refleje los cambios en la duración del panel para la población objetivo en los dos periodos de interés. En este caso se plantean al menos tres tipos de ajuste:
     - Definición de la población longitudinal (supeditada a los hogares que salen y entran en el periodo de referencia).
-    - Ausencia de respuesta y pérdidas en la muestra debido a la atrición.
+    - Ausencia de respuesta y pérdidas en la muestra debido a la atrición (ausencia de respuesta en el panel).
     - Calibración de los pesos logitudinales.
     
-El primer paso en la generación de los pesos longitudinales consiste en realizar una consolidación de bases de datos, en donde se integren únicamente los periodos de interés. Es decir que este proceso producirá resultados diferentes para dos periodos, tres o cuatro. En general, se esperaría contar con un mayor número de unidades observacionales en el primer caso (dos periodos) y un número menor de unidades observacionales en el último caso (cuatro periodos). Nótese que en el caso particular de las encuestas con un esquema rotativo 4(0)1, no es posible realizar la integración de cinco periodos consecutivos, puesto que el esquema solo define el traslape de hasta cuatro periodos consecutivos. La siguiente gráfica muestra todas las posibilidades de bases de datos longitudinales resultantes que se pueden definir a partir de un esquema de rotación 4(0)1.
+El primer paso en la generación de los pesos longitudinales consiste en realizar una consolidación (combinación) de bases de datos, en donde se integren únicamente los periodos de interés. Es decir que este proceso producirá bases de datos de diferentes tamaños para dos, tres o cuatro periodos. En general, se esperaría contar con un mayor número de unidades observacionales en el primer caso (dos periodos) y un número menor de unidades observacionales en el último caso (cuatro periodos). Nótese que en el caso particular del ejemplo (encuesta con un esquema rotativo 4(0)1), no es posible realizar la integración de cinco periodos consecutivos, puesto que el esquema solo define el traslape de hasta cuatro periodos consecutivos. 
 
 En general, es necesario asumir que al combinar los paneles y crear una sola base de datos, se está agregando información (puesto que se repiten las mediciones de los individuos pertenecientes a los paneles involucrados), pero al mismo tiempo se reduce el número de unidades observacionales (puesto que el número de individuos en la muestra que coinciden en los periodos de interés necesariamente es menor al número de individuos en la muestra de un corte transversal). 
 
 ### Creación de los pesos iniciales
 
-Este primer paso empieza con la definición de los periodos consecutivos que se utilizarán en la combinación de las bases de datos. Se debe tener en cuenta que hubo un cambio abrupto que se presentó como respuesta a las restricciones de movilidad que trajo la pandemia, que a su vez configuró un cambio en el modo de recolección (de presencial a telefónico) a partir del segundo trimestre del 2020. Por ende, la muestra y los paneles de seguimiento son idénticos en el segundo y el tercer periodos del año 2020. 
-
-![Dos escenarios longitudinales en dos trimestres consecutivos](Pics/el2.png)
+Este primer paso empieza con la definición de los periodos consecutivos que se utilizarán en la combinación de las bases de datos. Si la combinación se realiza para el año 2020, se debe tener en cuenta que hubo un cambio abrupto que se presentó como respuesta a las restricciones de movilidad que trajo la pandemia, que a su vez configuró un cambio en el modo de recolección (de presencial a telefónico) a partir del segundo trimestre del 2020. 
 
 Una vez definidos los periodos de interés, se debe realizar la combinación de las correspondientes bases de datos transversales. Este procedimiento debe tener en cuenta únicamente a las unidades muestrales que respondieron sistemáticamente en cada uno de los periodos de interés. En el escenario de la combinación de dos periodos, si una unidad respondió en ambos periodos será incluida en la base de datos combinada, de lo contrario (si respondió en el primer periodo, pero no en el segundo y viceversa) no será incluida en la base de datos.
 
@@ -104,7 +109,7 @@ encuesta *Survey of Labour and Income Dynamics* [@Naud_2002;
 
 #### Ajuste por ausencia de respuesta {-}
 
-A continuación, sobre los pesos básicos es necesario realizar un ajuste por ausencia de respuesta, que debería estar supeditado a las covariables disponibles en el marco de muestreo, en registros administrativos o, teniendo en cuenta el diseño de muestreo rotativo, en rondas anteriores de la misma encuesta. En general, es recomendable tener en cuenta el paradigma principal en el manejo de la ausencia de respuesta, el cual indica que respondientes y no respondientes difieren en la mayoría de los casos. Por supuesto, aquellas unidades que no respondieron deberán ser excluidas de la base de datos puesto que su peso de muestreo es nulo; es decir $d_{1, k}^{básico} = 0, \ \forall k \notin s_r^1$, en donde el conjunto $s_r^1$ representa a las unidades que respondieron la encuesta en el primer periodo de la combinación. 
+A continuación, sobre los pesos básicos es necesario realizar un ajuste por ausencia de respuesta, que debería estar supeditado a las covariables disponibles en el marco de muestreo, en registros administrativos o, teniendo en cuenta el diseño de muestreo rotativo, en rondas anteriores de la misma encuesta. En general, es recomendable tener en cuenta el paradigma principal en el manejo de la ausencia de respuesta, el cual indica que respondientes y no respondientes difieren en la mayoría de los casos. Por supuesto, aquellas unidades que no respondieron deberán ser excluidas de la base de datos puesto que su peso de muestreo es nulo; es decir $d_{1, k}^{básico} = 0, \ \forall k \notin s_r^{(1)}$, en donde el conjunto $s_r^{(1)}$ representa a las unidades que respondieron la encuesta en el primer periodo de la combinación. 
 
 En este esquema, es posible utilizar un enfoque basado en la estimación de las probabilidades de respuesta de cada individuo para ajustar los pesos básicos, para lo cual se necesita establecer una relación entre las unidades que respondieron y que no respondieron con las covariables auxiliares $\mathbf{x}_{1}$. En otras palabras, es necesario asegurar que las covariables estén disponibles para toda unidad seleccionada en el primer periodo de interés, independientemente de su respuesta final. Para el manejo efectivo de la ausencia de respuesta se consideran las variables dicotómicas $I_{1, k}$ y $D_{1, k}$, que indican si el hogar pertenece a la muestra del primer periodo y si respondió a la encuesta, respectivamente. La probabilidad de respuesta estará supeditada al siguiente modelo:
 
@@ -124,28 +129,10 @@ $$
 d_{1, k}^{inicial} = \frac{d_{1, k}^{básico}}{\hat{\phi}_{1, k}}
 $$
 
-Siempre es muy importante realizar una validación exhaustiva de los modelos utilizados para estimar la probabilidad de respuesta. En general, es necesario que el modelo satisfaga las siguientes dos condiciones:
-
-1. *Soporte común*: al igual que en un experimento aleatorizado, es necesario garantizar que ninguna combinación de las covariables induzca un estado (respuesta o ausencia de respuesta) de forma determinística. Es decir sobre todas las combinaciones en las covariables deben existir respondientes y no respondientes. Esta condición se puede escribir como:
-$$
-0 < Pr(D_{1,k} = 1 |\mathbf{x}_{1}) < 1 
-$$
-2. *Balanceo*: como la respuesta de las unidades de muestreo no provienen de un estudio aleatorizado, es necesario garantizar que la distribución de las $\hat\phi_k$ sea similar entre respondientes y no respondientes. De esta forma, es posible expandir el subconjunto de respondientes efectivos $s_r^1$ a la muestra inicial (que incluye no respondientes) $s$, que a su vez expande a toda la población de interés. Esta condición se puede escribir como:
-
-\begin{align*}
-\hat\phi_{1, k} &= Pr[D_{1, k} | I_{1, k} = 1,\mathbf{x}_{1}] \\
-&= Pr[D_{1, k} | k \in s_r^1, I_{1, k} = 1, \mathbf{x}_{1}] \\
-&= Pr[D_{1, k} | k \notin s_r^1, I_{1, k} = 1, \mathbf{x}_{1}]
-\end{align*}
-
-Por último, se debe corroborar que la suma de los pesos ajustados por la ausencia de respuesta esté cercana al tamaño de la población que se quiere representar. Es decir, $\sum_{s^{(1)}} d_{1, k}^{inicial} \approxeq N$.
 
 Es posible que, al construir la matriz de covariables para ajustar el modelo de respuesta, existan elementos que no respondieron en el primer periodo y que además no tengan información auxiliar porque su panel rotativo no se traslapa. En este caso, es posible calcular la tasa de respuesta efectiva y utilizarla como valor imputado a la probabilidad de respuesta $\hat\phi_{1, k}$. También existen unidades que se acaban de incorporar al panel rotativo y por ende no respondieron y no tienen información auxiliar. En este caso, es necesario imputarles el factor de expansión ajustado del hogar al que pertenecen.
 
-La siguiente figura muestra la distribución de las probabilidades de respuesta para las combinaciones de los dos primeros trimestres del 2020 (izquierda) y del segundo y tercer trimestre (derecha). En general, se nota un buen balance entre respondientes y no respondientes, pues las tres distrtibucuiones son similares en ambos gráficos. Además, el soporte común de la probabilidad de respuesta excluye al cero y al uno, como se muestra en la siguiente figura.
-
-![Distribución de las probabilidades de respuesta en la ENE](Pics/el3.png)
-
+Como se mencionó en los capítulos anteriores, es necesario verificar las propiedades de balanceo y soporte común en el modelo de *propensity score*. Se esperaría que la distribución de las probabilidades de respuesta para las combinaciones de los dos trimestres combinados mostraran un buen balance entre respondientes y no respondientes (distribuciones similares) y que el soporte común de la probabilidad de respuesta excluya al cero y al uno.
 
 ### Generación de los pesos longitudinales
 
@@ -192,27 +179,30 @@ $$
 
 #### Calibración de los pesos logitudinales {-}
 
-Luego del ajuste por ausencia de respuesta es aconsejable imponer algunas restricciones sobre los factores de expansión; en particular, se busca que la suma de los pesos reproduzca con exactitud los conteos poblacionales, o las proyecciones demográficas, en el país, en las regiones o departamentos, en los subgrupos de edad y sexo, en las áreas urbana y rural, etc. En general, en las restricciones de la calibración pueden intervenir tanto variables a nivel de individuo como de hogar. Es importante enfatizar que los totales auxiliares usados en la calibración deben representar la población del primer periodo de interés, puesto que, al conformar un panel que no adiciona elementos a lo largo de los periodos de medición, la muestra será representativa únicamente del periodo en cual fue seleccionada. Teniendo en cuenta que las variables de calibración están representadas por el vector $\mathbf{z}_k$ y que sus agregaciones poblacionales estan disponible, entonces este conjunto de restricciones sobre los nuevos pesos longitudinales calibrados $d_{2, k}^{calibrado}$ se puede escribir como:
+Luego del ajuste por ausencia de respuesta es aconsejable imponer algunas restricciones sobre los factores de expansión; en particular, se busca que la suma de los pesos reproduzca con exactitud los conteos poblacionales, o las proyecciones demográficas, en el país, en las regiones o departamentos, en los subgrupos de edad y sexo, en las áreas urbana y rural, etc. En general, en las restricciones de la calibración pueden intervenir tanto variables a nivel de individuo como de hogar. Es importante enfatizar que los totales auxiliares usados en la calibración deben representar la población del primer periodo de interés, puesto que, al conformar un panel que no adiciona elementos a lo largo de los periodos de medición, la muestra será representativa únicamente del periodo en cual fue seleccionada. Teniendo en cuenta que las variables de calibración están representadas por el vector $\mathbf{z}_k$ y que sus totales poblacionales están disponibles en forma de proyecciones poblacionales, entonces este conjunto de restricciones sobre los nuevos pesos longitudinales calibrados $w_{2, k}^{calibrado}$ se puede escribir como:
 
 $$
-\sum_{s^{(2)}} d_{2, k}^{calibrado} \  \mathbf{z}_k = \sum_{U} \mathbf{z}_k
+\sum_{s_r^{(2)}} w_{2, k}^{calibrado} \  \mathbf{z}_k = \sum_{U} \mathbf{z}_k
 $$
 
-En particular para las dos combinaciones de la ENE se utilizaron restricciones sobre las proyecciones poblacionales (en el primer periodo de la combinación) de los cruces entre departamento (9: Chuquisaca, La Paz, Cochabamba, Oruro, Potosí, Tarija, Santa Cruz, Beni y Pando), área (2: urbano y rural), edad (2: mayores de catorce años y menores de 14 años) y sexo (2: hombres y mujeres). El siguiente gráfico muestra la distribución de los pesos calibrados (izquierda) y su relación con los pesos ajustados por la ausencia de respuesta (derecha). En general, se nota un comportamiento similar entre ambos conjuntos de pesos; los nuevos factores de expansión calibrados se ajustan a los totales poblacionales mediante transformaciones multiplicativas simples. 
+Por lo tanto, los pesos finales que deberían incluirse en la base de datos longitudinal de los dos trimestres combinados, estarían dados por $w_{2, k}^{calibrado}$, los cuales pueden escribirse como sigue:
 
-![Distribución de los pesos calibrados](Pics/el4.png)
+$$
+w_{2, k}^{calibrado} = g_k * d_{2, k}^{longitudinal}
+$$
 
+En donde los ponderadores $g_k$ dependen de la muestra traslapada y representan la cercanía de los pesos finales longitudinales calibrados con los pesos longitudinales sin calibrar. Se esperaría que estos valores estuvieran cercanos, en general, a la unidad. 
 
 ## Generación de bases longitudinales anuales
 
 En esta sección se describen los pasos necesarios para combinar bases de datos longitudinales que permitan hacer seguimiento a la situación de los hogares a lo largo de todo un año. La metodología que se recomienda implementar es una generalización de los pasos descritos en @Verma_Betti_Ghellini, que define un procedimiento secuencial para la creación de los factores de expansión en el panel. El raciocinio de este procedimiento sigue exactamente los mismos pasos que los mencionados anteriormente en la creación de bases longitudinales para dos periodos consecutivos. Es decir, primero es necesario crear el conjunto de pesos iniciales (transversales en el primer periodo) para luego definir los pesos finales (longitudinales en  los cuatro trimestres de todo un año).
 
-El primer paso en la generación de los pesos longitudinales consiste en realizar una consolidación de bases de datos, en donde se integren únicamente los periodos de interés: los cuatro trimestres del año. Es necesario filtrar cada una de las bases transversales con el identificador del panel de interés. De esta forma se tendrán cuatro bases de datos conteniendo únicamente la información de estos paneles comunes. 
+El primer paso en la generación de los pesos longitudinales consiste en realizar una consolidación de bases de datos, en donde se combinen únicamente los periodos de interés. Siguiendo con el ejemplo del esquema 4(0)1, correspondería a los cuatro trimestres del año. Para esto, es necesario filtrar cada una de las bases transversales con el identificador del panel de interés. De esta forma se tendrán cuatro bases de datos conteniendo únicamente la información de estos paneles comunes. 
 
-La determinación de los pesos iniciales viene supeditada a los pesos básicos ajustados por cobertura $d_{(1,k)}$ del procesamiento transversal del primer trimestre que se quiere combinar. En general, los pesos básicos se crean a partir del inverso de la probabilidad de inclusión de los paneles; puesto que, al realizar la combinación de los cuatro trimestres en un esquema 4(0)1, es evidente que hay un solo panel coincidente y como la muestra transversal contiene cuatro paneles, entonces $Pr(\rm selección \ de \ paneles) = 1/4$. En resumen, 
+La determinación de los pesos iniciales viene supeditada a los pesos básicos ajustados por cobertura $d_{(1,k)}$ del procesamiento transversal del primer trimestre que se quiere combinar. En general, los pesos básicos se crean a partir del inverso de la probabilidad de inclusión de los paneles; puesto que, al realizar la combinación de los cuatro trimestres en un esquema 4(0)1, es evidente que hay un solo panel coincidente y como la muestra transversal contiene cuatro paneles, entonces $Pr(\text{selección de paneles}) = 1/4$. En resumen, 
 
 $$
-d_{(1,k)}^{básico}=4 \times d_{(1,k)} = d_{(1,k)}/Pr(\rm selección \ de \ paneles) 
+d_{(1,k)}^{básico}= \dfrac{d_{(1,k)}}{Pr(\text{selección de paneles})} = 4 \times d_{(1,k)} 
 $$
 
 Como se anotó anteriormente, se debe seguir un proceso riguroso de identificación secuencial de respondientes y no respondientes para poder realizar la combinación de las correspondientes bases de datos transversales. Este procedimiento debe tener en cuenta únicamente a las unidades muestrales que respondieron sistemáticamente en cada uno de los periodos de interés. Por lo tanto se sugiere que se sigan los siguientes pasos:
@@ -233,19 +223,28 @@ En esta instancia se construye la base longitudinal que será usada para realiza
 $$
 s^{(1234)}=s^1 \cap s^2 \cap s^3 \cap s^4
 $$
-La muestra $s^{(1234)}$ es representativa de la población longitudinal en los periodos combinados. En esta etapa, el factor de expansión longitudinal se define como idéntico al peso resultante de la sección anterior; es decir
+
+La muestra $s^{(1234)}$ es representativa de la población longitudinal en los periodos combinados. En esta etapa, el factor de expansión longitudinal inicial se define como idéntico al peso resultante de la sección anterior; es decir
 
 $$
 d_{(1234,k)}^{inicial}=d_{(1,k)}^{inicial}
 $$
 
 Es necesario identificar las unidades que no respondieron en alguna ocasión para asignarles un peso longitudinal nulo; es decir
-$d_{(1234,k)}^{inicial}=0$ para aquellas unidades $k \notin s_r^{(1234)}$; en donde el conjunto $s_r^{(1234)}$ representa a las unidades que respondieron la encuesta en todos los cuatro trimestres de la combinación. Por consiguiente, las unidades que no respondieron en alguna ocasión deberán ser excluidas de la base de datos puesto que su peso de muestreo es nulo.
+$d_{(1234,k)}^{inicial}=0$ para aquellas unidades $k \notin s_r^{(1234)}$; en donde el conjunto $s_r^{(1234)}$ representa a las unidades que respondieron la encuesta en todos los cuatro trimestres de la combinación. Sin embargo, estas unidades que no respondieron en alguna ocasión se utilizarán para ajustar el modelo de *propensity score*, antes de que sean excluidas totalmente de la base de datos (puesto que su peso de muestreo es nulo).
 
-Con base en la identificación de respondientes y no respondientes a lo largo del año es necesario realizar un ajuste por ausencia de respuesta, que debería estar supeditado a las covariables disponibles en el marco de muestreo, o en rondas anteriores de la misma encuesta. Se recomienda usar un enfoque basado en la estimación de las propensiones de respuesta de cada individuo para ajustar los pesos básicos. La probabilidad de respuesta estará supeditada al siguiente modelo:
+Con base en la identificación de respondientes y no respondientes a lo largo del año, el siguiente paso necesario es realizar el ajuste por ausencia de respuesta, que debería estar supeditado a las covariables disponibles en el marco de muestreo, o en rondas anteriores de la misma encuesta. Como se ha indicado a lo largo de este documento, se recomienda usar un enfoque basado en la estimación de las propensiones de respuesta de cada individuo para ajustar los pesos básicos. La probabilidad de respuesta estará supeditada al siguiente modelo:
+
 $$
 \phi_{(1234,k)}=Pr(D_{(1234,k)}=1|I_{(1234,k)}=1)=f(x,\beta)
 $$
+
 En la notación anterior, el conjunto de respondientes efectivos se define como aquel al que pertenecen las unidades muestrales que han respondido en todos los periodos de interés. Los pesos básicos son ajustados utilizando el inverso de la probabilidad estimada de respuesta sobre los respondientes efectivos en el primer periodo de interés, así se conforma el primer conjunto de pesos iniciales de las bases de datos longitudinales. Por último, se debe corroborar que la suma de los pesos ajustados por la ausencia de respuesta esté cercana al tamaño de la población que se quiere representar. 
 
-Por último, en conjunción con lo anterior y teniendo en cuenta que es posible que los INE ya hayan publicado las cifras oficiales de los parámetros de interés en los tiempos $t-1$ y $t$, podría ser plausible considerar que los totales fila coincidan con las estimaciones publicadas en el periodo $t-1$ y que los totales columna coincidan con las estimaciones publicadas en el periodo $t$. 
+Luego del ajuste por ausencia de respuesta, el proceso termina con la calibración final; en donde se imponen algunas restricciones sobre los factores de expansión finales; en particular, se busca que la suma de los pesos reproduzca con exactitud los conteos poblacionales, o las proyecciones demográficas. 
+
+Una observación pertinente que debe realizarse es que la base de datos longitudinal representa con exactitud al conjunto de individuos comunes en los periodos de interés; por consiguiente, las estimaciones transversales que se hagan a partir de esta base (por ejemplo, pobreza en un determinado trimestre, entre otras) solo deben tomarse de manera referencial, puesto que no reemplazarán a las estimaciones transversales ya publicadas. Nótese que la población de interés de la encuesta transversal no es la misma que la de la combinación (panel) y por ende, estas estimaciones no coincidirán y no debieran coincidir.
+
+La razón de la creación de las bases de datos longitudinales reside grandemente en la estimación de los flujos brutos, su error de muestreo asociado y sus correspondientes intervalos de confianza. La ganancia en el análisis es muy grande cuando se conocen las estimaciones entre estados de una variable de interés. Por ejemplo, los usuarios de la encuesta pueden estar interesados en analizar el cambio bruto (flujos) entre diferentes estados de la fuerza de trabajo; es decir, aquellos que estaban ocupados en un trimestre T1 cómo se encuentran en el siguiente trimestre T2. Este tipo de análisis se traduce comúnmente en la estimación de matrices de transición, que serán tratadas en el siguiente capítulo. 
+
+

@@ -313,6 +313,16 @@ div.csl-indent {
 <li class="chapter" data-level="16.4" data-path="efecto-del-tipo-de-encuesta-en-la-eficiencia-de-los-indicadores.html"><a href="efecto-del-tipo-de-encuesta-en-la-eficiencia-de-los-indicadores.html"><i class="fa fa-check"></i><b>16.4</b> Efecto del tipo de encuesta en la eficiencia de los indicadores</a></li>
 <li class="chapter" data-level="16.5" data-path="pruebas-de-hipótesis-sobre-indicadores-agregados.html"><a href="pruebas-de-hipótesis-sobre-indicadores-agregados.html"><i class="fa fa-check"></i><b>16.5</b> Pruebas de hipótesis sobre indicadores agregados</a></li>
 </ul></li>
+<li class="chapter" data-level="17" data-path="procesamiento-longitudinal-de-las-encuestas-rotativas.html"><a href="procesamiento-longitudinal-de-las-encuestas-rotativas.html"><i class="fa fa-check"></i><b>17</b> Procesamiento longitudinal de las encuestas rotativas</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="diseño-de-paneles-rotativos-en-las-encuestas-de-la-región.html"><a href="diseño-de-paneles-rotativos-en-las-encuestas-de-la-región.html"><i class="fa fa-check"></i><b>17.1</b> Diseño de paneles rotativos en las encuestas de la región</a></li>
+<li class="chapter" data-level="17.2" data-path="generación-de-bases-longitudinales-para-dos-periodos-consecutivos.html"><a href="generación-de-bases-longitudinales-para-dos-periodos-consecutivos.html"><i class="fa fa-check"></i><b>17.2</b> Generación de bases longitudinales para dos periodos consecutivos</a>
+<ul>
+<li class="chapter" data-level="17.2.1" data-path="generación-de-bases-longitudinales-para-dos-periodos-consecutivos.html"><a href="generación-de-bases-longitudinales-para-dos-periodos-consecutivos.html#creación-de-los-pesos-iniciales"><i class="fa fa-check"></i><b>17.2.1</b> Creación de los pesos iniciales</a></li>
+<li class="chapter" data-level="17.2.2" data-path="generación-de-bases-longitudinales-para-dos-periodos-consecutivos.html"><a href="generación-de-bases-longitudinales-para-dos-periodos-consecutivos.html#generación-de-los-pesos-longitudinales"><i class="fa fa-check"></i><b>17.2.2</b> Generación de los pesos longitudinales</a></li>
+</ul></li>
+<li class="chapter" data-level="17.3" data-path="generación-de-bases-longitudinales-anuales.html"><a href="generación-de-bases-longitudinales-anuales.html"><i class="fa fa-check"></i><b>17.3</b> Generación de bases longitudinales anuales</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
 <li class="divider"></li>
 <li><a Diseño y análisis de encuestas de hogares</a></li>
@@ -343,18 +353,18 @@ div.csl-indent {
 <li>No todos los hogares contactables respondieron el cuestionario de la encuesta.</li>
 </ol>
 <p>Haciendo cálculos gruesos, si suponemos que la cobertura de la submuestra que sí proveyó datos de contacto asciende al 85 % y que la probabilidad de que un hogar contactado responda toda la encuesta es del 80 %, entonces contaríamos solamente con un 68% de la muestra original. A estas cuentas habría que ajustarlas con el efecto de la atrición en el panel, que crece a medida que se siga utilizando. En estos términos, sería un grave error y una suposición poco plausible asumir que los hogares respondientes efectivos se comportan de manera similar a los hogares no respondientes y a los hogares no cubiertos. El mejor escenario que puede plantearse es considerar que la muestra efectiva no está libre de sesgos, hacer una búsqueda exploratoria de su magnitud con los datos recolectados y tratar de minimizarlo (o incluso eliminarlo) utilizando alguna de las técnicas estadísticas que mencionamos en este documento.</p>
-<p>La figura <a href="la-pandemia-por-covid-19.html#fig:fight3dist">13.4</a> presenta tres posibles escenarios que los INE pudieron encontrar en esta búsqueda. En el diagrama de la izquierda se verifica la ausencia de sesgo, en el diagrama del centro y en el de la derecha se confirma que la magnitud del sesgo es significativa. Nótese que la línea horizontal azul correspondería a la estimación publicada en el mes en el que se seleccionó la muestra maestra, mientras que la línea roja horizontal representa el promedio de las simulaciones con la muestra efectiva. Cada uno de los resultados de las simulaciones está representado por las fluctuaciones punteadas.</p>
+<p>La figura <a href="la-pandemia-por-covid-19.html#fig:fight3dist">13.6</a> presenta tres posibles escenarios que los INE pudieron encontrar en esta búsqueda. En el diagrama de la izquierda se verifica la ausencia de sesgo, en el diagrama del centro y en el de la derecha se confirma que la magnitud del sesgo es significativa. Nótese que la línea horizontal azul correspondería a la estimación publicada en el mes en el que se seleccionó la muestra maestra, mientras que la línea roja horizontal representa el promedio de las simulaciones con la muestra efectiva. Cada uno de los resultados de las simulaciones está representado por las fluctuaciones punteadas.</p>
 <div class="figure"><span id="fig:fight3dist"></span>
 <img src="Pics/calnr1.png" alt="Distribuciones del estimador de Horvtiz-Thompson en tres escenarios de interés." width="50%" />
 <p class="caption">
-Figura 13.4: Distribuciones del estimador de Horvtiz-Thompson en tres escenarios de interés.
+Figura 13.6: Distribuciones del estimador de Horvtiz-Thompson en tres escenarios de interés.
 </p>
 </div>
-<p>La figura <a href="la-pandemia-por-covid-19.html#fig:fight4dist">13.5</a> muestra un escenario simulado en donde se contempla el uso del estimador ajustado con la técnica de <em>propensity score</em> (línea verde) y el estimador de calibración en dos etapas (línea azul) comparado con el estimador sin ningún tipo de ajuste (línea negra). Lo que se esperaría es que es estimador ingenuo subestime los tamaños poblacionales y los indicadores de interés; mientras que los estimadores ajustados, siempre que el mecanismo de ausencia de respuesta sea MAR o MCAR, elimina este sesgo.</p>
+<p>La figura <a href="la-pandemia-por-covid-19.html#fig:fight4dist">13.7</a> muestra un escenario simulado en donde se contempla el uso del estimador ajustado con la técnica de <em>propensity score</em> (línea verde) y el estimador de calibración en dos etapas (línea azul) comparado con el estimador sin ningún tipo de ajuste (línea negra). Lo que se esperaría es que es estimador ingenuo subestime los tamaños poblacionales y los indicadores de interés; mientras que los estimadores ajustados, siempre que el mecanismo de ausencia de respuesta sea MAR o MCAR, elimina este sesgo.</p>
 <div class="figure"><span id="fig:fight4dist"></span>
 <img src="Pics/calnr2.png" alt="Distribuciones del estimador de Horvtiz-Thompson y de dos estimadores ajustados." width="50%" />
 <p class="caption">
-Figura 13.5: Distribuciones del estimador de Horvtiz-Thompson y de dos estimadores ajustados.
+Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimadores ajustados.
 </p>
 </div>
 <p>Los caminos que se deben seguir luego de corroborar la presencia (o ausencia) de sesgo dependerán de la estrategia de levantamiento de información que los países hayan decidido hacer. En el escenario más optimista, ante la ausencia de sesgo, se estaría en una buena posición para replicar los procesos usuales de inferencia. Sin embargo, ante la sospecha de que sí existe sesgo - posición parsimoniosa y recomendada por <span class="citation"><a href="#ref-CEPAL_sesgos2020" role="doc-biblioref">CEPAL</a> (<a href="#ref-CEPAL_sesgos2020" role="doc-biblioref">2020</a>)</span> -, y dependiendo de la información auxiliar disponible, los INE pudieron disponer de las dos alternativas metodológicas que se describieron anteriormente.</p>
