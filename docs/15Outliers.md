@@ -79,10 +79,7 @@ Es posible utilizar una distancia estandarizada para detectar si la relación en
 
 1. Para cada elemento calcular $r_k=y_k/x_k$ para $k\in s$.
 1. Transformar los datos para poder detectar valores atípicos en cualquier extremo de la distribución. Los datos transformados están dados por:
-$$
-s_k=\left\{\begin{matrix}1-\frac{med(r_k)}{r_k},\;\ si\ 0\le r_k\le m e d(r_k)\\\frac{med(r_k)}{r_k}-1,\;\ en \ otro \ caso\\\end{matrix}\right.
-$$
-En donde $med(r_k)$ corresponde a la mediana de los cocientes definidos en el paso anterior.  
+$$s_k=\left\{\begin{matrix}1-\frac{med(r_k)}{r_k},\;\ si\ 0\le r_k\le m e d(r_k)\\\frac{med(r_k)}{r_k}-1,\;\ en \ otro \ caso\\\end{matrix}\right.$$ En donde $med(r_k)$ corresponde a la mediana de los cocientes definidos en el paso anterior.  
 1. Incorporar la magnitud de los datos calculando los efectos $E_k$ dados por
 $$
 E_k = s_k  \left( \max(x_k,y_k) \right)^\phi
@@ -181,11 +178,17 @@ Esta metodología también se puede aplicar para grupos. La siguiente tabla mues
 
 Como se resaltó anteriormente, para datos muy sesgados, los métodos para la detección de valores atípicos podrían resultar problemáticos, ya que el intervalo en el que los puntos de datos no se consideran valores atípicos es simétrico alrededor de la mediana. Por ejemplo, la figura \@ref(fig:figou2) muestra el comportamiento estructural de algunas divisiones, es notable que todas las distribuciones de gasto y consumo en estos conceptos están extremadamente sesgadas.
 
-![(\#fig:figou2)Distribución del consumo para algunas categorías del gasto.](Pics/ou2.png){width=50%}
+<div class="figure">
+<img src="Pics/ou2.png" alt="Distribución del consumo para algunas categorías del gasto." width="50%" />
+<p class="caption">(\#fig:figou2)Distribución del consumo para algunas categorías del gasto.</p>
+</div>
 
 Para ajustarse a este problema es posible utilizar la transformación de Box-Cox con el fin de obtener una distribución simétrica para los datos antes de determinar los posibles valores atípicos. La figura \@ref(fig:figou1) muestra el proceso de iteración de esta metodología en algunas divisiones. La línea vertical en cada gráfica corresponde al mejor valor que podría tomar $\lambda$ para que los datos se ajusta a una distribución normal.
 
-![(\#fig:figou1)Valores óptimos para las trasnformaciones de Box-Cox en algunas categorías del gasto.](Pics/ou1.png){width=50%}
+<div class="figure">
+<img src="Pics/ou1.png" alt="Valores óptimos para las trasnformaciones de Box-Cox en algunas categorías del gasto." width="50%" />
+<p class="caption">(\#fig:figou1)Valores óptimos para las trasnformaciones de Box-Cox en algunas categorías del gasto.</p>
+</div>
 
 Luego de haber transformado apropiadamente los datos, es posible utilizar la metodología de Boxplot, uno de los métodos más básicos (aunque muy poderoso), para identificar valores atípicos. Como se mencionó en la sección anterior, la gráfica mostrará el mínimo de la muestra, el primer cuartil, la mediana, el tercer cuartil y el máximo. La caja va del primer al tercer cuartil (que contiene por definición el 50% de los datos más internos), así como la mediana que generalmente está marcada por una línea media. Para la aplicación específica de la detección de valores atípicos dentro de las divisiones COICOP es posible que la constante predeterminada $c$ varíe entre divisiones. Por ejemplo, la siguiente tabla muestra el número de valores atípicos detectados en cada división por este método.
 
@@ -227,14 +230,7 @@ Por otro lado, también es posible tener en cuenta la relación entre el gasto e
 
 Es necesario tener en cuenta que, como la lógica detrás de estos dos métodos difiere, cada uno identificará un número diferente de valores atípicos. Esto es una ventaja, porque los métodos son complementarios. Por ejemplo, en divisiones como ropa, vivienda, salud, recreación y educación, donde el método Boxplot no encontró ningún valor atípico posible, el método HB sí lo encontró. Es así como, teniendo en cuenta los resultados de estos dos métodos, se puede especificar una regla lógica para asignar una marca a los registros de la base de datos que deban ser revisados por considerarse sospechosos. Por ejemplo, es posible que haya categorías en las que la regla lógica sea una conjunción de los resultados de los métodos, mientras que podría haber otras en las que la regla lógica sea una disyunción entre los resultados. 
 
-Al final, se debe imputar cualquier valor que se considere como un valor atípico. Como se vio en los capítulos anteriores, la imputación puede estar apoyada por un enfoque basado en modelos. Por ejemplo, para imputar el gasto percápita anualizado, es posible utilizar el método de regresión con el vecino más cercano, donde se define un modelo lineal para las unidades encuestadas (sin incluir los valores atípicos). Una vez estimados los coeficientes de regresión, se calcula un valor previsto para esas unidades de valores atípicos y se identifica a un solo donante como el hogar cuyo gasto total en esa División está más cerca de la predicción. La información  necesaria (incluida en el vector de covariables)  se podría resumir de la siguiente manera:
-
-* *Composición del hogar*: número de adultos, número de hijos, número de hombres, número de mujeres, edad media de los adultos, edad media de los niños, edad de la persona más joven, edad de la persona mayor, edad de la cabeza, grado más alto de la cabeza.
-* *Ocupación y fuerza de trabajo*: situación laboral del jefe, número de personas empleadas, número de personas desempleadas.
-* *Calidad de la vivienda*: creado a partir de la sección de calidad de la vivienda, que puede incluir la tasa de hacinamiento (como la relación entre el número de habitaciones utilizadas principalmente para dormir por el número de personas en el hogar), el material de la pared exterior, y la principal fuente de agua potable para el hogar.
-* *Ubicación del hogar*: departamento o región y área (urbana y rural).
-
-Al asumir que valores similares en la predicción producirán valores similares en la realidad, podemos "pedir prestado" el valor observado para imputar el valor atípico del "vecino". En la siguiente tabla se presentan algunos resúmenes de la distribución de los gastos a nivel de división antes de imputar los valores atípicos.
+Al final, se debe imputar cualquier valor que se considere como un valor atípico. Como se vio en los capítulos anteriores, la imputación puede estar apoyada por un enfoque basado en modelos. Por ejemplo, para imputar el gasto percápita anualizado, es posible utilizar el método de regresión con el vecino más cercano, donde se define un modelo lineal para las unidades encuestadas (sin incluir los valores atípicos). Una vez estimados los coeficientes de regresión, se calcula un valor previsto para esas unidades de valores atípicos y se identifica a un solo donante como el hogar cuyo gasto total en esa División está más cerca de la predicción. En la siguiente tabla se presentan algunos resúmenes de la distribución de los gastos a nivel de división antes de imputar los valores atípicos.
 
 |    División      | Mínimo |   Mediana   |  Máximo |
 |:----------------:|:------:|:-----------:|:-------:|

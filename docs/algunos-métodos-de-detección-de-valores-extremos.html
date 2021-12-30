@@ -377,10 +377,7 @@ log(y),\;si\ \lambda=0
 <ol style="list-style-type: decimal">
 <li>Para cada elemento calcular <span class="math inline">\(r_k=y_k/x_k\)</span> para <span class="math inline">\(k\in s\)</span>.</li>
 <li>Transformar los datos para poder detectar valores atípicos en cualquier extremo de la distribución. Los datos transformados están dados por:
-<span class="math display">\[
-s_k=\left\{\begin{matrix}1-\frac{med(r_k)}{r_k},\;\ si\ 0\le r_k\le m e d(r_k)\\\frac{med(r_k)}{r_k}-1,\;\ en \ otro \ caso\\\end{matrix}\right.
-\]</span>
-En donde <span class="math inline">\(med(r_k)\)</span> corresponde a la mediana de los cocientes definidos en el paso anterior.<br />
+<span class="math display">\[s_k=\left\{\begin{matrix}1-\frac{med(r_k)}{r_k},\;\ si\ 0\le r_k\le m e d(r_k)\\\frac{med(r_k)}{r_k}-1,\;\ en \ otro \ caso\\\end{matrix}\right.\]</span> En donde <span class="math inline">\(med(r_k)\)</span> corresponde a la mediana de los cocientes definidos en el paso anterior.<br />
 </li>
 <li>Incorporar la magnitud de los datos calculando los efectos <span class="math inline">\(E_k\)</span> dados por
 <span class="math display">\[
@@ -404,8 +401,7 @@ d_{Q_3} = \max\left(E_{Q_3}–E_{Q_2}\ , \ |0.5 \times E_{Q_2}|\right)
 <span class="math display">\[
 MD_k^2=(\mathbf{y}_k-\bar{\mathbf{y}})&#39; \ \mathbf{S}^{-1} \ (\mathbf{y}_k-\bar{\mathbf{y}})
 \]</span></p>
-<p>En donde <span class="math inline">\(\bar{\mathbf{y}}\)</span> y <span class="math inline">\(\mathbf{S}\)</span> son respectivamente el vector de medias muestrales y la matriz de covarianzas de las <span class="math inline">\(Q\)</span> variables en el módulo. Si los datos siguen una distribución normal multivariante, se puede demostrar que la distribución de esta distancia es Ji-cuadrado con <span class="math inline">\(Q\)</span> grados de libertad, <span class="math inline">\(MD_k^2 \sim \chi_Q^2\)</span>.</p>
-<p>A continuación, las unidades se declaran como potencialmente atípicas si superan el umbral del percentil 0.95 de la distribución <span class="math inline">\(\chi_{Q}^2\)</span>.</p>
+<p>En donde <span class="math inline">\(\bar{\mathbf{y}}\)</span> y <span class="math inline">\(\mathbf{S}\)</span> son respectivamente el vector de medias muestrales y la matriz de covarianzas de las <span class="math inline">\(Q\)</span> variables en el módulo. Si los datos siguen una distribución normal multivariante, se puede demostrar que la distribución de esta distancia es Ji-cuadrado con <span class="math inline">\(Q\)</span> grados de libertad, <span class="math inline">\(MD_k^2 \sim \chi_Q^2\)</span>. A continuación, las unidades se declaran como potencialmente atípicas si superan el umbral del percentil 0.95 de la distribución <span class="math inline">\(\chi_{Q}^2\)</span>.</p>
 </div>
 <div id="la-distancia-de-cook" class="section level4 unnumbered">
 <h4>La distancia de Cook</h4>
