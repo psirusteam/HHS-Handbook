@@ -20,7 +20,7 @@ linkcolor: blue
 output:
   pdf_document:
     toc: true
-    toc_depth: 2
+    toc_depth: 3
     keep_tex: true
   gitbook:
     df_print: kable
@@ -37,10 +37,7 @@ output:
 # Prefacio {-}
 
 
-<div class="figure">
-<img src="Pics/CClicence.png" alt="Licencia de Creative Commons" width="100px" />
-<p class="caption">(\#fig:unnamed-chunk-1)Licencia de Creative Commons</p>
-</div>
+![(\#fig:unnamed-chunk-1)Licencia de Creative Commons](Pics/CClicence.png){width=100px}
 
 La versión online de este libro está licenciada bajo una [Licencia Internacional de Creative Commons para compartir con atribución no comercial 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/). 
 

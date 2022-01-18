@@ -91,10 +91,10 @@ $$
 d_{Q_1} = \max\left(E_{Q_2} - E_{Q_1}\ , \ |0.5 \times E_{Q_2}|\right)
 $$
 $$
-d_{Q_3} = \max\left(E_{Q_3}–E_{Q_2}\ , \ |0.5 \times E_{Q_2}|\right) 
+d_{Q_3} = \max\left(E_{Q_3} - E_{Q_2}\ , \ |0.5 \times E_{Q_2}|\right) 
 $$
 
-Nótese que la cantidad $|0.5*E_{Q_2}|$ es utilizada para reducir la tendencia a declarar falsos valores atípicos. Por ejemplo, esto ayudaría si la mayoría de los valores estuvieran agrupados alrededor de un valor particular, con unos pocos registros desviándose de él. Por último, los registros son declarados como valores atípicos si el valor de su efecto $E_k$ queda fuera del intervalo $(E_{Q_2} – c \times d_{Q_1} \ , \ E_{Q_2} + c \times d_{Q_3})$; en donde al igual que en el método de boxplot, $c$ controla el ancho de la región de aceptación.
+Nótese que la cantidad $|0.5*E_{Q_2}|$ es utilizada para reducir la tendencia a declarar falsos valores atípicos. Por ejemplo, esto ayudaría si la mayoría de los valores estuvieran agrupados alrededor de un valor particular, con unos pocos registros desviándose de él. Por último, los registros son declarados como valores atípicos si el valor de su efecto $E_k$ queda fuera del intervalo $(E_{Q_2} - c \times d_{Q_1} \ , \ E_{Q_2} + c \times d_{Q_3})$; en donde al igual que en el método de boxplot, $c$ controla el ancho de la región de aceptación.
 
 
 ### Método de la distancia de Mahalanobis 
@@ -178,17 +178,11 @@ Esta metodología también se puede aplicar para grupos. La siguiente tabla mues
 
 Como se resaltó anteriormente, para datos muy sesgados, los métodos para la detección de valores atípicos podrían resultar problemáticos, ya que el intervalo en el que los puntos de datos no se consideran valores atípicos es simétrico alrededor de la mediana. Por ejemplo, la figura \@ref(fig:figou2) muestra el comportamiento estructural de algunas divisiones, es notable que todas las distribuciones de gasto y consumo en estos conceptos están extremadamente sesgadas.
 
-<div class="figure">
-<img src="Pics/ou2.png" alt="Distribución del consumo para algunas categorías del gasto." width="50%" />
-<p class="caption">(\#fig:figou2)Distribución del consumo para algunas categorías del gasto.</p>
-</div>
+![(\#fig:figou2)Distribución del consumo para algunas categorías del gasto.](Pics/ou2.png){width=50%}
 
 Para ajustarse a este problema es posible utilizar la transformación de Box-Cox con el fin de obtener una distribución simétrica para los datos antes de determinar los posibles valores atípicos. La figura \@ref(fig:figou1) muestra el proceso de iteración de esta metodología en algunas divisiones. La línea vertical en cada gráfica corresponde al mejor valor que podría tomar $\lambda$ para que los datos se ajusta a una distribución normal.
 
-<div class="figure">
-<img src="Pics/ou1.png" alt="Valores óptimos para las trasnformaciones de Box-Cox en algunas categorías del gasto." width="50%" />
-<p class="caption">(\#fig:figou1)Valores óptimos para las trasnformaciones de Box-Cox en algunas categorías del gasto.</p>
-</div>
+![(\#fig:figou1)Valores óptimos para las trasnformaciones de Box-Cox en algunas categorías del gasto.](Pics/ou1.png){width=50%}
 
 Luego de haber transformado apropiadamente los datos, es posible utilizar la metodología de Boxplot, uno de los métodos más básicos (aunque muy poderoso), para identificar valores atípicos. Como se mencionó en la sección anterior, la gráfica mostrará el mínimo de la muestra, el primer cuartil, la mediana, el tercer cuartil y el máximo. La caja va del primer al tercer cuartil (que contiene por definición el 50% de los datos más internos), así como la mediana que generalmente está marcada por una línea media. Para la aplicación específica de la detección de valores atípicos dentro de las divisiones COICOP es posible que la constante predeterminada $c$ varíe entre divisiones. Por ejemplo, la siguiente tabla muestra el número de valores atípicos detectados en cada división por este método.
 

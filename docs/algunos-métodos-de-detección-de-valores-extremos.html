@@ -528,10 +528,10 @@ El parámetro <span class="math inline">\(\phi\)</span> proporciona una medida d
 d_{Q_1} = \max\left(E_{Q_2} - E_{Q_1}\ , \ |0.5 \times E_{Q_2}|\right)
 \]</span>
 <span class="math display">\[
-d_{Q_3} = \max\left(E_{Q_3}–E_{Q_2}\ , \ |0.5 \times E_{Q_2}|\right) 
+d_{Q_3} = \max\left(E_{Q_3} - E_{Q_2}\ , \ |0.5 \times E_{Q_2}|\right) 
 \]</span></li>
 </ol>
-<p>Nótese que la cantidad <span class="math inline">\(|0.5*E_{Q_2}|\)</span> es utilizada para reducir la tendencia a declarar falsos valores atípicos. Por ejemplo, esto ayudaría si la mayoría de los valores estuvieran agrupados alrededor de un valor particular, con unos pocos registros desviándose de él. Por último, los registros son declarados como valores atípicos si el valor de su efecto <span class="math inline">\(E_k\)</span> queda fuera del intervalo <span class="math inline">\((E_{Q_2} – c \times d_{Q_1} \ , \ E_{Q_2} + c \times d_{Q_3})\)</span>; en donde al igual que en el método de boxplot, <span class="math inline">\(c\)</span> controla el ancho de la región de aceptación.</p>
+<p>Nótese que la cantidad <span class="math inline">\(|0.5*E_{Q_2}|\)</span> es utilizada para reducir la tendencia a declarar falsos valores atípicos. Por ejemplo, esto ayudaría si la mayoría de los valores estuvieran agrupados alrededor de un valor particular, con unos pocos registros desviándose de él. Por último, los registros son declarados como valores atípicos si el valor de su efecto <span class="math inline">\(E_k\)</span> queda fuera del intervalo <span class="math inline">\((E_{Q_2} - c \times d_{Q_1} \ , \ E_{Q_2} + c \times d_{Q_3})\)</span>; en donde al igual que en el método de boxplot, <span class="math inline">\(c\)</span> controla el ancho de la región de aceptación.</p>
 </div>
 <div id="método-de-la-distancia-de-mahalanobis" class="section level3" number="16.1.6">
 <h3><span class="header-section-number">16.1.6</span> Método de la distancia de Mahalanobis</h3>

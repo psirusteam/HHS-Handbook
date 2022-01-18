@@ -49,7 +49,8 @@ $$
 (\hat{L}_1, \ \ \hat{L}_2)
 $$
 
-Finalmente, de \eqref{L1} se tiene que
+Finalmente, se tiene que
+
 $$
 \hat{P} = logit^{-1}(\hat L) = \dfrac{\exp (\hat{L})}{1+\exp (\hat{L})}
 $$

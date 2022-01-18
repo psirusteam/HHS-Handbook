@@ -475,7 +475,6 @@ Bias(\bar y ^{*}_{cal})
 \approx
 \frac{1}{E(\hat N^{*}_{cal})} 
 \left[ Bias(\hat{t}_{y,cal}^{*}) - \bar{y} \ Bias(\hat{N}^{*}_{cal})\right]
-
 $$
 
 Con $Bias(\hat{t}_{cal}^{*})$ y $Bias(\hat{N}^{*}_{cal})$, los sesgos de los estimadores de calibración con totales de control estimados del total poblacional $(t_y)$ y del tamaño poblacional $(N)$, respectivamente. El sesgo de estos estimadores puede llegar a ser despreciable si el mecanismo que genera la ausencia de respuesta es aleatorio o completamente aleatorio (ver capítulo 10), y si se incluye una columna de unos en la matriz de las variables de calibración, lo cual mostraría que no hay errores de cobertura. 

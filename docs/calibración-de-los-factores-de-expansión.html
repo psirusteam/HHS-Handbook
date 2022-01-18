@@ -669,12 +669,12 @@ En donde</p>
 \bar y ^{*}_{cal} = \frac{\hat{t}_{y, cal}^{*}}{\hat{N}^{*}_{cal}}
 \]</span></p>
 <p>En este caso, el denominador de <span class="math inline">\(\hat{R}^{*}_{cal}\)</span> sería <span class="math inline">\(\hat{t}_{z,cal}^{*} = \hat N^{*}_{cal}\)</span>. <span class="citation"><a href="#ref-Dever_Valliant_2016" role="doc-biblioref">J. A. Dever y Valliant</a> (<a href="#ref-Dever_Valliant_2016" role="doc-biblioref">2016</a>)</span> presentan la siguiente expresión para el sesgo de un promedio <span class="math inline">\(\bar y ^{*}_{cal}\)</span>:</p>
-<p>$$
-Bias(y ^{*}_{cal})
-
-
-</p>
-<p>$$</p>
+<p><span class="math display">\[
+Bias(\bar y ^{*}_{cal})
+\approx
+\frac{1}{E(\hat N^{*}_{cal})} 
+\left[ Bias(\hat{t}_{y,cal}^{*}) - \bar{y} \ Bias(\hat{N}^{*}_{cal})\right]
+\]</span></p>
 <p>Con <span class="math inline">\(Bias(\hat{t}_{cal}^{*})\)</span> y <span class="math inline">\(Bias(\hat{N}^{*}_{cal})\)</span>, los sesgos de los estimadores de calibración con totales de control estimados del total poblacional <span class="math inline">\((t_y)\)</span> y del tamaño poblacional <span class="math inline">\((N)\)</span>, respectivamente. El sesgo de estos estimadores puede llegar a ser despreciable si el mecanismo que genera la ausencia de respuesta es aleatorio o completamente aleatorio (ver capítulo 10), y si se incluye una columna de unos en la matriz de las variables de calibración, lo cual mostraría que no hay errores de cobertura.</p>
 <p>Asimismo, la estructura de varianza de estos estimadores es bastante compleja como lo presentan <span class="citation"><a href="#ref-Dever_Valliant_2016" role="doc-biblioref">J. A. Dever y Valliant</a> (<a href="#ref-Dever_Valliant_2016" role="doc-biblioref">2016</a>)</span>. Sin emabrgo, es posible utilizar métodos de estimación de varianza basados en réplicas como los propuestos por <span class="citation"><a href="#ref-Opsomer_Erciulescu_2022" role="doc-biblioref">Opsomer y Erciulescu</a> (<a href="#ref-Opsomer_Erciulescu_2022" role="doc-biblioref">2022</a>)</span>.</p>
 </div>
