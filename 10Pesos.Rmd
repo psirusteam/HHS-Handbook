@@ -197,23 +197,38 @@ $$
 w_k = g_k * d_{4k}  \ \ \ \ \ \ \ \ \forall \ k \in s
 $$
 
-En donde los valores $g_k$ son dependientes de la muestra seleccionada $s$ y de la función de optimización escogida para realizar el proceso de calibración. En general no tienen una forma cerrada, aunque dependiendo de la estructura en la información auxiliar pueden tomar valores particulares. Por lo tanto, el estimador de calibración tomará su forma clásica, dada por:
+En donde los valores $g_k$ son dependientes de la muestra seleccionada $s$ y de la función de optimización escogida para realizar el proceso de calibración. En general no tienen una forma cerrada, aunque dependiendo de la estructura en la información auxiliar pueden tomar valores particulares. Por ejemplo, bajo la distancia Ji-cuadrado, el estimador de calibración tomará la siguiente forma dada por:
 
 $$
-\hat{t}_{y, cal} = \sum_{k\in s} w_k y_k
+\hat{t}_{y, cal} 
+= \sum_{k\in s} w_k y_k 
+= \hat{t}_{y, \pi} + ( \mathbf{t_x} - \hat{\mathbf{t}}_{\mathbf{x}, \pi}) \hat{\mathbf{B}_s}
 $$
 
-Los estimadores de calibración son *aproximadamente insesgados*, pero la magnitud del sesgo está dada por la siguiente expresión:
+En donde $\hat{\mathbf{B}}_s$ es un vector de coeficiente de regresión dependiente de la muestra $s$ y de constantes $q_k$ cuya forma funcional se presenta a continuación. 
 
 $$
-B(\hat{t}_{y, cal}) = E\left[ \sum_{k \in s} (w_k - d_k) y_k \right]
+\hat{\mathbf{B}}_s = \left(\sum_s w_k q_k \mathbf{x}_k\mathbf{x}_k'\right)^{-1}\sum_s w_k q_k \mathbf{x}_k y_k
+$$
+
+En este caso particular, los ponderadores $g_k$ se pueden escribir como sigue:
+
+$$
+g_k = 1 + ( \mathbf{t_x} - \hat{\mathbf{t}}_{\mathbf{x}, \pi}) \left(\sum_s w_k q_k \mathbf{x}_k\mathbf{x}_k'\right)^{-1}\sum_s w_k q_k \mathbf{x}_k
+$$
+
+
+Nótese que los estimadores de calibración son *aproximadamente insesgados*, pero la magnitud del sesgo está dada por la siguiente expresión:
+
+$$
+Bias(\hat{t}_{y, cal}) = E\left[ \sum_{k \in s} (w_k - d_k) y_k \right]
 $$
 
 Si los nuevos pesos calibrados son cercanos a los pesos originales en todas las posibles muestras, entonces el sesgo será insignificante. Ahora, si el tamaño de muestra es insuficiente no conviene utilizar este tipo de estimadores. Además, se sugiere que el coeficiente de variación del estimador de Horvitz-Thompson para las covariables (inducidas por todos los cruces y celdas considerados) sea menor del 10% para asegurar que el sesgo de los estimadores de calibración sea despreciable.
 
 Por otro lado, cuando se tienen múltiples variables discretas es posible que el cruce de categorías contenga muy pocas unidades para las cuales se deben ajustar los pesos originales. Esto puede inducir sesgo en algunos subgrupos. Si aún así se decide optar por mantener estas múltiples restricciones de calibración, será necesario hacer un chequeo empírico del ajuste que cada modelo pueda tener con todas las variables de la encuesta.
 
-### Medidas de calidad en la calibración
+### Medidas de calidad en la calibración   
 
 @Silva_2004 presenta algunas consideraciones al respecto del sesgo que puede generarse al usar esta metodología en las encuestas de hogares y aborda algunos criterios para evaluar la calidad de la calibración. Estas medidas se pueden considerar como protección en contra del sesgo generado por tener demasiadas restricciones. Además, se resalta la importancia de que las variables utilizadas para la calibración sean estimadas de manera precisa por los estimadores clásicos de muestreo. Por ejemplo, si el número de personas en una región es utilizada como una variable de calibración (utilizando como total auxiliar las proyecciones demográficas), entonces el coeficiente de variación del estimador de Horvitz-Thompson sobre esta variable debería ser menor, por ejemplo, al 10%. 
 
@@ -280,7 +295,7 @@ $$
 En este caso, es deseable que esta medida sea muy cercana a uno, indicando que la dispersión de los pesos finales está controlada. 
 
 
-### Calibración integrada para hogares y personas 
+### Calibración integrada para hogares y personas   
 
 Una de las preguntas recurrentes en la calibración de encuestas de hogares es el nivel al cual se debería realizar este ajuste. En principio, es posible realizar la calibración al nivel de las personas, o al nivel de los hogares. Cada una de estas opciones trae algunas ventajas y consideraciones que se deben tener en cuenta. 
 
@@ -304,7 +319,7 @@ $$
 
 De esta forma, sería posible obtener pesos consistentes con las restricciones de calibración a nivel de persona y que, al mismo tiempo, permitiera la integración con los hogares al cambiar de unidad de observación. En la literatura se han descrito varios métodos para lograr esta estandarización. A continuación se profundiza en algunos de ellos. 
 
-#### Estevao & Sarndal {-}
+#### Estevao & Sarndal 
 
 En principio, se debe notar que es posible realizar el proceso de calibración de factores de expansión sobre la base de datos de las personas o sobre la base de datos de los hogares. De estos dos escenarios calibrar sobre la base de personas parecería ser la opción más rápida puesto que, en la mayoría de los casos, las cifras que se utilizan para calibrar están al nivel de los individuos. Por ejemplo, pensando en una encuesta de fuerza laboral, es evidente que las variables más importantes de la encuesta se encuentran al nivel de las personas y que la calibración de los factores de expansión se debería realizar desde la base de datos de personas. 
 
@@ -336,7 +351,7 @@ $$
 
 Como todos los individuos pertenecientes a un hogar son seleccionados para que respondan la encuesta de hogares, se tiene que $d_{k|i} = 1$, por definición. Por lo tanto, el peso del individuo (en la base de datos de la muestra de personas) será idéntico al peso calibrado del hogar; es decir $w_k = w_{II,i} \quad \forall k \in S_i$. Además, dado que el muestreo es de conglomerados en la última etapa y todos los individuos del hogar son seleccionados, entonces el peso de muestreo del hogar será el promedio de los pesos individuales.
 
-#### Lemaitre & Dufour {-}
+#### Lemaitre & Dufour 
 
 Un segundo enfoque, condensado en @Lemaitre_Dufour_1987, afirma que se deben crear nuevas variables de calibración a nivel de persona, definidas como el promedio de las variables originales en el hogar. Por ende, se definen las siguientes cantidades:
 
@@ -349,7 +364,7 @@ En donde $z_{ik}$ es la agregación a nivel de hogar de las covariables original
 En la literatura estadística se ha estudiado este enfoque integrado. Es así como @Neethling_Galpin_2006 concluyeron que, para ambos enfoques, las estimaciones resultantes redujeron el sesgo, aumentaron la precisión y proporcionaron un único conjunto de ponderaciones para los datos de las encuestas estudiadas. Además, si se opta por el segundo enfoque, en el cual el tamaño de la base de datos sería igual al número de personas entrevistadas, se tendría el suficiente margen para actualizar las restricciones de calibración con el fin de ejercer un mayor control sobre los tamaños de los subgrupos de interés. 
 
 
-### Calibración sobre razones, medias y proporciones
+### Calibración sobre razones, medias y proporciones   
 
 @Gutierrez_Zhang_Rodriguez_2016 afirman que, además de utilizar ponderadores calibrados a tamaños o totales, también es posible imponer restricciones de calibración sobre razones, que a su vez son una generalización de medias y proporciones. Por ejemplo, considere $Q$ subgrupos de interés (dominios, estratos o post-estratos). Si las razones para dichos subgrupos fuesen conocidas, podemos encontrar pesos $w_k$ que satisfagan la siguiente restricción:
 
@@ -393,9 +408,85 @@ y_{qk} - \bar{y}_{q} \ \ \ &\text{si} \ k \in s_q \\
 \end{cases}
 \end{equation*}
 
+
+### Calibración con valores perdidos y totales estimados 
+
+Existen algunas condiciones que deben mantenerse al momento de utilizar los estimadores de calibración en las encuestas de hogares. Una de estas condiciones es que la información de las covariables de calibración esté completa en la base de datos de la encuestas. Por ejemplo, asuma que un país está interesado en evaluar la posibilidad de actualizar las covariables de calibración en su encuesta continua de fuerza de trabajo. En efect, con el advenimiento de nuevas oleadas de migración internacional en la región, es posible considerar que la nacionalidad del respondiente esté directamente relacionada con su condición de actividad. Por lo tanto, incluir esta variable en el sistema de calibración podría ser atractivo para reducir los sesgos generados por la ausencia de respuesta (o problemas de cobertura del marco de muestreo) de los extranjeros en la encuesta. 
+ 
+Al momento de actualizar el sistema de calibración es necesario tener en cuenta que las nuevas covariables deben tener información completa en la base de datos de la encuesta. Siguiendo con el ejemplo planteado, si la nacionalidad de los respondientes tiene observaciones incompletas, entonces habrían serias dificultades para considerarla en el nuevo sistema. En particular, habría que sopesar las siguientes consideraciones:
+
+- Los estimadores de calibración no están basados en modelos estadísticos. A pesar de que estos estimadores se conocen como *asistidos por modelos* (porque se basan en información auxiliar externa a la encuesta), siguen adheridos al marco inferencial *basado en el diseño de muestreo*, donde se supone que los valores observados a nivel de unidad para las variables de la encuesta son valores verdaderos, no aleatorios y fijos. 
+
+- Desde un punto de vista matemático, la calibración es un problema de optimización con restricciones sobre los totales auxiliares disponibles, que estaría erróneamente definido si faltaran valores de las covariables de calibración para algunas unidades.
+
+- Los INE suelen utilizar como covariables de calibración *variables estructurales*, es decir variables cuyos valores muestrales se observan con alta calidad (es decir, no hay valores perdidos y son fiables), o pueden reconstruirse de forma confiable y precisa a partir de fuentes externas (por ejemplo, registros estadísticos, archivos censales, encuestas pasadas). 
+ 
+Uno de los objetivos de actualizar el sistema de calibración (incluyendo la varaible nacionalidad en nuestro ejemplo) es, no solo tener consistencia con las cifras de migración oficiales, sino también usarla para tratar la ausencia de respuesta de unidad. En este caso, se calibra la muestra efectiva; es decir, el subconjunto donde las variables auxiliares se observan completamente. Si suponemos que la información de la covariable no está completa en las bases de datos de la encuesta, el investigador tendría dos opciones posibles: 
+ 
+1.	Descartar la nacionalidad como variable auxiliar en la calibración. 
+2.	Imputar o rellenar los valores faltantes de la variable nacionalidad antes de la calibración.
+ 
+Nótese que la imputación asumirá implícita o explícitamente algún tipo de modelo, lo que hará que los estimadores de calibración finales ya no estén completamente *basados en el diseño de muestreo*, y se pierda todo el andamiaje inferencial en la encuesta, incluyendo su comparabilidad en el tiempo. Además, no se lograría una protección definitiva contra el sesgo inducido por la ausencia de respuesta de unidad después de la calibración. Es más, si el modelo de imputación no queda correctamente especificado, el error podría ser aún más grande. 
+
+Sin embargo, si las unidades de la muestra pudieran vincularse sin error a un registro estadístico completo, actualizado y de alta calidad en el que se dispone de la nacionalidad, entonces se podría rellenar los valores perdidos en la base de datos para esta covariable y la inferencia seguiría siendo robusta y fiel al paradigma básico de las encuestas de hogares.
+ 
+En resumen, la recomendación al respecto es que se realicen todos los esfuerzos en la consecución de las covariables de calibración para los respondientes en la etapa de recolección de información primaria. Si esto no fuese posible, apoyarse en registros estadísticos para conseguir la nacionalidad del respondiente, sería una solución igualmente plausible. De la misma forma debiesen evitarse la adopción de modelos de imputación en las covariables de calibración. 
+
+Por otro lado, la calibración con totales de control estimados es cada vez más utilizada. si bien es cierto que el procedimiento de calibración exige que los totales de control sean conocidos de antemano, también es cierto que los censos no tienen la posibilidad de realizarse más frecuentemente. Por ende, las estructuras poblacionales y demográficas observadas en los censos pueden desactualizarse rápidamente. Una vez más considérese el caso de la nacionalidad. Ante una explosión migratoria en un país en el periodo intercensal, las proyecciones censales para la variable nacionalidad podrían quedar obsoletas rápidamente y sería necesario utilizar estimaciones de otras operaciones estadísticas para poder calibrar con totales estimados de control actualizados. 
+
+Un ejemplo de la situación anterior se da en los Estados Unidos con la *American Community Survey*, encuesta que provee estimaciones actualizadas y oportunas con información anual detallada acerca del ingreso, educación, empleo, cobertura en salud, costos del hogar y condiciones para los residentes del país. Esta encuesta complementa los datos poblacionales recolectados por el censo, que se realiza cada diez años. 
+
+Por lo tanto, es posible que una encuesta mediana o pequeña, cuya muestra se denota como $s_A$ se apoye en totales de control estimados por una encuesta más grande, cuya muestra se denota con $s_B$. Este caso se conoce con el nombre de *calibración con totales de control estimados* [@Dever2008] y los estimadores derivados con esta técnica serán denotados con un asterisco. En este caso, los estimadores de calibración buscarían nuevos ponderadores $w_k^*$ que satisfcieran la siguiente restricción:
+
+
+$$
+\sum_{k\in s_A}w_k^*\mathbf{x}_k =  \sum_{j\in s_B}w_j\mathbf{x}_j = \hat{\mathbf{t}}_{\mathbf{x}, cal}
+$$
+
+Por tanto, el estimador de un total con las observaciones de la muestra pequeña tendría la siguiente forma funcional:
+
+$$
+\hat{t}_{y, cal}^* 
+= \sum_{k\in s_A} w_k^* y_k 
+= \hat{t}_{y, \pi} + ( \hat{\mathbf{t}}_{\mathbf{x}, cal} - \hat{\mathbf{t}}_{\mathbf{x}, \pi}) \hat{\mathbf{B}_{s_A}}
+$$
+En donde 
+
+$$
+\hat{\mathbf{B}}_{s_A} = \left(\sum_{s_A} w_k q_k \mathbf{x}_k\mathbf{x}_k'\right)^{-1}\sum_{s_A} w_k q_k \mathbf{x}_k y_k
+$$
+
+Sin embargo, @Dever_Valliant_2016 muestran que, al utilizar la metodología de calibración con totales de control estimados, existe sesgo para los estimadores de razón, definidos así:
+
+$$
+\hat{R}^*_{y, cal} = \frac{\hat{t}_{y, cal}^*}{\hat{t}_{z, cal}^*}
+$$
+
+En donde $\hat{t}_{y, cal}^*$ y $\hat{t}_{z, cal}^*$ denotan dos estimadores de calibración con totales de control estimados. Nótese que esta es la misma forma que tomaría cualquier promedio estimado 
+
+$$
+\bar y ^{*}_{cal} = \frac{\hat{t}_{y, cal}^{*}}{\hat{N}^{*}_{cal}}
+$$
+
+En este caso, el denominador de $\hat{R}^{*}_{cal}$ sería $\hat{t}_{z,cal}^{*} = \hat N^{*}_{cal}$. @Dever_Valliant_2016 presentan la siguiente expresión para el sesgo de un promedio $\bar y ^{*}_{cal}$:
+
+$$
+Bias(\bar y ^{*}_{cal})
+\approx
+\frac{1}{E(\hat N^{*}_{cal})} 
+\left[ Bias(\hat{t}_{y,cal}^{*}) - \bar{y} \ Bias(\hat{N}^{*}_{cal})\right]
+
+$$
+
+Con $Bias(\hat{t}_{cal}^{*})$ y $Bias(\hat{N}^{*}_{cal})$, los sesgos de los estimadores de calibración con totales de control estimados del total poblacional $(t_y)$ y del tamaño poblacional $(N)$, respectivamente. El sesgo de estos estimadores puede llegar a ser despreciable si el mecanismo que genera la ausencia de respuesta es aleatorio o completamente aleatorio (ver capítulo 10), y si se incluye una columna de unos en la matriz de las variables de calibración, lo cual mostraría que no hay errores de cobertura. 
+
+Asimismo, la estructura de varianza de estos estimadores es bastante compleja como lo presentan @Dever_Valliant_2016. Sin emabrgo, es posible utilizar métodos de estimación de varianza basados en réplicas como los propuestos por @Opsomer_Erciulescu_2022.
+
+
+
 ## Recorte y redondeo
 
-### Recorte de pesos extremos {-}
+### Recorte de pesos extremos 
 
 Un inconveniente que se genera debido a la multitud de ajustes en los factores  de expansión es que, si bien el estimador resultante tendrá un sesgo cercano a cero, la distribución de los pesos puede mostrar datos extremos, sobre todo a la derecha de la distribución (valores muy grandes), que hacen que la varianza del estimador crezca y que, por ende, la precisión de la inferencia decrezca. Para hacerle frente a este problema, es posible considerar un procedimiento de *trimming* o recorte de pesos, siguiendo las recomendaciones de @Valliant_Dever_Kreuter_2018[, sec. 14.4], que puede ser resumido en los siguientes pasos:
 	
@@ -418,7 +509,7 @@ $$
 Al final del proceso se debe asegurar que los datos extremos en los factores de expansión han sido correctamente manejados y que la distribución general de los pesos no sufrió cambios estructurales en los subgrupos poblacionales de interés. 
 
 
-### El problema del redondeo de los factores de expansión {-}
+### El problema del redondeo de los factores de expansión 
 
 El principio de representatividad es el paradigma inferencial dominante en cualquier encuesta de hogares y el factor de expansión es el concepto más importante en este contexto. Por ejemplo, un hogar en una encuesta con un factor de expansión de 500 se representa a sí mismo y a otros 499 hogares más. La definición teórica del factor de expansión, inducida por el inverso multiplicativo de la probabilidad de inclusión de un hogar en la muestra, hace que la inferencia sea insesgada y confiable. Sin embargo, debido a que la probabilidad de inclusión es un número real contenido en el intervalo $(0, 1]$, entonces su inverso multiplicativo también será un número real mayor o igual que uno. 
 

@@ -1,5 +1,3 @@
-# (PART) Procesamiento transversal de las encuestas de hogares {-}
-
 # Estimación de parámetros
 
 Un estimador se define como una función de la muestra aleatoria, el cual toma valores en los reales y solo depende de los elementos pertenecientes a la muestra. A su vez, un diseño de muestreo, se define por el soporte que es el conjunto $Q$ de todas las posibles muestras. Las propiedades estadísticas de un estimador están determinadas por la medida de probabilidad discreta inducida por el diseño de muestreo. Es decir, dada la probabilidad de selección de cada muestra $s \in Q$, la esperanza, la varianza y otras propiedades de interés de los estimadores están definidas a partir de $p(s)$. En particular, la esperanza de un estimador $\hat\theta$ sigue la siguiente expresión:
@@ -48,7 +46,7 @@ Es posible afirmar que el análisis apropiado de una encuesta no puede pasar por
 
 ## El estimador de Horvitz-Thompson para totales y tamaños poblacionales 
 
-### Estimación para totales
+### Estimación para totales   
 
 La mayoría de indicadores sociales a nivel nacional pueden verse como funciones de totales de una o más variables de interés. Por ejemplo, si el interés está en estimar un total $t_y=\sum_U y_k$, el estimador de Horvitz-Thompson (HT) provee una metodología que induce insesgamiento.
 
@@ -61,7 +59,7 @@ En donde la muestra $s$ hace referencia al subconjunto de la población que fue 
 Como se verá más adelante, en presencia de esquemas de estratificación y selección de conglomerados y varias etapas, esta probabilidad resulta ser el producto de las probabilidades condicionales que surgen en los subsecuentes procesos de selección probabilística. Por tanto, el peso final de muestreo resulta ser por lo general una multiplicación de factores de expansión en cada etapa o fase del esquema de muestreo. En general, este estimador toma diferentes formas a medida que el diseño de muestreo cambia. A continuación se presenta una lista no exhausitva de algunas de los diseños más importantes en la teoría de muestreo para encuestas de hogares. 
 
 
-#### Muestreo aleatorio simple {-}
+#### Muestreo aleatorio simple 
 
 En este caso, las probabilidades de inclusión son equivalentes para cada unidad incluida en la muestra,
 
@@ -75,7 +73,7 @@ $$
 \hat{t}_{y,\pi}=\frac{N}{n}\sum_s y_k
 $$
 
-#### Muestreo proporcional al tamaño {-}
+#### Muestreo proporcional al tamaño 
 
 Este diseño de muestreo induce probabilidades de inclusión proporcionales al tamaño de una característica de información auxiliar (estrictamente positiva) disponible en el marco de muestreo; por tanto las probabilidades de inclusión obedecen la siguiente relación:
 
@@ -91,7 +89,7 @@ $$
 
 Por último, no es cierto que la asignación de probabilidades desiguales en las unidades de muestreo induzca sesgo en la encuesta Por ejemplo, cuando se utiliza el estimador de expansión (Hansen-Hurwitz, para el caso de muestreos con reemplazo - Horvitz-Thompson, en muestreos sin reemplazo) el sesgo es nulo bajo estas condiciones. Sin embargo, si se utilizara un estimador que no haga uso de los factores de expansión, la inferencia sí estaría sesgada. Por ende, lo natural es que si el diseño es con probabilidades desiguales, éstas se utilicen dentro de un estimador que considere esta desigualdad; luego sería incorrecto que se utilice otro estimador diferente al estimador de expansión.
 
-#### Muestreo estratificado {-}
+#### Muestreo estratificado 
 
 Si $\hat{t}_{yh,\pi}$ estima insesgadamente el total de la característica de interés $t_{yh}$ del estrato $h$, entonces un estimador insesgado para el total poblacional $t_y$ está dado por
 $$
@@ -108,7 +106,7 @@ $$
 $$
 
 
-#### Muestreo de conglomerados {-} 
+#### Muestreo de conglomerados  
 
 En el esquema general del muestreo por conglomerados, se utiliza un diseño de muestreo específico para la selección de los conglomerados en la muestra. La probabilidad de que el $k$-ésimo elemento, sea incluido en la muestra $s$ es idéntica a la porbablidad de inclusión del conglomerado al que pertenece $\pi_{Ii}$; es decir
 
@@ -124,7 +122,7 @@ $$
 
 En donde $t_{yi}$ hace referencia al total de la característica de interés en el conglomerado $U_i$. Como se mencionó en los capítulos anteriores, definir los conglomerados con tamaños muy desiguales redunda en un aumento significativo de la varianza del estimador; es por esto que, en encuestas de hogares, se intenta crear conglomerados acotados, a nivel de manzana, o vereda. Esta es una práctica muy pertinente, puesto que la varianza del estimador de expansión estará en función de la varianza de los totales de los conglomerados; si existe una alta variación en los tamaños, habrá también una alta variación en los totales y, por consiguiente, la varianza del estimador será alta. De otra forma, si se tiene conocimiento de una característica de información auxiliar a nivel de los conglomerados (medida de tamaño), es posible hacer uso de esta información del marco para reducir la varianza en el estimador.
 
-#### Muestreo en dos etapas {-}
+#### Muestreo en dos etapas 
 
 Bajo este diseño la probabilidad de inclusión de primer orden del $k$-ésimo elemento está dada por
 $$
@@ -137,7 +135,7 @@ $$
 $$
 
 
-#### Muestreo en dos fases {-}
+#### Muestreo en dos fases 
 
 Este tipo de muestreo selecciona una muestra de elementos $s_a$ en una primera fase en la cual se recolecta información de interés para crear una versión reducida y acotada del marco de muestreo. A partir de esta información, en una segunda fase, se realiza una nueva selección que define una submuestra $s$, en donde se observa la característica de información auxiliar. Bajo este esquema, la probabilidad de que un elemento esté en la submuestra de la segunda fase $s$ depende de lo que haya sucedido en la muestra de la primera fase $s_a$; por lo tanto, la probabilidad de inclusión de cualquier elemento en la muestra final no tiene una forma cerrada y es algebraicamente intratable. Por ende, se define el estimador de Horvitz-Thompson condicionado, el cual toma la siguiente forma
 
@@ -147,7 +145,7 @@ $$
 
 En la anterior expresión, $\pi_{ak}$ denota la probabilidad de inclusión del elemento en la muestra de la primera fase, mientras que $\pi_{k\mid{s_a}}$ denota la probabilidad de inclusión del elemento a la submuestra de la segunda fase, condicionada a que haya sido incluido en la primera fase. 
 
-#### El estimador HT en una encuesta de hogares regular {-}
+### El estimador HT en una encuesta de hogares regular 
 
 Suponga un diseño regular en una encuesta de hogares; por ejemplo, asuma que se tiene un esquema estratificado de $H$ estratos, con dos etapas de selección dentro de cada estrato (la primera etapa con selección de UPM dentro del estrato, la segunda con selección de hogares), entonces el peso de muestreo final y el estimador del total estará dado por la siguiente expresión
 
@@ -162,7 +160,7 @@ $$
 $$
 
 
-### Estimación para tamaños y totales en dominios
+### Estimación para tamaños y totales en dominios   
 
 En general todas las expresiones para totales son apropiadas para tamaños poblacionales, puesto que la variable $y_k = 1 \ \forall k \in s$. De esta forma, el estimador HT para un tamaño está dado por la suma de los factores de expansión:
 
@@ -287,7 +285,7 @@ En un encuesta de hogares las restricciones de calibración pueden establecerse 
 
 En resumen, utilizar este tipo de estimadores garantiza una *consistencia estética*, puesto que es deseable que las estimaciones puntuales de las encuestas coincidan con los conteos censales, proyecciones poblacionales, registros estadísticos o registros administrativos. Además, existirá un *aumento de la precisión*, porque en la búsqueda de la mejor estrategia de muestreo, el estadístico quiere obtener cifras precisas y confiables que induzcan intervalos de variación angostos y menores errores de muestreo. Por último, si existe una integración adecuada de la información auxiliar, se *disminuye el sesgo* generado por la ausencia de respuesta (debido a los individuos) o por la falta de cobertura (debido a los defectos del marco de muestreo).
 
-### Ganancia en eficiencia 
+### Ganancia en eficiencia   
 
 Para mostrar cómo los estimadores de calibración inducen menores varianzas que los estimadores comunes, se planeó el siguiente experimento de simulación empírica:
 
@@ -320,7 +318,7 @@ $$
 
 Por ende, usar la metodología de calibración supone casi siempre una ganancia en la eficiencia de la estrategia de muestreo.
 
-### Diferentes formas del estimador de calibración
+### Diferentes formas del estimador de calibración   
 
 La calibración es un ajuste que se realiza a los pesos de muestreo con el propósito de que las estimaciones de algunas variables de control reproduzcan de forma perfecta los totales poblacionales de estas variables. Sin embargo, es necesario tener en cuenta las diferencias entre los métodos de calibración, que en general corresponderán con el nivel de desagregación de información auxiliar:
 
@@ -329,7 +327,7 @@ La calibración es un ajuste que se realiza a los pesos de muestreo con el prop�
 3. *Raking* con variables categóricas, que se define como una calibración sobre los tamaños marginales de tablas de contingencia de subgrupos de interés. A diferencia del caso anterior, esta calibración no tiene en cuenta los tamaños de los cruces, sino solo los tamaños marginales; por ende, este método induce menos restricciones. 
 
 
-#### Postestratificación {-}
+#### Postestratificación 
 
 La postestratificación es una de las técnicas más usadas para el ajuste de los pesos de muestreo vía calibración. Este ajuste requiere la definición de categorías poblacionales. Por ejemplo, personas en un determinado grupo de edad, en cierta región y de cierta raza. Este método se implementa dentro de cada uno de los cruces inducidos por las covariables de interés (edad, región, raza). Nótese que, es necesario tener acceso a la información auxiliar a nivel de *todos* los cruces definidos por los subgrupos. Usualmente corresponden a proyecciones demográficas. En este caso, la suma de los pesos ajustados reproducirán con exactitud los tamaños poblacionales en cada cruce. 
 
@@ -351,7 +349,7 @@ Note que $d_k$ corresponde al peso inducido por el diseño de muestreo, corregid
 
 Por último, se debe considerar que la cantidad de postestratos en la calibración está inducido por la cantidad de interacciones en las variables auxiliares. En algunos casos, es posible encontrar cientos de interacciones. Aunque los tamaños de los postestratos se reproduce sin error, esto puede disminuir la eficiencia de la calibración en las variables de interés. Es decir, muchas variables e interacciones hacen que las estimaciones sean inestables, sobre todo si existen cruces con celdas vacías. Es posible que el efecto de las interacciones influencie la creación de los nuevos pesos calibrados y se tengan datos atípicos en los pesos de calibración resultantes. 
 
-#### Raking {-}
+#### Raking 
 
 ¿Qué sucede si los conteos poblacionales (información auxiliar) no están disponibles para todos los cruces de las variables de calibración? Es posible que los agregados poblacionales de las variables provengan de distintas fuentes y no se pueda llegar a nivel de cruce. En este caso, es factible calibrar los marginales de la tabla cruzada, sin necesidad de calibrar todas sus entradas. En este caso, el número de restricciones decrecería con respecto a la postestratifación, pues se sumaría el número de categorías, mientras que en la postestratificación se multiplican. En el escenario anterior, en donde asumimos cuatro categorías para la raza, dos para sexo, cinco para la edad, entonces habrían únicamente 11 restricciones. 
 
@@ -361,7 +359,8 @@ $$w_k = d_k \times exp(u_h) \times exp(v_g)$$
 
 En donde $u_h$ es una función de los totales marginales de las filas de la tabla cruzada y $v_g$ es una función de los totales marginales de las columnas. El *raking* permite utilizar variables que pueden ser predictoras de las variables de interés o explicar la probabilidad de responder del hogar (o persona), además de paliar los efectos nocivos que las bajas tasas de cobertura del marco de muestreo conllevan sobre la inferencia.
 
-### La calibración como un cambio de paradigma
+
+### La calibración como un cambio de paradigma 
 
 @Sar08 concluye que existen algunas ideas sobre las cuales vale la pena profundizar un poco más. A continuación se reproducen las ideas de @Gutierrez_2016 sobre estos criterios para enfatizar el uso práctico de los estimadores de calibración:
 
@@ -374,4 +373,3 @@ En donde $u_h$ es una función de los totales marginales de las filas de la tabl
 1. Algunos autores usan la palabra calibración en combinación con otros términos para describir varias direcciones de pensamiento. Por ejemplo, es posible encontrar términos como calibración de modelo, calibración G, calibración armonizada, calibración a un nivel más alto, calibración de regresión, calibración no lineal, calibración super-generalizada, calibración de modelos de redes neuronales, calibración basada en modelos locales polinomiales, entre otras.
 
 1. Si la calibración representa un nuevo enfoque demarcado claramente de sus predecesores, entonces es tiempo de hacer la pregunta: ¿La calibración generaliza las teorías anteriores? ¿La calibración da mejores respuestas a las preguntas de importancia, que los enfoques de estimación anteriores? En la práctica el estadístico encuentra algunos pormenores tales como ausencia de respuestas, deficiencias del marco muestral y errores de medición. Es cierto que algunos procesos como la imputación y la reponderación para no respuestas son ampliamente difundidos y usados en la práctica. Sin embargo queda un sinsabor al utilizar estos métodos pues no están enmarcados dentro de una teoría exhaustiva de inferencia en poblaciones finitas. La mayoría de artículos teóricos tratan con la estimación de parámetros bajo un mundo ideal, que no existe en la práctica, donde la ausencia de respuesta y otros errores no muestrales están ausentes.
-

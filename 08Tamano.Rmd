@@ -93,15 +93,15 @@ $$
 
 Por consiguiente, se evidencia que valores grandes del efecto de diseño inducirán un mayor tamaño de muestra. Claramente el incremento no es lineal, más aún, el tamaño de muestre se ve más afectado en la medida en que el $DEFF$ sea más grande.
 
-## Escenarios de interés
+## Algunos escenarios de interés
 
 En general, en encuestas de hogares se parte de un marco de muestreo de áreas que agrupa a toda la población de un país. Estas áreas están definidas como agregaciones cartográficas o UPM y contienen a su vez a los hogares en donde se encuentran las personas que son susceptibles de ser entrevistadas. Sin embargo, debido a la agrupación natural de las personas en hogares, a veces los cálculos se hacen complejos, máxime conociendo que la población de interés es un subconjunto de los habitantes de los hogares. Por otro lado, debido a que el marco de muestreo comúnmente usado por las INE es una lista de UPM, se hace necesario más allá de calcular el tamaño de muestra de las personas, también calcular el tamaño de muestra de UPM y hogares en la muestra. Por lo tanto, en este documento se pretende sintetizar los mecanismos de asignación de muestra en tres escenarios que son comunes en la práctica estadística del diseño de encuestas de hogares: 
 
-1. Primer escenario: asignación del tamaño de muestra en problemas de inferencia que tienen que ver con la estimación de parámetros de personas. En este escenario se presenta la metodología apropiada para calcular el tamaño de muestra de UPM, hogares y finalmente personas. 
+1. Asignación del tamaño de muestra en problemas de inferencia que tienen que ver con la estimación de parámetros de personas. En este escenario se presenta la metodología apropiada para calcular el tamaño de muestra de UPM, hogares y finalmente personas. 
 
-2. Segundo escenario: cuando la variable de diseño y en general, las variables más importantes de la encuestas están presentes a nivel de hogar, entonces no es necesario realizar un submuestreo de personas. Partiendo de la lógica presentada en el escenario anterior, se presenta la metodología adecuada para calcular el tamaño de muestra de UPM y de hogares. 
+2. Cuando la variable de diseño y en general, las variables más importantes de la encuestas están presentes a nivel de hogar, entonces no es necesario realizar un submuestreo de personas. Partiendo de la lógica presentada en el escenario anterior, se presenta la metodología adecuada para calcular el tamaño de muestra de UPM y de hogares. 
 
-3. Tercer escenario: un caso menos común en los países de América Latina se presenta cuando el marco de muestreo empadrona las personas dentro de las UPM y además la encuesta sólo pretende observar características asociadas a los habitantes del hogar (y por tanto no intenta observar características ni del hogar ni de la vivienda). En este caso no hay un submuestreo de hogares.
+3. Un caso menos común en los países de América Latina se presenta cuando el marco de muestreo empadrona las personas dentro de las UPM y además la encuesta sólo pretende observar características asociadas a los habitantes del hogar (y por tanto no intenta observar características ni del hogar ni de la vivienda). En este caso no hay un submuestreo de hogares.
 
 En general, al definir las expresiones de tamaño de muestra, se debe ser cuidadoso con la notación, para lo cual suponemos una población $U$ de $N$ elementos sobre la que se desea seleccionar una muestra $s$ de $n$ elementos en los cuales se quiere medir una característica de interés. En algunos casos, la población $U$ no constituye la población de interés sino que la contiene; es decir, si se define a $U_d$ como la población de interés, entonces $U_d \subseteq U$. En términos de notación, se tiene lo siguiente:
 
@@ -122,7 +122,7 @@ Para introducir las metodologías apropiadas, junto con las  expresiones adecuad
 
 Para simplificar los cálculos y mantener la atención del lector, las expresiones que se presentarán en este capítulo corresponden al número de individuos que deberían ser seleccionados a nivel nacional, o para un solo subgrupo de interés. Por lo tanto, estos cálculos deben ser hechos tantas veces como dominios de representatividad exista en la encuesta. Por ejemplo, si el interés está en hacer inferencia en dos estratos: el rural y el urbano, entonces se debe calcular estas expresiones dos veces, una para cada área. Al final, el tamaño de muestra nacional será la sumatoria de los tamaños de muestra en cada uno de los estratos del país. 
 
-### Tamaño de muestra para UPM, hogares y personas
+## Tamaño de muestra para UPM, hogares y personas
 
 Cuando la unidad de observación sean las personas, sin importar que la variable de interés esté a nivel de hogar, será necesario siempre basar nuestros cálculos en el tamaño de muestra de las personas. Por ejemplo, para tener una inferencia apropiada al estimar el ingreso medio percápita, el porcentaje de personas pobres o el porcentaje de personas con una característica particular es necesario definir a la población objetivo como todas las personas que componen un hogar para posterioMERnte medir la variable de interés que será observada para todas ellas.
 
@@ -165,7 +165,7 @@ n_{I} = \frac{n}{\bar{n}}
 = \frac{n_{II}}{\bar{n}_{II}}
 $$ 
 
-#### Ejemplo: proporción de personas pobres {-}
+### Ejemplo: proporción de personas pobres 
 
 Suponga que el parámetro de interés es el porcentaje de personas pobres (cuyo ingreso está por debajo de un umbral preestablecido) y se quiere hacer inferencia con un margen de error relativo máximo del 5%. Por estudios anteriores en este país, se ha estimado que la proporción de personas pobres está alrededor de $P = 4$%. Nótese que la población objetivo está conformada por todos los habitantes del hogar puesto que $r = 100$%. En este país se ha estimado que el tamaño promedio del hogar es de alrededor de $b = 3.5$ personas. Por último, según levantamientos anteriores, la correlación intraclase de la característica de interés con las unidades primarias de muestreo es $\rho_y = 0.034$.
 
@@ -190,7 +190,7 @@ Por supuesto que es posible plantear otros escenarios a medida que se evalúe el
 |          45|         158|  6.3| 1039|   46754|   163640|
 
 
-#### Ejemplo: ingreso promedio por persona  {-}
+### Ejemplo: ingreso promedio por persona  
 
 Suponga que se desea estimar el ingreso promedio por hogar con un margen de error relativo máximo del 2%. La variable de interés (ingreso) es continua y se estima que la media oscila alrededor de $\bar{y}_U=1180$ dólares con una varianza de $S^2_{y_U}=1845.94^2$.  En este caso, la población objetivo son todos los habitantes del hogar, por lo cual $r = 100\%$. La composición del hogar se calcula en $b = 3.79$ personas por hogar. Por último, según levantamientos anteriores, la correlación intraclase de la característica de interés es $\rho_y = 0.035$. Nótese que la correlación intraclase cambia con respecto a la característica que se desee medir. 
 
@@ -216,7 +216,7 @@ A continuación se muestran algunos resultados que permiten establecer otros esc
 
 
 
-#### Ejemplo: tasa de desocupación en adultos mayores {-}
+### Ejemplo: tasa de desocupación en adultos mayores 
 
 Suponga que la incidencia de la desocupación está alrededor de $P = 5.5$% en la población objetivo, que son las personas económicamente activas (PEA) mayores de 60 años; en este país, se ha estimado que en promedio hay $r = 4.6$% de adultos mayores por hogar que pertenecen a la PEA, cuyo tamaño promedio es de alrededor de $b = 5$ personas. Además, se quiere hacer inferencia con un margen de error relativo máximo del 15%. Por último, según levantamientos anteriores, la correlación intraclase de la característica de interés es $\rho_y = 0.7$.
 
@@ -241,7 +241,7 @@ En este caso la muestra en los 31617 hogares induce un operativo muy grande que 
 
  
 
-### Tamaño de muestra para UPM y hogares
+## Tamaño de muestra para UPM y hogares
 
 En algunas ocasiones la variable de interés y la unidad de observación están a nivel de hogar. Por ejemplo, cuando todas las variables de interés se miden a nivel de la vivienda o del hogar. En este caso es posible modificar el algoritmo de la sección anterior para seleccionar únicamente a las viviendas u hogares en la muestra, sin necesidad de realizar un submuestreo de personas. En este caso algunas cantidades desaparecen porque no son objeto de la población de hogares, como lo son $r$ y $b$; algunas otras expresiones deben ser redefinidas al contexto de los hogares, como por ejemplo, el coeficiente de correlación intraclase $\rho_y$, el efecto de diseño y todas las expresiones de tamaños de muestra. En todo caso, la adaptación del algoritmo se describe a continuación.
 
@@ -265,7 +265,7 @@ $$
 n_{I} = \frac{n_{II}}{\bar{n}_{II}}
 $$ 
 
-#### Ejemplo: gasto promedio del hogar  {-}
+### Ejemplo: gasto promedio del hogar  
 
 Suponga que se desea estimar el promedio de gasto anual en dólares en los hogares del país con un margen de error relativo máximo admisible del 3.5%. La variable de interés (gasto) es continua y se estima que la media oscila alrededor de $\bar{y}_U=1407$ dólares con una varianza de $S^2_{y_U}=2228^2$. En este ejemplo se supone que el país está dividido en $N_I = 10$ mil UPM y la correlación intraclase de la característica de interés, medida a nivel del hogar, con las UPM es de $\rho_y = 0.173$.
 
@@ -293,7 +293,7 @@ Para este tipo de operativos, en donde los cuestionarios de gasto de los hogares
 |          18|  3.9| 1210|   21787|
 |          20|  4.3| 1185|   23695|
 
-#### Ejemplo: proporción de hogares sin agua potable  {-}
+### Ejemplo: proporción de hogares sin agua potable  
 
 Suponga que se desea obtener una muestra con un margen de error relativo máximo admisible del 10% sobre la variable de interés (necesidades básicas insatisfechas en agua) y el parámetro de interés es el porcentaje de hogares con esta carencia. En este país, se estima que la proporción de hogares con esta condición asciende a $P = 7.5$%.  En este ejemplo se supone que la correlación intraclase de la característica de interés con las UPM es de $\rho_y = 0.045$.
 
@@ -319,7 +319,7 @@ A continuación se muestran algunos resultados que permiten establecer otros esc
 
  
 
-### Tamaño de muestra para UPM y personas
+## Tamaño de muestra para UPM y personas
 
 En algunos casos en donde la variable de interés esté a nivel de persona y el cuestionario de la encuesta no induzca preguntas acerca del hogar, y además exista un inventario detallado de las personas que residen en cada UPM, es posible evadir la selección de los hogares e ir directamente a la selección de personas. En este caso, la lógica del cálculo del tamaño de muestra se mantiene modificando en cierta manera el algoritmo de las secciones anteriores, tal como se ilustra a continuación. 
 
@@ -338,7 +338,7 @@ $$
 n_{I} = \frac{n}{\bar{n}} 
 $$ 
 
-#### Ejemplo: ingreso promedio en personas empleadas  {-}
+### Ejemplo: ingreso promedio en personas empleadas  
 
 Suponga que se desea estimar el ingreso promedio en las personas empleadas con un margen de error relativo máximo admisible del 2%. La variable de interés (ingreso) es continua y se estima que la media oscila alrededor de $\bar{y}_U=1458$ dólares con una varianza de $S^2_{y_U}=2191^2$. Nótese que la población objetivo son todas las personas empleadas, cuya proporción se estima en $r = 46$%. La correlación intraclase de la característica de interés es $\rho_y = 0.038$.
 
@@ -360,7 +360,7 @@ A continuación se muestran algunos resultados que permiten establecer otros esc
 |         125|            58|  3.1|  835|      48023|   104398|
 
 
-#### Ejemplo: proporción de analfabetas pobres  {-}
+### Ejemplo: proporción de analfabetas pobres  
 
 Suponga que se quiere estimar la proporción de incidencia de la pobreza sobre la población analfabeta con un margen de error relativo máximo admisible del 15%. Se ha estimado que alrededor del $r = 14$% de las personas del país no saben leer ni escribir. Por otro lado, tal como se vio en un ejemplo anterior, el fenómeno de la pobreza está estimado en $P = 4$%. y la correlación intraclase de la característica de interés es $\rho_y = 0.0454$.
 
@@ -386,7 +386,7 @@ Es posible plantear otros escenarios a medida que se evalúe el efecto que conll
 
 En las encuestas de hogares también surgen escenarios particulares que llevan a sugerir distintos caminos para la adopción de un determinado tamaño de muestra. En esta sección analizaremos los casos en los que los parámetros de interés son diferencias de proporciones y dobles diferencias. También se revisará el caso del planteamiento de pruebas de hipótesis y su relación con el tamaño de muestra. 
 
-### Tamaño de muestra para la estimación de la diferencia de dos proporciones
+### Tamaño de muestra para la estimación de la diferencia de dos proporciones   
 
 
 Suponga una población $U$, que se encuentra particionada^[Esta metodología también aplica en el caso en el que $U \supset (U_1 \cup U_2)$.] en dos subpoblaciones $U_1$ de tamaño $N_1$ y $U_2$, de tamaño $N_2$. El interés del investigador está en conocer la diferencia de algunas proporciones entre estos grupos. Por ejemplo, suponga que se quiere conocer la diferencia entre las proporciones de niños desnutridos por sexo. Se espera que la proporción de niños desnutridos no supere la proporción de niñas desnutridas para verificar que no hay brechas de sexo. Por lo tanto, el parámetro de interés se escribe como:
@@ -460,7 +460,7 @@ Nótese que, dependiendo de los pocentajes de traslape $\sqrt{T_1}$, $\sqrt{T_2}
 1. Si hay traslape completo, $T_1 = T_2 = 1$ y $S^2_{\theta} = P_1Q_1+P_2Q_2 - 2 R_{1,2} \sqrt{P_1Q_1}\sqrt{P_2Q_2}$.
 1. Si hay traslape parcial y balanceo, $T_1 = T_2 = T$ y si además se considera que las varianzas en cada subgrupo o periodo son similares $P_1Q_1 = P_2Q_2 = PQ$, entonces $S^2_{\theta} = 2PQ (1- TR_{1,2})$.
 
-#### Covarianza en comparaciones mensuales {-}
+#### Covarianza en comparaciones mensuales 
 
 Suponga que se quiere comparar la tasa de desempleo nacional entre dos meses consecutivos. En este escenario, asumiendo que existe independencia en el muestreo de los dos meses consecutivos, el porcentaje de traslape de muestra entre los dos meses (que por diseño es nulo) es igual a cero. Por lo tanto, $T_1 = T_2 = 0$. Luego, el término de la covarianza se anula. En resumen, la varianza del estimador en este caso sería igual a:
 
@@ -469,7 +469,7 @@ Var(\hat{P}_1-\hat{P}_2)
 = Var(\hat{P}_1) + Var(\hat{P}_2)
 $$
 
-#### Covarianza en comparaciones trimestrales o anuales {-}
+#### Covarianza en comparaciones trimestrales o anuales 
 
 Bajo un esquema rotativo 2(2)2, suponga que se quiere comparar la tasa de desempleo nacional entre trimestres consecutivos o entre el mismo mes de dos años consecutivos. En este escenario no existe independencia en el muestreo de los dos trimestres consecutivos puestos que la estructura del panel garantiza un traslape del 50%. En este caso $T_1 = T_2 \approx 0.5$.
 
@@ -479,7 +479,7 @@ $$
 Cov(\hat{P}_1, \hat{P}_2) = \frac{1}{2}\sqrt{Var(\hat{P}_1)}\sqrt{Var(\hat{P}_2)}R_{1,2}
 $$
 
-#### Covarianza en comparaciones de un mismo mes {-}
+#### Covarianza en comparaciones de un mismo mes 
 
 En primer lugar, suponga que se quiere comparar la tasa de desempleo entre hombres y mujeres en un mismo mes. En este escenario no existe independencia en el muestreo de hombres y mujeres puesto que estos grupos no son estratos de muestreo. En este caso $T_1$ es la proporción de hombres y $T_2$ es la proporción de mujeres. Nótese que $T_1 \neq T_2$. 
 
@@ -497,7 +497,7 @@ Var(\hat{d})
 = Var(\hat{P}_1) + Var(\hat{P}_2)
 $$
 
-### Tamaño de muestra para la estimación del impacto en dos mediciones longitudinales
+### Tamaño de muestra para la estimación del impacto en dos mediciones longitudinales   
 
 Para las encuestas que planean un seguimiento panel o de panel rotativo, es posible contemplar escenarios en los que se quiera estimar el efecto de una intervención, definido como la diferencia en diferencias de las proporciones de interés. De esta forma, el efecto se define como:
 
@@ -521,7 +521,7 @@ En donde $T$ corresponde a la tasa de traslape ($T=1$ corresponde a un panel com
 
 Por ejemplo, en una encuesta de fuerza laboral inteMERdiada por alguna intervención gubernamental, puede ser de interés la evaluación del efecto de esa política de asistencia laboral entre hombres y mujeres en dos periodos de tiempo. 
 
-### Tamaño de muestra para el contraste de hipótesis en la diferencia de proporciones
+### Tamaño de muestra para el contraste de hipótesis en la diferencia de proporciones   
 
 Suponga que el investigador desea realizar el contraste de una hipótesis de interés. En particular, suponga que hay dos grupos de interés en la población finita y que la hipótesis está inducida por la diferencia de las proporciones en las dos poblaciones. El investigador considera que la diferencia es significativa para el fenómeno en cuestión si es mayor que un valor $D$ definido de antemano y conocido como el *tamaño del efecto* que el investigador desea detectar.
 
@@ -582,7 +582,7 @@ En esta sección  documento, centramos nuestra atención en el tamaño de la mue
 
 A continuación se proporciona varios ejemplos que tipifican algunos escenarios que se pueden encontrar en la práctica. Los cálculos se pueden reproducir empleando el software estadístico `R` [@R2020], mediante el uso de la biblioteca `samplesize4surveys` [@ss4s], utilizando específicamente las funciones `ss4p` y `ss4dp`
 
-### Estimación de proporciones {-}
+### Estimación de proporciones 
 
 1. Primer escenario: si la tasa de desempleo es baja, digamos ${P}=0.05$ y el margen de error se fija en $ME = 0.0025$, entonces el intervalo de confianza esperado sería $IC=0.05\pm0.0025=(0.0475,0.0525)$. En este caso el tamaño de muestra requerido es de alrededor de 55169.
 
@@ -601,7 +601,7 @@ Sin embargo, para una proporción $P$, el tamaño muestral requerido para lograr
 * Si la proporción es baja, anticipamos un gran tamaño de muestra.
 * Si la proporción es alta, esperamos un tamaño de muestra pequeño.
 
-### Cambios netos {-}
+### Estimación de cambios netos 
 
 Ahora dirigimos nuestra atención a los cambios netos en la tasa de desempleo durante dos períodos, $\Delta= |P_{1}-P_{2}|$. Este tipo de parámetro se puede estimar utilizando una encuesta repetida, rotativa o de panel.  Sin embargo, como se evidenció en las anteriores secciones, hay una reducción en el tamaño de la muestra si se intentan estimar los cambios netos desde una encuesta rotativa o de panel. Como no estamos  estimando una proporción, sino un cambio neto,tenemos que considerar qué valores son adecuados para el establecer el margen de error absoluto.  
 
@@ -627,7 +627,7 @@ Para cumplir con los requisitos de calidad, bajo el mismo $MER$, se necesitará 
 
 Cuando la encuesta se ha planeado para que tenga representatividad para algún conjunto de estratos, es necesario replicar estas mismas expresiones en cada uno de los subgrupos de interés. Por otro lado, las anteriores aproximaciones al cálculo de tamaño de muestra son insuficientes ante la realidad de la ausencia de respuesta y las desactualizaciones de los marcos de muestreo. En esta sección se profundizará en estos tópicos. 
 
-### Asignación del tamaño de muestra en los estratos de muestreo 
+### Asignación del tamaño de muestra en los estratos de muestreo   
 
 Como se aclaró anteriormente, todas las encuestas de hogares en América Latina tienen un componente explícito de estratificación, y por ende una pregunta que surge inmediatamente es: ¿después de determinar el tamaño de muestra general, como asignarlo apropiadamente en todos los estratos de muestreo? En general, se supone que el tamaño de la muestra general es $n$ y que hay $H$ estratos fijos; por ende, se quiere determinar los tamaños de muestra $n_h$ para cada estrato $(h = 1, \ldots, H)$, de tal manera que se garantice la ganancia de precisión de la estrategia de muestreo. 
 
@@ -653,7 +653,7 @@ $$
 En donde $W_h=N_h/N$, e $I \geq 0$ es el índice de asignación de Kish, que denota la importancia relativa entre las estimaciones nacionales y las de cada estrato. A medida que este índice se hace más pequeño, menor importancia se le dará a las estimaciones nacionales. La asignación de Kish proporciona un balance entre la asignación unifoMER y la proporcional. Cuando $I=0$, se reduce a la asignación unifoMER, mientras que si $I \rightarrow \infty$ tiende a un enfoque de asignación proporcional. Usualmente se utiliza $I = 1$ para garantizar que la precisión de las características de interés en lo nacional y en los estratos sea aproximadamente la misma. 
 
 
-### Ajustes de subcobertura
+### Ajustes de subcobertura   
 
 Debido a las características propias de las encuestas de hogares, siempre se presentará un fenómeno que puede ser descrito como una realidad: *existirá ausencia de respuesta en las encuestas de hogares*. En estos términos, los institutos nacionales de estadística deben tomar medidas preventivas al momento de adjudicar los tamaños de muestra en cada estrato, puesto que contar con un tamaño efectivo de muestra mucho menor al planeado inicialmente puede conllevar problemas de sesgo y de precisión en las estimaciones de las cifras nacionales o regionales, con las cuales se aborda la política económica y de desarrollo de los países de la región. 
 
@@ -664,7 +664,7 @@ $$n_{final} = \frac{n_{inicial}}{\phi}$$
 
 Por ejemplo, si esta probabilidad fue estimada en $\phi = 0.8$, entonces todos los tamaños de muestra calculados en los pasos anteriores deberán ser ajustados como $n_{final} = \frac{n_{inicial}}{0.8} = 1.25\times n_{inicial}$.  Por último, si la información auxiliar lo permite, este ajuste debería realizarse de manera diferenciada en cada uno de los estratos. Por ejemplo, si se conoce que este fenómeno de ausencia de respuesta tiene una mayor incidencia en lo rural que en lo urbano, entonces este ajuste debería tenerse en cuenta de forma diferenciada. 
 
-### Sustituciones y reemplazos
+### Sustituciones y reemplazos   
 
 Una práctica común en los operativos de campo de las encuestas de hogares en Latinoamérica es sustituir las UPM y viviendas para las cuales no se ha obtenido respuesta. Por ejemplo, se consideraría el reemplazo de las UPM cuando no se puede acceder al sitio geográfico por diferentes razones; por ejemplo, problemas de orden público o seguridad, algún cambio importante en la infraestructura de la zona, o porque no se tiene el consentimiento informado de las autoridades de la comunidad. En este caso, si no se puede acceder a la UPM, no se puede tampoco acceder a ninguno de los hogares que la integran. Los esquemas de sustituciones y reemplazos en las encuestas de hogares utiliza, por lo general, la metodología de *estratificación implícita* que permite seleccionar de manera automática a los reemplazos adecuados de acuerdo a la conformación de subgrupos poblacionales similares. 
 

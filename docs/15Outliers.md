@@ -26,7 +26,7 @@ un impacto significativo en algunos análisis particulares (como por ejemplo en 
 o ajuste de modelos de regresión) que pueden verse significativamente afectados por un número reducido de
 valores influyentes en el conjunto de datos. 
 
-#### 	Método Top-Down {-}
+### 	Método Top-Down 
 
 Suponga que $y_{(1)}\le\cdots\le y_{(n)}$ denota los valores ordenados de la variable de interés $y$ en la muestra $s$. Considerando el total de la variable de interés para todos los elementos en la muestra, se define el porcentaje de contribución acumulado $P_j$ de la siguiente manera:
 
@@ -40,7 +40,7 @@ $$
 P_j^*=100\times\frac{\sum_{i=j}^n d_i \ y_{(i)}}{\hat t_{y, \pi}}; \ \ \ \ \ \ \ j = 1, \ldots, n.
 $$
 
-#### Método de boxplot {-}
+### Método de boxplot 
 
 Uno de los métodos más básicos para identificar valores atípicos es construir un diagrama de caja utilizando la mediana y el rango intercuartílico $(RIC)$ de la variable de interés. En primer lugar, se define su $RIC = Q_3 - Q_1$ y su mediana como $m=Q_2$. Por consiguiente, un elemento se marcará como un valor atípico si cae fuera del siguiente intervalo:
 
@@ -49,7 +49,7 @@ $$
 $$
 En donde $c$ es una constante predeterminada por el investigador, usualmente fijada entre 1.5 y 3.
 
-#### Transformación de Box-Cox {-}
+### Transformación de Box-Cox 
 
 Si la distribución de la variable es sesgada (como usualmente lo son los ingresos y gastos), es útil transformar la distribución para lograr una distribución simétrica antes de determinar los posibles valores atípicos. La transformación de Box-Cox se tiene la siguiente forma:
 
@@ -63,7 +63,7 @@ $$
 
 En donde $\lambda\in(-5,5)$. De esta forma, un ordenador iterará entre cada posible valor de $\lambda$ para encontrar el que mejor reproduzca una distribución normal. Con esta nueva distribución, se puede utilizar el criterio de decisión de boxplot. 
 
-#### Método de distancia estandarizada {-}
+### Método de distancia estandarizada 
 
 La transformación anterior solo funciona para valores positivos. El siguiente método muestra otra forma de transformar y estandarizar los datos. Suponga que $z_k=w_ky_k$; si $m_z$ es una estimación para la ubicación de $z$, y $\sigma_z$ es una estimación para la escala de $z$. Entonces, la distancia estandarizada puede entonces definirse como
 
@@ -73,7 +73,7 @@ $$
 
 De forma similar al método de boxplot, los registros se clasificaran como valores atípicos si el valor absoluto de $\delta_{z_k}$ es mayor que un umbral predeterminado (normalmente 3). La media y la varianza de la muestra se pueden utilizar para las estimaciones de ubicación y escala para $z_k$, pero no son robustas, ya que incluirán los valores atípicos potenciales, lo que a su vez reduce la probabilidad de que se identifiquen correctamente los registros atípicos. Por consiguiente, es posible utilizar estimadores robustos (resistentes a valores atípicos) para $m_z$ y $\sigma_z$, como por ejemplo la mediana y el rango intercuartílico de $z_k$, respectivamente.
 
-#### Método de Hidiroglou-Bertholot {-}
+### Método de Hidiroglou-Bertholot 
 
 Es posible utilizar una distancia estandarizada para detectar si la relación entre dos variables $x$ y $y$ en una unidad de la muestra difiere estructuralmente de las otras unidades en la muestra. Este método utiliza la idea de distancia estandarizada y también incorpora una medida de importancia para el tamaño de la unidad, con el fin de determinar el umbral para considerar un registro como un valor atípico. El algoritmo de identificación sigue los siguientes pasos:
 
@@ -97,7 +97,7 @@ $$
 Nótese que la cantidad $|0.5*E_{Q_2}|$ es utilizada para reducir la tendencia a declarar falsos valores atípicos. Por ejemplo, esto ayudaría si la mayoría de los valores estuvieran agrupados alrededor de un valor particular, con unos pocos registros desviándose de él. Por último, los registros son declarados como valores atípicos si el valor de su efecto $E_k$ queda fuera del intervalo $(E_{Q_2} – c \times d_{Q_1} \ , \ E_{Q_2} + c \times d_{Q_3})$; en donde al igual que en el método de boxplot, $c$ controla el ancho de la región de aceptación.
 
 
-#### Método de la distancia de Mahalanobis {-}
+### Método de la distancia de Mahalanobis 
 
 Este método tiene en cuenta la estructura multidimensional de los datos observados en todos los registros comunes de un mismo módulo; por ejemplo, en el modulo de ingresos del hogar en una encuesta de hogares, o en el módulo de gastos de una encuesta de presupuestos familiares. En primer lugar, se supone que $\mathbf{y}_k = (y_{k1}, y_{k2}, \ldots, y_{kQ} )'$ define el vector de valores observados del individuo $k$ en todas las $Q$ variables del módulo de interés. Por tanto, la distancia de Mahalanobis para una unidad se puede definir como
 $$
@@ -106,7 +106,7 @@ $$
 
 En donde $\bar{\mathbf{y}}$ y $\mathbf{S}$ son respectivamente el vector de medias muestrales y la matriz de covarianzas de las $Q$ variables en el módulo. Si los datos siguen una distribución normal multivariante, se puede demostrar que la distribución de esta distancia es Ji-cuadrado con $Q$ grados de libertad, $MD_k^2 \sim \chi_Q^2$. A continuación, las unidades se declaran como potencialmente atípicas si superan el umbral del percentil 0.95 de la distribución $\chi_{Q}^2$. 
 
-####	La distancia de Cook {-}
+###	La distancia de Cook 
 
 Los registros influyentes son valores atípicos que afectan significativamente a los modelos de regresión. Para ubicarlos, es posible utilizar la distancia de Cook, que mide cuánto impacta la unidad $i$-ésima en la estimación de la unidad $j$-ésima, en un modelo de regresión con $p$ variables explicativas. Esta medida está dada por la siguiente expresión:
 
@@ -116,7 +116,7 @@ $$
 
 En donde $\hat{\sigma}^2 = \frac{\sum_k (\varepsilon_k - \bar{e})^2}{n-p}$ es la varianza de los residuales del modelo $(\varepsilon_k)$; además, $\hat y_j$ es la estimación de la $j$-ésima unidad en el modelo de regresión ajustado con todos los datos observados, mientras que $\hat y_{j(i)}$ es la estimación de la $j$-ésima unidad cuando se excluye la $i$-ésima unidad. Entre más grande sea el valor de la estadística, es más probable que la observación de la unidad $i$ se considere como un valor influyente. Algunos autores afirman que cualquier valor $DC_{(i)}$ mayor que uno debe considerarse influyente, mientras que otros afirman que el umbral debe ser $4/n$ o $4/(n-p-1)$.
 
-####	El criterio DFBETAS {-}
+###	El criterio DFBETAS 
 
 Por otra parte, el estadístico DFBETAS mide cuánto influye la observación $i$-ésima en los estimadores de los coeficientes de regresión en un modelo lineal. La estadística se puede escribir como sigue:
 
@@ -178,11 +178,17 @@ Esta metodología también se puede aplicar para grupos. La siguiente tabla mues
 
 Como se resaltó anteriormente, para datos muy sesgados, los métodos para la detección de valores atípicos podrían resultar problemáticos, ya que el intervalo en el que los puntos de datos no se consideran valores atípicos es simétrico alrededor de la mediana. Por ejemplo, la figura \@ref(fig:figou2) muestra el comportamiento estructural de algunas divisiones, es notable que todas las distribuciones de gasto y consumo en estos conceptos están extremadamente sesgadas.
 
-![(\#fig:figou2)Distribución del consumo para algunas categorías del gasto.](Pics/ou2.png){width=50%}
+<div class="figure">
+<img src="Pics/ou2.png" alt="Distribución del consumo para algunas categorías del gasto." width="50%" />
+<p class="caption">(\#fig:figou2)Distribución del consumo para algunas categorías del gasto.</p>
+</div>
 
 Para ajustarse a este problema es posible utilizar la transformación de Box-Cox con el fin de obtener una distribución simétrica para los datos antes de determinar los posibles valores atípicos. La figura \@ref(fig:figou1) muestra el proceso de iteración de esta metodología en algunas divisiones. La línea vertical en cada gráfica corresponde al mejor valor que podría tomar $\lambda$ para que los datos se ajusta a una distribución normal.
 
-![(\#fig:figou1)Valores óptimos para las trasnformaciones de Box-Cox en algunas categorías del gasto.](Pics/ou1.png){width=50%}
+<div class="figure">
+<img src="Pics/ou1.png" alt="Valores óptimos para las trasnformaciones de Box-Cox en algunas categorías del gasto." width="50%" />
+<p class="caption">(\#fig:figou1)Valores óptimos para las trasnformaciones de Box-Cox en algunas categorías del gasto.</p>
+</div>
 
 Luego de haber transformado apropiadamente los datos, es posible utilizar la metodología de Boxplot, uno de los métodos más básicos (aunque muy poderoso), para identificar valores atípicos. Como se mencionó en la sección anterior, la gráfica mostrará el mínimo de la muestra, el primer cuartil, la mediana, el tercer cuartil y el máximo. La caja va del primer al tercer cuartil (que contiene por definición el 50% de los datos más internos), así como la mediana que generalmente está marcada por una línea media. Para la aplicación específica de la detección de valores atípicos dentro de las divisiones COICOP es posible que la constante predeterminada $c$ varíe entre divisiones. Por ejemplo, la siguiente tabla muestra el número de valores atípicos detectados en cada división por este método.
 

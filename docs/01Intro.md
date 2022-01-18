@@ -1,6 +1,6 @@
 
 
-# Resumen {-}
+# Resumen 
 
 Las encuestas de hogares son un instrumento necesario para realizar seguimiento a un conjunto amplio de indicadores requeridos para el diseño y evaluación de las políticas públicas. Las encuestas de hogares que se implementan en América Latina son de tipo y características diversas. Aunque los conceptos y procesos para su diseño y análisis guardan similitudes, este documento se enfoca principalmente en los procesos referidos a las encuestas de empleo y de propósitos múltiples, con las que los países estiman los principales indicadores relacionados con el mercado laboral, el nivel y distribución de ingresos y la condición de pobreza y las principales características sociodemográficas de la población. Se realiza un recorrido por los diferentes diseños de muestreo, las metodologías más usadas en la selección de las muestras y las estrategias de estimación de los parámetros de interés. También se revisan las técnicas utilizadas para medir el error de muestreo y los métodos disponibles para encarar desafíos como la ausencia de respuesta y la desactualización de los marcos de muestreo. 
 
@@ -27,7 +27,7 @@ El diseño de la encuesta dependerá sistemáticamente del objetivo de la medici
 
 La medición de los indicadores en el mercado de trabajo es sólo un pequeño componente en el basto universo de posibilidades de medición que brindan las encuestas de hogares. Por esta razón, este tipo de levantamientos se ha convertido en una herramienta fundamental para medir indicadores sociales en todo el mundo y que, en particular, permiten que las naciones de América Latina puedan hacer seguimiento a su desarrollo económico y social. A continuación se introducen algunas temáticas de interés para las cuales, su seguimiento depende en gran manera de la realización de encuestas de hogares.
 
-### Objetivos de Desarrollo Sostenible {-}
+## Objetivos de Desarrollo Sostenible 
 
 Las encuestas de hogares pueden ser utilizado como herramienta para monitorear el progreso de los países en términos de metas y objetivos comunes. Es así como en 2015, la Asamblea General de la Organización de las Naciones Unidas aprobó una resolución que plantea un plan de acción en favor de las personas, el planeta y la prosperidad [@United_Nations_2015]. Esa resolución propone el seguimiento de 17 Objetivos de Desarrollo Sostenible ([ODS](https://sustainabledevelopment.un.org)) y 169 metas de carácter integrado e indivisible que se conjugan en las dimensiones económica, social y ambiental. Para realizar el seguimiento a los ODS es posible utilizar diferentes fuentes de información, como censos, registros administrativos, registros estadísticos, proyecciones demográficas y también las encuestas de hogares [@United_Nations_2016]. En particular, cada una de las metas de los ODS contiene indicadores, muchos de los cuales no pudieran ser estimados de no ser por la información disponible en las encuestas de hogares. 
 
@@ -38,7 +38,7 @@ De la misma manera, el objetivo **8** busca *promover el crecimiento económico 
 
 Son muchísimos más los ejemplos que se pueden enumerar en los cuales las encuestas de hogares juegan un rol fundamental para la medición de los indicadores y metas de los ODS definidos en la Agenda 2030; en este sentido la División de Estadísticas de las Naciones Unidas ha establecido en un análisis preliminar que un total de 77 de los indicadores de los Objetivos de Desarrollo Sostenible pueden obtenerse a partir de encuestas de hogares, cubriendo 13 de los 17 Objetivos; aunque con mayor concentración en las áreas de salud, educación, igualdad de género, pobreza, hambre, trabajo y justicia.
 
-### Mercado de Trabajo  {-}
+## Estadísticas del mercado de trabajo  
 
 Desde otra perspectiva, en el marco de la Decimotercera Conferencia Internacional de Estadísticos del trabajo en 1982, la Organización Internacional del Trabajo (OIT) adoptó algunas directrices concernientes con la medición y análisis de estadísticas oficiales de la fuerza de trabajo, del empleo y del desempleo con miras a mejorar la comparabilidad de las cifras y mejorar su utilidad en los países [@OIT_1982]. En esta resolución se hace un énfasis especial en que las encuestas de hogares constituyen un medio apropiado de recopilación de datos sobre la población económicamente activa y que la planeación de estas investigaciones en los países debería ceñirse a las normas internacionales. Por consiguiente, la resolución afirma que las encuestas de hogares deberían:
 
@@ -48,7 +48,7 @@ Desde otra perspectiva, en el marco de la Decimotercera Conferencia Internaciona
 
 En el año 2013, la OIT decidió revisar esta resolución y propuso algunos cambios en el marco de la decimonovena Conferencia Internacional de Estadísticos del Trabajo en donde se acogieron algunas modificaciones en términos de los objetivos de medición y el alcance de los sistemas nacionales de estadísticas del trabajo, el concepto de trabajo en todas sus formas, el empleo, la medición de las personas en situación de subutilización de la fuerza de trabajo, métodos de recopilación de datos, entre otras [@OIT_2013]. Las Oficinas Nacionales de Estadística (ONE) de América Latina actualizan los instrumentos de medición de las encuestas de hogares para que puedan responder a los nuevos retos en términos de la estimación de los parámetros de interés del trabajo remunerado o no remunerado para mantener la comparabilidad de las estadísticas laborales entre los países, proporcionando nuevos y mejores indicadores para contribuir al análisis de la dinámica del mercado laboral para poder brindar la información que la sociedad necesita a medida que evoluciona este constructo social.
 
-### Ingresos y gastos  {-}
+## Ingresos y gastos  
 
 Es importante resaltar que los indicadores de bienestar (en términos de ingresos y gastos) también hacen parte del conjunto de parámetros que se pueden estimar desde las encuestas de hogares. Medir el ingreso a partir de las encuestas de hogares se constituye en un reto metodológico para los institutos nacionales de estadística en el mundo, y particularmente en América Latina. Es recomendable seguir las directrices de la Comisión Económica para Europa que revisten una actualización de los estándares internacionales, recomendaciones y buenas prácticas en la medición del ingreso en los hogares. Por ejemplo, el llamado Grupo de Canberra ha revisado exhaustivamente el tópico de la estimación del ingreso estudiando las prácticas de algunos países en términos del aseguramiento de la calidad y la publicación de este tipo de estadísticas oficiales y ha provisto la siguiente definición de ingreso en el hogar [@United-Nations_2011]:
 
@@ -58,7 +58,7 @@ Con base en lo anterior, el uso de las encuestas de hogares para estimar el ingr
 
 Por ejemplo, si el respondiente es empleado regular, el instrumento de medición debería planearse de tal manera que el entrevistado pueda recordar la información de interés, como los rubros de seguridad social hechos por su empleador. Por otro lado, si se requiere que el respondiente brinde información acerca de un determinado periodo de tiempo, el planteamiento de la pregunta, la forma de indagar y el entrenamiento de los encuestadores pueden sesgar sistemáticamente la respuesta y por consiguiente inducir estimaciones poco confiables. Mucho se ha investigado al respecto de cómo realizar preguntas certeras en este tipo de levantamientos y el lector interesado puede consultar los trabajos de @Biemer_Lyberg_2003, @Presser_Rothgeb_Couper_Lessler_Martin_Martin_Singer_2004, y @Groves_Fowler_Couper_Lepkowski_Singer_Tourangeau_2009.
 
-### Esquema del documento {-}
+## Esquema del documento 
 
 Este documento pretende revisar algunas de las metodologías más usadas por las ONE de América Latina en cuanto al diseño y análisis estadístico de las encuestas de hogares y puede servir de guía técnica a los estadísticos de la región que se encuentran involucrados en los procesos técnicos de este tipo de encuestas. De la misma forma, este documento considera conjuntamente los dos principales momentos de las encuestas: el diseño y el análisis. Nótese que estos momentos están escindidos por el levantamiento de la información en campo y parten la realización de la encuesta en dos. Los lectores que están familiarizados con la investigación social a través de las encuestas de hogares encontrarán que estas operaciones estadísticas se planean teniendo en cuenta muchos pormenores que podrían suceder en campo. Es por esto que el trabajo de las encuestas asciende cuando se logra plasmar la información recolectada en una de base de datos. En este segundo momento es cuando se debe asegurar que lo que se planificó efectivamente sea incorporado en el análisis de esta información.
 

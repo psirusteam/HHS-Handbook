@@ -1,4 +1,3 @@
-# (PART) Procesamiento derivado en las encuestas de hogares {-}
 
 # Agregación de encuestas
 
@@ -419,7 +418,7 @@ Además, dependiendo del parámetro, la naturaleza del error de muestreo
 cambia así como el tamaño de muestra requerido para satisfacer las
 necesidades de precisión de las estimaciones. A continuación se ilustra con diferentes tipos de parámetros.
 
-#### Cambios netos {-}
+### Cambios netos 
 
 Considere el cambio neto de la media de la variable de
 interés $y$ en dos periodos de tiempo ($t_2$ y $t_1$)
@@ -486,7 +485,7 @@ Es decir que se necesita un tamaño de muestra *menor* para medir los
 cambios netos usando un diseño panel que un diseño sin traslape en una encuesta repetida. Un
 camino medio es el diseño rotativo.
 
-#### Promedio trimestral {-}
+### Promedio trimestral 
 
 Considere una encuesta continua y mensual en donde se quiere estimar el
 promedio trimestral de la variable de interés $x$ en tres periodos de

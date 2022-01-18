@@ -91,11 +91,11 @@ hist(rchisq(1000, 4), breaks = 20,
 
 
 
-### Partición en cuantiles (Q) {-}
+### Partición en cuantiles (Q) 
 
 Este método divide la población de UPM en grupos creados a partir de la división en intervalos regulares de la distribución de la medida de resumen. Los cuantiles más usados son los cuartiles (que dividen la población en cuatro grupos), los quintiles (que dividen la población en cinco grupos) y  los deciles (que dividen la población en 10 grupos); sin embargo, con los propósitos de estratificación, también es útil considerar la partición en terciles (que dividen la población en tres grupos).
 
-### Método de raíz de frecuencia acumulada (DH) {-}
+### Método de raíz de frecuencia acumulada (DH) 
 
 @Dalenius_Hodges_1959 propusieron esta técnica de estratificación basada en la raíz cuadrada de las frecuencias acumuladas de la medida de resumen sobre las UPM. Esta técnica es exacta y no requiere de algún procedimiento iterativo. La idea principal de esta técnica es encontrar grupos que minimicen la siguiente función:
 
@@ -105,7 +105,7 @@ $$
 
 En donde $W_h = N_h/N$ ($h = 1, \ldots, H$) es el tamaño relativo del estrato $h$ y $S^2_{y_{h}}$ es la varianza de la medida de resumen en el estrato $h$. 
 
-### Estratificación óptima (LH) {-}
+### Estratificación óptima (LH) 
 
 @Lavallee_Hidiroglou_1988 propusieron por primera vez la construcción de una estratificación óptima para poblaciones de encuestas reales, basada en la minimización de la siguiente expresión ligada a la varianza de una estrategia de muestreo estratificada. 
 
@@ -136,7 +136,7 @@ La asignación de Neyman corresponderá con $\mathbf q = (0.5, 0, 0.5)'$; mientr
 
 La optimización de la función objetivo puede ser llevada a cabo de diferentes formas. En efecto, @Lavallee_Hidiroglou_1988 utilizaron un algoritmo de optimización (Sethi) para encontrar los valores óptimos. @Baillargeon_Rivest_Ferland_2007 definen los pasos necesarios para implementar el procedimiento basado en el algoritmo de Sethi. Asimismo, @Kozak_2004 definió un algoritmo iterativo mediante arranques aleatorios para optimizar el proceso de minimización de esta técnica de estratificación.
 
-### Estratificación geométrica (GH) {-}
+### Estratificación geométrica (GH) 
 
 Utilizando las técnicas de estratificación mencionadas anteriormente, algunos autores se percataron de que, para poblaciones de UPM con medidas de resumen sesgadas, las varianzas relativas (coeficientes de variación) de la medida de resumen en cada estrato eran similares; es decir:
 
@@ -156,7 +156,7 @@ Es posible encontrar que los coeficientes de variación de los estratos conforma
 
 Partiendo de la matriz de información $\mathbf{X}$ a nivel de las UPM, la cual contiene $N_I$ filas y $P$ columnas, es posible considerar algunos procedimientos que no necesitan de la reducción a una sola dimensión, sino que admiten tantas dimensiones como indicadores definidos en las columnas de $\mathbf{X}$. Teniendo en cuenta que en el periodo intercensal se realizarán encuestas que miden variables que están fuertemente ligadas a las observadas en el censo, entonces encontrar una estratificación que sea óptima para todo el conjunto de variables de la matriz de información asegurará una partición óptima para todas las encuestas realizadas en el periodo intercensal. Las siguientes metodologías permiten optimizar conjuntamente la eficiencia de la estratificación.
 
-### K-medias de Jarque (KmJ) {-}
+### K-medias de Jarque (KmJ) 
 
 @Jarque_1981 propuso utilizar una versión modificada del algoritmo de K-medias [@Macqueen_1967], cuyo objetivo es la minimización de la siguiente función de distancia:
 
@@ -166,7 +166,7 @@ $$
 
 En donde $\mathbf x_k$ corresponde a la medición de las $P$ variables de la matriz de información en la $k$-ésima UPM, $\bar {\mathbf x}_h$ es el vector de medias de la matriz de información en el estrato $h$ y $\boldsymbol \Lambda$ es una matriz diagonal de tamaño $P \times P$ cuyas entradas se definen como la varianza de las $P$ variables de la matriz $\mathbf X$, es decir $\boldsymbol \Lambda [p,p]=S^2_{x_p}$, con $p = 1, 2, \ldots, P$. Esta modificación tiene como objetivo minimizar la relación entre la varianza de un estimador de muestreo estratificado con asignación proporcional y la de un muestreo aleatorio simple. Cuando $\boldsymbol \Lambda = \mathbf I$, el algoritmo resultante es idéntico al algoritmo clásico de K-medias, propuesto por @Macqueen_1967.
 
-### Partición genética (BB) {-}
+### Partición genética (BB) 
 
 @Ballin_Barcaroli_2013 argumentan que la mejor estratificación es aquella partición del marco de muestreo que asegura el mínimo costo muestral que satisfaga algunas restricciones de precisión; o, que maximice la precisión de los indicadores de interés bajo las restricciones.  De esta forma, el algoritmo busca minimizar la siguiente función de costos
 

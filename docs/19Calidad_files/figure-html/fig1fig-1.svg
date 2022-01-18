@@ -55,7 +55,7 @@
 <text transform='translate(41.76,128.55) rotate(-90)' text-anchor='middle' style='font-size: 12.00px; font-family: Arial;' textLength='6.67px' lengthAdjust='spacingAndGlyphs'>8</text>
 <text transform='translate(41.76,108.48) rotate(-90)' text-anchor='middle' style='font-size: 12.00px; font-family: Arial;' textLength='13.35px' lengthAdjust='spacingAndGlyphs'>10</text>
 <text transform='translate(41.76,68.36) rotate(-90)' text-anchor='middle' style='font-size: 12.00px; font-family: Arial;' textLength='13.35px' lengthAdjust='spacingAndGlyphs'>14</text>
-<polyline points='59.04,214.56 221.76,214.56 221.76,59.04 59.04,59.04 59.04,214.56 ' style='stroke-width: 0.75;' />
+<polygon points='59.04,214.56 221.76,214.56 221.76,59.04 59.04,59.04 ' style='stroke-width: 0.75; fill: none;' />
 </g>
 <defs>
   <clipPath id='cpMC4wMHwyNTIuMDB8MC4wMHwyODguMDA='>
@@ -63,8 +63,8 @@
   </clipPath>
 </defs>
 <g clip-path='url(#cpMC4wMHwyNTIuMDB8MC4wMHwyODguMDA=)'>
-<text x='140.40' y='269.28' text-anchor='middle' style='font-size: 12.00px; font-family: Arial;' textLength='65.35px' lengthAdjust='spacingAndGlyphs'>Sample size</text>
-<text transform='translate(12.96,136.80) rotate(-90)' text-anchor='middle' style='font-size: 12.00px; font-family: Arial;' textLength='201.41px' lengthAdjust='spacingAndGlyphs'>Transformed coefficient of variation %</text>
+<text x='140.40' y='269.28' text-anchor='middle' style='font-size: 12.00px; font-family: Arial;' textLength='65.38px' lengthAdjust='spacingAndGlyphs'>Sample size</text>
+<text transform='translate(12.96,136.80) rotate(-90)' text-anchor='middle' style='font-size: 12.00px; font-family: Arial;' textLength='200.78px' lengthAdjust='spacingAndGlyphs'>Transformed coefficient of variation %</text>
 </g>
 <g clip-path='url(#cpNTkuMDR8MjIxLjc2fDU5LjA0fDIxNC41Ng==)'>
 <line x1='61.87' y1='35.95' x2='67.27' y2='30.55' style='stroke-width: 0.75;' />
@@ -106,7 +106,7 @@
 <text transform='translate(293.76,165.83) rotate(-90)' text-anchor='middle' style='font-size: 12.00px; font-family: Arial;' textLength='13.35px' lengthAdjust='spacingAndGlyphs'>80</text>
 <text transform='translate(293.76,137.02) rotate(-90)' text-anchor='middle' style='font-size: 12.00px; font-family: Arial;' textLength='20.02px' lengthAdjust='spacingAndGlyphs'>100</text>
 <text transform='translate(293.76,79.41) rotate(-90)' text-anchor='middle' style='font-size: 12.00px; font-family: Arial;' textLength='20.02px' lengthAdjust='spacingAndGlyphs'>140</text>
-<polyline points='311.04,214.56 473.76,214.56 473.76,59.04 311.04,59.04 311.04,214.56 ' style='stroke-width: 0.75;' />
+<polygon points='311.04,214.56 473.76,214.56 473.76,59.04 311.04,59.04 ' style='stroke-width: 0.75; fill: none;' />
 </g>
 <defs>
   <clipPath id='cpMjUyLjAwfDUwNC4wMHwwLjAwfDI4OC4wMA=='>
@@ -114,8 +114,8 @@
   </clipPath>
 </defs>
 <g clip-path='url(#cpMjUyLjAwfDUwNC4wMHwwLjAwfDI4OC4wMA==)'>
-<text x='392.40' y='269.28' text-anchor='middle' style='font-size: 12.00px; font-family: Arial;' textLength='110.72px' lengthAdjust='spacingAndGlyphs'>Estimated proportion</text>
-<text transform='translate(264.96,136.80) rotate(-90)' text-anchor='middle' style='font-size: 12.00px; font-family: Arial;' textLength='115.38px' lengthAdjust='spacingAndGlyphs'>Required sample size</text>
+<text x='392.40' y='269.28' text-anchor='middle' style='font-size: 12.00px; font-family: Arial;' textLength='110.74px' lengthAdjust='spacingAndGlyphs'>Estimated proportion</text>
+<text transform='translate(264.96,136.80) rotate(-90)' text-anchor='middle' style='font-size: 12.00px; font-family: Arial;' textLength='115.41px' lengthAdjust='spacingAndGlyphs'>Required sample size</text>
 </g>
 <g clip-path='url(#cpMzExLjA0fDQ3My43Nnw1OS4wNHwyMTQuNTY=)'>
 <line x1='389.70' y1='186.53' x2='395.10' y2='181.13' style='stroke-width: 0.75;' />

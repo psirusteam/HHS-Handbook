@@ -82,15 +82,18 @@ $$
 
 Nótese que se esperaría que esta variable de resumen, al estar definida como una medida de bienestar sobre las UPM, tuviera un comportamiento sesgado, tal como se puede observar en la figura \@ref(fig:MedRes). Por ende, si esta característica es altamente sesgada, puede ser recomendable crear un estrato de inclusión forzosa con estas unidades. Esta práctica asegura que el error de muestreo para este estrato sea nulo. A continuación se enumeran algunas técnicas de estratificación comúnmente utilizadas en la práctica estadística. 
 
-![(\#fig:MedRes)*Histograma de la medida de resumen (y) sobre las UPM*](05Estratificar_files/figure-docx/MedRes-1.png)
+<div class="figure">
+<img src="05Estratificar_files/figure-html/MedRes-1.svg" alt="*Histograma de la medida de resumen (y) sobre las UPM*" width="672" />
+<p class="caption">(\#fig:MedRes)*Histograma de la medida de resumen (y) sobre las UPM*</p>
+</div>
 
 
 
-### Partición en cuantiles (Q) {-}
+### Partición en cuantiles (Q) 
 
 Este método divide la población de UPM en grupos creados a partir de la división en intervalos regulares de la distribución de la medida de resumen. Los cuantiles más usados son los cuartiles (que dividen la población en cuatro grupos), los quintiles (que dividen la población en cinco grupos) y  los deciles (que dividen la población en 10 grupos); sin embargo, con los propósitos de estratificación, también es útil considerar la partición en terciles (que dividen la población en tres grupos).
 
-### Método de raíz de frecuencia acumulada (DH) {-}
+### Método de raíz de frecuencia acumulada (DH) 
 
 @Dalenius_Hodges_1959 propusieron esta técnica de estratificación basada en la raíz cuadrada de las frecuencias acumuladas de la medida de resumen sobre las UPM. Esta técnica es exacta y no requiere de algún procedimiento iterativo. La idea principal de esta técnica es encontrar grupos que minimicen la siguiente función:
 
@@ -100,7 +103,7 @@ $$
 
 En donde $W_h = N_h/N$ ($h = 1, \ldots, H$) es el tamaño relativo del estrato $h$ y $S^2_{y_{h}}$ es la varianza de la medida de resumen en el estrato $h$. 
 
-### Estratificación óptima (LH) {-}
+### Estratificación óptima (LH) 
 
 @Lavallee_Hidiroglou_1988 propusieron por primera vez la construcción de una estratificación óptima para poblaciones de encuestas reales, basada en la minimización de la siguiente expresión ligada a la varianza de una estrategia de muestreo estratificada. 
 
@@ -131,7 +134,7 @@ La asignación de Neyman corresponderá con $\mathbf q = (0.5, 0, 0.5)'$; mientr
 
 La optimización de la función objetivo puede ser llevada a cabo de diferentes formas. En efecto, @Lavallee_Hidiroglou_1988 utilizaron un algoritmo de optimización (Sethi) para encontrar los valores óptimos. @Baillargeon_Rivest_Ferland_2007 definen los pasos necesarios para implementar el procedimiento basado en el algoritmo de Sethi. Asimismo, @Kozak_2004 definió un algoritmo iterativo mediante arranques aleatorios para optimizar el proceso de minimización de esta técnica de estratificación.
 
-### Estratificación geométrica (GH) {-}
+### Estratificación geométrica (GH) 
 
 Utilizando las técnicas de estratificación mencionadas anteriormente, algunos autores se percataron de que, para poblaciones de UPM con medidas de resumen sesgadas, las varianzas relativas (coeficientes de variación) de la medida de resumen en cada estrato eran similares; es decir:
 
@@ -151,7 +154,7 @@ Es posible encontrar que los coeficientes de variación de los estratos conforma
 
 Partiendo de la matriz de información $\mathbf{X}$ a nivel de las UPM, la cual contiene $N_I$ filas y $P$ columnas, es posible considerar algunos procedimientos que no necesitan de la reducción a una sola dimensión, sino que admiten tantas dimensiones como indicadores definidos en las columnas de $\mathbf{X}$. Teniendo en cuenta que en el periodo intercensal se realizarán encuestas que miden variables que están fuertemente ligadas a las observadas en el censo, entonces encontrar una estratificación que sea óptima para todo el conjunto de variables de la matriz de información asegurará una partición óptima para todas las encuestas realizadas en el periodo intercensal. Las siguientes metodologías permiten optimizar conjuntamente la eficiencia de la estratificación.
 
-### K-medias de Jarque (KmJ) {-}
+### K-medias de Jarque (KmJ) 
 
 @Jarque_1981 propuso utilizar una versión modificada del algoritmo de K-medias [@Macqueen_1967], cuyo objetivo es la minimización de la siguiente función de distancia:
 
@@ -161,7 +164,7 @@ $$
 
 En donde $\mathbf x_k$ corresponde a la medición de las $P$ variables de la matriz de información en la $k$-ésima UPM, $\bar {\mathbf x}_h$ es el vector de medias de la matriz de información en el estrato $h$ y $\boldsymbol \Lambda$ es una matriz diagonal de tamaño $P \times P$ cuyas entradas se definen como la varianza de las $P$ variables de la matriz $\mathbf X$, es decir $\boldsymbol \Lambda [p,p]=S^2_{x_p}$, con $p = 1, 2, \ldots, P$. Esta modificación tiene como objetivo minimizar la relación entre la varianza de un estimador de muestreo estratificado con asignación proporcional y la de un muestreo aleatorio simple. Cuando $\boldsymbol \Lambda = \mathbf I$, el algoritmo resultante es idéntico al algoritmo clásico de K-medias, propuesto por @Macqueen_1967.
 
-### Partición genética (BB) {-}
+### Partición genética (BB) 
 
 @Ballin_Barcaroli_2013 argumentan que la mejor estratificación es aquella partición del marco de muestreo que asegura el mínimo costo muestral que satisfaga algunas restricciones de precisión; o, que maximice la precisión de los indicadores de interés bajo las restricciones.  De esta forma, el algoritmo busca minimizar la siguiente función de costos
 
@@ -237,7 +240,10 @@ Table: *Matriz de coincidencias, cuyas entradas están definidas como el porcent
 
 Por último, también se debe evaluar la coherencia de la distribución de las diferentes variables agregadas a nivel de UPM en los estratos. Por ejemplo, la proporción de personas mayores de 15 años alfabetizadas debería tener mayor incidencia en los estratos más altos, y este patrón también se debería observar para diferentes indicadores como la proporción de hogares con internet, la proporción de tenencia de refrigerador, la proporción de tenencia de televisión por cable, la proporción de tenencia de automóvil, la proporción de hogares con saneamiento adecuado, la proporción de hogares con pisos adecuados, la proporción de personas con educación superior, entre otras. La figura \@ref(fig:estrata) muestra el comportamiento esperado en los estratos de muestreo para algunas variables de interés. De esta forma, el estrato uno debería presentar condiciones económicas más adversas, el estrato dos debería tener mejores condiciones, siendo el tercer estrato el que agrupa a las UPM con menores dificultades socioeconómicas. En el área rural debiesen aparecer una menor proporción de UPM en el estrato 3, dadas las condiciones menos favorables. 
 
-![(\#fig:estrata)Comportamiento esperado en los estratos de muestreo para algunas variables de interés.](Pics/Estratificar.png){width=800px}
+<div class="figure">
+<img src="Pics/Estratificar.png" alt="Comportamiento esperado en los estratos de muestreo para algunas variables de interés." width="800px" />
+<p class="caption">(\#fig:estrata)Comportamiento esperado en los estratos de muestreo para algunas variables de interés.</p>
+</div>
 
 Si la contribución de algunas unidades al total poblacional es no significativa, y además esas unidades son de difícil acceso, es común que en algunos países de la región se opte por redefinir el universo y crear un estrato de exclusión forzosa. En este estrato no se realiza ninguna encuesta y las respectivas estimaciones no tendrán en cuenta a esta población excluida. Por último, como algunos procedimientos de clasificación se basan en la generación de números aleatorios, se recomienda documentar los códigos computacionales que se utilizaron para que los resultados puedan ser replicados, por lo que debe fijar una semilla aleatoria al comienzo del código computacional.
 

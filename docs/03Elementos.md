@@ -20,7 +20,7 @@ En algunas ocasiones, basta con realizar un medición simple en un punto especí
 
 Por consiguiente, al momento de realizar la planeación de una encuesta continua o periódica se debe tener en cuenta que, a pesar de que crezca la dificultad en el diseño, es posible obtener información más oportuna para la toma de decisiones y la formulación de políticas públicas. De esta manera, y teniendo en cuenta que el tiempo hace que la estructura de las poblaciones cambie, sin importar si la constituyen individuos, hogares, familias, negocios, etc., las unidades de observación deben ser consideradas como parte de la población de interés cuando nacen, inmigran o alcanzan un umbral predefinido de edad. Asimismo, las unidades ya no harán parte de la población de interés cuando mueran, emigren, o se involucren en instituciones (como el servicio militar). Por ejemplo, si las unidades de interés son los hogares, es evidente que la población no es la misma en diferentes puntos del tiempo (por ejemplo, en dos años distintos) puesto que se crean nuevas unidades cuando los jóvenes dejan a sus padres y forman nuevos hogares independientes, o cuando ocurre una separación o un divorcio; en donde un hogar se divide en dos. Además, los hogares en donde todos sus miembros han fallecido dejan de ser parte de la población objetivo. De la misma forma, dos hogares dejan de ser parte de la población objetivo cuando se unen a través de un matrimonio o algún otro tipo de unión civil. Teniendo en cuenta el papel dinámico de las poblaciones y los objetivos de investigación es posible plantear diferentes tipos de levantamientos; a continuación enumeramos algunas categorías de encuestas que las ONE realizan en la región. 
 
-### Encuestas transversales {-}
+### Encuestas transversales 
 
 Este tipo de encuestas son diseñadas para recolectar información únicamente en un punto específico del tiempo, o sobre un periodo de referencia, y proveen toda la información pertinente acerca de la población particular restringida a un tiempo y periodo de recolección específico. Puesto que el propósito fundamental de este tipo de encuestas no se centra en las comparaciones intertemporales, no es posible estimar cambios de ningún tipo, a no ser que se realicen indagaciones retrospectivas. La siguiente tabla muestra un esquema de este tipo de operaciones estadísticas en donde se observa una muestra de una población específica en un periodo de tiempo específico (Tiempo 2). Dado que es una muestra transversal, no hay un patrón de repetición en los restantes periodos.
 
@@ -34,7 +34,7 @@ Este tipo de encuestas son diseñadas para recolectar información únicamente e
 |    $n$    	|          	|     **x**    	|          	|          	|          	|          	|
 Table: *Esquema de una encuesta transversal.*
 
-### Encuestas repetidas  {-}
+### Encuestas repetidas  
 
 Cuando existe interés en realizar un seguimiento del fenómeno en observación durante el tiempo, se utilizan encuestas repetidas que recolectan información de manera periódica. Este tipo de encuestas proveen información acerca de la dinámica de la composición de la población en el tiempo. De esta forma, en cada levantamiento se observa una muestra de la población en un tiempo determinado. Por ejemplo, la siguiente tabla muestra un acercamiento gráfico a este tipo de encuestas en donde se evidencia el carácter sistemático de estas operaciones estadísticas; además de mostrar que no es posible medir cambios individuales porque las muestras son independientes en el tiempo.
 
@@ -49,7 +49,7 @@ Cuando existe interés en realizar un seguimiento del fenómeno en observación 
 Table: *Esquema de una encuesta repetida.*
 
 
-### Encuestas panel {-}
+### Encuestas panel 
 
 Las encuestas en panel están diseñadas para recolectar información periódica sobre la misma muestra en diferentes puntos del tiempo. Por definición, las unidades de muestreo son las mismas en los diferentes periodos de tiempo y, de manera general, se miden las mismas variables en cada levantamiento. Por la caracterización propia de este tipo de encuestas, sí es posible estimar los cambios individuales, así como los cambios netos sobre la población. Sin embargo, como la muestra no cambia en ningún momento del tiempo, las inferencias que se realicen estarán supeditadas a la población de la cual se seleccionó la muestra en un principio (Tiempo 1). Si la población cambia su estructura, no será posible captar este cambio puesto que las inferencias resultantes de este tipo de encuestas no son representativas de la población actual. La siguiente tabla muestra un esquema propio de las encuestas de panel en donde los individuos que fueron seleccionados la primera vez son observados a lo largo del tiempo. 
 
@@ -64,7 +64,7 @@ Las encuestas en panel están diseñadas para recolectar información periódica
 Table: *Esquema de una encuesta tipo panel.*
 
 
-### Encuestas de panel dividido {-}
+### Encuestas de panel dividido 
 
 Para hacerle frente a las dificultades propias de las encuestas de panel y poder observar tanto los cambios individuales, como los cambios en la estructura de la población, se definen las encuestas de panel dividido. Estas operaciones estadísticas son una combinación del diseño de panel puro y del diseño repetido y su objetivo es realizar inferencias precisas acerca de los cambios de una cohorte a través del tiempo y, al mismo tiempo, del cambio en estructura de la población actual. De esta forma, se realiza el seguimiento continuo, periódico y sistemático de una muestra a través del tiempo, pero en cada levantamiento se incluyen nuevos elementos seleccionados de la población actual. Como se señalará más adelante, este tipo de encuestas cubre con eficiencia la mayoría de indicadores de interés en un estudio de investigación social. La siguiente tabla muestra una caracterización de estos levantamientos que fijan una muestra de panel a lo largo del tiempo, y a la vez que se añaden nuevas observaciones.
   
@@ -79,7 +79,7 @@ Para hacerle frente a las dificultades propias de las encuestas de panel y poder
 |    $n$    	|          	|          	|          	|          	|          	|     **x**    	|
 Table: *Esquema de una encuesta de panel dividido.*
 
-### Encuestas de panel rotativo {-}
+### Encuestas de panel rotativo 
 
 Mantener una muestra de panel es un proceso costoso desde una perspectiva económica y logística, pero también se debe tener en cuenta el desgaste de la fuente, que tenderá a brindar menos información a medida que avanza el estudio. Además, es evidente que a medida que el tiempo transcurra la propensión a responder será más baja, puesto que el entrevistado se sentirá agotado al ser visitado una y otra vez. Por lo tanto, se definen las encuestas de panel rotativo para poder realizar inferencias parciales - restringidas a periodos de tiempo específicos - del cambio individual y a la vez captar el cambio estructural de la población. Estas encuestas incorporan nuevos elementos de la población y a la vez mantienen elementos comunes con mediciones anteriores. Obviando las dificultades que acarrea la ausencia de respuesta, las encuestas panel definen un traslape completo entre las muestras de dos puntos cualesquiera en el tiempo; sin embargo, en las encuestas rotativas existe un traslape parcial, por lo que se reduce el efecto del desgaste del panel (sobre la población inicial) y el efecto de la pérdida de muestra. Además, la inclusión de nuevos elementos en la muestra provee información pertinente del cambio en la composición estructural de la población. La siguiente tabla ejemplifica el diseño de las encuestas rotativas.
 
@@ -227,7 +227,7 @@ Table: *Composición del mercado de trabajo en dos periodos de tiempo (cifras en
 
 Una comparación más profunda está dada en términos de los **cambios brutos**, que corresponden a las entradas de la tabla cruzada. De esta manera, los cambios en la fuerza de trabajo de un periodo a otro, se explican porque el $92.1 \%=(9222/10012) \times 100 \%$ de los empleados conservó su empleo; el $31.8\% = (221 / 694 )\times 100 \%$ de los desempleados y el $4.0 \% = (256/6361)\times 100 \%$ de los inactivos consiguió un nuevo empleo; el $6.6\% = (662/10012)\times 100 \%$ de los empleados es ahora inactivo en la fuerza laboral y el $1.3\% = (128/10012)\times 100 \%$ de los empleados perdió su empleo. Así mismo, el $46.4\% = (322/694)\times 100 \%$ de los desempleados conservó su clasificación; el $2.6\% = (256 / 6361)\times 100 \%$ de los inactivos entró a la fuerza laboral como desempleado y el $21.8\% = (151 / 694)\times 100 \%$ de los desempleados es ahora inactivo.
 
-### Algunos ejemplos de indicadores de interés y su relación con los tipos de encuestas {-}
+### Algunos ejemplos de indicadores de interés y su relación con los tipos de encuestas 
 
 En esta sección se relacionan algunos de los parámetros anteriormente mencionados con los tipos más comunes de encuestas. Estos ejemplos nos presentan algunas indicaciones del tipo de encuestas que se encuentran en América Latina y examinan el raciocinio detrás de estos levantamientos. Tomando en consideración las características generales de las encuesta de hogares, @Duncan_Kalton_1987 mencionan las siguientes situaciones, ejemplificadas a continuación.
 

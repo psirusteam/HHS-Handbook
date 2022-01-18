@@ -91,11 +91,17 @@ $$
 
 Por último, se debe corroborar que la suma de los pesos ajustados por la ausencia de respuesta esté cercana al tamaño de la población que se quiere representar. La figura \@ref(fig:figel3a) permite ilustrar el soporte común entre respondientes y no respodientes para un modelo de *propensity score*; notese que ambas distribuciones son similiares, por lo que es posible concluir que efectivamente las covariables usadas están representando bien la estructura estocástica en respondientes y no respondientes. 
 
-![(\#fig:figel3a)Distribución de las probabilidades estimadas de respuesta: respondientes (arriba), no respondientes (medio), ambos (abajo).](Pics/el3a.png){width=50%}
+<div class="figure">
+<img src="Pics/el3a.png" alt="Distribución de las probabilidades estimadas de respuesta: respondientes (arriba), no respondientes (medio), ambos (abajo)." width="50%" />
+<p class="caption">(\#fig:figel3a)Distribución de las probabilidades estimadas de respuesta: respondientes (arriba), no respondientes (medio), ambos (abajo).</p>
+</div>
 
 Además, la figura \@ref(fig:figel3b) muestra la propiedad de balanceo en el modelo; véase cómo ambas distribuciones se alejan de los extremos (ceros y uno) y presentan una caracterización similar. 
 
-![(\#fig:figel3b)Balanceo entre respondientes y no respondientes](Pics/el3b.png){width=50%}
+<div class="figure">
+<img src="Pics/el3b.png" alt="Balanceo entre respondientes y no respondientes" width="50%" />
+<p class="caption">(\#fig:figel3b)Balanceo entre respondientes y no respondientes</p>
+</div>
 
 ### Calibración 
 
@@ -148,12 +154,18 @@ Para mostrar cómo el ajuste a los factores de expansión, con las dos metodolog
 
 En primera instancia, cabe mencionar que la población se definió a partir del ingreso del hogar, y se creó usando variables auxiliares disponibles (sexo). De esta forma, se le dio una probabilidad de respuesta diferencial entre los grupos correspondientes al cruce de las categorías de estas dos variables. Como resultado de las simulaciones, se generaron estimaciones para el estimador de Horvitz-Thompson sin ajuste de ningún tipo y para un estimador de calibración que tuvo en cuenta los conteos poblacionales censales para cada las dos categorías de la variables sexo. La figura \@ref(fig:fightcal) muestra el comportamiento de ambas estimaciones. La línea roja refleja el parámetro desconocido, los puntos negros indican las estimaciones del estimador de calibración en cada iteración de la simulación, mientras que los puntos grises muestran las estimaciones del estimador de Horvitz-Thompson en cada iteración de la simulación
 
-![(\#fig:fightcal)Estimaciones de Horvtiz-Thompson y de calibración.](Pics/c9.png){width=50%}
+<div class="figure">
+<img src="Pics/c9.png" alt="Estimaciones de Horvtiz-Thompson y de calibración." width="50%" />
+<p class="caption">(\#fig:fightcal)Estimaciones de Horvtiz-Thompson y de calibración.</p>
+</div>
 
 
 En conjunto con la gráfica anterior, la figura \@ref(fig:fightcaldist) muestra la distribución sesgada del estimador de Horvitz-Thompson (gris) en comparación con el insesgamiento del estimador de calibración (negro). Bajo este esquema de respuesta, incluir en la calibración las variables pertinentes corrige el sesgo generado por la ausencia de respuesta. En este estudió se encontró que el estimador ingenuo (HT) produjo sesgo para la estimación de los tamaños de hombres y mujeres, para el tamaño de la población, para los ingresos de hombres y mujeres y para los ingresos de la población.
 
-![(\#fig:fightcaldist)Distribuciones del estimador de Horvtiz-Thompson y del estimador de calibración](Pics/c10.png){width=50%}
+<div class="figure">
+<img src="Pics/c10.png" alt="Distribuciones del estimador de Horvtiz-Thompson y del estimador de calibración" width="50%" />
+<p class="caption">(\#fig:fightcaldist)Distribuciones del estimador de Horvtiz-Thompson y del estimador de calibración</p>
+</div>
 
 Como se mencionó anteriormente, hay mejores formas de calibrar, puesto que el problema de la calibración se reduce a cómo introducir la información auxiliar en la estructura de estimación de la encuesta, es posible que existan variables que reduzcan el sesgo, pero no todas las variables inducirán el mismo nivel de precisión. Al momento de escoger, se deberían seleccionar aquellas variables que reduzcan el sesgo y que además reduzcan la varianza. Por tanto, las variables auxiliares que se usen como insumo en los procesos de calibración deben:
 
@@ -164,10 +176,13 @@ Como se mencionó anteriormente, hay mejores formas de calibrar, puesto que el p
 
 En particular al introducir otras covariables en la calibración (grupo de edad, escolaridad, región, área), además de la corrección del sesgo se evidencia un aumento de la precisión en las nuevas estimaciones, tal como lo muestra las distribuciones de los estimadores en la figura \@ref(fig:fightcal2dist), en donde se consideran tres estimadores: el estimador de Horvitz-Thompson (gris claro), el estimador de calibración con restricción de sexo (negro) y el estimador de calibración con todas las restricciones (gris oscuro).
 
-![(\#fig:fightcal2dist)Distribuciones del estimador de Horvtiz-Thompson y de dos estimadores de calibración](Pics/c12.png){width=50%}
+<div class="figure">
+<img src="Pics/c12.png" alt="Distribuciones del estimador de Horvtiz-Thompson y de dos estimadores de calibración" width="50%" />
+<p class="caption">(\#fig:fightcal2dist)Distribuciones del estimador de Horvtiz-Thompson y de dos estimadores de calibración</p>
+</div>
 
 
-## La pandemia por COVID-19
+## Las consecuencias de la pandemia por COVID-19 en las encuestas de la región
 
 En su intento por frenar la velocidad de contagio del COVID-19, los gobiernos de la región determinaron la imposición de restricciones de movilidad que truncaron la recolección presencial de las encuestas de hogares. Para hacer frente a este inconveniente y poder seguir produciendo estadísticas oficiales pertinentes y oportunas, la mayoría de INE en la región decidieron realizar el seguimiento continuo a un panel seleccionado de un periodo reciente y mediante contacto telefónico seguir con la recolección de la información primaria. Uno de los retos más importantes que esta pandemia le impuso a los INE fue la corrección del sesgo de selección en las encuestas de hogares. A pesar de los ingentes esfuerzos que se hicieron por minimizarlo durante la recolección, el cambio de un modo presencial a un modo telefónico trajo consigo consecuencias indeseadas que se pudieron enfrentar con algunas de las metodologías que se explicaron en esta sección. 
 
@@ -180,11 +195,17 @@ Haciendo cálculos gruesos, si suponemos que la cobertura de la submuestra que s
 
 La figura \@ref(fig:fight3dist) presenta tres posibles escenarios que los INE pudieron encontrar en esta búsqueda. En el diagrama de la izquierda se verifica la ausencia de sesgo, en el diagrama del centro y en el de la derecha se confirma que la magnitud del sesgo es significativa. Nótese que la línea horizontal azul correspondería a la estimación publicada en el mes en el que se seleccionó la muestra maestra, mientras que la línea roja horizontal representa el promedio de las simulaciones con la muestra efectiva. Cada uno de los resultados de las simulaciones está representado por las fluctuaciones punteadas.
 
-![(\#fig:fight3dist)Distribuciones del estimador de Horvtiz-Thompson en tres escenarios de interés.](Pics/calnr1.png){width=50%}
+<div class="figure">
+<img src="Pics/calnr1.png" alt="Distribuciones del estimador de Horvtiz-Thompson en tres escenarios de interés." width="50%" />
+<p class="caption">(\#fig:fight3dist)Distribuciones del estimador de Horvtiz-Thompson en tres escenarios de interés.</p>
+</div>
 
 La figura \@ref(fig:fight4dist) muestra un escenario simulado en donde se contempla el uso del estimador ajustado con la técnica de *propensity score* (línea verde) y el estimador de calibración en dos etapas (línea azul) comparado con el estimador sin ningún tipo de ajuste (línea negra). Lo que se esperaría es que es estimador ingenuo subestime los tamaños poblacionales y los indicadores de interés; mientras que los estimadores ajustados, siempre que el mecanismo de ausencia de respuesta sea MAR o MCAR, elimina este sesgo. 
 
-![(\#fig:fight4dist)Distribuciones del estimador de Horvtiz-Thompson y de dos estimadores ajustados.](Pics/calnr2.png){width=50%}
+<div class="figure">
+<img src="Pics/calnr2.png" alt="Distribuciones del estimador de Horvtiz-Thompson y de dos estimadores ajustados." width="50%" />
+<p class="caption">(\#fig:fight4dist)Distribuciones del estimador de Horvtiz-Thompson y de dos estimadores ajustados.</p>
+</div>
 
 Los caminos que se deben seguir luego de corroborar la presencia (o ausencia) de sesgo dependerán de la estrategia de levantamiento de información que los países hayan decidido hacer. En el escenario más optimista, ante la ausencia de sesgo, se estaría en una buena posición para replicar los procesos usuales de inferencia. Sin embargo, ante la sospecha de que sí existe sesgo - posición parsimoniosa y recomendada por @CEPAL_sesgos2020 -, y dependiendo de la información auxiliar disponible, los INE pudieron disponer de las dos alternativas metodológicas que se describieron anteriormente. 
 

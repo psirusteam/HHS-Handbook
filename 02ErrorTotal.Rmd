@@ -1,4 +1,3 @@
-# (PART) Diseño estadístico de las encuestas de hogares {-} 
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(warning = FALSE, 
@@ -52,7 +51,7 @@ En general, la primera expresión aparece muchas más veces en el sector privado
 
 @Gutierrez_2016 plantea que existen diferentes fuentes de sesgo en las encuestas y resume de la siguiente forma las dos fuentes de sesgo más importantes:
 
-### Sesgo de selección {-}
+### Sesgo de selección 
 
 Este tipo de sesgo ocurre cuando parte de la población objetivo no está en el marco de muestreo, o cuando el marco está incompleto y presenta deficiencias. Una muestra a conveniencia\footnote{A pesar de que las muestras por conveniencia o por juicio no pueden ser utilizadas para estimar parámetros de la población, éstas sí pueden proporcionar información valiosa en las primeras etapas de una investigación o cuando no es necesario generalizar los resultados a la población.} es sesgada pues las unidades más fáciles de elegir o las que más probablemente respondan a la encuesta no son representativas de las unidades más difíciles de elegir. @Loh afirma que se presenta este tipo de sesgo si:
 
@@ -64,7 +63,7 @@ Este tipo de sesgo ocurre cuando parte de la población objetivo no está en el 
 - La muestra está compuesta por respondientes voluntarios. Los foros radiales, las encuestas de televisión y los estudios de portales de internet no proporcionan información confiable.
 
 
-### Sesgo de medición {-}
+### Sesgo de medición 
 
 Este tipo de sesgo ocurre cuando el instrumento con el que se realiza la medición tiene una tendencia a diferir del valor verdadero que se desea averiguar. Este sesgo debe ser considerado y minimizado en la etapa de diseño de la encuesta. Nótese que ningún análisis estadístico puede revelar que una pesa añadió a cada persona 2Kg de más en un estudio de salud. @Loh cita algunas situaciones en donde se presenta este sesgo de medición:
 
@@ -80,14 +79,14 @@ Este tipo de sesgo ocurre cuando el instrumento con el que se realiza la medici�
 
 Cuando el mundo occidental superó los grandes traumatismos del siglo XX (dos guerras mundiales y una recesión a larga escala), la investigación social tuvo un auge sobresaliente a través de las encuestas por correo postal. Desde entonces, existen tres preguntas, en continua dinámica, que se deben responder para planificar, ejecutar y analizar una encuesta: ¿cómo se diseñarán las preguntas? ¿cómo se seleccionará la muestra? y ¿cómo se recolectarán las respuestas?
 
-### Inicio de los cuestionarios estandarizados {-}
+### Inicio de los cuestionarios estandarizados 
 
 La práctica de realizar las mismas preguntas en forma de cuestionario es reciente. En el principio cada encuestador preguntaba lo mismo, pero con diferentes palabras. Difícilmente, dos personas distintas eran entrevistadas con las mismas preguntas. Se encontró que la forma en cómo se preguntaba y cómo se recopilaba la información afectaba dramáticamente los resultados de las encuestas. Fue así como se decidió que los encuestadores deberías ser entrenados (pre-operativo) formalmente.
 
 Desde la psicometría se implementó el formalismo del cuestionario. Intentando medir estados psicológicos, afectivos e intelectuales, se desarrollaron técnicas primitivas para hacer comparables las respuestas. @Likert_1932 demostró que era posible realizar este tipo de comparaciones, evadiendo los largos instrumentos de medición, al formular una sola pregunta - a todos los encuestados - con una serie de respuestas en forma de escala.
 
 
-### Inicio de los métodos de muestreo {-}
+### Inicio de los métodos de muestreo 
 
 En un principio, los investigadores trataban de recolectar datos sobre todos los elementos de la población de interés. Esta práctica resultaba logísticamente inadecuada cuando se trataba de poblaciones con un gran tamaño. Los cálculos de los indicadores sobre toda una población resultaban muy demandantes. @Groves_Fowler_Couper_Lepkowski_Singer_Tourangeau_2009 afirman que, aunque la teoría de la probabilidad tuvo sus orígenes en el siglo XVIII, no fue hasta la segunda década del siglo XX que se utilizó para realizar encuestas. La primera aplicación fue la selección sistemática de un elemento en una población enlistada. Para realizar esta selección, los registros censales se dividían en secciones y se procedía a seleccionar un elemento de la sección.
 
@@ -95,7 +94,7 @@ Más adelante, cuando la estadística permeó la agricultura, se definieron otro
 
 La segunda guerra mundial y la gran depresión en EE.UU. fueron catalizadores de las encuestas a gran escala. En ese entonces, al igual que hoy, la tasa de desempleo era una cifra importante. Las políticas públicas empezaron a decidirse de acuerdo con las estadísticas oficiales, puesto que las grandes encuestas se realizaron mensualmente. Hoy en día existen cientos de encuestas mensuales que dan cuenta de la realidad de las sociedades en la región.
 
-### Inicio de la recolección de datos {-}
+### Inicio de la recolección de datos 
 
 Debido a que en un principio no existía un cuestionario estandarizado, entonces las respuestas abiertas eran la única opción de recopilar información. Esta práctica demandaba un gran esfuerzo en términos de resumir y sintetizar todo el corpus de palabras que los entrevistados usaban para responder.
 
@@ -110,9 +109,9 @@ Atendiendo al modelo de @Groves_Fowler_Couper_Lepkowski_Singer_Tourangeau_2009, 
 
 ![*Los niveles de inferencia en una encuestas. Fuente: adaptación de @Groves_Fowler_Couper_Lepkowski_Singer_Tourangeau_2009*](Pics/Picture6.png)
 
-### Inferencia individual
+### Inferencia individual  
 
-#### Constructo {-}
+#### Constructo 
 
 @Gutierrez_2016 menciona que los constructos son las ideas abstractas (ambiguas) sobre las cuales el investigador desea inferir y que, a su vez, dan origen a la investigación al ser la simiente de la encuesta. Las palabras con que se describen los constructos son siempre simples, pero la redacción elaborada de los constructos no siempre es precisa. Por ejemplo:
 
@@ -121,26 +120,26 @@ Atendiendo al modelo de @Groves_Fowler_Couper_Lepkowski_Singer_Tourangeau_2009, 
 
 Mientras que algunos constructos son más abstractos que otros (optimismo en la economía, confianza inversionista, percepción del Plan Nacional de Desarrollo), algunos otros son observables más fácilmente (consumo de alcohol y otras drogas, nutrición en la primera infancia, productividad de una intervención en el sector agrícola, factores de riesgo asociados a una enfermedad). 
 
-#### Mediciones {-}
+#### Mediciones 
 
 La medición es una caracterización mucho más concreta que el constructo, puesto que representa una forma de obtener información de los constructos de interés. La cuestión clave para realizar una buena medición es realizar preguntas que induzcan respuestas que reflejen claramente los constructos que se desean medir. @Groves_Fowler_Couper_Lepkowski_Singer_Tourangeau_2009 indican indican que estas preguntas pueden ser comunicadas en forma oral (encuestas cara a cara o telefónicas), o comunicadas en forma visual (atributos de un producto - marketing). Así mismo, también pueden existir observaciones directas del encuestador (condiciones de la vivienda), u observaciones proveninetes de dispositivos electrónicos o físicos (precios de productos en supermercados, muestra de agua, muestra de sangre, etc.).
 
-#### Respuesta y edición {-}
+#### Respuesta y edición 
 
 El resultado de la medición es la respuesta y la naturaleza de las respuesta está determinada por la naturaleza de las preguntas. Después de que los entrevistados han respondido, los datos deben pasar por un proceso de edición y validación de inconsistencias. 
 
 En este proceso de edición se debe examinar la distribución completa de las respuestas y buscar *datos atípicos* para que sean revisados con detenimiento. Los datos editados constituyen el insumo para realizar todo el proceso de inferencia estadística pertinente para que las cifras resultantes sean confiables y precisas.
 
-### Inferencia grupal
+### Inferencia grupal  
 
-#### La población objetivo {-}
+#### La población objetivo 
 
 De las definiciones concernientes a agregados, esta es la más abstracta. En general, la *población objetivo* representa el conjunto de unidades que serán estudiadas. Por ejemplo, en una encuesta es posible definir la población objetivo como los adultos nacionales. Sin embargo, esta definición de población no contempla el periodo de referencia de la medición, tampoco aclara si se incluyen los adultos residentes en el exterior y, no precisa cómo se verificará la nacionalidad de un entrevistado.
 
 Por ende, la definición de la población objetiva tiene que ser lo más precisa posible. Por ejemplo, la Gran Encuesta Integrada de Hogareas de Colombia define a su población objetivo como la Población civil no institucionalizada (PCNI), la cual contiene a todas las personas que no hacen parte de la fuerza pública y no pertenecen a instituciones de aislamiento como prisiones, hospitales, sanatorios, ancianatos, etc. La PCNI contiene a la población en edad de trabajar (PET) y a los no pertenecientes a la fuerza laboral. La edad para empezar a trabajar en el área rural es 10 años, y en la ciudad es 12 años. A su vez, la PET contiene a Inactivos y Ocupados. La clasificación de ocupado es una variable derivada que está inducida por muchos filtros.
 
 
-#### La población enmarcada {-}
+#### La población enmarcada 
 
 No es posible realizar una encuesta probabilística sin un *marco de muestreo*, definido como un dispositivo que permite ubicar e identificar (ambas acciones al mismo tiempo) las unidades pertenecientes a la población de interés. Es necesario darse cuenta de que todos los marcos de muestreo presentan algún nivel de desactualización con respecto a la población de interés. Por ejemplo, un marco de muestreo de líneas telefónicas puede no contener a todos lo residentes de una ciudad.
 
@@ -155,13 +154,13 @@ La población enmarcada está definida por el conjunto de miembros de la poblaci
     - Una situación *de facto* es aquella que, existiendo en la realidad, no ha sido reconocida formalmente. 
     - Evita la sobrecobertura de individuos que tienen más de una residencia. 
 
-#### La muestra {-}
+#### La muestra 
 
 El tamaño de muestra define directamente la precisión y confiabilidad de las estimaciones. Este debería incrementarse a medida que lo hagan los niveles de desagregación (grupos etarios, regiones geográficas, niveles de escolaridad, etc.). Sin embargo, dependiendo de la caracterización de la estrategia de muestreo, pueden existir escenarios en donde una encuesta con un tamaño de muestra menor induzca menores errores de muestreo que una encuesta con un mayor tamaño de muestra.
 
 No obstante, en algunas ocasiones los esfuerzos realizados para que los individuos seleccionados en la muestra respondan no son fructíferos. De esta manera, los individuos que son efectivamente entrevistados se denominan respondientes efectivos; mientras que al complemento de este conjunto se les denomina no respondientes. 
 
-#### Los respondientes {-}
+#### Los respondientes 
 
 Pueden existir casos de no respondientes parciales (no respondientes de ítems), para los cuales debe existir un proceso de *decisión* en términos de su reemplazo. Asimismo, no todas las ausencias parciales son reemplazadas. @Groves_Fowler_Couper_Lepkowski_Singer_Tourangeau_2009 afirman que algunos de los factores que inciden en el aumento de la ausencia de respuesta pueden ser causados por:
   
@@ -171,7 +170,7 @@ Pueden existir casos de no respondientes parciales (no respondientes de ítems),
 - *Diseño de cuestionario*: mala planificación en el pase de las preguntas que conforman el instrumento.
 - *Tiempo de la encuesta y agobio*: algunas temporadas arrojan tasas de no respuestas más altas que otras. De la misma forma, algunos cuestionarios largos son propensos a inducir una mayor ausencia de respuesta parcial por el agotamiento del respondiente. En general, las encuestas demasiado largas pueden indisponer al respondiente.
 
-#### Los ajustes post-encuesta {-}
+#### Los ajustes post-encuesta 
 
 Toda encuesta cuenta con personas que no quisieron responder y/o con un marco de muestreo que no cubre a toda la población. Por ende, es necesario reajustar los factores de expansión para evitar, sobretodo, la sub-estimación de los parámetros de interés, o implementar métodos de imputación para suplir la información faltante. De esta forma se puede utilizar una reponderación diferencial cuando es evidente que hay un patrón de ausencia de respuesta en algunos subgrupos de la población; por ejemplo: si los desempleados no responden sistemáticamente, o si las tasas de respuestas a nivel urbano son menores que las tasas de respuesta a nivel rural.
 

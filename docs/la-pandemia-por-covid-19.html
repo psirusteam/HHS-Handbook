@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>13.3 La pandemia por COVID-19 | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="13.3 La pandemia por COVID-19 | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2021-12-30" />
+<meta name="date" content="2022-01-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +33,9 @@
   
 <link rel="prev" href="soluciones.html"/>
 <link rel="next" href="ausencia-de-respuesta-por-registro.html"/>
-<script src="libs/header-attrs-2.8/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -42,7 +43,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
 
 
 
@@ -239,7 +239,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="9.4.1" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html#ganancia-en-eficiencia"><i class="fa fa-check"></i><b>9.4.1</b> Ganancia en eficiencia</a></li>
 <li class="chapter" data-level="9.4.2" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html#diferentes-formas-del-estimador-de-calibración"><i class="fa fa-check"></i><b>9.4.2</b> Diferentes formas del estimador de calibración</a></li>
-<li class="chapter" data-level="9.4.3" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html#la-calibración-como-un-cambio-de-paradigma"><i class="fa fa-check"></i><b>9.4.3</b> La calibración como un cambio de paradigma</a></li>
+<li class="chapter" data-level="" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html#la-calibración-como-un-cambio-de-paradigma"><i class="fa fa-check"></i>La calibración como un cambio de paradigma</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="construcción-de-los-factores-de-expansión.html"><a href="construcción-de-los-factores-de-expansión.html"><i class="fa fa-check"></i><b>10</b> Construcción de los factores de expansión</a>
@@ -253,6 +253,7 @@ div.csl-indent {
 <li class="chapter" data-level="10.5.1" data-path="calibración-de-los-factores-de-expansión.html"><a href="calibración-de-los-factores-de-expansión.html#medidas-de-calidad-en-la-calibración"><i class="fa fa-check"></i><b>10.5.1</b> Medidas de calidad en la calibración</a></li>
 <li class="chapter" data-level="10.5.2" data-path="calibración-de-los-factores-de-expansión.html"><a href="calibración-de-los-factores-de-expansión.html#calibración-integrada-para-hogares-y-personas"><i class="fa fa-check"></i><b>10.5.2</b> Calibración integrada para hogares y personas</a></li>
 <li class="chapter" data-level="10.5.3" data-path="calibración-de-los-factores-de-expansión.html"><a href="calibración-de-los-factores-de-expansión.html#calibración-sobre-razones-medias-y-proporciones"><i class="fa fa-check"></i><b>10.5.3</b> Calibración sobre razones, medias y proporciones</a></li>
+<li class="chapter" data-level="" data-path="calibración-de-los-factores-de-expansión.html"><a href="calibración-de-los-factores-de-expansión.html#calibración-con-valores-perdidos-y-totales-estimados"><i class="fa fa-check"></i>Calibración con valores perdidos y totales estimados</a></li>
 </ul></li>
 <li class="chapter" data-level="10.6" data-path="recorte-y-redondeo.html"><a href="recorte-y-redondeo.html"><i class="fa fa-check"></i><b>10.6</b> Recorte y redondeo</a>
 <ul>
@@ -404,14 +405,14 @@ div.csl-indent {
 </ol>
 <p>Haciendo cálculos gruesos, si suponemos que la cobertura de la submuestra que sí proveyó datos de contacto asciende al 85 % y que la probabilidad de que un hogar contactado responda toda la encuesta es del 80 %, entonces contaríamos solamente con un 68% de la muestra original. A estas cuentas habría que ajustarlas con el efecto de la atrición en el panel, que crece a medida que se siga utilizando. En estos términos, sería un grave error y una suposición poco plausible asumir que los hogares respondientes efectivos se comportan de manera similar a los hogares no respondientes y a los hogares no cubiertos. El mejor escenario que puede plantearse es considerar que la muestra efectiva no está libre de sesgos, hacer una búsqueda exploratoria de su magnitud con los datos recolectados y tratar de minimizarlo (o incluso eliminarlo) utilizando alguna de las técnicas estadísticas que mencionamos en este documento.</p>
 <p>La figura <a href="la-pandemia-por-covid-19.html#fig:fight3dist">13.6</a> presenta tres posibles escenarios que los INE pudieron encontrar en esta búsqueda. En el diagrama de la izquierda se verifica la ausencia de sesgo, en el diagrama del centro y en el de la derecha se confirma que la magnitud del sesgo es significativa. Nótese que la línea horizontal azul correspondería a la estimación publicada en el mes en el que se seleccionó la muestra maestra, mientras que la línea roja horizontal representa el promedio de las simulaciones con la muestra efectiva. Cada uno de los resultados de las simulaciones está representado por las fluctuaciones punteadas.</p>
-<div class="figure"><span id="fig:fight3dist"></span>
+<div class="figure"><span style="display:block;" id="fig:fight3dist"></span>
 <img src="Pics/calnr1.png" alt="Distribuciones del estimador de Horvtiz-Thompson en tres escenarios de interés." width="50%" />
 <p class="caption">
 Figura 13.6: Distribuciones del estimador de Horvtiz-Thompson en tres escenarios de interés.
 </p>
 </div>
 <p>La figura <a href="la-pandemia-por-covid-19.html#fig:fight4dist">13.7</a> muestra un escenario simulado en donde se contempla el uso del estimador ajustado con la técnica de <em>propensity score</em> (línea verde) y el estimador de calibración en dos etapas (línea azul) comparado con el estimador sin ningún tipo de ajuste (línea negra). Lo que se esperaría es que es estimador ingenuo subestime los tamaños poblacionales y los indicadores de interés; mientras que los estimadores ajustados, siempre que el mecanismo de ausencia de respuesta sea MAR o MCAR, elimina este sesgo.</p>
-<div class="figure"><span id="fig:fight4dist"></span>
+<div class="figure"><span style="display:block;" id="fig:fight4dist"></span>
 <img src="Pics/calnr2.png" alt="Distribuciones del estimador de Horvtiz-Thompson y de dos estimadores ajustados." width="50%" />
 <p class="caption">
 Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimadores ajustados.
@@ -445,7 +446,6 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -485,6 +485,10 @@ gitbook.start({
 "text": null
 },
 "download": ["Diseño y análisis de encuestas de hogares.pdf", "Diseño y análisis de encuestas de hogares.epub", "Diseño y análisis de encuestas de hogares.mobi"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section"
 },

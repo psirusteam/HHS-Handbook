@@ -11,7 +11,7 @@ Nótese que la implicación entre precisión y diseño va en una sola dirección
 
 Los criterios que aparecen en esta sección pueden ser tenidos en cuenta para determinar si una estadística debe ser considerada como precisa y confiable.
 
-#### Intervalos de confianza {-}
+### Intervalos de confianza 
 
 En general, la precisión de una estadística se debe estudiar a la luz del intervalo de confianza generado por la medida de probabilidad asociada al diseño de muestreo de la encuesta. Por ejemplo, si el parámetro de interés sobre el cual se busca realizar la inferencia es $\theta$, y se ha definido una subpoblación de interés, entonces un intervalo del 95% de confianza sobre esa subpoblación está dado por la siguiente expresión [@Heeringa_West_Berglund_2010]:
 
@@ -65,7 +65,7 @@ $$
 
 Nótese que en los casos en los que el intervalo de confianza clásico se sale de los límites naturales de la proporción, es recomendable utilizar este último enfoque. 
 
-#### Coeficientes de variación {-}
+### Coeficientes de variación 
 
 Esta medida configura un acercamiento al error de muestreo que permite verificar si la inferencia es válida, su definición es como sigue:
 
@@ -92,7 +92,7 @@ $$
 Por otro lado, como en todo fenómeno dicotómico resumido en un proporción, la varianza y el error estándar de la proporción obtiene su valor máximo en $P=0,5$. Por lo tanto, en este valor es necesario aumentar el tamaño de muestra para asegurar la precisión definida. A partir de $P=0,5$, a derecha e izquierda, los fenómenos son simétricos. Por ejemplo, bajo este paradigma, la precisión de una proporción $P=0,9$, es la misma que la de una proporción $P=0,1$; de la misma manera, la precisión de una proporción $P=0,7$, es la misma que la de una proporción $P=0,3$. Sin embargo, el coeficiente de variación no es una medida simétrica alrededor de $P=0,5$, como sí lo es la varianza y el error estándar y, por su definición, cuando la proporción es pequeña, el coeficiente de variación tiende a ser muy grande, indicando erróneamente que la precisión es baja. 
 
 
-#### Coeficiente de variación logarítmico {-}
+### Coeficiente de variación logarítmico 
 
 El coeficiente de variación es una medida que define la precisión de un indicador, pero para el caso de las proporciones no constituye una medida simétrica, como sí lo es el error estándar o la varianza. Por ejemplo, suponga que se está estimando una proporción $P$, si la estimación del parámetro de interés es muy cercana a cero, sin importar que tan pequeña sea su varianza, el coeficiente de variación será muy grande y no representará la calidad de la estrategia de muestreo. Sin embargo, el coeficiente de variación del complemento de la proporción $(1-P)$ será muy pequeño y confiable. Esto se traduce en una paradoja, puesto que el mismo fenómeno está siendo medido, pero los coeficiente de variación son contradictorios. Debido a lo anterior, las estimaciones que tienen una magnitud pequeña (muy cercana a cero) son automáticamente castigadas por este indicador, incluso si la variabilidad de la cifra es pequeña.
 
@@ -118,7 +118,10 @@ $$
 De manera similar, para mantener la simetría, cuando $P>0,5$ se realiza un ajuste definiendo $\hat{L} = -\log(1-\hat{P})$. Por lo tanto, para proporciones centrales, los coeficientes de variación de $\hat{P}$ y $\hat{L}$ serán comparables, puesto que $\hat{L}$ toma valores cercanos a uno cuando $P \in (0,2\ \ ,\ \ 0,8)$, y en este caso el $CV(\hat{L})$ será similar a $CV(\hat{P})$.
 
 
-![(\#fig:fig1fig)Relación entre el tamaño de muestra y la precisión de un indicador utilizando la transformación Logit.](19Calidad_files/figure-docx/fig1fig-1.png)
+<div class="figure">
+<img src="19Calidad_files/figure-html/fig1fig-1.svg" alt="Relación entre el tamaño de muestra y la precisión de un indicador utilizando la transformación Logit." width="672" />
+<p class="caption">(\#fig:fig1fig)Relación entre el tamaño de muestra y la precisión de un indicador utilizando la transformación Logit.</p>
+</div>
 
 La figura \@ref(fig:fig1fig) muestra que, al igual que con el coeficiente de variación original, el tamaño de muestra aumentará a medida que se requiera mayor precisión en la estimación; pero a diferencia del coeficiente de variación original, el tamaño de muestra será idéntico para los fenómenos que induzcan proporciones simétricas. Además, el tamaño de muestra necesario para estimar eficientemente una proporción $P\leq 0.5$ con una precisión mayor a un determinado umbral del coeficiente de variación $CVE$ es:  
 
@@ -169,13 +172,13 @@ n \geq \dfrac{S^2}{\frac{S^2}{N}+\log^2(\hat{P})\hat{P}^2\delta^2}
 \end{align*}
 
 
-#### El efecto de diseño DEFF {-}
+### El efecto de diseño DEFF 
 
 Cuando se selecciona una muestra utilizando un diseño de muestreo complejo es muy improbable que exista independencia entre las observaciones. Además, como el muestreo de las encuestas de hogares es complejo, la distribución de la variable de interés no es la misma para todos los individuos. Por lo anterior, cuando se analizan datos que provienen de encuestas de hogares la inferencia correcta debe tener en cuenta estas grandes desviaciones con respecto al análisis estadístico clásico, que considera muestras aleatorias simples. Por ello, en la mayoría de ocasiones se necesita aumentar el tamaño de muestra para obtener la precisión deseada.  
 
 @Lumley_2010 afirma que el efecto del diseño compara la varianza de una media o total con la varianza de un estudio del mismo tamaño utilizando un muestreo aleatorio simple sin reemplazo y que su cálculo será incorrecto si los pesos de muestreo se han re-escalado o no son recíprocos a las probabilidades de inclusión. Además, en `R` se compara la varianza de la estimación con la varianza de una estimación basada en una muestra aleatoria simple del mismo tamaño que el de la subpoblación. Entonces, por ejemplo, en el muestreo aleatorio estratificado, el efecto de diseño calculado en un estrato será igual a uno.
 
-#### Tamaño de muestra {-}
+### Tamaño de muestra 
 
 El tamaño de muestra afecta de manera indirecta la amplitud del intervalo de confianza, a través del error estándar, que generalmente decrece a medida que el tamaño de muestra se hace más grande. Un adecuado tamaño de muestra garantiza la convergencia en distribución de los estimadores a la distribución teórica de donde se calculan los percentiles en el cálculo del intervalo de confianza. En la fase de diseño, es posible mostrar que el tamaño de muestra requerido para estimar el promedio de una variable de interés en una encuesta de hogares, con un error de muestreo relativo menor a $\delta \in (0,1)$ y una confianza estadística mayor a $1-\alpha$, está dado por la siguiente expresión.
 
@@ -196,7 +199,7 @@ Como se puede apreciar, el tamaño de muestra es un indicador de la calidad de l
 - Si el parámetro de interés **no** fue contemplado en la planeación y diseño de la encuesta de hogares, entonces es posible que el tamaño de muestra sea menor al necesario y, por ende, el error de muestreo será mayor, junto con el coeficiente de variación; por ende, el intervalo de confianza será más amplio y la precisión de la inferencia será deficiente.
 
 
-#### Tamaño de muestra efectivo {-}
+### Tamaño de muestra efectivo 
 
 El principio general detrás de esta medida está supeditado a que en la inferencia propia de las encuestas de hogares con diseños de muestreo complejos no existe una sucesión de variables que sean independientes e idénticamente distribuidas. Por lo tanto, si se piensa en la muestra $(y_1, \ldots, y_n)$ como un vector en el espacio $n$-dimensional, el estándar clásico de la teoría estadística asumiría que cada componente del vector puede variar por sí mismo. Sin embargo, debido a la forma jerárquica de la selección de los hogares y a la interrelación de la variable de interés con las UPM, la variabilidad de la inferencia en las encuestas complejas tiene un fuerte componente asociados al mismo conglomerado, por lo que la dimensión final del vector $(y_1, \ldots, y_n)$ es mucho menor que $n$. De esta forma, se ha definido el tamaño de muestra efectivo [@United_Nations_2005, capítulo 6] como sigue
 $$
@@ -205,7 +208,7 @@ $$
 
 En resumen, el diseño clásico de las encuestas de hogares consiste en seleccionar un conjunto de hogares dentro de una misma UPM y repetir esta estrategia de selección sistemáticamente en todo el país. Por lo tanto, se puede pensar en que, si la variable de interés tiene una alta correlación intraclase, entonces la realidad de las personas y de los hogares dentro de una misma UPM será muy homogénea, tanto que se podría interpretar como que la información estuviese repetida, y que los individuos u hogares de una misma UPM no estuvieran aportando de manera diferenciada. Por lo tanto, debido a los efectos del diseño de muestreo complejo, la cantidad de individuos que están aportando a la inferencia del indicador no es el número de personas, ni el número de hogares en la muestra, sino el tamaño de muestra efectivo $n_{eff}$, que deflacta los efectos de aglomeración. 
 
-#### Grados de libertad {-}
+### Grados de libertad 
 
 La amplitud del intervalo de confianza de un indicador no sólo está supeditada al error estándar, sino también al percentil de la distribución $t-student$ con sus correspondientes grados de libertad. De esta manera, entre más grados de libertad se consideren, menor será la amplitud del intervalo y mayor será la precisión de la inferencia. En el caso más general en donde la subpoblación sea toda la población objetivo, los grados de libertad se reducen a la siguiente expresión:
 
@@ -225,7 +228,7 @@ En donde $v_h$ es una variable indicadora que toma el valor uno si el estrato $h
 
 
 
-#### Conteo de casos no ponderado {-}
+### Conteo de casos no ponderado 
 
 El número de casos no ponderados en una muestra es simplemente el conteo de los individuos dentro de la muestra que son afectados por un fenómeno de interés en estudio. Esta cifra está supeditada únicamente a razones y proporciones y tiene un efecto indirecto en la determinación de la precisión del estimador de interés y está determinada por la siguiente expresión.
 
@@ -252,7 +255,7 @@ En muchos países las encuestas de hogares son usadas por las autoridades gubern
 
 En esta sección se abordan temáticas referentes al procesamiento apropiado de los indicadores de interés en las subpoblaciones y, habiendo realizado las estimaciones y calculado sus respectivos criterios de calidad, se plantea la utilización de umbrales apropiados para la supresión, revisión o publicación de cifras.
 
-### Variables y subpoblaciones {-}
+### Variables y subpoblaciones 
 
 El análisis apropiado de las estadísticas generadas a partir de las encuestas de hogares debe pasar por una definición clara tanto de las subpoblaciones sobre las cuales se quiere realizar la inferencia, como de las variables que generan el indicador de interés. De hecho, como se mostrará más adelante, algunas variables pueden definir una subpoblación y, por ende, es posible que se dé lugar a confusiones. Para aclarar esto, se proponen a continuación algunos ejemplos que permiten dilucidar el cálculo de las medidas de calidad sobre un conjunto no exhaustivo de indicadores de interés.
 
@@ -376,7 +379,7 @@ $$
 
 En este caso el tamaño de muestra es $n = \sum_s z_{g_k}$, es decir el número de personas en la muestra que están en edad de trabajar, son hombres migrantes y están activos. El conteo no ponderado de casos corresponde al número de individuos en la muestra que son hombres migrantes y están desocupados. Además, los grados de libertad corresponden a todas las UPM menos todos los estratos de la encuesta en el país en los que se encontraron hogares con hombres migrantes y activos en la fuerza de trabajo.
 
-### Secuencia lógica para crear reglas de supresión {-}
+### Secuencia lógica para crear reglas de supresión 
 
 En esta sección se ha querido enfatizar el hecho de que la precisión de una estimación recae directamente en los intervalos de confianza, los cuales pueden ser descompuestos en elementos fundamentales que permiten crear una secuencia lógica de revisión, publicación o supresión de cifras. Nótese que lo anterior se basa en que la longitud de los intervalos de confianza induce la seguridad de que un estimador es o no es preciso. Considere los siguientes ejemplos prácticos:
 
@@ -399,5 +402,8 @@ De manera general, se recomienda que los INE estudien a profundidad sus polític
 
 Por ejemplo, la figura \@ref(fig:figCSj1) muestra una propuesta preliminar, para la estimación de proporciones o razones, en cuanto a los criterios de supresión de cifras. En una primera instancia se realiza la estimación clásica de los parámetros de interés y se genera una tabla que adjunte el cálculo de todos los criterios descritos anteriormente. Luego, dependiendo de la naturaleza del fenómeno investigado, se deben establecer los criterios que se van a tener en cuenta y los umbrales en cada caso. El próximo paso es decidir, para cada cifra de la tabla generada, si se va a publicar o suprimir, y en algunos casos si se revisará la cifra con mayor detenimiento. Por ejemplo, en el diagrama propuesto se definen seis criterios como condiciones necesarias para la publicación inmediata de una cifra; los primeros cuatro, son condiciones necesarias para la revisión temática. Si alguno de los primeros cuatro criterios no se satisface, entonces la cifra es suprimida. 
 
-![(\#fig:figCSj1)Diagrama de flujo propuesto para la publicación, supresión y revisión de estimaciones de proporciones o razones en encuestas de hogares.](Pics/CSj1.png){width=50%}
+<div class="figure">
+<img src="Pics/CSj1.png" alt="Diagrama de flujo propuesto para la publicación, supresión y revisión de estimaciones de proporciones o razones en encuestas de hogares." width="50%" />
+<p class="caption">(\#fig:figCSj1)Diagrama de flujo propuesto para la publicación, supresión y revisión de estimaciones de proporciones o razones en encuestas de hogares.</p>
+</div>
 

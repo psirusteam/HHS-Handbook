@@ -113,7 +113,7 @@ En donde, apelando a la notación clásica de los análisis de varianza, $SCT=\s
 
 ## Otras consideraciones
 
-### El efecto de diseño en subpoblaciones {-}
+### El efecto de diseño en subpoblaciones 
 
 La estimación del efecto de diseño es un problema común cuando se trabaja con estimaciones desagregadas en subpoblaciones de interés. Por un lado, cuando las subpoblaciones constituyen estratos (o agregaciones de estratos) planeados de antemano, para los cuales se conoce previamente su tamaño poblacional, se tiene el siguiente efecto de diseño:
 
@@ -145,7 +145,7 @@ En donde $S^2_{y_{gU}}$ es la varianza poblacional de una nueva variable calcula
 
 @Lumley_2010 afirma que el efecto del diseño compara la varianza de una media o total con la varianza de un estudio del mismo tamaño utilizando un muestreo aleatorio simple sin reemplazo y que su cálculo será incorrecto si los pesos de muestreo se han re-escalado o no son recíprocos a las probabilidades de inclusión. Por ejemplo, en el caso de las subpoblaciones, la librería `survey` de `R` compara la varianza de la estimación con la varianza de una estimación basada en una muestra aleatoria simple del mismo tamaño que el de la subpoblación. Entonces, por ejemplo, en el muestreo aleatorio estratificado, el efecto de diseño calculado en un estrato será igual a uno.
 
-### El efecto de diseño general {-}
+### El efecto de diseño general 
 
 Suponga que el diseño muestral es estratificado con $H$ estratos; entonces por la independencia de la selección en los estratos, la varianza del estimador de un total poblacional $t_y$ está dada por
 
@@ -190,7 +190,7 @@ Por otro lado, si los estratos no fueron construidos teniendo en cuenta la varia
 Finalmente, alguno de los pesos $w_h$  puede resultar ser mayor a 1 cuando para algún estrato $\frac{n_h}{N_h}\neq\frac{n}{N}$, y cuando los estratos no están bien construidos. 
 
 
-### El efecto de diseño en las encuestas de hogares de la región {-}
+### El efecto de diseño en las encuestas de hogares de la región 
 
 En general, para las encuestas de hogares en la región, se planean esquemas de estratificación, aglomeración y selección de UPM con probabilidades desiguales. @Heeringa_West_Berglund_2017 anotan que el efecto de estratificación reduce la varianza de las estrategias de muestreo, mientras que el efecto de selección desigual tiende a aumentarla. En general, estos dos efectos tienden a anularse entre sí. Por lo tanto, el efecto de diseño de una encuesta compleja estará únicamente en función del efecto de aglomeración, el cual puede llegar a ser grande, en comparación con los otros dos. Como ya se había comentado antes, la expresión generalizada que da cuenta del efecto de aglomeración en los diseños de muestreo complejos de las encuestas de hogares es la siguiente:
 

@@ -31,7 +31,10 @@ Nótese que entre el primer y el segundo periodo de medición hay un traslape de
 
 La figura \@ref(fig:figel1) ejemplifica tres esquemas longitudinales que pueden ser creados para el año 2019. El primero de ellos (a la izquierda de la figura) representa la combinación del primer y segundo trimestre, que se define a través de la agregación de las dos mediciones en el primer y segundo trimestre de los paneles $b_1$, $c_1$ y $d_1$. El segundo esquema (centro) muestra la combinación de los primeros tres trimestres del año, definidos por los paneles $c_1$ y $d_1$. Por último, la base longitudinal anual parte de la combinación de las cuatro mediciones del panel $d_1$. 
 
-![(\#fig:figel1)Tres escenarios longitudinales en un esquema rotativo 4(0)1.](Pics/el1.png){width=50%}
+<div class="figure">
+<img src="Pics/el1.png" alt="Tres escenarios longitudinales en un esquema rotativo 4(0)1." width="50%" />
+<p class="caption">(\#fig:figel1)Tres escenarios longitudinales en un esquema rotativo 4(0)1.</p>
+</div>
 
 
 Como se mencionó en capítulos anteriores, la pandemia por COVID-19 hizo que el año 2020 fuese un año atípico para los levantamientos de las encuestas de hogares en los INE de la región, puesto que la crisis de salud trajo consigo muchos retos en términos de la consecución de la información primaria. Debido a las restricciones de movilidad que los gobiernos tuvieron que imponer para hacerle frente a la pandemia, en algunos trimestres se optó por replicar el mismo esquema de trimestres anteriores. En nuestro ejemplo, asuma que no se incluyó el 25% adicional que se tenía planeado, sino que la muestra fue exactamente la misma que en el primer trimestre. Recuérdese además que en casi toda la región, la muestra de hogares se contactó, no de manera presencial, sino telefónica, disminuyendo la tasa de cobertura y de respuesta efectiva. 
@@ -80,13 +83,13 @@ El primer paso en la generación de los pesos longitudinales consiste en realiza
 
 En general, es necesario asumir que al combinar los paneles y crear una sola base de datos, se está agregando información (puesto que se repiten las mediciones de los individuos pertenecientes a los paneles involucrados), pero al mismo tiempo se reduce el número de unidades observacionales (puesto que el número de individuos en la muestra que coinciden en los periodos de interés necesariamente es menor al número de individuos en la muestra de un corte transversal). 
 
-### Creación de los pesos iniciales
+### Creación de los pesos longitudinales iniciales   
 
 Este primer paso empieza con la definición de los periodos consecutivos que se utilizarán en la combinación de las bases de datos. Si la combinación se realiza para el año 2020, se debe tener en cuenta que hubo un cambio abrupto que se presentó como respuesta a las restricciones de movilidad que trajo la pandemia, que a su vez configuró un cambio en el modo de recolección (de presencial a telefónico) a partir del segundo trimestre del 2020. 
 
 Una vez definidos los periodos de interés, se debe realizar la combinación de las correspondientes bases de datos transversales. Este procedimiento debe tener en cuenta únicamente a las unidades muestrales que respondieron sistemáticamente en cada uno de los periodos de interés. En el escenario de la combinación de dos periodos, si una unidad respondió en ambos periodos será incluida en la base de datos combinada, de lo contrario (si respondió en el primer periodo, pero no en el segundo y viceversa) no será incluida en la base de datos.
 
-#### Pesos básicos {-} 
+#### Pesos básicos  
 
 La determinación de los pesos iniciales viene supeditada a los pesos básicos ajustados por cobertura $d_{1, k}$ del procesamiento transversal del primer trimestre que se quiere combinar. Por ejemplo, el primer escenario de la figura anterior resalta que se quiere combinar el primer trimestre con el segundo trimestre del 2020; en este caso se partiría de los pesos básicos ajustados por cobertura del primer trimestre del 2020. En el segundo escenario se combinan el segundo y el tercer trimestre del 2020, por tanto se partiría de los pesos básicos ajustados por cobertura y ausencia de respuesta del segundo trimestre del 2020.
 
@@ -105,7 +108,7 @@ encuesta *Survey of Labour and Income Dynamics* [@Naud_2002;
 @LaRoche_2003] plantea que un primer paso para crear los pesos longitudinales es mediante el ajuste por el inverso de la probabilidad de traslape). 
 
 
-#### Ajuste por ausencia de respuesta {-}
+#### Ajuste por ausencia de respuesta 
 
 A continuación, sobre los pesos básicos es necesario realizar un ajuste por ausencia de respuesta, que debería estar supeditado a las covariables disponibles en el marco de muestreo, en registros administrativos o, teniendo en cuenta el diseño de muestreo rotativo, en rondas anteriores de la misma encuesta. En general, es recomendable tener en cuenta el paradigma principal en el manejo de la ausencia de respuesta, el cual indica que respondientes y no respondientes difieren en la mayoría de los casos. Por supuesto, aquellas unidades que no respondieron deberán ser excluidas de la base de datos puesto que su peso de muestreo es nulo; es decir $d_{1, k}^{básico} = 0, \ \forall k \notin s_r^{(1)}$, en donde el conjunto $s_r^{(1)}$ representa a las unidades que respondieron la encuesta en el primer periodo de la combinación. 
 
@@ -132,9 +135,9 @@ Es posible que, al construir la matriz de covariables para ajustar el modelo de 
 
 Como se mencionó en los capítulos anteriores, es necesario verificar las propiedades de balanceo y soporte común en el modelo de *propensity score*. Se esperaría que la distribución de las probabilidades de respuesta para las combinaciones de los dos trimestres combinados mostraran un buen balance entre respondientes y no respondientes (distribuciones similares) y que el soporte común de la probabilidad de respuesta excluya al cero y al uno.
 
-### Generación de los pesos longitudinales
+### Creación de los pesos longitudinales finales   
 
-#### Definición de la población longitudinal {-}
+#### Definición de la población longitudinal 
 
 La población longitudinal está supeditada a todas aquellas unidades que han permanecido en la población de interés entre el primer y el segundo periodo; en el caso de la ENE la población longitudinal del primer semestre del 2020 serían todas las personas que estuvieron en la población objetivo del primer periodo y que han permanecido en la población hasta el segundo periodo, inclusive. 
 
@@ -148,7 +151,7 @@ $$
 
 La muestra $s^{(2)}$ es representativa de la población longitudinal en los dos periodos combinados. En esta etapa, el factor de expansión longitudinal se define como idéntico al peso resultante de la sección anterior; es decir $d_{2, k}^{inicial} = d_{1, k}^{inicial}$.
 
-#### Ausencia de respuesta y atrición {-}
+#### Ausencia de respuesta y atrición 
 
 La conformación de la base de datos longitudinal parte de los pesos iniciales creados en la sección anterior. Sin embargo, hay que tener en cuenta que existirán unidades que no respondieron en alguno de los periodos de la combinación. En general, se forman tres subconjuntos de no respondientes; el primero conformado por las unidades que sí respondieron en el primer periodo y que no respondieron en el segundo, el segundo definido por las unidades que no respondieron en el primer periodo y que sí respondieron en el segundo, el tercero conformado por las unidades que no respondieron en ninguno de los periodos. En cualquiera de los anteriores casos es necesario identificar estas unidades a las cuales se le asignará un peso longitudinal nulo; es decir 
 
@@ -175,7 +178,7 @@ d_{2, k}^{longitudinal} = \frac{d_{2, k}^{inicial}}{\hat{\phi}_{2, k} }
 $$
 
 
-#### Calibración de los pesos logitudinales {-}
+#### Calibración de los pesos logitudinales 
 
 Luego del ajuste por ausencia de respuesta es aconsejable imponer algunas restricciones sobre los factores de expansión; en particular, se busca que la suma de los pesos reproduzca con exactitud los conteos poblacionales, o las proyecciones demográficas, en el país, en las regiones o departamentos, en los subgrupos de edad y sexo, en las áreas urbana y rural, etc. En general, en las restricciones de la calibración pueden intervenir tanto variables a nivel de individuo como de hogar. Es importante enfatizar que los totales auxiliares usados en la calibración deben representar la población del primer periodo de interés, puesto que, al conformar un panel que no adiciona elementos a lo largo de los periodos de medición, la muestra será representativa únicamente del periodo en cual fue seleccionada. Teniendo en cuenta que las variables de calibración están representadas por el vector $\mathbf{z}_k$ y que sus totales poblacionales están disponibles en forma de proyecciones poblacionales, entonces este conjunto de restricciones sobre los nuevos pesos longitudinales calibrados $w_{2, k}^{calibrado}$ se puede escribir como:
 

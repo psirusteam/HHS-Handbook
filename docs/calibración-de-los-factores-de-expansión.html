@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>10.5 Calibración de los factores de expansión | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
+  <title>11.5 Calibración de los factores de expansión | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="10.5 Calibración de los factores de expansión | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
+  <meta property="og:title" content="11.5 Calibración de los factores de expansión | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="10.5 Calibración de los factores de expansión | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
+  <meta name="twitter:title" content="11.5 Calibración de los factores de expansión | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   
   <meta name="twitter:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2021-12-30" />
+<meta name="date" content="2022-01-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +33,9 @@
   
 <link rel="prev" href="ajuste-por-ausencia-de-respuesta.html"/>
 <link rel="next" href="recorte-y-redondeo.html"/>
-<script src="libs/header-attrs-2.8/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -42,7 +43,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
 
 
 
@@ -96,282 +96,351 @@ div.csl-indent {
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefacio</a></li>
-<li class="chapter" data-level="" data-path="resumen.html"><a href="resumen.html"><i class="fa fa-check"></i>Resumen</a></li>
-<li class="chapter" data-level="1" data-path="introducción.html"><a href="introducción.html"><i class="fa fa-check"></i><b>1</b> Introducción</a>
+<li class="chapter" data-level="1" data-path="resumen.html"><a href="resumen.html"><i class="fa fa-check"></i><b>1</b> Resumen</a></li>
+<li class="chapter" data-level="2" data-path="introducción.html"><a href="introducción.html"><i class="fa fa-check"></i><b>2</b> Introducción</a>
 <ul>
-<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html#objetivos-de-desarrollo-sostenible"><i class="fa fa-check"></i>Objetivos de Desarrollo Sostenible</a></li>
-<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html#mercado-de-trabajo"><i class="fa fa-check"></i>Mercado de Trabajo</a></li>
-<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html#ingresos-y-gastos"><i class="fa fa-check"></i>Ingresos y gastos</a></li>
-<li class="chapter" data-level="" data-path="introducción.html"><a href="introducción.html#esquema-del-documento"><i class="fa fa-check"></i>Esquema del documento</a></li>
+<li class="chapter" data-level="2.1" data-path="objetivos-de-desarrollo-sostenible.html"><a href="objetivos-de-desarrollo-sostenible.html"><i class="fa fa-check"></i><b>2.1</b> Objetivos de Desarrollo Sostenible</a></li>
+<li class="chapter" data-level="2.2" data-path="estadísticas-del-mercado-de-trabajo.html"><a href="estadísticas-del-mercado-de-trabajo.html"><i class="fa fa-check"></i><b>2.2</b> Estadísticas del mercado de trabajo</a></li>
+<li class="chapter" data-level="2.3" data-path="ingresos-y-gastos.html"><a href="ingresos-y-gastos.html"><i class="fa fa-check"></i><b>2.3</b> Ingresos y gastos</a></li>
+<li class="chapter" data-level="2.4" data-path="esquema-del-documento.html"><a href="esquema-del-documento.html"><i class="fa fa-check"></i><b>2.4</b> Esquema del documento</a></li>
 </ul></li>
-<li class="part"><span><b>I Diseño estadístico de las encuestas de hogares</b></span></li>
-<li class="chapter" data-level="2" data-path="el-paradigma-del-error-total.html"><a href="el-paradigma-del-error-total.html"><i class="fa fa-check"></i><b>2</b> El paradigma del error total</a>
+<li class="chapter" data-level="3" data-path="el-paradigma-del-error-total.html"><a href="el-paradigma-del-error-total.html"><i class="fa fa-check"></i><b>3</b> El paradigma del error total</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="qué-es-una-encuesta.html"><a href="qué-es-una-encuesta.html"><i class="fa fa-check"></i><b>2.1</b> ¿Qué es una encuesta?</a></li>
-<li class="chapter" data-level="2.2" data-path="sesgos-generados-en-las-encuestas.html"><a href="sesgos-generados-en-las-encuestas.html"><i class="fa fa-check"></i><b>2.2</b> Sesgos generados en las encuestas</a>
+<li class="chapter" data-level="3.1" data-path="qué-es-una-encuesta.html"><a href="qué-es-una-encuesta.html"><i class="fa fa-check"></i><b>3.1</b> ¿Qué es una encuesta?</a></li>
+<li class="chapter" data-level="3.2" data-path="sesgos-generados-en-las-encuestas.html"><a href="sesgos-generados-en-las-encuestas.html"><i class="fa fa-check"></i><b>3.2</b> Sesgos generados en las encuestas</a>
 <ul>
-<li class="chapter" data-level="" data-path="sesgos-generados-en-las-encuestas.html"><a href="sesgos-generados-en-las-encuestas.html#sesgo-de-selección"><i class="fa fa-check"></i>Sesgo de selección</a></li>
-<li class="chapter" data-level="" data-path="sesgos-generados-en-las-encuestas.html"><a href="sesgos-generados-en-las-encuestas.html#sesgo-de-medición"><i class="fa fa-check"></i>Sesgo de medición</a></li>
+<li class="chapter" data-level="3.2.1" data-path="sesgos-generados-en-las-encuestas.html"><a href="sesgos-generados-en-las-encuestas.html#sesgo-de-selección"><i class="fa fa-check"></i><b>3.2.1</b> Sesgo de selección</a></li>
+<li class="chapter" data-level="3.2.2" data-path="sesgos-generados-en-las-encuestas.html"><a href="sesgos-generados-en-las-encuestas.html#sesgo-de-medición"><i class="fa fa-check"></i><b>3.2.2</b> Sesgo de medición</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="evolución-de-las-encuestas-estandarizadas.html"><a href="evolución-de-las-encuestas-estandarizadas.html"><i class="fa fa-check"></i><b>2.3</b> Evolución de las encuestas estandarizadas</a>
+<li class="chapter" data-level="3.3" data-path="evolución-de-las-encuestas-estandarizadas.html"><a href="evolución-de-las-encuestas-estandarizadas.html"><i class="fa fa-check"></i><b>3.3</b> Evolución de las encuestas estandarizadas</a>
 <ul>
-<li class="chapter" data-level="" data-path="evolución-de-las-encuestas-estandarizadas.html"><a href="evolución-de-las-encuestas-estandarizadas.html#inicio-de-los-cuestionarios-estandarizados"><i class="fa fa-check"></i>Inicio de los cuestionarios estandarizados</a></li>
-<li class="chapter" data-level="" data-path="evolución-de-las-encuestas-estandarizadas.html"><a href="evolución-de-las-encuestas-estandarizadas.html#inicio-de-los-métodos-de-muestreo"><i class="fa fa-check"></i>Inicio de los métodos de muestreo</a></li>
-<li class="chapter" data-level="" data-path="evolución-de-las-encuestas-estandarizadas.html"><a href="evolución-de-las-encuestas-estandarizadas.html#inicio-de-la-recolección-de-datos"><i class="fa fa-check"></i>Inicio de la recolección de datos</a></li>
+<li class="chapter" data-level="3.3.1" data-path="evolución-de-las-encuestas-estandarizadas.html"><a href="evolución-de-las-encuestas-estandarizadas.html#inicio-de-los-cuestionarios-estandarizados"><i class="fa fa-check"></i><b>3.3.1</b> Inicio de los cuestionarios estandarizados</a></li>
+<li class="chapter" data-level="3.3.2" data-path="evolución-de-las-encuestas-estandarizadas.html"><a href="evolución-de-las-encuestas-estandarizadas.html#inicio-de-los-métodos-de-muestreo"><i class="fa fa-check"></i><b>3.3.2</b> Inicio de los métodos de muestreo</a></li>
+<li class="chapter" data-level="3.3.3" data-path="evolución-de-las-encuestas-estandarizadas.html"><a href="evolución-de-las-encuestas-estandarizadas.html#inicio-de-la-recolección-de-datos"><i class="fa fa-check"></i><b>3.3.3</b> Inicio de la recolección de datos</a></li>
 </ul></li>
-<li class="chapter" data-level="2.4" data-path="el-ciclo-de-vida-de-una-encuesta.html"><a href="el-ciclo-de-vida-de-una-encuesta.html"><i class="fa fa-check"></i><b>2.4</b> El ciclo de vida de una encuesta</a>
+<li class="chapter" data-level="3.4" data-path="el-ciclo-de-vida-de-una-encuesta.html"><a href="el-ciclo-de-vida-de-una-encuesta.html"><i class="fa fa-check"></i><b>3.4</b> El ciclo de vida de una encuesta</a>
 <ul>
-<li class="chapter" data-level="2.4.1" data-path="el-ciclo-de-vida-de-una-encuesta.html"><a href="el-ciclo-de-vida-de-una-encuesta.html#inferencia-individual"><i class="fa fa-check"></i><b>2.4.1</b> Inferencia individual</a></li>
-<li class="chapter" data-level="2.4.2" data-path="el-ciclo-de-vida-de-una-encuesta.html"><a href="el-ciclo-de-vida-de-una-encuesta.html#inferencia-grupal"><i class="fa fa-check"></i><b>2.4.2</b> Inferencia grupal</a></li>
+<li class="chapter" data-level="3.4.1" data-path="el-ciclo-de-vida-de-una-encuesta.html"><a href="el-ciclo-de-vida-de-una-encuesta.html#inferencia-individual"><i class="fa fa-check"></i><b>3.4.1</b> Inferencia individual</a></li>
+<li class="chapter" data-level="3.4.2" data-path="el-ciclo-de-vida-de-una-encuesta.html"><a href="el-ciclo-de-vida-de-una-encuesta.html#inferencia-grupal"><i class="fa fa-check"></i><b>3.4.2</b> Inferencia grupal</a></li>
 </ul></li>
-<li class="chapter" data-level="2.5" data-path="el-proceso-de-respuesta.html"><a href="el-proceso-de-respuesta.html"><i class="fa fa-check"></i><b>2.5</b> El proceso de respuesta</a></li>
+<li class="chapter" data-level="3.5" data-path="el-proceso-de-respuesta.html"><a href="el-proceso-de-respuesta.html"><i class="fa fa-check"></i><b>3.5</b> El proceso de respuesta</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="elementos-básicos.html"><a href="elementos-básicos.html"><i class="fa fa-check"></i><b>3</b> Elementos básicos</a>
+<li class="chapter" data-level="4" data-path="elementos-básicos.html"><a href="elementos-básicos.html"><i class="fa fa-check"></i><b>4</b> Elementos básicos</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="universo-muestra-y-unidades.html"><a href="universo-muestra-y-unidades.html"><i class="fa fa-check"></i><b>3.1</b> Universo, muestra y unidades</a></li>
-<li class="chapter" data-level="3.2" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html"><i class="fa fa-check"></i><b>3.2</b> Periodicidad en el tiempo</a>
+<li class="chapter" data-level="4.1" data-path="universo-muestra-y-unidades.html"><a href="universo-muestra-y-unidades.html"><i class="fa fa-check"></i><b>4.1</b> Universo, muestra y unidades</a></li>
+<li class="chapter" data-level="4.2" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html"><i class="fa fa-check"></i><b>4.2</b> Periodicidad en el tiempo</a>
 <ul>
-<li class="chapter" data-level="" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-transversales"><i class="fa fa-check"></i>Encuestas transversales</a></li>
-<li class="chapter" data-level="" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-repetidas"><i class="fa fa-check"></i>Encuestas repetidas</a></li>
-<li class="chapter" data-level="" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-panel"><i class="fa fa-check"></i>Encuestas panel</a></li>
-<li class="chapter" data-level="" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-de-panel-dividido"><i class="fa fa-check"></i>Encuestas de panel dividido</a></li>
-<li class="chapter" data-level="" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-de-panel-rotativo"><i class="fa fa-check"></i>Encuestas de panel rotativo</a></li>
+<li class="chapter" data-level="4.2.1" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-transversales"><i class="fa fa-check"></i><b>4.2.1</b> Encuestas transversales</a></li>
+<li class="chapter" data-level="4.2.2" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-repetidas"><i class="fa fa-check"></i><b>4.2.2</b> Encuestas repetidas</a></li>
+<li class="chapter" data-level="4.2.3" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-panel"><i class="fa fa-check"></i><b>4.2.3</b> Encuestas panel</a></li>
+<li class="chapter" data-level="4.2.4" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-de-panel-dividido"><i class="fa fa-check"></i><b>4.2.4</b> Encuestas de panel dividido</a></li>
+<li class="chapter" data-level="4.2.5" data-path="periodicidad-en-el-tiempo.html"><a href="periodicidad-en-el-tiempo.html#encuestas-de-panel-rotativo"><i class="fa fa-check"></i><b>4.2.5</b> Encuestas de panel rotativo</a></li>
 </ul></li>
-<li class="chapter" data-level="3.3" data-path="rotación-de-paneles.html"><a href="rotación-de-paneles.html"><i class="fa fa-check"></i><b>3.3</b> Rotación de paneles</a></li>
-<li class="chapter" data-level="3.4" data-path="parámetros-e-indicadores-de-interés.html"><a href="parámetros-e-indicadores-de-interés.html"><i class="fa fa-check"></i><b>3.4</b> Parámetros e indicadores de interés</a>
+<li class="chapter" data-level="4.3" data-path="rotación-de-paneles.html"><a href="rotación-de-paneles.html"><i class="fa fa-check"></i><b>4.3</b> Rotación de paneles</a></li>
+<li class="chapter" data-level="4.4" data-path="parámetros-e-indicadores-de-interés.html"><a href="parámetros-e-indicadores-de-interés.html"><i class="fa fa-check"></i><b>4.4</b> Parámetros e indicadores de interés</a>
 <ul>
-<li class="chapter" data-level="" data-path="parámetros-e-indicadores-de-interés.html"><a href="parámetros-e-indicadores-de-interés.html#algunos-ejemplos-de-indicadores-de-interés-y-su-relación-con-los-tipos-de-encuestas"><i class="fa fa-check"></i>Algunos ejemplos de indicadores de interés y su relación con los tipos de encuestas</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="definición-del-marco-muestral.html"><a href="definición-del-marco-muestral.html"><i class="fa fa-check"></i><b>4</b> Definición del marco muestral</a>
-<ul>
-<li class="chapter" data-level="4.1" data-path="el-marco-de-muestreo.html"><a href="el-marco-de-muestreo.html"><i class="fa fa-check"></i><b>4.1</b> El marco de muestreo</a></li>
-<li class="chapter" data-level="4.2" data-path="los-censos-y-su-incidencia-en-los-marcos-de-muestreo.html"><a href="los-censos-y-su-incidencia-en-los-marcos-de-muestreo.html"><i class="fa fa-check"></i><b>4.2</b> Los censos y su incidencia en los marcos de muestreo</a></li>
-<li class="chapter" data-level="4.3" data-path="construcción-de-las-upm.html"><a href="construcción-de-las-upm.html"><i class="fa fa-check"></i><b>4.3</b> Construcción de las UPM</a>
-<ul>
-<li class="chapter" data-level="" data-path="construcción-de-las-upm.html"><a href="construcción-de-las-upm.html#actualización-continua-del-marco-de-muestreo"><i class="fa fa-check"></i>Actualización continua del marco de muestreo</a></li>
+<li class="chapter" data-level="4.4.1" data-path="parámetros-e-indicadores-de-interés.html"><a href="parámetros-e-indicadores-de-interés.html#algunos-ejemplos-de-indicadores-de-interés-y-su-relación-con-los-tipos-de-encuestas"><i class="fa fa-check"></i><b>4.4.1</b> Algunos ejemplos de indicadores de interés y su relación con los tipos de encuestas</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="metodologías-de-estratificación.html"><a href="metodologías-de-estratificación.html"><i class="fa fa-check"></i><b>5</b> Metodologías de estratificación</a>
+<li class="chapter" data-level="5" data-path="definición-del-marco-de-muestreo.html"><a href="definición-del-marco-de-muestreo.html"><i class="fa fa-check"></i><b>5</b> Definición del marco de muestreo</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="dimensiones-estructurales-en-el-marco-de-muestreo.html"><a href="dimensiones-estructurales-en-el-marco-de-muestreo.html"><i class="fa fa-check"></i><b>5.1</b> Dimensiones estructurales en el marco de muestreo</a></li>
-<li class="chapter" data-level="5.2" data-path="información-a-nivel-de-upm.html"><a href="información-a-nivel-de-upm.html"><i class="fa fa-check"></i><b>5.2</b> Información a nivel de UPM</a></li>
-<li class="chapter" data-level="5.3" data-path="metodologías-univariadas-sobre-medidas-de-resumen.html"><a href="metodologías-univariadas-sobre-medidas-de-resumen.html"><i class="fa fa-check"></i><b>5.3</b> Metodologías univariadas sobre medidas de resumen</a>
-<ul>
-<li class="chapter" data-level="" data-path="metodologías-univariadas-sobre-medidas-de-resumen.html"><a href="metodologías-univariadas-sobre-medidas-de-resumen.html#partición-en-cuantiles-q"><i class="fa fa-check"></i>Partición en cuantiles (Q)</a></li>
-<li class="chapter" data-level="" data-path="metodologías-univariadas-sobre-medidas-de-resumen.html"><a href="metodologías-univariadas-sobre-medidas-de-resumen.html#método-de-raíz-de-frecuencia-acumulada-dh"><i class="fa fa-check"></i>Método de raíz de frecuencia acumulada (DH)</a></li>
-<li class="chapter" data-level="" data-path="metodologías-univariadas-sobre-medidas-de-resumen.html"><a href="metodologías-univariadas-sobre-medidas-de-resumen.html#estratificación-óptima-lh"><i class="fa fa-check"></i>Estratificación óptima (LH)</a></li>
-<li class="chapter" data-level="" data-path="metodologías-univariadas-sobre-medidas-de-resumen.html"><a href="metodologías-univariadas-sobre-medidas-de-resumen.html#estratificación-geométrica-gh"><i class="fa fa-check"></i>Estratificación geométrica (GH)</a></li>
+<li class="chapter" data-level="5.1" data-path="conceptos-fundamentales.html"><a href="conceptos-fundamentales.html"><i class="fa fa-check"></i><b>5.1</b> Conceptos fundamentales</a></li>
+<li class="chapter" data-level="5.2" data-path="los-censos-y-su-incidencia-en-los-marcos-de-muestreo.html"><a href="los-censos-y-su-incidencia-en-los-marcos-de-muestreo.html"><i class="fa fa-check"></i><b>5.2</b> Los censos y su incidencia en los marcos de muestreo</a></li>
+<li class="chapter" data-level="5.3" data-path="construcción-de-las-upm.html"><a href="construcción-de-las-upm.html"><i class="fa fa-check"></i><b>5.3</b> Construcción de las UPM</a></li>
+<li class="chapter" data-level="5.4" data-path="actualización-continua-del-marco-de-muestreo.html"><a href="actualización-continua-del-marco-de-muestreo.html"><i class="fa fa-check"></i><b>5.4</b> Actualización continua del marco de muestreo</a></li>
 </ul></li>
-<li class="chapter" data-level="5.4" data-path="metodologías-multivariadas-sobre-la-matriz-de-información.html"><a href="metodologías-multivariadas-sobre-la-matriz-de-información.html"><i class="fa fa-check"></i><b>5.4</b> Metodologías multivariadas sobre la matriz de información</a>
+<li class="chapter" data-level="6" data-path="metodologías-de-estratificación.html"><a href="metodologías-de-estratificación.html"><i class="fa fa-check"></i><b>6</b> Metodologías de estratificación</a>
 <ul>
-<li class="chapter" data-level="" data-path="metodologías-multivariadas-sobre-la-matriz-de-información.html"><a href="metodologías-multivariadas-sobre-la-matriz-de-información.html#k-medias-de-jarque-kmj"><i class="fa fa-check"></i>K-medias de Jarque (KmJ)</a></li>
-<li class="chapter" data-level="" data-path="metodologías-multivariadas-sobre-la-matriz-de-información.html"><a href="metodologías-multivariadas-sobre-la-matriz-de-información.html#partición-genética-bb"><i class="fa fa-check"></i>Partición genética (BB)</a></li>
+<li class="chapter" data-level="6.1" data-path="dimensiones-estructurales-en-el-marco-de-muestreo.html"><a href="dimensiones-estructurales-en-el-marco-de-muestreo.html"><i class="fa fa-check"></i><b>6.1</b> Dimensiones estructurales en el marco de muestreo</a></li>
+<li class="chapter" data-level="6.2" data-path="información-a-nivel-de-upm.html"><a href="información-a-nivel-de-upm.html"><i class="fa fa-check"></i><b>6.2</b> Información a nivel de UPM</a></li>
+<li class="chapter" data-level="6.3" data-path="metodologías-univariadas-sobre-medidas-de-resumen.html"><a href="metodologías-univariadas-sobre-medidas-de-resumen.html"><i class="fa fa-check"></i><b>6.3</b> Metodologías univariadas sobre medidas de resumen</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="metodologías-univariadas-sobre-medidas-de-resumen.html"><a href="metodologías-univariadas-sobre-medidas-de-resumen.html#partición-en-cuantiles-q"><i class="fa fa-check"></i><b>6.3.1</b> Partición en cuantiles (Q)</a></li>
+<li class="chapter" data-level="6.3.2" data-path="metodologías-univariadas-sobre-medidas-de-resumen.html"><a href="metodologías-univariadas-sobre-medidas-de-resumen.html#método-de-raíz-de-frecuencia-acumulada-dh"><i class="fa fa-check"></i><b>6.3.2</b> Método de raíz de frecuencia acumulada (DH)</a></li>
+<li class="chapter" data-level="6.3.3" data-path="metodologías-univariadas-sobre-medidas-de-resumen.html"><a href="metodologías-univariadas-sobre-medidas-de-resumen.html#estratificación-óptima-lh"><i class="fa fa-check"></i><b>6.3.3</b> Estratificación óptima (LH)</a></li>
+<li class="chapter" data-level="6.3.4" data-path="metodologías-univariadas-sobre-medidas-de-resumen.html"><a href="metodologías-univariadas-sobre-medidas-de-resumen.html#estratificación-geométrica-gh"><i class="fa fa-check"></i><b>6.3.4</b> Estratificación geométrica (GH)</a></li>
 </ul></li>
-<li class="chapter" data-level="5.5" data-path="evaluación-y-escogencia-de-la-mejor-estratificación.html"><a href="evaluación-y-escogencia-de-la-mejor-estratificación.html"><i class="fa fa-check"></i><b>5.5</b> Evaluación y escogencia de la mejor estratificación</a></li>
-<li class="chapter" data-level="5.6" data-path="estratificación-implícita.html"><a href="estratificación-implícita.html"><i class="fa fa-check"></i><b>5.6</b> Estratificación implícita</a></li>
+<li class="chapter" data-level="6.4" data-path="metodologías-multivariadas-sobre-la-matriz-de-información.html"><a href="metodologías-multivariadas-sobre-la-matriz-de-información.html"><i class="fa fa-check"></i><b>6.4</b> Metodologías multivariadas sobre la matriz de información</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="metodologías-multivariadas-sobre-la-matriz-de-información.html"><a href="metodologías-multivariadas-sobre-la-matriz-de-información.html#k-medias-de-jarque-kmj"><i class="fa fa-check"></i><b>6.4.1</b> K-medias de Jarque (KmJ)</a></li>
+<li class="chapter" data-level="6.4.2" data-path="metodologías-multivariadas-sobre-la-matriz-de-información.html"><a href="metodologías-multivariadas-sobre-la-matriz-de-información.html#partición-genética-bb"><i class="fa fa-check"></i><b>6.4.2</b> Partición genética (BB)</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="diseño-y-mecanismo-de-selección-de-la-muestra.html"><a href="diseño-y-mecanismo-de-selección-de-la-muestra.html"><i class="fa fa-check"></i><b>6</b> Diseño y mecanismo de selección de la muestra</a>
-<ul>
-<li class="chapter" data-level="6.1" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html"><i class="fa fa-check"></i><b>6.1</b> Diseños de muestreo</a>
-<ul>
-<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-aleatorio-simple"><i class="fa fa-check"></i>Muestreo aleatorio simple</a></li>
-<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-proporcional-al-tamaño"><i class="fa fa-check"></i>Muestreo proporcional al tamaño</a></li>
-<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-estratificado"><i class="fa fa-check"></i>Muestreo estratificado</a></li>
-<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-de-conglomerados"><i class="fa fa-check"></i>Muestreo de conglomerados</a></li>
-<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-en-varias-etapas"><i class="fa fa-check"></i>Muestreo en varias etapas</a></li>
-<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-en-dos-fases"><i class="fa fa-check"></i>Muestreo en dos fases</a></li>
-<li class="chapter" data-level="" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-balanceado"><i class="fa fa-check"></i>Muestreo balanceado</a></li>
+<li class="chapter" data-level="6.5" data-path="evaluación-y-escogencia-de-la-mejor-estratificación.html"><a href="evaluación-y-escogencia-de-la-mejor-estratificación.html"><i class="fa fa-check"></i><b>6.5</b> Evaluación y escogencia de la mejor estratificación</a></li>
+<li class="chapter" data-level="6.6" data-path="estratificación-implícita.html"><a href="estratificación-implícita.html"><i class="fa fa-check"></i><b>6.6</b> Estratificación implícita</a></li>
 </ul></li>
-<li class="chapter" data-level="6.2" data-path="el-diseño-de-muestreo-estándar-en-una-encuesta-de-hogares.html"><a href="el-diseño-de-muestreo-estándar-en-una-encuesta-de-hogares.html"><i class="fa fa-check"></i><b>6.2</b> El diseño de muestreo estándar en una encuesta de hogares</a></li>
+<li class="chapter" data-level="7" data-path="diseño-y-mecanismo-de-selección-de-la-muestra.html"><a href="diseño-y-mecanismo-de-selección-de-la-muestra.html"><i class="fa fa-check"></i><b>7</b> Diseño y mecanismo de selección de la muestra</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html"><i class="fa fa-check"></i><b>7.1</b> Diseños de muestreo</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-aleatorio-simple"><i class="fa fa-check"></i><b>7.1.1</b> Muestreo aleatorio simple</a></li>
+<li class="chapter" data-level="7.1.2" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-proporcional-al-tamaño"><i class="fa fa-check"></i><b>7.1.2</b> Muestreo proporcional al tamaño</a></li>
+<li class="chapter" data-level="7.1.3" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-estratificado"><i class="fa fa-check"></i><b>7.1.3</b> Muestreo estratificado</a></li>
+<li class="chapter" data-level="7.1.4" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-de-conglomerados"><i class="fa fa-check"></i><b>7.1.4</b> Muestreo de conglomerados</a></li>
+<li class="chapter" data-level="7.1.5" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-en-varias-etapas"><i class="fa fa-check"></i><b>7.1.5</b> Muestreo en varias etapas</a></li>
+<li class="chapter" data-level="7.1.6" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-en-dos-fases"><i class="fa fa-check"></i><b>7.1.6</b> Muestreo en dos fases</a></li>
+<li class="chapter" data-level="7.1.7" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-balanceado"><i class="fa fa-check"></i><b>7.1.7</b> Muestreo balanceado</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="el-efecto-de-diseño.html"><a href="el-efecto-de-diseño.html"><i class="fa fa-check"></i><b>7</b> El efecto de diseño</a>
-<ul>
-<li class="chapter" data-level="7.1" data-path="estimación-del-efecto-de-diseño.html"><a href="estimación-del-efecto-de-diseño.html"><i class="fa fa-check"></i><b>7.1</b> Estimación del efecto de diseño</a></li>
-<li class="chapter" data-level="7.2" data-path="descomposición-del-efecto-de-diseño-en-las-encuestas-de-hogares.html"><a href="descomposición-del-efecto-de-diseño-en-las-encuestas-de-hogares.html"><i class="fa fa-check"></i><b>7.2</b> Descomposición del efecto de diseño en las encuestas de hogares</a></li>
-<li class="chapter" data-level="7.3" data-path="formas-comunes-del-efecto-de-diseño.html"><a href="formas-comunes-del-efecto-de-diseño.html"><i class="fa fa-check"></i><b>7.3</b> Formas comunes del efecto de diseño</a></li>
-<li class="chapter" data-level="7.4" data-path="otras-consideraciones.html"><a href="otras-consideraciones.html"><i class="fa fa-check"></i><b>7.4</b> Otras consideraciones</a>
-<ul>
-<li class="chapter" data-level="" data-path="otras-consideraciones.html"><a href="otras-consideraciones.html#el-efecto-de-diseño-en-subpoblaciones"><i class="fa fa-check"></i>El efecto de diseño en subpoblaciones</a></li>
-<li class="chapter" data-level="" data-path="otras-consideraciones.html"><a href="otras-consideraciones.html#el-efecto-de-diseño-general"><i class="fa fa-check"></i>El efecto de diseño general</a></li>
-<li class="chapter" data-level="" data-path="otras-consideraciones.html"><a href="otras-consideraciones.html#el-efecto-de-diseño-en-las-encuestas-de-hogares-de-la-región"><i class="fa fa-check"></i>El efecto de diseño en las encuestas de hogares de la región</a></li>
+<li class="chapter" data-level="7.2" data-path="el-diseño-de-muestreo-estándar-en-una-encuesta-de-hogares.html"><a href="el-diseño-de-muestreo-estándar-en-una-encuesta-de-hogares.html"><i class="fa fa-check"></i><b>7.2</b> El diseño de muestreo estándar en una encuesta de hogares</a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="8" data-path="cálculo-del-tamaño-de-muestra.html"><a href="cálculo-del-tamaño-de-muestra.html"><i class="fa fa-check"></i><b>8</b> Cálculo del tamaño de muestra</a>
+<li class="chapter" data-level="8" data-path="el-efecto-de-diseño.html"><a href="el-efecto-de-diseño.html"><i class="fa fa-check"></i><b>8</b> El efecto de diseño</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="confiabilidad-y-precisión.html"><a href="confiabilidad-y-precisión.html"><i class="fa fa-check"></i><b>8.1</b> Confiabilidad y precisión</a></li>
-<li class="chapter" data-level="8.2" data-path="el-efecto-de-diseño-en-la-determinación-del-tamaño-de-muestra.html"><a href="el-efecto-de-diseño-en-la-determinación-del-tamaño-de-muestra.html"><i class="fa fa-check"></i><b>8.2</b> El efecto de diseño en la determinación del tamaño de muestra</a></li>
-<li class="chapter" data-level="8.3" data-path="escenarios-de-interés.html"><a href="escenarios-de-interés.html"><i class="fa fa-check"></i><b>8.3</b> Escenarios de interés</a>
+<li class="chapter" data-level="8.1" data-path="estimación-del-efecto-de-diseño.html"><a href="estimación-del-efecto-de-diseño.html"><i class="fa fa-check"></i><b>8.1</b> Estimación del efecto de diseño</a></li>
+<li class="chapter" data-level="8.2" data-path="descomposición-del-efecto-de-diseño-en-las-encuestas-de-hogares.html"><a href="descomposición-del-efecto-de-diseño-en-las-encuestas-de-hogares.html"><i class="fa fa-check"></i><b>8.2</b> Descomposición del efecto de diseño en las encuestas de hogares</a></li>
+<li class="chapter" data-level="8.3" data-path="formas-comunes-del-efecto-de-diseño.html"><a href="formas-comunes-del-efecto-de-diseño.html"><i class="fa fa-check"></i><b>8.3</b> Formas comunes del efecto de diseño</a></li>
+<li class="chapter" data-level="8.4" data-path="otras-consideraciones.html"><a href="otras-consideraciones.html"><i class="fa fa-check"></i><b>8.4</b> Otras consideraciones</a>
 <ul>
-<li class="chapter" data-level="8.3.1" data-path="escenarios-de-interés.html"><a href="escenarios-de-interés.html#tamaño-de-muestra-para-upm-hogares-y-personas"><i class="fa fa-check"></i><b>8.3.1</b> Tamaño de muestra para UPM, hogares y personas</a></li>
-<li class="chapter" data-level="8.3.2" data-path="escenarios-de-interés.html"><a href="escenarios-de-interés.html#tamaño-de-muestra-para-upm-y-hogares"><i class="fa fa-check"></i><b>8.3.2</b> Tamaño de muestra para UPM y hogares</a></li>
-<li class="chapter" data-level="8.3.3" data-path="escenarios-de-interés.html"><a href="escenarios-de-interés.html#tamaño-de-muestra-para-upm-y-personas"><i class="fa fa-check"></i><b>8.3.3</b> Tamaño de muestra para UPM y personas</a></li>
-</ul></li>
-<li class="chapter" data-level="8.4" data-path="otros-escenarios-de-interés.html"><a href="otros-escenarios-de-interés.html"><i class="fa fa-check"></i><b>8.4</b> Otros escenarios de interés</a>
-<ul>
-<li class="chapter" data-level="8.4.1" data-path="otros-escenarios-de-interés.html"><a href="otros-escenarios-de-interés.html#tamaño-de-muestra-para-la-estimación-de-la-diferencia-de-dos-proporciones"><i class="fa fa-check"></i><b>8.4.1</b> Tamaño de muestra para la estimación de la diferencia de dos proporciones</a></li>
-<li class="chapter" data-level="8.4.2" data-path="otros-escenarios-de-interés.html"><a href="otros-escenarios-de-interés.html#tamaño-de-muestra-para-la-estimación-del-impacto-en-dos-mediciones-longitudinales"><i class="fa fa-check"></i><b>8.4.2</b> Tamaño de muestra para la estimación del impacto en dos mediciones longitudinales</a></li>
-<li class="chapter" data-level="8.4.3" data-path="otros-escenarios-de-interés.html"><a href="otros-escenarios-de-interés.html#tamaño-de-muestra-para-el-contraste-de-hipótesis-en-la-diferencia-de-proporciones"><i class="fa fa-check"></i><b>8.4.3</b> Tamaño de muestra para el contraste de hipótesis en la diferencia de proporciones</a></li>
-</ul></li>
-<li class="chapter" data-level="8.5" data-path="algunas-relaciones-de-interés-para-proporciones.html"><a href="algunas-relaciones-de-interés-para-proporciones.html"><i class="fa fa-check"></i><b>8.5</b> Algunas relaciones de interés para proporciones</a>
-<ul>
-<li class="chapter" data-level="" data-path="algunas-relaciones-de-interés-para-proporciones.html"><a href="algunas-relaciones-de-interés-para-proporciones.html#estimación-de-proporciones"><i class="fa fa-check"></i>Estimación de proporciones</a></li>
-<li class="chapter" data-level="" data-path="algunas-relaciones-de-interés-para-proporciones.html"><a href="algunas-relaciones-de-interés-para-proporciones.html#cambios-netos"><i class="fa fa-check"></i>Cambios netos</a></li>
-</ul></li>
-<li class="chapter" data-level="8.6" data-path="algunas-consideraciones-adicionales.html"><a href="algunas-consideraciones-adicionales.html"><i class="fa fa-check"></i><b>8.6</b> Algunas consideraciones adicionales</a>
-<ul>
-<li class="chapter" data-level="8.6.1" data-path="algunas-consideraciones-adicionales.html"><a href="algunas-consideraciones-adicionales.html#asignación-del-tamaño-de-muestra-en-los-estratos-de-muestreo"><i class="fa fa-check"></i><b>8.6.1</b> Asignación del tamaño de muestra en los estratos de muestreo</a></li>
-<li class="chapter" data-level="8.6.2" data-path="algunas-consideraciones-adicionales.html"><a href="algunas-consideraciones-adicionales.html#ajustes-de-subcobertura"><i class="fa fa-check"></i><b>8.6.2</b> Ajustes de subcobertura</a></li>
-<li class="chapter" data-level="8.6.3" data-path="algunas-consideraciones-adicionales.html"><a href="algunas-consideraciones-adicionales.html#sustituciones-y-reemplazos"><i class="fa fa-check"></i><b>8.6.3</b> Sustituciones y reemplazos</a></li>
+<li class="chapter" data-level="8.4.1" data-path="otras-consideraciones.html"><a href="otras-consideraciones.html#el-efecto-de-diseño-en-subpoblaciones"><i class="fa fa-check"></i><b>8.4.1</b> El efecto de diseño en subpoblaciones</a></li>
+<li class="chapter" data-level="8.4.2" data-path="otras-consideraciones.html"><a href="otras-consideraciones.html#el-efecto-de-diseño-general"><i class="fa fa-check"></i><b>8.4.2</b> El efecto de diseño general</a></li>
+<li class="chapter" data-level="8.4.3" data-path="otras-consideraciones.html"><a href="otras-consideraciones.html#el-efecto-de-diseño-en-las-encuestas-de-hogares-de-la-región"><i class="fa fa-check"></i><b>8.4.3</b> El efecto de diseño en las encuestas de hogares de la región</a></li>
 </ul></li>
 </ul></li>
-<li class="part"><span><b>II Procesamiento transversal de las encuestas de hogares</b></span></li>
-<li class="chapter" data-level="9" data-path="estimación-de-parámetros.html"><a href="estimación-de-parámetros.html"><i class="fa fa-check"></i><b>9</b> Estimación de parámetros</a>
+<li class="chapter" data-level="9" data-path="cálculo-del-tamaño-de-muestra.html"><a href="cálculo-del-tamaño-de-muestra.html"><i class="fa fa-check"></i><b>9</b> Cálculo del tamaño de muestra</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="el-estimador-de-horvitz-thompson-para-totales-y-tamaños-poblacionales.html"><a href="el-estimador-de-horvitz-thompson-para-totales-y-tamaños-poblacionales.html"><i class="fa fa-check"></i><b>9.1</b> El estimador de Horvitz-Thompson para totales y tamaños poblacionales</a>
+<li class="chapter" data-level="9.1" data-path="confiabilidad-y-precisión.html"><a href="confiabilidad-y-precisión.html"><i class="fa fa-check"></i><b>9.1</b> Confiabilidad y precisión</a></li>
+<li class="chapter" data-level="9.2" data-path="el-efecto-de-diseño-en-la-determinación-del-tamaño-de-muestra.html"><a href="el-efecto-de-diseño-en-la-determinación-del-tamaño-de-muestra.html"><i class="fa fa-check"></i><b>9.2</b> El efecto de diseño en la determinación del tamaño de muestra</a></li>
+<li class="chapter" data-level="9.3" data-path="algunos-escenarios-de-interés.html"><a href="algunos-escenarios-de-interés.html"><i class="fa fa-check"></i><b>9.3</b> Algunos escenarios de interés</a></li>
+<li class="chapter" data-level="9.4" data-path="tamaño-de-muestra-para-upm-hogares-y-personas.html"><a href="tamaño-de-muestra-para-upm-hogares-y-personas.html"><i class="fa fa-check"></i><b>9.4</b> Tamaño de muestra para UPM, hogares y personas</a>
 <ul>
-<li class="chapter" data-level="9.1.1" data-path="el-estimador-de-horvitz-thompson-para-totales-y-tamaños-poblacionales.html"><a href="el-estimador-de-horvitz-thompson-para-totales-y-tamaños-poblacionales.html#estimación-para-totales"><i class="fa fa-check"></i><b>9.1.1</b> Estimación para totales</a></li>
-<li class="chapter" data-level="9.1.2" data-path="el-estimador-de-horvitz-thompson-para-totales-y-tamaños-poblacionales.html"><a href="el-estimador-de-horvitz-thompson-para-totales-y-tamaños-poblacionales.html#estimación-para-tamaños-y-totales-en-dominios"><i class="fa fa-check"></i><b>9.1.2</b> Estimación para tamaños y totales en dominios</a></li>
+<li class="chapter" data-level="9.4.1" data-path="tamaño-de-muestra-para-upm-hogares-y-personas.html"><a href="tamaño-de-muestra-para-upm-hogares-y-personas.html#ejemplo-proporción-de-personas-pobres"><i class="fa fa-check"></i><b>9.4.1</b> Ejemplo: proporción de personas pobres</a></li>
+<li class="chapter" data-level="9.4.2" data-path="tamaño-de-muestra-para-upm-hogares-y-personas.html"><a href="tamaño-de-muestra-para-upm-hogares-y-personas.html#ejemplo-ingreso-promedio-por-persona"><i class="fa fa-check"></i><b>9.4.2</b> Ejemplo: ingreso promedio por persona</a></li>
+<li class="chapter" data-level="9.4.3" data-path="tamaño-de-muestra-para-upm-hogares-y-personas.html"><a href="tamaño-de-muestra-para-upm-hogares-y-personas.html#ejemplo-tasa-de-desocupación-en-adultos-mayores"><i class="fa fa-check"></i><b>9.4.3</b> Ejemplo: tasa de desocupación en adultos mayores</a></li>
 </ul></li>
-<li class="chapter" data-level="9.2" data-path="el-estimador-de-hájek-para-medias-y-proporciones.html"><a href="el-estimador-de-hájek-para-medias-y-proporciones.html"><i class="fa fa-check"></i><b>9.2</b> El estimador de Hájek para medias y proporciones</a></li>
-<li class="chapter" data-level="9.3" data-path="otros-estimadores-de-muestreo.html"><a href="otros-estimadores-de-muestreo.html"><i class="fa fa-check"></i><b>9.3</b> Otros estimadores de muestreo</a></li>
-<li class="chapter" data-level="9.4" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html"><i class="fa fa-check"></i><b>9.4</b> Estimadores de calibración</a>
+<li class="chapter" data-level="9.5" data-path="tamaño-de-muestra-para-upm-y-hogares.html"><a href="tamaño-de-muestra-para-upm-y-hogares.html"><i class="fa fa-check"></i><b>9.5</b> Tamaño de muestra para UPM y hogares</a>
 <ul>
-<li class="chapter" data-level="9.4.1" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html#ganancia-en-eficiencia"><i class="fa fa-check"></i><b>9.4.1</b> Ganancia en eficiencia</a></li>
-<li class="chapter" data-level="9.4.2" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html#diferentes-formas-del-estimador-de-calibración"><i class="fa fa-check"></i><b>9.4.2</b> Diferentes formas del estimador de calibración</a></li>
-<li class="chapter" data-level="9.4.3" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html#la-calibración-como-un-cambio-de-paradigma"><i class="fa fa-check"></i><b>9.4.3</b> La calibración como un cambio de paradigma</a></li>
+<li class="chapter" data-level="9.5.1" data-path="tamaño-de-muestra-para-upm-y-hogares.html"><a href="tamaño-de-muestra-para-upm-y-hogares.html#ejemplo-gasto-promedio-del-hogar"><i class="fa fa-check"></i><b>9.5.1</b> Ejemplo: gasto promedio del hogar</a></li>
+<li class="chapter" data-level="9.5.2" data-path="tamaño-de-muestra-para-upm-y-hogares.html"><a href="tamaño-de-muestra-para-upm-y-hogares.html#ejemplo-proporción-de-hogares-sin-agua-potable"><i class="fa fa-check"></i><b>9.5.2</b> Ejemplo: proporción de hogares sin agua potable</a></li>
 </ul></li>
+<li class="chapter" data-level="9.6" data-path="tamaño-de-muestra-para-upm-y-personas.html"><a href="tamaño-de-muestra-para-upm-y-personas.html"><i class="fa fa-check"></i><b>9.6</b> Tamaño de muestra para UPM y personas</a>
+<ul>
+<li class="chapter" data-level="9.6.1" data-path="tamaño-de-muestra-para-upm-y-personas.html"><a href="tamaño-de-muestra-para-upm-y-personas.html#ejemplo-ingreso-promedio-en-personas-empleadas"><i class="fa fa-check"></i><b>9.6.1</b> Ejemplo: ingreso promedio en personas empleadas</a></li>
+<li class="chapter" data-level="9.6.2" data-path="tamaño-de-muestra-para-upm-y-personas.html"><a href="tamaño-de-muestra-para-upm-y-personas.html#ejemplo-proporción-de-analfabetas-pobres"><i class="fa fa-check"></i><b>9.6.2</b> Ejemplo: proporción de analfabetas pobres</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="construcción-de-los-factores-de-expansión.html"><a href="construcción-de-los-factores-de-expansión.html"><i class="fa fa-check"></i><b>10</b> Construcción de los factores de expansión</a>
+<li class="chapter" data-level="9.7" data-path="otros-escenarios-de-interés.html"><a href="otros-escenarios-de-interés.html"><i class="fa fa-check"></i><b>9.7</b> Otros escenarios de interés</a>
 <ul>
-<li class="chapter" data-level="10.1" data-path="creación-de-los-pesos-básicos.html"><a href="creación-de-los-pesos-básicos.html"><i class="fa fa-check"></i><b>10.1</b> Creación de los pesos básicos</a></li>
-<li class="chapter" data-level="10.2" data-path="ajuste-por-elegibilidad-desconocida.html"><a href="ajuste-por-elegibilidad-desconocida.html"><i class="fa fa-check"></i><b>10.2</b> Ajuste por elegibilidad desconocida</a></li>
-<li class="chapter" data-level="10.3" data-path="descarte-de-las-unidades-no-elegibles.html"><a href="descarte-de-las-unidades-no-elegibles.html"><i class="fa fa-check"></i><b>10.3</b> Descarte de las unidades no elegibles</a></li>
-<li class="chapter" data-level="10.4" data-path="ajuste-por-ausencia-de-respuesta.html"><a href="ajuste-por-ausencia-de-respuesta.html"><i class="fa fa-check"></i><b>10.4</b> Ajuste por ausencia de respuesta</a></li>
-<li class="chapter" data-level="10.5" data-path="calibración-de-los-factores-de-expansión.html"><a href="calibración-de-los-factores-de-expansión.html"><i class="fa fa-check"></i><b>10.5</b> Calibración de los factores de expansión</a>
-<ul>
-<li class="chapter" data-level="10.5.1" data-path="calibración-de-los-factores-de-expansión.html"><a href="calibración-de-los-factores-de-expansión.html#medidas-de-calidad-en-la-calibración"><i class="fa fa-check"></i><b>10.5.1</b> Medidas de calidad en la calibración</a></li>
-<li class="chapter" data-level="10.5.2" data-path="calibración-de-los-factores-de-expansión.html"><a href="calibración-de-los-factores-de-expansión.html#calibración-integrada-para-hogares-y-personas"><i class="fa fa-check"></i><b>10.5.2</b> Calibración integrada para hogares y personas</a></li>
-<li class="chapter" data-level="10.5.3" data-path="calibración-de-los-factores-de-expansión.html"><a href="calibración-de-los-factores-de-expansión.html#calibración-sobre-razones-medias-y-proporciones"><i class="fa fa-check"></i><b>10.5.3</b> Calibración sobre razones, medias y proporciones</a></li>
+<li class="chapter" data-level="9.7.1" data-path="otros-escenarios-de-interés.html"><a href="otros-escenarios-de-interés.html#tamaño-de-muestra-para-la-estimación-de-la-diferencia-de-dos-proporciones"><i class="fa fa-check"></i><b>9.7.1</b> Tamaño de muestra para la estimación de la diferencia de dos proporciones</a></li>
+<li class="chapter" data-level="9.7.2" data-path="otros-escenarios-de-interés.html"><a href="otros-escenarios-de-interés.html#tamaño-de-muestra-para-la-estimación-del-impacto-en-dos-mediciones-longitudinales"><i class="fa fa-check"></i><b>9.7.2</b> Tamaño de muestra para la estimación del impacto en dos mediciones longitudinales</a></li>
+<li class="chapter" data-level="9.7.3" data-path="otros-escenarios-de-interés.html"><a href="otros-escenarios-de-interés.html#tamaño-de-muestra-para-el-contraste-de-hipótesis-en-la-diferencia-de-proporciones"><i class="fa fa-check"></i><b>9.7.3</b> Tamaño de muestra para el contraste de hipótesis en la diferencia de proporciones</a></li>
 </ul></li>
-<li class="chapter" data-level="10.6" data-path="recorte-y-redondeo.html"><a href="recorte-y-redondeo.html"><i class="fa fa-check"></i><b>10.6</b> Recorte y redondeo</a>
+<li class="chapter" data-level="9.8" data-path="algunas-relaciones-de-interés-para-proporciones.html"><a href="algunas-relaciones-de-interés-para-proporciones.html"><i class="fa fa-check"></i><b>9.8</b> Algunas relaciones de interés para proporciones</a>
 <ul>
-<li class="chapter" data-level="" data-path="recorte-y-redondeo.html"><a href="recorte-y-redondeo.html#recorte-de-pesos-extremos"><i class="fa fa-check"></i>Recorte de pesos extremos</a></li>
-<li class="chapter" data-level="" data-path="recorte-y-redondeo.html"><a href="recorte-y-redondeo.html#el-problema-del-redondeo-de-los-factores-de-expansión"><i class="fa fa-check"></i>El problema del redondeo de los factores de expansión</a></li>
+<li class="chapter" data-level="9.8.1" data-path="algunas-relaciones-de-interés-para-proporciones.html"><a href="algunas-relaciones-de-interés-para-proporciones.html#estimación-de-proporciones"><i class="fa fa-check"></i><b>9.8.1</b> Estimación de proporciones</a></li>
+<li class="chapter" data-level="9.8.2" data-path="algunas-relaciones-de-interés-para-proporciones.html"><a href="algunas-relaciones-de-interés-para-proporciones.html#estimación-de-cambios-netos"><i class="fa fa-check"></i><b>9.8.2</b> Estimación de cambios netos</a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="11" data-path="estimación-del-error-de-muestreo.html"><a href="estimación-del-error-de-muestreo.html"><i class="fa fa-check"></i><b>11</b> Estimación del error de muestreo</a>
+<li class="chapter" data-level="9.9" data-path="algunas-consideraciones-adicionales.html"><a href="algunas-consideraciones-adicionales.html"><i class="fa fa-check"></i><b>9.9</b> Algunas consideraciones adicionales</a>
 <ul>
-<li class="chapter" data-level="11.1" data-path="fórmulas-exactas-y-linealización-de-taylor.html"><a href="fórmulas-exactas-y-linealización-de-taylor.html"><i class="fa fa-check"></i><b>11.1</b> Fórmulas exactas y linealización de Taylor</a></li>
-<li class="chapter" data-level="11.2" data-path="la-técnica-del-último-conglomerado.html"><a href="la-técnica-del-último-conglomerado.html"><i class="fa fa-check"></i><b>11.2</b> La técnica del último conglomerado</a></li>
-<li class="chapter" data-level="11.3" data-path="linealización-de-taylor.html"><a href="linealización-de-taylor.html"><i class="fa fa-check"></i><b>11.3</b> Linealización de Taylor</a></li>
-<li class="chapter" data-level="11.4" data-path="pesos-replicados.html"><a href="pesos-replicados.html"><i class="fa fa-check"></i><b>11.4</b> Pesos replicados</a></li>
-<li class="chapter" data-level="11.5" data-path="consideraciones-adicionales.html"><a href="consideraciones-adicionales.html"><i class="fa fa-check"></i><b>11.5</b> Consideraciones adicionales</a></li>
-</ul></li>
-<li class="chapter" data-level="12" data-path="representatividad-y-ausencia-de-respuesta.html"><a href="representatividad-y-ausencia-de-respuesta.html"><i class="fa fa-check"></i><b>12</b> Representatividad y ausencia de respuesta</a>
-<ul>
-<li class="chapter" data-level="12.1" data-path="indicadores-de-representatividad.html"><a href="indicadores-de-representatividad.html"><i class="fa fa-check"></i><b>12.1</b> Indicadores de representatividad</a>
-<ul>
-<li class="chapter" data-level="12.1.1" data-path="indicadores-de-representatividad.html"><a href="indicadores-de-representatividad.html#el-concepto-de-representatividad"><i class="fa fa-check"></i><b>12.1.1</b> El concepto de representatividad</a></li>
-<li class="chapter" data-level="12.1.2" data-path="indicadores-de-representatividad.html"><a href="indicadores-de-representatividad.html#indicadores-r"><i class="fa fa-check"></i><b>12.1.2</b> Indicadores <span class="math inline">\(R\)</span></a></li>
-<li class="chapter" data-level="12.1.3" data-path="indicadores-de-representatividad.html"><a href="indicadores-de-representatividad.html#el-indicador-r-en-la-práctica"><i class="fa fa-check"></i><b>12.1.3</b> El indicador <span class="math inline">\(R\)</span> en la práctica</a></li>
-</ul></li>
-<li class="chapter" data-level="12.2" data-path="clasificación-de-la-ausencia-de-respuesta.html"><a href="clasificación-de-la-ausencia-de-respuesta.html"><i class="fa fa-check"></i><b>12.2</b> Clasificación de la ausencia de respuesta</a>
-<ul>
-<li class="chapter" data-level="12.2.1" data-path="clasificación-de-la-ausencia-de-respuesta.html"><a href="clasificación-de-la-ausencia-de-respuesta.html#ausencia-de-respuesta-de-registro-y-de-unidad"><i class="fa fa-check"></i><b>12.2.1</b> Ausencia de respuesta de registro y de unidad</a></li>
-<li class="chapter" data-level="12.2.2" data-path="clasificación-de-la-ausencia-de-respuesta.html"><a href="clasificación-de-la-ausencia-de-respuesta.html#efectos-y-consecuencias-de-la-ausencia-de-respuesta"><i class="fa fa-check"></i><b>12.2.2</b> Efectos y consecuencias de la ausencia de respuesta</a></li>
-<li class="chapter" data-level="12.2.3" data-path="clasificación-de-la-ausencia-de-respuesta.html"><a href="clasificación-de-la-ausencia-de-respuesta.html#posibles-soluciones"><i class="fa fa-check"></i><b>12.2.3</b> Posibles soluciones</a></li>
+<li class="chapter" data-level="9.9.1" data-path="algunas-consideraciones-adicionales.html"><a href="algunas-consideraciones-adicionales.html#asignación-del-tamaño-de-muestra-en-los-estratos-de-muestreo"><i class="fa fa-check"></i><b>9.9.1</b> Asignación del tamaño de muestra en los estratos de muestreo</a></li>
+<li class="chapter" data-level="9.9.2" data-path="algunas-consideraciones-adicionales.html"><a href="algunas-consideraciones-adicionales.html#ajustes-de-subcobertura"><i class="fa fa-check"></i><b>9.9.2</b> Ajustes de subcobertura</a></li>
+<li class="chapter" data-level="9.9.3" data-path="algunas-consideraciones-adicionales.html"><a href="algunas-consideraciones-adicionales.html#sustituciones-y-reemplazos"><i class="fa fa-check"></i><b>9.9.3</b> Sustituciones y reemplazos</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="ausencia-de-respuesta-de-unidad.html"><a href="ausencia-de-respuesta-de-unidad.html"><i class="fa fa-check"></i><b>13</b> Ausencia de respuesta de unidad</a>
+<li class="chapter" data-level="10" data-path="estimación-de-parámetros.html"><a href="estimación-de-parámetros.html"><i class="fa fa-check"></i><b>10</b> Estimación de parámetros</a>
 <ul>
-<li class="chapter" data-level="13.1" data-path="sesgo-sobre-los-estimadores.html"><a href="sesgo-sobre-los-estimadores.html"><i class="fa fa-check"></i><b>13.1</b> Sesgo sobre los estimadores</a></li>
-<li class="chapter" data-level="13.2" data-path="soluciones.html"><a href="soluciones.html"><i class="fa fa-check"></i><b>13.2</b> Soluciones</a>
+<li class="chapter" data-level="10.1" data-path="el-estimador-de-horvitz-thompson-para-totales-y-tamaños-poblacionales.html"><a href="el-estimador-de-horvitz-thompson-para-totales-y-tamaños-poblacionales.html"><i class="fa fa-check"></i><b>10.1</b> El estimador de Horvitz-Thompson para totales y tamaños poblacionales</a>
 <ul>
-<li class="chapter" data-level="13.2.1" data-path="soluciones.html"><a href="soluciones.html#propensity-score"><i class="fa fa-check"></i><b>13.2.1</b> Propensity Score</a></li>
-<li class="chapter" data-level="13.2.2" data-path="soluciones.html"><a href="soluciones.html#calibración"><i class="fa fa-check"></i><b>13.2.2</b> Calibración</a></li>
+<li class="chapter" data-level="10.1.1" data-path="el-estimador-de-horvitz-thompson-para-totales-y-tamaños-poblacionales.html"><a href="el-estimador-de-horvitz-thompson-para-totales-y-tamaños-poblacionales.html#estimación-para-totales"><i class="fa fa-check"></i><b>10.1.1</b> Estimación para totales</a></li>
+<li class="chapter" data-level="10.1.2" data-path="el-estimador-de-horvitz-thompson-para-totales-y-tamaños-poblacionales.html"><a href="el-estimador-de-horvitz-thompson-para-totales-y-tamaños-poblacionales.html#el-estimador-ht-en-una-encuesta-de-hogares-regular"><i class="fa fa-check"></i><b>10.1.2</b> El estimador HT en una encuesta de hogares regular</a></li>
+<li class="chapter" data-level="10.1.3" data-path="el-estimador-de-horvitz-thompson-para-totales-y-tamaños-poblacionales.html"><a href="el-estimador-de-horvitz-thompson-para-totales-y-tamaños-poblacionales.html#estimación-para-tamaños-y-totales-en-dominios"><i class="fa fa-check"></i><b>10.1.3</b> Estimación para tamaños y totales en dominios</a></li>
 </ul></li>
-<li class="chapter" data-level="13.3" data-path="la-pandemia-por-covid-19.html"><a href="la-pandemia-por-covid-19.html"><i class="fa fa-check"></i><b>13.3</b> La pandemia por COVID-19</a></li>
-</ul></li>
-<li class="chapter" data-level="14" data-path="ausencia-de-respuesta-por-registro.html"><a href="ausencia-de-respuesta-por-registro.html"><i class="fa fa-check"></i><b>14</b> Ausencia de respuesta por registro</a>
+<li class="chapter" data-level="10.2" data-path="el-estimador-de-hájek-para-medias-y-proporciones.html"><a href="el-estimador-de-hájek-para-medias-y-proporciones.html"><i class="fa fa-check"></i><b>10.2</b> El estimador de Hájek para medias y proporciones</a></li>
+<li class="chapter" data-level="10.3" data-path="otros-estimadores-de-muestreo.html"><a href="otros-estimadores-de-muestreo.html"><i class="fa fa-check"></i><b>10.3</b> Otros estimadores de muestreo</a></li>
+<li class="chapter" data-level="10.4" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html"><i class="fa fa-check"></i><b>10.4</b> Estimadores de calibración</a>
 <ul>
-<li class="chapter" data-level="14.1" data-path="modelos-para-la-imputación.html"><a href="modelos-para-la-imputación.html"><i class="fa fa-check"></i><b>14.1</b> Modelos para la imputación</a></li>
-<li class="chapter" data-level="14.2" data-path="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html"><a href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html"><i class="fa fa-check"></i><b>14.2</b> Ejemplo de imputación en una encuesta de ingresos y gastos</a></li>
-<li class="chapter" data-level="14.3" data-path="consideraciones-sobre-la-imputación-múltiple.html"><a href="consideraciones-sobre-la-imputación-múltiple.html"><i class="fa fa-check"></i><b>14.3</b> Consideraciones sobre la imputación múltiple</a></li>
-</ul></li>
-<li class="chapter" data-level="15" data-path="detección-de-datos-atípicos.html"><a href="detección-de-datos-atípicos.html"><i class="fa fa-check"></i><b>15</b> Detección de datos atípicos</a>
-<ul>
-<li class="chapter" data-level="15.1" data-path="algunos-métodos-de-detección-de-valores-extremos.html"><a href="algunos-métodos-de-detección-de-valores-extremos.html"><i class="fa fa-check"></i><b>15.1</b> Algunos métodos de detección de valores extremos</a></li>
-<li class="chapter" data-level="15.2" data-path="valores-atípicos-en-una-encuesta-de-consumo.html"><a href="valores-atípicos-en-una-encuesta-de-consumo.html"><i class="fa fa-check"></i><b>15.2</b> Valores atípicos en una encuesta de consumo</a></li>
-</ul></li>
-<li class="part"><span><b>III Procesamiento derivado en las encuestas de hogares</b></span></li>
-<li class="chapter" data-level="16" data-path="agregación-de-encuestas.html"><a href="agregación-de-encuestas.html"><i class="fa fa-check"></i><b>16</b> Agregación de encuestas</a>
-<ul>
-<li class="chapter" data-level="16.1" data-path="esquemas-de-acumulación-de-muestras.html"><a href="esquemas-de-acumulación-de-muestras.html"><i class="fa fa-check"></i><b>16.1</b> Esquemas de acumulación de muestras</a></li>
-<li class="chapter" data-level="16.2" data-path="factores-de-expansión-y-estimadores-de-muestreo.html"><a href="factores-de-expansión-y-estimadores-de-muestreo.html"><i class="fa fa-check"></i><b>16.2</b> Factores de expansión y estimadores de muestreo</a></li>
-<li class="chapter" data-level="16.3" data-path="agregación-de-encuestas-con-diferentes-tamaños-de-muestra.html"><a href="agregación-de-encuestas-con-diferentes-tamaños-de-muestra.html"><i class="fa fa-check"></i><b>16.3</b> Agregación de encuestas con diferentes tamaños de muestra</a></li>
-<li class="chapter" data-level="16.4" data-path="efecto-del-tipo-de-encuesta-en-la-eficiencia-de-los-indicadores.html"><a href="efecto-del-tipo-de-encuesta-en-la-eficiencia-de-los-indicadores.html"><i class="fa fa-check"></i><b>16.4</b> Efecto del tipo de encuesta en la eficiencia de los indicadores</a></li>
-<li class="chapter" data-level="16.5" data-path="pruebas-de-hipótesis-sobre-indicadores-agregados.html"><a href="pruebas-de-hipótesis-sobre-indicadores-agregados.html"><i class="fa fa-check"></i><b>16.5</b> Pruebas de hipótesis sobre indicadores agregados</a></li>
-</ul></li>
-<li class="chapter" data-level="17" data-path="procesamiento-longitudinal-de-las-encuestas-rotativas.html"><a href="procesamiento-longitudinal-de-las-encuestas-rotativas.html"><i class="fa fa-check"></i><b>17</b> Procesamiento longitudinal de las encuestas rotativas</a>
-<ul>
-<li class="chapter" data-level="17.1" data-path="diseño-de-paneles-rotativos-en-las-encuestas-de-la-región.html"><a href="diseño-de-paneles-rotativos-en-las-encuestas-de-la-región.html"><i class="fa fa-check"></i><b>17.1</b> Diseño de paneles rotativos en las encuestas de la región</a></li>
-<li class="chapter" data-level="17.2" data-path="generación-de-bases-longitudinales-para-dos-periodos-consecutivos.html"><a href="generación-de-bases-longitudinales-para-dos-periodos-consecutivos.html"><i class="fa fa-check"></i><b>17.2</b> Generación de bases longitudinales para dos periodos consecutivos</a>
-<ul>
-<li class="chapter" data-level="17.2.1" data-path="generación-de-bases-longitudinales-para-dos-periodos-consecutivos.html"><a href="generación-de-bases-longitudinales-para-dos-periodos-consecutivos.html#creación-de-los-pesos-iniciales"><i class="fa fa-check"></i><b>17.2.1</b> Creación de los pesos iniciales</a></li>
-<li class="chapter" data-level="17.2.2" data-path="generación-de-bases-longitudinales-para-dos-periodos-consecutivos.html"><a href="generación-de-bases-longitudinales-para-dos-periodos-consecutivos.html#generación-de-los-pesos-longitudinales"><i class="fa fa-check"></i><b>17.2.2</b> Generación de los pesos longitudinales</a></li>
-</ul></li>
-<li class="chapter" data-level="17.3" data-path="generación-de-bases-longitudinales-anuales.html"><a href="generación-de-bases-longitudinales-anuales.html"><i class="fa fa-check"></i><b>17.3</b> Generación de bases longitudinales anuales</a></li>
-</ul></li>
-<li class="chapter" data-level="18" data-path="análisis-de-flujos-brutos.html"><a href="análisis-de-flujos-brutos.html"><i class="fa fa-check"></i><b>18</b> Análisis de flujos brutos</a>
-<ul>
-<li class="chapter" data-level="18.1" data-path="matrices-de-transición.html"><a href="matrices-de-transición.html"><i class="fa fa-check"></i><b>18.1</b> Matrices de transición</a></li>
-<li class="chapter" data-level="18.2" data-path="modelos-de-markov.html"><a href="modelos-de-markov.html"><i class="fa fa-check"></i><b>18.2</b> Modelos de Markov</a></li>
-<li class="chapter" data-level="18.3" data-path="estimación-de-las-matrices-de-transición.html"><a href="estimación-de-las-matrices-de-transición.html"><i class="fa fa-check"></i><b>18.3</b> Estimación de las matrices de transición</a></li>
-</ul></li>
-<li class="chapter" data-level="19" data-path="criterios-de-calidad-y-difusión.html"><a href="criterios-de-calidad-y-difusión.html"><i class="fa fa-check"></i><b>19</b> Criterios de calidad y difusión</a>
-<ul>
-<li class="chapter" data-level="19.1" data-path="medidas-de-calidad.html"><a href="medidas-de-calidad.html"><i class="fa fa-check"></i><b>19.1</b> Medidas de calidad</a></li>
-<li class="chapter" data-level="19.2" data-path="consideraciones-adicionales-1.html"><a href="consideraciones-adicionales-1.html"><i class="fa fa-check"></i><b>19.2</b> Consideraciones adicionales</a>
-<ul>
-<li class="chapter" data-level="" data-path="consideraciones-adicionales-1.html"><a href="consideraciones-adicionales-1.html#variables-y-subpoblaciones"><i class="fa fa-check"></i>Variables y subpoblaciones</a></li>
-<li class="chapter" data-level="" data-path="consideraciones-adicionales-1.html"><a href="consideraciones-adicionales-1.html#secuencia-lógica-para-crear-reglas-de-supresión"><i class="fa fa-check"></i>Secuencia lógica para crear reglas de supresión</a></li>
+<li class="chapter" data-level="10.4.1" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html#ganancia-en-eficiencia"><i class="fa fa-check"></i><b>10.4.1</b> Ganancia en eficiencia</a></li>
+<li class="chapter" data-level="10.4.2" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html#diferentes-formas-del-estimador-de-calibración"><i class="fa fa-check"></i><b>10.4.2</b> Diferentes formas del estimador de calibración</a></li>
+<li class="chapter" data-level="10.4.3" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html#la-calibración-como-un-cambio-de-paradigma"><i class="fa fa-check"></i><b>10.4.3</b> La calibración como un cambio de paradigma</a></li>
 </ul></li>
 </ul></li>
-<li class="part"><span><b>IV Apéndices</b></span></li>
+<li class="chapter" data-level="11" data-path="construcción-de-los-factores-de-expansión.html"><a href="construcción-de-los-factores-de-expansión.html"><i class="fa fa-check"></i><b>11</b> Construcción de los factores de expansión</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="creación-de-los-pesos-básicos.html"><a href="creación-de-los-pesos-básicos.html"><i class="fa fa-check"></i><b>11.1</b> Creación de los pesos básicos</a></li>
+<li class="chapter" data-level="11.2" data-path="ajuste-por-elegibilidad-desconocida.html"><a href="ajuste-por-elegibilidad-desconocida.html"><i class="fa fa-check"></i><b>11.2</b> Ajuste por elegibilidad desconocida</a></li>
+<li class="chapter" data-level="11.3" data-path="descarte-de-las-unidades-no-elegibles.html"><a href="descarte-de-las-unidades-no-elegibles.html"><i class="fa fa-check"></i><b>11.3</b> Descarte de las unidades no elegibles</a></li>
+<li class="chapter" data-level="11.4" data-path="ajuste-por-ausencia-de-respuesta.html"><a href="ajuste-por-ausencia-de-respuesta.html"><i class="fa fa-check"></i><b>11.4</b> Ajuste por ausencia de respuesta</a></li>
+<li class="chapter" data-level="11.5" data-path="calibración-de-los-factores-de-expansión.html"><a href="calibración-de-los-factores-de-expansión.html"><i class="fa fa-check"></i><b>11.5</b> Calibración de los factores de expansión</a>
+<ul>
+<li class="chapter" data-level="11.5.1" data-path="calibración-de-los-factores-de-expansión.html"><a href="calibración-de-los-factores-de-expansión.html#medidas-de-calidad-en-la-calibración"><i class="fa fa-check"></i><b>11.5.1</b> Medidas de calidad en la calibración</a></li>
+<li class="chapter" data-level="11.5.2" data-path="calibración-de-los-factores-de-expansión.html"><a href="calibración-de-los-factores-de-expansión.html#calibración-integrada-para-hogares-y-personas"><i class="fa fa-check"></i><b>11.5.2</b> Calibración integrada para hogares y personas</a></li>
+<li class="chapter" data-level="11.5.3" data-path="calibración-de-los-factores-de-expansión.html"><a href="calibración-de-los-factores-de-expansión.html#calibración-sobre-razones-medias-y-proporciones"><i class="fa fa-check"></i><b>11.5.3</b> Calibración sobre razones, medias y proporciones</a></li>
+<li class="chapter" data-level="11.5.4" data-path="calibración-de-los-factores-de-expansión.html"><a href="calibración-de-los-factores-de-expansión.html#calibración-con-valores-perdidos-y-totales-estimados"><i class="fa fa-check"></i><b>11.5.4</b> Calibración con valores perdidos y totales estimados</a></li>
+</ul></li>
+<li class="chapter" data-level="11.6" data-path="recorte-y-redondeo.html"><a href="recorte-y-redondeo.html"><i class="fa fa-check"></i><b>11.6</b> Recorte y redondeo</a>
+<ul>
+<li class="chapter" data-level="11.6.1" data-path="recorte-y-redondeo.html"><a href="recorte-y-redondeo.html#recorte-de-pesos-extremos"><i class="fa fa-check"></i><b>11.6.1</b> Recorte de pesos extremos</a></li>
+<li class="chapter" data-level="11.6.2" data-path="recorte-y-redondeo.html"><a href="recorte-y-redondeo.html#el-problema-del-redondeo-de-los-factores-de-expansión"><i class="fa fa-check"></i><b>11.6.2</b> El problema del redondeo de los factores de expansión</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="estimación-del-error-de-muestreo.html"><a href="estimación-del-error-de-muestreo.html"><i class="fa fa-check"></i><b>12</b> Estimación del error de muestreo</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="fórmulas-exactas-y-linealización-de-taylor.html"><a href="fórmulas-exactas-y-linealización-de-taylor.html"><i class="fa fa-check"></i><b>12.1</b> Fórmulas exactas y linealización de Taylor</a></li>
+<li class="chapter" data-level="12.2" data-path="la-técnica-del-último-conglomerado.html"><a href="la-técnica-del-último-conglomerado.html"><i class="fa fa-check"></i><b>12.2</b> La técnica del último conglomerado</a></li>
+<li class="chapter" data-level="12.3" data-path="linealización-de-taylor.html"><a href="linealización-de-taylor.html"><i class="fa fa-check"></i><b>12.3</b> Linealización de Taylor</a></li>
+<li class="chapter" data-level="12.4" data-path="pesos-replicados.html"><a href="pesos-replicados.html"><i class="fa fa-check"></i><b>12.4</b> Pesos replicados</a>
+<ul>
+<li class="chapter" data-level="12.4.1" data-path="pesos-replicados.html"><a href="pesos-replicados.html#la-técnica-de-jackknife"><i class="fa fa-check"></i><b>12.4.1</b> La técnica de Jackknife</a></li>
+<li class="chapter" data-level="12.4.2" data-path="pesos-replicados.html"><a href="pesos-replicados.html#el-método-de-las-réplicas-repetidas-balanceadas"><i class="fa fa-check"></i><b>12.4.2</b> El método de las réplicas repetidas balanceadas</a></li>
+<li class="chapter" data-level="12.4.3" data-path="pesos-replicados.html"><a href="pesos-replicados.html#método-de-bootstrap"><i class="fa fa-check"></i><b>12.4.3</b> Método de Bootstrap</a></li>
+</ul></li>
+<li class="chapter" data-level="12.5" data-path="consideraciones-adicionales.html"><a href="consideraciones-adicionales.html"><i class="fa fa-check"></i><b>12.5</b> Consideraciones adicionales</a>
+<ul>
+<li class="chapter" data-level="12.5.1" data-path="consideraciones-adicionales.html"><a href="consideraciones-adicionales.html#estimaciones-negativas-de-varianza"><i class="fa fa-check"></i><b>12.5.1</b> Estimaciones negativas de varianza</a></li>
+<li class="chapter" data-level="12.5.2" data-path="consideraciones-adicionales.html"><a href="consideraciones-adicionales.html#disminución-de-la-varianza-ante-el-aumento-del-tamaño-de-muestra"><i class="fa fa-check"></i><b>12.5.2</b> Disminución de la varianza ante el aumento del tamaño de muestra</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="representatividad-y-ausencia-de-respuesta.html"><a href="representatividad-y-ausencia-de-respuesta.html"><i class="fa fa-check"></i><b>13</b> Representatividad y ausencia de respuesta</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="el-concepto-de-representatividad.html"><a href="el-concepto-de-representatividad.html"><i class="fa fa-check"></i><b>13.1</b> El concepto de representatividad</a>
+<ul>
+<li class="chapter" data-level="13.1.1" data-path="el-concepto-de-representatividad.html"><a href="el-concepto-de-representatividad.html#representatividad-fuerte"><i class="fa fa-check"></i><b>13.1.1</b> Representatividad fuerte</a></li>
+<li class="chapter" data-level="13.1.2" data-path="el-concepto-de-representatividad.html"><a href="el-concepto-de-representatividad.html#representatividad-débil"><i class="fa fa-check"></i><b>13.1.2</b> Representatividad débil</a></li>
+</ul></li>
+<li class="chapter" data-level="13.2" data-path="indicadores-de-representatividad.html"><a href="indicadores-de-representatividad.html"><i class="fa fa-check"></i><b>13.2</b> Indicadores de representatividad</a>
+<ul>
+<li class="chapter" data-level="13.2.1" data-path="indicadores-de-representatividad.html"><a href="indicadores-de-representatividad.html#indicadores-r"><i class="fa fa-check"></i><b>13.2.1</b> Indicadores <span class="math inline">\(R\)</span></a></li>
+<li class="chapter" data-level="13.2.2" data-path="indicadores-de-representatividad.html"><a href="indicadores-de-representatividad.html#el-indicador-r-en-la-práctica"><i class="fa fa-check"></i><b>13.2.2</b> El indicador <span class="math inline">\(R\)</span> en la práctica</a></li>
+</ul></li>
+<li class="chapter" data-level="13.3" data-path="clasificación-de-la-ausencia-de-respuesta.html"><a href="clasificación-de-la-ausencia-de-respuesta.html"><i class="fa fa-check"></i><b>13.3</b> Clasificación de la ausencia de respuesta</a>
+<ul>
+<li class="chapter" data-level="13.3.1" data-path="clasificación-de-la-ausencia-de-respuesta.html"><a href="clasificación-de-la-ausencia-de-respuesta.html#mcar"><i class="fa fa-check"></i><b>13.3.1</b> MCAR</a></li>
+<li class="chapter" data-level="13.3.2" data-path="clasificación-de-la-ausencia-de-respuesta.html"><a href="clasificación-de-la-ausencia-de-respuesta.html#mar"><i class="fa fa-check"></i><b>13.3.2</b> MAR</a></li>
+<li class="chapter" data-level="13.3.3" data-path="clasificación-de-la-ausencia-de-respuesta.html"><a href="clasificación-de-la-ausencia-de-respuesta.html#nmar"><i class="fa fa-check"></i><b>13.3.3</b> NMAR</a></li>
+</ul></li>
+<li class="chapter" data-level="13.4" data-path="ausencia-de-respuesta-de-registro-y-de-unidad.html"><a href="ausencia-de-respuesta-de-registro-y-de-unidad.html"><i class="fa fa-check"></i><b>13.4</b> Ausencia de respuesta de registro y de unidad</a></li>
+<li class="chapter" data-level="13.5" data-path="efectos-y-consecuencias-de-la-ausencia-de-respuesta.html"><a href="efectos-y-consecuencias-de-la-ausencia-de-respuesta.html"><i class="fa fa-check"></i><b>13.5</b> Efectos y consecuencias de la ausencia de respuesta</a></li>
+<li class="chapter" data-level="13.6" data-path="posibles-soluciones.html"><a href="posibles-soluciones.html"><i class="fa fa-check"></i><b>13.6</b> Posibles soluciones</a>
+<ul>
+<li class="chapter" data-level="13.6.1" data-path="posibles-soluciones.html"><a href="posibles-soluciones.html#imputación-total"><i class="fa fa-check"></i><b>13.6.1</b> Imputación total</a></li>
+<li class="chapter" data-level="13.6.2" data-path="posibles-soluciones.html"><a href="posibles-soluciones.html#ponderación-total"><i class="fa fa-check"></i><b>13.6.2</b> Ponderación total</a></li>
+<li class="chapter" data-level="13.6.3" data-path="posibles-soluciones.html"><a href="posibles-soluciones.html#eliminación-total"><i class="fa fa-check"></i><b>13.6.3</b> Eliminación total</a></li>
+<li class="chapter" data-level="13.6.4" data-path="posibles-soluciones.html"><a href="posibles-soluciones.html#enfoque-combinado"><i class="fa fa-check"></i><b>13.6.4</b> Enfoque combinado</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="ausencia-de-respuesta-de-unidad.html"><a href="ausencia-de-respuesta-de-unidad.html"><i class="fa fa-check"></i><b>14</b> Ausencia de respuesta de unidad</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="sesgo-sobre-los-estimadores.html"><a href="sesgo-sobre-los-estimadores.html"><i class="fa fa-check"></i><b>14.1</b> Sesgo sobre los estimadores</a></li>
+<li class="chapter" data-level="14.2" data-path="soluciones.html"><a href="soluciones.html"><i class="fa fa-check"></i><b>14.2</b> Soluciones</a>
+<ul>
+<li class="chapter" data-level="14.2.1" data-path="soluciones.html"><a href="soluciones.html#propensity-score"><i class="fa fa-check"></i><b>14.2.1</b> Propensity Score</a></li>
+<li class="chapter" data-level="14.2.2" data-path="soluciones.html"><a href="soluciones.html#calibración"><i class="fa fa-check"></i><b>14.2.2</b> Calibración</a></li>
+</ul></li>
+<li class="chapter" data-level="14.3" data-path="las-consecuencias-de-la-pandemia-por-covid-19-en-las-encuestas-de-la-región.html"><a href="las-consecuencias-de-la-pandemia-por-covid-19-en-las-encuestas-de-la-región.html"><i class="fa fa-check"></i><b>14.3</b> Las consecuencias de la pandemia por COVID-19 en las encuestas de la región</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="ausencia-de-respuesta-por-registro.html"><a href="ausencia-de-respuesta-por-registro.html"><i class="fa fa-check"></i><b>15</b> Ausencia de respuesta por registro</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="modelos-para-la-imputación.html"><a href="modelos-para-la-imputación.html"><i class="fa fa-check"></i><b>15.1</b> Modelos para la imputación</a>
+<ul>
+<li class="chapter" data-level="15.1.1" data-path="modelos-para-la-imputación.html"><a href="modelos-para-la-imputación.html#imputación-por-regresión"><i class="fa fa-check"></i><b>15.1.1</b> Imputación por regresión</a></li>
+<li class="chapter" data-level="15.1.2" data-path="modelos-para-la-imputación.html"><a href="modelos-para-la-imputación.html#imputación-de-razón"><i class="fa fa-check"></i><b>15.1.2</b> Imputación de razón</a></li>
+<li class="chapter" data-level="15.1.3" data-path="modelos-para-la-imputación.html"><a href="modelos-para-la-imputación.html#imputación-de-promedio"><i class="fa fa-check"></i><b>15.1.3</b> Imputación de promedio</a></li>
+<li class="chapter" data-level="15.1.4" data-path="modelos-para-la-imputación.html"><a href="modelos-para-la-imputación.html#el-vecino-más-cercano"><i class="fa fa-check"></i><b>15.1.4</b> El vecino más cercano</a></li>
+<li class="chapter" data-level="15.1.5" data-path="modelos-para-la-imputación.html"><a href="modelos-para-la-imputación.html#imputación-por-paquete-caliente-hot-deck"><i class="fa fa-check"></i><b>15.1.5</b> Imputación por paquete caliente (Hot-Deck)</a></li>
+<li class="chapter" data-level="15.1.6" data-path="modelos-para-la-imputación.html"><a href="modelos-para-la-imputación.html#imputación-múltiple"><i class="fa fa-check"></i><b>15.1.6</b> Imputación múltiple</a></li>
+</ul></li>
+<li class="chapter" data-level="15.2" data-path="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html"><a href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html"><i class="fa fa-check"></i><b>15.2</b> Ejemplo de imputación en una encuesta de ingresos y gastos</a>
+<ul>
+<li class="chapter" data-level="15.2.1" data-path="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html"><a href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html#imputación-del-ingreso"><i class="fa fa-check"></i><b>15.2.1</b> Imputación del ingreso</a></li>
+<li class="chapter" data-level="15.2.2" data-path="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html"><a href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html#imputación-del-filtro"><i class="fa fa-check"></i><b>15.2.2</b> Imputación del filtro</a></li>
+<li class="chapter" data-level="15.2.3" data-path="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html"><a href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html#imputación-del-gasto"><i class="fa fa-check"></i><b>15.2.3</b> Imputación del gasto</a></li>
+</ul></li>
+<li class="chapter" data-level="15.3" data-path="consideraciones-sobre-la-imputación-múltiple.html"><a href="consideraciones-sobre-la-imputación-múltiple.html"><i class="fa fa-check"></i><b>15.3</b> Consideraciones sobre la imputación múltiple</a>
+<ul>
+<li class="chapter" data-level="15.3.1" data-path="consideraciones-sobre-la-imputación-múltiple.html"><a href="consideraciones-sobre-la-imputación-múltiple.html#simulación-empírica"><i class="fa fa-check"></i><b>15.3.1</b> Simulación empírica</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="detección-de-datos-atípicos.html"><a href="detección-de-datos-atípicos.html"><i class="fa fa-check"></i><b>16</b> Detección de datos atípicos</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="algunos-métodos-de-detección-de-valores-extremos.html"><a href="algunos-métodos-de-detección-de-valores-extremos.html"><i class="fa fa-check"></i><b>16.1</b> Algunos métodos de detección de valores extremos</a>
+<ul>
+<li class="chapter" data-level="16.1.1" data-path="algunos-métodos-de-detección-de-valores-extremos.html"><a href="algunos-métodos-de-detección-de-valores-extremos.html#método-top-down"><i class="fa fa-check"></i><b>16.1.1</b> Método Top-Down</a></li>
+<li class="chapter" data-level="16.1.2" data-path="algunos-métodos-de-detección-de-valores-extremos.html"><a href="algunos-métodos-de-detección-de-valores-extremos.html#método-de-boxplot"><i class="fa fa-check"></i><b>16.1.2</b> Método de boxplot</a></li>
+<li class="chapter" data-level="16.1.3" data-path="algunos-métodos-de-detección-de-valores-extremos.html"><a href="algunos-métodos-de-detección-de-valores-extremos.html#transformación-de-box-cox"><i class="fa fa-check"></i><b>16.1.3</b> Transformación de Box-Cox</a></li>
+<li class="chapter" data-level="16.1.4" data-path="algunos-métodos-de-detección-de-valores-extremos.html"><a href="algunos-métodos-de-detección-de-valores-extremos.html#método-de-distancia-estandarizada"><i class="fa fa-check"></i><b>16.1.4</b> Método de distancia estandarizada</a></li>
+<li class="chapter" data-level="16.1.5" data-path="algunos-métodos-de-detección-de-valores-extremos.html"><a href="algunos-métodos-de-detección-de-valores-extremos.html#método-de-hidiroglou-bertholot"><i class="fa fa-check"></i><b>16.1.5</b> Método de Hidiroglou-Bertholot</a></li>
+<li class="chapter" data-level="16.1.6" data-path="algunos-métodos-de-detección-de-valores-extremos.html"><a href="algunos-métodos-de-detección-de-valores-extremos.html#método-de-la-distancia-de-mahalanobis"><i class="fa fa-check"></i><b>16.1.6</b> Método de la distancia de Mahalanobis</a></li>
+<li class="chapter" data-level="16.1.7" data-path="algunos-métodos-de-detección-de-valores-extremos.html"><a href="algunos-métodos-de-detección-de-valores-extremos.html#la-distancia-de-cook"><i class="fa fa-check"></i><b>16.1.7</b> La distancia de Cook</a></li>
+<li class="chapter" data-level="16.1.8" data-path="algunos-métodos-de-detección-de-valores-extremos.html"><a href="algunos-métodos-de-detección-de-valores-extremos.html#el-criterio-dfbetas"><i class="fa fa-check"></i><b>16.1.8</b> El criterio DFBETAS</a></li>
+</ul></li>
+<li class="chapter" data-level="16.2" data-path="valores-atípicos-en-una-encuesta-de-consumo.html"><a href="valores-atípicos-en-una-encuesta-de-consumo.html"><i class="fa fa-check"></i><b>16.2</b> Valores atípicos en una encuesta de consumo</a></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="agregación-de-encuestas.html"><a href="agregación-de-encuestas.html"><i class="fa fa-check"></i><b>17</b> Agregación de encuestas</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="esquemas-de-acumulación-de-muestras.html"><a href="esquemas-de-acumulación-de-muestras.html"><i class="fa fa-check"></i><b>17.1</b> Esquemas de acumulación de muestras</a></li>
+<li class="chapter" data-level="17.2" data-path="factores-de-expansión-y-estimadores-de-muestreo.html"><a href="factores-de-expansión-y-estimadores-de-muestreo.html"><i class="fa fa-check"></i><b>17.2</b> Factores de expansión y estimadores de muestreo</a></li>
+<li class="chapter" data-level="17.3" data-path="agregación-de-encuestas-con-diferentes-tamaños-de-muestra.html"><a href="agregación-de-encuestas-con-diferentes-tamaños-de-muestra.html"><i class="fa fa-check"></i><b>17.3</b> Agregación de encuestas con diferentes tamaños de muestra</a></li>
+<li class="chapter" data-level="17.4" data-path="efecto-del-tipo-de-encuesta-en-la-eficiencia-de-los-indicadores.html"><a href="efecto-del-tipo-de-encuesta-en-la-eficiencia-de-los-indicadores.html"><i class="fa fa-check"></i><b>17.4</b> Efecto del tipo de encuesta en la eficiencia de los indicadores</a>
+<ul>
+<li class="chapter" data-level="17.4.1" data-path="efecto-del-tipo-de-encuesta-en-la-eficiencia-de-los-indicadores.html"><a href="efecto-del-tipo-de-encuesta-en-la-eficiencia-de-los-indicadores.html#cambios-netos"><i class="fa fa-check"></i><b>17.4.1</b> Cambios netos</a></li>
+<li class="chapter" data-level="17.4.2" data-path="efecto-del-tipo-de-encuesta-en-la-eficiencia-de-los-indicadores.html"><a href="efecto-del-tipo-de-encuesta-en-la-eficiencia-de-los-indicadores.html#promedio-trimestral"><i class="fa fa-check"></i><b>17.4.2</b> Promedio trimestral</a></li>
+</ul></li>
+<li class="chapter" data-level="17.5" data-path="pruebas-de-hipótesis-sobre-indicadores-agregados.html"><a href="pruebas-de-hipótesis-sobre-indicadores-agregados.html"><i class="fa fa-check"></i><b>17.5</b> Pruebas de hipótesis sobre indicadores agregados</a></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="procesamiento-longitudinal-de-las-encuestas-rotativas.html"><a href="procesamiento-longitudinal-de-las-encuestas-rotativas.html"><i class="fa fa-check"></i><b>18</b> Procesamiento longitudinal de las encuestas rotativas</a>
+<ul>
+<li class="chapter" data-level="18.1" data-path="diseño-de-paneles-rotativos-en-las-encuestas-de-la-región.html"><a href="diseño-de-paneles-rotativos-en-las-encuestas-de-la-región.html"><i class="fa fa-check"></i><b>18.1</b> Diseño de paneles rotativos en las encuestas de la región</a></li>
+<li class="chapter" data-level="18.2" data-path="generación-de-bases-longitudinales-para-dos-periodos-consecutivos.html"><a href="generación-de-bases-longitudinales-para-dos-periodos-consecutivos.html"><i class="fa fa-check"></i><b>18.2</b> Generación de bases longitudinales para dos periodos consecutivos</a>
+<ul>
+<li class="chapter" data-level="18.2.1" data-path="generación-de-bases-longitudinales-para-dos-periodos-consecutivos.html"><a href="generación-de-bases-longitudinales-para-dos-periodos-consecutivos.html#creación-de-los-pesos-longitudinales-iniciales"><i class="fa fa-check"></i><b>18.2.1</b> Creación de los pesos longitudinales iniciales</a></li>
+<li class="chapter" data-level="18.2.2" data-path="generación-de-bases-longitudinales-para-dos-periodos-consecutivos.html"><a href="generación-de-bases-longitudinales-para-dos-periodos-consecutivos.html#creación-de-los-pesos-longitudinales-finales"><i class="fa fa-check"></i><b>18.2.2</b> Creación de los pesos longitudinales finales</a></li>
+</ul></li>
+<li class="chapter" data-level="18.3" data-path="generación-de-bases-longitudinales-anuales.html"><a href="generación-de-bases-longitudinales-anuales.html"><i class="fa fa-check"></i><b>18.3</b> Generación de bases longitudinales anuales</a></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="análisis-de-flujos-brutos.html"><a href="análisis-de-flujos-brutos.html"><i class="fa fa-check"></i><b>19</b> Análisis de flujos brutos</a>
+<ul>
+<li class="chapter" data-level="19.1" data-path="matrices-de-transición.html"><a href="matrices-de-transición.html"><i class="fa fa-check"></i><b>19.1</b> Matrices de transición</a></li>
+<li class="chapter" data-level="19.2" data-path="modelos-de-markov.html"><a href="modelos-de-markov.html"><i class="fa fa-check"></i><b>19.2</b> Modelos de Markov</a></li>
+<li class="chapter" data-level="19.3" data-path="estimación-de-las-matrices-de-transición.html"><a href="estimación-de-las-matrices-de-transición.html"><i class="fa fa-check"></i><b>19.3</b> Estimación de las matrices de transición</a></li>
+</ul></li>
+<li class="chapter" data-level="20" data-path="criterios-de-calidad-y-difusión.html"><a href="criterios-de-calidad-y-difusión.html"><i class="fa fa-check"></i><b>20</b> Criterios de calidad y difusión</a>
+<ul>
+<li class="chapter" data-level="20.1" data-path="medidas-de-calidad.html"><a href="medidas-de-calidad.html"><i class="fa fa-check"></i><b>20.1</b> Medidas de calidad</a>
+<ul>
+<li class="chapter" data-level="20.1.1" data-path="medidas-de-calidad.html"><a href="medidas-de-calidad.html#intervalos-de-confianza"><i class="fa fa-check"></i><b>20.1.1</b> Intervalos de confianza</a></li>
+<li class="chapter" data-level="20.1.2" data-path="medidas-de-calidad.html"><a href="medidas-de-calidad.html#coeficientes-de-variación"><i class="fa fa-check"></i><b>20.1.2</b> Coeficientes de variación</a></li>
+<li class="chapter" data-level="20.1.3" data-path="medidas-de-calidad.html"><a href="medidas-de-calidad.html#coeficiente-de-variación-logarítmico"><i class="fa fa-check"></i><b>20.1.3</b> Coeficiente de variación logarítmico</a></li>
+<li class="chapter" data-level="20.1.4" data-path="medidas-de-calidad.html"><a href="medidas-de-calidad.html#el-efecto-de-diseño-deff"><i class="fa fa-check"></i><b>20.1.4</b> El efecto de diseño DEFF</a></li>
+<li class="chapter" data-level="20.1.5" data-path="medidas-de-calidad.html"><a href="medidas-de-calidad.html#tamaño-de-muestra"><i class="fa fa-check"></i><b>20.1.5</b> Tamaño de muestra</a></li>
+<li class="chapter" data-level="20.1.6" data-path="medidas-de-calidad.html"><a href="medidas-de-calidad.html#tamaño-de-muestra-efectivo"><i class="fa fa-check"></i><b>20.1.6</b> Tamaño de muestra efectivo</a></li>
+<li class="chapter" data-level="20.1.7" data-path="medidas-de-calidad.html"><a href="medidas-de-calidad.html#grados-de-libertad"><i class="fa fa-check"></i><b>20.1.7</b> Grados de libertad</a></li>
+<li class="chapter" data-level="20.1.8" data-path="medidas-de-calidad.html"><a href="medidas-de-calidad.html#conteo-de-casos-no-ponderado"><i class="fa fa-check"></i><b>20.1.8</b> Conteo de casos no ponderado</a></li>
+</ul></li>
+<li class="chapter" data-level="20.2" data-path="consideraciones-adicionales-1.html"><a href="consideraciones-adicionales-1.html"><i class="fa fa-check"></i><b>20.2</b> Consideraciones adicionales</a>
+<ul>
+<li class="chapter" data-level="20.2.1" data-path="consideraciones-adicionales-1.html"><a href="consideraciones-adicionales-1.html#variables-y-subpoblaciones"><i class="fa fa-check"></i><b>20.2.1</b> Variables y subpoblaciones</a></li>
+<li class="chapter" data-level="20.2.2" data-path="consideraciones-adicionales-1.html"><a href="consideraciones-adicionales-1.html#secuencia-lógica-para-crear-reglas-de-supresión"><i class="fa fa-check"></i><b>20.2.2</b> Secuencia lógica para crear reglas de supresión</a></li>
+</ul></li>
+</ul></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
 <li class="chapter" data-level="A" data-path="una-perspectiva-regional-de-las-encuestas-de-hogares.html"><a href="una-perspectiva-regional-de-las-encuestas-de-hogares.html"><i class="fa fa-check"></i><b>A</b> Una perspectiva regional de las encuestas de hogares</a>
 <ul>
 <li class="chapter" data-level="A.1" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html"><i class="fa fa-check"></i><b>A.1</b> Descripción de algunas encuestas por países</a>
 <ul>
-<li class="chapter" data-level="" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#argentina"><i class="fa fa-check"></i>Argentina</a></li>
-<li class="chapter" data-level="" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#bolivia"><i class="fa fa-check"></i>Bolivia</a></li>
-<li class="chapter" data-level="" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#brasil"><i class="fa fa-check"></i>Brasil</a></li>
-<li class="chapter" data-level="" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#chile"><i class="fa fa-check"></i>Chile</a></li>
-<li class="chapter" data-level="" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#colombia"><i class="fa fa-check"></i>Colombia</a></li>
-<li class="chapter" data-level="" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#costa-rica"><i class="fa fa-check"></i>Costa Rica</a></li>
-<li class="chapter" data-level="" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#cuba"><i class="fa fa-check"></i>Cuba</a></li>
-<li class="chapter" data-level="" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#ecuador"><i class="fa fa-check"></i>Ecuador</a></li>
-<li class="chapter" data-level="" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#el-salvador"><i class="fa fa-check"></i>El Salvador</a></li>
-<li class="chapter" data-level="" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#guatemala"><i class="fa fa-check"></i>Guatemala</a></li>
-<li class="chapter" data-level="" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#honduras"><i class="fa fa-check"></i>Honduras</a></li>
-<li class="chapter" data-level="" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#méxico"><i class="fa fa-check"></i>México</a></li>
-<li class="chapter" data-level="" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#nicaragua"><i class="fa fa-check"></i>Nicaragua</a></li>
-<li class="chapter" data-level="" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#panamá"><i class="fa fa-check"></i>Panamá</a></li>
-<li class="chapter" data-level="" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#paraguay"><i class="fa fa-check"></i>Paraguay</a></li>
-<li class="chapter" data-level="" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#perú"><i class="fa fa-check"></i>Perú</a></li>
-<li class="chapter" data-level="" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#república-dominicana"><i class="fa fa-check"></i>República Dominicana</a></li>
-<li class="chapter" data-level="" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#uruguay"><i class="fa fa-check"></i>Uruguay</a></li>
-<li class="chapter" data-level="" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#venezuela"><i class="fa fa-check"></i>Venezuela</a></li>
+<li class="chapter" data-level="A.1.1" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#argentina"><i class="fa fa-check"></i><b>A.1.1</b> Argentina</a></li>
+<li class="chapter" data-level="A.1.2" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#bolivia"><i class="fa fa-check"></i><b>A.1.2</b> Bolivia</a></li>
+<li class="chapter" data-level="A.1.3" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#brasil"><i class="fa fa-check"></i><b>A.1.3</b> Brasil</a></li>
+<li class="chapter" data-level="A.1.4" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#chile"><i class="fa fa-check"></i><b>A.1.4</b> Chile</a></li>
+<li class="chapter" data-level="A.1.5" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#colombia"><i class="fa fa-check"></i><b>A.1.5</b> Colombia</a></li>
+<li class="chapter" data-level="A.1.6" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#costa-rica"><i class="fa fa-check"></i><b>A.1.6</b> Costa Rica</a></li>
+<li class="chapter" data-level="A.1.7" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#cuba"><i class="fa fa-check"></i><b>A.1.7</b> Cuba</a></li>
+<li class="chapter" data-level="A.1.8" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#ecuador"><i class="fa fa-check"></i><b>A.1.8</b> Ecuador</a></li>
+<li class="chapter" data-level="A.1.9" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#el-salvador"><i class="fa fa-check"></i><b>A.1.9</b> El Salvador</a></li>
+<li class="chapter" data-level="A.1.10" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#guatemala"><i class="fa fa-check"></i><b>A.1.10</b> Guatemala</a></li>
+<li class="chapter" data-level="A.1.11" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#honduras"><i class="fa fa-check"></i><b>A.1.11</b> Honduras</a></li>
+<li class="chapter" data-level="A.1.12" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#méxico"><i class="fa fa-check"></i><b>A.1.12</b> México</a></li>
+<li class="chapter" data-level="A.1.13" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#nicaragua"><i class="fa fa-check"></i><b>A.1.13</b> Nicaragua</a></li>
+<li class="chapter" data-level="A.1.14" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#panamá"><i class="fa fa-check"></i><b>A.1.14</b> Panamá</a></li>
+<li class="chapter" data-level="A.1.15" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#paraguay"><i class="fa fa-check"></i><b>A.1.15</b> Paraguay</a></li>
+<li class="chapter" data-level="A.1.16" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#perú"><i class="fa fa-check"></i><b>A.1.16</b> Perú</a></li>
+<li class="chapter" data-level="A.1.17" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#república-dominicana"><i class="fa fa-check"></i><b>A.1.17</b> República Dominicana</a></li>
+<li class="chapter" data-level="A.1.18" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#uruguay"><i class="fa fa-check"></i><b>A.1.18</b> Uruguay</a></li>
+<li class="chapter" data-level="A.1.19" data-path="descripción-de-algunas-encuestas-por-países.html"><a href="descripción-de-algunas-encuestas-por-países.html#venezuela"><i class="fa fa-check"></i><b>A.1.19</b> Venezuela</a></li>
 </ul></li>
 <li class="chapter" data-level="A.2" data-path="desafios-de-la-región.html"><a href="desafios-de-la-región.html"><i class="fa fa-check"></i><b>A.2</b> Desafios de la región</a></li>
 </ul></li>
 <li class="chapter" data-level="B" data-path="software.html"><a href="software.html"><i class="fa fa-check"></i><b>B</b> Software</a>
 <ul>
-<li class="chapter" data-level="" data-path="software.html"><a href="software.html#r"><i class="fa fa-check"></i>R</a></li>
-<li class="chapter" data-level="" data-path="software.html"><a href="software.html#spss"><i class="fa fa-check"></i>SPSS</a></li>
-<li class="chapter" data-level="" data-path="software.html"><a href="software.html#sas"><i class="fa fa-check"></i>SAS</a></li>
-<li class="chapter" data-level="" data-path="software.html"><a href="software.html#stata"><i class="fa fa-check"></i>STATA</a></li>
+<li class="chapter" data-level="B.1" data-path="r.html"><a href="r.html"><i class="fa fa-check"></i><b>B.1</b> R</a></li>
+<li class="chapter" data-level="B.2" data-path="stata.html"><a href="stata.html"><i class="fa fa-check"></i><b>B.2</b> STATA</a></li>
+<li class="chapter" data-level="B.3" data-path="spss.html"><a href="spss.html"><i class="fa fa-check"></i><b>B.3</b> SPSS</a></li>
+<li class="chapter" data-level="B.4" data-path="sas.html"><a href="sas.html"><i class="fa fa-check"></i><b>B.4</b> SAS</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
 <li class="divider"></li>
@@ -394,8 +463,8 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="calibración-de-los-factores-de-expansión" class="section level2" number="10.5">
-<h2><span class="header-section-number">10.5</span> Calibración de los factores de expansión</h2>
+<div id="calibración-de-los-factores-de-expansión" class="section level2" number="11.5">
+<h2><span class="header-section-number">11.5</span> Calibración de los factores de expansión</h2>
 <p>Después de conformar el sistema de ponderación de pesos de muestreo en la encuesta, es posible calibrar estos pesos con la información auxiliar disponible para cada país, a nivel nacional, por estratos de interés, e incluso por variable continuas sobre las que se tenga interés. <span class="citation"><a href="#ref-Sarndal_Lundstrom_2006" role="doc-biblioref">C.-E. Särndal y Lundström</a> (<a href="#ref-Sarndal_Lundstrom_2006" role="doc-biblioref">2006</a>)</span> afirman que cuando los estudios por muestreo están afectados por la ausencia de respuesta, es deseable que la estructura inferencial que sustenta la encuesta induzca estimadores con sesgo pequeño o nulo y con errores estándares pequeños. A su vez, durante décadas los INE han optado por preferir los sistemas de pesos que sean capaces de reproducir la información auxiliar disponible<a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a> y que sean eficiente al momento de estimar cualquier característica de interés en un estudio multipropósito.</p>
 <p>De ahora en adelante, y con el fin de simplificar la notación estadística, se denotará indistintamente a la muestra de elegibles respondientes como <span class="math inline">\(s\)</span>. Como se vio en los capítulos anteriores, debido a la construcción teórica de los estimadores de calibración, los pesos calibrados responden a la siguiente restricción</p>
 <p><span class="math display">\[
@@ -405,22 +474,32 @@ div.csl-indent {
 <p><span class="math display">\[
 \sum_{s_h} w_k = N_h
 \]</span></p>
-<p><span class="citation"><a href="#ref-Gutierrez_2016" role="doc-biblioref">Hugo Andrés Gutiérrez</a> (<a href="#ref-Gutierrez_2016" role="doc-biblioref">2016</a>)</span> menciona que esta coherencia entre las cifras oficiales y las que la encuesta puede producir hace que sea preferible el uso de los estimadores de calibración. Las anteriores características son satisfechas al usar el enfoque de calibración que induce una estructura inferencial robusta en presencia de información disponible puesto que reduce tanto el error de muestreo como el error debido a la ausencia de respuesta. Una vez que se ha ejecutado el proceso de calibración, se crean nuevos pesos que, en general, pueden ser escritos como</p>
+<p><span class="citation"><a href="#ref-Gutierrez_2016" role="doc-biblioref">H. A. Gutiérrez</a> (<a href="#ref-Gutierrez_2016" role="doc-biblioref">2016</a>)</span> menciona que esta coherencia entre las cifras oficiales y las que la encuesta puede producir hace que sea preferible el uso de los estimadores de calibración. Las anteriores características son satisfechas al usar el enfoque de calibración que induce una estructura inferencial robusta en presencia de información disponible puesto que reduce tanto el error de muestreo como el error debido a la ausencia de respuesta. Una vez que se ha ejecutado el proceso de calibración, se crean nuevos pesos que, en general, pueden ser escritos como</p>
 <p><span class="math display">\[
 w_k = g_k * d_{4k}  \ \ \ \ \ \ \ \ \forall \ k \in s
 \]</span></p>
-<p>En donde los valores <span class="math inline">\(g_k\)</span> son dependientes de la muestra seleccionada <span class="math inline">\(s\)</span> y de la función de optimización escogida para realizar el proceso de calibración. En general no tienen una forma cerrada, aunque dependiendo de la estructura en la información auxiliar pueden tomar valores particulares. Por lo tanto, el estimador de calibración tomará su forma clásica, dada por:</p>
+<p>En donde los valores <span class="math inline">\(g_k\)</span> son dependientes de la muestra seleccionada <span class="math inline">\(s\)</span> y de la función de optimización escogida para realizar el proceso de calibración. En general no tienen una forma cerrada, aunque dependiendo de la estructura en la información auxiliar pueden tomar valores particulares. Por ejemplo, bajo la distancia Ji-cuadrado, el estimador de calibración tomará la siguiente forma dada por:</p>
 <p><span class="math display">\[
-\hat{t}_{y, cal} = \sum_{k\in s} w_k y_k
+\hat{t}_{y, cal} 
+= \sum_{k\in s} w_k y_k 
+= \hat{t}_{y, \pi} + ( \mathbf{t_x} - \hat{\mathbf{t}}_{\mathbf{x}, \pi}) \hat{\mathbf{B}_s}
 \]</span></p>
-<p>Los estimadores de calibración son <em>aproximadamente insesgados</em>, pero la magnitud del sesgo está dada por la siguiente expresión:</p>
+<p>En donde <span class="math inline">\(\hat{\mathbf{B}}_s\)</span> es un vector de coeficiente de regresión dependiente de la muestra <span class="math inline">\(s\)</span> y de constantes <span class="math inline">\(q_k\)</span> cuya forma funcional se presenta a continuación.</p>
 <p><span class="math display">\[
-B(\hat{t}_{y, cal}) = E\left[ \sum_{k \in s} (w_k - d_k) y_k \right]
+\hat{\mathbf{B}}_s = \left(\sum_s w_k q_k \mathbf{x}_k\mathbf{x}_k&#39;\right)^{-1}\sum_s w_k q_k \mathbf{x}_k y_k
+\]</span></p>
+<p>En este caso particular, los ponderadores <span class="math inline">\(g_k\)</span> se pueden escribir como sigue:</p>
+<p><span class="math display">\[
+g_k = 1 + ( \mathbf{t_x} - \hat{\mathbf{t}}_{\mathbf{x}, \pi}) \left(\sum_s w_k q_k \mathbf{x}_k\mathbf{x}_k&#39;\right)^{-1}\sum_s w_k q_k \mathbf{x}_k
+\]</span></p>
+<p>Nótese que los estimadores de calibración son <em>aproximadamente insesgados</em>, pero la magnitud del sesgo está dada por la siguiente expresión:</p>
+<p><span class="math display">\[
+Bias(\hat{t}_{y, cal}) = E\left[ \sum_{k \in s} (w_k - d_k) y_k \right]
 \]</span></p>
 <p>Si los nuevos pesos calibrados son cercanos a los pesos originales en todas las posibles muestras, entonces el sesgo será insignificante. Ahora, si el tamaño de muestra es insuficiente no conviene utilizar este tipo de estimadores. Además, se sugiere que el coeficiente de variación del estimador de Horvitz-Thompson para las covariables (inducidas por todos los cruces y celdas considerados) sea menor del 10% para asegurar que el sesgo de los estimadores de calibración sea despreciable.</p>
 <p>Por otro lado, cuando se tienen múltiples variables discretas es posible que el cruce de categorías contenga muy pocas unidades para las cuales se deben ajustar los pesos originales. Esto puede inducir sesgo en algunos subgrupos. Si aún así se decide optar por mantener estas múltiples restricciones de calibración, será necesario hacer un chequeo empírico del ajuste que cada modelo pueda tener con todas las variables de la encuesta.</p>
-<div id="medidas-de-calidad-en-la-calibración" class="section level3" number="10.5.1">
-<h3><span class="header-section-number">10.5.1</span> Medidas de calidad en la calibración</h3>
+<div id="medidas-de-calidad-en-la-calibración" class="section level3" number="11.5.1">
+<h3><span class="header-section-number">11.5.1</span> Medidas de calidad en la calibración</h3>
 <p><span class="citation"><a href="#ref-Silva_2004" role="doc-biblioref">Silva</a> (<a href="#ref-Silva_2004" role="doc-biblioref">2004</a>)</span> presenta algunas consideraciones al respecto del sesgo que puede generarse al usar esta metodología en las encuestas de hogares y aborda algunos criterios para evaluar la calidad de la calibración. Estas medidas se pueden considerar como protección en contra del sesgo generado por tener demasiadas restricciones. Además, se resalta la importancia de que las variables utilizadas para la calibración sean estimadas de manera precisa por los estimadores clásicos de muestreo. Por ejemplo, si el número de personas en una región es utilizada como una variable de calibración (utilizando como total auxiliar las proyecciones demográficas), entonces el coeficiente de variación del estimador de Horvitz-Thompson sobre esta variable debería ser menor, por ejemplo, al 10%.</p>
 <p>La teoría afirma que entre más variables de calibración se tengan menor será la varianza asociada a las estimaciones (no así el sesgo). Sin embargo, existen problemas computacionales cuando las restricciones que se deben satisfacer son demasiadas. Una primera opción es verificar que no se tengan variables que puedan tener codependencia lineal con otras. Al descartar estas variables es posible conservar una varianza pequeña puesto que se descartan combinaciones lineales de otras variables. Se recomienda hacer un análisis de cuántas variables se deben utilizar en la calibración para optimizar el error cuadrático medio de los estimadores finales en las encuestas de hogares.</p>
 <p>En una primera instancia, no sería adecuado utilizar demasiadas restricciones de calibración para satisfacer muchas proyecciones demográficas. Es fácil equivocarse en esta definición. Por ejemplo, si la encuesta es representativa a nivel de departamento (10 niveles), sexo (2 niveles) y edad (4 niveles), entonces podría ser contraproducente utilizar <span class="math inline">\(10 \times 2 \times 4 = 80\)</span> restricciones de calibración y se debería empezar por analizar una estrategia más parsimoniosa con <span class="math inline">\(10 + 2 + 4 = 16\)</span> restricciones de calibración. Nótese que a medida que las desagregaciones sean más profundas, el nivel de error en las proyecciones poblacionales será más grande. Ademas, entre más restricciones haya, más sesgo y varianza se introduce a la estimación. La idea general del proceso es encontrar un número de restricciones parsimonioso que permita tener estimaciones aproximadamente insesgadas con una varianza menor a la generada con los factores de expansión originales.</p>
@@ -465,8 +544,8 @@ M8 = 1+cv^2(w_k)
 \]</span></p>
 <p>En este caso, es deseable que esta medida sea muy cercana a uno, indicando que la dispersión de los pesos finales está controlada.</p>
 </div>
-<div id="calibración-integrada-para-hogares-y-personas" class="section level3" number="10.5.2">
-<h3><span class="header-section-number">10.5.2</span> Calibración integrada para hogares y personas</h3>
+<div id="calibración-integrada-para-hogares-y-personas" class="section level3" number="11.5.2">
+<h3><span class="header-section-number">11.5.2</span> Calibración integrada para hogares y personas</h3>
 <p>Una de las preguntas recurrentes en la calibración de encuestas de hogares es el nivel al cual se debería realizar este ajuste. En principio, es posible realizar la calibración al nivel de las personas, o al nivel de los hogares. Cada una de estas opciones trae algunas ventajas y consideraciones que se deben tener en cuenta.</p>
 <ul>
 <li><p>Calibrar al nivel de los hogares implica que el hogar tendrá unos nuevos pesos que cumplen con las restricciones de calibración, y esos pesos los heredará a las personas que habitan el hogar. De esta forma todas las personas pertenecientes a un mismo hogar tendrán el mismo peso de muestreo, sin importar sus diferencias en composición demográfica. Por ejemplo, hombres, mujeres, menores y mayores de 15 años tendrán el mismo peso de muestreo. Esta propiedad es atractiva puesto que emula el diseño de muestreo que se definió en la fase de planeación. Sin embargo, realizar la calibración a nivel de los hogares hace que dentro de las unidades primarias de muestreo (UPM) los hogares no tengan un peso homogéneo, lo que se distancia de las propiedades del diseño sistemático simple que se usa para la selección de los hogares dentro de las UPM.</p></li>
@@ -481,8 +560,8 @@ M8 = 1+cv^2(w_k)
 w_{k|i}=w_{II,i}\ \text{para toda persona $k$ en el hogar $i$}.
 \]</span></p>
 <p>De esta forma, sería posible obtener pesos consistentes con las restricciones de calibración a nivel de persona y que, al mismo tiempo, permitiera la integración con los hogares al cambiar de unidad de observación. En la literatura se han descrito varios métodos para lograr esta estandarización. A continuación se profundiza en algunos de ellos.</p>
-<div id="estevao-sarndal" class="section level4 unnumbered">
-<h4>Estevao &amp; Sarndal</h4>
+<div id="estevao-sarndal" class="section level4" number="11.5.2.1">
+<h4><span class="header-section-number">11.5.2.1</span> Estevao &amp; Sarndal</h4>
 <p>En principio, se debe notar que es posible realizar el proceso de calibración de factores de expansión sobre la base de datos de las personas o sobre la base de datos de los hogares. De estos dos escenarios calibrar sobre la base de personas parecería ser la opción más rápida puesto que, en la mayoría de los casos, las cifras que se utilizan para calibrar están al nivel de los individuos. Por ejemplo, pensando en una encuesta de fuerza laboral, es evidente que las variables más importantes de la encuesta se encuentran al nivel de las personas y que la calibración de los factores de expansión se debería realizar desde la base de datos de personas.</p>
 <p>Ahora, suponga una situación en la cual se desea calibrar por sexo. En este caso, se debería tener acceso a las proyecciones demográficas por sexo para el periodo de referencia de la encuesta y se procedería a calibrar los factores de expansión, utilizando un enfoque de post-estratificación. En este escenario, las ecuaciones de calibración estarían dadas por la siguiente expresión:</p>
 <p><span class="math display">\[
@@ -503,8 +582,8 @@ w_k = d_{k|i}w_{II,i} \quad \forall k \in s_i
 \]</span></p>
 <p>Como todos los individuos pertenecientes a un hogar son seleccionados para que respondan la encuesta de hogares, se tiene que <span class="math inline">\(d_{k|i} = 1\)</span>, por definición. Por lo tanto, el peso del individuo (en la base de datos de la muestra de personas) será idéntico al peso calibrado del hogar; es decir <span class="math inline">\(w_k = w_{II,i} \quad \forall k \in S_i\)</span>. Además, dado que el muestreo es de conglomerados en la última etapa y todos los individuos del hogar son seleccionados, entonces el peso de muestreo del hogar será el promedio de los pesos individuales.</p>
 </div>
-<div id="lemaitre-dufour" class="section level4 unnumbered">
-<h4>Lemaitre &amp; Dufour</h4>
+<div id="lemaitre-dufour" class="section level4" number="11.5.2.2">
+<h4><span class="header-section-number">11.5.2.2</span> Lemaitre &amp; Dufour</h4>
 <p>Un segundo enfoque, condensado en <span class="citation"><a href="#ref-Lemaitre_Dufour_1987" role="doc-biblioref">Lemaitre y Dufour</a> (<a href="#ref-Lemaitre_Dufour_1987" role="doc-biblioref">1987</a>)</span>, afirma que se deben crear nuevas variables de calibración a nivel de persona, definidas como el promedio de las variables originales en el hogar. Por ende, se definen las siguientes cantidades:</p>
 <p><span class="math display">\[
 z_{ik}=\sum_{i \in s_{II}} x_{ik}\ \ y\ \ \ {\bar{z}}_{ik}=\frac{z_{ik}}{N_i}
@@ -513,8 +592,8 @@ z_{ik}=\sum_{i \in s_{II}} x_{ik}\ \ y\ \ \ {\bar{z}}_{ik}=\frac{z_{ik}}{N_i}
 <p>En la literatura estadística se ha estudiado este enfoque integrado. Es así como <span class="citation"><a href="#ref-Neethling_Galpin_2006" role="doc-biblioref">Neethling y Galpin</a> (<a href="#ref-Neethling_Galpin_2006" role="doc-biblioref">2006</a>)</span> concluyeron que, para ambos enfoques, las estimaciones resultantes redujeron el sesgo, aumentaron la precisión y proporcionaron un único conjunto de ponderaciones para los datos de las encuestas estudiadas. Además, si se opta por el segundo enfoque, en el cual el tamaño de la base de datos sería igual al número de personas entrevistadas, se tendría el suficiente margen para actualizar las restricciones de calibración con el fin de ejercer un mayor control sobre los tamaños de los subgrupos de interés.</p>
 </div>
 </div>
-<div id="calibración-sobre-razones-medias-y-proporciones" class="section level3" number="10.5.3">
-<h3><span class="header-section-number">10.5.3</span> Calibración sobre razones, medias y proporciones</h3>
+<div id="calibración-sobre-razones-medias-y-proporciones" class="section level3" number="11.5.3">
+<h3><span class="header-section-number">11.5.3</span> Calibración sobre razones, medias y proporciones</h3>
 <p><span class="citation"><a href="#ref-Gutierrez_Zhang_Rodriguez_2016" role="doc-biblioref">Gutierrez, Zhang, y Rodriguez</a> (<a href="#ref-Gutierrez_Zhang_Rodriguez_2016" role="doc-biblioref">2016</a>)</span> afirman que, además de utilizar ponderadores calibrados a tamaños o totales, también es posible imponer restricciones de calibración sobre razones, que a su vez son una generalización de medias y proporciones. Por ejemplo, considere <span class="math inline">\(Q\)</span> subgrupos de interés (dominios, estratos o post-estratos). Si las razones para dichos subgrupos fuesen conocidas, podemos encontrar pesos <span class="math inline">\(w_k\)</span> que satisfagan la siguiente restricción:</p>
 <p><span class="math display">\[
 \hat{\textbf{R}}_{cal} = (\hat{R}_{1,cal},...,\hat{R}_{Q,cal})&#39;= (R_1,...,R_Q)&#39;= \textbf{R}
@@ -548,11 +627,68 @@ y_{qk} - \bar{y}_{q} \ \ \ &amp;\text{si} \ k \in s_q \\
 \end{cases}
 \end{equation*}\]</span></p>
 </div>
+<div id="calibración-con-valores-perdidos-y-totales-estimados" class="section level3" number="11.5.4">
+<h3><span class="header-section-number">11.5.4</span> Calibración con valores perdidos y totales estimados</h3>
+<p>Existen algunas condiciones que deben mantenerse al momento de utilizar los estimadores de calibración en las encuestas de hogares. Una de estas condiciones es que la información de las covariables de calibración esté completa en la base de datos de la encuestas. Por ejemplo, asuma que un país está interesado en evaluar la posibilidad de actualizar las covariables de calibración en su encuesta continua de fuerza de trabajo. En efect, con el advenimiento de nuevas oleadas de migración internacional en la región, es posible considerar que la nacionalidad del respondiente esté directamente relacionada con su condición de actividad. Por lo tanto, incluir esta variable en el sistema de calibración podría ser atractivo para reducir los sesgos generados por la ausencia de respuesta (o problemas de cobertura del marco de muestreo) de los extranjeros en la encuesta.</p>
+<p>Al momento de actualizar el sistema de calibración es necesario tener en cuenta que las nuevas covariables deben tener información completa en la base de datos de la encuesta. Siguiendo con el ejemplo planteado, si la nacionalidad de los respondientes tiene observaciones incompletas, entonces habrían serias dificultades para considerarla en el nuevo sistema. En particular, habría que sopesar las siguientes consideraciones:</p>
+<ul>
+<li><p>Los estimadores de calibración no están basados en modelos estadísticos. A pesar de que estos estimadores se conocen como <em>asistidos por modelos</em> (porque se basan en información auxiliar externa a la encuesta), siguen adheridos al marco inferencial <em>basado en el diseño de muestreo</em>, donde se supone que los valores observados a nivel de unidad para las variables de la encuesta son valores verdaderos, no aleatorios y fijos.</p></li>
+<li><p>Desde un punto de vista matemático, la calibración es un problema de optimización con restricciones sobre los totales auxiliares disponibles, que estaría erróneamente definido si faltaran valores de las covariables de calibración para algunas unidades.</p></li>
+<li><p>Los INE suelen utilizar como covariables de calibración <em>variables estructurales</em>, es decir variables cuyos valores muestrales se observan con alta calidad (es decir, no hay valores perdidos y son fiables), o pueden reconstruirse de forma confiable y precisa a partir de fuentes externas (por ejemplo, registros estadísticos, archivos censales, encuestas pasadas).</p></li>
+</ul>
+<p>Uno de los objetivos de actualizar el sistema de calibración (incluyendo la varaible nacionalidad en nuestro ejemplo) es, no solo tener consistencia con las cifras de migración oficiales, sino también usarla para tratar la ausencia de respuesta de unidad. En este caso, se calibra la muestra efectiva; es decir, el subconjunto donde las variables auxiliares se observan completamente. Si suponemos que la información de la covariable no está completa en las bases de datos de la encuesta, el investigador tendría dos opciones posibles:</p>
+<ol style="list-style-type: decimal">
+<li>Descartar la nacionalidad como variable auxiliar en la calibración.</li>
+<li>Imputar o rellenar los valores faltantes de la variable nacionalidad antes de la calibración.</li>
+</ol>
+<p>Nótese que la imputación asumirá implícita o explícitamente algún tipo de modelo, lo que hará que los estimadores de calibración finales ya no estén completamente <em>basados en el diseño de muestreo</em>, y se pierda todo el andamiaje inferencial en la encuesta, incluyendo su comparabilidad en el tiempo. Además, no se lograría una protección definitiva contra el sesgo inducido por la ausencia de respuesta de unidad después de la calibración. Es más, si el modelo de imputación no queda correctamente especificado, el error podría ser aún más grande.</p>
+<p>Sin embargo, si las unidades de la muestra pudieran vincularse sin error a un registro estadístico completo, actualizado y de alta calidad en el que se dispone de la nacionalidad, entonces se podría rellenar los valores perdidos en la base de datos para esta covariable y la inferencia seguiría siendo robusta y fiel al paradigma básico de las encuestas de hogares.</p>
+<p>En resumen, la recomendación al respecto es que se realicen todos los esfuerzos en la consecución de las covariables de calibración para los respondientes en la etapa de recolección de información primaria. Si esto no fuese posible, apoyarse en registros estadísticos para conseguir la nacionalidad del respondiente, sería una solución igualmente plausible. De la misma forma debiesen evitarse la adopción de modelos de imputación en las covariables de calibración.</p>
+<p>Por otro lado, la calibración con totales de control estimados es cada vez más utilizada. si bien es cierto que el procedimiento de calibración exige que los totales de control sean conocidos de antemano, también es cierto que los censos no tienen la posibilidad de realizarse más frecuentemente. Por ende, las estructuras poblacionales y demográficas observadas en los censos pueden desactualizarse rápidamente. Una vez más considérese el caso de la nacionalidad. Ante una explosión migratoria en un país en el periodo intercensal, las proyecciones censales para la variable nacionalidad podrían quedar obsoletas rápidamente y sería necesario utilizar estimaciones de otras operaciones estadísticas para poder calibrar con totales estimados de control actualizados.</p>
+<p>Un ejemplo de la situación anterior se da en los Estados Unidos con la <em>American Community Survey</em>, encuesta que provee estimaciones actualizadas y oportunas con información anual detallada acerca del ingreso, educación, empleo, cobertura en salud, costos del hogar y condiciones para los residentes del país. Esta encuesta complementa los datos poblacionales recolectados por el censo, que se realiza cada diez años.</p>
+<p>Por lo tanto, es posible que una encuesta mediana o pequeña, cuya muestra se denota como <span class="math inline">\(s_A\)</span> se apoye en totales de control estimados por una encuesta más grande, cuya muestra se denota con <span class="math inline">\(s_B\)</span>. Este caso se conoce con el nombre de <em>calibración con totales de control estimados</em> <span class="citation">(<a href="#ref-Dever2008" role="doc-biblioref">J. Dever 2008</a>)</span> y los estimadores derivados con esta técnica serán denotados con un asterisco. En este caso, los estimadores de calibración buscarían nuevos ponderadores <span class="math inline">\(w_k^*\)</span> que satisfcieran la siguiente restricción:</p>
+<p><span class="math display">\[
+\sum_{k\in s_A}w_k^*\mathbf{x}_k =  \sum_{j\in s_B}w_j\mathbf{x}_j = \hat{\mathbf{t}}_{\mathbf{x}, cal}
+\]</span></p>
+<p>Por tanto, el estimador de un total con las observaciones de la muestra pequeña tendría la siguiente forma funcional:</p>
+<p><span class="math display">\[
+\hat{t}_{y, cal}^* 
+= \sum_{k\in s_A} w_k^* y_k 
+= \hat{t}_{y, \pi} + ( \hat{\mathbf{t}}_{\mathbf{x}, cal} - \hat{\mathbf{t}}_{\mathbf{x}, \pi}) \hat{\mathbf{B}_{s_A}}
+\]</span>
+En donde</p>
+<p><span class="math display">\[
+\hat{\mathbf{B}}_{s_A} = \left(\sum_{s_A} w_k q_k \mathbf{x}_k\mathbf{x}_k&#39;\right)^{-1}\sum_{s_A} w_k q_k \mathbf{x}_k y_k
+\]</span></p>
+<p>Sin embargo, <span class="citation"><a href="#ref-Dever_Valliant_2016" role="doc-biblioref">J. A. Dever y Valliant</a> (<a href="#ref-Dever_Valliant_2016" role="doc-biblioref">2016</a>)</span> muestran que, al utilizar la metodología de calibración con totales de control estimados, existe sesgo para los estimadores de razón, definidos así:</p>
+<p><span class="math display">\[
+\hat{R}^*_{y, cal} = \frac{\hat{t}_{y, cal}^*}{\hat{t}_{z, cal}^*}
+\]</span></p>
+<p>En donde <span class="math inline">\(\hat{t}_{y, cal}^*\)</span> y <span class="math inline">\(\hat{t}_{z, cal}^*\)</span> denotan dos estimadores de calibración con totales de control estimados. Nótese que esta es la misma forma que tomaría cualquier promedio estimado</p>
+<p><span class="math display">\[
+\bar y ^{*}_{cal} = \frac{\hat{t}_{y, cal}^{*}}{\hat{N}^{*}_{cal}}
+\]</span></p>
+<p>En este caso, el denominador de <span class="math inline">\(\hat{R}^{*}_{cal}\)</span> sería <span class="math inline">\(\hat{t}_{z,cal}^{*} = \hat N^{*}_{cal}\)</span>. <span class="citation"><a href="#ref-Dever_Valliant_2016" role="doc-biblioref">J. A. Dever y Valliant</a> (<a href="#ref-Dever_Valliant_2016" role="doc-biblioref">2016</a>)</span> presentan la siguiente expresión para el sesgo de un promedio <span class="math inline">\(\bar y ^{*}_{cal}\)</span>:</p>
+<p>$$
+Bias(y ^{*}_{cal})
+
+
+</p>
+<p>$$</p>
+<p>Con <span class="math inline">\(Bias(\hat{t}_{cal}^{*})\)</span> y <span class="math inline">\(Bias(\hat{N}^{*}_{cal})\)</span>, los sesgos de los estimadores de calibración con totales de control estimados del total poblacional <span class="math inline">\((t_y)\)</span> y del tamaño poblacional <span class="math inline">\((N)\)</span>, respectivamente. El sesgo de estos estimadores puede llegar a ser despreciable si el mecanismo que genera la ausencia de respuesta es aleatorio o completamente aleatorio (ver capítulo 10), y si se incluye una columna de unos en la matriz de las variables de calibración, lo cual mostraría que no hay errores de cobertura.</p>
+<p>Asimismo, la estructura de varianza de estos estimadores es bastante compleja como lo presentan <span class="citation"><a href="#ref-Dever_Valliant_2016" role="doc-biblioref">J. A. Dever y Valliant</a> (<a href="#ref-Dever_Valliant_2016" role="doc-biblioref">2016</a>)</span>. Sin emabrgo, es posible utilizar métodos de estimación de varianza basados en réplicas como los propuestos por <span class="citation"><a href="#ref-Opsomer_Erciulescu_2022" role="doc-biblioref">Opsomer y Erciulescu</a> (<a href="#ref-Opsomer_Erciulescu_2022" role="doc-biblioref">2022</a>)</span>.</p>
+</div>
 </div>
 <h3>Referencias</h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Alexander_1987" class="csl-entry">
 Alexander, Charles. 1987. <span>«A class of methods for using person controls in household weighting»</span>. <em>Survey Methodology</em> 13 (1): 183-98.
+</div>
+<div id="ref-Dever2008" class="csl-entry">
+Dever, Jill. 2008. <em>Sampling Weight Calibration with Estimated Control Totals</em>.
+</div>
+<div id="ref-Dever_Valliant_2016" class="csl-entry">
+Dever, Jill A., y Richard Valliant. 2016. <span>«General Regression Estimation Adjusted for Undercoverage and Estimated Control Totals»</span>. <em>Journal of Survey Statistics and Methodology</em> 4 (3): 289-318. <a href="https://doi.org/10.1093/jssam/smw001">https://doi.org/10.1093/jssam/smw001</a>.
 </div>
 <div id="ref-Deville_Sarndal_1992" class="csl-entry">
 Deville, Jean-Claude, y Carl-Erik Särndal. 1992. <span>«Calibration Estimators in Survey Sampling»</span>. <em>Journal of the American Statistical Association</em> 87 (418): 376-82. <a href="https://doi.org/10.1080/01621459.1992.10475217">https://doi.org/10.1080/01621459.1992.10475217</a>.
@@ -574,6 +710,9 @@ Lemaitre, G, y Johane Dufour. 1987. <span>«An integrated method for weighting p
 </div>
 <div id="ref-Neethling_Galpin_2006" class="csl-entry">
 Neethling, A, y J S Galpin. 2006. <span>«Weighting of Household Survey Data: A Comparison of Various Calibration, Integrated and Cosmetic Estimators»</span>. <em>South African Statistical Journal</em>, 23.
+</div>
+<div id="ref-Opsomer_Erciulescu_2022" class="csl-entry">
+Opsomer, Jean D, y Andreea L Erciulescu. 2022. <span>«Replication variance estimation after sample-based calibration»</span>. <em>Survey Methodology</em> 47 (2): 265-77.
 </div>
 <div id="ref-Sarndal_Lundstrom_2006" class="csl-entry">
 Särndal, Carl-Erik, y Sixten Lundström. 2006. <em>Estimation in surveys with nonresponse</em>. Repr. Wiley series en survey methodology. Wiley.
@@ -598,7 +737,6 @@ Silva, PL. d N. 2004. <span>«Calibration estimation: when and why, how much and
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -638,6 +776,10 @@ gitbook.start({
 "text": null
 },
 "download": ["Diseño y análisis de encuestas de hogares.pdf", "Diseño y análisis de encuestas de hogares.epub", "Diseño y análisis de encuestas de hogares.mobi"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section"
 },
