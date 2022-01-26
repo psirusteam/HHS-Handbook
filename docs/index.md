@@ -1,7 +1,7 @@
 --- 
 title: "Diseño y análisis estadístico en las encuestas de hogares de América Latina"
 author: "Andrés Gutiérrez^[Experto Regional en Estadísticas Sociales - Comisión Económica para América Latina y el Caribe (CEPAL) -  andres.gutierrez@cepal.org]"
-date: "2022-01-18"
+date: "2022-01-26"
 documentclass: book
 bibliography: [CEPAL.bib]
 biblio-style: apalike

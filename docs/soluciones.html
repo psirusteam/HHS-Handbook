@@ -24,7 +24,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-01-18" />
+<meta name="date" content="2022-01-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -322,7 +322,10 @@ div.csl-indent {
 <li class="chapter" data-level="14.2.1" data-path="soluciones.html"><a href="soluciones.html#propensity-score"><i class="fa fa-check"></i><b>14.2.1</b> Propensity Score</a></li>
 <li class="chapter" data-level="14.2.2" data-path="soluciones.html"><a href="soluciones.html#calibración"><i class="fa fa-check"></i><b>14.2.2</b> Calibración</a></li>
 </ul></li>
-<li class="chapter" data-level="14.3" data-path="las-consecuencias-de-la-pandemia-por-covid-19-en-las-encuestas-de-la-región.html"><a href="las-consecuencias-de-la-pandemia-por-covid-19-en-las-encuestas-de-la-región.html"><i class="fa fa-check"></i><b>14.3</b> Las consecuencias de la pandemia por COVID-19 en las encuestas de la región</a></li>
+<li class="chapter" data-level="14.3" data-path="las-consecuencias-de-la-pandemia-por-covid-19-en-las-encuestas-de-la-región.html"><a href="las-consecuencias-de-la-pandemia-por-covid-19-en-las-encuestas-de-la-región.html"><i class="fa fa-check"></i><b>14.3</b> Las consecuencias de la pandemia por COVID-19 en las encuestas de la región</a>
+<ul>
+<li class="chapter" data-level="14.3.1" data-path="las-consecuencias-de-la-pandemia-por-covid-19-en-las-encuestas-de-la-región.html"><a href="las-consecuencias-de-la-pandemia-por-covid-19-en-las-encuestas-de-la-región.html#ejemplo"><i class="fa fa-check"></i><b>14.3.1</b> Ejemplo</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="15" data-path="ausencia-de-respuesta-por-registro.html"><a href="ausencia-de-respuesta-por-registro.html"><i class="fa fa-check"></i><b>15</b> Ausencia de respuesta por registro</a>
 <ul>
@@ -485,7 +488,14 @@ E(I_kD_k)
 = E\left(E(I_kD_k|I_k) \right)
 = E(I_k)E(D_k|I_k) = \pi_k \phi_k
 \]</span></p>
-<p>En resumen, si se tiene acceso a información auxiliar (contenida en el marco de muestreo o en otras preguntas de la encuesta), y si se considera que el mecanismo que genera la ausencia de respuesta en la encuesta de hogares es MAR o MCAR, es posible ajustar un modelo de <em>propensity score</em> para la ausencia de respuesta (en donde la variable dependiente es una variable indicadora de la respuesta del individuo por lo general supeditado a una distribución Bernoulli o Binomial).</p>
+<p>En resumen, si se tiene acceso a información auxiliar (contenida en el marco de muestreo o en otras preguntas de la encuesta), y si se considera que el mecanismo que genera la ausencia de respuesta en la encuesta de hogares es MAR o MCAR, es posible ajustar un modelo de <em>propensity score</em> para la ausencia de respuesta (en donde la variable dependiente es una variable indicadora de la respuesta del individuo por lo general supeditado a una distribución Bernoulli o Binomial). En resumen, es posible definir el siguiente estimador insesgado</p>
+<p><span class="math display">\[
+\hat{t}_y=\sum_{k\in s_{ER}}d_{4k}y_k
+\]</span></p>
+<p>En donde</p>
+<p><span class="math display">\[
+d_{4k} = \frac{d_{3k}}{\hat{\phi_k}}  \ \ \ \ \ \ \ \ \forall \ k  \in s_{ER}
+\]</span></p>
 <p>Siempre es muy importante realizar una validación exhaustiva de los modelos utilizados para estimar la probabilidad de respuesta. En general, es necesario que el modelo satisfaga las siguientes dos condiciones:</p>
 <ol style="list-style-type: decimal">
 <li><em>Soporte común</em>: al igual que en un experimento aleatorizado, es necesario garantizar que ninguna combinación de las covariables induzca un estado (respuesta o ausencia de respuesta) de forma determinística. Es decir sobre todas las combinaciones en las covariables deben existir respondientes y no respondientes. Esta condición se puede escribir como:
@@ -500,14 +510,14 @@ E(I_kD_k)
 &amp;= Pr[D_{1, k} | k \notin s_r, I_{1, k} = 1, \mathbf{x}]
 \end{align*}\]</span></p>
 <p>Por último, se debe corroborar que la suma de los pesos ajustados por la ausencia de respuesta esté cercana al tamaño de la población que se quiere representar. La figura <a href="soluciones.html#fig:figel3a">14.1</a> permite ilustrar el soporte común entre respondientes y no respodientes para un modelo de <em>propensity score</em>; notese que ambas distribuciones son similiares, por lo que es posible concluir que efectivamente las covariables usadas están representando bien la estructura estocástica en respondientes y no respondientes.</p>
-<div class="figure"><span style="display:block;" id="fig:figel3a"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:figel3a"></span>
 <img src="Pics/el3a.png" alt="Distribución de las probabilidades estimadas de respuesta: respondientes (arriba), no respondientes (medio), ambos (abajo)." width="50%" />
 <p class="caption">
 Figura 14.1: Distribución de las probabilidades estimadas de respuesta: respondientes (arriba), no respondientes (medio), ambos (abajo).
 </p>
 </div>
 <p>Además, la figura <a href="soluciones.html#fig:figel3b">14.2</a> muestra la propiedad de balanceo en el modelo; véase cómo ambas distribuciones se alejan de los extremos (ceros y uno) y presentan una caracterización similar.</p>
-<div class="figure"><span style="display:block;" id="fig:figel3b"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:figel3b"></span>
 <img src="Pics/el3b.png" alt="Balanceo entre respondientes y no respondientes" width="50%" />
 <p class="caption">
 Figura 14.2: Balanceo entre respondientes y no respondientes
@@ -551,14 +561,14 @@ w_k = d_k \times g_k  \cong d_k \times \hat \phi_k
 <li>Se utilizaron metodologías de calibración y se comparó, de forma empírica, el efecto de la ausencia de respuesta sobre las estimaciones finales.</li>
 </ol>
 <p>En primera instancia, cabe mencionar que la población se definió a partir del ingreso del hogar, y se creó usando variables auxiliares disponibles (sexo). De esta forma, se le dio una probabilidad de respuesta diferencial entre los grupos correspondientes al cruce de las categorías de estas dos variables. Como resultado de las simulaciones, se generaron estimaciones para el estimador de Horvitz-Thompson sin ajuste de ningún tipo y para un estimador de calibración que tuvo en cuenta los conteos poblacionales censales para cada las dos categorías de la variables sexo. La figura <a href="soluciones.html#fig:fightcal">14.3</a> muestra el comportamiento de ambas estimaciones. La línea roja refleja el parámetro desconocido, los puntos negros indican las estimaciones del estimador de calibración en cada iteración de la simulación, mientras que los puntos grises muestran las estimaciones del estimador de Horvitz-Thompson en cada iteración de la simulación</p>
-<div class="figure"><span style="display:block;" id="fig:fightcal"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:fightcal"></span>
 <img src="Pics/c9.png" alt="Estimaciones de Horvtiz-Thompson y de calibración." width="50%" />
 <p class="caption">
 Figura 14.3: Estimaciones de Horvtiz-Thompson y de calibración.
 </p>
 </div>
 <p>En conjunto con la gráfica anterior, la figura <a href="soluciones.html#fig:fightcaldist">14.4</a> muestra la distribución sesgada del estimador de Horvitz-Thompson (gris) en comparación con el insesgamiento del estimador de calibración (negro). Bajo este esquema de respuesta, incluir en la calibración las variables pertinentes corrige el sesgo generado por la ausencia de respuesta. En este estudió se encontró que el estimador ingenuo (HT) produjo sesgo para la estimación de los tamaños de hombres y mujeres, para el tamaño de la población, para los ingresos de hombres y mujeres y para los ingresos de la población.</p>
-<div class="figure"><span style="display:block;" id="fig:fightcaldist"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:fightcaldist"></span>
 <img src="Pics/c10.png" alt="Distribuciones del estimador de Horvtiz-Thompson y del estimador de calibración" width="50%" />
 <p class="caption">
 Figura 14.4: Distribuciones del estimador de Horvtiz-Thompson y del estimador de calibración
@@ -571,7 +581,7 @@ Figura 14.4: Distribuciones del estimador de Horvtiz-Thompson y del estimador de
 <li>Identificar los dominios de estimación más importantes.</li>
 </ul>
 <p>En particular al introducir otras covariables en la calibración (grupo de edad, escolaridad, región, área), además de la corrección del sesgo se evidencia un aumento de la precisión en las nuevas estimaciones, tal como lo muestra las distribuciones de los estimadores en la figura <a href="soluciones.html#fig:fightcal2dist">14.5</a>, en donde se consideran tres estimadores: el estimador de Horvitz-Thompson (gris claro), el estimador de calibración con restricción de sexo (negro) y el estimador de calibración con todas las restricciones (gris oscuro).</p>
-<div class="figure"><span style="display:block;" id="fig:fightcal2dist"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:fightcal2dist"></span>
 <img src="Pics/c12.png" alt="Distribuciones del estimador de Horvtiz-Thompson y de dos estimadores de calibración" width="50%" />
 <p class="caption">
 Figura 14.5: Distribuciones del estimador de Horvtiz-Thompson y de dos estimadores de calibración

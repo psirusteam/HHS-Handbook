@@ -199,6 +199,7 @@ soluciones
 propensity-score
 calibración
 las-consecuencias-de-la-pandemia-por-covid-19-en-las-encuestas-de-la-región
+ejemplo
 ausencia-de-respuesta-por-registro
 modelos-para-la-imputación
 imputación-por-regresión

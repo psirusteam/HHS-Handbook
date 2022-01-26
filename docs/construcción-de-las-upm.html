@@ -24,7 +24,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-01-18" />
+<meta name="date" content="2022-01-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -322,7 +322,10 @@ div.csl-indent {
 <li class="chapter" data-level="14.2.1" data-path="soluciones.html"><a href="soluciones.html#propensity-score"><i class="fa fa-check"></i><b>14.2.1</b> Propensity Score</a></li>
 <li class="chapter" data-level="14.2.2" data-path="soluciones.html"><a href="soluciones.html#calibración"><i class="fa fa-check"></i><b>14.2.2</b> Calibración</a></li>
 </ul></li>
-<li class="chapter" data-level="14.3" data-path="las-consecuencias-de-la-pandemia-por-covid-19-en-las-encuestas-de-la-región.html"><a href="las-consecuencias-de-la-pandemia-por-covid-19-en-las-encuestas-de-la-región.html"><i class="fa fa-check"></i><b>14.3</b> Las consecuencias de la pandemia por COVID-19 en las encuestas de la región</a></li>
+<li class="chapter" data-level="14.3" data-path="las-consecuencias-de-la-pandemia-por-covid-19-en-las-encuestas-de-la-región.html"><a href="las-consecuencias-de-la-pandemia-por-covid-19-en-las-encuestas-de-la-región.html"><i class="fa fa-check"></i><b>14.3</b> Las consecuencias de la pandemia por COVID-19 en las encuestas de la región</a>
+<ul>
+<li class="chapter" data-level="14.3.1" data-path="las-consecuencias-de-la-pandemia-por-covid-19-en-las-encuestas-de-la-región.html"><a href="las-consecuencias-de-la-pandemia-por-covid-19-en-las-encuestas-de-la-región.html#ejemplo"><i class="fa fa-check"></i><b>14.3.1</b> Ejemplo</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="15" data-path="ausencia-de-respuesta-por-registro.html"><a href="ausencia-de-respuesta-por-registro.html"><i class="fa fa-check"></i><b>15</b> Ausencia de respuesta por registro</a>
 <ul>
@@ -465,7 +468,7 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="construcción-de-las-upm" class="section level2" number="5.3">
 <h2><span class="header-section-number">5.3</span> Construcción de las UPM</h2>
-<p>La definición del marco de muestreo para las encuestas de hogares responde básicamente a un objetivo: la definición de las unidades primarias de muestreo. En la búsqueda de la optimización de esta solución, es necesario responder una pregunta fundamental: ¿cuál debe ser el tamaño apropiado para las UPM? No es lo mismo definir las UPM como agregaciones de 20 hogares, que de 1000 hogares. Esta pregunta debe ser abordada, en principio, desde una perspectiva técnica, en donde confluyan diferentes perspectivas (de muestreo, logísticas, presupuestales, cartográficas). Por ejemplo, <span class="citation"><a href="#ref-Valliant_Dever_Kreuter_2013" role="doc-biblioref">Valliant, Dever, y Kreuter</a> (<a href="#ref-Valliant_Dever_Kreuter_2013" role="doc-biblioref">2013</a>Tabla 9.1)</span> mencionan el caso en el que, para diferentes definiciones del tamaño de las UPM, se evidencian pérdidas o ganancias significativas de eficiencia en los estimadores de las encuestas de hogares.</p>
+<p>La definición del marco de muestreo para las encuestas de hogares responde básicamente a un objetivo: la definición de las unidades primarias de muestreo. En la búsqueda de la optimización de esta solución, es necesario responder una pregunta fundamental: ¿cuál debe ser el tamaño apropiado para las UPM? No es lo mismo definir las UPM como agregaciones de 20 hogares, que de 1000 hogares. Esta pregunta debe ser abordada, en principio, desde una perspectiva técnica, en donde confluyan diferentes perspectivas (de muestreo, logísticas, presupuestales, cartográficas). Por ejemplo, <span class="citation"><a href="#ref-Valliant_Dever_Kreuter_2013" role="doc-biblioref">Valliant, Dever, y Kreuter</a> (<a href="#ref-Valliant_Dever_Kreuter_2013" role="doc-biblioref">2013</a>, Tabla 9.1)</span> mencionan el caso en el que, para diferentes definiciones del tamaño de las UPM, se evidencian pérdidas o ganancias significativas de eficiencia en los estimadores de las encuestas de hogares.</p>
 <p>De esta manera, un primer acercamiento a la definición de las UPM es establecer la unión o colapso de los mismos lugares poblados, sectores o secciones cartográficas, o áreas de empadronamiento vinculados a los censos de población y vivienda, como insumo para la creación de las unidades primarias de muestreo. Como se discutió anteriormente, el objetivo del marco es tratar de proveer la mejor información de en la selección de las unidades, reduciendo la variabilidad de la estrategia de muestreo. Por lo tanto, después de revisar minuciosamente los conjuntos de datos censales y la información cartográfica del censo en los niveles básicos (en adelante, y sin pérdida de generalidad, lo llamaremos secciones censales) es necesario construir un algoritmo que permitía crear UPM desde la cartografía, basado en uniones contiguas de secciones censales, que respeten los siguientes principios:</p>
 <ul>
 <li>La conformación de las Unidades Primarias de Muestreo (UPM) excluye todas las estructuras que no contienen hogares particulares ocupados.</li>

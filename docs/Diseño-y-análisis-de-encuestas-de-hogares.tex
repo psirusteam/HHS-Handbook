@@ -1,16 +1,20 @@
 % Options for packages loaded elsewhere
 \PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
-\PassOptionsToPackage{dvipsnames,svgnames*,x11names*}{xcolor}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
 %
 \documentclass[
   12pt,
   spanish,
 ]{book}
+\title{Diseño y análisis estadístico en las encuestas de hogares de América Latina}
+\author{Andrés Gutiérrez\footnote{Experto Regional en Estadísticas Sociales - Comisión Económica para América Latina y el Caribe (CEPAL) - \href{mailto:andres.gutierrez@cepal.org}{\nolinkurl{andres.gutierrez@cepal.org}}}}
+\date{2022-01-26}
+
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
-\usepackage{ifxetex,ifluatex}
-\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+\usepackage{iftex}
+\ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
@@ -43,10 +47,10 @@
   pdfauthor={Andrés Gutiérrez},
   pdflang={es},
   colorlinks=true,
-  linkcolor=blue,
-  filecolor=Maroon,
-  citecolor=Blue,
-  urlcolor=Blue,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
 \usepackage[margin = 2cm]{geometry}
@@ -95,7 +99,11 @@
 }
 \makeatother
 \usepackage[spanish, spanishkw, onelanguage, linesnumbered]{algorithm2e}
-\ifxetex
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{longtable}
+\ifXeTeX
   % Load polyglossia as late as possible: uses bidi with RTL langages (e.g. Hebrew, Arabic)
   \usepackage{polyglossia}
   \setmainlanguage[]{spanish}
@@ -105,15 +113,11 @@
 \let\LanguageShortHands\languageshorthands
 \def\languageshorthands#1{}
 \fi
-\ifluatex
+\ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
-
-\title{Diseño y análisis estadístico en las encuestas de hogares de América Latina}
-\author{Andrés Gutiérrez\footnote{Experto Regional en Estadísticas Sociales - Comisión Económica para América Latina y el Caribe (CEPAL) - \href{mailto:andres.gutierrez@cepal.org}{\nolinkurl{andres.gutierrez@cepal.org}}}}
-\date{2022-01-18}
 
 \begin{document}
 \maketitle
@@ -123,8 +127,8 @@
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
-\listoftables
 \listoffigures
+\listoftables
 \hypertarget{prefacio}{%
 \chapter*{Prefacio}\label{prefacio}}
 \addcontentsline{toc}{chapter}{Prefacio}
@@ -1326,11 +1330,63 @@ El siguiente cuadro ejemplifica la evaluación de estas técnicas para dos escen
   >{\raggedleft\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.08}}@{}}
 \caption{\emph{Efectos de diseño \(DEFF_p\) y efecto de diseño generalizado \(G(S)\) considerando tres (\(H=3\)) y cuatro (\(H=4\)) estratos para ocho variables.}}\tabularnewline
 \toprule
-DEFF & Q (H=3) & DH (H=3) & LH (H=3) & GH (H=3) & KmJ (H=3) & BB (H=3) & Q (H=4) & DH (H=4) & LH (H=4) & GH (H=4) & KmJ (H=4) & BB (H=4) \\
+\begin{minipage}[b]{\linewidth}\raggedleft
+DEFF
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Q (H=3)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+DH (H=3)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+LH (H=3)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+GH (H=3)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+KmJ (H=3)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+BB (H=3)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Q (H=4)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+DH (H=4)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+LH (H=4)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+GH (H=4)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+KmJ (H=4)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+BB (H=4)
+\end{minipage} \\
 \midrule
 \endfirsthead
 \toprule
-DEFF & Q (H=3) & DH (H=3) & LH (H=3) & GH (H=3) & KmJ (H=3) & BB (H=3) & Q (H=4) & DH (H=4) & LH (H=4) & GH (H=4) & KmJ (H=4) & BB (H=4) \\
+\begin{minipage}[b]{\linewidth}\raggedleft
+DEFF
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Q (H=3)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+DH (H=3)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+LH (H=3)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+GH (H=3)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+KmJ (H=3)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+BB (H=3)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Q (H=4)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+DH (H=4)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+LH (H=4)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+GH (H=4)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+KmJ (H=4)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+BB (H=4)
+\end{minipage} \\
 \midrule
 \endhead
 \(\bar x_1\) & 0.87 & 0.85 & 0.81 & 0.82 & 1 & 0.88 & 0.8 & 0.70 & 0.76 & 0.72 & 0.71 & 0.77 \\
@@ -2080,7 +2136,19 @@ La siguiente tabla resume los resultados del ejercicio para \(\bar{n}_{II} =\) 1
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.16}}
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.16}}@{}}
 \toprule
-Hogares promedio por UPM \((\bar{n}_{II})\) & Personas promedio por UPM \((\bar n)\) & DEFF & Muestra de UPM \((n_I)\) & Muestra de hogares \((n_{II})\) & Muestra de personas \((n)\) \\
+\begin{minipage}[b]{\linewidth}\centering
+Hogares promedio por UPM \((\bar{n}_{II})\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Personas promedio por UPM \((\bar n)\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+DEFF
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Muestra de UPM \((n_I)\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Muestra de hogares \((n_{II})\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Muestra de personas \((n)\)
+\end{minipage} \\
 \midrule
 \endhead
 10 & 35 & 2.2 & 1598 & 15982 & 55936 \\
@@ -2097,7 +2165,19 @@ Por supuesto que es posible plantear otros escenarios a medida que se evalúe el
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.16}}
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.16}}@{}}
 \toprule
-Hogares promedio por UPM \((\bar{n}_{II})\) & Personas promedio por UPM \((\bar n)\) & DEFF & Muestra de UPM \((n_I)\) & Muestra de hogares \((n_{II})\) & Muestra de personas \((n)\) \\
+\begin{minipage}[b]{\linewidth}\centering
+Hogares promedio por UPM \((\bar{n}_{II})\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Personas promedio por UPM \((\bar n)\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+DEFF
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Muestra de UPM \((n_I)\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Muestra de hogares \((n_{II})\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Muestra de personas \((n)\)
+\end{minipage} \\
 \midrule
 \endhead
 5 & 18 & 1.6 & 2315 & 11575 & 40512 \\
@@ -2127,7 +2207,19 @@ La siguiente tabla muestra los resultados del ejercicio al seleccionar \(\bar{n}
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.16}}
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.16}}@{}}
 \toprule
-Hogares promedio por UPM \((\bar{n}_{II})\) & Personas promedio por UPM \((\bar n)\) & DEFF & Muestra de UPM \((n_I)\) & Muestra de hogares \((n_{II})\) & Muestra de personas \((n)\) \\
+\begin{minipage}[b]{\linewidth}\centering
+Hogares promedio por UPM \((\bar{n}_{II})\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Personas promedio por UPM \((\bar n)\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+DEFF
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Muestra de UPM \((n_I)\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Muestra de hogares \((n_{II})\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Muestra de personas \((n)\)
+\end{minipage} \\
 \midrule
 \endhead
 15 & 57 & 3 & 859 & 12892 & 48861 \\
@@ -2144,7 +2236,19 @@ A continuación se muestran algunos resultados que permiten establecer otros esc
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.16}}
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.16}}@{}}
 \toprule
-Hogares promedio por UPM \((\bar{n}_{II})\) & Personas promedio por UPM \((\bar n)\) & DEFF & Muestra de UPM \((n_I)\) & Muestra de hogares \((n_{II})\) & Muestra de personas \((n)\) \\
+\begin{minipage}[b]{\linewidth}\centering
+Hogares promedio por UPM \((\bar{n}_{II})\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Personas promedio por UPM \((\bar n)\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+DEFF
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Muestra de UPM \((n_I)\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Muestra de hogares \((n_{II})\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Muestra de personas \((n)\)
+\end{minipage} \\
 \midrule
 \endhead
 5 & 19 & 1.6 & 1422 & 7108 & 26938 \\
@@ -2173,7 +2277,19 @@ La siguiente tabla muestra los resultados del ejercicio, que implica que selecci
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.16}}
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.16}}@{}}
 \toprule
-Hogares promedio por UPM \((\bar{n}_{II})\) & Personas promedio por UPM \((\bar n)\) & DEFF & Muestra de UPM \((n_I)\) & Muestra de hogares \((n_{II})\) & Muestra de personas \((n)\) \\
+\begin{minipage}[b]{\linewidth}\centering
+Hogares promedio por UPM \((\bar{n}_{II})\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Personas promedio por UPM \((\bar n)\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+DEFF
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Muestra de UPM \((n_I)\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Muestra de hogares \((n_{II})\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Muestra de personas \((n)\)
+\end{minipage} \\
 \midrule
 \endhead
 20 & 4.6 & 3.5 & 1581 & 31617 & 7272 \\
@@ -2190,7 +2306,19 @@ En este caso la muestra en los 31617 hogares induce un operativo muy grande que 
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.16}}
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.16}}@{}}
 \toprule
-Hogares promedio por UPM \((\bar{n}_{II})\) & Personas promedio por UPM \((\bar n)\) & DEFF & Muestra de UPM \((n_I)\) & Muestra de hogares \((n_{II})\) & Muestra de personas \((n)\) \\
+\begin{minipage}[b]{\linewidth}\centering
+Hogares promedio por UPM \((\bar{n}_{II})\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Personas promedio por UPM \((\bar n)\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+DEFF
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Muestra de UPM \((n_I)\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Muestra de hogares \((n_{II})\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Muestra de personas \((n)\)
+\end{minipage} \\
 \midrule
 \endhead
 5 & 1.1 & 1.1 & 1985 & 9926 & 2283 \\
@@ -2249,7 +2377,15 @@ La siguiente tabla muestra los resultados del ejercicio para \(\bar{n}_{II} = 12
   >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.18}}
   >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.26}}@{}}
 \toprule
-Hogares promedio por UPM \((\bar{n}_{II})\) & DEFF & Muestra de UPM \((n_I)\) & Muestra de hogares \((n_{II})\) \\
+\begin{minipage}[b]{\linewidth}\centering
+Hogares promedio por UPM \((\bar{n}_{II})\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+DEFF
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Muestra de UPM \((n_I)\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Muestra de hogares \((n_{II})\)
+\end{minipage} \\
 \midrule
 \endhead
 12 & 2.9 & 1338 & 16056 \\
@@ -2266,7 +2402,15 @@ Para este tipo de operativos, en donde los cuestionarios de gasto de los hogares
   >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.18}}
   >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.26}}@{}}
 \toprule
-Hogares promedio por UPM \((\bar{n}_{II})\) & DEFF & Muestra de UPM \((n_I)\) & Muestra de hogares \((n_{II})\) \\
+\begin{minipage}[b]{\linewidth}\centering
+Hogares promedio por UPM \((\bar{n}_{II})\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+DEFF
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Muestra de UPM \((n_I)\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Muestra de hogares \((n_{II})\)
+\end{minipage} \\
 \midrule
 \endhead
 2 & 1.2 & 3246 & 6493 \\
@@ -2295,7 +2439,15 @@ La siguiente tabla muestra los resultados del ejercicio para \(\bar{n}_{II} =\) 
   >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.18}}
   >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.26}}@{}}
 \toprule
-Hogares promedio por UPM \((\bar{n}_{II})\) & DEFF & Muestra de UPM \((n_I)\) & Muestra de hogares \((n_{II})\) \\
+\begin{minipage}[b]{\linewidth}\centering
+Hogares promedio por UPM \((\bar{n}_{II})\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+DEFF
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Muestra de UPM \((n_I)\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Muestra de hogares \((n_{II})\)
+\end{minipage} \\
 \midrule
 \endhead
 10 & 1.3 & 436 & 4360 \\
@@ -2310,7 +2462,15 @@ A continuación se muestran algunos resultados que permiten establecer otros esc
   >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.18}}
   >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.26}}@{}}
 \toprule
-Hogares promedio por UPM \((\bar{n}_{II})\) & DEFF & Muestra de UPM \((n_I)\) & Muestra de hogares \((n_{II})\) \\
+\begin{minipage}[b]{\linewidth}\centering
+Hogares promedio por UPM \((\bar{n}_{II})\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+DEFF
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Muestra de UPM \((n_I)\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Muestra de hogares \((n_{II})\)
+\end{minipage} \\
 \midrule
 \endhead
 5 & 1.1 & 758 & 3790 \\
@@ -2363,7 +2523,19 @@ La siguiente tabla muestra los resultados del ejercicio al seleccionar \(\bar{n}
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.14}}
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.17}}@{}}
 \toprule
-Personas seleccionadas por UPM \((\bar{n} / r )\) & Personas empleadas por UPM \(\bar{n}\) & DEFF & Muestra de UPM \((n_I)\) & Muestra de personas empleadas \((n)\) & Muestra de personas \((n/r)\) \\
+\begin{minipage}[b]{\linewidth}\centering
+Personas seleccionadas por UPM \((\bar{n} / r )\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Personas empleadas por UPM \(\bar{n}\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+DEFF
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Muestra de UPM \((n_I)\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Muestra de personas empleadas \((n)\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Muestra de personas \((n/r)\)
+\end{minipage} \\
 \midrule
 \endhead
 50 & 23 & 1.8 & 1219 & 28029 & 60933 \\
@@ -2380,7 +2552,19 @@ A continuación se muestran algunos resultados que permiten establecer otros esc
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.14}}
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.17}}@{}}
 \toprule
-Personas seleccionadas por UPM \((\bar{n} / r )\) & Personas empleadas por UPM \(\bar{n}\) & DEFF & Muestra de UPM \((n_I)\) & Muestra de personas empleadas \((n)\) & Muestra de personas \((n/r)\) \\
+\begin{minipage}[b]{\linewidth}\centering
+Personas seleccionadas por UPM \((\bar{n} / r )\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Personas empleadas por UPM \(\bar{n}\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+DEFF
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Muestra de UPM \((n_I)\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Muestra de personas empleadas \((n)\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Muestra de personas \((n/r)\)
+\end{minipage} \\
 \midrule
 \endhead
 25 & 12 & 1.4 & 1857 & 21360 & 46435 \\
@@ -2406,7 +2590,19 @@ La siguiente tabla muestra los resultados del ejercicio al seleccionar un promed
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.14}}
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.17}}@{}}
 \toprule
-Personas seleccionadas por UPM \((\bar{n} / r)\) & Personas analfabetas por UPM \((\bar{n})\) & DEFF & Muestra de UPM \((n_I)\) & Muestra de personas analfabetas \((n)\) & Muestra de personas \((n/r)\) \\
+\begin{minipage}[b]{\linewidth}\centering
+Personas seleccionadas por UPM \((\bar{n} / r)\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Personas analfabetas por UPM \((\bar{n})\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+DEFF
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Muestra de UPM \((n_I)\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Muestra de personas analfabetas \((n)\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Muestra de personas \((n/r)\)
+\end{minipage} \\
 \midrule
 \endhead
 100 & 14 & 1.6 & 327 & 4574 & 32671 \\
@@ -2423,7 +2619,19 @@ Es posible plantear otros escenarios a medida que se evalúe el efecto que conll
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.14}}
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.17}}@{}}
 \toprule
-Personas seleccionadas por UPM \((\bar{n} / r )\) & Personas analfabetas por UPM \((\bar{n})\) & DEFF & Muestra de UPM \((n_I)\) & Muestra de personas analfabetas \((n)\) & Muestra de personas \((n/r)\) \\
+\begin{minipage}[b]{\linewidth}\centering
+Personas seleccionadas por UPM \((\bar{n} / r )\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Personas analfabetas por UPM \((\bar{n})\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+DEFF
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Muestra de UPM \((n_I)\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Muestra de personas analfabetas \((n)\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Muestra de personas \((n/r)\)
+\end{minipage} \\
 \midrule
 \endhead
 25 & 3.5 & 1.1 & 917 & 3211 & 22936 \\
@@ -4544,7 +4752,25 @@ En el anterior ejemplo, la probabilidad de obtener una muestra compuesta por los
   >{\raggedleft\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.21}}
   >{\raggedleft\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.21}}@{}}
 \toprule
-\(s\) & \(I_1\) & \(I_2\) & \(I_3\) & \(I_4\) & \(p(s)\) & \(\hat{t}_{y, \pi}\) & \(\widehat{Var}_1(\hat{t}_{y, \pi})\) & \(\widehat{Var}_2(\hat{t}_{y, \pi})\) \\
+\begin{minipage}[b]{\linewidth}\raggedleft
+\(s\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+\(I_1\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+\(I_2\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+\(I_3\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+\(I_4\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+\(p(s)\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+\(\hat{t}_{y, \pi}\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+\(\widehat{Var}_1(\hat{t}_{y, \pi})\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+\(\widehat{Var}_2(\hat{t}_{y, \pi})\)
+\end{minipage} \\
 \midrule
 \endhead
 \(s_1\) & 1 & 1 & 0 & 0 & 0.31 & 9.560440 & 38.099984 & -0.9287681 \\
@@ -5068,7 +5294,17 @@ E(I_kD_k)
 = E(I_k)E(D_k|I_k) = \pi_k \phi_k
 \]
 
-En resumen, si se tiene acceso a información auxiliar (contenida en el marco de muestreo o en otras preguntas de la encuesta), y si se considera que el mecanismo que genera la ausencia de respuesta en la encuesta de hogares es MAR o MCAR, es posible ajustar un modelo de \emph{propensity score} para la ausencia de respuesta (en donde la variable dependiente es una variable indicadora de la respuesta del individuo por lo general supeditado a una distribución Bernoulli o Binomial).
+En resumen, si se tiene acceso a información auxiliar (contenida en el marco de muestreo o en otras preguntas de la encuesta), y si se considera que el mecanismo que genera la ausencia de respuesta en la encuesta de hogares es MAR o MCAR, es posible ajustar un modelo de \emph{propensity score} para la ausencia de respuesta (en donde la variable dependiente es una variable indicadora de la respuesta del individuo por lo general supeditado a una distribución Bernoulli o Binomial). En resumen, es posible definir el siguiente estimador insesgado
+
+\[
+\hat{t}_y=\sum_{k\in s_{ER}}d_{4k}y_k
+\]
+
+En donde
+
+\[
+d_{4k} = \frac{d_{3k}}{\hat{\phi_k}}  \ \ \ \ \ \ \ \ \forall \ k  \in s_{ER}
+\]
 
 Siempre es muy importante realizar una validación exhaustiva de los modelos utilizados para estimar la probabilidad de respuesta. En general, es necesario que el modelo satisfaga las siguientes dos condiciones:
 
@@ -5093,13 +5329,23 @@ Siempre es muy importante realizar una validación exhaustiva de los modelos uti
 Por último, se debe corroborar que la suma de los pesos ajustados por la ausencia de respuesta esté cercana al tamaño de la población que se quiere representar. La figura \ref{fig:figel3a} permite ilustrar el soporte común entre respondientes y no respodientes para un modelo de \emph{propensity score}; notese que ambas distribuciones son similiares, por lo que es posible concluir que efectivamente las covariables usadas están representando bien la estructura estocástica en respondientes y no respondientes.
 
 \begin{figure}
-\includegraphics[width=0.5\linewidth]{Pics/el3a} \caption{Distribución de las probabilidades estimadas de respuesta: respondientes (arriba), no respondientes (medio), ambos (abajo).}\label{fig:figel3a}
+
+{\centering \includegraphics[width=0.5\linewidth]{Pics/el3a} 
+
+}
+
+\caption{Distribución de las probabilidades estimadas de respuesta: respondientes (arriba), no respondientes (medio), ambos (abajo).}\label{fig:figel3a}
 \end{figure}
 
 Además, la figura \ref{fig:figel3b} muestra la propiedad de balanceo en el modelo; véase cómo ambas distribuciones se alejan de los extremos (ceros y uno) y presentan una caracterización similar.
 
 \begin{figure}
-\includegraphics[width=0.5\linewidth]{Pics/el3b} \caption{Balanceo entre respondientes y no respondientes}\label{fig:figel3b}
+
+{\centering \includegraphics[width=0.5\linewidth]{Pics/el3b} 
+
+}
+
+\caption{Balanceo entre respondientes y no respondientes}\label{fig:figel3b}
 \end{figure}
 
 \hypertarget{calibraciuxf3n}{%
@@ -5166,13 +5412,23 @@ Para mostrar cómo el ajuste a los factores de expansión, con las dos metodolog
 En primera instancia, cabe mencionar que la población se definió a partir del ingreso del hogar, y se creó usando variables auxiliares disponibles (sexo). De esta forma, se le dio una probabilidad de respuesta diferencial entre los grupos correspondientes al cruce de las categorías de estas dos variables. Como resultado de las simulaciones, se generaron estimaciones para el estimador de Horvitz-Thompson sin ajuste de ningún tipo y para un estimador de calibración que tuvo en cuenta los conteos poblacionales censales para cada las dos categorías de la variables sexo. La figura \ref{fig:fightcal} muestra el comportamiento de ambas estimaciones. La línea roja refleja el parámetro desconocido, los puntos negros indican las estimaciones del estimador de calibración en cada iteración de la simulación, mientras que los puntos grises muestran las estimaciones del estimador de Horvitz-Thompson en cada iteración de la simulación
 
 \begin{figure}
-\includegraphics[width=0.5\linewidth]{Pics/c9} \caption{Estimaciones de Horvtiz-Thompson y de calibración.}\label{fig:fightcal}
+
+{\centering \includegraphics[width=0.5\linewidth]{Pics/c9} 
+
+}
+
+\caption{Estimaciones de Horvtiz-Thompson y de calibración.}\label{fig:fightcal}
 \end{figure}
 
 En conjunto con la gráfica anterior, la figura \ref{fig:fightcaldist} muestra la distribución sesgada del estimador de Horvitz-Thompson (gris) en comparación con el insesgamiento del estimador de calibración (negro). Bajo este esquema de respuesta, incluir en la calibración las variables pertinentes corrige el sesgo generado por la ausencia de respuesta. En este estudió se encontró que el estimador ingenuo (HT) produjo sesgo para la estimación de los tamaños de hombres y mujeres, para el tamaño de la población, para los ingresos de hombres y mujeres y para los ingresos de la población.
 
 \begin{figure}
-\includegraphics[width=0.5\linewidth]{Pics/c10} \caption{Distribuciones del estimador de Horvtiz-Thompson y del estimador de calibración}\label{fig:fightcaldist}
+
+{\centering \includegraphics[width=0.5\linewidth]{Pics/c10} 
+
+}
+
+\caption{Distribuciones del estimador de Horvtiz-Thompson y del estimador de calibración}\label{fig:fightcaldist}
 \end{figure}
 
 Como se mencionó anteriormente, hay mejores formas de calibrar, puesto que el problema de la calibración se reduce a cómo introducir la información auxiliar en la estructura de estimación de la encuesta, es posible que existan variables que reduzcan el sesgo, pero no todas las variables inducirán el mismo nivel de precisión. Al momento de escoger, se deberían seleccionar aquellas variables que reduzcan el sesgo y que además reduzcan la varianza. Por tanto, las variables auxiliares que se usen como insumo en los procesos de calibración deben:
@@ -5190,7 +5446,12 @@ Como se mencionó anteriormente, hay mejores formas de calibrar, puesto que el p
 En particular al introducir otras covariables en la calibración (grupo de edad, escolaridad, región, área), además de la corrección del sesgo se evidencia un aumento de la precisión en las nuevas estimaciones, tal como lo muestra las distribuciones de los estimadores en la figura \ref{fig:fightcal2dist}, en donde se consideran tres estimadores: el estimador de Horvitz-Thompson (gris claro), el estimador de calibración con restricción de sexo (negro) y el estimador de calibración con todas las restricciones (gris oscuro).
 
 \begin{figure}
-\includegraphics[width=0.5\linewidth]{Pics/c12} \caption{Distribuciones del estimador de Horvtiz-Thompson y de dos estimadores de calibración}\label{fig:fightcal2dist}
+
+{\centering \includegraphics[width=0.5\linewidth]{Pics/c12} 
+
+}
+
+\caption{Distribuciones del estimador de Horvtiz-Thompson y de dos estimadores de calibración}\label{fig:fightcal2dist}
 \end{figure}
 
 \hypertarget{las-consecuencias-de-la-pandemia-por-covid-19-en-las-encuestas-de-la-regiuxf3n}{%
@@ -5214,13 +5475,23 @@ Haciendo cálculos gruesos, si suponemos que la cobertura de la submuestra que s
 La figura \ref{fig:fight3dist} presenta tres posibles escenarios que los INE pudieron encontrar en esta búsqueda. En el diagrama de la izquierda se verifica la ausencia de sesgo, en el diagrama del centro y en el de la derecha se confirma que la magnitud del sesgo es significativa. Nótese que la línea horizontal azul correspondería a la estimación publicada en el mes en el que se seleccionó la muestra maestra, mientras que la línea roja horizontal representa el promedio de las simulaciones con la muestra efectiva. Cada uno de los resultados de las simulaciones está representado por las fluctuaciones punteadas.
 
 \begin{figure}
-\includegraphics[width=0.5\linewidth]{Pics/calnr1} \caption{Distribuciones del estimador de Horvtiz-Thompson en tres escenarios de interés.}\label{fig:fight3dist}
+
+{\centering \includegraphics[width=0.5\linewidth]{Pics/calnr1} 
+
+}
+
+\caption{Distribuciones del estimador de Horvtiz-Thompson en tres escenarios de interés.}\label{fig:fight3dist}
 \end{figure}
 
 La figura \ref{fig:fight4dist} muestra un escenario simulado en donde se contempla el uso del estimador ajustado con la técnica de \emph{propensity score} (línea verde) y el estimador de calibración en dos etapas (línea azul) comparado con el estimador sin ningún tipo de ajuste (línea negra). Lo que se esperaría es que es estimador ingenuo subestime los tamaños poblacionales y los indicadores de interés; mientras que los estimadores ajustados, siempre que el mecanismo de ausencia de respuesta sea MAR o MCAR, elimina este sesgo.
 
 \begin{figure}
-\includegraphics[width=0.5\linewidth]{Pics/calnr2} \caption{Distribuciones del estimador de Horvtiz-Thompson y de dos estimadores ajustados.}\label{fig:fight4dist}
+
+{\centering \includegraphics[width=0.5\linewidth]{Pics/calnr2} 
+
+}
+
+\caption{Distribuciones del estimador de Horvtiz-Thompson y de dos estimadores ajustados.}\label{fig:fight4dist}
 \end{figure}
 
 Los caminos que se deben seguir luego de corroborar la presencia (o ausencia) de sesgo dependerán de la estrategia de levantamiento de información que los países hayan decidido hacer. En el escenario más optimista, ante la ausencia de sesgo, se estaría en una buena posición para replicar los procesos usuales de inferencia. Sin embargo, ante la sospecha de que sí existe sesgo - posición parsimoniosa y recomendada por \citet{CEPAL_sesgos2020} -, y dependiendo de la información auxiliar disponible, los INE pudieron disponer de las dos alternativas metodológicas que se describieron anteriormente.
@@ -5240,6 +5511,244 @@ Por otro lado, al imponer una cierta coherencia entre las cifras oficiales ya pu
 \item
   En una segunda etapa se calibrarán los pesos de la muestra telefónica usando las anteriores variables \(\boldsymbol{x}_{1k}\) y además las variables de ingreso percápita, condición de ocupación, rama de actividad y escolaridad, definidas convenientemente en en \(\boldsymbol{x}_{2k}\). Los totales de estas variables fueron estimados en la misma publicación de la encuesta basada en la muestra maestra.
 \end{itemize}
+
+\hypertarget{ejemplo}{%
+\subsection{Ejemplo}\label{ejemplo}}
+
+Esta sección revisa los pasos principales que se debieron considerar para erradicar (o al menos minimizar en la medida más considerable) el sesgo de selección de una encuesta recopilada durante la pandemia por COVID19. Los datos que se usarán son artificiales, pero sirven para mostrar y ejemplificar las diferentes etapas propuestas para la evaluación y minimización del impacto del COVID-19 en la calidad de las encuestas.
+
+Supongamos un conjunto de datos artificial que define una población finita \(U\) de tamaño \(N = 50000\), y supongamos que estamos interesados en observar la situación laboral de cada persona en \(U\). En aras de la simplicidad, supondremos que una persona solo puede estar \emph{empleada} o \emph{desempleada}. Quisiéramos observar esta característica de interés en dos periodos diferentes \(t_0\) y \(t_1\). Por un lado, suponga que \(t_0\) corresponde a un período de recolección regular antes de la pandemia; por otro lado, supongamos que \(t_1\) corresponde al período donde las restricciones de movimiento debido a la pandemia afectaron la recolección estándar de encuestas por muestreo.
+
+Si tuviéramos acceso a toda la población, nos encontraríamos con que en \(t_0\), el 80\% de las personas estaría empleada, mientras que el 20\% estaría desempleada. Sin embargo, debido al impacto de la pandemia en los indicadores sociales (e.g., pobreza y mercado laboral), en \(t_1\), observaríamos que muchas personas perdieron su trabajo, y la mitad de la población está desempleada.
+
+El siguiente conjunto de datos muestra una versión reducida de 20 individuos de esta población finita.
+
+\captionsetup[table]{labelformat=empty,skip=1pt}
+\begin{longtable}{lll}
+\caption*{
+{\large Un vistazo a la población} \\ 
+{\small 20 filas de un total de 50000}
+} \\ 
+\toprule
+ & y0 & y1 \\ 
+\midrule
+1 & Employed & Employed \\ 
+2 & Employed & Unemployed \\ 
+3 & Employed & Employed \\ 
+4 & Employed & Employed \\ 
+5 & Employed & Unemployed \\ 
+6 & Employed & Unemployed \\ 
+7 & Employed & Employed \\ 
+8 & Unemployed & Unemployed \\ 
+9 & Employed & Unemployed \\ 
+10 & Employed & Unemployed \\ 
+11..49990 &  &  \\ 
+49991 & Unemployed & Unemployed \\ 
+49992 & Unemployed & Unemployed \\ 
+49993 & Employed & Unemployed \\ 
+49994 & Unemployed & Unemployed \\ 
+49995 & Employed & Employed \\ 
+49996 & Employed & Employed \\ 
+49997 & Employed & Employed \\ 
+49998 & Employed & Employed \\ 
+49999 & Employed & Employed \\ 
+50000 & Employed & Employed \\ 
+ \bottomrule
+\end{longtable}
+
+Las siguientes tablas muestran los flujos netos de la población finita en los dos períodos considerados. Tenga en cuenta que \(y_0\) representa la característica de interés en el período previo a la pandemia; mientras tanto, \(y_1\) representa la característica de interés en el período de la pandemia por COVID-19.
+
+\captionsetup[table]{labelformat=empty,skip=1pt}
+\begin{longtable}{lrr}
+\caption*{
+{\large Flujos netos verdaderos en la población finita} \\ 
+{\small Antes de la pandemia por COVID-19}
+} \\ 
+\toprule
+y0 & n & prop \\ 
+\midrule
+Employed & 40000 & 0.8 \\ 
+Unemployed & 10000 & 0.2 \\ 
+ \bottomrule
+\end{longtable}
+\captionsetup[table]{labelformat=empty,skip=1pt}
+\begin{longtable}{lrr}
+\caption*{
+{\large Flujos netos verdaderos en la población finita} \\ 
+{\small En medio de la pandemia por COVID-19}
+} \\ 
+\toprule
+y1 & n & prop \\ 
+\midrule
+Employed & 25000 & 0.5 \\ 
+Unemployed & 25000 & 0.5 \\ 
+ \bottomrule
+\end{longtable}
+
+La siguiente tabla muestra los flujos brutos de la población finita entre los dos periodos considerados. Como se puede observar, 25000 personas permanecieron ocupadas en los dos periodos, y 15000 personas cambiaron su situación laboral de ocupadas a desocupadas; de los desempleados en el primer período, ninguno pudo conseguir trabajo, mientras que 10000 personas permanecieron desempleadas en ambos períodos.
+
+\captionsetup[table]{labelformat=empty,skip=1pt}
+\begin{longtable}{rr}
+\caption*{
+{\large Flujos brutos verdaderos en la población finita} \\ 
+{\small Cambio en el estado laboral}
+} \\ 
+\toprule
+Employed & Unemployed \\ 
+\midrule
+\multicolumn{1}{l}{Employed} \\ 
+\midrule
+25000 & 15000 \\ 
+\midrule
+\multicolumn{1}{l}{Unemployed} \\ 
+0 & 10000 \\ 
+ \bottomrule
+\end{longtable}
+
+La medición y observación de la situación laboral se realiza a través de una encuesta por muestreo en ambos períodos. De esta forma, supongamos que se selecciona una muestra aleatoria simple sin reemplazo \(s_0\) de tamaño \(n_0 = 4000\) de \(U\). Para simplificar, supongamos que se pretende observar la misma muestra en ambos períodos (tipo panel).
+
+Como el lector debe considerar, la muestra anterior a la pandemia tenía un modo regular de recolección presencial. Sin embargo, dadas las restricciones de movilidad impuestas por los gobiernos para frenar la propagación de la pandemia, la modalidad de recolección del último período debió cambiar. Los INE usaron los registros de la muestra anterior (antes del COVID-19) para obtener el número de teléfono de los hogares seleccionados, tratar de hacer un contacto exitoso y administrar un cuestionario por teléfono. Por supuesto, las tasas de muestreo en ambos períodos diferirían, puesto que no todos los hogares de la primera muestra proporcionaron un número de teléfono válido y, de los válidos, no todos contestaron la encuesta telefónica.
+
+La muestra telefónica es más pequeña (2305) que la muestra realizada cara a cara (4000). Los investigadores sospechan que los sesgos de selección no son despreciables en la muestra telefónica. Las siguientes tablas muestran los resultados basados en las muestras (no ponderados) para la encuesta cara a cara y la encuesta telefónica, respectivamente.
+
+\captionsetup[table]{labelformat=empty,skip=1pt}
+\begin{longtable}{lrr}
+\toprule
+Estado & n & prop \\ 
+\midrule
+Employed & 3180 & 0.795 \\ 
+Unemployed & 820 & 0.205 \\ 
+ \bottomrule
+\end{longtable}
+\captionsetup[table]{labelformat=empty,skip=1pt}
+\begin{longtable}{lrr}
+\toprule
+Estado & n & prop \\ 
+\midrule
+Employed & 1396 & 0.6056399 \\ 
+Unemployed & 909 & 0.3943601 \\ 
+ \bottomrule
+\end{longtable}
+
+El primer paso en la búsqueda de sesgos de selección es calcular la tasa de respuesta. En este caso, de 4000 encuestados seleccionados originalmente, solo 2305 respondió a la entrevista telefónica. Lo que equivale a una tasa de respuesta de tan solo el 58 \%.
+
+Luego, se debe evaluar la naturaleza de la ausencia de repuesta. Este paso está dedicado a reconocer si la falta de respuesta sigue una estructura MAR o MCAR. Bajo el supuesto MCAR, uno no esperaría encontrar patrones fuertes en las covariables; es decir, ninguna categoría dentro de las covariables debe mostrar una tasa de respuesta diferente. Por otro lado, bajo el supuesto MAR, uno puede encontrar patrones fuertes en una o múltiples covariables. Para verificar qué supuesto (MAR o MCAR) se ajusta mejor a las observaciones de la muestra seleccionada durante el COVID19, supongamos que sí tenemos acceso a los datos de la muestra de la muestra pre-pandemia y podemos identificar a los individuos, encuestados y no encuestados, de la última muestra.
+
+Como se ve en la siguiente tabla, de los 2305 encuestados en la encuesta telefónica, 96.1822126\% estaban empleados en el período anterior, y aproximadamente 3.8177874\% estaban desempleados, lo que indica un patrón sólido que puede indicar un proceso MAR.
+
+\captionsetup[table]{labelformat=empty,skip=1pt}
+\begin{longtable}{lrr}
+\toprule
+Estado & n & prop \\ 
+\midrule
+Employed & 2217 & 0.96182213 \\ 
+Unemployed & 88 & 0.03817787 \\ 
+ \bottomrule
+\end{longtable}
+
+Finalmente, al examinar el estado anterior de los 1695 no encuestados, se observa que casi el 56.8141593\% estaban empleados en el periodo anterior, mientras que el 43.1858407\% estaban desempleados. Las proporciones no son similares en ningún aspecto, lo que apunta a un posible sesgo de selección.
+
+\captionsetup[table]{labelformat=empty,skip=1pt}
+\begin{longtable}{lrr}
+\toprule
+Estado & n & prop \\ 
+\midrule
+Employed & 963 & 0.5681416 \\ 
+Unemployed & 732 & 0.4318584 \\ 
+ \bottomrule
+\end{longtable}
+
+Para verificar la asociación entre la respuesta en la encuesta telefónica y la situación laboral en la encuesta presencial, se puede utilizar herramientas de inferencia clásica, como la estadística Ji-cuadrado de Pearson y el estadístico V de Cramer. La siguiente tabla resume el comportamiento de la respuesta en la encuesta telefónica dada la situación laboral en la encuesta presencial.
+
+\captionsetup[table]{labelformat=empty,skip=1pt}
+\begin{longtable}{ccr}
+\toprule
+Estado & Respuesta & Freq \\ 
+\midrule
+Employed & 0 & 963 \\ 
+Unemployed & 0 & 732 \\ 
+Employed & 1 & 2217 \\ 
+Unemployed & 1 & 88 \\ 
+ \bottomrule
+\end{longtable}
+
+De la tabla anterior se puede realizar la prueba de bondad de ajuste de Pearson entre las dos variables de interés (respuesta en la encuesta telefónica y situación laboral en la encuesta presencial) para determinar si existe una correlación significativa. El sistema de hipótesis es el siguiente:
+
+\begin{itemize}
+\tightlist
+\item
+  H0: Las dos variables son independientes.
+\item
+  H1: Las dos variables se relacionan entre sí.
+\end{itemize}
+
+A partir de estos datos, la estadística de prueba toma el valor de 944 (muy grande) con un valor-p muy pequeño y cercano a cero, lo que indica una fuerte relación.
+
+\begin{verbatim}
+## 
+##  Pearson's Chi-squared test with Yates' continuity correction
+## 
+## data:  cross
+## X-squared = 926.44, df = 1, p-value < 2.2e-16
+\end{verbatim}
+
+Finalmente, la V de Cramer mide la fuerza de la asociación entre dos variables nominales, y toma valores entre cero (sin asociación) y uno (asociación fuerte). Para este caso, el valor del estadístico es cercano a 0,5, indicando una asociación significativa que debe ser considerada en los próximos pasos para minimizar el posible sesgo de selección que puede afectar la inferencia de la encuesta telefónica.
+
+Como se pudo observar anteriormente, existe fuerte evidencia de que el mecanismo de respuesta de la encuesta telefónica depende de la situación laboral del individuo en el período anterior. Eso significa que las personas que estaban desempleadas tienden a responder menos que las personas que estaban empleadas. Para simplificar el ejemplo, asumimos que la probabilidad de ser un encuestado depende de la situación laboral anterior. De esta forma, \(\phi_k\) puede escribirse como una función de ese estado laboral anterior, incluido en las covariables \(\mathbf{z}\).
+
+\[
+{\phi}_k = f(\mathbf{z}_k, {\boldsymbol{\beta}})   
+\]
+
+Como \(\phi_k\) se puede escribir como una función de las covariables disponibles, podemos afirmar que el mecanismo de respuesta sigue un enfoque MAR. Como el patrón de no respuesta es MAR, y es posible tener acceso a las covariables \(\mathbf{z}\) que determinan el mecanismo de respuesta, entonces también será posible estimar las probabilidades de respuesta por \(\hat{\phi}_k = f(\mathbf{z }_k, \hat{\boldsymbol{\beta}})\) para usarlo en la generación de nuevos pesos. Después de ajustar un modelo de \emph{propensity-score}, la siguiente figura muestra el histograma de laas probabilidades de respuesta estimadas, las cuales solo toman dos valores (0.6971698 y 0.1073171 ), uno para cada categoría de la situación laboral en la encuesta presencial.
+
+\begin{center}\includegraphics{13SesgoUnidad_files/figure-latex/unnamed-chunk-15-1} \end{center}
+
+Luego, utilizando los datos telefónicos y el nuevo conjunto de ponderaciones \(d_{4k}\), ajustado por el puntaje de propensión estimado, tenemos que el número estimado de empleados en el período COVID es \(\hat{t}_y=\sum_{k\in s_{ER}}d_{4k}y_{1k} =\) \texttt{format\ r(Tyhat.ps,\ scientific\ =\ F)}.
+
+Por otra parte, también es posible calibrar los pesos en la muestra telefónica a nivel de la información auxiliar disponible en la muestra presencial, y luego a nivel nacional. Como el mecanismo que genera la falta de respuesta es MAR, es posible que este nuevo conjunto de pesos de calibración elimine el sesgo. Para lograr este objetivo, se encuentra un primer conjunto de pesos calibrados sujetos a la siguiente restricción:
+
+\[
+\sum_{s_0}w_{0k}\boldsymbol{x}_{k} = \sum_{U}\boldsymbol{x}_{k} = \mathbf{t_x}
+\]
+
+Donde \(\mathbf{t_x}\) puede representar conteos nacionales provenientes de censos o proyecciones demográficas. Luego, en una segunda etapa, estos pesos intermedios \(w_{0k}\) deben utilizarse para calcular los pesos finales de calibración \(w_{1k}\) de la muestra de encuestados efectivos que están sujetos a la siguiente restricción:
+
+\[
+\sum_{s_0}w_{1k}\boldsymbol{x}_{k} =
+\begin{pmatrix}
+\sum_{U}\boldsymbol{x}_{k}\\
+\sum_{s_1}w_{0k}\boldsymbol{z}_{k} 
+\end{pmatrix} =
+\begin{pmatrix}
+\mathbf{t_x}\\
+\hat{\mathbf{t}}_\mathbf{z}
+\end{pmatrix}
+\]
+
+En donde, \(\hat{\mathbf{t}}_\mathbf{z}\) representa las cifras estimadas provenientes de la encuesta presencial. El estimador de calibración se puede escribir de la siguiente manera:
+
+\[
+\hat{t}_y^{cal}=\sum_{k\in s_1}w_{1k}y_{1k}
+\]
+
+Después de realizar la calibración en dos etapas, y utilizando los datos de la encuestas telefónica junto con el nuevo conjunto de pesos calibradas, tenemos que el número estimado de empleados en el período COVID es \(\hat{t}_y^{cal}=\sum_{k\in s_1}w_{1k}y_{1k}=\) \texttt{format\ r(Tyhat.cal,\ scientific\ =\ F)}. Tenga en cuenta que la forma funcional de los pesos de calibración doble resultantes de este proceso de optimización se pueden escribir de la siguiente manera:
+
+\[
+w_{1k} = d_k \times g_{0k} \times g_{1k} \cong d_k \times \hat \phi_k
+\]
+
+Por lo tanto, bajo este escenario, los pesos \(g_k\) pueden verse como una estimación de las probabilidades de respuesta \(\phi_k\). La siguiente figura muestra el histograma de los puntajes de propensión pronosticados. Solo toman dos valores (0.6928125 y 0.11 ), uno para cada categoría del estatus laboral en la encuesta cara a cara.
+
+\begin{center}\includegraphics{13SesgoUnidad_files/figure-latex/unnamed-chunk-18-1} \end{center}
+
+Por último, nótese que si no se considera el mecanismo de ausencia de respuesta, sería fácil obtener estimaciones engañosas y sesgadas. Este enfoque ingenuo e incorrecto conduce al siguiente estimador sesgado
+
+\[
+\hat{t}_y^{exp}=\sum_{k\in s_1}d_{3k}y_{1k}
+\]
+
+Donde \(d_{1k}\) se refiere a los pesos muestrales no ajustados de la encuesta telefónica. Bajo este escenario, el número estimado de empleados en el período COVID es \(\hat{t}_y^{exp}=\sum_{k\in s_1}d_{1k}y_{1k} =\) 30282.
 
 \hypertarget{ausencia-de-respuesta-por-registro}{%
 \chapter{Ausencia de respuesta por registro}\label{ausencia-de-respuesta-por-registro}}
@@ -7165,7 +7674,17 @@ Recuérdese que este modelo considera que la probabilidad inicial de que un indi
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.20}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.23}}@{}}
 \toprule
-Estado (T1/T2) & Formal & Informal & Desocupado & Inactivo \\
+\begin{minipage}[b]{\linewidth}\raggedright
+Estado (T1/T2)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Formal
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Informal
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Desocupado
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Inactivo
+\end{minipage} \\
 \midrule
 \endhead
 Formal & 4.627.632 (102.470) & 287.124 (18.979) & 252.084 (20.399) & 713.284 (30.358) \\
@@ -7815,11 +8334,35 @@ La \emph{Encuesta de Hogares por Muestreo} es una investigación que desarrolla 
   >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.16}}@{}}
 \caption{\emph{Características de las algunas encuestas repetidas en América Latina.}}\tabularnewline
 \toprule
-País & Nombre de la encuesta & Tipo & Periodicidad & Rotación & Muestra de viviendas \\
+\begin{minipage}[b]{\linewidth}\raggedright
+País
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Nombre de la encuesta
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Tipo
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Periodicidad
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Rotación
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Muestra de viviendas
+\end{minipage} \\
 \midrule
 \endfirsthead
 \toprule
-País & Nombre de la encuesta & Tipo & Periodicidad & Rotación & Muestra de viviendas \\
+\begin{minipage}[b]{\linewidth}\raggedright
+País
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Nombre de la encuesta
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Tipo
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Periodicidad
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Rotación
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Muestra de viviendas
+\end{minipage} \\
 \midrule
 \endhead
 Argentina & Encuesta Permanente de Hogares & Panel & Trimestral & 50\% & 25000 \\
@@ -7855,11 +8398,27 @@ Venezuela & Encuesta de Hogares por Muestreo & Repetida & Semestral & - & 45000 
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.16}}@{}}
 \caption{\emph{Características de las algunas encuestas transversales en América Latina.}}\tabularnewline
 \toprule
-País & Nombre & Año & Tamaño de Muestra \\
+\begin{minipage}[b]{\linewidth}\raggedright
+País
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Nombre
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Año
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Tamaño de Muestra
+\end{minipage} \\
 \midrule
 \endfirsthead
 \toprule
-País & Nombre & Año & Tamaño de Muestra \\
+\begin{minipage}[b]{\linewidth}\raggedright
+País
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Nombre
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Año
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Tamaño de Muestra
+\end{minipage} \\
 \midrule
 \endhead
 Argentina & Encuesta Nacional de Gastos de los Hogares & 2017-2018 & 45000 \\
