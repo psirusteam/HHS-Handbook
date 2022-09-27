@@ -119,7 +119,7 @@ $$
 De manera similar, para mantener la simetría, cuando $P>0,5$ se realiza un ajuste definiendo $\hat{L} = -\log(1-\hat{P})$. Por lo tanto, para proporciones centrales, los coeficientes de variación de $\hat{P}$ y $\hat{L}$ serán comparables, puesto que $\hat{L}$ toma valores cercanos a uno cuando $P \in (0,2\ \ ,\ \ 0,8)$, y en este caso el $CV(\hat{L})$ será similar a $CV(\hat{P})$.
 
 
-![(\#fig:fig1fig)Relación entre el tamaño de muestra y la precisión de un indicador utilizando la transformación Logit.](19Calidad_files/figure-docx/fig1fig-1.png)
+![(\#fig:fig1fig)Relación entre el tamaño de muestra y la precisión de un indicador utilizando la transformación Logit.](19Calidad_files/figure-latex/fig1fig-1.pdf) 
 
 La figura \@ref(fig:fig1fig) muestra que, al igual que con el coeficiente de variación original, el tamaño de muestra aumentará a medida que se requiera mayor precisión en la estimación; pero a diferencia del coeficiente de variación original, el tamaño de muestra será idéntico para los fenómenos que induzcan proporciones simétricas. Además, el tamaño de muestra necesario para estimar eficientemente una proporción $P\leq 0.5$ con una precisión mayor a un determinado umbral del coeficiente de variación $CVE$ es:  
 
@@ -129,6 +129,7 @@ $$
 
 La expresión anterior se obtiene teniendo en cuenta el siguiente desarrollo algebraico. En particular, cuando $P > 0,5$, se desea que el coeficiente de variación logarítmico sea menor a un umbral $\delta$ y, por lo tanto, habiendo definido $S^2 = P\ (1-P) \  DEFF$, se tiene el siguiente conjunto de implicaciones.
 
+$$
 \begin{align*}
 CV(\hat{L}) \leq \delta 
 &\Longrightarrow \ \ \ \ \dfrac{SE(\hat{P})}{-\log(1-\hat{P})(1-\hat{P})} \leq \delta \\
@@ -146,9 +147,11 @@ n \geq \frac{S^2N}{N\ \delta^2(1-\hat{P})^2\log^2(1-\hat{P}) +S^2} \\
 &\Longrightarrow \ \ \ \ 
 n \geq \frac{S^2}{\ \delta^2(1-\hat{P})^2\log^2(1-\hat{P}) +\frac{S^2}{N}}
 \end{align*}
+$$
 
-Análogamente, cuando $P \leq 0,5$, se tiene que
+Análogamente, cuando $P \leq 0.5$, se tiene que
 
+$$
 \begin{align*}
 CV(\hat{L}) \leq \delta
 &\Longrightarrow \ \ \ \ 
@@ -168,7 +171,7 @@ n \geq \dfrac{S^2N}{\log^2(\hat{P})\hat{P}^2\delta^2N + S^2}\\
 &\Longrightarrow \ \ \ 
 n \geq \dfrac{S^2}{\frac{S^2}{N}+\log^2(\hat{P})\hat{P}^2\delta^2}
 \end{align*}
-
+$$
 
 ### El efecto de diseño DEFF 
 
@@ -400,5 +403,7 @@ De manera general, se recomienda que los INE estudien a profundidad sus polític
 
 Por ejemplo, la figura \@ref(fig:figCSj1) muestra una propuesta preliminar, para la estimación de proporciones o razones, en cuanto a los criterios de supresión de cifras. En una primera instancia se realiza la estimación clásica de los parámetros de interés y se genera una tabla que adjunte el cálculo de todos los criterios descritos anteriormente. Luego, dependiendo de la naturaleza del fenómeno investigado, se deben establecer los criterios que se van a tener en cuenta y los umbrales en cada caso. El próximo paso es decidir, para cada cifra de la tabla generada, si se va a publicar o suprimir, y en algunos casos si se revisará la cifra con mayor detenimiento. Por ejemplo, en el diagrama propuesto se definen seis criterios como condiciones necesarias para la publicación inmediata de una cifra; los primeros cuatro, son condiciones necesarias para la revisión temática. Si alguno de los primeros cuatro criterios no se satisface, entonces la cifra es suprimida. 
 
-![(\#fig:figCSj1)Diagrama de flujo propuesto para la publicación, supresión y revisión de estimaciones de proporciones o razones en encuestas de hogares.](Pics/CSj1.png){width=50%}
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{Pics/CSj1} \caption{Diagrama de flujo propuesto para la publicación, supresión y revisión de estimaciones de proporciones o razones en encuestas de hogares.}(\#fig:figCSj1)
+\end{figure}
 

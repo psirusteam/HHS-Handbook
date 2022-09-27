@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>14.1 Sesgo sobre los estimadores | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="14.1 Sesgo sobre los estimadores | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-01-26" />
+<meta name="date" content="2022-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="ausencia-de-respuesta-de-unidad.html"/>
 <link rel="next" href="soluciones.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -466,15 +465,15 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="sesgo-sobre-los-estimadores" class="section level2" number="14.1">
-<h2><span class="header-section-number">14.1</span> Sesgo sobre los estimadores</h2>
+<div id="sesgo-sobre-los-estimadores" class="section level2 hasAnchor" number="14.1">
+<h2><span class="header-section-number">14.1</span> Sesgo sobre los estimadores<a href="sesgo-sobre-los-estimadores.html#sesgo-sobre-los-estimadores" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Asumiendo que existe ausencia de respuesta en la muestra, considere la siguiente forma de estimar (ingenuamente) el promedio poblacional <span class="math inline">\(\bar{y}_U\)</span> mediante el estimador de Hájek</p>
 <p><span class="math display">\[
 \tilde{y}_s = \frac{\sum_{s_r}d_ky_k}{\sum_{s_r}d_k} = \frac{\hat{t}_y}{\hat{N}}
 \]</span></p>
 <p>Siendo <span class="math inline">\(\bar{\phi}\)</span> el promedio de las probabilidades de respuesta, el sesgo generado por la ausencia de respuesta puede cuantificarse de la siguiente manera:</p>
 <p><span class="math display">\[
-B\left(\tilde{y}_s\right)  = 
+B\left(\tilde{y}_s\right)  =
 \frac{1}{N\bar{\phi}}\sum_U(y_k-\bar{y}_U)(\phi_k-\bar{\phi})
 = \frac{Cov\left(\bar{y},\phi\right)}{\bar{\phi}}
 = \frac{Cor\left(Y,\phi\right)S\left(Y\right)S\left(\phi\right)}{\bar{\phi}}
@@ -485,17 +484,17 @@ los valores de la característica de interés y las probabilidades de respuesta,
 y <span class="math inline">\(S\left(Y\right)\)</span> es la desviación estandar poblacional de la variable objetivo. Dado que el valor del coeficiente de correlación está restringido
 al intervalo <span class="math inline">\([-1, 1]\)</span>, el valor máximo del sesgo absoluto será igual a</p>
 <p><span class="math display">\[
-|B\left(\tilde{y}_s\right)| \leq 
+|B\left(\tilde{y}_s\right)| \leq
 \frac{S\left(\phi\right)S\left(y\right)}{\bar{\phi}}
 = \frac{\left(1-R\left(\phi\right)\right)S\left(y\right)}{2\bar{\phi}}
 \]</span></p>
 <p>A pesar de que este límite superior no se puede calcular en situaciones prácticas, sí es posible estimarlo utilizando los datos de la muestra y las probabilidades
 de respuesta estimadas. Nótese que si el mecanismo de ausencia de respuesta fuese MCAR, entonces el valor de <span class="math inline">\(R\left(\phi\right)\)</span> sería uno, y por consiguiente no habría sesgo. De la misma forma, en el caso extremo en el que la característica de interés fuese homogénea en toda la población, tampoco habría sesgo en el estimador, y bastaría con utilizar los datos de la muestra de respondientes efectivos, sin ningún tipo de corrección.</p>
-<p>Además de las anteriores consideraciones, es posible evaluar las propuestas de escogencia de variables para calibración de <span class="citation"><a href="#ref-KaltonFloresCervantes_2003" role="doc-biblioref">Graham Kalton y Flores-Cervantes</a> (<a href="#ref-KaltonFloresCervantes_2003" role="doc-biblioref">2003</a>)</span> y de <span class="citation"><a href="#ref-Sarndal_2011" role="doc-biblioref">Sarndal</a> (<a href="#ref-Sarndal_2011" role="doc-biblioref">2011</a>)</span>. En particular, este último autor considera un indicador del sesgo por ausencia de respuesta sobre los estimadores de calibración, cuya lógica se basa en que, en el mejor de los casos, en el que no hubiese errores de cobertura ni ausencia de respuesta, el estimador de expansión <span class="math inline">\(\hat{t}_{y}\)</span> sería insesgado y la distancia que habría entre este y el estimador de calibración <span class="math inline">\(\hat{t}_{y,cal}\)</span> se podría cuantificar como <span class="math inline">\(\Delta_A = \frac{(\hat{t}_{y,cal} - \hat{t}_{y})}{N}\)</span>. Este indicador se sugiere como una posible herramienta para comparar potenciales variables de calibración, de tal forma que cuando el valor de <span class="math inline">\(|\Delta_A|\)</span> sea grande habría un indicio para preferir un vector de calibración sobre otro. Además, al estandarizarla, esta medida puede ser descompuesta en los siguiente tres factores:</p>
+<p>Además de las anteriores consideraciones, es posible evaluar las propuestas de escogencia de variables para calibración de <span class="citation">Graham Kalton y Flores-Cervantes (<a href="#ref-KaltonFloresCervantes_2003" role="doc-biblioref">2003</a>)</span> y de <span class="citation">Sarndal (<a href="#ref-Sarndal_2011" role="doc-biblioref">2011</a>)</span>. En particular, este último autor considera un indicador del sesgo por ausencia de respuesta sobre los estimadores de calibración, cuya lógica se basa en que, en el mejor de los casos, en el que no hubiese errores de cobertura ni ausencia de respuesta, el estimador de expansión <span class="math inline">\(\hat{t}_{y}\)</span> sería insesgado y la distancia que habría entre este y el estimador de calibración <span class="math inline">\(\hat{t}_{y,cal}\)</span> se podría cuantificar como <span class="math inline">\(\Delta_A = \frac{(\hat{t}_{y,cal} - \hat{t}_{y})}{N}\)</span>. Este indicador se sugiere como una posible herramienta para comparar potenciales variables de calibración, de tal forma que cuando el valor de <span class="math inline">\(|\Delta_A|\)</span> sea grande habría un indicio para preferir un vector de calibración sobre otro. Además, al estandarizarla, esta medida puede ser descompuesta en los siguiente tres factores:</p>
 <p><span class="math display">\[\frac{\Delta_A}{S_y} = cv_g \ \times R_{y,\mathbf{x}} \ \times R_{D,C}\]</span></p>
 <p>De esta forma, el primer factor representa el coeficiente de variación de los pesos <span class="math inline">\(g_k\)</span>; el segundo factor al cuadrado es el coeficiente de determinación de una regresión múltiple entre la variable de estudio y las variables del vector de calibración; el último factor al cuadrado es el coeficiente de determinación (proporción de varianza explicada) en una regresión ponderada que pasa por el origen entre las desviaciones de las covariables <span class="math inline">\(D_j = \hat{t}_{x, j} - t_{x,j}\)</span> y las covarianzas de la variable de estudio y las covariables <span class="math inline">\(C_j = cov(y, x_j)\)</span>.</p>
 </div>
-<h3>Referencias</h3>
+<h3>Referencias<a href="referencias.html#referencias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-KaltonFloresCervantes_2003" class="csl-entry">
 Kalton, Graham, y Ismael Flores-Cervantes. 2003. <span>«Weighting methods»</span>. <em>Journal of Official Statistics</em> 19 (2): 17.
@@ -571,7 +570,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>13.3 Clasificación de la ausencia de respuesta | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="13.3 Clasificación de la ausencia de respuesta | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-01-26" />
+<meta name="date" content="2022-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="indicadores-de-representatividad.html"/>
 <link rel="next" href="ausencia-de-respuesta-de-registro-y-de-unidad.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -466,11 +465,11 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="clasificación-de-la-ausencia-de-respuesta" class="section level2" number="13.3">
-<h2><span class="header-section-number">13.3</span> Clasificación de la ausencia de respuesta</h2>
-<p>Por otra parte, <span class="citation"><a href="#ref-Lund" role="doc-biblioref">C. Särndal y Lundstrom</a> (<a href="#ref-Lund" role="doc-biblioref">2005</a>)</span> aclaran que existe una gran cantidad de literatura acerca de la ausencia de respuesta y muchos artículos recientes. Esta literatura examina dos aspectos diferentes pero complementarios en el ejercicio de una encuesta: la prevención de la ausencia de respuesta (antes de que ocurra) y las técnicas de estimación necesarias para tener en cuenta la ausencia de respuesta de manera apropiada en el proceso de inferencia. Esta segunda actividad se conoce con el nombre de ajuste para la ausencia de respuesta. <span class="citation"><a href="#ref-LR2002" role="doc-biblioref">Little y Rubin</a> (<a href="#ref-LR2002" role="doc-biblioref">2002</a>)</span> establecen tres tipos de mecanismos de ausencia de respuesta.</p>
-<div id="mcar" class="section level3" number="13.3.1">
-<h3><span class="header-section-number">13.3.1</span> MCAR</h3>
+<div id="clasificación-de-la-ausencia-de-respuesta" class="section level2 hasAnchor" number="13.3">
+<h2><span class="header-section-number">13.3</span> Clasificación de la ausencia de respuesta<a href="clasificación-de-la-ausencia-de-respuesta.html#clasificación-de-la-ausencia-de-respuesta" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Por otra parte, <span class="citation">C. Särndal y Lundstrom (<a href="#ref-Lund" role="doc-biblioref">2005</a>)</span> aclaran que existe una gran cantidad de literatura acerca de la ausencia de respuesta y muchos artículos recientes. Esta literatura examina dos aspectos diferentes pero complementarios en el ejercicio de una encuesta: la prevención de la ausencia de respuesta (antes de que ocurra) y las técnicas de estimación necesarias para tener en cuenta la ausencia de respuesta de manera apropiada en el proceso de inferencia. Esta segunda actividad se conoce con el nombre de ajuste para la ausencia de respuesta. <span class="citation">Little y Rubin (<a href="#ref-LR2002" role="doc-biblioref">2002</a>)</span> establecen tres tipos de mecanismos de ausencia de respuesta.</p>
+<div id="mcar" class="section level3 hasAnchor" number="13.3.1">
+<h3><span class="header-section-number">13.3.1</span> MCAR<a href="clasificación-de-la-ausencia-de-respuesta.html#mcar" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Este mecanismo conocido como ausencia de respuesta completamente aleatoria (MCAR - <em>missing completely at random</em>) se presenta cuando la probabilidad de que un individuo responda no depende de la característica de interés, ni de alguna otra covariable auxiliar. Por ejemplo, si la ausencia de respuesta en una encuesta laboral, no depende del estado actual de empleo del respondiente, ni de alguna característica auxiliar. De esta forma, la ausencia de respuesta está dispersa de manera uniforme sobre toda la población.</p>
 <p>Es decir que, cuando el investigador produzca estadísticas descriptivas sobre las personas que respondieron la encuesta, ese porcentaje de personas sea muy similar y tenga un comportamiento uniforme sobre todas las posibles covariables que afecten al individuo. El gráfico <a href="clasificación-de-la-ausencia-de-respuesta.html#fig:mcar">13.1</a> podría mostrar algunos indicios de que el patrón de ausencia de respuesta podría ser MCAR puesto que el porcentaje de respuesta es similar en las variables auxiliares.</p>
 <div class="figure"><span style="display:block;" id="fig:mcar"></span>
@@ -480,8 +479,8 @@ Figura 13.1: Patrón de respuesta MCAR
 </p>
 </div>
 </div>
-<div id="mar" class="section level3" number="13.3.2">
-<h3><span class="header-section-number">13.3.2</span> MAR</h3>
+<div id="mar" class="section level3 hasAnchor" number="13.3.2">
+<h3><span class="header-section-number">13.3.2</span> MAR<a href="clasificación-de-la-ausencia-de-respuesta.html#mar" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>La ausencia de respuesta aleatoria (MAR - <em>missing at random</em>) se establece cuando la probabilidad de que un individuo responda depende de algunas covariables auxiliares, pero no depende de la característica de interés. Por ejemplo, en una encuesta de fuerza laboral, la ausencia de respuesta puede depender de la edad del respondientes, o del sexo, o incluso del nivel económico del individuo, pero no depende de su clasificación laboral. El gráfico <a href="clasificación-de-la-ausencia-de-respuesta.html#fig:mar">13.2</a> muestra que el patrón de ausencia de respuesta podría ser MAR puesto que el sexo y la zona del respondiente están influenciando el porcentaje de respuesta, aunque no el estado de ocupación.</p>
 <div class="figure"><span style="display:block;" id="fig:mar"></span>
 <img src="12Ausencia_files/figure-html/mar-1.svg" alt="Patrón de respuesta MAR" width="672" />
@@ -490,8 +489,8 @@ Figura 13.2: Patrón de respuesta MAR
 </p>
 </div>
 </div>
-<div id="nmar" class="section level3" number="13.3.3">
-<h3><span class="header-section-number">13.3.3</span> NMAR</h3>
+<div id="nmar" class="section level3 hasAnchor" number="13.3.3">
+<h3><span class="header-section-number">13.3.3</span> NMAR<a href="clasificación-de-la-ausencia-de-respuesta.html#nmar" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Por último, la ausencia de respuesta no aleatoria (NMAR - <em>not missing at random</em>) se presenta cuando la ausencia de respuesta depende de la característica de interés. El gráfico <a href="clasificación-de-la-ausencia-de-respuesta.html#fig:nmar">13.3</a> muestra indicios de que el patrón de respuesta es NMAR, puesto que la condición de ocupación es la que influencia el porcentaje de respuesta; esto es contraproducente porque no existirá una forma simple de mitigar el sesgo generado por esta clase de ausencia de respuesta.</p>
 <div class="figure"><span style="display:block;" id="fig:nmar"></span>
 <img src="12Ausencia_files/figure-html/nmar-1.svg" alt="Patrón de respuesta MNAR" width="672" />
@@ -501,7 +500,7 @@ Figura 13.3: Patrón de respuesta MNAR
 </div>
 </div>
 </div>
-<h3>Referencias</h3>
+<h3>Referencias<a href="referencias.html#referencias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-LR2002" class="csl-entry">
 Little, R., y D. B. Rubin. 2002. <em>Statistical Analysis with Missing Data</em>. 2nd ed. Wiley.
@@ -577,7 +576,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

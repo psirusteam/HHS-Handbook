@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>8.1 Estimación del efecto de diseño | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="8.1 Estimación del efecto de diseño | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-01-26" />
+<meta name="date" content="2022-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="el-efecto-de-diseño.html"/>
 <link rel="next" href="descomposición-del-efecto-de-diseño-en-las-encuestas-de-hogares.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -466,8 +465,8 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="estimación-del-efecto-de-diseño" class="section level2" number="8.1">
-<h2><span class="header-section-number">8.1</span> Estimación del efecto de diseño</h2>
+<div id="estimación-del-efecto-de-diseño" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> Estimación del efecto de diseño<a href="estimación-del-efecto-de-diseño.html#estimación-del-efecto-de-diseño" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>En la expresión de efecto de diseño se debe notar dos hechos importantes, en primer lugar, DEFF depende del diseño muestral <span class="math inline">\(p(s)\)</span>, y en segundo lugar, depende del estimador del parámetro <span class="math inline">\(\theta\)</span>. De esta forma, no es correcto describir al <span class="math inline">\(DEFF\)</span> únicamente como una medidad de eficiencia del diseño muestral, puesto que bajo un mismo diseño, este puede tomar diferentes valores según el parámetro que se quiera estimar.</p>
 <p>Nótese que ninguno de los componentes del efecto de diseño se conoce y por ende deben ser estimados. En particular, un estimador aproximadamente insesgado de la varianza poblacional <span class="math inline">\(S^2_{y_U}\)</span> es la varianza muestral ponderada, la cual está dada por la siguiente expresión:</p>
 <p><span class="math display">\[
@@ -482,9 +481,9 @@ div.csl-indent {
 <p><span class="math display">\[
 \widehat{DEFF} = \frac{\widehat{Var}(\hat\theta)}{\widehat{Var}_{MAS}(\hat{\theta})}
 \]</span></p>
-<p>La idea central del efecto de diseño recae en la evaluación del mismo estimador bajo diferentes escenarios de muestreo. Como el estimador que se está estudiando <span class="math inline">\(\hat \theta\)</span> viene ponderado por los factores de expansión de la encuesta, entonces lo más conveniente es utilizar el mismo rasero para evaluar ambas estrategias de muestreo. Es posible encontrar una discusión más profunda sobre el efecto de diseño en <span class="citation"><a href="#ref-Gambino_2009" role="doc-biblioref">Jack G. Gambino</a> (<a href="#ref-Gambino_2009" role="doc-biblioref">2009, sec. 4</a>.)</span>, <span class="citation"><a href="#ref-Sarndal_Swensson_Wretman_2003" role="doc-biblioref">C.-E. Särndal, Swensson, y Wretman</a> (<a href="#ref-Sarndal_Swensson_Wretman_2003" role="doc-biblioref">2003, 188</a>)</span> y <span class="citation"><a href="#ref-Gutierrez_Zhang_Montano_2016" role="doc-biblioref">A. Gutiérrez, Zhang, y Montaño</a> (<a href="#ref-Gutierrez_Zhang_Montano_2016" role="doc-biblioref">2016, 101</a>)</span>.</p>
+<p>La idea central del efecto de diseño recae en la evaluación del mismo estimador bajo diferentes escenarios de muestreo. Como el estimador que se está estudiando <span class="math inline">\(\hat \theta\)</span> viene ponderado por los factores de expansión de la encuesta, entonces lo más conveniente es utilizar el mismo rasero para evaluar ambas estrategias de muestreo. Es posible encontrar una discusión más profunda sobre el efecto de diseño en <span class="citation">Jack G. Gambino (<a href="#ref-Gambino_2009" role="doc-biblioref">2009, sec. 4</a>.)</span>, <span class="citation">C.-E. Särndal, Swensson, y Wretman (<a href="#ref-Sarndal_Swensson_Wretman_2003" role="doc-biblioref">2003, 188</a>)</span> y <span class="citation">A. Gutiérrez, Zhang, y Montaño (<a href="#ref-Gutierrez_Zhang_Montano_2016" role="doc-biblioref">2016, 101</a>)</span>.</p>
 </div>
-<h3>Referencias</h3>
+<h3>Referencias<a href="referencias.html#referencias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Gambino_2009" class="csl-entry">
 Gambino, Jack G. 2009. <span>«Design Effect Caveats»</span>. <em>The American Statistician</em> 63 (2): 141-46. <a href="https://doi.org/10.1198/tast.2009.0028">https://doi.org/10.1198/tast.2009.0028</a>.
@@ -563,7 +562,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

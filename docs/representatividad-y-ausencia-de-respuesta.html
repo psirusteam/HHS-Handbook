@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Capítulo 13 Representatividad y ausencia de respuesta | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Capítulo 13 Representatividad y ausencia de respuesta | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-01-26" />
+<meta name="date" content="2022-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="consideraciones-adicionales.html"/>
 <link rel="next" href="el-concepto-de-representatividad.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -466,17 +465,17 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="representatividad-y-ausencia-de-respuesta" class="section level1" number="13">
-<h1><span class="header-section-number">Capítulo 13</span> Representatividad y ausencia de respuesta</h1>
+<div id="representatividad-y-ausencia-de-respuesta" class="section level1 hasAnchor" number="13">
+<h1><span class="header-section-number">Capítulo 13</span> Representatividad y ausencia de respuesta<a href="representatividad-y-ausencia-de-respuesta.html#representatividad-y-ausencia-de-respuesta" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>El problema de la ausencia de respuesta es una faceta normal, aunque no deseable, en el desarrollo de una encuesta. Todas las encuestas de hogares sufren del fenómeno de la ausencia de respuesta en algunas de las variables de interés. En algunas ocasiones y aún después de un diseño cuidadoso y una planificación logística exhaustiva, esta problemática puede ser tan grande que los resultados de la encuesta pueden quedar en entredicho. Por esta razón, este problema debe ser considerado en la planificación y el diseño de todos los levantamientos de información a través de encuestas y se debe contemplar varios ajustes que prevean las consecuencias de este fenómeno. Es por esto que en los capítulos anteriores se abordó el tema del ajuste de subcobertura, que garantiza que el tamaño de muestra efectivo sea el adecuado para realizar un inferencia precisa. De otra forma, si el diseño de la encuesta no tiene en cuenta estos ajustes, el tamaño de muestra final se verá reducido puesto que muchos hogares no contestarán algunas preguntas del cuestionarios, y en algunos casos, muchos hogares no contestarán la totalidad del cuestionario.</p>
-<p>Existe un consenso general de que la ausencia de respuesta puede perjudicar severamente la calidad de las estadísticas calculadas y publicadas en una encuesta. <span class="citation"><a href="#ref-Lohr_2019" role="doc-biblioref">S. L. Lohr</a> (<a href="#ref-Lohr_2019" role="doc-biblioref">2019</a>)</span> afirma que la mayoría de encuestas tienen cierta ausencia de respuesta residual, aún después de un diseño cuidadoso y un seguimiento de la ausencia de respuesta y establece que existen varios tipos de mecanismos de ausencia de respuesta.</p>
+<p>Existe un consenso general de que la ausencia de respuesta puede perjudicar severamente la calidad de las estadísticas calculadas y publicadas en una encuesta. <span class="citation">S. L. Lohr (<a href="#ref-Lohr_2019" role="doc-biblioref">2019</a>)</span> afirma que la mayoría de encuestas tienen cierta ausencia de respuesta residual, aún después de un diseño cuidadoso y un seguimiento de la ausencia de respuesta y establece que existen varios tipos de mecanismos de ausencia de respuesta.</p>
 <ol style="list-style-type: decimal">
 <li>Se define la ausencia de respuesta ignorable cuando la probabilidad de que un individuo responda no depende de la característica de interés. Nótese que el adjetivo ignorable hace referencia a que un modelo puede explicar el mecanismo de ausencia de respuesta y que ésta se puede ignorar después de que el modelo la toma en cuenta.</li>
 <li>Por otra parte, la ausencia de respuesta se dice no ignorable cuando la probabilidad de que un individuo responda depende de la característica de interés. Por ejemplo, si en una encuesta de fuerza laboral, se desea estimar el número de personas empleadas o desempleadas, la ausencia de respuesta es no ignorable cuando depende de la clasificación laboral del individuo.</li>
 </ol>
-<p>En términos de literatura, el fenómeno de la ausencia de respuesta y sus recpercusiones negativas sobre la calidad de las estimaciones ha sido ampliamente estudiado. Por ejemplo, <span class="citation"><a href="#ref-Lumley_2010" role="doc-biblioref">Lumley</a> (<a href="#ref-Lumley_2010" role="doc-biblioref">2010, cap. 9</a>)</span> hace un análisis detallado con la ausencia de respuesta individual, en donde existen datos parciales para un respondiente, considerando un enfoque que está basado en el diseño de muestreo al ajustar los pesos muestrales. <span class="citation"><a href="#ref-Fuller" role="doc-biblioref">W. A. Fuller</a> (<a href="#ref-Fuller" role="doc-biblioref">2009, cap. 5</a>)</span> cita algunas técnicas de imputación para el tratamiento de la ausencia de respuesta y conjuga modelos probabilísticos junto con los pesos del diseño de muestreo para mitigar los efectos de este problema. <span class="citation"><a href="#ref-Sar1" role="doc-biblioref">C. Särndal</a> (<a href="#ref-Sar1" role="doc-biblioref">2011</a>)</span> considera un enfoque asistido por modelos, en donde toma conjuntos balanceados para lograr mayor representatividad de las estimaciones. De la misma forma, <span class="citation"><a href="#ref-Sar2" role="doc-biblioref">C. Särndal y Lundstrom</a> (<a href="#ref-Sar2" role="doc-biblioref">2010</a>)</span> propone un conjunto de indicadores para juzgar la efectividad de la información auxiliar utilizada para controlar el sesgo generado por la ausencia de respuesta.</p>
+<p>En términos de literatura, el fenómeno de la ausencia de respuesta y sus recpercusiones negativas sobre la calidad de las estimaciones ha sido ampliamente estudiado. Por ejemplo, <span class="citation">Lumley (<a href="#ref-Lumley_2010" role="doc-biblioref">2010, cap. 9</a>)</span> hace un análisis detallado con la ausencia de respuesta individual, en donde existen datos parciales para un respondiente, considerando un enfoque que está basado en el diseño de muestreo al ajustar los pesos muestrales. <span class="citation">W. A. Fuller (<a href="#ref-Fuller" role="doc-biblioref">2009, cap. 5</a>)</span> cita algunas técnicas de imputación para el tratamiento de la ausencia de respuesta y conjuga modelos probabilísticos junto con los pesos del diseño de muestreo para mitigar los efectos de este problema. <span class="citation">C. Särndal (<a href="#ref-Sar1" role="doc-biblioref">2011</a>)</span> considera un enfoque asistido por modelos, en donde toma conjuntos balanceados para lograr mayor representatividad de las estimaciones. De la misma forma, <span class="citation">C. Särndal y Lundstrom (<a href="#ref-Sar2" role="doc-biblioref">2010</a>)</span> propone un conjunto de indicadores para juzgar la efectividad de la información auxiliar utilizada para controlar el sesgo generado por la ausencia de respuesta.</p>
 </div>
-<h3>Referencias</h3>
+<h3>Referencias<a href="referencias.html#referencias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Fuller" class="csl-entry">
 Fuller, W. A. 2009. <em>Sampling Statistics</em>. Wiley.
@@ -561,7 +560,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

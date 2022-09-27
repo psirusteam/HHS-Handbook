@@ -178,21 +178,21 @@ Este mecanismo conocido como ausencia de respuesta completamente aleatoria (MCAR
 
 Es decir que, cuando el investigador produzca estadísticas descriptivas sobre las personas que respondieron la encuesta, ese porcentaje de personas sea muy similar y tenga un comportamiento uniforme sobre todas las posibles covariables que afecten al individuo. El gráfico \@ref(fig:mcar) podría mostrar algunos indicios de que el patrón de ausencia de respuesta podría ser MCAR puesto que el porcentaje de respuesta es similar en las variables auxiliares.
 
-![(\#fig:mcar)Patrón de respuesta MCAR](12Ausencia_files/figure-docx/mcar-1.png)
+![(\#fig:mcar)Patrón de respuesta MCAR](12Ausencia_files/figure-latex/mcar-1.pdf) 
 
 
 ### MAR 
 
 La ausencia de respuesta aleatoria (MAR - *missing at random*) se establece cuando la probabilidad de que un individuo responda depende de algunas covariables auxiliares, pero no depende de la característica de interés.  Por ejemplo, en una encuesta de fuerza laboral, la ausencia de respuesta puede depender de la edad del respondientes, o del sexo, o incluso del nivel económico del individuo, pero no depende de su clasificación laboral. El gráfico \@ref(fig:mar) muestra que el patrón de ausencia de respuesta podría ser MAR puesto que el sexo y la zona del respondiente están influenciando el porcentaje de respuesta, aunque no el estado de ocupación. 
 
-![(\#fig:mar)Patrón de respuesta MAR](12Ausencia_files/figure-docx/mar-1.png)
+![(\#fig:mar)Patrón de respuesta MAR](12Ausencia_files/figure-latex/mar-1.pdf) 
 
 
 ### NMAR 
 
 Por último, la ausencia de respuesta no aleatoria (NMAR - *not missing at random*) se presenta cuando la ausencia de respuesta depende de la característica de interés. El gráfico \@ref(fig:nmar) muestra indicios de que el patrón de respuesta es NMAR, puesto que la condición de ocupación es la que influencia el porcentaje de respuesta; esto es contraproducente porque no existirá una forma simple de mitigar el sesgo generado por esta clase de ausencia de respuesta. 
 
-![(\#fig:nmar)Patrón de respuesta MNAR](12Ausencia_files/figure-docx/nmar-1.png)
+![(\#fig:nmar)Patrón de respuesta MNAR](12Ausencia_files/figure-latex/nmar-1.pdf) 
 
 
 ## Ausencia de respuesta de registro y de unidad
@@ -241,7 +241,9 @@ Finalmente, si se supone que $y_k$ es faltante y se considera para la imputació
 * El número de respondientes efectivos en la primera variable es $\#(r_1)=10$, en la segunda variable es $\#(r_2)=9$, y así sucesivamente hasta notar que el número de respondientes efectivos en la última variable de la base de datos es de $\#(r_8)=8$. 
 
 
-![(\#fig:figbaseincom)Un conjunto de datos después del proceso de observación.](Pics/j1.png){width=50%}
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{Pics/j1} \caption{Un conjunto de datos después del proceso de observación.}(\#fig:figbaseincom)
+\end{figure}
 
 
 ### Imputación total 
@@ -265,7 +267,9 @@ $$
 
 La figura \@ref(fig:figimptotal) muestra un ejemplo de las unidades que serían consideradas para el análisis después de la imputación. Nótese entonces que las tres unidades que respondieron todas las preguntas del cuestionario entran al análisis sin ningún ajuste; mientras que las nueve unidades que no respondieron a todo el cuestionario entran al análisis habiéndose imputado las celdas correspondientes a la ausencia de respuesta; además, las dos unidades que no respondieron ninguna pregunta del cuestionario también entran al análisis puesto que todas sus respuestas fueron imputadas. Luego, en este enfoque todas las unidades en el conjunto $s$ se consideran para el análisis posterior. 
 
-![(\#fig:figimptotal)Imputación total: todas las unidades que no respondieron son imputadas (las celdas en gris indican los valores que fueron imputados).](Pics/j2.png){width=50%}
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{Pics/j2} \caption{Imputación total: todas las unidades que no respondieron son imputadas (las celdas en gris indican los valores que fueron imputados).}(\#fig:figimptotal)
+\end{figure}
 
 
 ### Ponderación total 
@@ -281,7 +285,9 @@ Si todos los $r_i$ son diferentes, entonces cada variable de estudio requerirá 
 
 Siguiendo con el ejemplo, a partir de la figura \@ref(fig:figpondtotal) se nota que la primera variable del cuestionario fue respondida por 10 personas, y cuatro personas no respondieron esta pregunta. Por lo tanto, en este enfoque se crearán pesos $w_k^{(1)}$ para cada $k\in r_1$ que ponderen satisfactoriamente la información recolectada en esta variable. Sin embargo, este conjunto de pesos no será único, puesto que, en particular, la segunda variable del cuestionario fue respondida por nueve personas, y tres personas no respondieron esta pregunta. Por lo tanto, en este enfoque se crearán pesos $w_k^{(2)}$ para cada $k\in r_2$ que ponderen esta información recolectada en esta variable. Nótese que en general $w_k^{(1)} \neq w_k^{(2)}$ y, por ende, cada una de las $I=8$ variables del estudio tendrá su propio conjunto de ponderadores. 
 
-![(\#fig:figpondtotal)Ponderación total: cada variable tendrá un conjunto de pesos diferente. No se utiliza ningún método de imputación.](Pics/j3.png){width=50%}
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{Pics/j3} \caption{Ponderación total: cada variable tendrá un conjunto de pesos diferente. No se utiliza ningún método de imputación.}(\#fig:figpondtotal)
+\end{figure}
 
 ### Eliminación total 
 
@@ -293,7 +299,9 @@ Por supuesto, en general, esto no es aconsejable puesto que trae problemas de se
 
 La gráfica \@ref(fig:figelimtotal) representa este enfoque en donde es evidente que el decrecimiento en el tamaño de muestra podría tener repercusiones nefastas en la inferencia de la encuesta. Teniendo en cuenta el ejemplo anterior, solo tres unidades serían tenidas en cuenta para el análisis de la información, mientras que nueve unidades, que no contestaron al menos una pregunta, más las dos unidades que no contestaron ninguna pregunta, serían eliminadas del análisis estadístico. Es decir, la mayoría de unidades de la muestra inicial serían descartadas.
 
-![(\#fig:figelimtotal)Enfoque de eliminación: únicamente se consideran las unidades que respondedieron a todas las varaibles.](Pics/j4.png){width=50%}
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{Pics/j4} \caption{Enfoque de eliminación: únicamente se consideran las unidades que respondedieron a todas las varaibles.}(\#fig:figelimtotal)
+\end{figure}
 
 
 ### Enfoque combinado 
@@ -314,7 +322,9 @@ En donde $\hat{y}_k$ es el valor imputado. Note que en el enfoque de imputación
 
 Se observa que los dos últimos individuos de la muestra fueron totalmente descartados puesto que no contestaron ninguna pregunta del cuestionario; además, para la primera variable, los valores del quinto y noveno individuo fueron imputados. De la misma manera, para la segunda variable, los valores de los individuos diez, once y doce fueron imputados; y así sucesivamente, hasta llegar a la última variable en donde los valores de los individuos cuatro, cinco, siete y nueve fueron imputados. 
 
-![(\#fig:figenfcomb)Enfoque combinado: las unidades que no respondieron a ningún ítem son eliminadas del análisis y los respondientes parciales son imputados.](Pics/j5.png){width=50%}
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{Pics/j5} \caption{Enfoque combinado: las unidades que no respondieron a ningún ítem son eliminadas del análisis y los respondientes parciales son imputados.}(\#fig:figenfcomb)
+\end{figure}
 
 Los capítulos anteriores profundizaron en el tema de la creación de factores de expansión para los individuos presentes en la base de datos final. De tal forma que en los capítulos posteriores se abordará algunas metodologías de imputación que pueden ser recomendables a la hora de completar una base de datos estructurada y rectangular cuyas entradas estén completas. Antes de introducir estos temas se presentarán algunas medidas descriptivas que pueden ser usadas para generar alertas sobre la pérdida de representatividad debido a la ausencia de respuesta. 
 

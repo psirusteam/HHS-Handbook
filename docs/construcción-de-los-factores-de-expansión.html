@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Capítulo 11 Construcción de los factores de expansión | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Capítulo 11 Construcción de los factores de expansión | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-01-26" />
+<meta name="date" content="2022-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="estimadores-de-calibración.html"/>
 <link rel="next" href="creación-de-los-pesos-básicos.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -466,18 +465,18 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="construcción-de-los-factores-de-expansión" class="section level1" number="11">
-<h1><span class="header-section-number">Capítulo 11</span> Construcción de los factores de expansión</h1>
+<div id="construcción-de-los-factores-de-expansión" class="section level1 hasAnchor" number="11">
+<h1><span class="header-section-number">Capítulo 11</span> Construcción de los factores de expansión<a href="construcción-de-los-factores-de-expansión.html#construcción-de-los-factores-de-expansión" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>En todas las bases de datos de las encuestas de hogares se encuentra una columna que contiene los pesos de muestreo o factores de expansión. Con esta columna se realizan todos los análisis requeridos en la encuesta, desde estimar medias, razones, tamaños y proporciones hasta el ajuste de modelos lineales y no lineales.</p>
 <p>La razón principal por la cual se usan los factores de expansión es para producir estimaciones que reflejen de manera precisa el comportamiento de la población objetivo. El uso correcto de los factores de expansión garantiza que la estimación sea insesgada y consistente, que el error de muestreo sea pequeño, condicionado al diseño muestral y al tamaño de la muestra; además de corregir las deficiencias de cobertura del marco de muestreo.</p>
 <p>Los procesos de inferencia estadística establecidos en cualquier encuesta de hogares descansan sobre el principio de representatividad que afirma que es posible seleccionar una muestra y representar con bastante precisión y exactitud la realidad de la población de interés. A su vez, las propiedades estadísticas de la inferencia en encuestas de hogares descansan sobre las probabilidades de inclusión generadas por el diseño de muestreo que se implementó en la encuesta. En general el peso de muestreo <span class="math inline">\(d_k\)</span> asociado a un individuo <span class="math inline">\(k\)</span> en la muestra <span class="math inline">\(s\)</span> es función de la probabilidad de inclusión del individuo, así:</p>
 <p><span class="math display">\[
 d_k = \frac{1}{Pr(k\in s)}
 \]</span></p>
-<p>Como se mencionó anteriormente, para conservar la estabilidad en los pesos de muestreo, es posible definir diseños de muestreo auto-ponderados, en donde las unidades finales de muestreo tengan las misma probabilidad de inclusión, sin importar el tamaño de la unidad primaria de muestreo que la contiene. Este tipo de diseños es útil porque induce mayor control sobre las estimaciones finales. Además, <span class="citation"><a href="#ref-Valliant_Dever_2017" role="doc-biblioref">Valliant y Dever</a> (<a href="#ref-Valliant_Dever_2017" role="doc-biblioref">2017</a>)</span> afirman que los pesos de muestreo se utilizan con el fin de incorporar las probabilidades de selección de las unidades en la muestra, ajustar en casos en los que no se pueda determinar si algunas unidades en la muestra son miembros de la población de interés, minimizar el sesgo causado por la ausencia de respuesta cuando algunas unidades no responden habiendo sido incluidas en la muestra, incorporar información auxiliar externa para reducir los errores muestrales de las estimaciones y compensar cuando la muestra no cubre correctamente a la población de interés.</p>
+<p>Como se mencionó anteriormente, para conservar la estabilidad en los pesos de muestreo, es posible definir diseños de muestreo auto-ponderados, en donde las unidades finales de muestreo tengan las misma probabilidad de inclusión, sin importar el tamaño de la unidad primaria de muestreo que la contiene. Este tipo de diseños es útil porque induce mayor control sobre las estimaciones finales. Además, <span class="citation">Valliant y Dever (<a href="#ref-Valliant_Dever_2017" role="doc-biblioref">2017</a>)</span> afirman que los pesos de muestreo se utilizan con el fin de incorporar las probabilidades de selección de las unidades en la muestra, ajustar en casos en los que no se pueda determinar si algunas unidades en la muestra son miembros de la población de interés, minimizar el sesgo causado por la ausencia de respuesta cuando algunas unidades no responden habiendo sido incluidas en la muestra, incorporar información auxiliar externa para reducir los errores muestrales de las estimaciones y compensar cuando la muestra no cubre correctamente a la población de interés.</p>
 <p>Es de notar que la conformación de los pesos de muestreo se transforma en un reto metodológico para el investigador, puesto que debe ajustarse a la realidad de la región en donde las poblaciones de los municipios se expanden cada vez más en el sector urbano y los marcos de muestreo de las áreas geográficas se desactualizan con rapidez. Varias soluciones a este problema han sido planteadas <span class="citation">(<a href="#ref-Gambino_Silva_2009" role="doc-biblioref">J. G. Gambino y Silva 2009</a>)</span> y todas ellas requieren de esfuerzos económicos, logísticos y técnicos. Por ende, los equipos de los INE (a todo nivel) deben ser flexibles y adecuarse a esta realidad cambiante de la movilidad de las poblaciones, sobre todo en las áreas urbanas.</p>
 <p>En condiciones ideales el marco de muestreo debería coincidir plenamente con la población finita. Sin embargo, en general, no es posible contar con una lista de todos los elementos de la población y, en el contexto de las encuestas a hogares, no existe una lista que enumere todos los hogares de un país de manera actualizada, por lo que la práctica estándar es construir el marco de muestreo en varias etapas, seleccionando una muestra de áreas geográficas, realizando un empadronamiento exhaustivo de todos los hogares en las áreas seleccionadas y luego seleccionando hogares. Este esquema de muestreo hace que el marco de muestreo de las encuestas a hogares presente imperfecciones.</p>
-<p>Para hacerle frente a las imperfeccciones del marco, <span class="citation"><a href="#ref-Valliant_Dever_2017" role="doc-biblioref">Valliant y Dever</a> (<a href="#ref-Valliant_Dever_2017" role="doc-biblioref">2017</a>)</span> recomienda el uso de los códigos de disposición estandarizados por la <em>American Association for Public Opinion Research</em> (AAPOR) recomienda tratar la ausencia de respuesta de manera diferenciada y clasificar a cada unidad en la muestra en algunas de las siguientes categorías:</p>
+<p>Para hacerle frente a las imperfeccciones del marco, <span class="citation">Valliant y Dever (<a href="#ref-Valliant_Dever_2017" role="doc-biblioref">2017</a>)</span> recomienda el uso de los códigos de disposición estandarizados por la <em>American Association for Public Opinion Research</em> (AAPOR) recomienda tratar la ausencia de respuesta de manera diferenciada y clasificar a cada unidad en la muestra en algunas de las siguientes categorías:</p>
 <ol style="list-style-type: decimal">
 <li>ER (<em>unidades elegibles que fueron respondientes efectivos</em>): casos elegibles para los cuales se ha recolectado una cantidad suficiente de información.</li>
 <li>ENR (<em>unidades eligibles no respondientes</em>): casos elegibles para los cuales no se recolectó ningún dato o la información fue parcialmente recolectada.</li>
@@ -494,7 +493,7 @@ d_k = \frac{1}{Pr(k\in s)}
 <li>Recorte y redondeo de los factores finales (<em>opcional</em>).</li>
 </ol>
 </div>
-<h3>Referencias</h3>
+<h3>Referencias<a href="referencias.html#referencias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Gambino_Silva_2009" class="csl-entry">
 Gambino, J. G., y PL. d N. Silva. 2009. <span>«Chapter 16 - Sampling and Estimation in Household Surveys»</span>. En <em>Handbook of Statistics</em>, 29:407-39. Handbook of Statistics. Elsevier. <a href="https://doi.org/10.1016/S0169-7161(08)00016-3">https://doi.org/10.1016/S0169-7161(08)00016-3</a>.
@@ -570,7 +569,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

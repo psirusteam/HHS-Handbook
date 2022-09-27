@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>17.5 Pruebas de hipótesis sobre indicadores agregados | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="17.5 Pruebas de hipótesis sobre indicadores agregados | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-01-26" />
+<meta name="date" content="2022-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="efecto-del-tipo-de-encuesta-en-la-eficiencia-de-los-indicadores.html"/>
 <link rel="next" href="procesamiento-longitudinal-de-las-encuestas-rotativas.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -466,8 +465,8 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="pruebas-de-hipótesis-sobre-indicadores-agregados" class="section level2" number="17.5">
-<h2><span class="header-section-number">17.5</span> Pruebas de hipótesis sobre indicadores agregados</h2>
+<div id="pruebas-de-hipótesis-sobre-indicadores-agregados" class="section level2 hasAnchor" number="17.5">
+<h2><span class="header-section-number">17.5</span> Pruebas de hipótesis sobre indicadores agregados<a href="pruebas-de-hipótesis-sobre-indicadores-agregados.html#pruebas-de-hipótesis-sobre-indicadores-agregados" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Para decidir si un cambio en la dinámica de los parámetros de interés es
 significativo entre dos periodos de tiempo es necesario llevar a cabo
 una prueba de hipótesis. Por ejemplo, tomando en cuenta la dinámica del
@@ -495,8 +494,8 @@ estimador de diferencias:</p>
 \]</span></p>
 <p>La varianza asociada a este estimador está dada por</p>
 <p><span class="math display">\[
-Var(\hat{\Delta}) 
-= Var(\hat{\theta}_2) + Var(\hat{\theta}_1) - 2 Cov(\hat{\theta}_1, \hat{\theta}_2) 
+Var(\hat{\Delta})
+= Var(\hat{\theta}_2) + Var(\hat{\theta}_1) - 2 Cov(\hat{\theta}_1, \hat{\theta}_2)
 \]</span></p>
 <p>Y por último, el término de covarianza se puede escribir como</p>
 <p><span class="math display">\[
@@ -538,7 +537,7 @@ sus grados de libertad: <span class="math inline">\(t_{0.975, 1}=12.7\)</span>, 
 <span class="math inline">\(t_{0.975, 40}=2.02\)</span>, <span class="math inline">\(t_{0.975, \infty}=1.96\)</span>. Los grados de libertad
 son determinantes a la hora de hacer inferencias dentro de
 subpoblaciones de interés. En este caso los grados de libertad no se
-consideran fijos sino variables. <span class="citation"><a href="#ref-Korn_Graubard_1999" role="doc-biblioref">Korn y Graubard</a> (<a href="#ref-Korn_Graubard_1999" role="doc-biblioref">1999</a>)</span> proponen el
+consideran fijos sino variables. <span class="citation">Korn y Graubard (<a href="#ref-Korn_Graubard_1999" role="doc-biblioref">1999</a>)</span> proponen el
 siguiente método de cálculo sobre los grados de libertad en
 subpoblaciones:</p>
 <p><span class="math display">\[
@@ -550,7 +549,7 @@ toma el valor cero en otro caso.</p>
 
 </div>
 <!-- </div> -->
-<h3>Referencias</h3>
+<h3>Referencias<a href="referencias.html#referencias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Korn_Graubard_1999" class="csl-entry">
 Korn, Edward Lee, y Barry I. Graubard. 1999. <em>Analysis of health surveys</em>. Wiley.
@@ -623,7 +622,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

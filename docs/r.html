@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>B.1 R | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="B.1 R | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-01-26" />
+<meta name="date" content="2022-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="software.html"/>
 <link rel="next" href="stata.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -466,11 +465,11 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="r" class="section level2" number="22.1">
-<h2><span class="header-section-number">B.1</span> R</h2>
+<div id="r" class="section level2 hasAnchor" number="22.1">
+<h2><span class="header-section-number">B.1</span> R<a href="r.html#r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>R es un software de uso libre cuyo uso es cada vez más frecuente en la investigación social, puesto que es muy probable encontrar los más recientes hallazgos científicos programados en este software <span class="citation">(<a href="#ref-R_2019" role="doc-biblioref">R Core Team 2020b</a>)</span>. Al ser de uso libre, los investigadores pueden subir sus propias colecciones de funciones computacionales al repositorio oficial (<code>CRAN</code>) y ponerlas a disposición de la comunidad. El paquete <code>samplesize4surveys</code> <span class="citation">(<a href="#ref-ss4s" role="doc-biblioref">Rojas 2020</a>)</span> permite determinar el tamaño de muestra de individuos y hogares en encuestas de hogares repetidas, tipo panel y con rotación. Los paquetes <code>sampling</code> <span class="citation">(<a href="#ref-Yves" role="doc-biblioref">Tillé y Matei 2016b</a>)</span> y <code>TeachingSampling</code> <span class="citation">(<a href="#ref-TS" role="doc-biblioref">Hugo Andrés Gutiérrez 2015</a>)</span> permiten seleccionar muestras probabilísticas desde los marcos de muestreo bajo un gran variedad de diseños y algoritmos de muestreo. El paquete <code>survey</code> <span class="citation">(<a href="#ref-TL" role="doc-biblioref">Lumley 2016</a>)</span>, una vez que el diseño de muestreo ha sido predefinido mediante la función <code>svydesign()</code>, permite analizar datos provenientes de encuestas de hogares y obtener estimaciones apropiadas de los errores estándar.</p>
 </div>
-<h3>Referencias</h3>
+<h3>Referencias<a href="referencias.html#referencias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-TS" class="csl-entry">
 Gutiérrez, Hugo Andrés. 2015. <em>TeachingSampling: Selection of Samples and Parameter Estimation in Finite Population</em>. <a href="https://CRAN.R-project.org/package=TeachingSampling">https://CRAN.R-project.org/package=TeachingSampling</a>.
@@ -555,7 +554,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

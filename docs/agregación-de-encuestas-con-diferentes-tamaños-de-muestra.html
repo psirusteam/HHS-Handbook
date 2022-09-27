@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>17.3 Agregación de encuestas con diferentes tamaños de muestra | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="17.3 Agregación de encuestas con diferentes tamaños de muestra | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-01-26" />
+<meta name="date" content="2022-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="factores-de-expansión-y-estimadores-de-muestreo.html"/>
 <link rel="next" href="efecto-del-tipo-de-encuesta-en-la-eficiencia-de-los-indicadores.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -466,8 +465,8 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="agregación-de-encuestas-con-diferentes-tamaños-de-muestra" class="section level2" number="17.3">
-<h2><span class="header-section-number">17.3</span> Agregación de encuestas con diferentes tamaños de muestra</h2>
+<div id="agregación-de-encuestas-con-diferentes-tamaños-de-muestra" class="section level2 hasAnchor" number="17.3">
+<h2><span class="header-section-number">17.3</span> Agregación de encuestas con diferentes tamaños de muestra<a href="agregación-de-encuestas-con-diferentes-tamaños-de-muestra.html#agregación-de-encuestas-con-diferentes-tamaños-de-muestra" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>En algunos casos, el tamaño de las encuestas puede variar significativamente entre dos meses consecutivos. La pandemia por COVID-19 mostró cómo esta clase de eventos adversos puede afectar gravemente el tamaño de muestra de los levantamientos regulares. Por ejemplo, considere el siguiente esquema trimestral:</p>
 <table>
 <thead>
@@ -516,7 +515,7 @@ tratar con precisión. En particular, el hecho de que la encuesta tenga
 levantamientos mensuales en todos los dominios de interés, no
 implica que mensualmente se tiene el mismo nivel de representatividad que en el trimestre. De hecho, como se mencionó anteriormente, dada la baja incidencia de entrevistas en el último mes, es muy factible que no exista el mismo nivel de representatividad comparado con los dos primeros meses. Las anteriores características implican que el tratamiento de
 los factores de expansión iniciales debe hacerse de forma diferencial.</p>
-<p><span class="citation"><a href="#ref-Heeringa_West_Berglund_2017" role="doc-biblioref">Heeringa, West, y Berglund</a> (<a href="#ref-Heeringa_West_Berglund_2017" role="doc-biblioref">2017</a>)</span> afirman que para evitar el sesgo inducido
+<p><span class="citation">Heeringa, West, y Berglund (<a href="#ref-Heeringa_West_Berglund_2017" role="doc-biblioref">2017</a>)</span> afirman que para evitar el sesgo inducido
 por tamaños de muestra pequeños, como el que evidentemente se tiene en
 el tercer mes del ejemplo, es posible ajustar los pesos de
 muestreo. En particular, cuando los levantamientos tienen este tipo de diferenciación en los tamaños de muestra, se sugiere utilizar la siguiente
@@ -528,7 +527,7 @@ d_{kth}^{+}=\delta_{th} \times d_{kth}
 del estrato <span class="math inline">\(h\)</span> en el mes <span class="math inline">\(t\)</span> <span class="math inline">\((t=1, 2, 3)\)</span> y <span class="math inline">\(\delta_{th}\)</span> es un factor
 de ajuste, dependiente del tamaño de muestra, que representa el
 porcentaje de individuos observados en el mes <span class="math inline">\(t\)</span> para el estrato <span class="math inline">\(h\)</span>.
-Este factor, propuesto por <span class="citation"><a href="#ref-Kish_1999" role="doc-biblioref">Kish</a> (<a href="#ref-Kish_1999" role="doc-biblioref">1999, 131</a>)</span> en el contexto de
+Este factor, propuesto por <span class="citation">Kish (<a href="#ref-Kish_1999" role="doc-biblioref">1999, 131</a>)</span> en el contexto de
 acumulación de muestras, está dado por la siguiente expresión</p>
 <p><span class="math display">\[
 \delta_{th} = \frac{n_{th}}{\sum_{t = 1} ^3 n_{th}}
@@ -551,8 +550,8 @@ todos los meses, entonces</p>
 <p><span class="math display">\[
 \sum_{t=1}^3\sum_{k\in s_{h}} d_{kth}^{+}
 =\sum_{t=1}^3\sum_{k\in s_h}\delta_{th}\ d_{kth}
-=\sum_{t=1}^3\delta_{th}\sum_{k\in s_{th}}\ d_{kth} 
-=\sum_{t=1}^3\delta_{th}\hat{N}_h^t 
+=\sum_{t=1}^3\delta_{th}\sum_{k\in s_{th}}\ d_{kth}
+=\sum_{t=1}^3\delta_{th}\hat{N}_h^t
 \cong \sum_{t=1}^3\delta_{th}\hat{N}_h = \hat{N}_h
 \]</span></p>
 <p>La tercera propiedad se verifica puesto que la suma de los factores de
@@ -561,7 +560,7 @@ ponderada por el factor de ajuste <span class="math inline">\(\delta\)</span>, c
 continuación:</p>
 <p><span class="math display">\[
 \sum_{k\in s_{th}} d_{kth}^{+}=\sum_{k\in s_{th}}\delta_{th}\ d_{kth}
-=\delta_{th}\sum_{k\in s_{th}}\ d_{kth} 
+=\delta_{th}\sum_{k\in s_{th}}\ d_{kth}
 =\delta_{th}\hat{N}_h^t
 \]</span></p>
 <p>La última propiedad se puede comprobar en la encuesta, verificando que el aporte de los factores trimestrales sea proporcional al tamaño de muestra en cada dominio y en cada mes. Por último, la media de los factores de expansión es casi invariante con
@@ -594,7 +593,7 @@ el estrato <span class="math inline">\(h\)</span>, dado por</p>
 \delta_{th} = \frac{n_{th}}{\sum_{t = 1} ^{12} n_{th}}
 \]</span></p>
 </div>
-<h3>Referencias</h3>
+<h3>Referencias<a href="referencias.html#referencias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Heeringa_West_Berglund_2017" class="csl-entry">
 ———. 2017. <em>Applied survey data analysis</em>. Chapman y Hall CRC statistics en the social y behavioral sciences series. CRC Press.
@@ -670,7 +669,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

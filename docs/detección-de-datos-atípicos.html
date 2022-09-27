@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Capítulo 16 Detección de datos atípicos | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Capítulo 16 Detección de datos atípicos | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-01-26" />
+<meta name="date" content="2022-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="consideraciones-sobre-la-imputación-múltiple.html"/>
 <link rel="next" href="algunos-métodos-de-detección-de-valores-extremos.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -466,8 +465,8 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="detección-de-datos-atípicos" class="section level1" number="16">
-<h1><span class="header-section-number">Capítulo 16</span> Detección de datos atípicos</h1>
+<div id="detección-de-datos-atípicos" class="section level1 hasAnchor" number="16">
+<h1><span class="header-section-number">Capítulo 16</span> Detección de datos atípicos<a href="detección-de-datos-atípicos.html#detección-de-datos-atípicos" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>En esta sección se describen los aspectos teóricos y prácticos de la identificación de valores atípicos en una base de datos completa (incluso con registros que ya han sido imputados), basándose en métodos que han mostrado buenas propiedades en la inferencia de encuestas de hogares. Después de una breve introducción, se presenta un enfoque no exhaustivo del problema de la identificación de valores atípicos, así como la teoría detrás de los métodos y algunos hallazgos empíricos de la imputación de valores atípicos.</p>
 <p>Luego de detectar los posibles valores atípicos, el investigador debe enfrentarse al problema de decidir qué hacer con ellos; en general hay tres posible soluciones: mantenerlos en la base de datos final, corregirlos, o imputarlos. El enfoque de imputación de valores atípicos sigue los mismos principios que los método utilizado para imputar registros en el capítulo anterior. Al final, se recomienda que cuando se encuentren valores atípicos, se marquen para su revisión. Cuando se revisan, es posible encontrar que el valor es simplemente erróneo, debido a algún problema en la captura de los datos datos (error de medición); también es posible que el valor sea improbable y raro, pero que corresponda a un valor válido. En el primer caso el error se corrige (si el valor atípico es erróneo) y las estimaciones se ajustan. Si el valor atípico corresponde a un dato erróneo y no se puede localizar al encuestado, se recomienda imputarlo.</p>
 <p>Por tanto, estamos interesados en detectarlos, y
@@ -550,7 +549,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>16.1 Algunos métodos de detección de valores extremos | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="16.1 Algunos métodos de detección de valores extremos | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-01-26" />
+<meta name="date" content="2022-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="detección-de-datos-atípicos.html"/>
 <link rel="next" href="valores-atípicos-en-una-encuesta-de-consumo.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -466,15 +465,15 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="algunos-métodos-de-detección-de-valores-extremos" class="section level2" number="16.1">
-<h2><span class="header-section-number">16.1</span> Algunos métodos de detección de valores extremos</h2>
-<p><span class="citation"><a href="#ref-Filzmoser_Gussenbauer_Templ_2016" role="doc-biblioref">Filzmoser, Gussenbauer, y Templ</a> (<a href="#ref-Filzmoser_Gussenbauer_Templ_2016" role="doc-biblioref">2016</a>)</span> afirma que en el proceso de entrada de datos se pueden cometer errores. Por ejemplo, la introducción de valores de gasto imposibles, es decir, valores
+<div id="algunos-métodos-de-detección-de-valores-extremos" class="section level2 hasAnchor" number="16.1">
+<h2><span class="header-section-number">16.1</span> Algunos métodos de detección de valores extremos<a href="algunos-métodos-de-detección-de-valores-extremos.html#algunos-métodos-de-detección-de-valores-extremos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><span class="citation">Filzmoser, Gussenbauer, y Templ (<a href="#ref-Filzmoser_Gussenbauer_Templ_2016" role="doc-biblioref">2016</a>)</span> afirma que en el proceso de entrada de datos se pueden cometer errores. Por ejemplo, la introducción de valores de gasto imposibles, es decir, valores
 que son demasiado altos o demasiado bajos para ser plausibles. Estos valores extremos pueden tener
 un impacto significativo en algunos análisis particulares (como por ejemplo en el estudio de indicadores de desigualdad,
 o ajuste de modelos de regresión) que pueden verse significativamente afectados por un número reducido de
 valores influyentes en el conjunto de datos.</p>
-<div id="método-top-down" class="section level3" number="16.1.1">
-<h3><span class="header-section-number">16.1.1</span> Método Top-Down</h3>
+<div id="método-top-down" class="section level3 hasAnchor" number="16.1.1">
+<h3><span class="header-section-number">16.1.1</span> Método Top-Down<a href="algunos-métodos-de-detección-de-valores-extremos.html#método-top-down" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Suponga que <span class="math inline">\(y_{(1)}\le\cdots\le y_{(n)}\)</span> denota los valores ordenados de la variable de interés <span class="math inline">\(y\)</span> en la muestra <span class="math inline">\(s\)</span>. Considerando el total de la variable de interés para todos los elementos en la muestra, se define el porcentaje de contribución acumulado <span class="math inline">\(P_j\)</span> de la siguiente manera:</p>
 <p><span class="math display">\[
 P_j=100\times\frac{\sum_{i=j}^n y_{(i)}}{\sum_{k=1}^n y_k}; \ \ \ \ \ \ \ j = 1, \ldots, n.
@@ -484,16 +483,16 @@ P_j=100\times\frac{\sum_{i=j}^n y_{(i)}}{\sum_{k=1}^n y_k}; \ \ \ \ \ \ \ j = 1,
 P_j^*=100\times\frac{\sum_{i=j}^n d_i \ y_{(i)}}{\hat t_{y, \pi}}; \ \ \ \ \ \ \ j = 1, \ldots, n.
 \]</span></p>
 </div>
-<div id="método-de-boxplot" class="section level3" number="16.1.2">
-<h3><span class="header-section-number">16.1.2</span> Método de boxplot</h3>
+<div id="método-de-boxplot" class="section level3 hasAnchor" number="16.1.2">
+<h3><span class="header-section-number">16.1.2</span> Método de boxplot<a href="algunos-métodos-de-detección-de-valores-extremos.html#método-de-boxplot" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Uno de los métodos más básicos para identificar valores atípicos es construir un diagrama de caja utilizando la mediana y el rango intercuartílico <span class="math inline">\((RIC)\)</span> de la variable de interés. En primer lugar, se define su <span class="math inline">\(RIC = Q_3 - Q_1\)</span> y su mediana como <span class="math inline">\(m=Q_2\)</span>. Por consiguiente, un elemento se marcará como un valor atípico si cae fuera del siguiente intervalo:</p>
 <p><span class="math display">\[
 (m-c \times RIC,\ m+c \times RIC)
 \]</span>
 En donde <span class="math inline">\(c\)</span> es una constante predeterminada por el investigador, usualmente fijada entre 1.5 y 3.</p>
 </div>
-<div id="transformación-de-box-cox" class="section level3" number="16.1.3">
-<h3><span class="header-section-number">16.1.3</span> Transformación de Box-Cox</h3>
+<div id="transformación-de-box-cox" class="section level3 hasAnchor" number="16.1.3">
+<h3><span class="header-section-number">16.1.3</span> Transformación de Box-Cox<a href="algunos-métodos-de-detección-de-valores-extremos.html#transformación-de-box-cox" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Si la distribución de la variable es sesgada (como usualmente lo son los ingresos y gastos), es útil transformar la distribución para lograr una distribución simétrica antes de determinar los posibles valores atípicos. La transformación de Box-Cox se tiene la siguiente forma:</p>
 <p><span class="math display">\[
 y(\lambda)=
@@ -504,16 +503,16 @@ log(y),\;si\ \lambda=0
 \]</span></p>
 <p>En donde <span class="math inline">\(\lambda\in(-5,5)\)</span>. De esta forma, un ordenador iterará entre cada posible valor de <span class="math inline">\(\lambda\)</span> para encontrar el que mejor reproduzca una distribución normal. Con esta nueva distribución, se puede utilizar el criterio de decisión de boxplot.</p>
 </div>
-<div id="método-de-distancia-estandarizada" class="section level3" number="16.1.4">
-<h3><span class="header-section-number">16.1.4</span> Método de distancia estandarizada</h3>
+<div id="método-de-distancia-estandarizada" class="section level3 hasAnchor" number="16.1.4">
+<h3><span class="header-section-number">16.1.4</span> Método de distancia estandarizada<a href="algunos-métodos-de-detección-de-valores-extremos.html#método-de-distancia-estandarizada" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>La transformación anterior solo funciona para valores positivos. El siguiente método muestra otra forma de transformar y estandarizar los datos. Suponga que <span class="math inline">\(z_k=w_ky_k\)</span>; si <span class="math inline">\(m_z\)</span> es una estimación para la ubicación de <span class="math inline">\(z\)</span>, y <span class="math inline">\(\sigma_z\)</span> es una estimación para la escala de <span class="math inline">\(z\)</span>. Entonces, la distancia estandarizada puede entonces definirse como</p>
 <p><span class="math display">\[
 \delta_{z_k}=\frac{z_k-m_z}{\sigma_z}
 \]</span></p>
 <p>De forma similar al método de boxplot, los registros se clasificaran como valores atípicos si el valor absoluto de <span class="math inline">\(\delta_{z_k}\)</span> es mayor que un umbral predeterminado (normalmente 3). La media y la varianza de la muestra se pueden utilizar para las estimaciones de ubicación y escala para <span class="math inline">\(z_k\)</span>, pero no son robustas, ya que incluirán los valores atípicos potenciales, lo que a su vez reduce la probabilidad de que se identifiquen correctamente los registros atípicos. Por consiguiente, es posible utilizar estimadores robustos (resistentes a valores atípicos) para <span class="math inline">\(m_z\)</span> y <span class="math inline">\(\sigma_z\)</span>, como por ejemplo la mediana y el rango intercuartílico de <span class="math inline">\(z_k\)</span>, respectivamente.</p>
 </div>
-<div id="método-de-hidiroglou-bertholot" class="section level3" number="16.1.5">
-<h3><span class="header-section-number">16.1.5</span> Método de Hidiroglou-Bertholot</h3>
+<div id="método-de-hidiroglou-bertholot" class="section level3 hasAnchor" number="16.1.5">
+<h3><span class="header-section-number">16.1.5</span> Método de Hidiroglou-Bertholot<a href="algunos-métodos-de-detección-de-valores-extremos.html#método-de-hidiroglou-bertholot" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Es posible utilizar una distancia estandarizada para detectar si la relación entre dos variables <span class="math inline">\(x\)</span> y <span class="math inline">\(y\)</span> en una unidad de la muestra difiere estructuralmente de las otras unidades en la muestra. Este método utiliza la idea de distancia estandarizada y también incorpora una medida de importancia para el tamaño de la unidad, con el fin de determinar el umbral para considerar un registro como un valor atípico. El algoritmo de identificación sigue los siguientes pasos:</p>
 <ol style="list-style-type: decimal">
 <li>Para cada elemento calcular <span class="math inline">\(r_k=y_k/x_k\)</span> para <span class="math inline">\(k\in s\)</span>.</li>
@@ -531,37 +530,37 @@ El parámetro <span class="math inline">\(\phi\)</span> proporciona una medida d
 d_{Q_1} = \max\left(E_{Q_2} - E_{Q_1}\ , \ |0.5 \times E_{Q_2}|\right)
 \]</span>
 <span class="math display">\[
-d_{Q_3} = \max\left(E_{Q_3} - E_{Q_2}\ , \ |0.5 \times E_{Q_2}|\right) 
+d_{Q_3} = \max\left(E_{Q_3} - E_{Q_2}\ , \ |0.5 \times E_{Q_2}|\right)
 \]</span></li>
 </ol>
 <p>Nótese que la cantidad <span class="math inline">\(|0.5*E_{Q_2}|\)</span> es utilizada para reducir la tendencia a declarar falsos valores atípicos. Por ejemplo, esto ayudaría si la mayoría de los valores estuvieran agrupados alrededor de un valor particular, con unos pocos registros desviándose de él. Por último, los registros son declarados como valores atípicos si el valor de su efecto <span class="math inline">\(E_k\)</span> queda fuera del intervalo <span class="math inline">\((E_{Q_2} - c \times d_{Q_1} \ , \ E_{Q_2} + c \times d_{Q_3})\)</span>; en donde al igual que en el método de boxplot, <span class="math inline">\(c\)</span> controla el ancho de la región de aceptación.</p>
 </div>
-<div id="método-de-la-distancia-de-mahalanobis" class="section level3" number="16.1.6">
-<h3><span class="header-section-number">16.1.6</span> Método de la distancia de Mahalanobis</h3>
+<div id="método-de-la-distancia-de-mahalanobis" class="section level3 hasAnchor" number="16.1.6">
+<h3><span class="header-section-number">16.1.6</span> Método de la distancia de Mahalanobis<a href="algunos-métodos-de-detección-de-valores-extremos.html#método-de-la-distancia-de-mahalanobis" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Este método tiene en cuenta la estructura multidimensional de los datos observados en todos los registros comunes de un mismo módulo; por ejemplo, en el modulo de ingresos del hogar en una encuesta de hogares, o en el módulo de gastos de una encuesta de presupuestos familiares. En primer lugar, se supone que <span class="math inline">\(\mathbf{y}_k = (y_{k1}, y_{k2}, \ldots, y_{kQ} )&#39;\)</span> define el vector de valores observados del individuo <span class="math inline">\(k\)</span> en todas las <span class="math inline">\(Q\)</span> variables del módulo de interés. Por tanto, la distancia de Mahalanobis para una unidad se puede definir como
 <span class="math display">\[
 MD_k^2=(\mathbf{y}_k-\bar{\mathbf{y}})&#39; \ \mathbf{S}^{-1} \ (\mathbf{y}_k-\bar{\mathbf{y}})
 \]</span></p>
 <p>En donde <span class="math inline">\(\bar{\mathbf{y}}\)</span> y <span class="math inline">\(\mathbf{S}\)</span> son respectivamente el vector de medias muestrales y la matriz de covarianzas de las <span class="math inline">\(Q\)</span> variables en el módulo. Si los datos siguen una distribución normal multivariante, se puede demostrar que la distribución de esta distancia es Ji-cuadrado con <span class="math inline">\(Q\)</span> grados de libertad, <span class="math inline">\(MD_k^2 \sim \chi_Q^2\)</span>. A continuación, las unidades se declaran como potencialmente atípicas si superan el umbral del percentil 0.95 de la distribución <span class="math inline">\(\chi_{Q}^2\)</span>.</p>
 </div>
-<div id="la-distancia-de-cook" class="section level3" number="16.1.7">
-<h3><span class="header-section-number">16.1.7</span> La distancia de Cook</h3>
+<div id="la-distancia-de-cook" class="section level3 hasAnchor" number="16.1.7">
+<h3><span class="header-section-number">16.1.7</span> La distancia de Cook<a href="algunos-métodos-de-detección-de-valores-extremos.html#la-distancia-de-cook" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Los registros influyentes son valores atípicos que afectan significativamente a los modelos de regresión. Para ubicarlos, es posible utilizar la distancia de Cook, que mide cuánto impacta la unidad <span class="math inline">\(i\)</span>-ésima en la estimación de la unidad <span class="math inline">\(j\)</span>-ésima, en un modelo de regresión con <span class="math inline">\(p\)</span> variables explicativas. Esta medida está dada por la siguiente expresión:</p>
 <p><span class="math display">\[
-DC_{(i)} = \dfrac{\sum_{\substack{j=1\\ j\neq i}}^{n}(\hat y_j- \hat y_{j(i)})^2}{(p+1) \hat{\sigma}^2} 
+DC_{(i)} = \dfrac{\sum_{\substack{j=1\\ j\neq i}}^{n}(\hat y_j- \hat y_{j(i)})^2}{(p+1) \hat{\sigma}^2}
 \]</span></p>
 <p>En donde <span class="math inline">\(\hat{\sigma}^2 = \frac{\sum_k (\varepsilon_k - \bar{e})^2}{n-p}\)</span> es la varianza de los residuales del modelo <span class="math inline">\((\varepsilon_k)\)</span>; además, <span class="math inline">\(\hat y_j\)</span> es la estimación de la <span class="math inline">\(j\)</span>-ésima unidad en el modelo de regresión ajustado con todos los datos observados, mientras que <span class="math inline">\(\hat y_{j(i)}\)</span> es la estimación de la <span class="math inline">\(j\)</span>-ésima unidad cuando se excluye la <span class="math inline">\(i\)</span>-ésima unidad. Entre más grande sea el valor de la estadística, es más probable que la observación de la unidad <span class="math inline">\(i\)</span> se considere como un valor influyente. Algunos autores afirman que cualquier valor <span class="math inline">\(DC_{(i)}\)</span> mayor que uno debe considerarse influyente, mientras que otros afirman que el umbral debe ser <span class="math inline">\(4/n\)</span> o <span class="math inline">\(4/(n-p-1)\)</span>.</p>
 </div>
-<div id="el-criterio-dfbetas" class="section level3" number="16.1.8">
-<h3><span class="header-section-number">16.1.8</span> El criterio DFBETAS</h3>
+<div id="el-criterio-dfbetas" class="section level3 hasAnchor" number="16.1.8">
+<h3><span class="header-section-number">16.1.8</span> El criterio DFBETAS<a href="algunos-métodos-de-detección-de-valores-extremos.html#el-criterio-dfbetas" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Por otra parte, el estadístico DFBETAS mide cuánto influye la observación <span class="math inline">\(i\)</span>-ésima en los estimadores de los coeficientes de regresión en un modelo lineal. La estadística se puede escribir como sigue:</p>
 <p><span class="math display">\[
-DFBETAS_{j(i)} = \dfrac{b_j-b_{j(i)}}{\sqrt{S^2_{(i)}C_{jj}}} 
+DFBETAS_{j(i)} = \dfrac{b_j-b_{j(i)}}{\sqrt{S^2_{(i)}C_{jj}}}
 \]</span></p>
 <p>En donde <span class="math inline">\(b_j\)</span> es la estimación para el <span class="math inline">\(j\)</span>-ésimo coeficiente de regresión, <span class="math inline">\(b_{j(i)}\)</span> es la estimación calculada sin la observación <span class="math inline">\(i\)</span>-ésima; además <span class="math inline">\(S^2_{(i)}\)</span> es la varianza muestral de la variable de interés sin la observación <span class="math inline">\(i\)</span>-ésima y <span class="math inline">\(C_{jj}\)</span> es el <span class="math inline">\(j\)</span>-ésimo elemento de la diagonal de la matriz <span class="math inline">\((\mathbf x&#39; \mathbf x)\)</span>, de dimensión <span class="math inline">\(n\times n\)</span>. Es posible considerar que cualquier cifra cuyo valor absoluto sea mayor o igual que <span class="math inline">\(2/\sqrt n\)</span> determina que el valor atípico es influyente.</p>
 </div>
 </div>
-<h3>Referencias</h3>
+<h3>Referencias<a href="referencias.html#referencias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Filzmoser_Gussenbauer_Templ_2016" class="csl-entry">
 Filzmoser, P., J. Gussenbauer, y M. Templ. 2016. <em>Detecting outliers in household consumption survey data</em>. Final Report Contract with the World Bank. Vienna University of Technology.
@@ -634,7 +633,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

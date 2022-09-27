@@ -22,6 +22,135 @@
             "type": "paper-conference"
         },
         {
+            "DOI": "10.1093/jssam/smw001",
+            "ISSN": "2325-0984, 2325-0992",
+            "author": [
+                {
+                    "family": "Dever",
+                    "given": "Jill A."
+                },
+                {
+                    "family": "Valliant",
+                    "given": "Richard"
+                }
+            ],
+            "container-title": "Journal of Survey Statistics and Methodology",
+            "id": "Dever_Valliant_2016",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016,
+                        9
+                    ]
+                ]
+            },
+            "page": "289-318",
+            "title": "General regression estimation adjusted for undercoverage and estimated control totals",
+            "type": "article-journal",
+            "volume": "4"
+        },
+        {
+            "author": [
+                {
+                    "family": "Dever",
+                    "given": "Jill"
+                }
+            ],
+            "id": "Dever2008",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008,
+                        11
+                    ]
+                ]
+            },
+            "page": "",
+            "title": "Sampling weight calibration with estimated control totals",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "INE-VEN"
+                }
+            ],
+            "id": "INE2012",
+            "issued": {
+                "date-parts": [
+                    [
+                        2012
+                    ]
+                ]
+            },
+            "title": "Documento técnico - encuestas de hogares por muestreo - instituto nacional de estadística de venezuela",
+            "type": ""
+        },
+        {
+            "ISSN": "252-2195",
+            "author": [
+                {
+                    "literal": "Bureau of the Census"
+                }
+            ],
+            "collection-title": "Cuadernos de la CEPAL",
+            "id": "Atlantida",
+            "issued": {
+                "date-parts": [
+                    [
+                        1983
+                    ]
+                ]
+            },
+            "title": "Atlantida : Un estudio de caso en encuestas de hogares por muestra",
+            "title-short": "Atlantida ",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "CEPAL"
+                }
+            ],
+            "id": "CEPALcuadernos",
+            "issued": {
+                "date-parts": [
+                    [
+                        1971
+                    ]
+                ]
+            },
+            "title": "Las enceustas de hogares en américa latina",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Opsomer",
+                    "given": "Jean D"
+                },
+                {
+                    "family": "Erciulescu",
+                    "given": "Andreea L"
+                }
+            ],
+            "container-title": "Survey Methodology",
+            "id": "Opsomer_Erciulescu_2022",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022
+                    ]
+                ]
+            },
+            "page": "265-277",
+            "title": "Replication variance estimation after sample-based calibration",
+            "type": "article-journal",
+            "volume": "47"
+        },
+        {
             "DOI": "10.18356/9789210054263",
             "ISBN": "978-92-1-005426-3",
             "URL": "https://www.un-ilibrary.org/content/books/9789210054263",
@@ -42,6 +171,44 @@
             },
             "publisher": "United Nations",
             "title": "Recomendaciones para eliminar el sesgo de selección en las encuestas de hogares en la coyuntura de la enfermedad por coronavirus (COVID-19)",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "CEPAL"
+                }
+            ],
+            "collection-title": "Informes COVID-19 de la CEPAL",
+            "id": "CEPAL_continua",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "publisher": "United Nations",
+            "title": "Continuidad del levantamiento de las encuestas de hogares tras la coyuntura de la enfermedad por coronavirus (COVID-19)",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "CEPAL"
+                }
+            ],
+            "collection-title": "Informes COVID-19 de la CEPAL",
+            "id": "CEPAL_publica",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "publisher": "United Nations",
+            "title": "Recomendaciones para la publicación de estadísticas oficiales a partir de encuestas de hogares frente a la coyuntura de la enfermedad por coronavirus (COVID-19)",
             "type": "book"
         },
         {
@@ -3413,8 +3580,8 @@
                 ]
             },
             "page": "8",
-            "title": "STRATIFICATION EN ENQUêTES ENTREPRISES: UNE REVUE ET QUELQUES AVANCéES",
-            "title-short": "STRATIFICATION EN ENQUêTES ENTREPRISES",
+            "title": "STRATIFICATION EN ENQUÊTES ENTREPRISES: UNE REVUE ET QUELQUES AVANCÉES",
+            "title-short": "STRATIFICATION EN ENQUÊTES ENTREPRISES",
             "type": "article-journal"
         },
         {
@@ -3846,6 +4013,11 @@
             "volume": "74"
         },
         {
+            "author": [
+                {
+                    "family": "DIGESTYC_SV"
+                }
+            ],
             "id": "DIGESTYC_SV_2017",
             "issued": {
                 "date-parts": [

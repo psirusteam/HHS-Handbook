@@ -132,6 +132,7 @@ $$
 
 La expresión anterior se obtiene teniendo en cuenta el siguiente desarrollo algebraico. En particular, cuando $P > 0,5$, se desea que el coeficiente de variación logarítmico sea menor a un umbral $\delta$ y, por lo tanto, habiendo definido $S^2 = P\ (1-P) \  DEFF$, se tiene el siguiente conjunto de implicaciones.
 
+$$
 \begin{align*}
 CV(\hat{L}) \leq \delta 
 &\Longrightarrow \ \ \ \ \dfrac{SE(\hat{P})}{-\log(1-\hat{P})(1-\hat{P})} \leq \delta \\
@@ -149,9 +150,11 @@ n \geq \frac{S^2N}{N\ \delta^2(1-\hat{P})^2\log^2(1-\hat{P}) +S^2} \\
 &\Longrightarrow \ \ \ \ 
 n \geq \frac{S^2}{\ \delta^2(1-\hat{P})^2\log^2(1-\hat{P}) +\frac{S^2}{N}}
 \end{align*}
+$$
 
-Análogamente, cuando $P \leq 0,5$, se tiene que
+Análogamente, cuando $P \leq 0.5$, se tiene que
 
+$$
 \begin{align*}
 CV(\hat{L}) \leq \delta
 &\Longrightarrow \ \ \ \ 
@@ -171,7 +174,7 @@ n \geq \dfrac{S^2N}{\log^2(\hat{P})\hat{P}^2\delta^2N + S^2}\\
 &\Longrightarrow \ \ \ 
 n \geq \dfrac{S^2}{\frac{S^2}{N}+\log^2(\hat{P})\hat{P}^2\delta^2}
 \end{align*}
-
+$$
 
 ### El efecto de diseño DEFF 
 

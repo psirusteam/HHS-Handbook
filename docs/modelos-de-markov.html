@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>19.2 Modelos de Markov | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="19.2 Modelos de Markov | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-01-26" />
+<meta name="date" content="2022-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="matrices-de-transición.html"/>
 <link rel="next" href="estimación-de-las-matrices-de-transición.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -466,10 +465,19 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="modelos-de-markov" class="section level2" number="19.2">
-<h2><span class="header-section-number">19.2</span> Modelos de Markov</h2>
+<div id="modelos-de-markov" class="section level2 hasAnchor" number="19.2">
+<h2><span class="header-section-number">19.2</span> Modelos de Markov<a href="modelos-de-markov.html#modelos-de-markov" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Al considerar el problema de la estimación de los cambios brutos entre dos periodos de tiempo, obtenidos de una investigación sobre la población de interés, y teniendo en cuenta que existe ausencia de respuesta no ignorable, es posible suponer que el resultado de cada entrevista corresponde a la clasificación del respondiente en una de <span class="math inline">\(G\)</span> posibles categorías excluyentes. Por ende, uno de los objetivos de la investigación podría ser la estimación del cambio bruto entre estas categorías utilizando la información de los individuos que fueron entrevistados en dos periodos de tiempo consecutivos. La siguiente tabla ejemplifica la distribución (no observable) de los flujos brutos en una población.</p>
-<table>
+<table style="width:100%;">
+<colgroup>
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+<col width="14%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th>Estado (T1/T2)</th>
@@ -538,7 +546,7 @@ div.csl-indent {
 </tr>
 </tbody>
 </table>
-<p>En donde <span class="math inline">\(X_{ij}\)</span> es el número de unidades en la población finita clasificadas como <span class="math inline">\(i\)</span> en el tiempo <span class="math inline">\(t-1\)</span> y <span class="math inline">\(j\)</span> en el tiempo <span class="math inline">\(t\)</span> (<span class="math inline">\(i,j=1,\ldots, G\)</span>). Siguiendo las consideraciones de <span class="citation"><a href="#ref-Feinberg_Stasny_1983" role="doc-biblioref">Feinberg y Stasny</a> (<a href="#ref-Feinberg_Stasny_1983" role="doc-biblioref">1983</a>)</span> se asume que los datos son el resultado de un proceso de dos etapas. En la primera etapa (proceso no observable), los individuos son ubicados dentro de las celdas de una matriz <span class="math inline">\(G\times G\)</span> de acuerdo con las probabilidades de una cadena de Markov, con los siguientes parámetros:</p>
+<p>En donde <span class="math inline">\(X_{ij}\)</span> es el número de unidades en la población finita clasificadas como <span class="math inline">\(i\)</span> en el tiempo <span class="math inline">\(t-1\)</span> y <span class="math inline">\(j\)</span> en el tiempo <span class="math inline">\(t\)</span> (<span class="math inline">\(i,j=1,\ldots, G\)</span>). Siguiendo las consideraciones de <span class="citation">Feinberg y Stasny (<a href="#ref-Feinberg_Stasny_1983" role="doc-biblioref">1983</a>)</span> se asume que los datos son el resultado de un proceso de dos etapas. En la primera etapa (proceso no observable), los individuos son ubicados dentro de las celdas de una matriz <span class="math inline">\(G\times G\)</span> de acuerdo con las probabilidades de una cadena de Markov, con los siguientes parámetros:</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\eta_i\)</span>, la probabilidad inicial de que un individuo esté en el estado <span class="math inline">\(i\)</span> en el tiempo <span class="math inline">\(t-1\)</span>.</li>
 <li><span class="math inline">\(p_{ij}\)</span>, la probabilidad de transición desde el estado <span class="math inline">\(i\)</span> al estado <span class="math inline">\(j\)</span>.</li>
@@ -548,6 +556,14 @@ div.csl-indent {
 <p>Para el primer grupo de individuos que respondieron en los tiempos <span class="math inline">\(t-1\)</span> y <span class="math inline">\(t\)</span>, los datos de clasificación pueden ser resumidos en una matriz de tamaño <span class="math inline">\(G\times G\)</span>. La información disponible para los individuos que fueron no respondientes para la encuesta del tiempo <span class="math inline">\(t-1\)</span>, pero sí respondieron en el tiempo <span class="math inline">\(t\)</span>, puede ser resumida en un complemento columna; mientras que la información para los individuos que no respondieron en el tiempo <span class="math inline">\(t\)</span>, pero sí respondieron en el tiempo <span class="math inline">\(t-1\)</span>, puede ser resumida en un complemento fila. Finalmente, los individuos que no respondieron en ningún tiempo son incluidos en una única celda de faltantes.</p>
 <p>Las anteriores relaciones se ilustran en la siguiente tabla, en donde <span class="math inline">\(N_{ij}\)</span> (<span class="math inline">\(i,j=1,\ldots,G\)</span>; <span class="math inline">\(G=4\)</span>) denota el número de individuos respondientes que tienen clasificación <span class="math inline">\(i\)</span> en el tiempo <span class="math inline">\(t-1\)</span> y <span class="math inline">\(j\)</span> en el tiempo <span class="math inline">\(t\)</span>, <span class="math inline">\(R_i\)</span> denota el número de individuos que fueron no respondientes en el tiempo <span class="math inline">\(t\)</span> y tienen clasificación <span class="math inline">\(i\)</span> en el tiempo <span class="math inline">\(t-1\)</span>, <span class="math inline">\(C_j\)</span> denota el número de individuos que fueron no respondientes en el tiempo <span class="math inline">\(t-1\)</span> y tuvieron clasificación <span class="math inline">\(j\)</span> en el tiempo <span class="math inline">\(t\)</span>, y <span class="math inline">\(M\)</span> denota el número de individuos seleccionados que no respondieron en ningún tiempo. En este estudio particular se consideran cuatro estados de clasificación (ocupados formales, ocupados informales, desocupados, inactivos) - por ende <span class="math inline">\(G = 4\)</span> - en dos periodos consecutivos de tiempo <span class="math inline">\(t-1\)</span>, primer trimestre del 2020 y <span class="math inline">\(t\)</span>, segundo trimestre del 2020.</p>
 <table>
+<colgroup>
+<col width="25%" />
+<col width="12%" />
+<col width="12%" />
+<col width="14%" />
+<col width="12%" />
+<col width="22%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th>Estado (T1/T2)</th>
@@ -614,9 +630,9 @@ div.csl-indent {
 <li>Modelo C: asume que la probabilidad inicial de que un individuo sea respondiente en el tiempo <span class="math inline">\(t-1\)</span> es la misma para todas las clasificaciones contempladas en la encuesta, es decir <span class="math inline">\(\psi(i,j)=\psi\)</span>. Sin embargo, las probabilidades de transición entre respondientes y entre no respondientes dependerán de la clasificación del individuo en el periodo <span class="math inline">\(t-1\)</span>; es decir <span class="math inline">\(\rho_{MM}(i,j)=\rho_{MM}(i)\)</span> y <span class="math inline">\(\rho_{RR}(i,j)=\rho_{RR}(i)\)</span>. Es decir que la probabilidad de tránsito entre respondientes es la misma para formales, informales, inactivos e desocupados; asimismo las probabilidades de transición difieren para las diferentes clasificaciones en el tiempo inicial.</li>
 <li>Modelo D: asume que la probabilidad inicial de que un individuo sea respondiente en el tiempo <span class="math inline">\(t-1\)</span> es la misma para todas las clasificaciones contempladas en la encuesta, es decir <span class="math inline">\(\psi(i,j)=\psi\)</span>. Sin embargo, las probabilidades de transición entre respondientes y entre no respondientes dependerán de la clasificación del individuo en el periodo <span class="math inline">\(t\)</span>; es decir <span class="math inline">\(\rho_{MM}(i,j)=\rho_{MM}(j)\)</span> y <span class="math inline">\(\rho_{RR}(i,j)=\rho_{RR}(j)\)</span>. Es decir que la probabilidad de respuesta es la misma para formales, informales, inactivos e desocupados; asimismo la probabilidad de tránsito entre respondientes difiere para las diferentes clasificaciones en el tiempo final.</li>
 </ul>
-<p>Ampliando las ideas de <span class="citation"><a href="#ref-Feinberg_Stasny_1983" role="doc-biblioref">Feinberg y Stasny</a> (<a href="#ref-Feinberg_Stasny_1983" role="doc-biblioref">1983</a>)</span>, <span class="citation"><a href="#ref-Gutierrez_2014" role="doc-biblioref">H. A. Gutiérrez</a> (<a href="#ref-Gutierrez_2014" role="doc-biblioref">2014</a>)</span> consideró una metodología de estimación basada en el enfoque de máxima-pseudo verosimilitud para estimar lo anteriores parámetros. El objetivo final del proceso es estimar el número de individuos en las celdas de una tabla de contingencia poblacional donde se clasifican según la situación de la fuerza laboral medida en dos puntos de tiempo diferentes bajo un diseño de muestreo complejo. En resumen, el ajuste de los modelos de ausencia de respuesta puede ser realizado siguiendo los algoritmos de estimación propuestos en <span class="citation"><a href="#ref-Gutierrez_2014" role="doc-biblioref">H. A. Gutiérrez</a> (<a href="#ref-Gutierrez_2014" role="doc-biblioref">2014</a>)</span>, y utilizando el paquete computacional <code>surf</code> implementado en el software estadístico <code>R</code> <span class="citation">(<a href="#ref-Jacob_2020" role="doc-biblioref">Jacob 2020</a>)</span>.</p>
+<p>Ampliando las ideas de <span class="citation">Feinberg y Stasny (<a href="#ref-Feinberg_Stasny_1983" role="doc-biblioref">1983</a>)</span>, <span class="citation">H. A. Gutiérrez (<a href="#ref-Gutierrez_2014" role="doc-biblioref">2014</a>)</span> consideró una metodología de estimación basada en el enfoque de máxima-pseudo verosimilitud para estimar lo anteriores parámetros. El objetivo final del proceso es estimar el número de individuos en las celdas de una tabla de contingencia poblacional donde se clasifican según la situación de la fuerza laboral medida en dos puntos de tiempo diferentes bajo un diseño de muestreo complejo. En resumen, el ajuste de los modelos de ausencia de respuesta puede ser realizado siguiendo los algoritmos de estimación propuestos en <span class="citation">H. A. Gutiérrez (<a href="#ref-Gutierrez_2014" role="doc-biblioref">2014</a>)</span>, y utilizando el paquete computacional <code>surf</code> implementado en el software estadístico <code>R</code> <span class="citation">(<a href="#ref-Jacob_2020" role="doc-biblioref">Jacob 2020</a>)</span>.</p>
 </div>
-<h3>Referencias</h3>
+<h3>Referencias<a href="referencias.html#referencias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Feinberg_Stasny_1983" class="csl-entry">
 Feinberg, Stephen, y Elizabeth Stasny. 1983. <span>«Estimating monthly gross flows in labour force participation»</span>. <em>Survey Methodology</em> 9 (1): 77-102.
@@ -695,7 +711,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

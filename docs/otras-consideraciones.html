@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>8.4 Otras consideraciones | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="8.4 Otras consideraciones | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-01-26" />
+<meta name="date" content="2022-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="formas-comunes-del-efecto-de-diseño.html"/>
 <link rel="next" href="cálculo-del-tamaño-de-muestra.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -466,10 +465,10 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="otras-consideraciones" class="section level2" number="8.4">
-<h2><span class="header-section-number">8.4</span> Otras consideraciones</h2>
-<div id="el-efecto-de-diseño-en-subpoblaciones" class="section level3" number="8.4.1">
-<h3><span class="header-section-number">8.4.1</span> El efecto de diseño en subpoblaciones</h3>
+<div id="otras-consideraciones" class="section level2 hasAnchor" number="8.4">
+<h2><span class="header-section-number">8.4</span> Otras consideraciones<a href="otras-consideraciones.html#otras-consideraciones" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="el-efecto-de-diseño-en-subpoblaciones" class="section level3 hasAnchor" number="8.4.1">
+<h3><span class="header-section-number">8.4.1</span> El efecto de diseño en subpoblaciones<a href="otras-consideraciones.html#el-efecto-de-diseño-en-subpoblaciones" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>La estimación del efecto de diseño es un problema común cuando se trabaja con estimaciones desagregadas en subpoblaciones de interés. Por un lado, cuando las subpoblaciones constituyen estratos (o agregaciones de estratos) planeados de antemano, para los cuales se conoce previamente su tamaño poblacional, se tiene el siguiente efecto de diseño:</p>
 <p><span class="math display">\[
 DEFF_h= \frac{Var (\hat\theta_h) }{Var_{MAS}^h(\hat\theta_h) }
@@ -488,10 +487,10 @@ DEFF_g = \frac{Var (\hat\theta_g) }{Var_{MAS}^U(\hat\theta_g) }
 Var_{MAS}^U(\hat\theta_g)=\frac{1}{n}\left(1-\frac{n}{N}\right)S^2_{y_{gU}}
 \]</span></p>
 <p>En donde <span class="math inline">\(S^2_{y_{gU}}\)</span> es la varianza poblacional de una nueva variable calculada en toda la población, que toma el valor de <span class="math inline">\(y_k\)</span>, cuando la unidad <span class="math inline">\(k\)</span> pertence al subgrupo <span class="math inline">\(g\)</span>, y toma el valor de cero, en cualquier otro caso. Por lo tanto, en ambos efectos de diseño, la estimación de la varianza del diseño de muestreo complejo <span class="math inline">\(Var (\hat\theta_h)\)</span> o <span class="math inline">\(Var (\hat\theta_g)\)</span> es la misma, pero el denominador cambia dependiendo de si el subgrupo es un estrato o no. Es por esta razón que, al analizar una encuesta de hogares, hay coincidencia en las cifras relacionadas con la estimación puntual, errores estándar, intervalos de confianza y coeficientes de variación entre los diferentes softwares computacionales. Sin embargo, es necesario percatarse de las opciones que estos adjuntan para calcular correctamente la cifra apropiada. Nótese que, en resumen, las estimaciones de <span class="math inline">\(Var_{MAS}^U(\hat\theta_g)\)</span> y <span class="math inline">\(Var_{MAS}^h(\hat\theta_h)\)</span> serán diferentes, puesto que la primera involucra a toda la muestra, mientras que la segunda involucra únicamente a la muestra del estrato.</p>
-<p><span class="citation"><a href="#ref-Lumley_2010" role="doc-biblioref">Lumley</a> (<a href="#ref-Lumley_2010" role="doc-biblioref">2010</a>)</span> afirma que el efecto del diseño compara la varianza de una media o total con la varianza de un estudio del mismo tamaño utilizando un muestreo aleatorio simple sin reemplazo y que su cálculo será incorrecto si los pesos de muestreo se han re-escalado o no son recíprocos a las probabilidades de inclusión. Por ejemplo, en el caso de las subpoblaciones, la librería <code>survey</code> de <code>R</code> compara la varianza de la estimación con la varianza de una estimación basada en una muestra aleatoria simple del mismo tamaño que el de la subpoblación. Entonces, por ejemplo, en el muestreo aleatorio estratificado, el efecto de diseño calculado en un estrato será igual a uno.</p>
+<p><span class="citation">Lumley (<a href="#ref-Lumley_2010" role="doc-biblioref">2010</a>)</span> afirma que el efecto del diseño compara la varianza de una media o total con la varianza de un estudio del mismo tamaño utilizando un muestreo aleatorio simple sin reemplazo y que su cálculo será incorrecto si los pesos de muestreo se han re-escalado o no son recíprocos a las probabilidades de inclusión. Por ejemplo, en el caso de las subpoblaciones, la librería <code>survey</code> de <code>R</code> compara la varianza de la estimación con la varianza de una estimación basada en una muestra aleatoria simple del mismo tamaño que el de la subpoblación. Entonces, por ejemplo, en el muestreo aleatorio estratificado, el efecto de diseño calculado en un estrato será igual a uno.</p>
 </div>
-<div id="el-efecto-de-diseño-general" class="section level3" number="8.4.2">
-<h3><span class="header-section-number">8.4.2</span> El efecto de diseño general</h3>
+<div id="el-efecto-de-diseño-general" class="section level3 hasAnchor" number="8.4.2">
+<h3><span class="header-section-number">8.4.2</span> El efecto de diseño general<a href="otras-consideraciones.html#el-efecto-de-diseño-general" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Suponga que el diseño muestral es estratificado con <span class="math inline">\(H\)</span> estratos; entonces por la independencia de la selección en los estratos, la varianza del estimador de un total poblacional <span class="math inline">\(t_y\)</span> está dada por</p>
 <p><span class="math display">\[
 Var\left(\widehat{t_{y,\pi}}\right)=\sum_{h=1}^{H}Var_h\left(\widehat{t_{y,\pi}}\right)
@@ -520,22 +519,22 @@ w_h=\frac{N_hS_{y,U_h}^2}{NS_{y,U}^2}=\frac{\sum_{U_h}{(y_k-{\bar{y}}_{U_h})}^2}
 <p>Por otro lado, si los estratos no fueron construidos teniendo en cuenta la variabilidad de la característica de interés, entonces <span class="math inline">\(S_{y,U_h}^2\approx S_{y,U}^2\)</span> y <span class="math inline">\(w_h=N_h/N\)</span>. De esta forma, la suma de los pesos es igual a 1, y se puede concluir que el <span class="math inline">\(DEFF\)</span> del diseño general es un promedio ponderado de los efectos de los <span class="math inline">\(H\)</span> estratos, y el estrato que tiene mayor peso será aquel que tiene mayor representación del universo.</p>
 <p>Finalmente, alguno de los pesos <span class="math inline">\(w_h\)</span> puede resultar ser mayor a 1 cuando para algún estrato <span class="math inline">\(\frac{n_h}{N_h}\neq\frac{n}{N}\)</span>, y cuando los estratos no están bien construidos.</p>
 </div>
-<div id="el-efecto-de-diseño-en-las-encuestas-de-hogares-de-la-región" class="section level3" number="8.4.3">
-<h3><span class="header-section-number">8.4.3</span> El efecto de diseño en las encuestas de hogares de la región</h3>
-<p>En general, para las encuestas de hogares en la región, se planean esquemas de estratificación, aglomeración y selección de UPM con probabilidades desiguales. <span class="citation"><a href="#ref-Heeringa_West_Berglund_2017" role="doc-biblioref">Heeringa, West, y Berglund</a> (<a href="#ref-Heeringa_West_Berglund_2017" role="doc-biblioref">2017</a>)</span> anotan que el efecto de estratificación reduce la varianza de las estrategias de muestreo, mientras que el efecto de selección desigual tiende a aumentarla. En general, estos dos efectos tienden a anularse entre sí. Por lo tanto, el efecto de diseño de una encuesta compleja estará únicamente en función del efecto de aglomeración, el cual puede llegar a ser grande, en comparación con los otros dos. Como ya se había comentado antes, la expresión generalizada que da cuenta del efecto de aglomeración en los diseños de muestreo complejos de las encuestas de hogares es la siguiente:</p>
+<div id="el-efecto-de-diseño-en-las-encuestas-de-hogares-de-la-región" class="section level3 hasAnchor" number="8.4.3">
+<h3><span class="header-section-number">8.4.3</span> El efecto de diseño en las encuestas de hogares de la región<a href="otras-consideraciones.html#el-efecto-de-diseño-en-las-encuestas-de-hogares-de-la-región" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>En general, para las encuestas de hogares en la región, se planean esquemas de estratificación, aglomeración y selección de UPM con probabilidades desiguales. <span class="citation">Heeringa, West, y Berglund (<a href="#ref-Heeringa_West_Berglund_2017" role="doc-biblioref">2017</a>)</span> anotan que el efecto de estratificación reduce la varianza de las estrategias de muestreo, mientras que el efecto de selección desigual tiende a aumentarla. En general, estos dos efectos tienden a anularse entre sí. Por lo tanto, el efecto de diseño de una encuesta compleja estará únicamente en función del efecto de aglomeración, el cual puede llegar a ser grande, en comparación con los otros dos. Como ya se había comentado antes, la expresión generalizada que da cuenta del efecto de aglomeración en los diseños de muestreo complejos de las encuestas de hogares es la siguiente:</p>
 <p><span class="math display">\[
 DEFF \approx 1 + (\bar{n}_{II} - 1)\rho_y
 \]</span></p>
 <p>En donde se recalca que <span class="math inline">\(\bar{n}_{II}\)</span> representa el número promedio de hogares seleccionados dentro de cada UPM y <span class="math inline">\(\rho_y\)</span> es el coeficiente de correlación intraclase, que representa el grado de homogeneidad de la variable de interés dentro de cada hogar.</p>
-<p>Este efecto cambiará dependiendo de si la inferencia de la encuesta de hogares se quiere realizar a nivel nacional o a nivel regional. Por ejemplo, <span class="citation"><a href="#ref-United_Nations_2005" role="doc-biblioref">UN</a> (<a href="#ref-United_Nations_2005" role="doc-biblioref">2005, cap. 7</a>)</span> presenta el comportamiento de esta medida a lo largo de tres encuestas de hogares en Brasil: la <em>Pesquisa Nacional por Amostra de Domicílios</em> (PNAD), la <em>Pesquisa Mensal de Emprego</em> (PME) y la <em>Pesquisa de Padrões de Vida</em> (PPV). En general, estas encuestas utilizan estratificación y selección de UPM con probabilidades desiguales; además, el tamaño promedio de las UPM es de 250 viviendas, de las cuales son seleccionadas 13 por la PNAD, 20 en la PME y 16 y 8 viviendas en la PPV en la zona rural y urbana, respectivamente.</p>
-<p>Basado en <span class="citation"><a href="#ref-United_Nations_2005" role="doc-biblioref">UN</a> (<a href="#ref-United_Nations_2005" role="doc-biblioref">2005, cap. 7</a>)</span>, se nota que los efectos de diseño no solo son diferentes para cada parámetro que se desea estimar sino que varían de acuerdo a la subpoblación en la que se realice la estimación. Por ejemplo, considere al considerar el parámetro <em>proporción de hogares con electricidad</em>, se estimó que el efecto de diseño para este parámetro fue de 7.92 a nivel nacional, de 1.03 en las áreas metropolitanas, de 4.43 en las ciudades grandes y de 7.27 en las áreas rurales. Por lo anterior, y basado en la expresión que define el efecto de diseño, se observó que, fijando <span class="math inline">\(\bar{n}_{II}\)</span>, el coeficiente de correlación intraclase varío dependiendo de la zona. En efecto, <span class="math inline">\(\rho_y= 0.76\)</span> a nivel nacional, <span class="math inline">\(\rho_y= 0.0033\)</span> en las zonas metropolitanas, <span class="math inline">\(\rho_y= 0.38\)</span> en las ciudades grandes y <span class="math inline">\(\rho_y= 0.69\)</span> en las áreas rurales. Lo anterior implicó que hay una mayor heterogeneidad de los hogares con electricidad entre las UPM a nivel nacional y en las áreas rurales, es decir algunos hogares tienen electricidad y otros no entre las UPM. Sin embargo, en las zonas metropolitanas la variación de esta variable entre las UPM es casi nula, es decir que todos lo hogares tienen electricidad entre las UPM de estas zonas.</p>
+<p>Este efecto cambiará dependiendo de si la inferencia de la encuesta de hogares se quiere realizar a nivel nacional o a nivel regional. Por ejemplo, <span class="citation">UN (<a href="#ref-United_Nations_2005" role="doc-biblioref">2005, cap. 7</a>)</span> presenta el comportamiento de esta medida a lo largo de tres encuestas de hogares en Brasil: la <em>Pesquisa Nacional por Amostra de Domicílios</em> (PNAD), la <em>Pesquisa Mensal de Emprego</em> (PME) y la <em>Pesquisa de Padrões de Vida</em> (PPV). En general, estas encuestas utilizan estratificación y selección de UPM con probabilidades desiguales; además, el tamaño promedio de las UPM es de 250 viviendas, de las cuales son seleccionadas 13 por la PNAD, 20 en la PME y 16 y 8 viviendas en la PPV en la zona rural y urbana, respectivamente.</p>
+<p>Basado en <span class="citation">UN (<a href="#ref-United_Nations_2005" role="doc-biblioref">2005, cap. 7</a>)</span>, se nota que los efectos de diseño no solo son diferentes para cada parámetro que se desea estimar sino que varían de acuerdo a la subpoblación en la que se realice la estimación. Por ejemplo, considere al considerar el parámetro <em>proporción de hogares con electricidad</em>, se estimó que el efecto de diseño para este parámetro fue de 7.92 a nivel nacional, de 1.03 en las áreas metropolitanas, de 4.43 en las ciudades grandes y de 7.27 en las áreas rurales. Por lo anterior, y basado en la expresión que define el efecto de diseño, se observó que, fijando <span class="math inline">\(\bar{n}_{II}\)</span>, el coeficiente de correlación intraclase varío dependiendo de la zona. En efecto, <span class="math inline">\(\rho_y= 0.76\)</span> a nivel nacional, <span class="math inline">\(\rho_y= 0.0033\)</span> en las zonas metropolitanas, <span class="math inline">\(\rho_y= 0.38\)</span> en las ciudades grandes y <span class="math inline">\(\rho_y= 0.69\)</span> en las áreas rurales. Lo anterior implicó que hay una mayor heterogeneidad de los hogares con electricidad entre las UPM a nivel nacional y en las áreas rurales, es decir algunos hogares tienen electricidad y otros no entre las UPM. Sin embargo, en las zonas metropolitanas la variación de esta variable entre las UPM es casi nula, es decir que todos lo hogares tienen electricidad entre las UPM de estas zonas.</p>
 <p>Por otro lado, para la misma encuesta PNAD, los efectos de diseño para el número promedio de cuartos usados como dormitorios es de 2.14 a nivel nacional, de 2.37 en las áreas metropolitanas, de 1.72 en las ciudades grandes y de 2.09 en las áreas rurales. Considerando que <span class="math inline">\(\bar{n}_{II}=10\)</span>, el coeficiente de correlación intraclase es de <span class="math inline">\(\rho_y= 0.12\)</span> a nivel nacional, <span class="math inline">\(\rho_y= 0.15\)</span> en las zonas metropolitanas, <span class="math inline">\(\rho_y= 0.08\)</span> en las ciudades grandes y <span class="math inline">\(\rho_y= 0.12\)</span> en las áreas rurales. Lo anterior implica que hay una mayor homogeneidad del número de cuartos utilizados como dormitorio entre las UPM del país y de las zonas que lo componen.</p>
 <p>Como se verá en los capítulos posteriores, al conocer el valor que toma el efecto de diseño para la estimación de un parámetro de interés, es posible crear escenarios de simulación que permitan establecer el tamaño de muestra en la planeación de las encuestas de hogares o en su rediseño después de la ronda de censos en una década particular.</p>
 
 </div>
 </div>
 <!-- </div> -->
-<h3>Referencias</h3>
+<h3>Referencias<a href="referencias.html#referencias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Heeringa_West_Berglund_2017" class="csl-entry">
 ———. 2017. <em>Applied survey data analysis</em>. Chapman y Hall CRC statistics en the social y behavioral sciences series. CRC Press.
@@ -614,7 +613,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>11.2 Ajuste por elegibilidad desconocida | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="11.2 Ajuste por elegibilidad desconocida | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-01-26" />
+<meta name="date" content="2022-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="creación-de-los-pesos-básicos.html"/>
 <link rel="next" href="descarte-de-las-unidades-no-elegibles.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -466,8 +465,8 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="ajuste-por-elegibilidad-desconocida" class="section level2" number="11.2">
-<h2><span class="header-section-number">11.2</span> Ajuste por elegibilidad desconocida</h2>
+<div id="ajuste-por-elegibilidad-desconocida" class="section level2 hasAnchor" number="11.2">
+<h2><span class="header-section-number">11.2</span> Ajuste por elegibilidad desconocida<a href="ajuste-por-elegibilidad-desconocida.html#ajuste-por-elegibilidad-desconocida" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>El segundo paso consiste en redistribuir el peso de las unidades cuyo estado de elegibilidad es desconocido. Por ejemplo, si la encuesta está enfocada en la población mayor de 15 años y hay personas que no proveen ninguna información acerca de su edad, entonces es necesario distribuir estos pesos. Esta situación también se puede presentar a nivel de hogar cuando no puede ser contactado porque nadie nunca atendió el llamado del encuestador (<em>nadie en casa</em>). Se acostumbra a redistribuir los pesos de las unidades con elegibilidad desconocida (UNK) entre las unidades que sí disponen de su estatus de elegibilidad (ER, ENR, IN).</p>
 <p>Por consiguiente, si no es posible determinar la elegibilidad de algunas unidades que aparecen en el marco de muestreo, se tendrá una muestra <span class="math inline">\(s\)</span> que contendrá el subconjunto de las unidades <em>elegibles respondientes</em> <span class="math inline">\((s_{ER})\)</span>, el subconjunto de las unidades <em>elegibles no respondientes</em> <span class="math inline">\((s_{ENR})\)</span>, el subconjunto de las unidades <em>no elegibles</em> <span class="math inline">\((s_{IN})\)</span> y el subconjunto de las unidades con <em>elegibilidad desconocidad</em> <span class="math inline">\((s_{UKN})\)</span>. En este último caso, la elegibilidad de estas unidades se mantiene desconocida, a no ser que de manera arbitraria sean clasificadas como ENR (elegibles no respondientes), o se tenga información auxiliar en el marco de muestreo que permita imputar su estado de elegibilidad.</p>
 <p>Se recomienda formar <span class="math inline">\(B\)</span> <span class="math inline">\((b = 1, \ldots, B)\)</span> categorías<a href="#fn11" class="footnote-ref" id="fnref11"><sup>11</sup></a> basadas en la información del marco de muestreo. Estas categorías pueden ser estratos o cruces de subpoblaciones. Siendo <span class="math inline">\(s_b\)</span> la muestra de unidades en la categoría <span class="math inline">\(b\)</span> (que incluye a ER, ENR, IN y UNK), se define el factor de ajuste por elegibilidad como:</p>
@@ -479,7 +478,7 @@ Para la categoría <span class="math inline">\(b\)</span>, los pesos ajustados p
 d_{2k} = a_b * d_{1k}  \ \ \ \ \ \ \ \ \forall \ k\in s_b \cap (s_{ER} \cup s_{ENR} \cup s_{IN})
 \]</span></p>
 </div>
-<h3>Referencias</h3>
+<h3>Referencias<a href="referencias.html#referencias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Valliant_Dever_2017" class="csl-entry">
 Valliant, Richard, y Jill A. Dever. 2017. <em>Survey Weights: A Step-by-step Guide to Calculation</em>. 1 edition. Stata Press.
@@ -488,7 +487,7 @@ Valliant, Richard, y Jill A. Dever. 2017. <em>Survey Weights: A Step-by-step Gui
 <div class="footnotes">
 <hr />
 <ol start="11">
-<li id="fn11"><p><span class="citation"><a href="#ref-Valliant_Dever_2017" role="doc-biblioref">Valliant y Dever</a> (<a href="#ref-Valliant_Dever_2017" role="doc-biblioref">2017</a>)</span> recomienda formar categorías con al menos 50 casos.<a href="ajuste-por-elegibilidad-desconocida.html#fnref11" class="footnote-back">↩︎</a></p></li>
+<li id="fn11"><p><span class="citation">Valliant y Dever (<a href="#ref-Valliant_Dever_2017" role="doc-biblioref">2017</a>)</span> recomienda formar categorías con al menos 50 casos.<a href="ajuste-por-elegibilidad-desconocida.html#fnref11" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
@@ -558,7 +557,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

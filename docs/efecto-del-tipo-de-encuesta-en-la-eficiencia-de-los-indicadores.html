@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>17.4 Efecto del tipo de encuesta en la eficiencia de los indicadores | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="17.4 Efecto del tipo de encuesta en la eficiencia de los indicadores | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-01-26" />
+<meta name="date" content="2022-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="agregación-de-encuestas-con-diferentes-tamaños-de-muestra.html"/>
 <link rel="next" href="pruebas-de-hipótesis-sobre-indicadores-agregados.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -466,16 +465,16 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="efecto-del-tipo-de-encuesta-en-la-eficiencia-de-los-indicadores" class="section level2" number="17.4">
-<h2><span class="header-section-number">17.4</span> Efecto del tipo de encuesta en la eficiencia de los indicadores</h2>
+<div id="efecto-del-tipo-de-encuesta-en-la-eficiencia-de-los-indicadores" class="section level2 hasAnchor" number="17.4">
+<h2><span class="header-section-number">17.4</span> Efecto del tipo de encuesta en la eficiencia de los indicadores<a href="efecto-del-tipo-de-encuesta-en-la-eficiencia-de-los-indicadores.html#efecto-del-tipo-de-encuesta-en-la-eficiencia-de-los-indicadores" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Lograr una estimación adecuada del error de muestreo en las
 comparaciones de múltiples periodos de tiempo, ya sea con la agregación
 de datos o no, debe ser una de las principales tareas del investigador.
 Además, dependiendo del parámetro, la naturaleza del error de muestreo
 cambia así como el tamaño de muestra requerido para satisfacer las
 necesidades de precisión de las estimaciones. A continuación se ilustra con diferentes tipos de parámetros.</p>
-<div id="cambios-netos" class="section level3" number="17.4.1">
-<h3><span class="header-section-number">17.4.1</span> Cambios netos</h3>
+<div id="cambios-netos" class="section level3 hasAnchor" number="17.4.1">
+<h3><span class="header-section-number">17.4.1</span> Cambios netos<a href="efecto-del-tipo-de-encuesta-en-la-eficiencia-de-los-indicadores.html#cambios-netos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Considere el cambio neto de la media de la variable de
 interés <span class="math inline">\(y\)</span> en dos periodos de tiempo (<span class="math inline">\(t_2\)</span> y <span class="math inline">\(t_1\)</span>)</p>
 <p><span class="math display">\[
@@ -484,7 +483,7 @@ interés <span class="math inline">\(y\)</span> en dos periodos de tiempo (<span
 <p>Este parámetro de cambio en los dos periodos de tiempo es estimado de
 forma aproximadamente insesgada mediante la siguiente expresión:</p>
 <p><span class="math display">\[
-\hat{\Delta} = 
+\hat{\Delta} =
 \hat{\bar{y}}_2 - \hat{\bar{y}}_1
 = \frac{\sum_{k\in s_2}\frac{y_{k}}{\pi_k}}{\sum_{k\in s_2}\frac{1}{\pi_k}} - \frac{\sum_{k\in s_1}\frac{y_{k}}{\pi_k}}{\sum_{k\in s_1}\frac{1}{\pi_k}}
 \]</span></p>
@@ -497,7 +496,7 @@ Var(\hat{\Delta}) = Var(\hat{\bar{y}}_2) + Var(\hat{\bar{y}}_1) - 2Cov(\hat{\bar
 \]</span></p>
 <p>En general, el último término se puede expresar como</p>
 <p><span class="math display">\[
-2Cov(\hat{\bar{y}}_2, \hat{\bar{y}}_1) = 
+2Cov(\hat{\bar{y}}_2, \hat{\bar{y}}_1) =
 2\sqrt{Var(\hat{\bar{y}}_2)}\sqrt{Var(\hat{\bar{y}}_1)}\sqrt{T_2}\sqrt{T_1}R_{12}
 \]</span></p>
 <p>En donde <span class="math inline">\(T_2\)</span> y <span class="math inline">\(T_1\)</span> representan el porcentaje de muestra común que se
@@ -508,9 +507,9 @@ el traslape es común por diseño <span class="math inline">\(T_2 = T_1 = T\)</s
 reduce de la siguiente manera:</p>
 <p><span class="math display">\[
 Var(\hat{\Delta}) = 2Var(\hat{\bar{y}}) - 2{Var(\hat{\bar{y}})}TR_{12}
-=2Var(\hat{\bar{y}})(1-TR_{12}) 
+=2Var(\hat{\bar{y}})(1-TR_{12})
 \]</span></p>
-<p><span class="citation"><a href="#ref-Kish_2004" role="doc-biblioref">Kish</a> (<a href="#ref-Kish_2004" role="doc-biblioref">2004</a>)</span> comenta que la varianza de este indicador cambiará de acuerdo al tipo de
+<p><span class="citation">Kish (<a href="#ref-Kish_2004" role="doc-biblioref">2004</a>)</span> comenta que la varianza de este indicador cambiará de acuerdo al tipo de
 encuesta que se elija. En efecto:</p>
 <ul>
 <li>Encuesta repetida: en donde <span class="math inline">\(T=0\)</span> y
@@ -529,8 +528,8 @@ dos periodos de tiempo, entonces se tiene la siguiente conclusión:</p>
 cambios netos usando un diseño panel que un diseño sin traslape en una encuesta repetida. Un
 camino medio es el diseño rotativo.</p>
 </div>
-<div id="promedio-trimestral" class="section level3" number="17.4.2">
-<h3><span class="header-section-number">17.4.2</span> Promedio trimestral</h3>
+<div id="promedio-trimestral" class="section level3 hasAnchor" number="17.4.2">
+<h3><span class="header-section-number">17.4.2</span> Promedio trimestral<a href="efecto-del-tipo-de-encuesta-en-la-eficiencia-de-los-indicadores.html#promedio-trimestral" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Considere una encuesta continua y mensual en donde se quiere estimar el
 promedio trimestral de la variable de interés <span class="math inline">\(x\)</span> en tres periodos de
 tiempo (<span class="math inline">\(t_3\)</span>, <span class="math inline">\(t_2\)</span> y <span class="math inline">\(t_1\)</span>)</p>
@@ -548,7 +547,7 @@ elemento <span class="math inline">\(k\)</span>. La varianza del estimador del p
 calcula mediante la siguiente expresión:</p>
 <p><span class="math display">\[
 \begin{split}
-Var(\hat{\Theta}) &amp; = \frac{1}{9}[Var(\hat{\bar{y}}_3) + Var(\hat{\bar{y}}_2) + Var(\hat{\bar{y}}_2) + \\ 
+Var(\hat{\Theta}) &amp; = \frac{1}{9}[Var(\hat{\bar{y}}_3) + Var(\hat{\bar{y}}_2) + Var(\hat{\bar{y}}_2) + \\
 &amp;2Cov(\hat{\bar{y}}_3, \hat{\bar{y}}_2)) + 2Cov(\hat{\bar{y}}_3, \hat{\bar{y}}_1)) + 2Cov(\hat{\bar{y}}_2, \hat{\bar{y}}_1)]
 \end{split}
 \]</span></p>
@@ -580,7 +579,7 @@ conclusión:</p>
 promedio trimestral usando un diseño panel que un diseño sin traslape. De la misma forma, un camino intermedio es el diseño de panel rotativo.</p>
 </div>
 </div>
-<h3>Referencias</h3>
+<h3>Referencias<a href="referencias.html#referencias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Kish_2004" class="csl-entry">
 ———. 2004. <em>Statistical Design for Research</em>. Wiley classic biblioteca edición. Wiley. <a href="https://www.wiley.com/en-us/Statistical+Design+for+Research-p-9780471691204">https://www.wiley.com/en-us/Statistical+Design+for+Research-p-9780471691204</a>.
@@ -653,7 +652,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>6.6 Estratificación implícita | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="6.6 Estratificación implícita | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-01-26" />
+<meta name="date" content="2022-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="evaluación-y-escogencia-de-la-mejor-estratificación.html"/>
 <link rel="next" href="diseño-y-mecanismo-de-selección-de-la-muestra.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -466,22 +465,22 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="estratificación-implícita" class="section level2" number="6.6">
-<h2><span class="header-section-number">6.6</span> Estratificación implícita</h2>
+<div id="estratificación-implícita" class="section level2 hasAnchor" number="6.6">
+<h2><span class="header-section-number">6.6</span> Estratificación implícita<a href="estratificación-implícita.html#estratificación-implícita" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Los estratos explícitos definidos en la sección anterior son útiles para reducir la varianza de muestreo y asegurar la representatividad de la muestra en cada uno de los subgrupos que comparten las mismas características socioeconómicas, dentro de los mismos municipios. Además de los estratos socioeconómicos, algunas variables que se consideran en el proceso de estratificación explícita son:</p>
 <ul>
 <li>Estados o regiones de un país.</li>
 <li>Zona en la que está ubicado el hogar: urbana o rural. Nótese que cada país brinda su definición de ruralidad, de acuerdo con sus propias definiciones nacionales.</li>
 </ul>
 <p>También es posible realizar una selección ordenada que induce una estratificación implícita, sin que necesariamente se tenga control sobre el tamaño de muestra final, y sin asumir independencia en la selección. Este tipo de estratificación es una forma de garantizar una asignación estrictamente proporcional de los hogares en todos los estratos implícitos. También puede conducir a una mayor confiabilidad de las estimaciones de la encuesta, siempre que las variables de estratificación implícita que se consideren estén correlacionadas con los indicadores de interés (por ejemplo, la tasa de desocupación, subocpupación o informalidad).</p>
-<p>La estratificación implícita es altamente recomendada cuando la encuesta está enfocada en un tema particular (como por ejemplo el mercado de trabajo) y requiere el uso del muestreo sistemático (con probabilidades simples o desiguales) en la selección de las UPM. Según <span class="citation"><a href="#ref-UN_2008" role="doc-biblioref">UN</a> (<a href="#ref-UN_2008" role="doc-biblioref">2008a</a>, pág. 46)</span>, en la mayoría de países la secuencia podría empezar con el área urbana, desagregada por departamento, a su vez desagregada por municipio; seguida del área rural, desagregada por departamento, a su vez desagregada por comuna o vereda. La selección sistemática de UPM deberá estar supeditada al ordenamiento de las UPM por el número de viviendas.</p>
+<p>La estratificación implícita es altamente recomendada cuando la encuesta está enfocada en un tema particular (como por ejemplo el mercado de trabajo) y requiere el uso del muestreo sistemático (con probabilidades simples o desiguales) en la selección de las UPM. Según <span class="citation">UN (<a href="#ref-UN_2008" role="doc-biblioref">2008a</a>, pág. 46)</span>, en la mayoría de países la secuencia podría empezar con el área urbana, desagregada por departamento, a su vez desagregada por municipio; seguida del área rural, desagregada por departamento, a su vez desagregada por comuna o vereda. La selección sistemática de UPM deberá estar supeditada al ordenamiento de las UPM por el número de viviendas.</p>
 <p>Nótese que la estratificación implícita puede constituir un método objetivo de selección de reemplazos de las UPM a las cuales no se pudo acceder en el operativo de campo; de esta forma, si una UPM fue seleccionada originalmente, pero por alguna razón operativa no puede ser empadronada, su reemplazo será la inmediatamente anterior (o posterior) en la lista estratificada implícitamente. Nótese que este procedimiento ubicará el reemplazo como la UPM ubicada en el mismo municipio, dentro del mismo departamento, en la misma zona y con un número similar de viviendas.</p>
-<p>Aunque la estratificación implícita permite acotar el sesgo generado por la ausencia de respuesta de las UPM, <span class="citation"><a href="#ref-Vehovar_1999" role="doc-biblioref">Vehovar</a> (<a href="#ref-Vehovar_1999" role="doc-biblioref">1999</a>, págs. 348 - 349)</span> advierte que se debe tener precaución en cuanto a los usos de esta práctica puesto que puede conllevar sesgos importantes en las estimaciones de interés. Lo anterior se desprende del hecho de que los individuos ubicados en zonas donde sí es posible acceder puedan diferir significativamente de aquellos ubicados en las zonas de difícil acceso, las cuales difícilmente serán seleccionadas por los algoritmos de muestreo que hacen uso de la estratificación implícita.</p>
+<p>Aunque la estratificación implícita permite acotar el sesgo generado por la ausencia de respuesta de las UPM, <span class="citation">Vehovar (<a href="#ref-Vehovar_1999" role="doc-biblioref">1999</a>, págs. 348 - 349)</span> advierte que se debe tener precaución en cuanto a los usos de esta práctica puesto que puede conllevar sesgos importantes en las estimaciones de interés. Lo anterior se desprende del hecho de que los individuos ubicados en zonas donde sí es posible acceder puedan diferir significativamente de aquellos ubicados en las zonas de difícil acceso, las cuales difícilmente serán seleccionadas por los algoritmos de muestreo que hacen uso de la estratificación implícita.</p>
 <p>Por esta razón es útil que, después de haber valorado los posibles sesgos, si se ha tomado la determinación de realizar las sustituciones sobre las UPM de difícil acceso, se realice un seguimiento exhaustivo en cada levantamiento que permita clasificar el esquema de recolección de información primaria y se valore su impacto en la precisión de los estimadores resultantes.</p>
 
 </div>
 <!-- </div> -->
-<h3>Referencias</h3>
+<h3>Referencias<a href="referencias.html#referencias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-UN_2008" class="csl-entry">
 ———. 2008a. <em>Designing household survey samples: practical guidelines</em>. Studies en methods / United Nations, Department of Economic y Social Affairs, Statistics Division Series F. United Nations.
@@ -557,7 +556,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

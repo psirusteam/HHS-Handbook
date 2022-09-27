@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>9.4 Tamaño de muestra para UPM, hogares y personas | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="9.4 Tamaño de muestra para UPM, hogares y personas | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-01-26" />
+<meta name="date" content="2022-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="algunos-escenarios-de-interés.html"/>
 <link rel="next" href="tamaño-de-muestra-para-upm-y-hogares.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -466,8 +465,8 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="tamaño-de-muestra-para-upm-hogares-y-personas" class="section level2" number="9.4">
-<h2><span class="header-section-number">9.4</span> Tamaño de muestra para UPM, hogares y personas</h2>
+<div id="tamaño-de-muestra-para-upm-hogares-y-personas" class="section level2 hasAnchor" number="9.4">
+<h2><span class="header-section-number">9.4</span> Tamaño de muestra para UPM, hogares y personas<a href="tamaño-de-muestra-para-upm-hogares-y-personas.html#tamaño-de-muestra-para-upm-hogares-y-personas" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Cuando la unidad de observación sean las personas, sin importar que la variable de interés esté a nivel de hogar, será necesario siempre basar nuestros cálculos en el tamaño de muestra de las personas. Por ejemplo, para tener una inferencia apropiada al estimar el ingreso medio percápita, el porcentaje de personas pobres o el porcentaje de personas con una característica particular es necesario definir a la población objetivo como todas las personas que componen un hogar para posterioMERnte medir la variable de interés que será observada para todas ellas.</p>
 <p>Con estos elementos es posible realizar simulaciones de algunos escenarios de muestreo, que indiquen el tamaño de muestra necesario en cada una de las etapas de la selección de la muestra. Si fuese posible sistematizar los elementos más importantes a la hora de calcular el tamaño de muestra en una encuesta de hogares, sería necesario recurrir a los siguientes pasos de manera ordenada:</p>
 <ul>
@@ -499,11 +498,11 @@ n_{II} = \dfrac{n}{r \times b}
 <li><strong>Calcular el número de UPM</strong>. Los hogares y las personas se observan a partir de las UPM. En este paso final es necesario calcular el número de UPM que deben ser seleccionadas en el muestreo a partir de la relación</li>
 </ul>
 <p><span class="math display">\[
-n_{I} = \frac{n}{\bar{n}} 
+n_{I} = \frac{n}{\bar{n}}
 = \frac{n_{II}}{\bar{n}_{II}}
 \]</span></p>
-<div id="ejemplo-proporción-de-personas-pobres" class="section level3" number="9.4.1">
-<h3><span class="header-section-number">9.4.1</span> Ejemplo: proporción de personas pobres</h3>
+<div id="ejemplo-proporción-de-personas-pobres" class="section level3 hasAnchor" number="9.4.1">
+<h3><span class="header-section-number">9.4.1</span> Ejemplo: proporción de personas pobres<a href="tamaño-de-muestra-para-upm-hogares-y-personas.html#ejemplo-proporción-de-personas-pobres" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Suponga que el parámetro de interés es el porcentaje de personas pobres (cuyo ingreso está por debajo de un umbral preestablecido) y se quiere hacer inferencia con un margen de error relativo máximo del 5%. Por estudios anteriores en este país, se ha estimado que la proporción de personas pobres está alrededor de <span class="math inline">\(P = 4\)</span>%. Nótese que la población objetivo está conformada por todos los habitantes del hogar puesto que <span class="math inline">\(r = 100\)</span>%. En este país se ha estimado que el tamaño promedio del hogar es de alrededor de <span class="math inline">\(b = 3.5\)</span> personas. Por último, según levantamientos anteriores, la correlación intraclase de la característica de interés con las unidades primarias de muestreo es <span class="math inline">\(\rho_y = 0.034\)</span>.</p>
 <p>La siguiente tabla resume los resultados del ejercicio para <span class="math inline">\(\bar{n}_{II} =\)</span> 10 hogares por UPM, los cuales implican que por cada UPM se entrevistarían en promedio a <span class="math inline">\(\bar{n} = 10 * 1 * 3.5 = 35\)</span> personas. Con lo anterior se obtendría un efecto de diseño <span class="math inline">\(DEFF =\)</span> 2.2, para un total de personas en la muestra de <span class="math inline">\(n = 55936\)</span> que serán observados a partir de la selección de <span class="math inline">\(n_{II} = 55936/(1 * 3.5) = 15982\)</span> hogares en <span class="math inline">\(n_{I} = 55936 / 35 = 1598\)</span> UPM.</p>
 <table>
@@ -632,8 +631,8 @@ n_{I} = \frac{n}{\bar{n}}
 </tbody>
 </table>
 </div>
-<div id="ejemplo-ingreso-promedio-por-persona" class="section level3" number="9.4.2">
-<h3><span class="header-section-number">9.4.2</span> Ejemplo: ingreso promedio por persona</h3>
+<div id="ejemplo-ingreso-promedio-por-persona" class="section level3 hasAnchor" number="9.4.2">
+<h3><span class="header-section-number">9.4.2</span> Ejemplo: ingreso promedio por persona<a href="tamaño-de-muestra-para-upm-hogares-y-personas.html#ejemplo-ingreso-promedio-por-persona" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Suponga que se desea estimar el ingreso promedio por hogar con un margen de error relativo máximo del 2%. La variable de interés (ingreso) es continua y se estima que la media oscila alrededor de <span class="math inline">\(\bar{y}_U=1180\)</span> dólares con una varianza de <span class="math inline">\(S^2_{y_U}=1845.94^2\)</span>. En este caso, la población objetivo son todos los habitantes del hogar, por lo cual <span class="math inline">\(r = 100\%\)</span>. La composición del hogar se calcula en <span class="math inline">\(b = 3.79\)</span> personas por hogar. Por último, según levantamientos anteriores, la correlación intraclase de la característica de interés es <span class="math inline">\(\rho_y = 0.035\)</span>. Nótese que la correlación intraclase cambia con respecto a la característica que se desee medir.</p>
 <p>La siguiente tabla muestra los resultados del ejercicio al seleccionar <span class="math inline">\(\bar{n}_{II} =\)</span> 15 hogares por UPM, que a su vez implica que por cada UPM se encontrarían en promedio <span class="math inline">\(\bar{n}= 15 * 1 * 3.79 \cong 57\)</span> personas por UPM. Con lo anterior se obtendría un efecto de diseño <span class="math inline">\(DEFF =\)</span> 3, para un total de personas en la muestra de <span class="math inline">\(n = 48861\)</span> que serán observados a partir de la selección de <span class="math inline">\(n_{II} = 48861 / (1 * 3.79) = 12892\)</span> hogares en <span class="math inline">\(n_{I} =\)</span> 859 UPM.</p>
 <table>
@@ -754,8 +753,8 @@ n_{I} = \frac{n}{\bar{n}}
 </tbody>
 </table>
 </div>
-<div id="ejemplo-tasa-de-desocupación-en-adultos-mayores" class="section level3" number="9.4.3">
-<h3><span class="header-section-number">9.4.3</span> Ejemplo: tasa de desocupación en adultos mayores</h3>
+<div id="ejemplo-tasa-de-desocupación-en-adultos-mayores" class="section level3 hasAnchor" number="9.4.3">
+<h3><span class="header-section-number">9.4.3</span> Ejemplo: tasa de desocupación en adultos mayores<a href="tamaño-de-muestra-para-upm-hogares-y-personas.html#ejemplo-tasa-de-desocupación-en-adultos-mayores" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Suponga que la incidencia de la desocupación está alrededor de <span class="math inline">\(P = 5.5\)</span>% en la población objetivo, que son las personas económicamente activas (PEA) mayores de 60 años; en este país, se ha estimado que en promedio hay <span class="math inline">\(r = 4.6\)</span>% de adultos mayores por hogar que pertenecen a la PEA, cuyo tamaño promedio es de alrededor de <span class="math inline">\(b = 5\)</span> personas. Además, se quiere hacer inferencia con un margen de error relativo máximo del 15%. Por último, según levantamientos anteriores, la correlación intraclase de la característica de interés es <span class="math inline">\(\rho_y = 0.7\)</span>.</p>
 <p>La siguiente tabla muestra los resultados del ejercicio, que implica que seleccionar <span class="math inline">\(\bar{n}_{II} =\)</span> 20 hogares por UPM implicaría un promedio de <span class="math inline">\(\bar{n} = 20 * 0.046 * 5 = 4.6\)</span> adultos mayores en la PEA (personas de interés) por UPM. Con lo anterior se obtendría un efecto de diseño <span class="math inline">\(DEFF =\)</span> 3.5, para un total de <span class="math inline">\(n = 7272\)</span> adultos mayores en la PEA que serán observados en la muestra a partir de la selección de <span class="math inline">\(n_{II} = 7272 / (0.046 * 5) \cong 31617\)</span> hogares en <span class="math inline">\(n_{I} = 7272 / 4.6 \cong 1581\)</span> UPM.</p>
 <table>
@@ -944,7 +943,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

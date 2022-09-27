@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Capítulo 17 Agregación de encuestas | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Capítulo 17 Agregación de encuestas | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-01-26" />
+<meta name="date" content="2022-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="valores-atípicos-en-una-encuesta-de-consumo.html"/>
 <link rel="next" href="esquemas-de-acumulación-de-muestras.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -466,8 +465,8 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="agregación-de-encuestas" class="section level1" number="17">
-<h1><span class="header-section-number">Capítulo 17</span> Agregación de encuestas</h1>
+<div id="agregación-de-encuestas" class="section level1 hasAnchor" number="17">
+<h1><span class="header-section-number">Capítulo 17</span> Agregación de encuestas<a href="agregación-de-encuestas.html#agregación-de-encuestas" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Para producir indicadores sociales de forma agregada (anual, semestral o
 trimestral), es común recurrir a la agregación de las bases de datos
 provenientes de las encuestas de hogares, cuya periodicidad puede suele
@@ -477,26 +476,26 @@ por el diseño de muestreo complejo y al tratamiento de las unidades que
 se repiten en algún periodo debido al carácter rotativo de la medición.</p>
 <p>Uno de los primeros acercamientos al problema de la estimación conjunta
 de indicadores sociales utilizando varios periodos de recolección se
-presenta en <span class="citation"><a href="#ref-Gurney_Daly_1965" role="doc-biblioref">Gurney y Daly</a> (<a href="#ref-Gurney_Daly_1965" role="doc-biblioref">1965</a>)</span>, en donde se examina cómo mejorar el
+presenta en <span class="citation">Gurney y Daly (<a href="#ref-Gurney_Daly_1965" role="doc-biblioref">1965</a>)</span>, en donde se examina cómo mejorar el
 estimador puntual por medio de la correlación natural que se tiene con
 periodos anteriores, siguiendo un enfoque inferencial basado en modelos
-estocásticos. En este orden de ideas, <span class="citation"><a href="#ref-Lent_Miller_Duff_1999" role="doc-biblioref">Lent, Miller, y Duff</a> (<a href="#ref-Lent_Miller_Duff_1999" role="doc-biblioref">1999</a>)</span> definen una
+estocásticos. En este orden de ideas, <span class="citation">Lent, Miller, y Duff (<a href="#ref-Lent_Miller_Duff_1999" role="doc-biblioref">1999</a>)</span> definen una
 aproximación a un estimador para las distintas clasificaciones de la
 fuerza de trabajo que está basado en la optimización de los coeficientes
 de un estimador compuesto.</p>
-<p>Por su parte, <span class="citation"><a href="#ref-Fuller_1990" role="doc-biblioref">W. Fuller</a> (<a href="#ref-Fuller_1990" role="doc-biblioref">1990</a>)</span> provee una
+<p>Por su parte, <span class="citation">W. Fuller (<a href="#ref-Fuller_1990" role="doc-biblioref">1990</a>)</span> provee una
 discusión acerca de los sesgos que se pueden generar en el análisis de
 encuestas repetidas debido a errores de medición y revisa detalladamente
-algunos modelos estimados con mínimos cuadrados. Además, <span class="citation"><a href="#ref-Bell_2001" role="doc-biblioref">Bell</a> (<a href="#ref-Bell_2001" role="doc-biblioref">2001</a>)</span>
+algunos modelos estimados con mínimos cuadrados. Además, <span class="citation">Bell (<a href="#ref-Bell_2001" role="doc-biblioref">2001</a>)</span>
 examina varios acercamientos al problema de estimar indicadores
 sociales, específicamente relacionados con la fuerza de trabajo,
 provenientes de encuestas de hogares que tienen definido un esquema de
 rotación y traslape entre distintos periodos de tiempo.</p>
-<p>Asimismo, <span class="citation"><a href="#ref-Steel_McLaren_2008" role="doc-biblioref">Steel y McLaren</a> (<a href="#ref-Steel_McLaren_2008" role="doc-biblioref">2008</a>)</span> revisaron las principales dificultades al
+<p>Asimismo, <span class="citation">Steel y McLaren (<a href="#ref-Steel_McLaren_2008" role="doc-biblioref">2008</a>)</span> revisaron las principales dificultades al
 momento de diseñar y analizar encuestas repetidas. Teniendo en cuenta
 los patrones de rotación en la estimación de los indicadores de nivel y
 de cambio, examinan su efecto en la estrategia de estimación de las
-varianzas de los estimadores de interés. Luego, <span class="citation"><a href="#ref-Lewis_2017" role="doc-biblioref">Lewis</a> (<a href="#ref-Lewis_2017" role="doc-biblioref">2017</a>)</span> definieron
+varianzas de los estimadores de interés. Luego, <span class="citation">Lewis (<a href="#ref-Lewis_2017" role="doc-biblioref">2017</a>)</span> definieron
 algunos procedimientos que se deben seguir al momento de combinar dos o
 más conjuntos de datos con el propósito de implementar eficientemente
 pruebas de significación estadística sobre indicadores de cambio en el
@@ -504,7 +503,7 @@ tiempo, además de incrementar el tamaño de muestra para realizar
 inferencias de subgrupos poblacionales que están insuficientemente
 representados en una sola medición.</p>
 </div>
-<h3>Referencias</h3>
+<h3>Referencias<a href="referencias.html#referencias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Bell_2001" class="csl-entry">
 Bell, Phillip. 2001. <span>«Comparison of Alternative Labour Force Survey Estimators»</span>. <em>Survey Methodology</em> 27 (1): 53-63.
@@ -592,7 +591,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

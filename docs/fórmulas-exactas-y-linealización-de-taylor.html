@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>12.1 Fórmulas exactas y linealización de Taylor | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="12.1 Fórmulas exactas y linealización de Taylor | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-01-26" />
+<meta name="date" content="2022-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="estimación-del-error-de-muestreo.html"/>
 <link rel="next" href="la-técnica-del-último-conglomerado.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -466,8 +465,8 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="fórmulas-exactas-y-linealización-de-taylor" class="section level2" number="12.1">
-<h2><span class="header-section-number">12.1</span> Fórmulas exactas y linealización de Taylor</h2>
+<div id="fórmulas-exactas-y-linealización-de-taylor" class="section level2 hasAnchor" number="12.1">
+<h2><span class="header-section-number">12.1</span> Fórmulas exactas y linealización de Taylor<a href="fórmulas-exactas-y-linealización-de-taylor.html#fórmulas-exactas-y-linealización-de-taylor" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>En la mayoría de casos de interés se pueden encontrar las fórmulas exactas que aplican a cada diseño de muestreo y a cada estimador usado. Para diseños simples es posible implementarlas para calcular la estimación de los errores directamente. Sin embargo, en diseños multietápicos y con estimadores simples se pueden tornar extremadamente complicadas. Más aún, en diseños multietápicos y para estimadores complejos simplemente no son una opción plausible.</p>
 <p>La estimación de la varianza en una estrategia de muestreo es una tarea no siempre sencilla. A partir de la teoría se establece un camino lógico basado en las probabilidades de inclusión de primer y segundo orden. En general, para cualquier diseño de muestreo sin reemplazo, la fórmula exacta para calcular una varianza del estimador de Horvitz-Thompson está dada por:</p>
 <p><span class="math display">\[Var(\hat{t}_{y,\pi}) = \sum_U\sum_U \Delta_{kl}\frac{y_k}{\pi_k}\frac{y_l}{\pi_l}\]</span></p>
@@ -476,7 +475,7 @@ div.csl-indent {
 \pi_{kl}=Pr(k\in s, \  l\in s)=Pr(I_k\ I_l=1)=\sum_{s \ni k, l} p(s).
 \]</span></p>
 <p>En donde el subíndice <span class="math inline">\({s \ni k, l}\)</span> se refiere a la suma sobre todas las muestras que contienen a los elementos <span class="math inline">\(k\)</span>-ésimo y <span class="math inline">\(l\)</span>-ésimo. Evidentemente, por razones computacionales y porque es imposible acceder a la observación de los registros sobre toda la población finita, hacer este cálculo para los estimadores de los indicadores de interés en las encuestas simplemente no es viable.</p>
-<p>En la práctica de las encuestas de hogares nunca se podrá contar con la varianza exacta de un estimador; por consiguiente, para tener una estimación de la precisión de la estrategia de muestreo se debe estimar la varianza del estimador. <span class="citation"><a href="#ref-Gutierrez_2016" role="doc-biblioref">H. A. Gutiérrez</a> (<a href="#ref-Gutierrez_2016" role="doc-biblioref">2016</a>)</span> afrima que un estimador insesgado para esta varianza está dada por la siguiente expresión:</p>
+<p>En la práctica de las encuestas de hogares nunca se podrá contar con la varianza exacta de un estimador; por consiguiente, para tener una estimación de la precisión de la estrategia de muestreo se debe estimar la varianza del estimador. <span class="citation">H. A. Gutiérrez (<a href="#ref-Gutierrez_2016" role="doc-biblioref">2016</a>)</span> afrima que un estimador insesgado para esta varianza está dada por la siguiente expresión:</p>
 <p><span class="math display">\[
 \widehat{Var}_1(\hat{t}_{y,\pi})=\sum\sum_S \dfrac{\Delta_{kl}}{\pi_{kl}}\frac{y_k}{\pi_k}\frac{y_l}{\pi_l}
 \]</span></p>
@@ -499,7 +498,7 @@ S^2_{y_s}=\frac{1}{n-1}\sum_{k\in S}(y_k-\bar{y}_s)^2
 <p>Por otro lado, si el diseño de muestreo es aleatorio estratificado y el parámetro de interés es una media, la fórmula del estimador de Horvitz-Thompson es <span class="math inline">\(\bar{y}_{\pi} = \frac{1}{N}\sum_s d_k y_k = \sum_{h=1}^H W_h \bar{y}_h\)</span>; en donde <span class="math inline">\(W_h = N_h/N\)</span>. Ahora, siendo <span class="math inline">\(S^2_{yh}\)</span> la varianza muestral en el estrato <span class="math inline">\(h\)</span> de los valores de la característica de interés y definiendo <span class="math inline">\(w_h = n_h/n\)</span>, la fórmula de la estimación de la varianza es</p>
 <p><span class="math display">\[
 \widehat Var(\bar{y}_{\pi}) = \sum_{h=1}^H w_h^2 \frac{1-f_h}{n_h}S^2_{yh}
- \]</span></p>
+\]</span></p>
 <p>Cuando el diseño de muestreo se complejiza, también lo hace la estimación de la varianza. Por ejemplo, si el diseño de muestreo es estratificada y bietápico, de tal forma que dentro de cada estrato <span class="math inline">\(U_h\)</span> <span class="math inline">\(h=1,\ldots, H\)</span> existen <span class="math inline">\(N_{Ih}\)</span> unidades primarias de muestreo, de las cuales se selecciona una muestra <span class="math inline">\(s_{Ih}\)</span> de <span class="math inline">\(n_{Ih}\)</span> unidades mediante un diseño de muestreo aleatorio simple; y además, se considera que el sub-muestreo dentro de cada unidad primaria seleccionada es también aleatorio simple, de tal manera que para cada unidad primaria de muestreo seleccionada <span class="math inline">\(i\in s_{Ih}\)</span> de tamaño <span class="math inline">\(N_i\)</span> se selecciona una submuestra <span class="math inline">\(s_i\)</span> de elementos de tamaño <span class="math inline">\(n_i\)</span>, entonces la forma final del estimador de la varianza del estimador de Horvitz-Thompson para el total poblacional quedaría de la siguiente manera:</p>
 <p><span class="math display">\[
 \widehat{Var}(\hat{t}_{y,\pi})=
@@ -509,7 +508,7 @@ S^2_{y_s}=\frac{1}{n-1}\sum_{k\in S}(y_k-\bar{y}_s)^2
 <p>En donde <span class="math inline">\(S^2_{\hat{t}_{y}S_I}\)</span> y <span class="math inline">\(S^2_{y_{S_i}}\)</span> son, respectivamente, las varianzas muestrales de los totales estimados en las UPM seleccionadas y las varianzas muestrales de los hogares incluidos en la submuestra dentro de las UPM seleccionadas en la muestra de la primera etapa.</p>
 <p>Las fórmulas computacionales requeridas para estimar la varianza de estadísticas descriptivas como la media muestral están disponibles para algunos diseños complejos que incorporan elementos como la estratificación y el muestreo por conglomerados. Sin embargo, en el caso de estadísticas analíticas más complejas, tales como coeficientes de correlación y coeficientes de regresión, no se encuentra fácilmente las fórmulas específicas en diseños muestrales que se aparten del muestreo aleatorio simple. Estas fórmulas son enormemente complicadas o, en última instancia, se resisten al análisis matemático.</p>
 </div>
-<h3>Referencias</h3>
+<h3>Referencias<a href="referencias.html#referencias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Gutierrez_2016" class="csl-entry">
 ———. 2016. <em>Estrategias de muestreo: diseño de encuestas y estimación de parámetros</em>. Segunda edición. Ediciones de la U.
@@ -582,7 +581,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

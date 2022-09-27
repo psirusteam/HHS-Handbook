@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>12.2 La técnica del último conglomerado | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="12.2 La técnica del último conglomerado | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-01-26" />
+<meta name="date" content="2022-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="fórmulas-exactas-y-linealización-de-taylor.html"/>
 <link rel="next" href="linealización-de-taylor.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -466,13 +465,13 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="la-técnica-del-último-conglomerado" class="section level2" number="12.2">
-<h2><span class="header-section-number">12.2</span> La técnica del último conglomerado</h2>
+<div id="la-técnica-del-último-conglomerado" class="section level2 hasAnchor" number="12.2">
+<h2><span class="header-section-number">12.2</span> La técnica del último conglomerado<a href="la-técnica-del-último-conglomerado.html#la-técnica-del-último-conglomerado" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Debido a las dificultades algebraicas y computacionales, estimar la varianza en encuestas complejas que contemplan esquemas de conglomeración, selección en varias etapas y estratificación, puede tornarse bastante tedioso, costoso y además muy demorado. En esta sección se explica por qué la técnica del último conglomerado resulta ser una buena opción a la hora de aproximar la varianza en una encuesta compleja.</p>
 <p>Para la estimación de la varianza de los estimadores de interés en encuestas multietápicas, los programas computacionales existentes utilizan una aproximación conocida como la técnica del último conglomerado (<em>ultimate cluster</em>). Esta aproximación, que sólo tiene en cuenta la varianza de los estimadores en la primera etapa, supone que ese muestreo fue realizado con reemplazo. Los procedimientos de muestreo en etapas posteriores de la selección son ignorados a menos que el factor de corrección para poblaciones finitas no sea despreciable a nivel de la primera etapa de muestreo.</p>
 <p>En particular, considere cualquier estimador del total poblacional dado por la siguiente combinación lineal</p>
 <p><span class="math display">\[
-\hat{t}_{y,\pi}=\sum_{k\in s} d_k y_k = \sum_{k\in U} I_k d_k y_k 
+\hat{t}_{y,\pi}=\sum_{k\in s} d_k y_k = \sum_{k\in U} I_k d_k y_k
 \]</span></p>
 <p>En donde <span class="math inline">\(I_k\)</span> son variables indicadoras de la pertenencia del elemento <span class="math inline">\(k\)</span> a la muestra <span class="math inline">\(s\)</span>. Ahora, asumiendo que el factor de expansión de la encuesta <span class="math inline">\(d_k\)</span> cumple con los supuestos básicos de un ponderador que hace insesgado a <span class="math inline">\(\hat{t}_{y}\)</span>, es decir:</p>
 <p><span class="math display">\[
@@ -489,7 +488,7 @@ E_p(I_k d_k) = 1
 \]</span></p>
 <p>Por ejemplo, si el muestreo es sin reemplazo en todas sus etapas, la probabilidad de inclusión del <span class="math inline">\(k\)</span>-ésimo elemento a la muestra <span class="math inline">\(s\)</span> está dada por</p>
 <p><span class="math display">\[\begin{align*}
-\pi_k &amp; = Pr(k \in s)\\ 
+\pi_k &amp; = Pr(k \in s)\\
 &amp; = Pr(k \in s_i, i \in s_I) \\
 &amp; = Pr(k \in s_i | i \in s_I) Pr(i \in s_I) = \pi_{k|i} \times \pi_{I_i}
 \end{align*}\]</span></p>
@@ -510,20 +509,20 @@ E_p(I_k d_k) = 1
 <p>En donde las cantidades <span class="math inline">\(\hat{t}_{y_i}\)</span> representan lo totales estimados de la variable de interés en la <span class="math inline">\(i\)</span>-ésima UPM y están dados por:</p>
 <p><span class="math display">\[
 \hat{t}_{y_i} = \sum_{k \in s_i} \frac{y_k}{\pi_{k|i}}
-= \sum_{k \in s_i} d_{k|i} y_k 
+= \sum_{k \in s_i} d_{k|i} y_k
 \]</span></p>
 <p>El espíritu de la técnica del último conglomerado consiste en utilizar la expresión de la estimación de la varianza del estimador HH en vez de la expresión exacta en diseños de muestreo complejos que no contemplan selecciones con reemplazo en la primera etapa. Para lograrlo, algunas cantidades deben ser equiparadas antes de poder utilizar esta aproximación.
 Utilizar la aproximación de la varianza requiere equiparar los términos de manera apropiada. En primer lugar, fijémonos en los estimadores <span class="math inline">\(\hat{t}_{y,p}\)</span> y <span class="math inline">\(\hat{t}_{y,\pi}\)</span>. Para realizar esta comparación, se requiere que
 se asuma la siguiente igualdad en las probabilidades de inclusión de la primera etapa:</p>
 <p><span class="math display">\[
-\pi_{I_i} = p_{I_i} \times m_I 
+\pi_{I_i} = p_{I_i} \times m_I
 \]</span></p>
 <p>Por lo tanto, el estimador del total poblacional quedaría definido como un estimador tipo Hanwen-Hurwitz. En efecto,</p>
 <p><span class="math display">\[
 \hat{t}_{y,\pi} =\sum_{k\in s} d_k y_k  
-= \sum_{i=1}^{m_I}\sum_{k \in s_i} d_k y_k 
-= \sum_{i=1}^{m_I}\sum_{k \in s_i} \frac{1}{\pi_{I_i} \pi_{k|i}} y_k 
-= \sum_{i=1}^{m_I}\frac{\hat{t}_{y_i}}{\pi_{I_i}} 
+= \sum_{i=1}^{m_I}\sum_{k \in s_i} d_k y_k
+= \sum_{i=1}^{m_I}\sum_{k \in s_i} \frac{1}{\pi_{I_i} \pi_{k|i}} y_k
+= \sum_{i=1}^{m_I}\frac{\hat{t}_{y_i}}{\pi_{I_i}}
 \approx \frac{1}{m_I}\sum_{i=1}^{m_I}\frac{\hat{t}_{y_i}}{p_{I_i}}
 \]</span></p>
 <p>Ahora, dado que la forma del estimador ha sido equiparada con un estimador tipo Hanwen-Hurwitz, es posible utilizar su estimación de varianza. Aún más, después de un poco de álgebra es posible tener la siguiente aproximación, cuya gran ventaja es que sólo hace uso de los factores de expansión finales <span class="math inline">\(d_k\)</span>, que suelen ser reportados por los INE cuando liberan los microdatos de sus encuestas, en vez de los factores de expansión de la primera etapa o los factores de expansión condicionales dentro de las UPM.</p>
@@ -532,21 +531,21 @@ se asuma la siguiente igualdad en las probabilidades de inclusión de la primera
 &amp;=\frac{m_I}{m_I-1}\sum_{i=1}^{m_I}\frac{1}{m_I^2}\left(\frac{\sum_{k \in s_i} d_{k|i} y_k }{p_{I_i}}-\sum_{i=1}^{m_I}\sum_{k \in s_i} d_k y_k \right)^2 \\
 &amp;=\frac{m_I}{m_I-1}\sum_{i=1}^{m_I}\left(\frac{\sum_{k \in s_i} d_{k|i} y_k }{m_I p_{I_i}}-\frac{1}{m_I}\sum_{i=1}^{m_I}\sum_{k \in s_i} d_k y_k \right)^2 \\
 &amp;=\frac{m_I}{m_I-1}\sum_{i=1}^{m_I}\left(\frac{\sum_{k \in s_i} d_{k|i} y_k }{\pi_{I_i}}-\frac{1}{m_I}\sum_{i=1}^{m_I}\sum_{k \in s_i} d_k y_k \right)^2 \\
-&amp;=\frac{m_I}{m_I-1}\sum_{i=1}^{m_I}\left( \sum_{k \in s_i} d_k y_k -\frac{1}{m_I}\sum_{i=1}^{m_I}\sum_{k \in s_i} d_k y_k \right)^2 
+&amp;=\frac{m_I}{m_I-1}\sum_{i=1}^{m_I}\left( \sum_{k \in s_i} d_k y_k -\frac{1}{m_I}\sum_{i=1}^{m_I}\sum_{k \in s_i} d_k y_k \right)^2
 \end{align*}\]</span></p>
 <p>Basado en lo anterior, al definir <span class="math inline">\(\breve{t}_{y_i} = \sum_{k \in s_i} d_k y_k\)</span> como la contribución<a href="#fn13" class="footnote-ref" id="fnref13"><sup>13</sup></a> de la <span class="math inline">\(i\)</span>-ésima UPM a la estimación del total poblacional y <span class="math inline">\(\bar{\breve{t}}_{y}=\frac{1}{m_I}\sum_{i=1}^{m_I}\breve{t}_{y_i}\)</span> como la contribución promedio en el muestreo de la primera etapa, entonces el estimador de varianza toma la siguiente forma, conocida como el estimador de varianza del <em>último conglomerado</em>.</p>
 <p><span class="math display">\[\begin{align}
 \label{UC}
 \widehat{Var}(\hat{t}_{y,p})
-=\frac{m_I}{m_I-1}\sum_{i=1}^{m_I}\left( \breve{t}_{y_i} -\frac{1}{m_I}\sum_{i=1}^{m_I}\breve{t}_{y_i} \right)^2 
+=\frac{m_I}{m_I-1}\sum_{i=1}^{m_I}\left( \breve{t}_{y_i} -\frac{1}{m_I}\sum_{i=1}^{m_I}\breve{t}_{y_i} \right)^2
 =\frac{m_I}{m_I-1}\sum_{i=1}^{m_I}\left( \breve{t}_{y_i} - \bar{\breve{t}}_{y} \right)^2
 \end{align}\]</span></p>
 <p>Por ejemplo, si el escenario de muestreo planteado en la encuesta es estratificado, con tres etapas de selección dentro de cada estrato, entonces al utilizar la técnica del último conglomerado, la aproximación del estimador de la varianza estaría dada por</p>
 <p><span class="math display">\[
-\widehat{Var}(\hat{t}_{y,p}) = 
+\widehat{Var}(\hat{t}_{y,p}) =
 \sum_h\frac{n_h}{n_h-1}\sum_{i\in s_h}\left(\hat{t}_{y_i}-\bar{\hat{t}}_{y_h}\right)^2
 \]</span></p>
-<p>En donde <span class="math inline">\(\hat{t}_{y_i} = \sum_{k \in s_{hi}} w_k y_k\)</span>, <span class="math inline">\(\bar{\hat{t}}_{y_h}=(1/n_h)\sum_{i \in s_h}\hat{t}_{y_i}\)</span> y <span class="math inline">\(n_h\)</span> es el número de UPMs seleccionadas en el estrato <span class="math inline">\(h\)</span>. Este procedimiento, propuesto por <span class="citation"><a href="#ref-hansen1953sample" role="doc-biblioref">Hansen, Hurwitz, y Madow</a> (<a href="#ref-hansen1953sample" role="doc-biblioref">1953</a>)</span> tiende a sobrestimar la varianza verdadera, aunque resulta ser una técnica apetecida por los investigadores puesto que utiliza directamente los pesos finales de muestreo o factores de expansión que son publicados por los INE.</p>
+<p>En donde <span class="math inline">\(\hat{t}_{y_i} = \sum_{k \in s_{hi}} w_k y_k\)</span>, <span class="math inline">\(\bar{\hat{t}}_{y_h}=(1/n_h)\sum_{i \in s_h}\hat{t}_{y_i}\)</span> y <span class="math inline">\(n_h\)</span> es el número de UPMs seleccionadas en el estrato <span class="math inline">\(h\)</span>. Este procedimiento, propuesto por <span class="citation">Hansen, Hurwitz, y Madow (<a href="#ref-hansen1953sample" role="doc-biblioref">1953</a>)</span> tiende a sobrestimar la varianza verdadera, aunque resulta ser una técnica apetecida por los investigadores puesto que utiliza directamente los pesos finales de muestreo o factores de expansión que son publicados por los INE.</p>
 <p>Utilizar la técnica del último conglomerado es una salida práctica al problema de la estimación de la varianza que, para la mayoría de encuestas que brindan estadísticas oficiales a los países, puede tornarse bastante complejo. Si bien, la expresión del estimador de la varianza no constituye un estimador estrictamente insesgado, sí se considera una aproximación bastante precisa.</p>
 <p>Por último, es importante reflexionar acerca de la definición práctica y el concepto que envuelven esta aproximación ¿Qué es un <strong>último conglomerado</strong>? Es la primera unidad de muestreo en un diseño complejo. Por ejemplo, considere el siguiente diseño de muestreo en cuatro etapas:</p>
 <p><span class="math display">\[\begin{equation*}
@@ -564,7 +563,7 @@ se asuma la siguiente igualdad en las probabilidades de inclusión de la primera
 \end{equation*}\]</span></p>
 <p>Es necesario tener en cuenta esta particularidad de algunas encuestas para poder aplicar correctamente esta técnica de aproximación de varianzas. En resumen, para aquellas ciudades que pertenecen al estrato de inclusión forzosa, las UPM serán los sectores cartográficos, y para el resto del país, las UPM serán los municipios cuya probabilidad de inclusión en la muestra de la primera etapa es menor a uno.</p>
 </div>
-<h3>Referencias</h3>
+<h3>Referencias<a href="referencias.html#referencias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Gutierrez_2016" class="csl-entry">
 ———. 2016. <em>Estrategias de muestreo: diseño de encuestas y estimación de parámetros</em>. Segunda edición. Ediciones de la U.
@@ -646,7 +645,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

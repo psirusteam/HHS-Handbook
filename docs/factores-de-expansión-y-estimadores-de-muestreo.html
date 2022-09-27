@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>17.2 Factores de expansión y estimadores de muestreo | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="17.2 Factores de expansión y estimadores de muestreo | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-01-26" />
+<meta name="date" content="2022-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="esquemas-de-acumulación-de-muestras.html"/>
 <link rel="next" href="agregación-de-encuestas-con-diferentes-tamaños-de-muestra.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -466,8 +465,8 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="factores-de-expansión-y-estimadores-de-muestreo" class="section level2" number="17.2">
-<h2><span class="header-section-number">17.2</span> Factores de expansión y estimadores de muestreo</h2>
+<div id="factores-de-expansión-y-estimadores-de-muestreo" class="section level2 hasAnchor" number="17.2">
+<h2><span class="header-section-number">17.2</span> Factores de expansión y estimadores de muestreo<a href="factores-de-expansión-y-estimadores-de-muestreo.html#factores-de-expansión-y-estimadores-de-muestreo" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Si el investigador está interesado en estimar la tasa de
 desempleo anual sobre una encuesta rotativa, que se lleva a durante los cuatro trimestres del año, es posible usar los cuatro conjuntos de datos y unir los trimestres para estimar la tasa de desempleo anual. Una solución
 inicial a este problema consiste en agregar las cuatro bases de datos y
@@ -530,7 +529,7 @@ levantamientos mensuales (o trimestrales) teniendo en cuenta la
 siguiente relación</p>
 <p><span class="math display">\[
 \hat{t}_y = \sum_{s_1 \cup ... \cup s_{12}} d_{k}^+ y_k
-\propto 
+\propto
 \sum_{s_1} d_{1k} y_k + \sum_{s_2} d_{2k} y_k + \cdots + \sum_{s_{12}} d_{12k} y_k
 \]</span></p>
 <p>Por lo tanto, en la agregación anual el factor de expansión de cada
@@ -588,7 +587,7 @@ ende la posibilidad de tener viviendas repetidas es casi nula. Nótese
 que el estimador para un total en la agregación trimestral tomará la
 siguiente forma de sumas mensuales parciales:</p>
 <p><span class="math display">\[
-\hat{t}_y 
+\hat{t}_y
 = \sum_{s1} d_{1k}^+ y_k + \sum_{s2} d_{2k}^+ y_k + \sum_{s3} d_{3k}^+ y_k
 = \hat{t}_{y}^1 + \hat{t}_{y}^2 + \hat{t}_{y}^3
 \]</span></p>
@@ -602,15 +601,15 @@ agregaciones anuales se debe considerar que el muestreo no es
 independiente en los doce meses. En este caso, el estimador de interés
 sigue tomando la forma de sumas parciales mensuales:</p>
 <p><span class="math display">\[
-\hat{t}_y 
-= \sum_{i=1}^{12}\sum_{s_i} d_{ik}^+ y_k 
+\hat{t}_y
+= \sum_{i=1}^{12}\sum_{s_i} d_{ik}^+ y_k
 = \sum_{i=1}^{12} \hat{t}_{y}^i
 \]</span></p>
 <p>En donde <span class="math inline">\(d_{ik}^+ = b_i \times d_{ik}\)</span>. A diferencia de la agregación trimestral, la varianza de este
 estimador está supeditada a las covarianzas que se puedan crear al
 visitar las mismas UPM debido al esquema rotativo. Es decir:</p>
 <p><span class="math display">\[
-Var(\hat{t}_y) 
+Var(\hat{t}_y)
 = \sum_{i=1}^{12} Var(\hat{t}_{y}^i)
 + 2 \sum_{i,j=1}^{12} \sum_{j &lt; i} Cov(\hat{t}_{y}^i, \hat{t}_{y}^j)
 \]</span></p>
@@ -682,7 +681,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

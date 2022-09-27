@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Capítulo 8 El efecto de diseño | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Capítulo 8 El efecto de diseño | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-01-26" />
+<meta name="date" content="2022-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="el-diseño-de-muestreo-estándar-en-una-encuesta-de-hogares.html"/>
 <link rel="next" href="estimación-del-efecto-de-diseño.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -466,21 +465,21 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="el-efecto-de-diseño" class="section level1" number="8">
-<h1><span class="header-section-number">Capítulo 8</span> El efecto de diseño</h1>
+<div id="el-efecto-de-diseño" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">Capítulo 8</span> El efecto de diseño<a href="el-efecto-de-diseño.html#el-efecto-de-diseño" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Cuando se selecciona una muestra utilizando un diseño de muestreo complejo es muy improbable que exista independencia entre las observaciones. Además, como el muestreo de las encuestas de hogares es complejo, la distribución de la variable de interés no es la misma para todos los individuos. Por lo anterior, cuando se analizan datos que provienen de encuestas de hogares la inferencia correcta debe tener en cuenta estas grandes desviaciones con respecto al análisis estadístico clásico, que considera muestras aleatorias simples. Por ello, en la mayoría de ocasiones se necesita aumentar el tamaño de muestra para obtener la precisión deseada.</p>
-<p>El efecto de diseño fue definido por <span class="citation"><a href="#ref-Kish_1965" role="doc-biblioref">Kish</a> (<a href="#ref-Kish_1965" role="doc-biblioref">1965, 258</a>)</span> como <em>la relación entre la varianza real de una muestra y la varianza real de una muestra aleatoria simple del mismo número de elementos</em> y toma la siguiente expresión:</p>
+<p>El efecto de diseño fue definido por <span class="citation">Kish (<a href="#ref-Kish_1965" role="doc-biblioref">1965, 258</a>)</span> como <em>la relación entre la varianza real de una muestra y la varianza real de una muestra aleatoria simple del mismo número de elementos</em> y toma la siguiente expresión:</p>
 <p><span class="math display">\[
 DEFF=\frac{Var(\hat{\theta})}{Var_{MAS}(\hat{\theta})}
 \]</span></p>
-<p>En donde <span class="math inline">\(Var(\hat{\theta})\)</span> denota la varianza de un estimador <span class="math inline">\(\hat{\theta}\)</span> bajo un diseño de muestreo complejo <span class="math inline">\(p(s)\)</span> y <span class="math inline">\(Var_{MAS}(\hat{\theta})\)</span> denota la varianza del este estimador <span class="math inline">\(\hat{\theta}\)</span> bajo un diseño de muestreo aleatorio simple <span class="math inline">\(MAS\)</span>. Esta cifra da cuenta del efecto de aglomeración causado por la utilización de un diseño de muestreo complejo <span class="math inline">\((p)\)</span>, frente a un diseño de muestreo aleatorio simple <span class="math inline">\(MAS\)</span>, en la inferencia de un parámetro de la población finita <span class="math inline">\(\theta\)</span> (que puede ser un total, un promedio, una proporción, una razón, un percentil, etc.). <span class="citation"><a href="#ref-United_Nations_2008" role="doc-biblioref">UN</a> (<a href="#ref-United_Nations_2008" role="doc-biblioref">2008b, 49</a>)</span> concluye que hay varias formas de interpretar el efecto del diseño:</p>
+<p>En donde <span class="math inline">\(Var(\hat{\theta})\)</span> denota la varianza de un estimador <span class="math inline">\(\hat{\theta}\)</span> bajo un diseño de muestreo complejo <span class="math inline">\(p(s)\)</span> y <span class="math inline">\(Var_{MAS}(\hat{\theta})\)</span> denota la varianza del este estimador <span class="math inline">\(\hat{\theta}\)</span> bajo un diseño de muestreo aleatorio simple <span class="math inline">\(MAS\)</span>. Esta cifra da cuenta del efecto de aglomeración causado por la utilización de un diseño de muestreo complejo <span class="math inline">\((p)\)</span>, frente a un diseño de muestreo aleatorio simple <span class="math inline">\(MAS\)</span>, en la inferencia de un parámetro de la población finita <span class="math inline">\(\theta\)</span> (que puede ser un total, un promedio, una proporción, una razón, un percentil, etc.). <span class="citation">UN (<a href="#ref-United_Nations_2008" role="doc-biblioref">2008b, 49</a>)</span> concluye que hay varias formas de interpretar el efecto del diseño:</p>
 <ol style="list-style-type: decimal">
 <li>Como el factor por el cual la varianza del diseño de muestreo complejo es mayor que la de una muestra aleatoria simple del mismo tamaño.</li>
 <li>Como la medida de cuánto peor es el plan de muestreo real que la muestra aleatoria simple en términos de precisión.</li>
 <li>Como un reflejo de cuántos casos de muestra más tendrían que seleccionarse en el diseño de muestra planificado en comparación con una muestra aleatoria simple para lograr el mismo nivel de varianza de muestreo.</li>
 </ol>
 </div>
-<h3>Referencias</h3>
+<h3>Referencias<a href="referencias.html#referencias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Kish_1965" class="csl-entry">
 Kish, Leslie. 1965. <em>Survey Sampling</em>. John Wiley; Sons.
@@ -556,7 +555,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

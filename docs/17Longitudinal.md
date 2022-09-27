@@ -31,7 +31,9 @@ Nótese que entre el primer y el segundo periodo de medición hay un traslape de
 
 La figura \@ref(fig:figel1) ejemplifica tres esquemas longitudinales que pueden ser creados para el año 2019. El primero de ellos (a la izquierda de la figura) representa la combinación del primer y segundo trimestre, que se define a través de la agregación de las dos mediciones en el primer y segundo trimestre de los paneles $b_1$, $c_1$ y $d_1$. El segundo esquema (centro) muestra la combinación de los primeros tres trimestres del año, definidos por los paneles $c_1$ y $d_1$. Por último, la base longitudinal anual parte de la combinación de las cuatro mediciones del panel $d_1$. 
 
-![(\#fig:figel1)Tres escenarios longitudinales en un esquema rotativo 4(0)1.](Pics/el1.png){width=50%}
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{Pics/el1} \caption{Tres escenarios longitudinales en un esquema rotativo 4(0)1.}(\#fig:figel1)
+\end{figure}
 
 
 Como se mencionó en capítulos anteriores, la pandemia por COVID-19 hizo que el año 2020 fuese un año atípico para los levantamientos de las encuestas de hogares en los INE de la región, puesto que la crisis de salud trajo consigo muchos retos en términos de la consecución de la información primaria. Debido a las restricciones de movilidad que los gobiernos tuvieron que imponer para hacerle frente a la pandemia, en algunos trimestres se optó por replicar el mismo esquema de trimestres anteriores. En nuestro ejemplo, asuma que no se incluyó el 25% adicional que se tenía planeado, sino que la muestra fue exactamente la misma que en el primer trimestre. Recuérdese además que en casi toda la región, la muestra de hogares se contactó, no de manera presencial, sino telefónica, disminuyendo la tasa de cobertura y de respuesta efectiva. 

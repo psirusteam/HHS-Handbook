@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>15.3 Consideraciones sobre la imputación múltiple | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="15.3 Consideraciones sobre la imputación múltiple | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-01-26" />
+<meta name="date" content="2022-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html"/>
 <link rel="next" href="detección-de-datos-atípicos.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -466,8 +465,8 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="consideraciones-sobre-la-imputación-múltiple" class="section level2" number="15.3">
-<h2><span class="header-section-number">15.3</span> Consideraciones sobre la imputación múltiple</h2>
+<div id="consideraciones-sobre-la-imputación-múltiple" class="section level2 hasAnchor" number="15.3">
+<h2><span class="header-section-number">15.3</span> Consideraciones sobre la imputación múltiple<a href="consideraciones-sobre-la-imputación-múltiple.html#consideraciones-sobre-la-imputación-múltiple" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Antes de escoger un método particular, es pertinente observar qué efectos conlleva esta escogencia en las propiedades estadísticas de los estimadores en las encuestas de hogares. En cuanto a la imputación múltiple, las propiedades estadísticas de los estimadores deben ser modificadas acordemente. Subestimar la variación de las estimaciones puede ser un error muy grave, puesto que afecta la cobertura nominal de los intervalos de confianza y a su vez influye en las pruebas de hipótesis y en el cálculo de los valores <span class="math inline">\(p\)</span>.</p>
 <p>Por ejemplo, suponga que existe una muestra aleatoria <span class="math inline">\(s\)</span> compuesta por un conjunto de <span class="math inline">\(n\)</span> datos que relacionan dos variables <span class="math inline">\(X\)</span>, <span class="math inline">\(Y\)</span>, a través del siguiente modelo de regresión simple:</p>
 <p><span class="math display">\[
@@ -500,7 +499,7 @@ E(\hat{\beta} | Y_{obs}) = E(E(\hat{\beta} | Y_{obs}, Y_{mis}) | Y_{obs})
 <p>Entre tanto, la varianza estimada al utilizar la metodología de imputación múltiple está dada por la siguiente expresión:</p>
 <p><span class="math display">\[
 V(\hat{\beta} | Y_{obs}) = E(V(\hat{\beta} | Y_{obs}, Y_{mis}) | Y_{obs}) +
-V(E(\hat{\beta} | Y_{obs}, Y_{mis}) | Y_{obs}) 
+V(E(\hat{\beta} | Y_{obs}, Y_{mis}) | Y_{obs})
 \]</span></p>
 <p>La primera parte de la anterior expresión se estima como el promedio de las varianzas muestrales de <span class="math inline">\(\hat{\beta}\)</span> sobre las <span class="math inline">\(M\)</span> imputaciones, dado por:</p>
 <p><span class="math display">\[
@@ -520,8 +519,8 @@ B = \frac{1}{M-1} \sum_{m = 1} ^ M (\hat{\beta}_m - \bar{\hat{\beta}})^2
 \]</span></p>
 <p>Por ejemplo, si se quiere realizar mediciones de pobreza utilizando la imputación múltiple es necesario primero establecer un modelo sobre los ingresos <span class="math inline">\(y_k\)</span> y luego generar <span class="math inline">\(Q\)</span> posibles valores <span class="math inline">\(y_k^q \ (q=1, \ldots, Q)\)</span> para cada individuo que no respondió. Luego, utilizando los <span class="math inline">\(Q\)</span> conjuntos de datos completos, es necesario estimar la siguientes cantidades</p>
 <p><span class="math display">\[
-\hat{F}_{\alpha}^{q}=\frac{1}{N}\sum_{k\in s} w_k 
-\left(\frac{l-y_k}{l}\right)^{\alpha}I(y_k&lt;l) \ \ \ \ \ \ \ \ \ 
+\hat{F}_{\alpha}^{q}=\frac{1}{N}\sum_{k\in s} w_k
+\left(\frac{l-y_k}{l}\right)^{\alpha}I(y_k&lt;l) \ \ \ \ \ \ \ \ \
 q= 1,\ldots, Q.
 \]</span></p>
 <p>El estimador final basado en la técnica de imputación múltiple será el promedio simple de las anteriores estimaciones, dado por</p>
@@ -535,8 +534,8 @@ q= 1,\ldots, Q.
 + \left(1+\frac{1}{Q}\right)\frac{1}{Q-1}\sum_{q=1}^Q (\hat{F}_{\alpha}^{q}-\tilde{F}_{\alpha})^2
 \]</span></p>
 <p>Una vez que se tienen los conjuntos de datos completos, es posible estimar <span class="math inline">\(\hat{V}(\hat{F}_{\alpha}^{q})\)</span> utilizando las técnicas del último conglomerado en conjunción con el Jackkinfe. La característica principal del proceso imputación es utilizar la información auxiliar para aproximar con precisión los valores faltantes. De esta forma, las estimaciones poblacionales de los parámetros de interés tendrán sesgo nulo o despreciable y la confiabilidad de la estrategia de muestreo se mantendrá como se planeó en una primera instancia. L siguiente simulación ejemplifica las ventajas de la imputación múltiple.</p>
-<div id="simulación-empírica" class="section level3" number="15.3.1">
-<h3><span class="header-section-number">15.3.1</span> Simulación empírica</h3>
+<div id="simulación-empírica" class="section level3 hasAnchor" number="15.3.1">
+<h3><span class="header-section-number">15.3.1</span> Simulación empírica<a href="consideraciones-sobre-la-imputación-múltiple.html#simulación-empírica" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Para ejemplificar los anteriores escenarios, en esta sección se muestran los resultados empíricos de una simulación que asumió un conjunto de <span class="math inline">\(n = 100\)</span> datos con una pendiente <span class="math inline">\(\beta = 100\)</span> y con una dispersión de <span class="math inline">\(\sigma = 2\)</span>. A su vez, el conjunto de datos tendrá <span class="math inline">\(n_0 = 40\)</span> valores faltantes en la variable respuesta. A continuación se muestran las primeras diez filas de esta base de datos simulados. Nótese que las dos primeras columnas corresponden a los valores verdaderos de la covariable y la variable de interés, respectivamente. La tercera columna identifica cuáles de estos valores son faltantes y la cuarta columna representaría la información disponible en la base de datos de la muestra <span class="math inline">\(s\)</span>.</p>
 <table>
 <thead>
@@ -699,6 +698,14 @@ Figura 15.6: Relación de la variable de interés con la covariable auxiliar par
 </div>
 <p>Si se considera la imputación múltiple con el enfoque <em>bootstrap</em>, también se obtedrá un conjunto de datos aumentado por cada una de las <span class="math inline">\(M\)</span> realizaciones que se ejecuten. Por ejemplo, a continuación se ilustra el conjunto de datos obtenido con <span class="math inline">\(M=3\)</span> realizaciones. Nótese que los valores de la variable de interés cambian en cada realización; estas realizaciones se conocen en la literatura como <em>valores plausibles</em>.</p>
 <table>
+<colgroup>
+<col width="6%" />
+<col width="18%" />
+<col width="14%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="center">x</th>
@@ -849,7 +856,7 @@ Figura 15.7: Relación de la variable de interés con la covariable auxiliar par
 </div>
 </div>
 <!-- </div> -->
-<h3>Referencias</h3>
+<h3>Referencias<a href="referencias.html#referencias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Rubin_1987" class="csl-entry">
 Rubin, Donald B. 1987. <em>Multiple Imputation for nonresponse in surveys</em>. Wiley series en probability y mathematical statistics Applied probability y statistics. Wiley.
@@ -922,7 +929,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

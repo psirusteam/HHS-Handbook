@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>14.2 Soluciones | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="14.2 Soluciones | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-01-26" />
+<meta name="date" content="2022-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="sesgo-sobre-los-estimadores.html"/>
 <link rel="next" href="las-consecuencias-de-la-pandemia-por-covid-19-en-las-encuestas-de-la-región.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -466,12 +465,12 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="soluciones" class="section level2" number="14.2">
-<h2><span class="header-section-number">14.2</span> Soluciones</h2>
+<div id="soluciones" class="section level2 hasAnchor" number="14.2">
+<h2><span class="header-section-number">14.2</span> Soluciones<a href="soluciones.html#soluciones" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Como se expuso en la sección anterior, si no hay correlación entre la variable de interés y la estructura de la ausencia de respuesta entonces no hay sesgo en los estimadores. Esto quiere decir que, si la probabilidad de respuesta es homogénea (representatividad fuerte) o pudiera modelarse (representatividad débil) para todos los individuos, entonces el sesgo se podría eliminar. En esta sección se explorarán dos caminos que, al incorporar información auxiliar, eliminan el sesgo causado por el fenómeno de la ausencia de respuesta.</p>
 <p>Ambas opciones, ajuste de factores de expansión mediante modelos de <em>propensity score</em> y estimadores de calibración, descansan en el paradigma de la inferencia basada en el diseño de muestreo y por ende se contemplan como dos posibilidades atractivas que mantienen la buenas propiedades de la estimación directa en encuestas de hogares.</p>
-<div id="propensity-score" class="section level3" number="14.2.1">
-<h3><span class="header-section-number">14.2.1</span> Propensity Score</h3>
+<div id="propensity-score" class="section level3 hasAnchor" number="14.2.1">
+<h3><span class="header-section-number">14.2.1</span> Propensity Score<a href="soluciones.html#propensity-score" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Como se mencionó anteriormente, uno de los ajustes que se debe realizar en la generación de los ponderadores finales es la corrección por ausencia de respuesta. En donde</p>
 <p><span class="math display">\[d_{4k} =  \frac{d_{3k}}{\hat{\phi_k}}\]</span></p>
 <p>Como ya se había mencionado en los capítulos anteriores, si el patrón de ausencia de respuesta es NMAR, entonces <span class="math inline">\(\phi_k = f(\mathbf{y}_k, \beta)\)</span> y en este caso, como no es posible tener acceso a los determinantes de la respuesta (porque precisamente son las mismas variables de interés en la encuesta), entonces no es posible estimar el patrón de ausencia de respuesta. Por ende, en este escenario habrá sesgo siempre. Por el contrario, si el patrón de ausencia de respuesta es MCAR o MAR, entonces <span class="math inline">\(\phi_k = f(\mathbf{x}_k, \boldsymbol{\beta})\)</span>; en este caso, si fuese posible tener acceso a las covariables <span class="math inline">\(\mathbf{x}\)</span> que determinan el mecanismo de respuesta, entonces es posible estimar las probabilidades de respuesta mediante <span class="math inline">\(\hat{\phi}_k = f(\mathbf{x}_k, \hat{\boldsymbol{\beta}})\)</span>. Efectivamente, en el caso del estimador de Horvitz-Thompson, el sesgo del estimador se anula puesto que</p>
@@ -484,7 +483,7 @@ E(\hat{t}_y) &amp;= E\left(\sum_{k\in s_r}d_{3k}y_k\right) \\
 \end{align*}\]</span></p>
 <p>Asumiendo que el modelo está bien establecido, entonces se tendrá una concordancia directa entre <span class="math inline">\(\hat{\phi_k}\)</span> y <span class="math inline">\(\phi_k\)</span>; por lo tanto se anularían en la última igualdad de la ecuación anterior. Además, el insesgamiento viene supeditado puesto que,</p>
 <p><span class="math display">\[
-E(I_kD_k) 
+E(I_kD_k)
 = E\left(E(I_kD_k|I_k) \right)
 = E(I_k)E(D_k|I_k) = \pi_k \phi_k
 \]</span></p>
@@ -500,7 +499,7 @@ d_{4k} = \frac{d_{3k}}{\hat{\phi_k}}  \ \ \ \ \ \ \ \ \forall \ k  \in s_{ER}
 <ol style="list-style-type: decimal">
 <li><em>Soporte común</em>: al igual que en un experimento aleatorizado, es necesario garantizar que ninguna combinación de las covariables induzca un estado (respuesta o ausencia de respuesta) de forma determinística. Es decir sobre todas las combinaciones en las covariables deben existir respondientes y no respondientes. Esta condición se puede escribir como:
 <span class="math display">\[
-0 &lt; Pr(D_{1,k} = 1 |\mathbf{x}_{1}) &lt; 1 
+0 &lt; Pr(D_{1,k} = 1 |\mathbf{x}_{1}) &lt; 1
 \]</span></li>
 <li><em>Balanceo</em>: como la respuesta de las unidades de muestreo no provienen de un estudio aleatorizado, es necesario garantizar que la distribución de las <span class="math inline">\(\hat\phi_k\)</span> sea similar entre respondientes y no respondientes. De esta forma, es posible expandir el subconjunto de respondientes efectivos a la muestra original (que incluye a las unidades no respondientes), la cual a su vez expande a toda la población de interés. Esta condición se puede escribir como:</li>
 </ol>
@@ -524,27 +523,27 @@ Figura 14.2: Balanceo entre respondientes y no respondientes
 </p>
 </div>
 </div>
-<div id="calibración" class="section level3" number="14.2.2">
-<h3><span class="header-section-number">14.2.2</span> Calibración</h3>
-<p>Como lo afirma <span class="citation"><a href="#ref-Sar08" role="doc-biblioref">C.-E. Särndal</a> (<a href="#ref-Sar08" role="doc-biblioref">2007</a>)</span>, la calibración provee una forma sistemática para involucrar la información auxiliar. En la mayoría de aplicaciones prácticas, la calibración provee un enfoque simple para incorporar esta información dentro de la etapa de estimación. La información auxiliar fue usada para mejorar la precisión de los estimativos mucho antes que el término calibración fuera popular. La calibración puede ser usada efectivamente en encuestas donde la información auxiliar está disponible en diferentes niveles. Por ejemplo, al realizar un muestreo en dos etapas la información auxiliar puede existir para las unidades de la primera etapa (los conglomerados) y puede existir otra información para las unidades de la segunda etapa (elementos o conglomerados).</p>
+<div id="calibración" class="section level3 hasAnchor" number="14.2.2">
+<h3><span class="header-section-number">14.2.2</span> Calibración<a href="soluciones.html#calibración" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Como lo afirma <span class="citation">C.-E. Särndal (<a href="#ref-Sar08" role="doc-biblioref">2007</a>)</span>, la calibración provee una forma sistemática para involucrar la información auxiliar. En la mayoría de aplicaciones prácticas, la calibración provee un enfoque simple para incorporar esta información dentro de la etapa de estimación. La información auxiliar fue usada para mejorar la precisión de los estimativos mucho antes que el término calibración fuera popular. La calibración puede ser usada efectivamente en encuestas donde la información auxiliar está disponible en diferentes niveles. Por ejemplo, al realizar un muestreo en dos etapas la información auxiliar puede existir para las unidades de la primera etapa (los conglomerados) y puede existir otra información para las unidades de la segunda etapa (elementos o conglomerados).</p>
 <p>Como se ha detallado con amplitud en este y los capítulos anteriores, la ausencia de respuesta de unidad tiene consecuencias dañinas en la inferencia con encuestas de hogares. En este caso es altamente recomendable que se implemente ajuste a los factores de ponderación de las unidades (hogares o personas). A pesar de que los modelos de <em>propensity score</em> tienen una larga trayectoria en el manejo de la ausencia de respuesta, la calibración utilizada para corregir estos sesgos ofrece una relativamente nueva perspectiva. Nótese que el estimador tradicional toma la siguiente forma:</p>
 <p><span class="math display">\[
-\hat t_y^* = \sum_{s_r} w_k\ y_k = \sum_{s_r} \frac{d_k}{\phi_k} y_k 
+\hat t_y^* = \sum_{s_r} w_k\ y_k = \sum_{s_r} \frac{d_k}{\phi_k} y_k
 \]</span></p>
 <p>Esta anterior expresión indica que implícitamente se genera un procedimiento en dos etapas en donde, en primer lugar, se calculan lo pesos básicos inducidos por el diseño de muestreo, luego se ajusta un modelo de <em>propensity score</em> para estimar las probabilidades de respuesta <span class="math inline">\(\phi_k\)</span>. A esta estrategia generalmente se le agrega una tercera etapa en donde se crean nuevos pesos calibrados con respecto a proyecciones demográficas post-censales, como por ejemplo los cruces entre edad, sexo y región. Al ajustar los pesos para que sumen exactamente la cifra de las proyecciones censales, se reduce el sesgo de subcobertura.</p>
-<p><span class="citation"><a href="#ref-Sar08" role="doc-biblioref">C.-E. Särndal</a> (<a href="#ref-Sar08" role="doc-biblioref">2007</a>)</span> afirma que la práctica general es asumir que el estimador <span class="math inline">\(\hat t_y^*\)</span> es insesgado, cuando en realidad no lo es, puesto que no es posible conocer todos los determinantes del mecanismo de respuesta para ajustar el modelo que estima las probabilidades de respuesta. Además, de la sección anterior se deduce que este supuesto implica que se considere que <span class="math inline">\(\pi_k \hat\phi_k\)</span> es la verdadera probabilidad de inclusión de la unidad, cuando en realidad no es así. Por lo tanto, realizar un ajuste a los factores de expansión únicamente basados en los modelos de <em>propensity score</em> traerá inevitablemente una cierta cantidad de sesgo en la estimación de los parámetros en las encuestas de hogares.</p>
+<p><span class="citation">C.-E. Särndal (<a href="#ref-Sar08" role="doc-biblioref">2007</a>)</span> afirma que la práctica general es asumir que el estimador <span class="math inline">\(\hat t_y^*\)</span> es insesgado, cuando en realidad no lo es, puesto que no es posible conocer todos los determinantes del mecanismo de respuesta para ajustar el modelo que estima las probabilidades de respuesta. Además, de la sección anterior se deduce que este supuesto implica que se considere que <span class="math inline">\(\pi_k \hat\phi_k\)</span> es la verdadera probabilidad de inclusión de la unidad, cuando en realidad no es así. Por lo tanto, realizar un ajuste a los factores de expansión únicamente basados en los modelos de <em>propensity score</em> traerá inevitablemente una cierta cantidad de sesgo en la estimación de los parámetros en las encuestas de hogares.</p>
 <p>Bajo este escenario, el enfoque de calibración doble surge como un proceso metodológico adicional que pretende corregir estos sesgos. Para poder utilizarlo, es necesario tener información auxiliar en dos niveles: la población y la muestra. Este tipo de metodologías pueden ser usadas en las encuestas tipo panel, o panel rotativo. En este proceso es necesario contar con dos tipos de información auxiliar:</p>
 <ol style="list-style-type: decimal">
 <li>Por un lado tendremos la información poblacional usual que se utiliza para calibrar los factores de expansión en un levantamiento regular. Las variables que intervienen en esta calibración las notaremos como <span class="math inline">\(\boldsymbol{x}_{1k}\)</span> y por lo general denotan la pertenencia de los individuos a regiones, o grupos de edad, sexo o área (urbano, rural).</li>
 <li>Por otro lado deberemos tener acceso a información auxiliar en la muestra original (que incluya a las unidades respondientes y no respondientes) y que notaremos como <span class="math inline">\(\boldsymbol{x}_{2k}\)</span>. Por ejemplo, utilizando la información del panel al momento de la primera medición, sería posible contar con información concerniente a la condición de ocupación, ingresos, o cualquier otra variable medida en la primera oleada del panel.</li>
 </ol>
-<p>Por lo tanto, es posible calibrar los pesos en la muestra de respondientes (<span class="math inline">\(s_r\)</span>) a nivel de la información auxiliar disponible en la muestra original (<span class="math inline">\(s\)</span>), y luego a nivel nacional (<span class="math inline">\(U\)</span>) o por los estratos de interés. Si el mecanismo que genera la ausencia de respuesta es MAR o MCAR, es posible que los ponderadores de calibración eliminen el sesgo en las estimaciones finales si es que las variables que generan este mecanismo se han calibrado en alguno de las dos niveles mencionados. <span class="citation"><a href="#ref-Sarndal_Lundstrom_2006" role="doc-biblioref">C.-E. Särndal y Lundström</a> (<a href="#ref-Sarndal_Lundstrom_2006" role="doc-biblioref">2006</a>)</span> proponen que, para lograr este objetivo, se encuentre un primer conjunto de pesos calibrados sujetos a la siguiente restricción:</p>
+<p>Por lo tanto, es posible calibrar los pesos en la muestra de respondientes (<span class="math inline">\(s_r\)</span>) a nivel de la información auxiliar disponible en la muestra original (<span class="math inline">\(s\)</span>), y luego a nivel nacional (<span class="math inline">\(U\)</span>) o por los estratos de interés. Si el mecanismo que genera la ausencia de respuesta es MAR o MCAR, es posible que los ponderadores de calibración eliminen el sesgo en las estimaciones finales si es que las variables que generan este mecanismo se han calibrado en alguno de las dos niveles mencionados. <span class="citation">C.-E. Särndal y Lundström (<a href="#ref-Sarndal_Lundstrom_2006" role="doc-biblioref">2006</a>)</span> proponen que, para lograr este objetivo, se encuentre un primer conjunto de pesos calibrados sujetos a la siguiente restricción:</p>
 <p><span class="math display">\[
 \sum_{s}w_{1k}\boldsymbol{x}_{1k} = \sum_{U}\boldsymbol{x}_{1k}
 \]</span></p>
 <p>Luego, en una segunda etapa, se deben usar estos pesos intermedios <span class="math inline">\(w_{1k}\)</span> para calcular los pesos finales de calibración <span class="math inline">\(w_{k}\)</span> de la muestra de respondientes efectivos que están sujetos a la siguiente restricción:</p>
 <p><span class="math display">\[
-\sum_{s_r}w_{k}\boldsymbol{x}_{2k} = \sum_{s}w_{1k}\boldsymbol{x}_{k} = 
+\sum_{s_r}w_{k}\boldsymbol{x}_{2k} = \sum_{s}w_{1k}\boldsymbol{x}_{k} =
 \begin{pmatrix}
 \sum_{U}\boldsymbol{x}_{1k}\\
 \sum_{s_r}w_{1k}\boldsymbol{x}_{2k}
@@ -589,7 +588,7 @@ Figura 14.5: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
 </div>
 </div>
 </div>
-<h3>Referencias</h3>
+<h3>Referencias<a href="referencias.html#referencias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Sarndal_Lundstrom_2006" class="csl-entry">
 Särndal, Carl-Erik, y Sixten Lundström. 2006. <em>Estimation in surveys with nonresponse</em>. Repr. Wiley series en survey methodology. Wiley.
@@ -665,7 +664,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

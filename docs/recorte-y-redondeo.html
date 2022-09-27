@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>11.6 Recorte y redondeo | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="11.6 Recorte y redondeo | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-01-26" />
+<meta name="date" content="2022-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="calibración-de-los-factores-de-expansión.html"/>
 <link rel="next" href="estimación-del-error-de-muestreo.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -466,11 +465,11 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="recorte-y-redondeo" class="section level2" number="11.6">
-<h2><span class="header-section-number">11.6</span> Recorte y redondeo</h2>
-<div id="recorte-de-pesos-extremos" class="section level3" number="11.6.1">
-<h3><span class="header-section-number">11.6.1</span> Recorte de pesos extremos</h3>
-<p>Un inconveniente que se genera debido a la multitud de ajustes en los factores de expansión es que, si bien el estimador resultante tendrá un sesgo cercano a cero, la distribución de los pesos puede mostrar datos extremos, sobre todo a la derecha de la distribución (valores muy grandes), que hacen que la varianza del estimador crezca y que, por ende, la precisión de la inferencia decrezca. Para hacerle frente a este problema, es posible considerar un procedimiento de <em>trimming</em> o recorte de pesos, siguiendo las recomendaciones de <span class="citation"><a href="#ref-Valliant_Dever_Kreuter_2018" role="doc-biblioref">Valliant, Dever, y Kreuter</a> (<a href="#ref-Valliant_Dever_Kreuter_2018" role="doc-biblioref">2018, sec. 14.4</a>)</span>, que puede ser resumido en los siguientes pasos:</p>
+<div id="recorte-y-redondeo" class="section level2 hasAnchor" number="11.6">
+<h2><span class="header-section-number">11.6</span> Recorte y redondeo<a href="recorte-y-redondeo.html#recorte-y-redondeo" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="recorte-de-pesos-extremos" class="section level3 hasAnchor" number="11.6.1">
+<h3><span class="header-section-number">11.6.1</span> Recorte de pesos extremos<a href="recorte-y-redondeo.html#recorte-de-pesos-extremos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Un inconveniente que se genera debido a la multitud de ajustes en los factores de expansión es que, si bien el estimador resultante tendrá un sesgo cercano a cero, la distribución de los pesos puede mostrar datos extremos, sobre todo a la derecha de la distribución (valores muy grandes), que hacen que la varianza del estimador crezca y que, por ende, la precisión de la inferencia decrezca. Para hacerle frente a este problema, es posible considerar un procedimiento de <em>trimming</em> o recorte de pesos, siguiendo las recomendaciones de <span class="citation">Valliant, Dever, y Kreuter (<a href="#ref-Valliant_Dever_Kreuter_2018" role="doc-biblioref">2018, sec. 14.4</a>)</span>, que puede ser resumido en los siguientes pasos:</p>
 <ol style="list-style-type: decimal">
 <li>Recortar cualquier peso mayor a un umbral prestablecido en la distribución de pesos ajustados. Por lo general este umbral se fija alrededro de 3.5 veces la mediana de los pesos. Por tanto,
 <span class="math display">\[
@@ -490,10 +489,10 @@ K=\sum_{s_r}(w_k^\ast - w_{k})
 </ol>
 <p>Al final del proceso se debe asegurar que los datos extremos en los factores de expansión han sido correctamente manejados y que la distribución general de los pesos no sufrió cambios estructurales en los subgrupos poblacionales de interés.</p>
 </div>
-<div id="el-problema-del-redondeo-de-los-factores-de-expansión" class="section level3" number="11.6.2">
-<h3><span class="header-section-number">11.6.2</span> El problema del redondeo de los factores de expansión</h3>
+<div id="el-problema-del-redondeo-de-los-factores-de-expansión" class="section level3 hasAnchor" number="11.6.2">
+<h3><span class="header-section-number">11.6.2</span> El problema del redondeo de los factores de expansión<a href="recorte-y-redondeo.html#el-problema-del-redondeo-de-los-factores-de-expansión" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>El principio de representatividad es el paradigma inferencial dominante en cualquier encuesta de hogares y el factor de expansión es el concepto más importante en este contexto. Por ejemplo, un hogar en una encuesta con un factor de expansión de 500 se representa a sí mismo y a otros 499 hogares más. La definición teórica del factor de expansión, inducida por el inverso multiplicativo de la probabilidad de inclusión de un hogar en la muestra, hace que la inferencia sea insesgada y confiable. Sin embargo, debido a que la probabilidad de inclusión es un número real contenido en el intervalo <span class="math inline">\((0, 1]\)</span>, entonces su inverso multiplicativo también será un número real mayor o igual que uno.</p>
-<p>Cuando el factor de expansión no es entero, entonces su interpretación se torna compleja desde el punto de vista práctico, aunque teóricamente no tenga ninguna repercusión negativa. Sin embargo, este inconveniente puede hacer que, en la práctica, las oficinas nacionales de estadística y los usuarios de las bases de datos de encuestas de hogares tomen la decisión (bienintencionada pero errada) de redondear estas cantidades al entero más cercano. Esta práctica es perjudicial porque le añade sesgo a la inferencia y causará problemas de sobre o sub estimación en algunos dominios de estudio. <span class="citation"><a href="#ref-Sartore_Toppin_Young_Spiegelman_2019" role="doc-biblioref">Sartore et al.</a> (<a href="#ref-Sartore_Toppin_Young_Spiegelman_2019" role="doc-biblioref">2019</a>)</span> plantean que el redondeo de los factores de expansión puede ser problemático puesto que las estimaciones ponderadas pueden crecer o decrecer enormemente.</p>
+<p>Cuando el factor de expansión no es entero, entonces su interpretación se torna compleja desde el punto de vista práctico, aunque teóricamente no tenga ninguna repercusión negativa. Sin embargo, este inconveniente puede hacer que, en la práctica, las oficinas nacionales de estadística y los usuarios de las bases de datos de encuestas de hogares tomen la decisión (bienintencionada pero errada) de redondear estas cantidades al entero más cercano. Esta práctica es perjudicial porque le añade sesgo a la inferencia y causará problemas de sobre o sub estimación en algunos dominios de estudio. <span class="citation">Sartore et al. (<a href="#ref-Sartore_Toppin_Young_Spiegelman_2019" role="doc-biblioref">2019</a>)</span> plantean que el redondeo de los factores de expansión puede ser problemático puesto que las estimaciones ponderadas pueden crecer o decrecer enormemente.</p>
 <p>Los siguientes ejemplos prácticos muestran de forma directa las repercusiones perjudiciales que conlleva esta práctica y que son consecuencia directa del sesgo de redondeo:</p>
 <ul>
 <li><p>En encuestas de establecimientos redondear el factor de expansión en las unidades que tienen flujos de ventas grandes trae problemas de sesgo en este dominio de estudio.</p></li>
@@ -517,19 +516,19 @@ E(\hat t_y)
 </ol>
 <p>En primera instancia, nótese que la submuestra <span class="math inline">\(s_a\)</span> no necesariamente será de tamaño fijo, puesto que <span class="math inline">\(\sum_s\phi_k\)</span> no será entera en todos los casos; por ende, es posible utilizar un algoritmo de muestreo Poisson <span class="citation">(<a href="#ref-Gutierrez_2016" role="doc-biblioref">H. A. Gutiérrez 2016, sec. 4.1</a>)</span> para seleccionar esta submuestra. Sin embargo, si esta suma es entera, es posible utilizar un algoritmo de muestreo más eficiente que induzca una submuestra de tamaño fijo como por ejemplo el método de Brewer <span class="citation">(<a href="#ref-Tille2006" role="doc-biblioref">Tillé 2006a</a>)</span>. Por otro lado, la esperanza de estos factores redondeados condicionados a la submuestra <span class="math inline">\(s_a\)</span> es igual a los factores de expansión originales, tal y como se muestra a continuación</p>
 <p><span class="math display">\[
-E(\tilde d_k | s_a) 
-= \lfloor d_k \rfloor + E(c_k|s_a) 
+E(\tilde d_k | s_a)
+= \lfloor d_k \rfloor + E(c_k|s_a)
 = \lfloor d_k \rfloor + \phi_k
 = d_k
 \]</span></p>
 <p>Por lo anterior, es importante notar que el uso de este método aleatorio de redondeo siempre induce insesgamiento en los estimadores de muestreo, puesto que</p>
 <p><span class="math display">\[
-E \left( \sum_s \tilde d_k y_k \right) 
-= E \left[ E \left( \sum_s \tilde d_k y_k  | s_a\right)  \right] 
-= E \left( \sum_s E(\tilde d_k | s_a) y_k \right) 
+E \left( \sum_s \tilde d_k y_k \right)
+= E \left[ E \left( \sum_s \tilde d_k y_k  | s_a\right)  \right]
+= E \left( \sum_s E(\tilde d_k | s_a) y_k \right)
 = E \left( \sum_s d_k y_k \right) = t_y
 \]</span></p>
-<p>Por último, cuando los factores de expansión de la encuesta están calibrados se presenta un problema de optimización un poco más complejo, puesto que al utilizar el redondeo aleatorio, los factores de expansión perderán la propiedad de calibración. <span class="citation"><a href="#ref-Sartore_Toppin_Young_Spiegelman_2019" role="doc-biblioref">Sartore et al.</a> (<a href="#ref-Sartore_Toppin_Young_Spiegelman_2019" role="doc-biblioref">2019</a>)</span> y <span class="citation"><a href="#ref-Tille" role="doc-biblioref">Tillé</a> (<a href="#ref-Tille" role="doc-biblioref">2019</a>)</span> han presentado diferentes soluciones a este problema, siendo la última mucho más fácil de implementar en el software estadístico <code>R</code>. Bajo esta perspectiva, la calibración de los factores de expansión crea nuevos pesos denominados <span class="math inline">\(w_k\)</span> que conservan la siguiente propiedad para un conjunto de totales auxiliares <span class="math inline">\(\mathbf{t_x}\)</span> disponibles para toda la población</p>
+<p>Por último, cuando los factores de expansión de la encuesta están calibrados se presenta un problema de optimización un poco más complejo, puesto que al utilizar el redondeo aleatorio, los factores de expansión perderán la propiedad de calibración. <span class="citation">Sartore et al. (<a href="#ref-Sartore_Toppin_Young_Spiegelman_2019" role="doc-biblioref">2019</a>)</span> y <span class="citation">Tillé (<a href="#ref-Tille" role="doc-biblioref">2019</a>)</span> han presentado diferentes soluciones a este problema, siendo la última mucho más fácil de implementar en el software estadístico <code>R</code>. Bajo esta perspectiva, la calibración de los factores de expansión crea nuevos pesos denominados <span class="math inline">\(w_k\)</span> que conservan la siguiente propiedad para un conjunto de totales auxiliares <span class="math inline">\(\mathbf{t_x}\)</span> disponibles para toda la población</p>
 <p><span class="math display">\[
 \sum_s w_k \mathbf{x}_k =  \mathbf{t_x}
 \]</span></p>
@@ -541,7 +540,7 @@ E \left( \sum_s \tilde d_k y_k \right)
 \]</span></p></li>
 <li><p>Seleccionar una submuestra balanceada <span class="math inline">\(s_a=(c_1,\ldots,c_k,\ldots,c_n)&#39;\)</span> de <span class="math inline">\(s\)</span> con probabilidades de inclusión <span class="math inline">\(\phi_k\)</span>, tal que
 <span class="math display">\[
-\sum_{k \in s_a} \frac{\tilde{\mathbf{x}}_k}{\phi_k} 
+\sum_{k \in s_a} \frac{\tilde{\mathbf{x}}_k}{\phi_k}
 \cong
 \sum_{k \in s} \tilde{\mathbf{x}}_k
 \]</span></p></li>
@@ -549,9 +548,9 @@ E \left( \sum_s \tilde d_k y_k \right)
 </ol>
 <p>Es importante recalcar que la restricción en la submuestra balanceada implica que los pesos redondeados cumplan la siguiente relación</p>
 <p><span class="math display">\[
-\sum_s c_k \ \mathbf{x}_k 
-\cong \sum_U \mathbf{x}_k 
-- \sum_U \lfloor w_k \rfloor \ \mathbf{x}_k 
+\sum_s c_k \ \mathbf{x}_k
+\cong \sum_U \mathbf{x}_k
+- \sum_U \lfloor w_k \rfloor \ \mathbf{x}_k
 \]</span></p>
 <p>Lo cual conlleva inmediatamente a que los nuevos pesos, además de estar redondeados, también estén calibrados; es decir
 <span class="math display">\[
@@ -561,7 +560,7 @@ E \left( \sum_s \tilde d_k y_k \right)
 <p><span class="math display">\[
 \boldsymbol{\pi}_s = (\underbrace{15/500}_{50 \ veces},
 \ldots,
-\underbrace{15/800}_{80 \ veces}, 
+\underbrace{15/800}_{80 \ veces},
 \ldots,
 \underbrace{15/700}_{70 \ veces})&#39;
 \]</span></p>
@@ -569,7 +568,7 @@ E \left( \sum_s \tilde d_k y_k \right)
 <p><span class="math display">\[
 \mathbf{d}_s = (\underbrace{33.33333}_{50 \ veces},
 \ldots,
-\underbrace{53.33333}_{80 \ veces}, 
+\underbrace{53.33333}_{80 \ veces},
 \ldots,
 \underbrace{46.66667}_{70 \ veces})&#39;
 \]</span></p>
@@ -584,7 +583,7 @@ E \left( \sum_s \tilde d_k y_k \right)
 </div>
 </div>
 <!-- </div> -->
-<h3>Referencias</h3>
+<h3>Referencias<a href="referencias.html#referencias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Gutierrez_2016" class="csl-entry">
 ———. 2016. <em>Estrategias de muestreo: diseño de encuestas y estimación de parámetros</em>. Segunda edición. Ediciones de la U.
@@ -675,7 +674,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

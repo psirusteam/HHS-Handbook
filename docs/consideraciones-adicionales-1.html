@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>20.2 Consideraciones adicionales | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="20.2 Consideraciones adicionales | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-01-26" />
+<meta name="date" content="2022-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="medidas-de-calidad.html"/>
 <link rel="next" href="una-perspectiva-regional-de-las-encuestas-de-hogares.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -466,11 +465,11 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="consideraciones-adicionales-1" class="section level2" number="20.2">
-<h2><span class="header-section-number">20.2</span> Consideraciones adicionales</h2>
+<div id="consideraciones-adicionales-1" class="section level2 hasAnchor" number="20.2">
+<h2><span class="header-section-number">20.2</span> Consideraciones adicionales<a href="consideraciones-adicionales-1.html#consideraciones-adicionales-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>En esta sección se abordan temáticas referentes al procesamiento apropiado de los indicadores de interés en las subpoblaciones y, habiendo realizado las estimaciones y calculado sus respectivos criterios de calidad, se plantea la utilización de umbrales apropiados para la supresión, revisión o publicación de cifras.</p>
-<div id="variables-y-subpoblaciones" class="section level3" number="20.2.1">
-<h3><span class="header-section-number">20.2.1</span> Variables y subpoblaciones</h3>
+<div id="variables-y-subpoblaciones" class="section level3 hasAnchor" number="20.2.1">
+<h3><span class="header-section-number">20.2.1</span> Variables y subpoblaciones<a href="consideraciones-adicionales-1.html#variables-y-subpoblaciones" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>El análisis apropiado de las estadísticas generadas a partir de las encuestas de hogares debe pasar por una definición clara tanto de las subpoblaciones sobre las cuales se quiere realizar la inferencia, como de las variables que generan el indicador de interés. De hecho, como se mostrará más adelante, algunas variables pueden definir una subpoblación y, por ende, es posible que se dé lugar a confusiones. Para aclarar esto, se proponen a continuación algunos ejemplos que permiten dilucidar el cálculo de las medidas de calidad sobre un conjunto no exhaustivo de indicadores de interés.</p>
 <p><strong>Promedio del ingreso per cápita en el país</strong></p>
 <p>En este caso la variable de interés es una característica continua <span class="math inline">\(y_k \geq 0 \ \ \ (\forall k \in U)\)</span> definida sobre toda la población del país, mientras que el indicador se escribe como una razón.</p>
@@ -484,7 +483,7 @@ div.csl-indent {
 \hat {\bar y}_{ciudad}= \frac{\hat t_{y_g}}{\hat N_g} =\frac{\sum_h\sum_i\sum_k w_kz_{g_k}y_{k}}{\sum_h\sum_i\sum_k w_kz_{g_k}}
 \]</span></p>
 <p>Nótese que la variable que define la subpoblación es dicotómica dada por</p>
-<p><span class="math display">\[ 
+<p><span class="math display">\[
 z_{g_k}=
 \begin{cases}
 1, \ \text{Si $k$ reside en la ciudad $U_g$} \\
@@ -563,8 +562,8 @@ NA, &amp;\text{si el individuo no está en edad de trabajar, o es mujer o es no 
 \]</span></p>
 <p>En este caso el tamaño de muestra es <span class="math inline">\(n = \sum_s z_{g_k}\)</span>, es decir el número de personas en la muestra que están en edad de trabajar, son hombres migrantes y están activos. El conteo no ponderado de casos corresponde al número de individuos en la muestra que son hombres migrantes y están desocupados. Además, los grados de libertad corresponden a todas las UPM menos todos los estratos de la encuesta en el país en los que se encontraron hogares con hombres migrantes y activos en la fuerza de trabajo.</p>
 </div>
-<div id="secuencia-lógica-para-crear-reglas-de-supresión" class="section level3" number="20.2.2">
-<h3><span class="header-section-number">20.2.2</span> Secuencia lógica para crear reglas de supresión</h3>
+<div id="secuencia-lógica-para-crear-reglas-de-supresión" class="section level3 hasAnchor" number="20.2.2">
+<h3><span class="header-section-number">20.2.2</span> Secuencia lógica para crear reglas de supresión<a href="consideraciones-adicionales-1.html#secuencia-lógica-para-crear-reglas-de-supresión" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>En esta sección se ha querido enfatizar el hecho de que la precisión de una estimación recae directamente en los intervalos de confianza, los cuales pueden ser descompuestos en elementos fundamentales que permiten crear una secuencia lógica de revisión, publicación o supresión de cifras. Nótese que lo anterior se basa en que la longitud de los intervalos de confianza induce la seguridad de que un estimador es o no es preciso. Considere los siguientes ejemplos prácticos:</p>
 <ul>
 <li>La incidencia de la pobreza en un departamento de un país se estimó en <span class="math inline">\(5,2\)</span>%, con un intervalo de confianza de (<span class="math inline">\(5,15\)</span>%, <span class="math inline">\(5,25\)</span>%).</li>
@@ -573,12 +572,12 @@ NA, &amp;\text{si el individuo no está en edad de trabajar, o es mujer o es no 
 </ul>
 <p>Claramente, en la última situación ejemplificada, el intervalo de confianza no brinda la precisión adecuada para que una Oficina Nacional de Estadística publique esta cifra confiadamente, o para que un gobierno pueda realizar algún tipo de política pública educativa, y mucho menos para estimar los recursos que una de intervención estatal sobre la población de interés. Como se ha descrito a lo largo de este documento, utilizar únicamente el coeficiente de variación como estándar para la supresión de cifras es un criterio que no tiene en cuenta toda las variantes asociadas a la inferencia en un muestreo complejo. A continuación se incorporan algunas recomendaciones internacionales que incorporan otros criterios adicionales a este.</p>
 <ul>
-<li><strong>Coeficiente de variación</strong>: <span class="citation"><a href="#ref-CepalSAe2018" role="doc-biblioref">CEPAL</a> (<a href="#ref-CepalSAe2018" role="doc-biblioref">2018b</a>)</span> realizó una revisión de las experiencias internacionales, con base en la información publicada en las páginas web de los INE, para determinar cómo son usados los criterios de supresión de información y los umbrales que las oficinas nacionales de estadística definen para la validación de las cifras. Para encuestas de hogares, se encontró que Estados Unidos y los países del Mercosur utilizan un umbral de <span class="math inline">\(CV &gt; 30\%\)</span>, Canadá y México usan como referencia un umbral del <span class="math inline">\(CV &gt; 25\%\)</span>, Chile y Costa Rica utilizan un umbral del <span class="math inline">\(CV &gt; 20\%\)</span>, Ecuador y Perú utilizan un umbral del <span class="math inline">\(CV &gt; 15\%\)</span>, mientras que Colombia usa un umbral del <span class="math inline">\(CV &gt; 10\%\)</span>. De esta forma, cualquier cifra estimada cuyo coeficiente de variación sea mayor al umbral predefinido es suprimida o marcada como una cifra poco confiable.</li>
-<li><strong>Tamaño de muestra</strong>: este criterio debe ser considerado como uno de los más importantes a la hora de decidir la ruta de publicación de una cifra, puesto que los desarrollos teóricos en términos de inferencia estadística para encuestas dependen de este término. La cobertura de los intervalos de confianza y la distribución de los estimadores dependen de qué tanto el tamaño de la subpoblación como su tamaño de muestra asociado no sean pequeños. En este espíritu, <span class="citation"><a href="#ref-Barnett_Walker_Chromy_Davis_Emrich_Odom_Packer_2003" role="doc-biblioref">Barnett-Walker et al.</a> (<a href="#ref-Barnett_Walker_Chromy_Davis_Emrich_Odom_Packer_2003" role="doc-biblioref">2003</a>)</span> proponen que todas las estimaciones basadas en un tamaño de muestra menor a 100 unidades deberían ser suprimidas o marcadas como no confiables.</li>
-<li><strong>Tamaño de muestra efectivo</strong>: al igual que con el anterior criterio, el tamaño de muestra efectivo induce que las aproximaciones teóricas, en términos de convergencia de las distribuciones de los estimadores y la cobertura de los intervalos de confianza, se cumplan. <span class="citation"><a href="#ref-Hornik_Maklan_Cadell_Prado_Barmada_Jacobsohn_Orwin_Sridharan_Zador_Southwell_etal" role="doc-biblioref">Hornik et al.</a> (<a href="#ref-Hornik_Maklan_Cadell_Prado_Barmada_Jacobsohn_Orwin_Sridharan_Zador_Southwell_etal" role="doc-biblioref">2002</a>)</span> consideran que si el tamaño de muestra efectivo no es mayor a 140, entonces la cifra no debería ser considerada para publicación. Por otro lado, teniendo en cuenta el tamaño de muestra inducido por la transformación logarítmica, <span class="citation"><a href="#ref-Barnett_Walker_Chromy_Davis_Emrich_Odom_Packer_2003" role="doc-biblioref">Barnett-Walker et al.</a> (<a href="#ref-Barnett_Walker_Chromy_Davis_Emrich_Odom_Packer_2003" role="doc-biblioref">2003</a>)</span> afirman que cuando la proporción se encuentra entre <span class="math inline">\(0.05\)</span> y <span class="math inline">\(0.95\)</span>, entonces el tamaño de muestra efectivo es máximo cuando <span class="math inline">\(P = 0,5\)</span>, siendo su valor <span class="math inline">\(n_{eff} = 68\)</span>.</li>
-<li><strong>Conteo de casos no ponderado</strong>: cuando la incidencia de un fenómeno es muy baja y el diseño de la encuesta no lo tuvo en cuenta, entonces es posible que las estimaciones asociadas a tamaños, totales y proporciones sobre este fenómeno no sean confiables. En particular, para las proporciones es posible restringir las estimaciones tales que <span class="math inline">\(\hat P &lt;0,001\)</span>, pero es más expedito crear una regla a partir del conteo de casos en la muestra. Por ejemplo, <span class="citation"><a href="#ref-AmericanCommunitySurvey" role="doc-biblioref">National Research Council</a> (<a href="#ref-AmericanCommunitySurvey" role="doc-biblioref">2015</a>)</span> plantea que si el número de casos no ponderados es menor a 50 unidades entonces la estimación no es publicada.</li>
-<li><strong>Grados de libertad</strong>: este criterio apunta a aislar el efecto inflacionario del tamaño de muestra en una encuesta compleja y plantea una aproximación al número de unidades independientes en la inferencia. Además, a medida que crece, la amplitud del intervalo de confianza se estabiliza. <span class="citation"><a href="#ref-Parker_Talih_Malec_2017" role="doc-biblioref">Parker, Talih, y Malec</a> (<a href="#ref-Parker_Talih_Malec_2017" role="doc-biblioref">2017</a>)</span> consideran que si los grados de libertad inducidos por la subpoblación son menos de ocho, la cifra debería ser suprimida.</li>
-<li><strong>Coeficiente de variación logarítmico</strong>: Esta medida de suavizamiento toma valores altos cuando las proporciones estimadas están demasiado cercanas a cero o a uno. <span class="citation"><a href="#ref-Barnett_Walker_Chromy_Davis_Emrich_Odom_Packer_2003" role="doc-biblioref">Barnett-Walker et al.</a> (<a href="#ref-Barnett_Walker_Chromy_Davis_Emrich_Odom_Packer_2003" role="doc-biblioref">2003</a>)</span> proponen que la cifra debe ser suprimida si el coeficiente de variación logarítmico es mayor que 17.5%.</li>
+<li><strong>Coeficiente de variación</strong>: <span class="citation">CEPAL (<a href="#ref-CepalSAe2018" role="doc-biblioref">2018b</a>)</span> realizó una revisión de las experiencias internacionales, con base en la información publicada en las páginas web de los INE, para determinar cómo son usados los criterios de supresión de información y los umbrales que las oficinas nacionales de estadística definen para la validación de las cifras. Para encuestas de hogares, se encontró que Estados Unidos y los países del Mercosur utilizan un umbral de <span class="math inline">\(CV &gt; 30\%\)</span>, Canadá y México usan como referencia un umbral del <span class="math inline">\(CV &gt; 25\%\)</span>, Chile y Costa Rica utilizan un umbral del <span class="math inline">\(CV &gt; 20\%\)</span>, Ecuador y Perú utilizan un umbral del <span class="math inline">\(CV &gt; 15\%\)</span>, mientras que Colombia usa un umbral del <span class="math inline">\(CV &gt; 10\%\)</span>. De esta forma, cualquier cifra estimada cuyo coeficiente de variación sea mayor al umbral predefinido es suprimida o marcada como una cifra poco confiable.</li>
+<li><strong>Tamaño de muestra</strong>: este criterio debe ser considerado como uno de los más importantes a la hora de decidir la ruta de publicación de una cifra, puesto que los desarrollos teóricos en términos de inferencia estadística para encuestas dependen de este término. La cobertura de los intervalos de confianza y la distribución de los estimadores dependen de qué tanto el tamaño de la subpoblación como su tamaño de muestra asociado no sean pequeños. En este espíritu, <span class="citation">Barnett-Walker et al. (<a href="#ref-Barnett_Walker_Chromy_Davis_Emrich_Odom_Packer_2003" role="doc-biblioref">2003</a>)</span> proponen que todas las estimaciones basadas en un tamaño de muestra menor a 100 unidades deberían ser suprimidas o marcadas como no confiables.</li>
+<li><strong>Tamaño de muestra efectivo</strong>: al igual que con el anterior criterio, el tamaño de muestra efectivo induce que las aproximaciones teóricas, en términos de convergencia de las distribuciones de los estimadores y la cobertura de los intervalos de confianza, se cumplan. <span class="citation">Hornik et al. (<a href="#ref-Hornik_Maklan_Cadell_Prado_Barmada_Jacobsohn_Orwin_Sridharan_Zador_Southwell_etal" role="doc-biblioref">2002</a>)</span> consideran que si el tamaño de muestra efectivo no es mayor a 140, entonces la cifra no debería ser considerada para publicación. Por otro lado, teniendo en cuenta el tamaño de muestra inducido por la transformación logarítmica, <span class="citation">Barnett-Walker et al. (<a href="#ref-Barnett_Walker_Chromy_Davis_Emrich_Odom_Packer_2003" role="doc-biblioref">2003</a>)</span> afirman que cuando la proporción se encuentra entre <span class="math inline">\(0.05\)</span> y <span class="math inline">\(0.95\)</span>, entonces el tamaño de muestra efectivo es máximo cuando <span class="math inline">\(P = 0,5\)</span>, siendo su valor <span class="math inline">\(n_{eff} = 68\)</span>.</li>
+<li><strong>Conteo de casos no ponderado</strong>: cuando la incidencia de un fenómeno es muy baja y el diseño de la encuesta no lo tuvo en cuenta, entonces es posible que las estimaciones asociadas a tamaños, totales y proporciones sobre este fenómeno no sean confiables. En particular, para las proporciones es posible restringir las estimaciones tales que <span class="math inline">\(\hat P &lt;0,001\)</span>, pero es más expedito crear una regla a partir del conteo de casos en la muestra. Por ejemplo, <span class="citation">National Research Council (<a href="#ref-AmericanCommunitySurvey" role="doc-biblioref">2015</a>)</span> plantea que si el número de casos no ponderados es menor a 50 unidades entonces la estimación no es publicada.</li>
+<li><strong>Grados de libertad</strong>: este criterio apunta a aislar el efecto inflacionario del tamaño de muestra en una encuesta compleja y plantea una aproximación al número de unidades independientes en la inferencia. Además, a medida que crece, la amplitud del intervalo de confianza se estabiliza. <span class="citation">Parker, Talih, y Malec (<a href="#ref-Parker_Talih_Malec_2017" role="doc-biblioref">2017</a>)</span> consideran que si los grados de libertad inducidos por la subpoblación son menos de ocho, la cifra debería ser suprimida.</li>
+<li><strong>Coeficiente de variación logarítmico</strong>: Esta medida de suavizamiento toma valores altos cuando las proporciones estimadas están demasiado cercanas a cero o a uno. <span class="citation">Barnett-Walker et al. (<a href="#ref-Barnett_Walker_Chromy_Davis_Emrich_Odom_Packer_2003" role="doc-biblioref">2003</a>)</span> proponen que la cifra debe ser suprimida si el coeficiente de variación logarítmico es mayor que 17.5%.</li>
 </ul>
 <p>Nótese que los criterios mencionados en este documento no deberían ser aplicados de manera independiente, sino que tendrían que seguir cierta lógica, puesto que es posible, por ejemplo para una variable con poca homogeneidad en las UPM, que con un tamaño de muestra de <span class="math inline">\(n=90\)</span>, se haya estimado un efecto de diseño de <span class="math inline">\(DEFF=0,5\)</span>, lo cual implicaría un tamaño de muestra efectivo de <span class="math inline">\(n_{eff}=180\)</span>. En este caso, si los criterios de supresión se aplicaran de manera independiente, se concluiría que la cifra debería ser suprimida por tener un tamaño de muestra insuficiente, pero a la vez, que la cifra debería ser publicada, por tener un tamaño de muestra efectivo suficiente. Lo anterior, podría llevar a contradicciones por parte de los INE y malas interpretaciones por parte los usuarios finales de los datos.</p>
 <p>De manera general, se recomienda que los INE estudien a profundidad sus políticas de supresión, revisión y publicación de cifras en cada una de las encuestas que realiza y, de manera independiente, defina las reglas apropiadas para cada caso y que los criterios de supresión sean plasmados en forma de diagrama de flujo en la documentación de las encuestas. Además, cada encuesta debería considerar un algoritmo de forma particular; es decir, los criterios de supresión no necesariamente deben coincidir para cada operación estadística.</p>
@@ -596,7 +595,7 @@ Figura 20.2: Diagrama de flujo propuesto para la publicación, supresión y revi
 
 
 
-<h3>Referencias</h3>
+<h3>Referencias<a href="referencias.html#referencias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Barnett_Walker_Chromy_Davis_Emrich_Odom_Packer_2003" class="csl-entry">
 Barnett-Walker, Kortnee C., James R. Chromy, Teresa R. Davis, Steven L. Emrich, Dawn M. Odom, y Lisa E. Packer. 2003. <span>«2001 National Household Survey on Drug Abuse»</span>.
@@ -681,7 +680,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>19.1 Matrices de transición | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="19.1 Matrices de transición | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-01-26" />
+<meta name="date" content="2022-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="análisis-de-flujos-brutos.html"/>
 <link rel="next" href="modelos-de-markov.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -466,8 +465,8 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="matrices-de-transición" class="section level2" number="19.1">
-<h2><span class="header-section-number">19.1</span> Matrices de transición</h2>
+<div id="matrices-de-transición" class="section level2 hasAnchor" number="19.1">
+<h2><span class="header-section-number">19.1</span> Matrices de transición<a href="matrices-de-transición.html#matrices-de-transición" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>La inferencia realizada en la estimación de parámetros mediante encuestas de hogares recae en el diseño de muestreo que se utilizó para seleccionar una muestra de elementos de la población. Por lo general, en términos de la obtención de estadísticas oficiales, el diseño de muestreo utilizado no es simple, puesto que, por la complejidad de la estructura poblacional, es necesario recurrir a técnicas especializadas, que permiten la apropiada consecución de la información en la muestra. En muchas ocasiones, el diseño de muestreo complejo de las encuestas de hogares está supeditado a la estratificación de las unidades cartográficas del marco de muestreo, y a la posterior selección multietápica de unidades de muestreo, usualmente con probabilidades de inclusión desiguales y proporcionales al número de habitantes de las áreas en las que se divide el marco de muestreo.</p>
 <p>Después de haber seleccionado una muestra probabilística, es común recurrir a la clasificación de los elementos de la población en diferentes categorías de una o más variables nominales. Dicha clasificación se puede convertir en una tabla de contingencias si se resumen simultáneamente dos variables o, los cambios en el comportamiento de una misma variable en dos periodos de tiempo. Este es el caso de la estimación de los cambios brutos entre diferentes estados de clasificación para dos periodos. En particular, este problema de estimación es fundamental para la implementación de políticas públicas en el mercado laboral.</p>
 <p>Como ya se ha discutido a profundidad, muchas encuestas por muestreo a gran escala en la región utilizan diseños del tipo panel rotativo donde los individuos son entrevistados varias veces antes de ser rotados y excluidos fuera de la muestra. Estas encuestas a gran escala son utilizadas para producir estimaciones puntuales en el tiempo de manera continua, mensual y trimestral. Además, su estructura de seguimiento en panel nace de la necesidad de mantener una estructura suavizada en los cambios coyunturales del fenómeno de interés, además de poder reducir costos manteniendo los mismos entrevistados y objetivos por más de una entrevista.</p>
@@ -541,7 +540,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

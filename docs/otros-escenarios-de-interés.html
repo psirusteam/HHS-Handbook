@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>9.7 Otros escenarios de interés | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="9.7 Otros escenarios de interés | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-01-26" />
+<meta name="date" content="2022-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="tamaño-de-muestra-para-upm-y-personas.html"/>
 <link rel="next" href="algunas-relaciones-de-interés-para-proporciones.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -466,11 +465,11 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="otros-escenarios-de-interés" class="section level2" number="9.7">
-<h2><span class="header-section-number">9.7</span> Otros escenarios de interés</h2>
+<div id="otros-escenarios-de-interés" class="section level2 hasAnchor" number="9.7">
+<h2><span class="header-section-number">9.7</span> Otros escenarios de interés<a href="otros-escenarios-de-interés.html#otros-escenarios-de-interés" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>En las encuestas de hogares también surgen escenarios particulares que llevan a sugerir distintos caminos para la adopción de un determinado tamaño de muestra. En esta sección analizaremos los casos en los que los parámetros de interés son diferencias de proporciones y dobles diferencias. También se revisará el caso del planteamiento de pruebas de hipótesis y su relación con el tamaño de muestra.</p>
-<div id="tamaño-de-muestra-para-la-estimación-de-la-diferencia-de-dos-proporciones" class="section level3" number="9.7.1">
-<h3><span class="header-section-number">9.7.1</span> Tamaño de muestra para la estimación de la diferencia de dos proporciones</h3>
+<div id="tamaño-de-muestra-para-la-estimación-de-la-diferencia-de-dos-proporciones" class="section level3 hasAnchor" number="9.7.1">
+<h3><span class="header-section-number">9.7.1</span> Tamaño de muestra para la estimación de la diferencia de dos proporciones<a href="otros-escenarios-de-interés.html#tamaño-de-muestra-para-la-estimación-de-la-diferencia-de-dos-proporciones" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Suponga una población <span class="math inline">\(U\)</span>, que se encuentra particionada<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a> en dos subpoblaciones <span class="math inline">\(U_1\)</span> de tamaño <span class="math inline">\(N_1\)</span> y <span class="math inline">\(U_2\)</span>, de tamaño <span class="math inline">\(N_2\)</span>. El interés del investigador está en conocer la diferencia de algunas proporciones entre estos grupos. Por ejemplo, suponga que se quiere conocer la diferencia entre las proporciones de niños desnutridos por sexo. Se espera que la proporción de niños desnutridos no supere la proporción de niñas desnutridas para verificar que no hay brechas de sexo. Por lo tanto, el parámetro de interés se escribe como:</p>
 <p><span class="math display">\[
 \theta=P_1-P_2=\frac{N_{d1}}{N_1}-\frac{N_{d2}}{N_2}
@@ -485,7 +484,7 @@ Var(\hat{\theta})=Var\left(\hat{P}_1\right)+Var\left(\hat{P}_2\right)-2Cov\left(
 \]</span></p>
 <p>Por otro lado, siendo <span class="math inline">\(|U_i|\)</span> la cardinalidad del conjunto <span class="math inline">\(U_i\)</span>, se definen las siguientes relaciones:</p>
 <p><span class="math display">\[
-T_i = \frac{|U_1 \cap U_2|}{|U_i|} \ \ \ \ \ \ i =1, 2. 
+T_i = \frac{|U_1 \cap U_2|}{|U_i|} \ \ \ \ \ \ i =1, 2.
 \]</span></p>
 <p>De esta forma, <span class="math inline">\(T_1\)</span> y <span class="math inline">\(T_2\)</span> corresponde al porcentaje de traslape de las subpoblaciones. De la misma manera, definiendo a <span class="math inline">\(R_{1,2}\)</span> como la correlación de Pearson entre los datos observados de ambas subpoblaciones, entonces la covarianza entre este par de estimadores estaría determinada por la siguiente relación <span class="citation">(<a href="#ref-Kish_2004" role="doc-biblioref">Kish 2004</a>)</span>:</p>
 <p><span class="math display">\[
@@ -514,7 +513,7 @@ ME &lt; z_{1-\alpha/2} \sqrt{\frac{DEFF}{n}\left(1-\frac{n}{N}\right)S^2_{\theta
 \]</span></p>
 <p>Por lo tanto, despejando <span class="math inline">\(n\)</span>, se tiene que la muestra en cada subgrupo debe mayor que:</p>
 <p><span class="math display">\[
- n&gt; \dfrac{DEFF \ S^2_{\theta}}{\dfrac{ME^2}{z_{1-\alpha/2}^2}+\dfrac{DEFF \ S^2_{\theta}}{N}}
+n&gt; \dfrac{DEFF \ S^2_{\theta}}{\dfrac{ME^2}{z_{1-\alpha/2}^2}+\dfrac{DEFF \ S^2_{\theta}}{N}}
 \]</span></p>
 <p>Nótese que, dependiendo de los pocentajes de traslape <span class="math inline">\(\sqrt{T_1}\)</span>, <span class="math inline">\(\sqrt{T_2}\)</span> y de la correlación de la característica de interés en ambas subpoblaciones <span class="math inline">\(R_{1,2}\)</span>, la varianza <span class="math inline">\(S^2_{\theta}\)</span> tomará diferentes formas, como se detalla a continuación:</p>
 <ol style="list-style-type: decimal">
@@ -522,24 +521,24 @@ ME &lt; z_{1-\alpha/2} \sqrt{\frac{DEFF}{n}\left(1-\frac{n}{N}\right)S^2_{\theta
 <li>Si hay traslape completo, <span class="math inline">\(T_1 = T_2 = 1\)</span> y <span class="math inline">\(S^2_{\theta} = P_1Q_1+P_2Q_2 - 2 R_{1,2} \sqrt{P_1Q_1}\sqrt{P_2Q_2}\)</span>.</li>
 <li>Si hay traslape parcial y balanceo, <span class="math inline">\(T_1 = T_2 = T\)</span> y si además se considera que las varianzas en cada subgrupo o periodo son similares <span class="math inline">\(P_1Q_1 = P_2Q_2 = PQ\)</span>, entonces <span class="math inline">\(S^2_{\theta} = 2PQ (1- TR_{1,2})\)</span>.</li>
 </ol>
-<div id="covarianza-en-comparaciones-mensuales" class="section level4" number="9.7.1.1">
-<h4><span class="header-section-number">9.7.1.1</span> Covarianza en comparaciones mensuales</h4>
+<div id="covarianza-en-comparaciones-mensuales" class="section level4 hasAnchor" number="9.7.1.1">
+<h4><span class="header-section-number">9.7.1.1</span> Covarianza en comparaciones mensuales<a href="otros-escenarios-de-interés.html#covarianza-en-comparaciones-mensuales" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Suponga que se quiere comparar la tasa de desempleo nacional entre dos meses consecutivos. En este escenario, asumiendo que existe independencia en el muestreo de los dos meses consecutivos, el porcentaje de traslape de muestra entre los dos meses (que por diseño es nulo) es igual a cero. Por lo tanto, <span class="math inline">\(T_1 = T_2 = 0\)</span>. Luego, el término de la covarianza se anula. En resumen, la varianza del estimador en este caso sería igual a:</p>
 <p><span class="math display">\[
-Var(\hat{P}_1-\hat{P}_2) 
+Var(\hat{P}_1-\hat{P}_2)
 = Var(\hat{P}_1) + Var(\hat{P}_2)
 \]</span></p>
 </div>
-<div id="covarianza-en-comparaciones-trimestrales-o-anuales" class="section level4" number="9.7.1.2">
-<h4><span class="header-section-number">9.7.1.2</span> Covarianza en comparaciones trimestrales o anuales</h4>
+<div id="covarianza-en-comparaciones-trimestrales-o-anuales" class="section level4 hasAnchor" number="9.7.1.2">
+<h4><span class="header-section-number">9.7.1.2</span> Covarianza en comparaciones trimestrales o anuales<a href="otros-escenarios-de-interés.html#covarianza-en-comparaciones-trimestrales-o-anuales" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Bajo un esquema rotativo 2(2)2, suponga que se quiere comparar la tasa de desempleo nacional entre trimestres consecutivos o entre el mismo mes de dos años consecutivos. En este escenario no existe independencia en el muestreo de los dos trimestres consecutivos puestos que la estructura del panel garantiza un traslape del 50%. En este caso <span class="math inline">\(T_1 = T_2 \approx 0.5\)</span>.</p>
 <p>Por otro lado, existe una correlación natural entre las viviendas comunes en el panel que se midieron en los periodos de interés, por lo tanto <span class="math inline">\(R_{1,2} \neq 0\)</span>. Note que esta correlación se calcula sobre los individuos comunes en el panel y sobre la variable dicotómica que induce la tasa de desempleo (perteneciente a la población económicamente activa). En resumen, el término de covarianza en este caso sería igual a:</p>
 <p><span class="math display">\[
 Cov(\hat{P}_1, \hat{P}_2) = \frac{1}{2}\sqrt{Var(\hat{P}_1)}\sqrt{Var(\hat{P}_2)}R_{1,2}
 \]</span></p>
 </div>
-<div id="covarianza-en-comparaciones-de-un-mismo-mes" class="section level4" number="9.7.1.3">
-<h4><span class="header-section-number">9.7.1.3</span> Covarianza en comparaciones de un mismo mes</h4>
+<div id="covarianza-en-comparaciones-de-un-mismo-mes" class="section level4 hasAnchor" number="9.7.1.3">
+<h4><span class="header-section-number">9.7.1.3</span> Covarianza en comparaciones de un mismo mes<a href="otros-escenarios-de-interés.html#covarianza-en-comparaciones-de-un-mismo-mes" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>En primer lugar, suponga que se quiere comparar la tasa de desempleo entre hombres y mujeres en un mismo mes. En este escenario no existe independencia en el muestreo de hombres y mujeres puesto que estos grupos no son estratos de muestreo. En este caso <span class="math inline">\(T_1\)</span> es la proporción de hombres y <span class="math inline">\(T_2\)</span> es la proporción de mujeres. Nótese que <span class="math inline">\(T_1 \neq T_2\)</span>.</p>
 <p>Como se comentó anterioMERnte, existe una correlación natural entre las UPM que fueron seleccionadas y que contienen tanto a hombres como a mujeres, por lo tanto <span class="math inline">\(R_{12} \neq 0\)</span>. Note que esta correlación se calcula sobre todos los individuos pertenecientes a la fuerza de trabajo y sobre la variable dicotómica que induce la tasa de desempleo. En resumen, el término de covarianza en este caso sería igual a:</p>
 <p><span class="math display">\[
@@ -547,13 +546,13 @@ Cov(\hat{P}_1, \hat{P}_2) = \sqrt{Var(\hat{P}_1)}\sqrt{Var(\hat{P}_2)}\sqrt{T_1}
 \]</span></p>
 <p>Por otro lado, suponga que se quiere comparar la tasa de desempleo entre dos regiones del mismo país en un mismo mes. En este escenario existe independencia en el muestreo de las dos regiones porque la selección es independiente en cada región Esta independencia se tiene por definición del diseño de muestreo puesto que ambas regiones son agrupaciones disjuntas entre estratos de muestreo. En este caso <span class="math inline">\(T_1\)</span> es la proporción de personas de la primera ciudad y <span class="math inline">\(T_2\)</span> es la proporción de personas de la segunda ciudad. Además, tampoco no existe una correlación entre las UPM que fueron seleccionadas entre estas regiones porque la selección fue independiente, por lo tanto <span class="math inline">\(R_{12} = 0\)</span>. En resumen, el término de covarianza es nulo y por ende la varianza del estimador sería igual a:</p>
 <p><span class="math display">\[
-Var(\hat{d}) 
+Var(\hat{d})
 = Var(\hat{P}_1) + Var(\hat{P}_2)
 \]</span></p>
 </div>
 </div>
-<div id="tamaño-de-muestra-para-la-estimación-del-impacto-en-dos-mediciones-longitudinales" class="section level3" number="9.7.2">
-<h3><span class="header-section-number">9.7.2</span> Tamaño de muestra para la estimación del impacto en dos mediciones longitudinales</h3>
+<div id="tamaño-de-muestra-para-la-estimación-del-impacto-en-dos-mediciones-longitudinales" class="section level3 hasAnchor" number="9.7.2">
+<h3><span class="header-section-number">9.7.2</span> Tamaño de muestra para la estimación del impacto en dos mediciones longitudinales<a href="otros-escenarios-de-interés.html#tamaño-de-muestra-para-la-estimación-del-impacto-en-dos-mediciones-longitudinales" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Para las encuestas que planean un seguimiento panel o de panel rotativo, es posible contemplar escenarios en los que se quiera estimar el efecto de una intervención, definido como la diferencia en diferencias de las proporciones de interés. De esta forma, el efecto se define como:</p>
 <p><span class="math display">\[
 \theta = (P_{1,1}-P_{2,1})-(P_{1,2}-P_{2, 2})
@@ -569,12 +568,12 @@ S^2_{\theta} = (P_{1,1}Q_{1,1}+P_{1,2}Q_{1,2}+P_{2,1}Q_{2,1}+P_{2,2}Q_{2,2})(1-T
 <p>En donde <span class="math inline">\(T\)</span> corresponde a la tasa de traslape (<span class="math inline">\(T=1\)</span> corresponde a un panel completo, <span class="math inline">\(T=0.5\)</span> a un semi-panel con traslape del 50% y el caso extremo <span class="math inline">\(T=0\)</span> a una encuesta en donde no hay traslape) y <span class="math inline">\(R\)</span> se define como la correlación entre las dos oleadas (<span class="math inline">\(R=0\)</span> implica que no hay correlación entre los dos momentos, <span class="math inline">\(R=-1\)</span> implica una máxima correlación negativa entre los dos momentos y <span class="math inline">\(R=1\)</span> implica una correlación positiva máxima entre los dos momentos).</p>
 <p>Por ejemplo, en una encuesta de fuerza laboral inteMERdiada por alguna intervención gubernamental, puede ser de interés la evaluación del efecto de esa política de asistencia laboral entre hombres y mujeres en dos periodos de tiempo.</p>
 </div>
-<div id="tamaño-de-muestra-para-el-contraste-de-hipótesis-en-la-diferencia-de-proporciones" class="section level3" number="9.7.3">
-<h3><span class="header-section-number">9.7.3</span> Tamaño de muestra para el contraste de hipótesis en la diferencia de proporciones</h3>
+<div id="tamaño-de-muestra-para-el-contraste-de-hipótesis-en-la-diferencia-de-proporciones" class="section level3 hasAnchor" number="9.7.3">
+<h3><span class="header-section-number">9.7.3</span> Tamaño de muestra para el contraste de hipótesis en la diferencia de proporciones<a href="otros-escenarios-de-interés.html#tamaño-de-muestra-para-el-contraste-de-hipótesis-en-la-diferencia-de-proporciones" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Suponga que el investigador desea realizar el contraste de una hipótesis de interés. En particular, suponga que hay dos grupos de interés en la población finita y que la hipótesis está inducida por la diferencia de las proporciones en las dos poblaciones. El investigador considera que la diferencia es significativa para el fenómeno en cuestión si es mayor que un valor <span class="math inline">\(D\)</span> definido de antemano y conocido como el <em>tamaño del efecto</em> que el investigador desea detectar.</p>
 <p>Nótese que la significación estadística, inducida por un valor-p, no siempre tiene la misma connotación de significación científica o económica, que puede presentarse en fenómenos raros, para los cuales no necesariamente se gozaría de significación estadística. Por lo tanto el sistema de hipótesis que se quiere contrastar es el siguiente:</p>
 <p><span class="math display">\[
-H_o: P_1-P_2=0 \ \ \ \ \ vs.  \ \ \ \ \ H_a: P_1 -P_2 =D &gt; 0 
+H_o: P_1-P_2=0 \ \ \ \ \ vs.  \ \ \ \ \ H_a: P_1 -P_2 =D &gt; 0
 \]</span></p>
 <p>Nótese que, acudiendo a la distribución normal de los estimadores de las proporciones, y suponiendo independencia en el muestreo de los subgrupos, la regla de decisión en este caso induce el rechazo de la hipótesis nula cuando</p>
 <p><span class="math display">\[
@@ -597,7 +596,7 @@ H_o: P_1-P_2=0 \ \ \ \ \ vs.  \ \ \ \ \ H_a: P_1 -P_2 =D &gt; 0
 \]</span></p>
 <p>Entonces, dado que la función <span class="math inline">\(\Phi()\)</span> es creciente, se tiene que</p>
 <p><span class="math display">\[
-z_{1-\beta} \geq z_{1-\alpha} - \dfrac{D}{\sqrt{\frac{DEFF}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)}} 
+z_{1-\beta} \geq z_{1-\alpha} - \dfrac{D}{\sqrt{\frac{DEFF}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)}}
 \]</span></p>
 <p>En consecuencia, al despejar <span class="math inline">\(n\)</span>, se tiene que la muestra en cada subgrupo debe mayor que:</p>
 <p><span class="math display">\[
@@ -605,7 +604,7 @@ n \geq \dfrac{DEFF(P_1Q_1+P_2Q_2)}{\dfrac{D^2}{(z_{1-\alpha}+z_{\beta})^2}+\dfra
 \]</span></p>
 </div>
 </div>
-<h3>Referencias</h3>
+<h3>Referencias<a href="referencias.html#referencias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Kish_2004" class="csl-entry">
 ———. 2004. <em>Statistical Design for Research</em>. Wiley classic biblioteca edición. Wiley. <a href="https://www.wiley.com/en-us/Statistical+Design+for+Research-p-9780471691204">https://www.wiley.com/en-us/Statistical+Design+for+Research-p-9780471691204</a>.
@@ -686,7 +685,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

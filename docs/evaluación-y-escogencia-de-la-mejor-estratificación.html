@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>6.5 Evaluación y escogencia de la mejor estratificación | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="6.5 Evaluación y escogencia de la mejor estratificación | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-01-26" />
+<meta name="date" content="2022-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="metodologías-multivariadas-sobre-la-matriz-de-información.html"/>
 <link rel="next" href="estratificación-implícita.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -466,17 +465,17 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="evaluación-y-escogencia-de-la-mejor-estratificación" class="section level2" number="6.5">
-<h2><span class="header-section-number">6.5</span> Evaluación y escogencia de la mejor estratificación</h2>
+<div id="evaluación-y-escogencia-de-la-mejor-estratificación" class="section level2 hasAnchor" number="6.5">
+<h2><span class="header-section-number">6.5</span> Evaluación y escogencia de la mejor estratificación<a href="evaluación-y-escogencia-de-la-mejor-estratificación.html#evaluación-y-escogencia-de-la-mejor-estratificación" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>En la evaluación de los escenarios de estratificación entran las técnicas univariadas y multivariadas. Al final, el resultado de aplicar una u otra técnica es simplemente una clasificación de las UPM. Por lo tanto, cada una de las posibles estratificaciones debe ser evaluada con base en la reducción de la varianza para todos los indicadores considerados en la matriz de clasificación. La medida clásica con la que se juzgan las bondades de una estrategia de muestreo es el efecto de diseño (DEFF). Por lo tanto, la evaluación de la estratificación debe estar supeditada también a esta medida, que para la variable <span class="math inline">\(p = 1, \ldots, P\)</span>, está dada por:</p>
 <p><span class="math display">\[
 DEFF_p = \frac{Var_{ST}(\bar x _p)}{Var_{SI}(\bar x _p)} \ \ \ \ \ \ \ \ \ p = 1, \ldots, P.
 \]</span></p>
-<p>En donde, <span class="math inline">\(Var_{ST}(\bar x _p)\)</span> y <span class="math inline">\(Var_{SI}(\bar x _p)\)</span> denotan la varianza del diseño estratificado y la varianza de un muestreo aleatorio simple para la media poblacional (porcentaje) de la <span class="math inline">\(p\)</span>-ésima variable de la matriz de información. Por otro lado, <span class="citation"><a href="#ref-Gutierrez_2016" role="doc-biblioref">H. A. Gutiérrez</a> (<a href="#ref-Gutierrez_2016" role="doc-biblioref">2016, 184</a>)</span> demuestra que, cuando la asignación es proporcional, esta relación se puede escribir de la siguiente manera:</p>
+<p>En donde, <span class="math inline">\(Var_{ST}(\bar x _p)\)</span> y <span class="math inline">\(Var_{SI}(\bar x _p)\)</span> denotan la varianza del diseño estratificado y la varianza de un muestreo aleatorio simple para la media poblacional (porcentaje) de la <span class="math inline">\(p\)</span>-ésima variable de la matriz de información. Por otro lado, <span class="citation">H. A. Gutiérrez (<a href="#ref-Gutierrez_2016" role="doc-biblioref">2016, 184</a>)</span> demuestra que, cuando la asignación es proporcional, esta relación se puede escribir de la siguiente manera:</p>
 <p><span class="math display">\[
 DEFF_p = \frac{ \sum_{h=1}^H W_h S^2_{x_{hp}} }{S^2_{x_p}} \cong 1 - R^2_p \ \ \ \ \ \ \ \ \ p = 1, \ldots, P.
 \]</span></p>
-<p>En donde, para cada estrato <span class="math inline">\(h = 1, \ldots, H\)</span>, se tiene que <span class="math inline">\(S^2_{x_p}\)</span> es la varianza de la variable <span class="math inline">\(x_p\)</span> en la población y <span class="math inline">\(S^2_{x_{hp}}\)</span> es la varianza de la variable <span class="math inline">\(x_p\)</span> supeditada al estrato <span class="math inline">\(h\)</span>. Nótese que este efecto de diseño es función del coeficiente de determinación <span class="math inline">\(R^2_p\)</span> en un modelo lineal con intercepto que relaciona la <span class="math inline">\(p\)</span>-ésima variable de evaluación (respuesta) con los estratos (factores). Una ventaja de expresar el efecto de diseño como en la ecuación anterior es que no dependerá del tamaño de muestra. Una vez definido el criterio de evaluación de la estratificación sobre una variable <span class="math inline">\(x_p\)</span>, es necesario definir un criterio de estratificación multivariante que contemple cada una de las <span class="math inline">\(P\)</span> variables. Siguiendo las ideas de <span class="citation"><a href="#ref-Jarque_1981" role="doc-biblioref">Jarque</a> (<a href="#ref-Jarque_1981" role="doc-biblioref">1981</a>)</span>, se propone la siguiente medida de calidad, definida como el <em>efecto de diseño generalizado</em> (<span class="math inline">\(G(S)\)</span>) sobre todas las variables de la matriz de información:</p>
+<p>En donde, para cada estrato <span class="math inline">\(h = 1, \ldots, H\)</span>, se tiene que <span class="math inline">\(S^2_{x_p}\)</span> es la varianza de la variable <span class="math inline">\(x_p\)</span> en la población y <span class="math inline">\(S^2_{x_{hp}}\)</span> es la varianza de la variable <span class="math inline">\(x_p\)</span> supeditada al estrato <span class="math inline">\(h\)</span>. Nótese que este efecto de diseño es función del coeficiente de determinación <span class="math inline">\(R^2_p\)</span> en un modelo lineal con intercepto que relaciona la <span class="math inline">\(p\)</span>-ésima variable de evaluación (respuesta) con los estratos (factores). Una ventaja de expresar el efecto de diseño como en la ecuación anterior es que no dependerá del tamaño de muestra. Una vez definido el criterio de evaluación de la estratificación sobre una variable <span class="math inline">\(x_p\)</span>, es necesario definir un criterio de estratificación multivariante que contemple cada una de las <span class="math inline">\(P\)</span> variables. Siguiendo las ideas de <span class="citation">Jarque (<a href="#ref-Jarque_1981" role="doc-biblioref">1981</a>)</span>, se propone la siguiente medida de calidad, definida como el <em>efecto de diseño generalizado</em> (<span class="math inline">\(G(S)\)</span>) sobre todas las variables de la matriz de información:</p>
 <p><span class="math display">\[
 G(S) = \sum_{p=1}^P DEFF_p = \sum_{p=1}^P \frac{1}{S^2_{x_p}}\sum_{h=1}^H W_h S^2_{x_{hp}}
 \]</span></p>
@@ -657,8 +656,18 @@ G(S) = \sum_{p=1}^P DEFF_p = \sum_{p=1}^P \frac{1}{S^2_{x_p}}\sum_{h=1}^H W_h S^
 <p>Para estudiar la comparabilidad y consistencia del proceso de estratificación, los algoritmos de evaluación se deberían aplicar sobre cada una de las UPM en las áreas urbanas, pero independientemente de las UPM rurales.Si la ganancia en eficiencia es mayor en este escenario, se pueden definir los estratos de forma independiente. Si, por el contrario, la comparabilidad entre estratos es imperante en el proceso de estratificación, se puede considerar únicamente el escenario conjunto en donde las UPM de la zona urbana y rural están presentes conjuntamente. En este último caso, la clasificación de las UPM de la zona urbana se regirá por las mimas condiciones que sus contrapartes urbanas.</p>
 <p>Al margen de la técnica utilizada para encontrar la mejor clasificación de las UPM, se recalca que la viabilidad sobre el número de estratos sea discutida de forma exhaustiva por todas las áreas involucradas al interior de los INE. En forma general, es recomendable restringir los escenarios de evaluación a la consideración de H=3 o H=4 estratos. Este último componente es importante puesto que los diseños de muestreo deberían considerar un tamaño de muestra mínimo de dos UPM por estrato para poder estimar la varianza del estimador <span class="citation">(<a href="#ref-Gutierrez_2016" role="doc-biblioref">H. A. Gutiérrez 2016</a>)</span>.</p>
 <p>El efecto diseño no es el único aspecto por evaluar para la elección del procedimiento de estratificación. Es necesario verificar la estabilidad del método con respecto a los otros procedimientos de estratificación. Por ejemplo, la siguiente tabla muestra la matriz de coincidencias entre las diferentes clasificaciones de los estratos.</p>
-<table>
+<table style="width:100%;">
 <caption><em>Matriz de coincidencias, cuyas entradas están definidas como el porcentaje de UPM coincidentes en cada uno de los estratos creados por los métodos estudiados.</em></caption>
+<colgroup>
+<col width="16%" />
+<col width="12%" />
+<col width="13%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+<col width="16%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="center">Técnica</th>
@@ -743,7 +752,7 @@ Figura 6.2: Comportamiento esperado en los estratos de muestreo para algunas var
 </div>
 <p>Si la contribución de algunas unidades al total poblacional es no significativa, y además esas unidades son de difícil acceso, es común que en algunos países de la región se opte por redefinir el universo y crear un estrato de exclusión forzosa. En este estrato no se realiza ninguna encuesta y las respectivas estimaciones no tendrán en cuenta a esta población excluida. Por último, como algunos procedimientos de clasificación se basan en la generación de números aleatorios, se recomienda documentar los códigos computacionales que se utilizaron para que los resultados puedan ser replicados, por lo que debe fijar una semilla aleatoria al comienzo del código computacional.</p>
 </div>
-<h3>Referencias</h3>
+<h3>Referencias<a href="referencias.html#referencias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Gutierrez_2016" class="csl-entry">
 ———. 2016. <em>Estrategias de muestreo: diseño de encuestas y estimación de parámetros</em>. Segunda edición. Ediciones de la U.
@@ -819,7 +828,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

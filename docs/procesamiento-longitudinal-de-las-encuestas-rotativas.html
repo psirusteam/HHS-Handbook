@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Capítulo 18 Procesamiento longitudinal de las encuestas rotativas | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Capítulo 18 Procesamiento longitudinal de las encuestas rotativas | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-01-26" />
+<meta name="date" content="2022-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="pruebas-de-hipótesis-sobre-indicadores-agregados.html"/>
 <link rel="next" href="diseño-de-paneles-rotativos-en-las-encuestas-de-la-región.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -466,10 +465,10 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="procesamiento-longitudinal-de-las-encuestas-rotativas" class="section level1" number="18">
-<h1><span class="header-section-number">Capítulo 18</span> Procesamiento longitudinal de las encuestas rotativas</h1>
+<div id="procesamiento-longitudinal-de-las-encuestas-rotativas" class="section level1 hasAnchor" number="18">
+<h1><span class="header-section-number">Capítulo 18</span> Procesamiento longitudinal de las encuestas rotativas<a href="procesamiento-longitudinal-de-las-encuestas-rotativas.html#procesamiento-longitudinal-de-las-encuestas-rotativas" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Para algunos INE puede ser necesario contar con una estructura de ponderación longitudinal que le permita a las áreas de análisis producir estadísticas basadas en el seguimiento continuo a los hogares, afianzándose en el esquema de rotación de las encuestas. Para establecer los pasos que se requieren en la creación de un sistema de pesos longitudinales, primero es necesario definir qué es una encuesta longitudinal y más precisamente cómo las encuestas continuas con levantamientos transversales, puede tornarse en encuestas longitudinales.</p>
-<p><span class="citation"><a href="#ref-Lynn_2009" role="doc-biblioref">Lynn</a> (<a href="#ref-Lynn_2009" role="doc-biblioref">2009</a>)</span> plantea que una encuesta longitudinal es aquella que recolecta los datos de los mismos elementos muestrales en múltiples ocasiones a través del tiempo. Por ejemplo, una encuesta trimestral con un esquema rotativo 4(1)0 permitiría realizar observaciones continuas en el 25% de las viviendas durante todo un año. Cuando se requiere la generación de un sistema de ponderación longitudinal es necesario centrar la atención en la estimación del cambio del indicador en dos periodos de tiempo consecutivos, y su correspondiente estimación de la varianza. Cabe resaltar que este proceso debe tener en cuenta que las muestras no son independientes y por lo tanto se debe calcular la varianza de la primera ronda, la varianza de la segunda ronda y la correlación entre las dos rondas de interés. Estos tres componentes deben intervenir en el cálculo de los coeficientes de variación, así como en la determinación del tamaño de muestra en cada ronda.</p>
+<p><span class="citation">Lynn (<a href="#ref-Lynn_2009" role="doc-biblioref">2009</a>)</span> plantea que una encuesta longitudinal es aquella que recolecta los datos de los mismos elementos muestrales en múltiples ocasiones a través del tiempo. Por ejemplo, una encuesta trimestral con un esquema rotativo 4(1)0 permitiría realizar observaciones continuas en el 25% de las viviendas durante todo un año. Cuando se requiere la generación de un sistema de ponderación longitudinal es necesario centrar la atención en la estimación del cambio del indicador en dos periodos de tiempo consecutivos, y su correspondiente estimación de la varianza. Cabe resaltar que este proceso debe tener en cuenta que las muestras no son independientes y por lo tanto se debe calcular la varianza de la primera ronda, la varianza de la segunda ronda y la correlación entre las dos rondas de interés. Estos tres componentes deben intervenir en el cálculo de los coeficientes de variación, así como en la determinación del tamaño de muestra en cada ronda.</p>
 <p>Asimismo, con el análisis de los datos longitudinales es posible hacer otros tipos de análisis como por ejemplo:</p>
 <ul>
 <li>Inferencia sobre la caracterización de las unidades observacionales que han cambiado de un estatus a otro: desde las bases de datos longitudinales es posible determinar las características de los hogares o personas que han sufrido algún cambio en las variables de interes. Por ejemplo, es posible determinar las características de los hogares que han salido (o entrado) de (a) la pobreza extrema, sin importar si se muestra un cambio neto significativo en el periodo de estudio.</li>
@@ -478,7 +477,7 @@ div.csl-indent {
 <li>Análisis de impactos, efectos y relaciones causales: los datos longitudinales pueden usarse muy efectivamente a la hora de establecer relaciones causales entre una intervención y un fenómeno de interés. Por ejemplo, es posible evaluar la magnitud del impacto que la pandemia por COVID-19 trajo sobre la tasa de desocupación y sus efectos a lo largo del año.</li>
 </ul>
 </div>
-<h3>Referencias</h3>
+<h3>Referencias<a href="referencias.html#referencias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Lynn_2009" class="csl-entry">
 Lynn, P. 2009. <em>Methodology of longitudinal surveys</em>. Wiley series en survey methodology. Wiley.
@@ -551,7 +550,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

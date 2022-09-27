@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>18.2 Generación de bases longitudinales para dos periodos consecutivos | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="18.2 Generación de bases longitudinales para dos periodos consecutivos | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-01-26" />
+<meta name="date" content="2022-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="diseño-de-paneles-rotativos-en-las-encuestas-de-la-región.html"/>
 <link rel="next" href="generación-de-bases-longitudinales-anuales.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -466,10 +465,10 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="generación-de-bases-longitudinales-para-dos-periodos-consecutivos" class="section level2" number="18.2">
-<h2><span class="header-section-number">18.2</span> Generación de bases longitudinales para dos periodos consecutivos</h2>
+<div id="generación-de-bases-longitudinales-para-dos-periodos-consecutivos" class="section level2 hasAnchor" number="18.2">
+<h2><span class="header-section-number">18.2</span> Generación de bases longitudinales para dos periodos consecutivos<a href="generación-de-bases-longitudinales-para-dos-periodos-consecutivos.html#generación-de-bases-longitudinales-para-dos-periodos-consecutivos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>El análisis longitudinal de las encuestas de hogares es un insumo valioso en la toma de decisiones puesto que permite proveer una visión complementaria a los fenómenos sociales que no se puede obtener por otros medios. El seguimiento continuo a las unidades de observación no puede ser llevado a cabo en todas las encuestas continuas de la región, sino solamente en aquellas que contemplen esquemas rotativos en su planificación. Dado que en algunas encuestas, se contempla la asignación de la muestra a diferentes grupo de rotación, es posible analizar el comportamiento de los flujos brutos sobre indicadores tan importantes como los relacionados a la situación en la ocupación, la pobreza, entre otros.</p>
-<p>En un contexto de estimación de cambios brutos con la definición de tablas de contingencia, <span class="citation"><a href="#ref-Feinberg_Stasny_1983" role="doc-biblioref">Feinberg y Stasny</a> (<a href="#ref-Feinberg_Stasny_1983" role="doc-biblioref">1983</a>)</span> asumen que las diferencias entre los pesos de muestreo en dos periodos de tiempo distintos ocurren solamente como resultado de los flujos naturales de entrada y
+<p>En un contexto de estimación de cambios brutos con la definición de tablas de contingencia, <span class="citation">Feinberg y Stasny (<a href="#ref-Feinberg_Stasny_1983" role="doc-biblioref">1983</a>)</span> asumen que las diferencias entre los pesos de muestreo en dos periodos de tiempo distintos ocurren solamente como resultado de los flujos naturales de entrada y
 salida de la población de interés. Por ejemplo, si el individuo es
 clasificado como empleado en ambos tiempos y <span class="math inline">\(w_k^{t-1}=300\)</span> y
 <span class="math inline">\(w_k^{t}=305\)</span>, entonces el peso mínimo, 300, se añade a la celda
@@ -481,7 +480,7 @@ brutos y la diferencia entre los pesos, 5, se añade a la celda (Empleado
 - Fuera). Este enfoque supone que las diferencias entre los pesos están
 supeditadas a las fluctuaciones que se puedan presentar en la fuerza de
 trabajo.</p>
-<p>El objetivo de esta sección es generar pesos longitudinales para todos los individuos pertenecientes a los paneles incumbentes de la muestra original en los dos primeros trimestre del 2020. Siguiendo la metodología de <span class="citation"><a href="#ref-Verma_Betti_Ghellini" role="doc-biblioref">Verma, Betti, y Ghellini</a> (<a href="#ref-Verma_Betti_Ghellini" role="doc-biblioref">2006</a>)</span>, es necesario seguir un procedimiento secuencial para la creación de los factores de expansión en el panel. En este orden de ideas, primero es necesario crear el conjunto de pesos iniciales (trasnversales en el primer periodo) para luego definir los pesos finales (longitudinales en el primer y segundo periodo). A continuación, se resume el procedimiento:</p>
+<p>El objetivo de esta sección es generar pesos longitudinales para todos los individuos pertenecientes a los paneles incumbentes de la muestra original en los dos primeros trimestre del 2020. Siguiendo la metodología de <span class="citation">Verma, Betti, y Ghellini (<a href="#ref-Verma_Betti_Ghellini" role="doc-biblioref">2006</a>)</span>, es necesario seguir un procedimiento secuencial para la creación de los factores de expansión en el panel. En este orden de ideas, primero es necesario crear el conjunto de pesos iniciales (trasnversales en el primer periodo) para luego definir los pesos finales (longitudinales en el primer y segundo periodo). A continuación, se resume el procedimiento:</p>
 <ol style="list-style-type: decimal">
 <li>Creación de pesos iniciales: teniendo en cuenta los pormenores del diseño de muestreo de la encuesta que selecciona una muestra de hogares y de personas que son miembros de estos hogares. Las ponderaciones iniciales se definen a partir de los factores de expansión transversales. Este proceso plantea al menos los siguientes pasos:
 <ul>
@@ -497,14 +496,14 @@ trabajo.</p>
 </ol>
 <p>El primer paso en la generación de los pesos longitudinales consiste en realizar una consolidación (combinación) de bases de datos, en donde se integren únicamente los periodos de interés. Es decir que este proceso producirá bases de datos de diferentes tamaños para dos, tres o cuatro periodos. En general, se esperaría contar con un mayor número de unidades observacionales en el primer caso (dos periodos) y un número menor de unidades observacionales en el último caso (cuatro periodos). Nótese que en el caso particular del ejemplo (encuesta con un esquema rotativo 4(0)1), no es posible realizar la integración de cinco periodos consecutivos, puesto que el esquema solo define el traslape de hasta cuatro periodos consecutivos.</p>
 <p>En general, es necesario asumir que al combinar los paneles y crear una sola base de datos, se está agregando información (puesto que se repiten las mediciones de los individuos pertenecientes a los paneles involucrados), pero al mismo tiempo se reduce el número de unidades observacionales (puesto que el número de individuos en la muestra que coinciden en los periodos de interés necesariamente es menor al número de individuos en la muestra de un corte transversal).</p>
-<div id="creación-de-los-pesos-longitudinales-iniciales" class="section level3" number="18.2.1">
-<h3><span class="header-section-number">18.2.1</span> Creación de los pesos longitudinales iniciales</h3>
+<div id="creación-de-los-pesos-longitudinales-iniciales" class="section level3 hasAnchor" number="18.2.1">
+<h3><span class="header-section-number">18.2.1</span> Creación de los pesos longitudinales iniciales<a href="generación-de-bases-longitudinales-para-dos-periodos-consecutivos.html#creación-de-los-pesos-longitudinales-iniciales" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Este primer paso empieza con la definición de los periodos consecutivos que se utilizarán en la combinación de las bases de datos. Si la combinación se realiza para el año 2020, se debe tener en cuenta que hubo un cambio abrupto que se presentó como respuesta a las restricciones de movilidad que trajo la pandemia, que a su vez configuró un cambio en el modo de recolección (de presencial a telefónico) a partir del segundo trimestre del 2020.</p>
 <p>Una vez definidos los periodos de interés, se debe realizar la combinación de las correspondientes bases de datos transversales. Este procedimiento debe tener en cuenta únicamente a las unidades muestrales que respondieron sistemáticamente en cada uno de los periodos de interés. En el escenario de la combinación de dos periodos, si una unidad respondió en ambos periodos será incluida en la base de datos combinada, de lo contrario (si respondió en el primer periodo, pero no en el segundo y viceversa) no será incluida en la base de datos.</p>
-<div id="pesos-básicos" class="section level4" number="18.2.1.1">
-<h4><span class="header-section-number">18.2.1.1</span> Pesos básicos</h4>
+<div id="pesos-básicos" class="section level4 hasAnchor" number="18.2.1.1">
+<h4><span class="header-section-number">18.2.1.1</span> Pesos básicos<a href="generación-de-bases-longitudinales-para-dos-periodos-consecutivos.html#pesos-básicos" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>La determinación de los pesos iniciales viene supeditada a los pesos básicos ajustados por cobertura <span class="math inline">\(d_{1, k}\)</span> del procesamiento transversal del primer trimestre que se quiere combinar. Por ejemplo, el primer escenario de la figura anterior resalta que se quiere combinar el primer trimestre con el segundo trimestre del 2020; en este caso se partiría de los pesos básicos ajustados por cobertura del primer trimestre del 2020. En el segundo escenario se combinan el segundo y el tercer trimestre del 2020, por tanto se partiría de los pesos básicos ajustados por cobertura y ausencia de respuesta del segundo trimestre del 2020.</p>
-<p>En general, dado que cada panel es representativo del país y, se supone que debe tener las mismas características al momento de la selección, <span class="citation"><a href="#ref-LaRoche_2003" role="doc-biblioref">LaRoche</a> (<a href="#ref-LaRoche_2003" role="doc-biblioref">2003</a>)</span> plantea que los pesos básicos se crean a partir del inverso de la probabilidad de inclusión de los paneles, así:</p>
+<p>En general, dado que cada panel es representativo del país y, se supone que debe tener las mismas características al momento de la selección, <span class="citation">LaRoche (<a href="#ref-LaRoche_2003" role="doc-biblioref">2003</a>)</span> plantea que los pesos básicos se crean a partir del inverso de la probabilidad de inclusión de los paneles, así:</p>
 <p><span class="math display">\[
 d_{1, k}^{básico} = \frac{d_{1, k}}{Pr(\text{selección de paneles})}
 \]</span></p>
@@ -513,8 +512,8 @@ d_{1, k}^{básico} = \frac{d_{1, k}}{Pr(\text{selección de paneles})}
 <p>De la misma forma, la metodología de la
 encuesta <em>Survey of Labour and Income Dynamics</em> <span class="citation">(<a href="#ref-Naud_2002" role="doc-biblioref">Naud 2002</a>; <a href="#ref-LaRoche_2003" role="doc-biblioref">LaRoche 2003</a>)</span> plantea que un primer paso para crear los pesos longitudinales es mediante el ajuste por el inverso de la probabilidad de traslape).</p>
 </div>
-<div id="ajuste-por-ausencia-de-respuesta-1" class="section level4" number="18.2.1.2">
-<h4><span class="header-section-number">18.2.1.2</span> Ajuste por ausencia de respuesta</h4>
+<div id="ajuste-por-ausencia-de-respuesta-1" class="section level4 hasAnchor" number="18.2.1.2">
+<h4><span class="header-section-number">18.2.1.2</span> Ajuste por ausencia de respuesta<a href="generación-de-bases-longitudinales-para-dos-periodos-consecutivos.html#ajuste-por-ausencia-de-respuesta-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>A continuación, sobre los pesos básicos es necesario realizar un ajuste por ausencia de respuesta, que debería estar supeditado a las covariables disponibles en el marco de muestreo, en registros administrativos o, teniendo en cuenta el diseño de muestreo rotativo, en rondas anteriores de la misma encuesta. En general, es recomendable tener en cuenta el paradigma principal en el manejo de la ausencia de respuesta, el cual indica que respondientes y no respondientes difieren en la mayoría de los casos. Por supuesto, aquellas unidades que no respondieron deberán ser excluidas de la base de datos puesto que su peso de muestreo es nulo; es decir <span class="math inline">\(d_{1, k}^{básico} = 0, \ \forall k \notin s_r^{(1)}\)</span>, en donde el conjunto <span class="math inline">\(s_r^{(1)}\)</span> representa a las unidades que respondieron la encuesta en el primer periodo de la combinación.</p>
 <p>En este esquema, es posible utilizar un enfoque basado en la estimación de las probabilidades de respuesta de cada individuo para ajustar los pesos básicos, para lo cual se necesita establecer una relación entre las unidades que respondieron y que no respondieron con las covariables auxiliares <span class="math inline">\(\mathbf{x}_{1}\)</span>. En otras palabras, es necesario asegurar que las covariables estén disponibles para toda unidad seleccionada en el primer periodo de interés, independientemente de su respuesta final. Para el manejo efectivo de la ausencia de respuesta se consideran las variables dicotómicas <span class="math inline">\(I_{1, k}\)</span> y <span class="math inline">\(D_{1, k}\)</span>, que indican si el hogar pertenece a la muestra del primer periodo y si respondió a la encuesta, respectivamente. La probabilidad de respuesta estará supeditada al siguiente modelo:</p>
 <p><span class="math display">\[
@@ -532,10 +531,10 @@ d_{1, k}^{inicial} = \frac{d_{1, k}^{básico}}{\hat{\phi}_{1, k}}
 <p>Como se mencionó en los capítulos anteriores, es necesario verificar las propiedades de balanceo y soporte común en el modelo de <em>propensity score</em>. Se esperaría que la distribución de las probabilidades de respuesta para las combinaciones de los dos trimestres combinados mostraran un buen balance entre respondientes y no respondientes (distribuciones similares) y que el soporte común de la probabilidad de respuesta excluya al cero y al uno.</p>
 </div>
 </div>
-<div id="creación-de-los-pesos-longitudinales-finales" class="section level3" number="18.2.2">
-<h3><span class="header-section-number">18.2.2</span> Creación de los pesos longitudinales finales</h3>
-<div id="definición-de-la-población-longitudinal" class="section level4" number="18.2.2.1">
-<h4><span class="header-section-number">18.2.2.1</span> Definición de la población longitudinal</h4>
+<div id="creación-de-los-pesos-longitudinales-finales" class="section level3 hasAnchor" number="18.2.2">
+<h3><span class="header-section-number">18.2.2</span> Creación de los pesos longitudinales finales<a href="generación-de-bases-longitudinales-para-dos-periodos-consecutivos.html#creación-de-los-pesos-longitudinales-finales" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="definición-de-la-población-longitudinal" class="section level4 hasAnchor" number="18.2.2.1">
+<h4><span class="header-section-number">18.2.2.1</span> Definición de la población longitudinal<a href="generación-de-bases-longitudinales-para-dos-periodos-consecutivos.html#definición-de-la-población-longitudinal" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>La población longitudinal está supeditada a todas aquellas unidades que han permanecido en la población de interés entre el primer y el segundo periodo; en el caso de la ENE la población longitudinal del primer semestre del 2020 serían todas las personas que estuvieron en la población objetivo del primer periodo y que han permanecido en la población hasta el segundo periodo, inclusive.</p>
 <p>Por supuesto, es necesario tener en cuenta que entre ambos periodos pueden haber ocurrido cambios en la población, como personas que han dejado de pertenecer a la población objetivo (por diversos motivos como la muerte, reclutamiento, internamiento en alguna institución, migración, entre otros). Siendo así, la población de interés en el segundo periodo sí contiene a las personas que han entrado (nacimientos, migración, licenciamiento de alguna institución, etc.) a conformar la población de interés desde el primer periodo, mientras que la población longitudinal no los contiene.</p>
 <p>Es en esta segunda instancia en donde nacen los pesos definitivos y se construye la base longitudinal que será usada para realizar los análisis de interés. En primer lugar, se define la muestra longitudinal <span class="math inline">\(s^{(2)}\)</span>como aquella constituida por las unidades seleccionadas en ambos periodos de interés para los paneles coincidentes; es decir, por la intersección de las muestras transversales del primer periodo <span class="math inline">\(s^1\)</span> y el segundo periodo <span class="math inline">\(s^2\)</span>:</p>
@@ -544,8 +543,8 @@ s^{(2)} = s^1 \boldsymbol\cap s^2
 \]</span></p>
 <p>La muestra <span class="math inline">\(s^{(2)}\)</span> es representativa de la población longitudinal en los dos periodos combinados. En esta etapa, el factor de expansión longitudinal se define como idéntico al peso resultante de la sección anterior; es decir <span class="math inline">\(d_{2, k}^{inicial} = d_{1, k}^{inicial}\)</span>.</p>
 </div>
-<div id="ausencia-de-respuesta-y-atrición" class="section level4" number="18.2.2.2">
-<h4><span class="header-section-number">18.2.2.2</span> Ausencia de respuesta y atrición</h4>
+<div id="ausencia-de-respuesta-y-atrición" class="section level4 hasAnchor" number="18.2.2.2">
+<h4><span class="header-section-number">18.2.2.2</span> Ausencia de respuesta y atrición<a href="generación-de-bases-longitudinales-para-dos-periodos-consecutivos.html#ausencia-de-respuesta-y-atrición" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>La conformación de la base de datos longitudinal parte de los pesos iniciales creados en la sección anterior. Sin embargo, hay que tener en cuenta que existirán unidades que no respondieron en alguno de los periodos de la combinación. En general, se forman tres subconjuntos de no respondientes; el primero conformado por las unidades que sí respondieron en el primer periodo y que no respondieron en el segundo, el segundo definido por las unidades que no respondieron en el primer periodo y que sí respondieron en el segundo, el tercero conformado por las unidades que no respondieron en ninguno de los periodos. En cualquiera de los anteriores casos es necesario identificar estas unidades a las cuales se le asignará un peso longitudinal nulo; es decir</p>
 <p><span class="math display">\[\begin{equation*}
 d_{2, k}^{inicial} =
@@ -564,8 +563,8 @@ d_{1, k}^{inicial}, &amp;\ \forall k \in s_r^{(2)}  \\
 d_{2, k}^{longitudinal} = \frac{d_{2, k}^{inicial}}{\hat{\phi}_{2, k} }
 \]</span></p>
 </div>
-<div id="calibración-de-los-pesos-logitudinales" class="section level4" number="18.2.2.3">
-<h4><span class="header-section-number">18.2.2.3</span> Calibración de los pesos logitudinales</h4>
+<div id="calibración-de-los-pesos-logitudinales" class="section level4 hasAnchor" number="18.2.2.3">
+<h4><span class="header-section-number">18.2.2.3</span> Calibración de los pesos logitudinales<a href="generación-de-bases-longitudinales-para-dos-periodos-consecutivos.html#calibración-de-los-pesos-logitudinales" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Luego del ajuste por ausencia de respuesta es aconsejable imponer algunas restricciones sobre los factores de expansión; en particular, se busca que la suma de los pesos reproduzca con exactitud los conteos poblacionales, o las proyecciones demográficas, en el país, en las regiones o departamentos, en los subgrupos de edad y sexo, en las áreas urbana y rural, etc. En general, en las restricciones de la calibración pueden intervenir tanto variables a nivel de individuo como de hogar. Es importante enfatizar que los totales auxiliares usados en la calibración deben representar la población del primer periodo de interés, puesto que, al conformar un panel que no adiciona elementos a lo largo de los periodos de medición, la muestra será representativa únicamente del periodo en cual fue seleccionada. Teniendo en cuenta que las variables de calibración están representadas por el vector <span class="math inline">\(\mathbf{z}_k\)</span> y que sus totales poblacionales están disponibles en forma de proyecciones poblacionales, entonces este conjunto de restricciones sobre los nuevos pesos longitudinales calibrados <span class="math inline">\(w_{2, k}^{calibrado}\)</span> se puede escribir como:</p>
 <p><span class="math display">\[
 \sum_{s_r^{(2)}} w_{2, k}^{calibrado} \  \mathbf{z}_k = \sum_{U} \mathbf{z}_k
@@ -578,7 +577,7 @@ w_{2, k}^{calibrado} = g_k * d_{2, k}^{longitudinal}
 </div>
 </div>
 </div>
-<h3>Referencias</h3>
+<h3>Referencias<a href="referencias.html#referencias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Feinberg_Stasny_1983" class="csl-entry">
 Feinberg, Stephen, y Elizabeth Stasny. 1983. <span>«Estimating monthly gross flows in labour force participation»</span>. <em>Survey Methodology</em> 9 (1): 77-102.
@@ -660,7 +659,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

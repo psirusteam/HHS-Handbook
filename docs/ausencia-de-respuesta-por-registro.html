@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Capítulo 15 Ausencia de respuesta por registro | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Capítulo 15 Ausencia de respuesta por registro | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-01-26" />
+<meta name="date" content="2022-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="las-consecuencias-de-la-pandemia-por-covid-19-en-las-encuestas-de-la-región.html"/>
 <link rel="next" href="modelos-para-la-imputación.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -466,13 +465,13 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="ausencia-de-respuesta-por-registro" class="section level1" number="15">
-<h1><span class="header-section-number">Capítulo 15</span> Ausencia de respuesta por registro</h1>
+<div id="ausencia-de-respuesta-por-registro" class="section level1 hasAnchor" number="15">
+<h1><span class="header-section-number">Capítulo 15</span> Ausencia de respuesta por registro<a href="ausencia-de-respuesta-por-registro.html#ausencia-de-respuesta-por-registro" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>En el diseño y puesta en marcha de una encuesta puede ocurrir cierto tipo de situaciones que pueden sesgar las estimaciones finales. Este tipo de sesgos puede ocurrir antes, durante y después de la recolección de los datos. Es tarea del estadístico advertir ante todas las posibles instancias de los problemas que causan los sesgos y procurar que, en todas las etapas de la encuesta, se minimice el error humano y el error estadístico para que al final los resultados del estudio sean tan confiables como sea posible.</p>
 <p>Como se mencionó en los capítulos anteriores, el enfoque recomendado para hacer frente a la ausencia de respuesta es una combinación de los procedimientos de imputación y ponderación y se conoce como el <strong>enfoque combinado</strong>, el cual imputa los valores de las celdas vacías para los individuos que tienen al menos un registro faltante en la base de datos (exceptuando a aquellos que tienen todos o la mayoría de registros faltantes). En resumen, los individuos que no contestaron ninguna pregunta del cuestionario son eliminados del análisis, mientras que los restantes serán considerado en el análisis con sus respuestas originales o con la imputación de las celdas vacías.</p>
-<p>En este capítulo se abordara el enfoque de la imputación utilizada para tratar la ausencia de respuesta por registro, y los posibles métodos que pueden utilizarse para identificar valores atípicos en la base de datos que, por consiguiente, pueden también ser imputados. Nótese que el verbo “imputar” viene del latín <em>impute</em>, cuya traducción al español puede ser calcular, estimar o atribuir. En el siglo XIX se utilizó el término <strong>ingreso imputado</strong> para denotar el ingreso derivado de los bienes raíces. Según <span class="citation"><a href="#ref-VanBuuren" role="doc-biblioref"><em>Flexible Imputation of Missing Data</em></a> (<a href="#ref-VanBuuren" role="doc-biblioref">2018</a>)</span>, la connotación de la imputación, en el sentido de completar valores en una base de datos, aparece por primera vez en 1957 en el <em>U.S. Census Bureau</em>. Es así como el tratamiento de datos faltantes consiste en <strong>estimar</strong> qué valores son <strong>plausibles</strong> para los datos faltantes, dados los demás valores en la base de datos.</p>
+<p>En este capítulo se abordara el enfoque de la imputación utilizada para tratar la ausencia de respuesta por registro, y los posibles métodos que pueden utilizarse para identificar valores atípicos en la base de datos que, por consiguiente, pueden también ser imputados. Nótese que el verbo “imputar” viene del latín <em>impute</em>, cuya traducción al español puede ser calcular, estimar o atribuir. En el siglo XIX se utilizó el término <strong>ingreso imputado</strong> para denotar el ingreso derivado de los bienes raíces. Según <span class="citation"><em>Flexible Imputation of Missing Data</em> (<a href="#ref-VanBuuren" role="doc-biblioref">2018</a>)</span>, la connotación de la imputación, en el sentido de completar valores en una base de datos, aparece por primera vez en 1957 en el <em>U.S. Census Bureau</em>. Es así como el tratamiento de datos faltantes consiste en <strong>estimar</strong> qué valores son <strong>plausibles</strong> para los datos faltantes, dados los demás valores en la base de datos.</p>
 </div>
-<h3>Referencias</h3>
+<h3>Referencias<a href="referencias.html#referencias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-VanBuuren" class="csl-entry">
 <em>Flexible Imputation of Missing Data</em>. 2018. Chapman; Hall.
@@ -545,7 +544,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

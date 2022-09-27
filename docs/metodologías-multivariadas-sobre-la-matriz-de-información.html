@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>6.4 Metodologías multivariadas sobre la matriz de información | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="6.4 Metodologías multivariadas sobre la matriz de información | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-01-26" />
+<meta name="date" content="2022-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="metodologías-univariadas-sobre-medidas-de-resumen.html"/>
 <link rel="next" href="evaluación-y-escogencia-de-la-mejor-estratificación.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -466,20 +465,20 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="metodologías-multivariadas-sobre-la-matriz-de-información" class="section level2" number="6.4">
-<h2><span class="header-section-number">6.4</span> Metodologías multivariadas sobre la matriz de información</h2>
+<div id="metodologías-multivariadas-sobre-la-matriz-de-información" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> Metodologías multivariadas sobre la matriz de información<a href="metodologías-multivariadas-sobre-la-matriz-de-información.html#metodologías-multivariadas-sobre-la-matriz-de-información" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Partiendo de la matriz de información <span class="math inline">\(\mathbf{X}\)</span> a nivel de las UPM, la cual contiene <span class="math inline">\(N_I\)</span> filas y <span class="math inline">\(P\)</span> columnas, es posible considerar algunos procedimientos que no necesitan de la reducción a una sola dimensión, sino que admiten tantas dimensiones como indicadores definidos en las columnas de <span class="math inline">\(\mathbf{X}\)</span>. Teniendo en cuenta que en el periodo intercensal se realizarán encuestas que miden variables que están fuertemente ligadas a las observadas en el censo, entonces encontrar una estratificación que sea óptima para todo el conjunto de variables de la matriz de información asegurará una partición óptima para todas las encuestas realizadas en el periodo intercensal. Las siguientes metodologías permiten optimizar conjuntamente la eficiencia de la estratificación.</p>
-<div id="k-medias-de-jarque-kmj" class="section level3" number="6.4.1">
-<h3><span class="header-section-number">6.4.1</span> K-medias de Jarque (KmJ)</h3>
-<p><span class="citation"><a href="#ref-Jarque_1981" role="doc-biblioref">Jarque</a> (<a href="#ref-Jarque_1981" role="doc-biblioref">1981</a>)</span> propuso utilizar una versión modificada del algoritmo de K-medias <span class="citation">(<a href="#ref-Macqueen_1967" role="doc-biblioref">Macqueen 1967</a>)</span>, cuyo objetivo es la minimización de la siguiente función de distancia:</p>
+<div id="k-medias-de-jarque-kmj" class="section level3 hasAnchor" number="6.4.1">
+<h3><span class="header-section-number">6.4.1</span> K-medias de Jarque (KmJ)<a href="metodologías-multivariadas-sobre-la-matriz-de-información.html#k-medias-de-jarque-kmj" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><span class="citation">Jarque (<a href="#ref-Jarque_1981" role="doc-biblioref">1981</a>)</span> propuso utilizar una versión modificada del algoritmo de K-medias <span class="citation">(<a href="#ref-Macqueen_1967" role="doc-biblioref">Macqueen 1967</a>)</span>, cuyo objetivo es la minimización de la siguiente función de distancia:</p>
 <p><span class="math display">\[
 \sum_{h=1}^H \sum_{k\in U_h}(\mathbf x_k - \bar {\mathbf x}_h)&#39;\boldsymbol \Lambda^{-1}(\mathbf x_k - \bar {\mathbf x}_h)
 \]</span></p>
-<p>En donde <span class="math inline">\(\mathbf x_k\)</span> corresponde a la medición de las <span class="math inline">\(P\)</span> variables de la matriz de información en la <span class="math inline">\(k\)</span>-ésima UPM, <span class="math inline">\(\bar {\mathbf x}_h\)</span> es el vector de medias de la matriz de información en el estrato <span class="math inline">\(h\)</span> y <span class="math inline">\(\boldsymbol \Lambda\)</span> es una matriz diagonal de tamaño <span class="math inline">\(P \times P\)</span> cuyas entradas se definen como la varianza de las <span class="math inline">\(P\)</span> variables de la matriz <span class="math inline">\(\mathbf X\)</span>, es decir <span class="math inline">\(\boldsymbol \Lambda [p,p]=S^2_{x_p}\)</span>, con <span class="math inline">\(p = 1, 2, \ldots, P\)</span>. Esta modificación tiene como objetivo minimizar la relación entre la varianza de un estimador de muestreo estratificado con asignación proporcional y la de un muestreo aleatorio simple. Cuando <span class="math inline">\(\boldsymbol \Lambda = \mathbf I\)</span>, el algoritmo resultante es idéntico al algoritmo clásico de K-medias, propuesto por <span class="citation"><a href="#ref-Macqueen_1967" role="doc-biblioref">Macqueen</a> (<a href="#ref-Macqueen_1967" role="doc-biblioref">1967</a>)</span>.</p>
+<p>En donde <span class="math inline">\(\mathbf x_k\)</span> corresponde a la medición de las <span class="math inline">\(P\)</span> variables de la matriz de información en la <span class="math inline">\(k\)</span>-ésima UPM, <span class="math inline">\(\bar {\mathbf x}_h\)</span> es el vector de medias de la matriz de información en el estrato <span class="math inline">\(h\)</span> y <span class="math inline">\(\boldsymbol \Lambda\)</span> es una matriz diagonal de tamaño <span class="math inline">\(P \times P\)</span> cuyas entradas se definen como la varianza de las <span class="math inline">\(P\)</span> variables de la matriz <span class="math inline">\(\mathbf X\)</span>, es decir <span class="math inline">\(\boldsymbol \Lambda [p,p]=S^2_{x_p}\)</span>, con <span class="math inline">\(p = 1, 2, \ldots, P\)</span>. Esta modificación tiene como objetivo minimizar la relación entre la varianza de un estimador de muestreo estratificado con asignación proporcional y la de un muestreo aleatorio simple. Cuando <span class="math inline">\(\boldsymbol \Lambda = \mathbf I\)</span>, el algoritmo resultante es idéntico al algoritmo clásico de K-medias, propuesto por <span class="citation">Macqueen (<a href="#ref-Macqueen_1967" role="doc-biblioref">1967</a>)</span>.</p>
 </div>
-<div id="partición-genética-bb" class="section level3" number="6.4.2">
-<h3><span class="header-section-number">6.4.2</span> Partición genética (BB)</h3>
-<p><span class="citation"><a href="#ref-Ballin_Barcaroli_2013" role="doc-biblioref">Ballin y Barcaroli</a> (<a href="#ref-Ballin_Barcaroli_2013" role="doc-biblioref">2013</a>)</span> argumentan que la mejor estratificación es aquella partición del marco de muestreo que asegura el mínimo costo muestral que satisfaga algunas restricciones de precisión; o, que maximice la precisión de los indicadores de interés bajo las restricciones. De esta forma, el algoritmo busca minimizar la siguiente función de costos</p>
+<div id="partición-genética-bb" class="section level3 hasAnchor" number="6.4.2">
+<h3><span class="header-section-number">6.4.2</span> Partición genética (BB)<a href="metodologías-multivariadas-sobre-la-matriz-de-información.html#partición-genética-bb" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><span class="citation">Ballin y Barcaroli (<a href="#ref-Ballin_Barcaroli_2013" role="doc-biblioref">2013</a>)</span> argumentan que la mejor estratificación es aquella partición del marco de muestreo que asegura el mínimo costo muestral que satisfaga algunas restricciones de precisión; o, que maximice la precisión de los indicadores de interés bajo las restricciones. De esta forma, el algoritmo busca minimizar la siguiente función de costos</p>
 <p><span class="math display">\[
 c_0 + \sum_{h=1}^{H} c_h n_h
 \]</span></p>
@@ -491,7 +490,7 @@ c_0 + \sum_{h=1}^{H} c_h n_h
 Haciendo uso de algoritmos genéticos evolutivos, esta estratificación multivariada del marco de muestreo parte de la consideración de estratificaciones univariadas independientes (una para cada variable de la matriz de información) y de la definición del producto cartesiano resultante de todas estas particiones (estratos atómicos). Este universo de posibles estratificaciones evoluciona, uniendo grupos de forma jerárquica, sujeto a las restricciones de precisión sobre cada variable de la matriz de información, hasta converger en el número de estratos definidos de antemano <span class="math inline">\(H\)</span>.</p>
 </div>
 </div>
-<h3>Referencias</h3>
+<h3>Referencias<a href="referencias.html#referencias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Ballin_Barcaroli_2013" class="csl-entry">
 Ballin, Marco, y Giulio Barcaroli. 2013. <span>«Joint determination of optimal stratification and sample allocation using genetic algorithm»</span>. <em>Survey Methodology</em> 39 (2): 369-93.
@@ -570,7 +569,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>9.2 El efecto de diseño en la determinación del tamaño de muestra | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="9.2 El efecto de diseño en la determinación del tamaño de muestra | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-01-26" />
+<meta name="date" content="2022-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="confiabilidad-y-precisión.html"/>
 <link rel="next" href="algunos-escenarios-de-interés.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -466,8 +465,8 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="el-efecto-de-diseño-en-la-determinación-del-tamaño-de-muestra" class="section level2" number="9.2">
-<h2><span class="header-section-number">9.2</span> El efecto de diseño en la determinación del tamaño de muestra</h2>
+<div id="el-efecto-de-diseño-en-la-determinación-del-tamaño-de-muestra" class="section level2 hasAnchor" number="9.2">
+<h2><span class="header-section-number">9.2</span> El efecto de diseño en la determinación del tamaño de muestra<a href="el-efecto-de-diseño-en-la-determinación-del-tamaño-de-muestra.html#el-efecto-de-diseño-en-la-determinación-del-tamaño-de-muestra" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Al momento de diseñar un estudio por muestreo con encuestas de hogares, es importante establecer el número mínimo de encuestas que se deben realizar. Esto es necesario para determinar el costo del estudio; y en el aspecto técnico, permite tener control desde la fase de diseño sobre la calidad estadística de los resultados esperados en el estudio. Como se mencionó anterioMERnte, esta calidad puede ser medida en términos del error muestral, con indicadores tales como el margen de error, el margen de error relativo o el coeficiente de variación. Todas estas medidas dependen de la varianza del estimador bajo el diseño muestral complejo; por lo tanto, contar con un valor aproximado para el efecto de diseño <span class="math inline">\(DEFF\)</span> nos permite obtener una aproximación a dicha varianza, y acercarnos al error muestral del estudio en la fase del diseño.</p>
 <p>Uno de los primeros paradigmas con el que se debe lidiar es el de la independencia entre las observaciones. Este es un supuesto que gobierna gran parte de la teoría de análisis estadístico, pero que infortunadamente no se aplica en el contexto de las encuestas de hogares. Ante los retos que se debe enfrentar y las diversas estrategias de recolección de información, las fórmulas que se desprenden del supuesto de que los observaciones corresponden a una muestra de variables independientes e idénticamente distribuidas no son plausibles.</p>
 <p>La estratificación, las múltiples etapas y la aglomeración de las unidades de muestreo hacen que este supuesto no se cumpla en la práctica y por tanto, utilizar las expresiones tradicionales que se encuentran en los libros introductorios de estadística guiará a tamaños de muestra insuficientes. El problema del tamaño de muestra en encuestas de hogares ha sido abordado por diferentes autores con diferentes enfoques. Quizás uno de los más aceptados es aquel que define un factor de ajuste, llamado efecto de diseño, en función de la correlación que hay entre la variable de interés con las unidades primarias de muestreo. A partir de este efecto de diseño se calcula el número de personas que deben ser encuestadas para minimizar un error de muestreo predefinido.</p>
@@ -480,7 +479,7 @@ DEFF(\hat{\theta})=\frac{Var_p(\hat{\theta})}{Var_{MAS}(\hat{\theta})}
 Var_p(\hat{\theta}) &amp; = DEFF(\hat{\theta}) \ Var_{MAS}(\hat{\theta}) \\
 &amp; = DEFF(\hat{\theta}) \ \frac{N^2}{n}\left(1-\frac{n}{N}\right)S^2_{y_U}
 \end{align}\]</span></p>
-<p>Por lo tanto, si al implementar un muestreo aleatorio simple el tamaño de muestra <span class="math inline">\(n_0\)</span> es suficiente para conseguir la precisión deseada, entonces el valor del tamaño de muestra que tendrá en cuenta el efecto de aglomeración para un diseño complejo estará cercano a <span class="math inline">\(n \approx n_0 \times DEFF\)</span>. Por ende, un efecto de diseño <em>DEFF = 2.0</em> implicaría que se deberían seleccionar casi el doble de unidades para lograr la misma confiabilidad que la producida por una muestra aleatoria simple. <span class="citation"><a href="#ref-United_Nations_2008" role="doc-biblioref">UN</a> (<a href="#ref-United_Nations_2008" role="doc-biblioref">2008b</a>)</span> afirma que, dada esta relación, es claramente indeseable tener un plan de muestreo con valores mucho mayores que 2.5 o 3.0 para los indicadores clave de la encuesta. Esta advertencia crea una regla precisa a la hora de escoger el escenario de muestreo más conveniente, puesto que las tablas de muestreo deberán ser filtradas por los casos que induzcan efectos de diseño menores a 3. Lo cual quiere decir que los equipos técnicos dentro de los INE deben plantear esquemas en donde el efecto de diseño para los indicadores claves de la encuesta no sea desproporcionadamente grande.</p>
+<p>Por lo tanto, si al implementar un muestreo aleatorio simple el tamaño de muestra <span class="math inline">\(n_0\)</span> es suficiente para conseguir la precisión deseada, entonces el valor del tamaño de muestra que tendrá en cuenta el efecto de aglomeración para un diseño complejo estará cercano a <span class="math inline">\(n \approx n_0 \times DEFF\)</span>. Por ende, un efecto de diseño <em>DEFF = 2.0</em> implicaría que se deberían seleccionar casi el doble de unidades para lograr la misma confiabilidad que la producida por una muestra aleatoria simple. <span class="citation">UN (<a href="#ref-United_Nations_2008" role="doc-biblioref">2008b</a>)</span> afirma que, dada esta relación, es claramente indeseable tener un plan de muestreo con valores mucho mayores que 2.5 o 3.0 para los indicadores clave de la encuesta. Esta advertencia crea una regla precisa a la hora de escoger el escenario de muestreo más conveniente, puesto que las tablas de muestreo deberán ser filtradas por los casos que induzcan efectos de diseño menores a 3. Lo cual quiere decir que los equipos técnicos dentro de los INE deben plantear esquemas en donde el efecto de diseño para los indicadores claves de la encuesta no sea desproporcionadamente grande.</p>
 <p>En particular, para el caso de una proporción, la calidad del estimador se puede medir en términos de la amplitud del intervalo de confianza de al menos <span class="math inline">\((1-\alpha) \times 100\%\)</span>; esto es, la distancia entre el estimador y el parámetro no debería superar un margen de error previamente establecido (<span class="math inline">\(ME\)</span>). Así:</p>
 <p><span class="math display">\[
 1-\alpha \geq \Pr\left(|\hat{P}-P|&lt;ME\right)
@@ -499,7 +498,7 @@ n \geq \dfrac{S^2_{y_U}DEFF}{\dfrac{MER^2 \bar{y}_U^2}{z_{1-\alpha/2}^2}+\dfrac{
 \]</span></p>
 <p>Por consiguiente, se evidencia que valores grandes del efecto de diseño inducirán un mayor tamaño de muestra. Claramente el incremento no es lineal, más aún, el tamaño de muestre se ve más afectado en la medida en que el <span class="math inline">\(DEFF\)</span> sea más grande.</p>
 </div>
-<h3>Referencias</h3>
+<h3>Referencias<a href="referencias.html#referencias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-United_Nations_2008" class="csl-entry">
 ———. 2008b. <em>Designing household survey samples: practical guidelines</em>. Studies en methods / United Nations, Department of Economic y Social Affairs, Statistics Division Series F. United Nations.
@@ -572,7 +571,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

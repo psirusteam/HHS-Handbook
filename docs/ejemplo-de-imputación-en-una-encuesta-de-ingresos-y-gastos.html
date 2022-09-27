@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>15.2 Ejemplo de imputación en una encuesta de ingresos y gastos | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="15.2 Ejemplo de imputación en una encuesta de ingresos y gastos | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-01-26" />
+<meta name="date" content="2022-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="modelos-para-la-imputación.html"/>
 <link rel="next" href="consideraciones-sobre-la-imputación-múltiple.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -466,8 +465,8 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos" class="section level2" number="15.2">
-<h2><span class="header-section-number">15.2</span> Ejemplo de imputación en una encuesta de ingresos y gastos</h2>
+<div id="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos" class="section level2 hasAnchor" number="15.2">
+<h2><span class="header-section-number">15.2</span> Ejemplo de imputación en una encuesta de ingresos y gastos<a href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html#ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Una vez que se ha discutido acerca de los propósitos de la imputación en una encuesta de hogares, se debe escoger un método (o métodos) de imputación y una vez establecido el mecanismo de imputación, generar el conjunto de datos rectangular y completo. En esta sección analizaremos, a la luz de las particularidades de una encuesta de hogares de ingresos y gastos, los pasos que se deben surtir para completar un proceso de imputación. Por sus características, este tipo de encuestas presenta tasas elevadas de ausencia de respuesta de registro, aunque también de individuo.</p>
 <p>En general, el levantamiento común de este tipo de encuestas se centra en un trabajo de campo masivo que visita al hogar en varias ocasiones, pidiéndole al respondiente que diligencie sendos cuestionarios, y registre toda la información asociada al gasto y a los ingresos del hogar, durante un periodo de al menos dos semanas. Por supuesto, para que esto pueda realizarse, es necesario contar con la colaboración activa de todos los miembros del hogar. En el mejor de los casos, el encuestador habrá visitado varias veces el domicilio del hogar en el periodo de observación y tendrá un formulario totalmente diligenciado. Sin embargo, en muchas otras ocasiones, a pesar del seguimiento exhaustivo del encuestado, no se obtendrá el gasto de la totalidad de las categorías de la encuesta, sino que se obtendrá información parcial que se transformará en celdas vacías por la ausencia de respuesta. En el peor de los casos se obtendrán cuestionarios diligenciados en porcentaje tan bajo, que al final serán declarados como faltantes, lo cual se transforma en ausencia de respuesta de ese hogar.</p>
 <p>El siguiente ejemplo trata de ilustrar de manera escueta cómo se debería realizar el procedimiento de imputación en una encuesta de ingresos y gastos. El lector encontrará varios pasos en esta metodología, puesto que antes de imputar las variables de interés, es necesario conocer qué covariables se relacionan fuertemente con las variables que se quieren imputar. Además de eso, es necesario primero imputar todas las covariables en primer lugar y reemplazar sus valores faltantes con información plausible que pueda ser utilizada en los modelos que se ajusten. Suponga que, para el conjunto de hogares que se consideró con fines de imputación, se observaron al menos las siguientes variables:</p>
@@ -480,9 +479,9 @@ div.csl-indent {
 <li>Grado educativo más alto del jefe de hogar.</li>
 <li>Número de personas empleadas en el hogar.</li>
 </ul>
-<p>El camino que se seguirá en este ejemplo será primero la imputación de los ingresos, como principal covariable del gasto y del consumo. Una vez que se imputaron las covariables, el segundo paso de este proceso se relaciona con la imputación de los filtros, que son las preguntas que se realizan para conocer si un hogar ha adquirido un bien o servicio específico. El resultado de este paso produjo el tercer paso dedicado a la imputación de los valores de gasto anualizados en cada unidad. Esta serie de pasos metodológicos ha sido recomendados por diferentes agencias de estadística, incluyendo institutos y oficinas nacionales de estadística. Por ejemplo, <span class="citation"><a href="#ref-Hayes_Watson_2009" role="doc-biblioref">Hayes y Watson</a> (<a href="#ref-Hayes_Watson_2009" role="doc-biblioref">2009</a>)</span> y <span class="citation"><a href="#ref-Sun_2010" role="doc-biblioref">Sun</a> (<a href="#ref-Sun_2010" role="doc-biblioref">2010</a>)</span> siguen esta metodología en el <em>Australian Bureau of Statistics</em> para imputación en la encuesta <em>Household, Income and Labour Dynamics in Australia (HILDA)</em></p>
-<div id="imputación-del-ingreso" class="section level3" number="15.2.1">
-<h3><span class="header-section-number">15.2.1</span> Imputación del ingreso</h3>
+<p>El camino que se seguirá en este ejemplo será primero la imputación de los ingresos, como principal covariable del gasto y del consumo. Una vez que se imputaron las covariables, el segundo paso de este proceso se relaciona con la imputación de los filtros, que son las preguntas que se realizan para conocer si un hogar ha adquirido un bien o servicio específico. El resultado de este paso produjo el tercer paso dedicado a la imputación de los valores de gasto anualizados en cada unidad. Esta serie de pasos metodológicos ha sido recomendados por diferentes agencias de estadística, incluyendo institutos y oficinas nacionales de estadística. Por ejemplo, <span class="citation">Hayes y Watson (<a href="#ref-Hayes_Watson_2009" role="doc-biblioref">2009</a>)</span> y <span class="citation">Sun (<a href="#ref-Sun_2010" role="doc-biblioref">2010</a>)</span> siguen esta metodología en el <em>Australian Bureau of Statistics</em> para imputación en la encuesta <em>Household, Income and Labour Dynamics in Australia (HILDA)</em></p>
+<div id="imputación-del-ingreso" class="section level3 hasAnchor" number="15.2.1">
+<h3><span class="header-section-number">15.2.1</span> Imputación del ingreso<a href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html#imputación-del-ingreso" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>En primer lugar, recuérdese que existen múltiples <em>fuentes de ingreso</em> en el hogar, como por ejemplo el ingreso el trabajo, la propiedad de activos, la producción de servicios para consumo propio, y las transferencias (condicionadas o no) gubernamentales. Además debe ser notado que tanto teórica como empíricamente, los ingresos han demostrado ser un potente predictor de los gastos <span class="citation">(<a href="#ref-Starick_Watson_2011" role="doc-biblioref">Starick y Watson 2011</a>)</span>.</p>
 <p>De esta forma, la imputación del ingreso podría estar basada en un enfoque de modelos predictivos y la técnica que se podría utilizar para imputar esta covariable es la del vecino más cercano con regresión. De esta forma, se define un modelo lineal para las unidades encuestadas y luego se estiman los coeficientes de regresión para obtener un valor pronosticado que se computa para las unidades que faltan. Así, para cada unidad con información faltante en el ingreso, se identifica un solo donante que corresponderá al hogar cuyo ingreso disponible es más cercano a la predicción del modelo de regresión. Por ende, todos los componentes de los ingresos serán imputados con la información del donante. El modelo lineal se describe como se indica a continuación y la predicción de los ingresos para los hogares faltantes se calcula utilizando una regresión lineal.</p>
 <p><span class="math display">\[\tilde{y}_k = \mathbf{x}_k \hat{\boldsymbol{\beta}}_i\]</span></p>
@@ -513,8 +512,8 @@ Figura 15.1: Distribución de los ingresos (izquierda y centro) y Relación entr
 </div>
 <p>Por último, nótese que si la base de datos contiene hogares que reportaron un ingreso nulo en todo el año, es posible que esos valores se consideren como faltantes porque se asume que la probabilidad de que un hogar no genere ningún tipo de ingreso durante todo un año es bastante baja. Además, los hogares con ingresos superiores a un límite también pueden ser considerados como valores atípicos y luego ser imputados.</p>
 </div>
-<div id="imputación-del-filtro" class="section level3" number="15.2.2">
-<h3><span class="header-section-number">15.2.2</span> Imputación del filtro</h3>
+<div id="imputación-del-filtro" class="section level3 hasAnchor" number="15.2.2">
+<h3><span class="header-section-number">15.2.2</span> Imputación del filtro<a href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html#imputación-del-filtro" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>El siguiente paso, luego de haber logrado imputar con éxito las covariables determinantes del gasto, es precisamente utilizarlas para lograr imputar el gasto en bienes o servicios. Por lo general, las encuestas de ingresos y gastos preguntan si el hogar consumió o adquirió cierto bien o servicio específico. En caso de responder afirmativamente, se pregunta por la cantidad de dinero gastado en el bien o servicio y por la cantidad de artículos adquiridos en el periodo de referencia; en caso de responder negativamente, se procede a preguntar por el siguiente bien o servicio. Por supuesto, diferentes artículos tiene diferentes tasas de respuesta en sus filtros. De aquí en adelante, el valor a ser imputado en esta etapa es dicotómico: sí o no. Si el valor imputado hubiera sido no, eso significaría que el hogar no debería tener ningún gasto asociado a ese registro. Debido a la naturaleza del filtro, un modelo de regresión logística es conveniente para modelar la ausencia de respuesta en el filtro. De esta manera, la probabilidad de consumo (o compra) a un artículo <span class="math inline">\(i\)</span> en particular es <span class="math inline">\(p_k = Pr(Filtro_i = 1)\)</span> y puede ser estimada por medio del siguiente modelo de regresión logística:</p>
 <p><span class="math display">\[
 \tilde{p}_k = logit^{-1}(\mathbf{x}_k \hat{\boldsymbol{\beta}}_i) =
@@ -536,8 +535,8 @@ Figura 15.3: Distribución de la probabilidad estimada de compra de un artículo
 </p>
 </div>
 </div>
-<div id="imputación-del-gasto" class="section level3" number="15.2.3">
-<h3><span class="header-section-number">15.2.3</span> Imputación del gasto</h3>
+<div id="imputación-del-gasto" class="section level3 hasAnchor" number="15.2.3">
+<h3><span class="header-section-number">15.2.3</span> Imputación del gasto<a href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html#imputación-del-gasto" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Éste es el paso final del proceso de imputación y está fuertemente influenciado por los resultados de la imputación de la pregunta de filtro. En este paso, los hogares cuyo valor imputado de filtro es cero automáticamente tendrá un cero imputado como la cantidad de dinero gastado en ese artículo. Es decir, si el resultado de la imputación en el filtro es cero, esto implica directamente que el hogar no compró (o produjo) el artículo en el periodo de referencia, y por tanto la frecuencia de compra, la cantidad que registros comprados y la cantidad de dinero gastado en ese artículo debe ser cero. Las unidades restantes deben tener un valor observado o imputado de uno en el filtro, y por lo tanto los valores faltantes del gasto deben ser imputados.</p>
 <p>Observe que el grupo de donantes está restringido a los que tienen un valor de gasto distinto de cero en el artículo específico. Es decir, para aquellas unidades con un valor de filtro distinto de cero, un donante debe ser identificado. Para la imputación del gasto, la técnica del vecino más cercano con el método de regresión puede considerarse en el mismo sentido que fue implementado en la imputación de los ingresos. Por lo tanto, se considera un modelo lineal en donde las covariables incluidas en la matriz <span class="math inline">\(\mathbf{x}\)</span> son la composición del hogar, el estado de ocupación y fuerza de trabajo, la calidad de la vivienda, la ubicación del hogar y los ingresos.</p>
 <p>Volviendo a los ejemplos anteriores, la figura <a href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html#fig:fig13">15.4</a> muestra la distribución de los gastos imputados en consumo de salmón. Se nota que la cantidad de dinero gastado en este artículo es baja y que la relación entre los valores pronosticados del modelo y los valores imputados es fuertemente lineal.</p>
@@ -549,7 +548,7 @@ Figura 15.4: Distribución de los gastos imputados sobre el salmón (izquierda) 
 </div>
 </div>
 </div>
-<h3>Referencias</h3>
+<h3>Referencias<a href="referencias.html#referencias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Hayes_Watson_2009" class="csl-entry">
 Hayes, Clinton, y Nicole Watson. 2009. <span>«HILDA Imputation methods»</span>. <em>Working paper</em>.
@@ -628,7 +627,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

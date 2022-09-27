@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>6.3 Metodologías univariadas sobre medidas de resumen | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="6.3 Metodologías univariadas sobre medidas de resumen | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-01-26" />
+<meta name="date" content="2022-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="información-a-nivel-de-upm.html"/>
 <link rel="next" href="metodologías-multivariadas-sobre-la-matriz-de-información.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -466,8 +465,8 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="metodologías-univariadas-sobre-medidas-de-resumen" class="section level2" number="6.3">
-<h2><span class="header-section-number">6.3</span> Metodologías univariadas sobre medidas de resumen</h2>
+<div id="metodologías-univariadas-sobre-medidas-de-resumen" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Metodologías univariadas sobre medidas de resumen<a href="metodologías-univariadas-sobre-medidas-de-resumen.html#metodologías-univariadas-sobre-medidas-de-resumen" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Es bien sabido que la mejor estratificación para una variable de interés es aquella que nace de su propia variación. Durante muchos años, se desarrollaron técnicas de estratificación sobre una sola variable de interés que dejaban de lado el carácter multipropósito de cualquier encuesta de hogares. Por esta razón, se sugiere partir de la matriz de información y resumir la variación y las correlaciones entre variables mediante alguna técnica multivariada de reducción de datos, como componentes principales, análisis factorial, o modelos no lineales. Como la matriz de información está en escala de porcentajes, es posible que la variabilidad recogida por la medida de resumen sea alta.</p>
 <p>Por ejemplo, si se utiliza la técnica de componentes principales, entonces se tomaría como medida de resumen el primer componente, que resulta ser función del vector propio asociado al mayor valor propio de la matriz de covarianzas asociada a la matriz de información. Por otro lado, si se utilizara un análisis factorial confirmatorio, la medida de resumen podría ser el eje principal con la carga factorial más alta. La interpretación de estas medidas de resumen es una parte importante en la aplicación de las técnicas de estratificación. Nótese que la matriz de información está construida por cinco constructos censales (<em>demografía y estructura de la población</em>, <em>educación</em>, <em>mercado de trabajo</em>, <em>características de la vivienda</em> y <em>acceso a servicios básicos</em>) que deberían ser resumidos en una medida de bienestar de la UPM, que a su vez debe tener sentido en cuanto a la relación (o contribución) de las variables al componente o factor. En adelante, se utilizará la siguiente notación para referirse a la medida de resumen como función de todas las variables incorporadas en la matriz de información:</p>
 <p><span class="math display">\[
@@ -480,21 +479,21 @@ y = f(x_1,\ldots, x_P)
 Figura 6.1: <em>Histograma de la medida de resumen (y) sobre las UPM</em>
 </p>
 </div>
-<div id="partición-en-cuantiles-q" class="section level3" number="6.3.1">
-<h3><span class="header-section-number">6.3.1</span> Partición en cuantiles (Q)</h3>
+<div id="partición-en-cuantiles-q" class="section level3 hasAnchor" number="6.3.1">
+<h3><span class="header-section-number">6.3.1</span> Partición en cuantiles (Q)<a href="metodologías-univariadas-sobre-medidas-de-resumen.html#partición-en-cuantiles-q" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Este método divide la población de UPM en grupos creados a partir de la división en intervalos regulares de la distribución de la medida de resumen. Los cuantiles más usados son los cuartiles (que dividen la población en cuatro grupos), los quintiles (que dividen la población en cinco grupos) y los deciles (que dividen la población en 10 grupos); sin embargo, con los propósitos de estratificación, también es útil considerar la partición en terciles (que dividen la población en tres grupos).</p>
 </div>
-<div id="método-de-raíz-de-frecuencia-acumulada-dh" class="section level3" number="6.3.2">
-<h3><span class="header-section-number">6.3.2</span> Método de raíz de frecuencia acumulada (DH)</h3>
-<p><span class="citation"><a href="#ref-Dalenius_Hodges_1959" role="doc-biblioref">Dalenius y Hodges</a> (<a href="#ref-Dalenius_Hodges_1959" role="doc-biblioref">1959</a>)</span> propusieron esta técnica de estratificación basada en la raíz cuadrada de las frecuencias acumuladas de la medida de resumen sobre las UPM. Esta técnica es exacta y no requiere de algún procedimiento iterativo. La idea principal de esta técnica es encontrar grupos que minimicen la siguiente función:</p>
+<div id="método-de-raíz-de-frecuencia-acumulada-dh" class="section level3 hasAnchor" number="6.3.2">
+<h3><span class="header-section-number">6.3.2</span> Método de raíz de frecuencia acumulada (DH)<a href="metodologías-univariadas-sobre-medidas-de-resumen.html#método-de-raíz-de-frecuencia-acumulada-dh" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><span class="citation">Dalenius y Hodges (<a href="#ref-Dalenius_Hodges_1959" role="doc-biblioref">1959</a>)</span> propusieron esta técnica de estratificación basada en la raíz cuadrada de las frecuencias acumuladas de la medida de resumen sobre las UPM. Esta técnica es exacta y no requiere de algún procedimiento iterativo. La idea principal de esta técnica es encontrar grupos que minimicen la siguiente función:</p>
 <p><span class="math display">\[
 D = \sum_{h=1}^H W_h \sqrt{S^2_{y_{h}}}
 \]</span></p>
 <p>En donde <span class="math inline">\(W_h = N_h/N\)</span> (<span class="math inline">\(h = 1, \ldots, H\)</span>) es el tamaño relativo del estrato <span class="math inline">\(h\)</span> y <span class="math inline">\(S^2_{y_{h}}\)</span> es la varianza de la medida de resumen en el estrato <span class="math inline">\(h\)</span>.</p>
 </div>
-<div id="estratificación-óptima-lh" class="section level3" number="6.3.3">
-<h3><span class="header-section-number">6.3.3</span> Estratificación óptima (LH)</h3>
-<p><span class="citation"><a href="#ref-Lavallee_Hidiroglou_1988" role="doc-biblioref">Lavallée y Hidiroglou</a> (<a href="#ref-Lavallee_Hidiroglou_1988" role="doc-biblioref">1988</a>)</span> propusieron por primera vez la construcción de una estratificación óptima para poblaciones de encuestas reales, basada en la minimización de la siguiente expresión ligada a la varianza de una estrategia de muestreo estratificada.</p>
+<div id="estratificación-óptima-lh" class="section level3 hasAnchor" number="6.3.3">
+<h3><span class="header-section-number">6.3.3</span> Estratificación óptima (LH)<a href="metodologías-univariadas-sobre-medidas-de-resumen.html#estratificación-óptima-lh" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><span class="citation">Lavallée y Hidiroglou (<a href="#ref-Lavallee_Hidiroglou_1988" role="doc-biblioref">1988</a>)</span> propusieron por primera vez la construcción de una estratificación óptima para poblaciones de encuestas reales, basada en la minimización de la siguiente expresión ligada a la varianza de una estrategia de muestreo estratificada.</p>
 <p><span class="math display">\[
 \sum_{h=1}^{H-1} \left(\frac{N_h}{N}\right)^2\left(\frac{1}{(n-N_H)a_h}-\frac{1}{N_h}\right) S^2_{x_h}
 \]</span></p>
@@ -510,23 +509,23 @@ a_h = \frac{\gamma_h}{\sum_h \gamma_h}
 <p><span class="math display">\[
 \mathbf q = (q_1, q_2, q_3)&#39; = (0.5, 0, 0)&#39;
 \]</span></p>
-<p>La asignación de Neyman corresponderá con <span class="math inline">\(\mathbf q = (0.5, 0, 0.5)&#39;\)</span>; mientras que la asignación de potencia con exponente 0.7 estará dada por <span class="math inline">\(\mathbf q = (0.35, 0.35, 0)&#39;\)</span>. Los detalles técnicos de estos tipos de asignación pueden ser encontrados en <span class="citation"><a href="#ref-Gutierrez_2016" role="doc-biblioref">H. A. Gutiérrez</a> (<a href="#ref-Gutierrez_2016" role="doc-biblioref">2016</a>)</span>.</p>
-<p>La optimización de la función objetivo puede ser llevada a cabo de diferentes formas. En efecto, <span class="citation"><a href="#ref-Lavallee_Hidiroglou_1988" role="doc-biblioref">Lavallée y Hidiroglou</a> (<a href="#ref-Lavallee_Hidiroglou_1988" role="doc-biblioref">1988</a>)</span> utilizaron un algoritmo de optimización (Sethi) para encontrar los valores óptimos. <span class="citation"><a href="#ref-Baillargeon_Rivest_Ferland_2007" role="doc-biblioref">Baillargeon, Rivest, y Ferland</a> (<a href="#ref-Baillargeon_Rivest_Ferland_2007" role="doc-biblioref">2007</a>)</span> definen los pasos necesarios para implementar el procedimiento basado en el algoritmo de Sethi. Asimismo, <span class="citation"><a href="#ref-Kozak_2004" role="doc-biblioref">Kozak</a> (<a href="#ref-Kozak_2004" role="doc-biblioref">2004</a>)</span> definió un algoritmo iterativo mediante arranques aleatorios para optimizar el proceso de minimización de esta técnica de estratificación.</p>
+<p>La asignación de Neyman corresponderá con <span class="math inline">\(\mathbf q = (0.5, 0, 0.5)&#39;\)</span>; mientras que la asignación de potencia con exponente 0.7 estará dada por <span class="math inline">\(\mathbf q = (0.35, 0.35, 0)&#39;\)</span>. Los detalles técnicos de estos tipos de asignación pueden ser encontrados en <span class="citation">H. A. Gutiérrez (<a href="#ref-Gutierrez_2016" role="doc-biblioref">2016</a>)</span>.</p>
+<p>La optimización de la función objetivo puede ser llevada a cabo de diferentes formas. En efecto, <span class="citation">Lavallée y Hidiroglou (<a href="#ref-Lavallee_Hidiroglou_1988" role="doc-biblioref">1988</a>)</span> utilizaron un algoritmo de optimización (Sethi) para encontrar los valores óptimos. <span class="citation">Baillargeon, Rivest, y Ferland (<a href="#ref-Baillargeon_Rivest_Ferland_2007" role="doc-biblioref">2007</a>)</span> definen los pasos necesarios para implementar el procedimiento basado en el algoritmo de Sethi. Asimismo, <span class="citation">Kozak (<a href="#ref-Kozak_2004" role="doc-biblioref">2004</a>)</span> definió un algoritmo iterativo mediante arranques aleatorios para optimizar el proceso de minimización de esta técnica de estratificación.</p>
 </div>
-<div id="estratificación-geométrica-gh" class="section level3" number="6.3.4">
-<h3><span class="header-section-number">6.3.4</span> Estratificación geométrica (GH)</h3>
+<div id="estratificación-geométrica-gh" class="section level3 hasAnchor" number="6.3.4">
+<h3><span class="header-section-number">6.3.4</span> Estratificación geométrica (GH)<a href="metodologías-univariadas-sobre-medidas-de-resumen.html#estratificación-geométrica-gh" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Utilizando las técnicas de estratificación mencionadas anteriormente, algunos autores se percataron de que, para poblaciones de UPM con medidas de resumen sesgadas, las varianzas relativas (coeficientes de variación) de la medida de resumen en cada estrato eran similares; es decir:</p>
 <p><span class="math display">\[
 \frac{S_{x_1}}{\bar{X}_1} \cong \frac{S_{x_2}}{\bar{X}_2} \cong \cdots \cong\frac{S_{x_H}}{\bar{X}_H}  
 \]</span></p>
-<p><span class="citation"><a href="#ref-Gunning_Horgan_2004" role="doc-biblioref">Gunning y Horgan</a> (<a href="#ref-Gunning_Horgan_2004" role="doc-biblioref">2004</a>)</span> tomaron esta evidencia en consideración y desarrollaron este método con el objetivo de que los coeficientes de variación de la medida de resumen tiendan a ser iguales dentro de los estratos y, de esta forma, encontraron que los límites que definían estos grupos estaban conformados en progresión geométrica. Siendo <span class="math inline">\(X\)</span> la variable que contiene la información de la medida de resumen para todas la UPM del marco de muestreo, entonces los límites de los estratos estarán dados por la siguiente expresión:</p>
+<p><span class="citation">Gunning y Horgan (<a href="#ref-Gunning_Horgan_2004" role="doc-biblioref">2004</a>)</span> tomaron esta evidencia en consideración y desarrollaron este método con el objetivo de que los coeficientes de variación de la medida de resumen tiendan a ser iguales dentro de los estratos y, de esta forma, encontraron que los límites que definían estos grupos estaban conformados en progresión geométrica. Siendo <span class="math inline">\(X\)</span> la variable que contiene la información de la medida de resumen para todas la UPM del marco de muestreo, entonces los límites de los estratos estarán dados por la siguiente expresión:</p>
 <p><span class="math display">\[
 b_h = \min(X) \left( \frac{\max X}{\min X} \right) ^ {h/L}; \ \ \ \ \ \ \ \ h = 1, 2, \ldots, H-1.
 \]</span></p>
 <p>Es posible encontrar que los coeficientes de variación de los estratos conformados por estos límites son equivalentes y por ende, este método es óptimo para encontrar mejores formas de estratificar teniendo en cuenta como función objetivo la variación relativa dentro los estratos.</p>
 </div>
 </div>
-<h3>Referencias</h3>
+<h3>Referencias<a href="referencias.html#referencias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Baillargeon_Rivest_2011" class="csl-entry">
 Baillargeon, Sophie, y Louis-Paul Rivest. 2011. <span>«The construction of stratified designs in R with the package stratification»</span>. <em>Survey Methodology</em> 37 (1): 53-65.
@@ -617,7 +616,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>10.3 Otros estimadores de muestreo | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="10.3 Otros estimadores de muestreo | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-01-26" />
+<meta name="date" content="2022-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="el-estimador-de-hájek-para-medias-y-proporciones.html"/>
 <link rel="next" href="estimadores-de-calibración.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -466,8 +465,8 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="otros-estimadores-de-muestreo" class="section level2" number="10.3">
-<h2><span class="header-section-number">10.3</span> Otros estimadores de muestreo</h2>
+<div id="otros-estimadores-de-muestreo" class="section level2 hasAnchor" number="10.3">
+<h2><span class="header-section-number">10.3</span> Otros estimadores de muestreo<a href="otros-estimadores-de-muestreo.html#otros-estimadores-de-muestreo" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>En presencia de información auxiliar es posible mejorar la eficiencia de la estimación acudiendo a diferentes formas funcionales que estiman el total; por ejemplo, con el estimador de razón:</p>
 <p><span class="math display">\[
 \hat{t}_{y, r} = t_x \frac{\sum_s d_k y_k}{\sum_s d_k x_k}
@@ -483,18 +482,18 @@ div.csl-indent {
 \]</span></p>
 <p>Además, es posible mejorar la estimación del total actual <span class="math inline">\(t_y^{(t)}\)</span> al tener en cuenta la información inducida por el traslape de la encuesta en el segundo periodo, así:</p>
 <p><span class="math display">\[
-\tilde{t}_{y^{(t)}} = \alpha \hat{t}_{y^{(t)}} 
+\tilde{t}_{y^{(t)}} = \alpha \hat{t}_{y^{(t)}}
 + (1 -\alpha) (\tilde{t}_{y^{(t-1)}} + \hat{\Delta})
 \]</span></p>
 <p>En donde <span class="math inline">\(0 &lt; \alpha &lt; 1\)</span>. Por otro lado, si el interés está en estimar algunas características asociadas con la pobreza, es posible utilizar estimadores más complejos. Siendo <span class="math inline">\(y_k\)</span> el ingreso del individuo <span class="math inline">\(k\)</span> y <span class="math inline">\(l\)</span> el umbral de pobreza, entonces el siguiente estimador puede ser utilizado</p>
 <p><span class="math display">\[
-\hat{F}_{\alpha}=\frac{1}{N}\sum_{k\in s} d_k 
+\hat{F}_{\alpha}=\frac{1}{N}\sum_{k\in s} d_k
 \left(\frac{l-y_k}{l}\right)^{\alpha}I(y_k&lt;l)
 \]</span></p>
 <p>En donde <span class="math inline">\(I(y_k&lt;l)\)</span> es una variable indicadora que toma el valor uno si <span class="math inline">\(y_k&lt;l\)</span> o cero, en cualquier otro caso. Note que si <span class="math inline">\(\alpha = 0\)</span>, se tiene una estimación de la incidencia de la pobreza y si <span class="math inline">\(\alpha = 1\)</span>, se obtiene un estimación de la brecha de la pobreza <span class="citation">(<a href="#ref-Foster_Greer_Thorbecke_1984" role="doc-biblioref">Foster, Greer, y Thorbecke 1984</a>)</span>.</p>
-<p>La selección del estimador está altamente relacionada con el diseño de la encuesta. Por ejemplo, si se pretende estimar un indicador para un periodo de tiempo definido, el diseño de la encuesta no debería inducir un esquema de rotación que tenga traslape de hogares, puesto que la correlación del indicador induciría un aumento de su varianza y por ende pérdida de eficiencia. Sin embargo, si se desea estimar el cambio del indicador entre dos periodos de tiempos, es necesario contar con un esquema de rotación que asegure un tamaño de muestra suficiente para estimar con precisión este cambio. <span class="citation"><a href="#ref-Cochran_1977" role="doc-biblioref">Cochran</a> (<a href="#ref-Cochran_1977" role="doc-biblioref">1977, sec. 12.13</a>)</span> afirma que, cuando el interés se centra tanto en la estimación del indicador en el periodo actual como en la estimación del cambio entre periodos, es recomendable tener una tasa de traslape de 2/3, 3/4 o 4/5 de una ronda a otra.</p>
+<p>La selección del estimador está altamente relacionada con el diseño de la encuesta. Por ejemplo, si se pretende estimar un indicador para un periodo de tiempo definido, el diseño de la encuesta no debería inducir un esquema de rotación que tenga traslape de hogares, puesto que la correlación del indicador induciría un aumento de su varianza y por ende pérdida de eficiencia. Sin embargo, si se desea estimar el cambio del indicador entre dos periodos de tiempos, es necesario contar con un esquema de rotación que asegure un tamaño de muestra suficiente para estimar con precisión este cambio. <span class="citation">Cochran (<a href="#ref-Cochran_1977" role="doc-biblioref">1977, sec. 12.13</a>)</span> afirma que, cuando el interés se centra tanto en la estimación del indicador en el periodo actual como en la estimación del cambio entre periodos, es recomendable tener una tasa de traslape de 2/3, 3/4 o 4/5 de una ronda a otra.</p>
 </div>
-<h3>Referencias</h3>
+<h3>Referencias<a href="referencias.html#referencias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Cochran_1977" class="csl-entry">
 Cochran, W. G. 1977. <em>Sampling Techniques</em>. Third Edition. Wiley.
@@ -570,7 +569,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

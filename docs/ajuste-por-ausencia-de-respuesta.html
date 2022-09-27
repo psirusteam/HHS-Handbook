@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>11.4 Ajuste por ausencia de respuesta | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="11.4 Ajuste por ausencia de respuesta | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-01-26" />
+<meta name="date" content="2022-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="descarte-de-las-unidades-no-elegibles.html"/>
 <link rel="next" href="calibración-de-los-factores-de-expansión.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -466,8 +465,8 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="ajuste-por-ausencia-de-respuesta" class="section level2" number="11.4">
-<h2><span class="header-section-number">11.4</span> Ajuste por ausencia de respuesta</h2>
+<div id="ajuste-por-ausencia-de-respuesta" class="section level2 hasAnchor" number="11.4">
+<h2><span class="header-section-number">11.4</span> Ajuste por ausencia de respuesta<a href="ajuste-por-ausencia-de-respuesta.html#ajuste-por-ausencia-de-respuesta" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>En este paso los pesos de los respondientes efectivos (ER) se ajustan para tener en cuenta a los que no respondieron (ENR). Al final del proceso, los pesos de los ER se incrementan para compensar el hecho de que algunas unidades elegibles no proveyeron información. Para el manejo efectivo de la ausencia de respuesta se consideran las siguientes variables aleatorias:</p>
 <p><span class="math display">\[
 I_k=
@@ -499,7 +498,7 @@ Pr[ k\in s_{ER}|k\in (s_{ER} \cup s_{ENR})]=Pr[D_k = 1|I_k = 1]=\phi_k
 <p><span class="math display">\[
 \phi_k = f(\mathbf{y}_k, \beta)   \ \ \ \ \ \ \ \ \forall \ k \in (s_{ER} \cup s_{ENR})
 \]</span></p>
-<p>En este caso, como no es posible tener acceso a la variables de interés para todos los individuos en la muestra de unidades elegibles (precisamente porque no todos respondieron), entonces no es posible estimar el patrón de ausencia de respuesta y por ende habrán problemas de sesgo. Por otra parte, <span class="citation"><a href="#ref-Kim_Riddles_2012" role="doc-biblioref">Kim y Riddles</a> (<a href="#ref-Kim_Riddles_2012" role="doc-biblioref">2012</a>)</span> muestran que es posible utilizar un modelo basado de estimación de las probabilidades de respuesta (<em>propensity score</em>). De esta forma, teniendo en cuenta que la probabilidad de que un individuo conteste es <span class="math inline">\(\phi_k = Pr(k \in s_{ER})\)</span>, al suponer que existe acceso al vector de información auxiliar <span class="math inline">\(\mathbf{z}_k\)</span> conocido para todo <span class="math inline">\(k\in (s_{ER} \cup s_{ENR})\)</span> es posible estimarla, por ejemplo, por medio de un modelo de regresión logística; esto es,</p>
+<p>En este caso, como no es posible tener acceso a la variables de interés para todos los individuos en la muestra de unidades elegibles (precisamente porque no todos respondieron), entonces no es posible estimar el patrón de ausencia de respuesta y por ende habrán problemas de sesgo. Por otra parte, <span class="citation">Kim y Riddles (<a href="#ref-Kim_Riddles_2012" role="doc-biblioref">2012</a>)</span> muestran que es posible utilizar un modelo basado de estimación de las probabilidades de respuesta (<em>propensity score</em>). De esta forma, teniendo en cuenta que la probabilidad de que un individuo conteste es <span class="math inline">\(\phi_k = Pr(k \in s_{ER})\)</span>, al suponer que existe acceso al vector de información auxiliar <span class="math inline">\(\mathbf{z}_k\)</span> conocido para todo <span class="math inline">\(k\in (s_{ER} \cup s_{ENR})\)</span> es posible estimarla, por ejemplo, por medio de un modelo de regresión logística; esto es,</p>
 <p><span class="math display">\[
 \hat{\phi}_k = \frac{\exp\{\mathbf{z}_k&#39;\hat{\boldsymbol{\beta}}\}}{1 + \exp\{\mathbf{z}_k&#39;\hat{\boldsymbol{\beta}}\}}   \ \ \ \ \ \ \ \ \forall \ k \in (s_{ER} \cup s_{ENR})
 \]</span></p>
@@ -518,7 +517,7 @@ d_{4k} = \frac{d_{3k}}{\hat{\phi_k}}  \ \ \ \ \ \ \ \ \forall \ k  \in s_{ER}
 \]</span></p>
 <p>El nuevo peso ajustado por la ausencia de respuesta estará dado por:</p>
 <p><span class="math display">\[
-d_{4k} = \frac{d_{3k}}{\phi_{q}} 
+d_{4k} = \frac{d_{3k}}{\phi_{q}}
 = d_{3k}\frac{\sum_{s_q}d_{3k}}{\sum_{s_{ER}\cap s_q}d_{3k}}
 \]</span></p>
 <p>En un escenario más complejo, si las probabilidades de respuesta fueron estimadas con un modelo de <em>propensity score</em> y, teniendo en cuenta que las predicciones de estas probabilidades varían entre cero y uno, es posible crear clases de individuos (respondientes y no respondientes) con probabilidades similares. En este caso, se asumiría que las unidades dentro de una misma clase tendrán la misma configuración de covariables, o al menos, una probabilidad de respuesta estimada similar <span class="math inline">\(\hat\phi_k\)</span>. Así, dentro de cada clase, las unidades serían tratadas como si hubiesen sido aleatorizadas al tratamiento (responder) o al control (no responder).</p>
@@ -537,7 +536,7 @@ d_{4k} = \frac{d_{3k}}{\phi_{q}}
 </ol>
 <p>Nótese que, si todas las unidades dentro de una clase tienen la misma probabilidad de responder, entonces la tasa de repuesta no ponderada es la mejor opción. Además, si dentro de las clases las unidades tienen una probabilidad de responder muy disímil, entonces el promedio no ponderado (o ponderado) del PS puede usarse. De la misma manera, la tasa estimada de repuesta puede ser ineficiente si los pesos de muestreo varían demasiado, pero la probabilidad de respuesta es similar en cada clase. Por último, la mediana se considera si la distribución de la probabilidad de respuesta es sesgada.</p>
 </div>
-<h3>Referencias</h3>
+<h3>Referencias<a href="referencias.html#referencias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Kim_Riddles_2012" class="csl-entry">
 Kim, Jae Kwang, y Minsun Kim Riddles. 2012. <span>«Some theory for propensity-score-adjustment estimators in survey sampling»</span>. <em>Survey Methodology</em> 38 (2): 157-65.
@@ -613,7 +612,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

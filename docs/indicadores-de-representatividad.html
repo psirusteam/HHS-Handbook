@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>13.2 Indicadores de representatividad | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="13.2 Indicadores de representatividad | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-01-26" />
+<meta name="date" content="2022-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="el-concepto-de-representatividad.html"/>
 <link rel="next" href="clasificación-de-la-ausencia-de-respuesta.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -466,22 +465,22 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="indicadores-de-representatividad" class="section level2" number="13.2">
-<h2><span class="header-section-number">13.2</span> Indicadores de representatividad</h2>
+<div id="indicadores-de-representatividad" class="section level2 hasAnchor" number="13.2">
+<h2><span class="header-section-number">13.2</span> Indicadores de representatividad<a href="indicadores-de-representatividad.html#indicadores-de-representatividad" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Como se mencionó anteriormente, la mayoría de las encuestas adolecen de falta de respuesta y este fenómeno puede afectar seriamente la calidad de
 los resultados de una encuesta. De hecho, las estimaciones de las características de la población estarán sesgadas si, debido a la falta de respuesta, algunos grupos de la población quedan sobre-representados o sub-representados; el problema se agrava cuando estos grupos
 se comportan de manera diferente con respecto a las variables de la
 encuesta. En referencia a la ausencia de respuesta de unidad, en general los INE de la región a menudo usan la tasa de respuesta de la encuesta como un indicador de la calidad de la encuesta.</p>
-<p>Dado que una tasa de respuesta baja no implica necesariamente que la precisión de las estimaciones de la encuesta sea deficiente, centrarse solo en la tasa de respuesta como indicador de la calidad de la encuesta puede ser engañoso. Por ejemplo, <span class="citation"><a href="#ref-Bethlehem_Cobben_Schouten_2009" role="doc-biblioref">Bethlehem, Cobben, y Schouten</a> (<a href="#ref-Bethlehem_Cobben_Schouten_2009" role="doc-biblioref">2009</a>)</span> ilustran esta situación con un ejemplo de la encuesta holandesa POLS en 1998 (Encuesta Integrada de Condiciones de Vida de los Hogares). Después de un mes de trabajo de campo, la tasa de respuesta fue del 47,2%, mientras que después del período completo de dos meses, la tasa había aumentado al 59,7%. El modo de recolección de datos en el primer mes fue CAPI (entrevista
+<p>Dado que una tasa de respuesta baja no implica necesariamente que la precisión de las estimaciones de la encuesta sea deficiente, centrarse solo en la tasa de respuesta como indicador de la calidad de la encuesta puede ser engañoso. Por ejemplo, <span class="citation">Bethlehem, Cobben, y Schouten (<a href="#ref-Bethlehem_Cobben_Schouten_2009" role="doc-biblioref">2009</a>)</span> ilustran esta situación con un ejemplo de la encuesta holandesa POLS en 1998 (Encuesta Integrada de Condiciones de Vida de los Hogares). Después de un mes de trabajo de campo, la tasa de respuesta fue del 47,2%, mientras que después del período completo de dos meses, la tasa había aumentado al 59,7%. El modo de recolección de datos en el primer mes fue CAPI (entrevista
 personal asistida por computadora). Los que no respondieron fueron
 contactados en el segundo mes con CATI (Entrevista Telefónica Asistida
 por Computadora) si tenían un teléfono fijo en la lista. El segundo mes de trabajo de campo aumentó la respuesta en un 12,5%. Sin embargo, esto no resultó en mejores estimaciones puesto que el sesgo de los estimadores aumentó a partir del segundo mes, dado que las personas que habían reportado un número telefónico diferían de las que no reportaron este contacto.</p>
 <p>Adicional a la tasa de no respuesta, se necesitan indicadores
 de calidad de la encuesta que proporcionen más información sobre el
 posible riesgo de estimadores sesgados.</p>
-<div id="indicadores-r" class="section level3" number="13.2.1">
-<h3><span class="header-section-number">13.2.1</span> Indicadores <span class="math inline">\(R\)</span></h3>
-<p><span class="citation"><a href="#ref-Shlomo_Skinner_Schouten_2012" role="doc-biblioref">Shlomo, Skinner, y Schouten</a> (<a href="#ref-Shlomo_Skinner_Schouten_2012" role="doc-biblioref">2012</a>)</span> estudian el uso de los <em>indicadores de representatividad</em> que permiten conocer qué tanto la muestra de respondientes efectivos representa a la población y cómo la composición
+<div id="indicadores-r" class="section level3 hasAnchor" number="13.2.1">
+<h3><span class="header-section-number">13.2.1</span> Indicadores <span class="math inline">\(R\)</span><a href="indicadores-de-representatividad.html#indicadores-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><span class="citation">Shlomo, Skinner, y Schouten (<a href="#ref-Shlomo_Skinner_Schouten_2012" role="doc-biblioref">2012</a>)</span> estudian el uso de los <em>indicadores de representatividad</em> que permiten conocer qué tanto la muestra de respondientes efectivos representa a la población y cómo la composición
 de la respuesta en la muestra diferiría de la composición de la población finita. Estos indicadores han probado ser una guía importante para determinar en qué medida el sesgo causado por la ausencia de respuesta afecta la encuesta. De hecho, en Europa el proyecto RISQ (<em>Representativity Indicators for Survey Quality</em>) está basado en este enfoque y pretende desarrollar y probar indicadores R en varias encuestas de interés. Los países que participan en este proyecto Holanda, Noruega y Eslovenia, en conjunto con las universidad de Southampton (Reino Unido) y la Universidad de Lovaina (Bélgica).</p>
 <p>Los indicadores <span class="math inline">\(R\)</span> miden hasta qué punto la composición de
 la respuesta a una encuesta se desvía de la muestra original. Si todas las probabilidades de respuesta son iguales, la respuesta
@@ -521,9 +520,9 @@ R_{x}\left(\phi\right)  =  1-2\sqrt{\frac{1}{n-1}\sum_{h=1}^{H}N_{h}\left(\bar{\
 \]</span></p>
 <p>En este caso, <span class="math inline">\(R_{x}\left(\phi\right)\)</span> mide la variación de las probabilidades de respuesta entre clases <span class="math inline">\(X\)</span>. Si se supone que la variación dentro de la clase es cero en todas las clases, entonces <span class="math inline">\(R_{x}\left(\phi\right) = R\left(\phi\right)\)</span>.</p>
 </div>
-<div id="el-indicador-r-en-la-práctica" class="section level3" number="13.2.2">
-<h3><span class="header-section-number">13.2.2</span> El indicador <span class="math inline">\(R\)</span> en la práctica</h3>
-<p><span class="citation"><a href="#ref-Bethlehem_Cobben_Schouten_2009" role="doc-biblioref">Bethlehem, Cobben, y Schouten</a> (<a href="#ref-Bethlehem_Cobben_Schouten_2009" role="doc-biblioref">2009</a>)</span> mencionan que de julio a diciembre de 2005, Statistics Netherlands realizó un seguimiento a gran escala entre los no encuestados en la Encuesta de Población Activa (EPA) de Holanda. En el estudio, se abordó a dos muestras de personas que no respondieron en la EPA utilizando, por un lado, el enfoque de devolución de llamada con el cuestionario completo de la EPA y, por el otro lado, el enfoque de preguntas básicas con un cuestionario muy corto. Se usó CATI en el enfoque de devolución de llamada, y el enfoque de preguntas básicas se utilizó un diseño de recolección mixto que involucró cuestionarios <em>online</em> y recolección presencial con papel y CAPI. Los indicadores R se estimaron utilizando modelos de regresión logística que incluían una gran cantidad de variables explicativas que medían características demográficas, geográficas y socioeconómicas en los hogares. Los resultados de este estudio se dan a continuación:</p>
+<div id="el-indicador-r-en-la-práctica" class="section level3 hasAnchor" number="13.2.2">
+<h3><span class="header-section-number">13.2.2</span> El indicador <span class="math inline">\(R\)</span> en la práctica<a href="indicadores-de-representatividad.html#el-indicador-r-en-la-práctica" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><span class="citation">Bethlehem, Cobben, y Schouten (<a href="#ref-Bethlehem_Cobben_Schouten_2009" role="doc-biblioref">2009</a>)</span> mencionan que de julio a diciembre de 2005, Statistics Netherlands realizó un seguimiento a gran escala entre los no encuestados en la Encuesta de Población Activa (EPA) de Holanda. En el estudio, se abordó a dos muestras de personas que no respondieron en la EPA utilizando, por un lado, el enfoque de devolución de llamada con el cuestionario completo de la EPA y, por el otro lado, el enfoque de preguntas básicas con un cuestionario muy corto. Se usó CATI en el enfoque de devolución de llamada, y el enfoque de preguntas básicas se utilizó un diseño de recolección mixto que involucró cuestionarios <em>online</em> y recolección presencial con papel y CAPI. Los indicadores R se estimaron utilizando modelos de regresión logística que incluían una gran cantidad de variables explicativas que medían características demográficas, geográficas y socioeconómicas en los hogares. Los resultados de este estudio se dan a continuación:</p>
 <ol style="list-style-type: decimal">
 <li>Se reportó que el valor del indicador <span class="math inline">\(R\)</span> para la respuesta inicial de la EPA es igual a 0.8, que es menor que el valor ideal de 1. Entonces, esta respuesta no es fuertemente representativa. La aplicación del enfoque de devolución de llamada aumentó la
 tasa de respuesta del 62.2% al 76.9%. Luego de esto, el valor del indicador <span class="math inline">\(R\)</span> aumentó de 0.8 a 0.85. Como los intervalos de confianza no se superponían, hubo indicios de que la respuesta adicional mejoró la composición del conjunto de datos.</li>
@@ -541,7 +540,7 @@ la decisión de iniciar esfuerzos adicionales para obtener datos para grupos esp
 <p>El uso de esta metodología durante la fase de recolección de datos podría revelar que la composición de los datos observados se está desviando cada vez más de la estructura poblacional esperada. Esto podría llevar a la decisión de enfocar el resto del proceso de recolección en los grupos que están subrepresentados. Estos cambios en medio de la encuesta se conocen en la literatura especializada como <em>diseños receptivos</em>. Otra forma de utilizar el indicador <span class="math inline">\(R\)</span> para controlar el proceso de la encuesta es analizar la representatividad de una versión anterior de la encuesta. Los resultados de dicho análisis pueden proporcionar información para implementar una estrategia mejorada de recopilación de datos para una nueva versión de la encuesta.</p>
 </div>
 </div>
-<h3>Referencias</h3>
+<h3>Referencias<a href="referencias.html#referencias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Bethlehem_Cobben_Schouten_2009" class="csl-entry">
 Bethlehem, Jelke, Fannie Cobben, y Barry Schouten. 2009. <span>«Indicators for the Representativeness of Survey Response»</span>. En <em>Statistics Canada’s International Symposium</em>, 10.
@@ -617,7 +616,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

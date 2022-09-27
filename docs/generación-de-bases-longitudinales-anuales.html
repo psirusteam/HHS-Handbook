@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>18.3 Generación de bases longitudinales anuales | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="18.3 Generación de bases longitudinales anuales | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-01-26" />
+<meta name="date" content="2022-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="generación-de-bases-longitudinales-para-dos-periodos-consecutivos.html"/>
 <link rel="next" href="análisis-de-flujos-brutos.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -466,13 +465,13 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="generación-de-bases-longitudinales-anuales" class="section level2" number="18.3">
-<h2><span class="header-section-number">18.3</span> Generación de bases longitudinales anuales</h2>
-<p>En esta sección se describen los pasos necesarios para combinar bases de datos longitudinales que permitan hacer seguimiento a la situación de los hogares a lo largo de todo un año. La metodología que se recomienda implementar es una generalización de los pasos descritos en <span class="citation"><a href="#ref-Verma_Betti_Ghellini" role="doc-biblioref">Verma, Betti, y Ghellini</a> (<a href="#ref-Verma_Betti_Ghellini" role="doc-biblioref">2006</a>)</span>, que define un procedimiento secuencial para la creación de los factores de expansión en el panel. El raciocinio de este procedimiento sigue exactamente los mismos pasos que los mencionados anteriormente en la creación de bases longitudinales para dos periodos consecutivos. Es decir, primero es necesario crear el conjunto de pesos iniciales (transversales en el primer periodo) para luego definir los pesos finales (longitudinales en los cuatro trimestres de todo un año).</p>
+<div id="generación-de-bases-longitudinales-anuales" class="section level2 hasAnchor" number="18.3">
+<h2><span class="header-section-number">18.3</span> Generación de bases longitudinales anuales<a href="generación-de-bases-longitudinales-anuales.html#generación-de-bases-longitudinales-anuales" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>En esta sección se describen los pasos necesarios para combinar bases de datos longitudinales que permitan hacer seguimiento a la situación de los hogares a lo largo de todo un año. La metodología que se recomienda implementar es una generalización de los pasos descritos en <span class="citation">Verma, Betti, y Ghellini (<a href="#ref-Verma_Betti_Ghellini" role="doc-biblioref">2006</a>)</span>, que define un procedimiento secuencial para la creación de los factores de expansión en el panel. El raciocinio de este procedimiento sigue exactamente los mismos pasos que los mencionados anteriormente en la creación de bases longitudinales para dos periodos consecutivos. Es decir, primero es necesario crear el conjunto de pesos iniciales (transversales en el primer periodo) para luego definir los pesos finales (longitudinales en los cuatro trimestres de todo un año).</p>
 <p>El primer paso en la generación de los pesos longitudinales consiste en realizar una consolidación de bases de datos, en donde se combinen únicamente los periodos de interés. Siguiendo con el ejemplo del esquema 4(0)1, correspondería a los cuatro trimestres del año. Para esto, es necesario filtrar cada una de las bases transversales con el identificador del panel de interés. De esta forma se tendrán cuatro bases de datos conteniendo únicamente la información de estos paneles comunes.</p>
 <p>La determinación de los pesos iniciales viene supeditada a los pesos básicos ajustados por cobertura <span class="math inline">\(d_{(1,k)}\)</span> del procesamiento transversal del primer trimestre que se quiere combinar. En general, los pesos básicos se crean a partir del inverso de la probabilidad de inclusión de los paneles; puesto que, al realizar la combinación de los cuatro trimestres en un esquema 4(0)1, es evidente que hay un solo panel coincidente y como la muestra transversal contiene cuatro paneles, entonces <span class="math inline">\(Pr(\text{selección de paneles}) = 1/4\)</span>. En resumen,</p>
 <p><span class="math display">\[
-d_{(1,k)}^{básico}= \dfrac{d_{(1,k)}}{Pr(\text{selección de paneles})} = 4 \times d_{(1,k)} 
+d_{(1,k)}^{básico}= \dfrac{d_{(1,k)}}{Pr(\text{selección de paneles})} = 4 \times d_{(1,k)}
 \]</span></p>
 <p>Como se anotó anteriormente, se debe seguir un proceso riguroso de identificación secuencial de respondientes y no respondientes para poder realizar la combinación de las correspondientes bases de datos transversales. Este procedimiento debe tener en cuenta únicamente a las unidades muestrales que respondieron sistemáticamente en cada uno de los periodos de interés. Por lo tanto se sugiere que se sigan los siguientes pasos:</p>
 <ol style="list-style-type: decimal">
@@ -513,7 +512,7 @@ d_{(1234,k)}^{inicial}=d_{(1,k)}^{inicial}
 
 </div>
 <!-- </div> -->
-<h3>Referencias</h3>
+<h3>Referencias<a href="referencias.html#referencias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Verma_Betti_Ghellini" class="csl-entry">
 Verma, Vijay, Gianni Betti, y Giulio Ghellini. 2006. <span>«Cross-sectional and longitudinal weighting in a rotational household panel: applications to EU-SILC»</span>, 36.
@@ -586,7 +585,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

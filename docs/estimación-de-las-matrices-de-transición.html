@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>19.3 Estimación de las matrices de transición | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="19.3 Estimación de las matrices de transición | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-01-26" />
+<meta name="date" content="2022-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="modelos-de-markov.html"/>
 <link rel="next" href="criterios-de-calidad-y-difusión.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -466,10 +465,18 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="estimación-de-las-matrices-de-transición" class="section level2" number="19.3">
-<h2><span class="header-section-number">19.3</span> Estimación de las matrices de transición</h2>
+<div id="estimación-de-las-matrices-de-transición" class="section level2 hasAnchor" number="19.3">
+<h2><span class="header-section-number">19.3</span> Estimación de las matrices de transición<a href="estimación-de-las-matrices-de-transición.html#estimación-de-las-matrices-de-transición" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Considere que se dispone de información sobre la situación laboral de 41274 personas para los dos primeros trimestres del 2020 (año en el que la pandemia por COVID-19 produjo alteraciones importantes en el levantamiento regualr de las eneustas y en el mercado de trabajo). La clasificación del estatus ocupacional en la muestra se da en la siguiente tabla; la cual contiene los complementos columna y los complementos fila para las personas que no respondieron en alguno de los dos períodos. Nótese que los valores del complemento fila son mucho mayores que el complemento columna, lo que puede ser causado por la pandemia. Nótese que la suma de todas las entradas de la tabla de clasificación da como resultado el número de personas en la muestra traslapada, es decir 41,274 individuos.</p>
 <table>
+<colgroup>
+<col width="26%" />
+<col width="10%" />
+<col width="12%" />
+<col width="15%" />
+<col width="12%" />
+<col width="22%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th>Estado (T1/T2)</th>
@@ -525,6 +532,14 @@ div.csl-indent {
 </table>
 <p>Como se supone que la muestra proviene de un muestreo complejo sobre la población del país, para utilizar el método de estimación propuesto en esta sección, se necesita primero estimar el tamaño de la población en cada celda de la tabla anterior. Estas estimaciones se dan en la siguiente tabla donde el tamaño de población estimado es 15,597,572.</p>
 <table>
+<colgroup>
+<col width="25%" />
+<col width="13%" />
+<col width="12%" />
+<col width="14%" />
+<col width="13%" />
+<col width="21%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th>Estado (T1/T2)</th>
@@ -664,6 +679,13 @@ div.csl-indent {
 </table>
 <p>El modelo C considera que los parámetros de la primera etapa del proceso (no observable) están definidos como las probabilidades de transición de una clasificación a otra en los periodos de observación. Estas estimaciones definen las matrices de transición laboral, que para los periodos estudiados corresponden a las entradas de la siguiente tabla. En particular se resalta el hecho de que el 12,1% de los trabajadores formales pasaron directamente a la inactividad; mientras que el cambio fue mayor en los trabajadores informales y en los desocupados, de los cuales el 41,3% y el 46,6% pasaron a la inactividad, respectivamente. Además, en los periodos estudiados, el 92,1% de los individuos inactivos siguió en este estado.</p>
 <table>
+<colgroup>
+<col width="16%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th>Estado (T1/T2)</th>
@@ -705,7 +727,13 @@ div.csl-indent {
 </tbody>
 </table>
 <p>Por otro lado, las probabilidades iniciales de clasificación en el primer periodo de interés se encuentran en la siguiente tabla, en la que también se observan las probabilidades de transición de los no respondientes y las probabilidades de transición de los respondientes, diferenciadas por condición de ocupación en el primer trimestre de 2020. Nótese que la probabilidad inicial de respuesta se estimó en <span class="math inline">\(\hat{\psi}=0.981 (0.002)\)</span> para todas las clasificaciones de la condición de ocupación. Se puede notar que, dado que <span class="math inline">\(1-\hat{\rho}_{MM}\)</span> indica la probabilidad de que un individuo responda en el segundo trimestre de 2020 dado que no respondió en el primer trimestre de 2020, condicionado a cada condición de ocupación, entonces las personas informales e inactivas son más propensos a no responder en ambos periodos, por lo que habría indicios de un patrón de ausencia de respuesta no ignorable que el modelo ha logrado identificar correctamente.</p>
-<table>
+<table style="width:100%;">
+<colgroup>
+<col width="25%" />
+<col width="21%" />
+<col width="26%" />
+<col width="26%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th>Trimestre I-2020</th>
@@ -744,6 +772,13 @@ div.csl-indent {
 <p>Por último, sería deseable establecer si hay diferencias importantes en el impacto que la pandemia causó en el mercado laboral entre hombre y mujeres. Para realizar estas comparaciones se ajustó el modelo C en cada una de las subpoblaciones, encontrando ajustes precisos y satisfactorios con <span class="math inline">\(\chi^2_{hombres} = 0,350\)</span> y <span class="math inline">\(\chi^2_{hombres} = 0,470\)</span>. La estimación de la probabilidad inicial de respuesta en ambos casos se calculó en <span class="math inline">\(\hat{\psi}=0.981 (0.002)\)</span>, y las estimaciones de las probabilidades <span class="math inline">\(\hat{\eta}\)</span> y <span class="math inline">\(\hat{\rho}_{RR}\)</span> no tuvieron cambios significativos entre los grupos. Sin embargo, la estimación de las probabilidades <span class="math inline">\(\hat{\rho}_{MM}\)</span> mostró diferencias entre hombres y mujeres que fueron clasificados como trabajadores formales y inactivos en el primer trimestre del 2020. En particular, para el grupo de trabajadores formales, <span class="math inline">\(\hat{\rho}_{MM}^{hombre} = 0,253\)</span>, mientras que <span class="math inline">\(\hat{\rho}_{MM}^{mujer} = 0,331\)</span>, lo cual indica que las mujeres formales eran más propensas a no responder en el segundo trimestre de 2020, comparadas con los hombres. Por otro lado, para el grupo de inactivos, <span class="math inline">\(\hat{\rho}_{MM}^{hombre} = 0,112\)</span>, mientras que <span class="math inline">\(\hat{\rho}_{MM}^{mujer} = 0,000\)</span>, lo cual indica que las mujeres desocupadas definitivamente tuvieron una menor probabilidad a no responder en el segundo trimestre de 2020 que los hombres.</p>
 <p>La estimación de las matrices de transición para ambos subgrupos poblacionales se muestra en las siguientes tablas. Es importante resaltar que, según las estimaciones resultantes de este análisis, la peor parte se la llevaron las mujeres. Nótese que, para los trabajadores formales, existe una diferencia importante entre hombres y mujeres, siendo los primeros los menos afectados al pasar a la inactividad: 10,2% para los hombres, 14,5% para las mujeres. Este mismo fenómeno se presenta con más fuerza en el grupo de los trabajadores informales, en donde el 36,2% de los hombres pasó a la inactividad, mientras que el 46,9% de las mujeres pasó a la inactividad. De la misma forma, dentro de los individuos desocupados, un mayor porcentaje de mujeres pasó de la desocupación a la inactividad: 39,2% de hombres, contra un 53,4% de mujeres. Finalmente, el porcentaje de personas que siguió en la inactividad es mayor en las mujeres: 90,2% para los hombres, frenta a un 93,1% para las mujeres.</p>
 <table>
+<colgroup>
+<col width="16%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th><span class="math inline">\(p_{ij}\)</span> (Hombres)</th>
@@ -785,6 +820,13 @@ div.csl-indent {
 </tbody>
 </table>
 <table>
+<colgroup>
+<col width="16%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th><span class="math inline">\(p_{ij}\)</span> (Mujeres)</th>
@@ -895,7 +937,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

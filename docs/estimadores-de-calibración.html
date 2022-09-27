@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>10.4 Estimadores de calibración | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="10.4 Estimadores de calibración | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-01-26" />
+<meta name="date" content="2022-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="otros-estimadores-de-muestreo.html"/>
 <link rel="next" href="construcción-de-los-factores-de-expansión.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -466,9 +465,9 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="estimadores-de-calibración" class="section level2" number="10.4">
-<h2><span class="header-section-number">10.4</span> Estimadores de calibración</h2>
-<p>La calibración se ha establecido como un importante instrumento metodológico en la producción de grandes masas de estadísticas <span class="citation">(<a href="#ref-Sar08" role="doc-biblioref">C.-E. Särndal 2007</a>)</span>. Esta metodología integra información auxiliar en las estimaciones de la encuesta, no solo para garantizar la consistencia con las cifras oficiales reportadas por los INE, sino para hacer más eficiente el proceso de estimación. <span class="citation"><a href="#ref-Gutierrez_2016" role="doc-biblioref">H. A. Gutiérrez</a> (<a href="#ref-Gutierrez_2016" role="doc-biblioref">2016</a>)</span> da una breve descripción de este método:</p>
+<div id="estimadores-de-calibración" class="section level2 hasAnchor" number="10.4">
+<h2><span class="header-section-number">10.4</span> Estimadores de calibración<a href="estimadores-de-calibración.html#estimadores-de-calibración" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>La calibración se ha establecido como un importante instrumento metodológico en la producción de grandes masas de estadísticas <span class="citation">(<a href="#ref-Sar08" role="doc-biblioref">C.-E. Särndal 2007</a>)</span>. Esta metodología integra información auxiliar en las estimaciones de la encuesta, no solo para garantizar la consistencia con las cifras oficiales reportadas por los INE, sino para hacer más eficiente el proceso de estimación. <span class="citation">H. A. Gutiérrez (<a href="#ref-Gutierrez_2016" role="doc-biblioref">2016</a>)</span> da una breve descripción de este método:</p>
 <ol style="list-style-type: decimal">
 <li>Suponga que se tiene acceso a un vector de información auxiliar, <span class="math inline">\(\mathbf{x}_k=(x_{1k}, x_{2k},\ldots,x_{pk})\)</span>, de <span class="math inline">\(p\)</span> variables auxiliares, el cual es conocido para los individuos seleccionados en la muestra.</li>
 <li>Además, por registros administrativos u otras fuentes de confianza, se tiene el conocimiento del total del vector de información auxiliar <span class="math inline">\(\mathbf{t_X}=\sum_{k\in U}\mathbf{x}_k\)</span>.</li>
@@ -481,10 +480,10 @@ la cual es conocida como la ecuación de calibración.</li>
 <li>El resultado de la calibración es un nuevo conjunto de pesos <span class="math inline">\(w_k\)</span> que son muy cercanos al inverso de la probabilidad de inclusión del <span class="math inline">\(k\)</span>-ésimo elemento <span class="math inline">\(d_k=1/\pi_k\)</span></li>
 </ol>
 <p>En general, en América Latina, la estrategia de estimación utilizada por los INE recurre a la metodología de calibración sobre proyecciones poblacionales en los dominios de representatividad de la encuesta. Por ejemplo, departamento, zona urbana, zona rural, sexo y/o grupos de edad. Algunas ventajas de utilizar estos procedimientos es que las estimaciones tendrán un sesgo despreciable, y los errores estándares serán más pequeños al compararlos con los del estimador de Horvitz-Thompson; de esta forma se crea un sistema de ponderación que reproduce la información auxiliar disponible y que es eficiente al momento de estimar cualquier característica de interés en la encuesta. Esta coherencia entre las cifras oficiales y las que la encuesta puede producir hace que sea preferible el uso de los estimadores de calibración.</p>
-<p>En un encuesta de hogares las restricciones de calibración pueden establecerse sobre características de hogares y características de personas al mismo tiempo. De esta forma, por ejemplo, es posible calibrar sobre las proyecciones demográficas de personas y al mismo tiempo controlar las estimaciones del número de hogares en el país de manera conjunta. <span class="citation"><a href="#ref-Estevao_Sarndal_2006" role="doc-biblioref">Estevao y Särndal</a> (<a href="#ref-Estevao_Sarndal_2006" role="doc-biblioref">2006</a>)</span> discuten una amplia variedad de casos en donde se calibra conjuntamente en distintos niveles de desagregación sobre diferentes esquema de muestreo. Por ejemplo, para la <em>Encuesta Continua de Empleo</em> de Bolivia la calibración está inducida por una post-estratificación sobre los tamaños poblacionales de los cruces resultantes entre las variable Departamento (hay 9 departamentos), Zona (rural y urbano) y PET (con dos categorías: mayor o igual a 10 años y menor de 10 años).</p>
+<p>En un encuesta de hogares las restricciones de calibración pueden establecerse sobre características de hogares y características de personas al mismo tiempo. De esta forma, por ejemplo, es posible calibrar sobre las proyecciones demográficas de personas y al mismo tiempo controlar las estimaciones del número de hogares en el país de manera conjunta. <span class="citation">Estevao y Särndal (<a href="#ref-Estevao_Sarndal_2006" role="doc-biblioref">2006</a>)</span> discuten una amplia variedad de casos en donde se calibra conjuntamente en distintos niveles de desagregación sobre diferentes esquema de muestreo. Por ejemplo, para la <em>Encuesta Continua de Empleo</em> de Bolivia la calibración está inducida por una post-estratificación sobre los tamaños poblacionales de los cruces resultantes entre las variable Departamento (hay 9 departamentos), Zona (rural y urbano) y PET (con dos categorías: mayor o igual a 10 años y menor de 10 años).</p>
 <p>En resumen, utilizar este tipo de estimadores garantiza una <em>consistencia estética</em>, puesto que es deseable que las estimaciones puntuales de las encuestas coincidan con los conteos censales, proyecciones poblacionales, registros estadísticos o registros administrativos. Además, existirá un <em>aumento de la precisión</em>, porque en la búsqueda de la mejor estrategia de muestreo, el estadístico quiere obtener cifras precisas y confiables que induzcan intervalos de variación angostos y menores errores de muestreo. Por último, si existe una integración adecuada de la información auxiliar, se <em>disminuye el sesgo</em> generado por la ausencia de respuesta (debido a los individuos) o por la falta de cobertura (debido a los defectos del marco de muestreo).</p>
-<div id="ganancia-en-eficiencia" class="section level3" number="10.4.1">
-<h3><span class="header-section-number">10.4.1</span> Ganancia en eficiencia</h3>
+<div id="ganancia-en-eficiencia" class="section level3 hasAnchor" number="10.4.1">
+<h3><span class="header-section-number">10.4.1</span> Ganancia en eficiencia<a href="estimadores-de-calibración.html#ganancia-en-eficiencia" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Para mostrar cómo los estimadores de calibración inducen menores varianzas que los estimadores comunes, se planeó el siguiente experimento de simulación empírica:</p>
 <ol style="list-style-type: decimal">
 <li>Se generaron cuatro conjuntos de datos que guardan cierto tipo de relación específica entre la variable de interés y las variables de información auxiliar.</li>
@@ -517,16 +516,16 @@ la cual es conocida como la ecuación de calibración.</li>
 \]</span></p>
 <p>Por ende, usar la metodología de calibración supone casi siempre una ganancia en la eficiencia de la estrategia de muestreo.</p>
 </div>
-<div id="diferentes-formas-del-estimador-de-calibración" class="section level3" number="10.4.2">
-<h3><span class="header-section-number">10.4.2</span> Diferentes formas del estimador de calibración</h3>
+<div id="diferentes-formas-del-estimador-de-calibración" class="section level3 hasAnchor" number="10.4.2">
+<h3><span class="header-section-number">10.4.2</span> Diferentes formas del estimador de calibración<a href="estimadores-de-calibración.html#diferentes-formas-del-estimador-de-calibración" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>La calibración es un ajuste que se realiza a los pesos de muestreo con el propósito de que las estimaciones de algunas variables de control reproduzcan de forma perfecta los totales poblacionales de estas variables. Sin embargo, es necesario tener en cuenta las diferencias entre los métodos de calibración, que en general corresponderán con el nivel de desagregación de información auxiliar:</p>
 <ol style="list-style-type: decimal">
 <li>Calibración con variables continuas, que es el caso en donde la calibración se realiza con totales de variables continuas como ingreso o gasto, entre otras.</li>
 <li>Post-estratificación con variables categóricas, que representa el caso en donde la calibración se realiza con los tamaños poblacionales (basados en proyecciones demográficas o registros administrativos) de subgrupos de interés.</li>
 <li><em>Raking</em> con variables categóricas, que se define como una calibración sobre los tamaños marginales de tablas de contingencia de subgrupos de interés. A diferencia del caso anterior, esta calibración no tiene en cuenta los tamaños de los cruces, sino solo los tamaños marginales; por ende, este método induce menos restricciones.</li>
 </ol>
-<div id="postestratificación" class="section level4" number="10.4.2.1">
-<h4><span class="header-section-number">10.4.2.1</span> Postestratificación</h4>
+<div id="postestratificación" class="section level4 hasAnchor" number="10.4.2.1">
+<h4><span class="header-section-number">10.4.2.1</span> Postestratificación<a href="estimadores-de-calibración.html#postestratificación" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>La postestratificación es una de las técnicas más usadas para el ajuste de los pesos de muestreo vía calibración. Este ajuste requiere la definición de categorías poblacionales. Por ejemplo, personas en un determinado grupo de edad, en cierta región y de cierta raza. Este método se implementa dentro de cada uno de los cruces inducidos por las covariables de interés (edad, región, raza). Nótese que, es necesario tener acceso a la información auxiliar a nivel de <em>todos</em> los cruces definidos por los subgrupos. Usualmente corresponden a proyecciones demográficas. En este caso, la suma de los pesos ajustados reproducirán con exactitud los tamaños poblacionales en cada cruce.</p>
 <p>Las categorías formadas para definir los pesos de muestreo se conocen como <em>post-estratos</em> puesto que son definidas después de que la muestra es seleccionada y los datos son recolectados. Esta es una ventaja pues estas variables no necesariamente participan en la planificación del diseño de muestreo. Por ejemplo, en una encuesta de hogares es difícil estratificar por raza, edad, sexo o ciclo educativo alcanzado. Como se conoce que estas variables pueden estar correlacionadas con la pobreza, el ingreso o la ocupación, sería una buena idea contemplarlas en la calibración. Suponiendo que se definen cuatro categorías para la raza, dos para sexo, cinco para la edad, entonces habrían 40 post-estratos y sus respectivas restricciones.</p>
 <p>De esta manera, siendo <span class="math inline">\(g = 1, \ldots, G\)</span> el indicador del cruce poblacional (post-estrato), el estimador de postestratifiación queda definido de la siguiente manera:</p>
@@ -540,17 +539,17 @@ w_k= d_k \frac{N_g}{\hat{N}_g} \ \ \ \ \ (k \in s_g)
 <p>Note que <span class="math inline">\(d_k\)</span> corresponde al peso inducido por el diseño de muestreo, corregido por los ajustes de elegibilidad y por la ausencia de respuesta, los cuales serán presentados en los capítulos posteriores del documento.</p>
 <p>Por último, se debe considerar que la cantidad de postestratos en la calibración está inducido por la cantidad de interacciones en las variables auxiliares. En algunos casos, es posible encontrar cientos de interacciones. Aunque los tamaños de los postestratos se reproduce sin error, esto puede disminuir la eficiencia de la calibración en las variables de interés. Es decir, muchas variables e interacciones hacen que las estimaciones sean inestables, sobre todo si existen cruces con celdas vacías. Es posible que el efecto de las interacciones influencie la creación de los nuevos pesos calibrados y se tengan datos atípicos en los pesos de calibración resultantes.</p>
 </div>
-<div id="raking" class="section level4" number="10.4.2.2">
-<h4><span class="header-section-number">10.4.2.2</span> Raking</h4>
+<div id="raking" class="section level4 hasAnchor" number="10.4.2.2">
+<h4><span class="header-section-number">10.4.2.2</span> Raking<a href="estimadores-de-calibración.html#raking" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>¿Qué sucede si los conteos poblacionales (información auxiliar) no están disponibles para todos los cruces de las variables de calibración? Es posible que los agregados poblacionales de las variables provengan de distintas fuentes y no se pueda llegar a nivel de cruce. En este caso, es factible calibrar los marginales de la tabla cruzada, sin necesidad de calibrar todas sus entradas. En este caso, el número de restricciones decrecería con respecto a la postestratifación, pues se sumaría el número de categorías, mientras que en la postestratificación se multiplican. En el escenario anterior, en donde asumimos cuatro categorías para la raza, dos para sexo, cinco para la edad, entonces habrían únicamente 11 restricciones.</p>
 <p>Para ajustar los marginales de la tabla cruzada, es necesario realizar un procedimiento iterativo (IPFP), el cual no tiene una escritura cerrada <span class="citation">(<a href="#ref-Gutierrez_2016" role="doc-biblioref">H. A. Gutiérrez 2016, cap. 10</a>)</span>. Por ejemplo, si el <em>raking</em> es de dos marginales, se ajustan primero las filas, luego las columnas y así sucesivamente hasta alcanzar la convergencia de los pesos calibrados y el procedimiento se detiene cuando se alcanza una tolerancia prefijada. Sin pérdida de generalidad, bajo este enfoque, los pesos calibrados se escriben de la siguiente manera:</p>
 <p><span class="math display">\[w_k = d_k \times exp(u_h) \times exp(v_g)\]</span></p>
 <p>En donde <span class="math inline">\(u_h\)</span> es una función de los totales marginales de las filas de la tabla cruzada y <span class="math inline">\(v_g\)</span> es una función de los totales marginales de las columnas. El <em>raking</em> permite utilizar variables que pueden ser predictoras de las variables de interés o explicar la probabilidad de responder del hogar (o persona), además de paliar los efectos nocivos que las bajas tasas de cobertura del marco de muestreo conllevan sobre la inferencia.</p>
 </div>
 </div>
-<div id="la-calibración-como-un-cambio-de-paradigma" class="section level3" number="10.4.3">
-<h3><span class="header-section-number">10.4.3</span> La calibración como un cambio de paradigma</h3>
-<p><span class="citation"><a href="#ref-Sar08" role="doc-biblioref">C.-E. Särndal</a> (<a href="#ref-Sar08" role="doc-biblioref">2007</a>)</span> concluye que existen algunas ideas sobre las cuales vale la pena profundizar un poco más. A continuación se reproducen las ideas de <span class="citation"><a href="#ref-Gutierrez_2016" role="doc-biblioref">H. A. Gutiérrez</a> (<a href="#ref-Gutierrez_2016" role="doc-biblioref">2016</a>)</span> sobre estos criterios para enfatizar el uso práctico de los estimadores de calibración:</p>
+<div id="la-calibración-como-un-cambio-de-paradigma" class="section level3 hasAnchor" number="10.4.3">
+<h3><span class="header-section-number">10.4.3</span> La calibración como un cambio de paradigma<a href="estimadores-de-calibración.html#la-calibración-como-un-cambio-de-paradigma" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><span class="citation">C.-E. Särndal (<a href="#ref-Sar08" role="doc-biblioref">2007</a>)</span> concluye que existen algunas ideas sobre las cuales vale la pena profundizar un poco más. A continuación se reproducen las ideas de <span class="citation">H. A. Gutiérrez (<a href="#ref-Gutierrez_2016" role="doc-biblioref">2016</a>)</span> sobre estos criterios para enfatizar el uso práctico de los estimadores de calibración:</p>
 <ol style="list-style-type: decimal">
 <li><p>La calibración tiene un vínculo íntimo con la práctica. El uso de los métodos de ponderación de las agencias que manejan las estadísticas oficiales es una costumbre que empezó con la ponderación de unidades mediante el inverso de su probabilidad de inclusión y siguió con las ponderaciones surgidas del enfoque de post-estratificación. Las ponderaciones de calibración extienden las anteriores ideas. La calibración es reciente como término en el muestreo, pero no lo es como técnica para producir ponderaciones. Algunos autores derivaron estas ponderaciones con el argumento de que deberían diferir de la manera más mínima posible de los pesos originales. Otros autores encontraron las ponderaciones al reconocer que un estimador de regresión lineal podría ser escrito como una suma ponderada de los valores de la característica de interés. De allí surgieron términos tales como ponderación de muestreo, ponderación de regresión y ponderación de caso.</p></li>
 <li><p>En algunas ocasiones el término calibración se refiere a una forma de conseguir estimativos consistentes<a href="#fn10" class="footnote-ref" id="fnref10"><sup>10</sup></a>. Las ecuaciones de calibración imponen esta propiedad de consistencia sobre el vector de ponderaciones; así que, cuando éste se aplica a las variables auxiliares el resultado será consistente con los totales de estas variables. Un deseo de promover la credibilidad en las estadísticas oficiales es una razón para que las entidades busquen la consistencia. Cuando la motivación primaria para la calibración no es la concordancia con los totales de la información auxiliar sino el reducir la varianza y el sesgo debido a la ausencia de respuesta entonces el vector de ponderaciones se dice balanceado.</p></li>
@@ -562,7 +561,7 @@ w_k= d_k \frac{N_g}{\hat{N}_g} \ \ \ \ \ (k \in s_g)
 </div>
 </div>
 <!-- </div> -->
-<h3>Referencias</h3>
+<h3>Referencias<a href="referencias.html#referencias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Estevao_Sarndal_2006" class="csl-entry">
 Estevao, Victor, y Carl-Erik Särndal. 2006. <span>«Survey Estimates by Calibration on Complex Auxiliary Information»</span>. <em>International Statistical Review / Revue Internationale de Statistique</em> 74 (2): 127-47.
@@ -647,7 +646,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

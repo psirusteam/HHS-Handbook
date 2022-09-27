@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>9.5 Tamaño de muestra para UPM y hogares | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
   <meta property="og:title" content="9.5 Tamaño de muestra para UPM y hogares | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-01-26" />
+<meta name="date" content="2022-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="tamaño-de-muestra-para-upm-hogares-y-personas.html"/>
 <link rel="next" href="tamaño-de-muestra-para-upm-y-personas.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -51,8 +49,9 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -466,8 +465,8 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="tamaño-de-muestra-para-upm-y-hogares" class="section level2" number="9.5">
-<h2><span class="header-section-number">9.5</span> Tamaño de muestra para UPM y hogares</h2>
+<div id="tamaño-de-muestra-para-upm-y-hogares" class="section level2 hasAnchor" number="9.5">
+<h2><span class="header-section-number">9.5</span> Tamaño de muestra para UPM y hogares<a href="tamaño-de-muestra-para-upm-y-hogares.html#tamaño-de-muestra-para-upm-y-hogares" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>En algunas ocasiones la variable de interés y la unidad de observación están a nivel de hogar. Por ejemplo, cuando todas las variables de interés se miden a nivel de la vivienda o del hogar. En este caso es posible modificar el algoritmo de la sección anterior para seleccionar únicamente a las viviendas u hogares en la muestra, sin necesidad de realizar un submuestreo de personas. En este caso algunas cantidades desaparecen porque no son objeto de la población de hogares, como lo son <span class="math inline">\(r\)</span> y <span class="math inline">\(b\)</span>; algunas otras expresiones deben ser redefinidas al contexto de los hogares, como por ejemplo, el coeficiente de correlación intraclase <span class="math inline">\(\rho_y\)</span>, el efecto de diseño y todas las expresiones de tamaños de muestra. En todo caso, la adaptación del algoritmo se describe a continuación.</p>
 <ul>
 <li><p><strong>Definir el número promedio de hogares</strong>. El número promedio de hogares que se desea encuestar en cada una de las UPM está dado por <span class="math inline">\(\bar{n}_{II}\)</span>. Esta cifra sigue siendo el insumo más importante del algoritmo y se propone crear escenarios de muestreo a partir de su modificación y evaluación del tamaño de muestra final.</p></li>
@@ -487,8 +486,8 @@ n_{II} \geq \dfrac{P\ (1-P)\ DEFF}{\dfrac{MER^2P^2}{z_{1-\alpha/2}^2}+\dfrac{P\ 
 n_{I} = \frac{n_{II}}{\bar{n}_{II}}
 \]</span></li>
 </ul>
-<div id="ejemplo-gasto-promedio-del-hogar" class="section level3" number="9.5.1">
-<h3><span class="header-section-number">9.5.1</span> Ejemplo: gasto promedio del hogar</h3>
+<div id="ejemplo-gasto-promedio-del-hogar" class="section level3 hasAnchor" number="9.5.1">
+<h3><span class="header-section-number">9.5.1</span> Ejemplo: gasto promedio del hogar<a href="tamaño-de-muestra-para-upm-y-hogares.html#ejemplo-gasto-promedio-del-hogar" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Suponga que se desea estimar el promedio de gasto anual en dólares en los hogares del país con un margen de error relativo máximo admisible del 3.5%. La variable de interés (gasto) es continua y se estima que la media oscila alrededor de <span class="math inline">\(\bar{y}_U=1407\)</span> dólares con una varianza de <span class="math inline">\(S^2_{y_U}=2228^2\)</span>. En este ejemplo se supone que el país está dividido en <span class="math inline">\(N_I = 10\)</span> mil UPM y la correlación intraclase de la característica de interés, medida a nivel del hogar, con las UPM es de <span class="math inline">\(\rho_y = 0.173\)</span>.</p>
 <p>La siguiente tabla muestra los resultados del ejercicio para <span class="math inline">\(\bar{n}_{II} = 12\)</span> hogares promedio por UPM, que serán observados a partir de la selección de <span class="math inline">\(n_{II} = 16056\)</span> hogares y <span class="math inline">\(n_{I} = 16056 / 12 = 1338\)</span> UPM, los cuales inducen un efecto de diseño <span class="math inline">\(DEFF =\)</span> 2.9.</p>
 <table>
@@ -596,8 +595,8 @@ n_{I} = \frac{n_{II}}{\bar{n}_{II}}
 </tbody>
 </table>
 </div>
-<div id="ejemplo-proporción-de-hogares-sin-agua-potable" class="section level3" number="9.5.2">
-<h3><span class="header-section-number">9.5.2</span> Ejemplo: proporción de hogares sin agua potable</h3>
+<div id="ejemplo-proporción-de-hogares-sin-agua-potable" class="section level3 hasAnchor" number="9.5.2">
+<h3><span class="header-section-number">9.5.2</span> Ejemplo: proporción de hogares sin agua potable<a href="tamaño-de-muestra-para-upm-y-hogares.html#ejemplo-proporción-de-hogares-sin-agua-potable" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Suponga que se desea obtener una muestra con un margen de error relativo máximo admisible del 10% sobre la variable de interés (necesidades básicas insatisfechas en agua) y el parámetro de interés es el porcentaje de hogares con esta carencia. En este país, se estima que la proporción de hogares con esta condición asciende a <span class="math inline">\(P = 7.5\)</span>%. En este ejemplo se supone que la correlación intraclase de la característica de interés con las UPM es de <span class="math inline">\(\rho_y = 0.045\)</span>.</p>
 <p>La siguiente tabla muestra los resultados del ejercicio para <span class="math inline">\(\bar{n}_{II} =\)</span> 10 hogares por UPM, que serán observados a partir de la selección de <span class="math inline">\(n_{II} = 4360\)</span> hogares en <span class="math inline">\(n_{I} = 4360/10 = 436\)</span> UPM, que inducen un efecto de diseño <span class="math inline">\(DEFF =\)</span> 1.3.</p>
 <table>
@@ -766,7 +765,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');
