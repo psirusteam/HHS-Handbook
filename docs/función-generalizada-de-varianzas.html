@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>8.8 Algunas relaciones de interés para proporciones | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
+  <title>11.5 Función generalizada de varianzas | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="8.8 Algunas relaciones de interés para proporciones | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
+  <meta property="og:title" content="11.5 Función generalizada de varianzas | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="8.8 Algunas relaciones de interés para proporciones | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
+  <meta name="twitter:title" content="11.5 Función generalizada de varianzas | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   
   <meta name="twitter:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="tamaño-de-muestra-para-otros-parámetros-de-interés.html"/>
-<link rel="next" href="algunas-consideraciones-adicionales-sobre-el-tamaño-de-muestra.html"/>
+<link rel="prev" href="pesos-replicados.html"/>
+<link rel="next" href="consideraciones-adicionales-sobre-la-estimación-de-la-varianza-de-los-estimadores-de-muestreo.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -306,57 +306,89 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="algunas-relaciones-de-interés-para-proporciones" class="section level2 hasAnchor" number="8.8">
-<h2><span class="header-section-number">8.8</span> Algunas relaciones de interés para proporciones<a href="algunas-relaciones-de-interés-para-proporciones.html#algunas-relaciones-de-interés-para-proporciones" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Cuando se trata de estadísticas de la fuerza laboral, una variable clave para el diseño de una encuesta de hogares que mida la dinámica del mercado de trabajo es el estado de los individuos en la fuerza laboral. Para los gobiernos, es de interés proporcionar un conjunto de indicadores destinados a medir y rastrear la ocupación de los ciudadanos del país (o región). Por ejemplo, se puede obtener estimaciones de la tasa de desempleo actual (medida mensual o trimestralmente); asimismo, también son de interés la variación neta entre dos períodos y los flujos brutos entre categorías de empleo entre períodos.</p>
-<p>Es posible mencionar tres tipos de planificación en las encuestas de hogares desde las cuales es posible abordar adecuadamente las características particulares de los estudios de fuerza laboral. La primera es a través de las encuestas repetidas,donde se realizan mediciones similares en diferentes puntos del tiempo a diferentes personas cada vez. La segunda son las encuestas de panel, donde se realizan mediciones en diferentes puntos en el tiempo a las mismas personas cada vez. La tercera son las encuestas rotativas, donde se incluyen elementos y se siguen en la muestra durante un período específico, y a medida que salen de la muestra, se agregan nuevos elementos.</p>
-<p>Una regla general común para calcular el tamaño de la muestra afirma que como la variable de diseño es dicotómica (dependiendo del estado de empleo), la varianza de ese tipo de variables encuentra su máximo cuando la probabilidad de éxito es 0.5. Sin embargo, si las políticas públicas en un país se centran en lograr que la tasa de desempleo sea baja a través de algunas intervenciones gubernamentales que afectan (positivamente) a la fuerza laboral, y si esas estrategias son efectivas, entonces la probabilidad de éxito de la variable de diseño cambia y puede afectar el tamaño de la muestra de las encuestas de hogares.</p>
-<p>En esta sección documento, centramos nuestra atención en el tamaño de la muestra inducido por el control del margen de error; en donde a medida que la proporción disminuye, el tamaño de la muestra aumenta sustancialmente. Sin embargo, al controlar el margen de error, debido a que la función de varianza detrás de este enfoque es simétrica alrededor de 0.5, se puede encontrar que el mismo tamaño de muestra necesario para cumplir con los requisitos de calidad para cualquier proporción <span class="math inline">\((P_d)\)</span> es el mismo que el requerido para satisfacer los requisitos de calidad para su complemento aditivo <span class="math inline">\((1 - P_d)\)</span>.</p>
-<p>A continuación se proporciona varios ejemplos que tipifican algunos escenarios que se pueden encontrar en la práctica. Los cálculos se pueden reproducir empleando el software estadístico <code>R</code> <span class="citation">(<a href="#ref-R2020" role="doc-biblioref">R Core Team 2020</a>)</span>, mediante el uso de la biblioteca <code>samplesize4surveys</code> <span class="citation">(<a href="#ref-ss4s" role="doc-biblioref">Rojas 2020</a>)</span>, utilizando específicamente las funciones <code>ss4p</code> y <code>ss4dp</code></p>
-<div id="estimación-de-proporciones" class="section level3 hasAnchor" number="8.8.1">
-<h3><span class="header-section-number">8.8.1</span> Estimación de proporciones<a href="algunas-relaciones-de-interés-para-proporciones.html#estimación-de-proporciones" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ol style="list-style-type: decimal">
-<li><p>Primer escenario: si la tasa de desempleo es baja, digamos <span class="math inline">\({P}=0.05\)</span> y el margen de error se fija en <span class="math inline">\(ME = 0.0025\)</span>, entonces el intervalo de confianza esperado sería <span class="math inline">\(IC=0.05\pm0.0025=(0.0475,0.0525)\)</span>. En este caso el tamaño de muestra requerido es de alrededor de 55169.</p></li>
-<li><p>Segundoescenario: si la tasa de desempleo es alta, digamos <span class="math inline">\({P}=0.2\)</span>, y el margen de error de error se fija en <span class="math inline">\(ME = 0.01\)</span>, entonces el intervalo de confianza sería <span class="math inline">\(IC=0.2\pm0.01=(0.19,0.21)\)</span>, y el tamaño de muestra requerido es 12144.</p></li>
-</ol>
-<p>Nótese que ambos escenarios dan lugar al mismo margen de error relativo (<span class="math inline">\(MER\)</span>), definido como <span class="math inline">\(MER=\frac{ME}{{P}}\)</span>. En efecto, para el primero, tenemos <span class="math inline">\(MER=(0.0025/0.05)\times 100\%=5\%\)</span>, y para el segundo, tenemos <span class="math inline">\(MER=(0.01/0.2)\times 100\%=5\%\)</span>. Por lo tanto, incluso para el mismo margen de error relativo, el tamaño de la muestra debe ser mayor si el fenómeno que nos interesa tiene una baja incidencia en la población finita. De hecho, es posible definir una función de información para saber si el tamaño de su muestra es suficiente para cumplir con los requisitos de calidad para una proporción determinada. Esto es útil porque no se sabe exactamente qué valor tomará la proporción. Además, si la encuesta de hogares intenta estimar otras proporciones (como en una encuesta multipropósito), se encontrará rápidamente si su tamaño de muestra actual es adecuado para todo el estudio.</p>
-<ol start="3" style="list-style-type: decimal">
-<li><p>Tercer escenario: si el tamaño de la muestra se define como <span class="math inline">\(n = 10000\)</span>, y la proporción es <span class="math inline">\(P=0.2\)</span>, entonces el coeficiente de variación será de 2,8% y el margen de error será del 1.1%. Es posible notar que todas las proporciones estimadas tendrán un margen de error inferior al 1.4%.</p></li>
-<li><p>Cuarto escenario: si el tamaño de la muestra se define como <span class="math inline">\(n = 40000\)</span>, y la proporción se centra en <span class="math inline">\(P=0.05\)</span>, entonces el coeficiente de variación será del 3% y el margen de error será de 0.2%. Es posible notar que todas las proporciones estimadas tendrán un margen de error inferior al 0.7%.</p></li>
-</ol>
-<p>Teniendo en cuenta que, para una proporción <span class="math inline">\(P\)</span> dada, el tamaño de muestra requerido para lograr un margen de error particular es el mismo que para su complemento aditivo <span class="math inline">\(1-P\)</span>, como es de esperar, si un tamaño de muestra alcanza los requisitos para una proporción establecida, también alcanzará los requisitos de calidad para cualquier proporción superior.</p>
-<p>Sin embargo, para una proporción <span class="math inline">\(P\)</span>, el tamaño muestral requerido para lograr un coeficiente de variación particular no es el mismo que para su complemento aditivo <span class="math inline">\(1-P\)</span>. Luego, para una proporción baja, se puede encontrar que con un tamaño de muestra dado el coeficiente de variación será mayor que para su complemento aditivo. Sobre la base de los resultados encontrados en esta sección, y bajo un <span class="math inline">\(MER\)</span> fijo (5% en todos los casos), encontramos que al intentar estimar proporciones (como la tasa de desempleo):</p>
-<ul>
-<li>Si la proporción es baja, anticipamos un gran tamaño de muestra.</li>
-<li>Si la proporción es alta, esperamos un tamaño de muestra pequeño.</li>
-</ul>
+<div id="función-generalizada-de-varianzas" class="section level2 hasAnchor" number="11.5">
+<h2><span class="header-section-number">11.5</span> Función generalizada de varianzas<a href="función-generalizada-de-varianzas.html#función-generalizada-de-varianzas" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Existe también la posibilidad de estimar las varianzas de los estimadores de muestreo (definido sobre la medida de probabilidad inducida por el diseño de muestreo <span class="math inline">\(p\)</span>) mediante un modelo (definido sobre una medida de probabilidad <span class="math inline">\(m\)</span>) que simplifica el proceso computacional en la generación de las miles de estimaciones que se producen a partir de las encuestas de hogares en la región. <span class="citation">Wolter (<a href="#ref-Wolter_2007" role="doc-biblioref">2007</a>)</span> afirma que si los parámetros de este modelo pueden ser estimados a partir de encuestas pasadas o de un conjunto de datos reducido, entonces las estimaciones de la varianza (y por consiguiente las estimaciones del error de muestreo) pueden se producidas simplemente evaluando el modelo a los datos actuales de la encuesta.</p>
+<p>Un caso particular de este tipo de relaciones se presenta cuando se deben obtener estimaciones de la encuesta a nivel subnacional para la publicación de cuadros de salida conteniendo la estimación puntual y el error estándar estimado. En estos casos es muy común que la cantidad total de celdas en los cuadros de salida sea muy grande, por lo que una mejor opción, en términos de eficiencia computacional, puede ser la utilización de este tipo de modelos, denominados en la literatura como GVF (<em>Generalized Variance Function</em>). Otro caso especial que debe ser atendido por el personal técnico de las ONE es cuando el tamaño de muestra de las subpoblaciones de interés es pequeño, o cuando no hay la suficiente heterogeneidad entre las observaciones de la muestra en la subpoblación. En este caso, es muy probable que las estimaciones de la varianza de los estimadores de los totales, tamaños, proporciones o medias sean imprecisas. En efecto, no es poco común encontrar estimaciones de la varianza iguales a cero. En este caso, este tipo de estimaciones deben ser cotejadas con experticia y/o reemplazadas por una mejor aproximación, que puede estar sustentada en las GVF.</p>
+<p>Un aspecto importante en la modelación de las varianzas de los estimadores es reconocer la naturaleza de este parámetro, el cual será siempre positivo. Por ende, al tratar de modelarlas es útil tomar un acercamiento log-lineal, que permite lidiar con este tipo de estructuras. La siguiente figura muestra la relación que puede establecerse entre las estimaciones directas de las proporciones de pobreza municipal y el logaritmo de sus varianzas estimadas.</p>
+<div class="figure">
+<img src="Pics/GVFmds.png" style="width:50.0%" alt="" />
+<p class="caption"><em>Relación entre un estimador de la tasa de pobreza estimada y el logaritmo de la estimación directa de su varianza. Fuente: elaboración propia.</em></p>
 </div>
-<div id="estimación-de-cambios-netos" class="section level3 hasAnchor" number="8.8.2">
-<h3><span class="header-section-number">8.8.2</span> Estimación de cambios netos<a href="algunas-relaciones-de-interés-para-proporciones.html#estimación-de-cambios-netos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Ahora dirigimos nuestra atención a los cambios netos en la tasa de desempleo durante dos períodos, <span class="math inline">\(\Delta= |P_{1}-P_{2}|\)</span>. Este tipo de parámetro se puede estimar utilizando una encuesta repetida, rotativa o de panel. Sin embargo, como se evidenció en las anteriores secciones, hay una reducción en el tamaño de la muestra si se intentan estimar los cambios netos desde una encuesta rotativa o de panel. Como no estamos estimando una proporción, sino un cambio neto,tenemos que considerar qué valores son adecuados para el establecer el margen de error absoluto.</p>
-<ol start="5" style="list-style-type: decimal">
-<li><p>Quinto escenario: si no esperamos cambios significativos entre ambos períodos, y las tasas de desempleo son altas, por ejemplo <span class="math inline">\(\Delta \approx |0.22-0.20|=0.02\)</span>, y el margen de error se fija en <span class="math inline">\(ME = 0.001\)</span>, entonces el intervalo de confianza sería <span class="math inline">\(IC=0.02 \pm 0.001=(0.019,0.021)\)</span>, y el tamaño de muestra requerido estaría alrededor de 96224.</p></li>
-<li><p>Sextoescenario: si no esperamos cambios significativos entre períodos, y las tasas de desempleo son bajas, por ejemplo <span class="math inline">\(\Delta \approx |0.05-0.03| =0.02\)</span>, y el margen de error se fija en <span class="math inline">\(ME = 0.001\)</span>, entonces el intervalo de confianza sería <span class="math inline">\(IC=0.02\pm0.001=(0.019,0.021)\)</span>, y el tamaño de muestra requerido debería ser de 59536.</p></li>
-<li><p>Séptimo escenario: si esperamos cambios significativos entre períodos, y las tasas de desempleo difierenpor ejemplo <span class="math inline">\(\Delta \approx|0.05-0.20|=0.15\)</span> y el margen de error se fija en <span class="math inline">\(ME = 0.0075\)</span>, entonces el intervalo de confianza sería <span class="math inline">\(IC=0.15\pm0.0075=(0.1425,0.1575)\)</span>, y el tamaño de muestra requerido estaría alrededor de 22083.</p></li>
-</ol>
-<p>Nótese qeu los escenarios quinto, sexto y séptimo dan como resultado el mismo <span class="math inline">\(MER\)</span>, definido como
-<span class="math inline">\(MER=\frac{ME}{\mathrm{\Delta}}\)</span>. En efecto, para el séptimo escenario tenemos <span class="math inline">\(MER=\)</span>(0.0075/0.15)%=5%, y para el quinto y sexto, tenemos <span class="math inline">\(MER=\)</span>(0.001/0.02)%=5%. Por lo tanto, incluso para el mismo valor del cambio neto, el tamaño de la muestra no será el mismo y variará dependiendo de la configuración de las proporciones. Por supuesto, hay que esperar cambios más drásticos si varía la porción del traslape y la correlación entre períodos.</p>
-<p>Además, se debe tener en cuenta que es posible encontrar diferentes configuraciones de proporciones en ambos periodos que induzcan el mismo valor en el cambio neto. Contrariamente a lo que se esperaría, si un tamaño de muestra alcanza los requisitos de calidad para un parámetro <span class="math inline">\(\Delta\)</span>, no necesariamente cumplirá con los requisitos de calidad para el mismo valor nominal del cambio neto bajo una configuración diferente en las proporciones involucradas.</p>
-<p>Para cumplir con los requisitos de calidad, bajo el mismo <span class="math inline">\(MER\)</span>, se necesitará un mayor tamaño de muestra si no se esperan cambios significativos en las tasas de desempleo entre los períodos involucrados. Si el cambio neto sigue siendo el mismo para ambos períodos, para cumplir con los requisitos de calidad, bajo el mismo <span class="math inline">\(MER\)</span>, se necesitará un mayor tamaño de muestra si el fenómeno del desempleo es alto. Ahora, al intentar estimar los cambios netos de proporciones (como el cambio anual o mensual en las tasas de desempleo), encontramos que:</p>
-<ul>
-<li>Si las tasas son significativamente diferentes, esperamos un tamaño de muestra pequeño.</li>
-<li>Si las tasas son similares y las proporciones son bajas, requerimos un tamaño de muestra moderado.</li>
-<li>Si las tasas son similares, y las proporciones son grandes, esperamos un gran tamaño de muestra.</li>
-</ul>
-</div>
+<p>En términos de notación <span class="math inline">\(Var_{GVF}(\hat{\theta}) = E_m(\widehat{Var}(\hat{\theta}))\)</span> será la varianza suavizada del estimador directo <span class="math inline">\(\hat{\theta}\)</span>. Un aspecto importante en este tipo de modelos es que, en general, no es posible tratar a <span class="math inline">\(Var(\hat{\theta})\)</span> como un valor fijo puesto que no es estrictamente una función de las covariables auxiliares. Partiendo del hecho de que se tiene acceso a un estimador insesgado de <span class="math inline">\({Var}(\hat{\theta})\)</span>, denotado por <span class="math inline">\(\widehat{Var}(\hat{\theta})\)</span> se tiene que:</p>
+<p><span class="math display">\[
+E_{mp}\left(\widehat{Var}(\hat{\theta})\right) =
+E_m\left(E_p\left(\widehat{Var}(\hat{\theta})\right)\right) =
+E_m({Var}(\hat{\theta})) =
+Var_{GVF}(\hat{\theta})
+\]</span></p>
+<p>La anterior igualdad contiene subscritos <span class="math inline">\(m\)</span> y <span class="math inline">\(p\)</span> que hacen referencia a la medida de probabilidad del modelo y del diseño de muestreo, respectivamente. Nótese que aunque el diseño de muestreo induce estimadores de las varianzas que son insesgados, estos tienden a ser inestable cuando el tamaño de muestra es pequeño, que es justo el paradigma dominante en la desagregación de estimaciones. <span class="citation">Rivest y Belmonte (<a href="#ref-Rivest_Belmonte_2000" role="doc-biblioref">2000</a>)</span> consideran modelos de suavizamiento para la estimación de las varianzas directas definidos de la siguiente manera:</p>
+<p><span class="math display">\[
+\log(\widehat{Var}(\hat{\theta})) = \mathbf z_d&#39; \boldsymbol \alpha + \varepsilon_d
+\]</span></p>
+<p>En donde <span class="math inline">\(\mathbf z_d\)</span> es un vector de covariables explicativas, <span class="math inline">\(\boldsymbol \alpha\)</span> es un vector de parámetros que deben ser estimados, <span class="math inline">\(\varepsilon_d\)</span> son errores aleatorios con media cero y varianza constante, que se asumen idénticamente distribuidos condicionalmente sobre <span class="math inline">\(\mathbf z_d\)</span>. Del anterior modelo, la estimación suavizada de la varianza de muestreo está dada por:</p>
+<p><span class="math display">\[
+Var_{GVF}(\hat{\theta})  = E_{mp}(\widehat{Var}(\hat{\theta})) = \exp(\mathbf z_d&#39; \boldsymbol \alpha) \cdot \Delta
+\]</span></p>
+<p>En donde, <span class="math inline">\(E_{mp}(\varepsilon_d) = \Delta\)</span>. No hay necesidad de especificar una distribución paramétrica para los errores de este modelo. Al utilizar el método de los momentos, se tiene el siguiente estimador insesgado para <span class="math inline">\(\Delta\)</span>:</p>
+<p><span class="math display">\[
+\hat\Delta = \frac{\sum_{d=1}^D \widehat{Var}(\hat{\theta})}{\sum_{d=1}^D \exp(\mathbf z_d&#39; \boldsymbol \alpha)}
+\]</span></p>
+<p>De la misma forma, al utilizar mínimos cuadrados ordinarios, la estimación del coeficiente de parámetros de regresión está dada por la siguiente expresión:</p>
+<p><span class="math display">\[
+\hat{\boldsymbol \alpha} = \left(\sum_{d=1}^D \mathbf z_d \mathbf z_d&#39; \right)^{-1} \sum_{d=1}^D \mathbf z_d \log(\widehat{Var}(\hat{\theta}))
+\]</span></p>
+<p>Por último, el estimador suavizado de la varianza muestral está definido por:</p>
+<p><span class="math display">\[
+\widehat{Var}_{GVF}(\hat{\theta}) = \exp(\mathbf z_d&#39;\hat{\boldsymbol \alpha})\hat\Delta
+\]</span></p>
+<p><span class="citation">Rivest y Belmonte (<a href="#ref-Rivest_Belmonte_2000" role="doc-biblioref">2000</a>)</span> además concluyeron que este estimador no sobrestima ni subestima la varianza suavizada, puesto que el promedio de las estimaciones suavizadas <span class="math inline">\(\widehat{Var}_{GVF}(\hat{\theta})\)</span> coincide con el promedio de las varianzas directas <span class="math inline">\(\widehat{{Var}}(\hat{\theta})\)</span>. Por tanto:</p>
+<p><span class="math display">\[
+\frac{\sum_{d=1}^D \widehat{Var}_{GVF}(\hat{\theta}) }{D} = \frac{\sum_{d=1}^D \widehat{{Var}}(\hat{\theta})}{D}
+\]</span></p>
+<p>El Instituto de Estadísticas de Canadá (Statcan) utiliza este tipo de modelos para reportar cifras oficiales del mercado de trabajo para 149 áreas censales <span class="citation">(<a href="#ref-statcan2016" role="doc-biblioref">Beaumont y Bocci 2016</a>)</span>. En primer lugar, Statcan hace una exclusión para el ajuste del modelo de aquellas áreas con menos de 10 personas en la fuerza de trabajo (denominador del indicador). De la misma manera todas las áreas con estimador de varianza directa <span class="math inline">\(\widehat{{Var}}(\hat{\theta})\)</span> igual a cero son excluidas del modelo, puesto que implicaría que no se encontró ningún caso efectivo en el numerador del indicador. Asimismo, la estimación de la varianza directa está basada en el diseño de muestreo complejo, mientras que la estimación de la varianza suavizada está supeditada al siguiente modelo de regresión:
+<span class="math display">\[
+\log(\widehat{Var}(\hat{\theta})) = \mathbf z_d&#39; \boldsymbol \alpha + \varepsilon_d
+\]</span>
+En donde
+<span class="math display">\[
+\mathbf z_d&#39;=\left(1, \log\left(\frac{N_d^{EIB}}{N_d^{15+}}\right),
+\log\left(1-\frac{N_d^{EIB}}{N_d^{15+}}\right),
+\log\left(N_d^{15+}\right)\right)&#39;
+\]</span>
+Con <span class="math inline">\(N_d^{EIB}\)</span>, el número de beneficiarios del seguro de desempleo en el área <span class="math inline">\(d\)</span> y <span class="math inline">\(N_d^{15+}\)</span>, el número de personas en la fuerza de trabajo. Para las áreas con un tamaño de casos efectivo mayor a 400, para evitar posibles sesgos en las áreas con tamaño de muestra grande, se decidió que la estimación suavizada por GVF fuese igual a la estimación directa; es decir, <span class="math inline">\(\widehat{Var}_{GVF}(\hat{\theta}) = \widehat{Var}(\hat{\theta})\)</span>.</p>
+<p>En otra aplicación práctica, <span class="citation">Fuquene et al. (<a href="#ref-Fuquene_Cristancho_Ospina_Morales_2019" role="doc-biblioref">2019</a>)</span> estiman la prevalencia de migrantes internacionales en los municipios de Colombia mediante un modelo de área en el cual utilizan el enfoque GVF, con un modelo que se plantea en términos de una relación log-lineal con el siguiente vector de covariables auxiliares:</p>
+<p><span class="math display">\[
+\mathbf z_d&#39;=\left(1, \
+\hat\theta_d, \
+\sqrt{\hat\theta_d}, \
+n_d, \
+\sqrt{n_d}, \
+\sqrt{\hat\theta_d \times n_d} \
+\right)&#39;
+\]</span></p>
+<p>Asimismo, una de las aplicaciones más citadas se presenta en <span class="citation">Fay y Herriot (<a href="#ref-III_Herriot_1979" role="doc-biblioref">1979</a>)</span>. En este artículo seminal de los modelos de estimación en áreas pequeñas, se relata que el <em>United States Census Bureau</em> realizó un censo con una muestra co-censal del 20% en cada estado para estimar el ingreso percápita. Para estimar este indicador a nivel desagregado se utilizó la estimación directa acompañada con un GVF de varianzas como estimador suavizado. Este modelo tomó los resultados de ocho estados y generalizó para el resto del país. Como resultado de esta modelación, el coeficiente de variación y la varianza se establecieron como una función del tamaño del área.</p>
+<p>En la región, <span class="citation">MDSF y CEPAL (<a href="#ref-MDSF_CEPAL_2021" role="doc-biblioref">2021</a>)</span> utilizaron un modelo GVF para estimar las varianzas de las tasas de pobreza comunal a partir de la CASEN 2020. En este modelo la variable dependiente fue el logaritmo natural de la estimación de la varianza directa de las tasas de pobreza y como covariables se incluyeron al intercepto, a la estimación directa de la tasa de pobreza, al tamaño de muestra comunal, a la interacción entre la tasa de pobreza y el tamaño de muestra, a la raíz cuadrada de la tasa de pobreza, a la raíz cuadrada del tamaño de muestra y, por último, a la raíz cuadrada de la interacción entre la tasa de pobreza y el tamaño de muestra. Las comunas incluidas en la modelación que tuvieron una tasa nula de pobreza, y por consiguiente una estimación nula de la varianza del estimador directo no fueron incluidas en el ajuste del modelo, pero sí se obtuvieron las predicciones de sus varianzas. En el mencionado reporte se muestra esquemas descriptivos que justifican la inclusión de las covariables y las relaciones establecidas en el modelo. Además, el factor de ajuste <span class="math inline">\(\hat\Delta\)</span> estuvo cercano a 1.2 en todas las series estudiadas.</p>
 </div>
 <h3>Referencias<a href="referencias.html#referencias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-R2020" class="csl-entry">
-R Core Team. 2020. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.
+<div id="ref-statcan2016" class="csl-entry">
+Beaumont, J. F., y C. Bocci. 2016. <span>«Small area estimation in the Labour Force Survey»</span>. <em>Paper presented at the Advisory Committee on Statistical Methods.</em>
 </div>
-<div id="ref-ss4s" class="csl-entry">
-Rojas, Hugo Andres Gutierrez. 2020. <em>samplesize4surveys: Sample Size Calculations for Complex Surveys</em>.
+<div id="ref-III_Herriot_1979" class="csl-entry">
+Fay, R . E., y R. A. Herriot. 1979. <span>«Estimates of Income for Small Places: An Application of James-Stein Procedures to Census Data»</span>. <em>Journal of the American Statistical Association</em> 74 (366a): 269-77. <a href="https://doi.org/10.1080/01621459.1979.10482505">https://doi.org/10.1080/01621459.1979.10482505</a>.
+</div>
+<div id="ref-Fuquene_Cristancho_Ospina_Morales_2019" class="csl-entry">
+Fuquene, Jairo, Cesar Cristancho, Mariana Ospina, y Domingo Morales. 2019. <span>«Prevalence of international migration: an alternative for small area estimation»</span>. <em>arXiv:1905.00353 [stat]</em>, abril. <a href="http://arxiv.org/abs/1905.00353">http://arxiv.org/abs/1905.00353</a>.
+</div>
+<div id="ref-MDSF_CEPAL_2021" class="csl-entry">
+MDSF y CEPAL. 2021. <em>Estimaciones Comunales de Pobreza por ingresos en Chile Mediante Métodos de Estimación en Áreas Pequeñas</em>. Santiago de Chile: División de Estadísticas de la CEPAL y Observatorio Social del MDSF.
+</div>
+<div id="ref-Rivest_Belmonte_2000" class="csl-entry">
+Rivest, Louis-Paul, y Eve Belmonte. 2000. <span>«A conditional mean squared error of small area estimators»</span>. <em>Survey Methodology</em> 26 (1): 67-78.
+</div>
+<div id="ref-Wolter_2007" class="csl-entry">
+Wolter, Kirk M. 2007. <em>Introduction to variance estimation</em>. 2nd ed. Statistics for social y behavioral sciences. Springer.
 </div>
 </div>
             </section>
@@ -364,8 +396,8 @@ Rojas, Hugo Andres Gutierrez. 2020. <em>samplesize4surveys: Sample Size Calculat
           </div>
         </div>
       </div>
-<a href="tamaño-de-muestra-para-otros-parámetros-de-interés.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="algunas-consideraciones-adicionales-sobre-el-tamaño-de-muestra.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="pesos-replicados.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="consideraciones-adicionales-sobre-la-estimación-de-la-varianza-de-los-estimadores-de-muestreo.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -396,7 +428,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/psirusteam/HHS-Handbook/08Tamano.Rmd",
+"link": "https://github.com/psirusteam/HHS-Handbook/11Varianza.Rmd",
 "text": "Edit"
 },
 "history": {

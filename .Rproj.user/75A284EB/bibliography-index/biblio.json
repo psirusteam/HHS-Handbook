@@ -528,6 +528,139 @@
             "type": "book"
         },
         {
+            "DOI": "10.1080/01621459.1979.10482505",
+            "ISSN": "0162-1459",
+            "author": [
+                {
+                    "family": "Fay",
+                    "given": "R . E."
+                },
+                {
+                    "family": "Herriot",
+                    "given": "R. A."
+                }
+            ],
+            "container-title": "Journal of the American Statistical Association",
+            "id": "III_Herriot_1979",
+            "issue": "366a",
+            "issued": {
+                "date-parts": [
+                    [
+                        1979,
+                        6
+                    ]
+                ]
+            },
+            "page": "269-277",
+            "title": "Estimates of income for small places: An application of james-stein procedures to census data",
+            "title-short": "Estimates of income for small places",
+            "type": "article-journal",
+            "volume": "74"
+        },
+        {
+            "author": [
+                {
+                    "literal": "MDSF y CEPAL"
+                }
+            ],
+            "id": "MDSF_CEPAL_2021",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "publisher": "División de Estadísticas de la CEPAL y Observatorio Social del MDSF",
+            "publisher-place": "Santiago de Chile",
+            "title": "Estimaciones comunales de pobreza por ingresos en chile mediante métodos de estimación en áreas pequeñas",
+            "type": "book"
+        },
+        {
+            "URL": "http://arxiv.org/abs/1905.00353",
+            "author": [
+                {
+                    "family": "Fuquene",
+                    "given": "Jairo"
+                },
+                {
+                    "family": "Cristancho",
+                    "given": "Cesar"
+                },
+                {
+                    "family": "Ospina",
+                    "given": "Mariana"
+                },
+                {
+                    "family": "Morales",
+                    "given": "Domingo"
+                }
+            ],
+            "container-title": "arXiv:1905.00353 [stat]",
+            "id": "Fuquene_Cristancho_Ospina_Morales_2019",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019,
+                        4
+                    ]
+                ]
+            },
+            "note": "arXiv: 1905.00353",
+            "title": "Prevalence of international migration: An alternative for small area estimation",
+            "title-short": "Prevalence of international migration",
+            "type": "article-journal"
+        },
+        {
+            "author": [
+                {
+                    "family": "Rivest",
+                    "given": "Louis-Paul"
+                },
+                {
+                    "family": "Belmonte",
+                    "given": "Eve"
+                }
+            ],
+            "container-title": "Survey Methodology",
+            "id": "Rivest_Belmonte_2000",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2000
+                    ]
+                ]
+            },
+            "page": "67-78",
+            "title": "A conditional mean squared error of small area estimators",
+            "type": "article-journal",
+            "volume": "26"
+        },
+        {
+            "author": [
+                {
+                    "family": "Beaumont",
+                    "given": "J. F."
+                },
+                {
+                    "family": "Bocci",
+                    "given": "C."
+                }
+            ],
+            "container-title": "Paper presented at the Advisory Committee on Statistical Methods.",
+            "id": "statcan2016",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "title": "Small area estimation in the labour force survey",
+            "type": "article-journal"
+        },
+        {
             "ISBN": "978-0-387-32917-8",
             "author": [
                 {

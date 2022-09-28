@@ -278,7 +278,7 @@ $$
 
 En donde $\mathbf{x}_k$ son las variables relacionadas con el vector de totales auxiliares $\mathbf{t}_{\mathbf{x}}$, medidas en la misma encuesta y $\mathbf{\hat{\theta}}$ es el vector estimado de coeficientes de regresión entre los valores que toman la característica de interés $y_k$ y el vector de información auxiliar $\mathbf{x}_k$.
 
-En la región, tanto la *Pesquisa Nacional por Amostra de Domicilios Continua*, en Brasil, como la *Encuesta de Caracterización Socioeconómica Nacional*, en Chile, utilizan esquemas de linealización de Taylor en conjunción con el acercamiento del último conglomerado. En resumen, la linealización de Taylor supone que es posible definir una aproximación lineal de $\hat{\theta}$ así
+En la región, tanto la *Pesquisa Nacional por Amostra de Domicilios Continua* (PNADC), en Brasil, como la *Encuesta de Caracterización Socioeconómica Nacional* (CASEN), en Chile, utilizan esquemas de linealización de Taylor en conjunción con el acercamiento del último conglomerado. En resumen, la linealización de Taylor supone que es posible definir una aproximación lineal de $\hat{\theta}$ así
 
 $$
 \hat{\theta} - \theta 
@@ -310,7 +310,7 @@ Usando esta metodología, no se requiere que las bases de datos públicas conten
 
 En particular, hay tres metodologías que abordan este problema: los pesos replicados repetidas balanceadas [@McCarthy_1969; @Judkins_1990], el Jackknife [@Krewski_Rao_1981] y el Bootstrap [@Rao_Wu_1988]. La idea general detrás de estos métodos es que, partiendo de la muestra completa, en cada réplica se seleccione un conjunto de UPMs manteniendo todas las unidades que hayan sido seleccionadas dentro de esas UPMs. Luego, es necesario reponderar los pesos de muestreo para que se conserve la representatividad; de esta manera, para cada réplica se obtendrá un nuevo conjunto de pesos de muestreo. Con estos pesos, se calcula la estimación de interés, obteniendo tantas estimaciones como réplicas definidas. @Wolter_2007 provee todos los detalles teóricos referentes al problema de la estimación de la varianza utilizando los pesos replicados. 
 
-En lo concerniente con las técnicas de remuestreo y la utilización de los pesos replicados para el cálculo de los errores de muestreo se recalca que la técnica de *Jackknife* es útil para estimar parámetros lineales, pero no tiene un buen comportamiento cuando se trata de estimar percentiles o funciones de distribución. La técnica de *réplicas repetidas balanceadas* es útil para estimar parámetros lineales y no lineales, pero puede ser deficiente cuando se tienen dominios pequeños que pueden inducir estimaciones nulas en la configuración de los pesos. Sin embargo, como se explicará más adelante, el ajuste de Fay a la técnica anterior resulta palear todos los anteriores inconvenientes. En este caso es importante utilizar una matriz de Hadammard que induzca no más de 120 conjuntos de pesos replicados para que la publicación de la base de datos no se sobrecargue. Por último, el *bootstrap* debe ser utilizado con con detenimiento porque debe replicar el diseño de muestreo exacto y esto se logra construyendo una población a partir de los pesos de muestreo. 
+En lo concerniente con las técnicas de remuestreo y la utilización de los pesos replicados para el cálculo de los errores de muestreo se recalca que la técnica de *Jackknife* es útil para estimar parámetros lineales, pero no tiene un buen comportamiento cuando se trata de estimar percentiles o funciones de distribución. La técnica de *réplicas repetidas balanceadas* es útil para estimar parámetros lineales y no lineales, pero puede ser deficiente cuando se tienen dominios pequeños que pueden inducir estimaciones nulas en la configuración de los pesos. Sin embargo, como se explicará más adelante, el ajuste de Fay a la técnica anterior resulta palear todos los anteriores inconvenientes. En este caso es importante utilizar una matriz de Hadammard que induzca no más de 120 conjuntos de pesos replicados para que la publicación de la base de datos no se sobrecargue. Por último, el *bootstrap* debe ser utilizado con detenimiento porque debe replicar el diseño de muestreo exacto y esto se logra construyendo una población a partir de los pesos de muestreo. 
 
 ### La técnica de Jackknife 
 
@@ -458,7 +458,7 @@ En general, para la aplicación de estos métodos, los pesos de muestreo se ajus
 
 ### Método de Bootstrap 
 
-En este apartado se presenta el método de Bootstrap [@EfroTibs93], el cual es muy utilizado por su fácil implementación; además de ser flexible en términos del número de pesos replicados que se crean. Teniendo los pesos muestrales se procede a crear los pesos replicados con el método de remuestreo con el fin de poder calcular estimaciones de indicadores junto con las estimación de las varianzas. En el contexto de las encuestas de hogares, se trata de realizar un remuestreo a las unidades primarias de muestreo seleccionadas desde el marco de áreas. 
+En este apartado se presenta el método de Bootstrap [@EfroTibs93], el cual es muy utilizado por su fácil implementación; además de ser flexible en términos del número de pesos replicados que se crean. Teniendo los pesos muestrales se procede a crear los pesos replicados con el método de remuestreo con el fin de poder calcular estimaciones de indicadores junto con las estimaciones de las varianzas. En el contexto de las encuestas de hogares, se trata de realizar un remuestreo a las unidades primarias de muestreo seleccionadas desde el marco de áreas. 
 
 El Bootstrap es el método basado en réplicas más versatil para el cálculo de errores estándar. @Valliant_Dever_2017 mencionan que es muy eficiente en la estimación de parámetros lineales y no lineales, a diferencia del Jackknife que no es eficiente en la estimación de percentiles. Funciona también para tamaños de muestra pequeños, a diferencia del método BRR que requiere una muestra de mínimo dos UPM por estrato. Este método requiere una cantidad de pesos replicados grande, usualmente mayor a 200. 
 
@@ -504,12 +504,93 @@ En donde $\hat{\theta}_b$ es el estimador del parámetro de interés en la répl
 |  7  | Estrato2 | UPM4 |      1      |      1      |      0      |      2      |
 |  8  | Estrato2 | UPM4 |      1      |      1      |      0      |      2      |
 
-
-
-
 @Rao_Wu_1984 y @Rao_Wu_1988 aconsejan seleccionar una muestra con reemplazo de $n_I - 1$ de las $n_I$ UPM de la muestra, teniendo en cuenta la probabilidad de selección del diseño complejo en la primera etapa. Dado que la selección es con reemplazo, una UPM puede ser seleccionada más de una vez en esta nueva muestra. Por otro lado, también es posible realizar una selección sin reemplazo; en este caso, @Preston_2009 recomiendan seleccionar una muestra con reemplazo de $n_I/2$ de las $n_I$ UPM de la muestra, teniendo en cuenta la probabilidad de selección del diseño complejo en la primera etapa.
 
-## Consideraciones adicionales  
+## Función generalizada de varianzas
+
+Existe también la posibilidad de estimar las varianzas de los estimadores de muestreo (definido sobre la medida de probabilidad inducida por el diseño de muestreo $p$) mediante un modelo (definido sobre una medida de probabilidad $m$)  que simplifica el proceso computacional en la generación de las miles de estimaciones que se producen a partir de las encuestas de hogares en la región. @Wolter_2007 afirma que si los parámetros de este modelo pueden ser estimados a partir de encuestas pasadas o de un conjunto de datos reducido, entonces las estimaciones de la varianza (y por consiguiente las estimaciones del error de muestreo) pueden se producidas simplemente evaluando el modelo a los datos actuales de la encuesta. 
+
+Un caso particular de este tipo de relaciones se presenta cuando se deben obtener estimaciones de la encuesta a nivel subnacional para la publicación de cuadros de salida conteniendo la estimación puntual y el error estándar estimado. En estos casos es muy común que la cantidad total de celdas en los cuadros de salida sea muy grande, por lo que una mejor opción, en términos de eficiencia computacional, puede ser la utilización de este tipo de modelos, denominados en la literatura como GVF (*Generalized Variance Function*). Otro caso especial que debe ser atendido por el personal técnico de las ONE es cuando el tamaño de muestra de las subpoblaciones de interés es pequeño, o cuando no hay la suficiente heterogeneidad entre las observaciones de la muestra en la subpoblación. En este caso, es muy probable que las estimaciones de la varianza de los estimadores de los totales, tamaños, proporciones o medias sean imprecisas. En efecto, no es poco común encontrar estimaciones de la varianza iguales a cero. En este caso, este tipo de estimaciones deben ser cotejadas con experticia y/o reemplazadas por una mejor aproximación, que puede estar sustentada en las GVF.
+
+Un aspecto importante en la modelación de las varianzas de los estimadores es reconocer la naturaleza de este parámetro, el cual será siempre positivo. Por ende, al tratar de modelarlas es útil tomar un acercamiento log-lineal, que permite lidiar con este tipo de estructuras. La siguiente figura muestra la relación que puede establecerse entre las estimaciones directas de las proporciones de pobreza municipal y el logaritmo de sus varianzas estimadas. 
+
+![*Relación entre un estimador de la tasa de pobreza estimada y el logaritmo de la estimación directa de su varianza. Fuente: elaboración propia.*](Pics/GVFmds.png){height=50%, width=50%}
+
+En términos de notación $Var_{GVF}(\hat{\theta})  = E_m(\widehat{Var}(\hat{\theta}))$ será la varianza suavizada del estimador directo $\hat{\theta}$. Un aspecto importante en este tipo de modelos es que, en general, no es posible tratar a $Var(\hat{\theta})$ como un valor fijo puesto que no es estrictamente una función de las covariables auxiliares. Partiendo del hecho de que se tiene acceso a un estimador insesgado de ${Var}(\hat{\theta})$, denotado por $\widehat{Var}(\hat{\theta})$ se tiene que:
+
+$$
+E_{mp}\left(\widehat{Var}(\hat{\theta})\right) =
+E_m\left(E_p\left(\widehat{Var}(\hat{\theta})\right)\right) =
+E_m({Var}(\hat{\theta})) =
+Var_{GVF}(\hat{\theta}) 
+$$
+
+La anterior igualdad contiene subscritos $m$ y $p$ que hacen referencia a la medida de probabilidad del modelo y del diseño de muestreo, respectivamente. Nótese que aunque el diseño de muestreo induce estimadores de las varianzas que son insesgados, estos tienden a ser inestable cuando el tamaño de muestra es pequeño, que es justo el paradigma dominante en la desagregación de estimaciones. @Rivest_Belmonte_2000 consideran modelos de suavizamiento para la estimación de las varianzas directas definidos de la siguiente manera:
+
+$$
+\log(\widehat{Var}(\hat{\theta})) = \mathbf z_d' \boldsymbol \alpha + \varepsilon_d
+$$
+
+
+En donde $\mathbf z_d$ es un vector de covariables explicativas, $\boldsymbol \alpha$ es un vector de parámetros que deben ser estimados, $\varepsilon_d$ son errores aleatorios con media cero y varianza constante, que se asumen idénticamente distribuidos condicionalmente sobre $\mathbf z_d$. Del anterior modelo, la estimación suavizada de la varianza de muestreo está dada por:
+
+$$
+Var_{GVF}(\hat{\theta})  = E_{mp}(\widehat{Var}(\hat{\theta})) = \exp(\mathbf z_d' \boldsymbol \alpha) \cdot \Delta
+$$
+
+En donde, $E_{mp}(\varepsilon_d) = \Delta$. No hay necesidad de especificar una distribución paramétrica para los errores de este modelo. Al utilizar el método de los momentos, se tiene el siguiente estimador insesgado para $\Delta$:
+
+$$
+\hat\Delta = \frac{\sum_{d=1}^D \widehat{Var}(\hat{\theta})}{\sum_{d=1}^D \exp(\mathbf z_d' \boldsymbol \alpha)}
+$$
+
+De la misma forma, al utilizar mínimos cuadrados ordinarios, la estimación del coeficiente de parámetros de regresión está dada por la siguiente expresión:
+
+$$
+\hat{\boldsymbol \alpha} = \left(\sum_{d=1}^D \mathbf z_d \mathbf z_d' \right)^{-1} \sum_{d=1}^D \mathbf z_d \log(\widehat{Var}(\hat{\theta}))
+$$
+
+Por último, el estimador suavizado de la varianza muestral está definido por:
+
+$$
+\widehat{Var}_{GVF}(\hat{\theta}) = \exp(\mathbf z_d'\hat{\boldsymbol \alpha})\hat\Delta 
+$$
+
+@Rivest_Belmonte_2000 además concluyeron que este estimador no sobrestima ni subestima la varianza suavizada, puesto que el promedio de las estimaciones suavizadas $\widehat{Var}_{GVF}(\hat{\theta})$ coincide con el promedio de las varianzas directas $\widehat{{Var}}(\hat{\theta})$. Por tanto:
+
+$$
+\frac{\sum_{d=1}^D \widehat{Var}_{GVF}(\hat{\theta}) }{D} = \frac{\sum_{d=1}^D \widehat{{Var}}(\hat{\theta})}{D}
+$$
+
+El Instituto de Estadísticas de Canadá (Statcan) utiliza este tipo de modelos para reportar cifras oficiales del mercado de trabajo para 149 áreas censales [@statcan2016]. En primer lugar, Statcan hace una exclusión para el ajuste del modelo de aquellas áreas con menos de 10 personas en la fuerza de trabajo (denominador del indicador). De la misma manera todas las áreas con estimador de varianza directa $\widehat{{Var}}(\hat{\theta})$ igual a cero son excluidas del modelo, puesto que implicaría que no se encontró ningún caso efectivo en el numerador del indicador. Asimismo, la estimación de la varianza directa está basada en el diseño de muestreo complejo, mientras que la estimación de la varianza suavizada está supeditada al siguiente modelo de regresión:
+$$
+\log(\widehat{Var}(\hat{\theta})) = \mathbf z_d' \boldsymbol \alpha + \varepsilon_d
+$$
+En donde 
+$$
+\mathbf z_d'=\left(1, \log\left(\frac{N_d^{EIB}}{N_d^{15+}}\right),
+\log\left(1-\frac{N_d^{EIB}}{N_d^{15+}}\right),
+\log\left(N_d^{15+}\right)\right)'
+$$
+Con $N_d^{EIB}$, el número de beneficiarios del seguro de desempleo en el área $d$ y $N_d^{15+}$, el número de personas en la fuerza de trabajo. Para las áreas con un tamaño de casos efectivo mayor a 400, para evitar posibles sesgos en las áreas con tamaño de muestra grande, se decidió que la estimación suavizada por GVF fuese igual a la estimación directa; es decir, $\widehat{Var}_{GVF}(\hat{\theta}) = \widehat{Var}(\hat{\theta})$.
+
+En otra aplicación práctica, @Fuquene_Cristancho_Ospina_Morales_2019 estiman la prevalencia de migrantes internacionales en los municipios de Colombia mediante un modelo de área en el cual utilizan el enfoque GVF, con un modelo que se plantea en términos de una relación log-lineal con el siguiente vector de covariables auxiliares:
+
+$$
+\mathbf z_d'=\left(1, \
+\hat\theta_d, \
+\sqrt{\hat\theta_d}, \
+n_d, \
+\sqrt{n_d}, \
+\sqrt{\hat\theta_d \times n_d} \
+\right)'
+$$
+
+Asimismo, una de las aplicaciones más citadas se presenta en @III_Herriot_1979. En este artículo seminal de los modelos de estimación en áreas pequeñas, se relata que el *United States Census Bureau* realizó un censo con una muestra co-censal del 20% en cada estado para estimar el ingreso percápita. Para estimar este indicador a nivel desagregado se utilizó la estimación directa acompañada con un GVF de varianzas como estimador suavizado. Este modelo tomó los resultados de ocho estados y generalizó para el resto del país. Como resultado de esta modelación, el coeficiente de variación y la varianza se establecieron como una función del tamaño del área.
+
+En la región, @MDSF_CEPAL_2021 utilizaron un modelo GVF para estimar las varianzas de las tasas de pobreza comunal a partir de la CASEN 2020. En este modelo la variable dependiente fue el logaritmo natural de la estimación de la varianza directa de las tasas de pobreza y como covariables se incluyeron al intercepto, a la estimación directa de la tasa de pobreza, al tamaño de muestra comunal, a la interacción entre la tasa de pobreza y el tamaño de muestra, a la raíz cuadrada de la tasa de pobreza, a la raíz cuadrada del tamaño de muestra y, por último, a la raíz cuadrada de la interacción entre la tasa de pobreza y el tamaño de muestra. Las comunas incluidas en la modelación que tuvieron una tasa nula de pobreza, y por consiguiente una estimación nula de la varianza del estimador directo no fueron incluidas en el ajuste del modelo, pero sí se obtuvieron las predicciones de sus varianzas. En el mencionado reporte se muestra esquemas descriptivos que justifican la inclusión de las covariables y las relaciones establecidas en el modelo. Además, el factor de ajuste $\hat\Delta$ estuvo cercano a 1.2 en todas las series estudiadas.
+
+## Consideraciones adicionales sobre la estimación de la varianza de los estimadores de muestreo  
 
 En la práctica del muestreo, existen algunos paradigmas que inducen la planeación y diseño de las encuestas. En esta sección se muestran ejemplos y contra-ejemplos que permiten ilustrar algunas mitos en la estimación del error de muestreo de las encuestas de hogares. Para esto, consideremos la varianza del esimador HT, dada a continuación:
 
@@ -573,7 +654,7 @@ $$
 
 ### Disminución de la varianza ante el aumento del tamaño de muestra 
 
-Por otro lado, Tal vez la idea de que la varianza deberá disminuir a medida que el tamaño de muestra crece se ha venido de la lógica intuitiva en donde el error de muestreo no debería existir si se realiza una medición completa de la población. Sin embargo, para algunas estrategias de muestreo es posible encontrar que existen situaciones en donde el tamaño de muestra crece, y con él la varianza del estimador. En esta sección se mostrará un ejemplo en donde sucede exactamente eso. 
+Por otro lado, la idea de que al aumentar el tamaño de la muestra debería disminuir la varianza deriva de la lógica intuitiva en donde el error de muestreo no debería existir si se realiza una medición completa de la población. Sin embargo, aunque esto es lo que por lo general ocurre, hay algunas excepciones. Luego, para algunas estrategias de muestreo es posible encontrar que existen situaciones en donde el tamaño de muestra crece, y con él la varianza del estimador. En esta sección se mostrará un ejemplo en donde sucede exactamente eso. 
 
 Para poder mostrar este hecho, vamos a utilizar un ejemplo reducido. Supongamos una población de $N = 3$ elementos $U=\{1, 2, 3\}$ y comparemos dos diseños de muestreo, el primero con un tamaño de muestra fijo de $n=1$ y el segundo con un tamaño de muestra fijo de $n=2$. En ambos casos la variable de interés es dicotómica que denota la presencia o ausencia del fenómeno en los individuos de la población. En el primer caso, el diseño de muestreo de tamaño de muestra $n=1$ es el siguiente:
 

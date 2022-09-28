@@ -30,7 +30,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="consideraciones-adicionales.html"/>
+<link rel="prev" href="consideraciones-adicionales-sobre-la-estimación-de-la-varianza-de-los-estimadores-de-muestreo.html"/>
 
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -278,10 +278,11 @@ div.csl-indent {
 <li class="chapter" data-level="11.4.2" data-path="pesos-replicados.html"><a href="pesos-replicados.html#el-método-de-las-réplicas-repetidas-balanceadas"><i class="fa fa-check"></i><b>11.4.2</b> El método de las réplicas repetidas balanceadas</a></li>
 <li class="chapter" data-level="11.4.3" data-path="pesos-replicados.html"><a href="pesos-replicados.html#método-de-bootstrap"><i class="fa fa-check"></i><b>11.4.3</b> Método de Bootstrap</a></li>
 </ul></li>
-<li class="chapter" data-level="11.5" data-path="consideraciones-adicionales.html"><a href="consideraciones-adicionales.html"><i class="fa fa-check"></i><b>11.5</b> Consideraciones adicionales</a>
+<li class="chapter" data-level="11.5" data-path="función-generalizada-de-varianzas.html"><a href="función-generalizada-de-varianzas.html"><i class="fa fa-check"></i><b>11.5</b> Función generalizada de varianzas</a></li>
+<li class="chapter" data-level="11.6" data-path="consideraciones-adicionales-sobre-la-estimación-de-la-varianza-de-los-estimadores-de-muestreo.html"><a href="consideraciones-adicionales-sobre-la-estimación-de-la-varianza-de-los-estimadores-de-muestreo.html"><i class="fa fa-check"></i><b>11.6</b> Consideraciones adicionales sobre la estimación de la varianza de los estimadores de muestreo</a>
 <ul>
-<li class="chapter" data-level="11.5.1" data-path="consideraciones-adicionales.html"><a href="consideraciones-adicionales.html#estimaciones-negativas-de-varianza"><i class="fa fa-check"></i><b>11.5.1</b> Estimaciones negativas de varianza</a></li>
-<li class="chapter" data-level="11.5.2" data-path="consideraciones-adicionales.html"><a href="consideraciones-adicionales.html#disminución-de-la-varianza-ante-el-aumento-del-tamaño-de-muestra"><i class="fa fa-check"></i><b>11.5.2</b> Disminución de la varianza ante el aumento del tamaño de muestra</a></li>
+<li class="chapter" data-level="11.6.1" data-path="consideraciones-adicionales-sobre-la-estimación-de-la-varianza-de-los-estimadores-de-muestreo.html"><a href="consideraciones-adicionales-sobre-la-estimación-de-la-varianza-de-los-estimadores-de-muestreo.html#estimaciones-negativas-de-varianza"><i class="fa fa-check"></i><b>11.6.1</b> Estimaciones negativas de varianza</a></li>
+<li class="chapter" data-level="11.6.2" data-path="consideraciones-adicionales-sobre-la-estimación-de-la-varianza-de-los-estimadores-de-muestreo.html"><a href="consideraciones-adicionales-sobre-la-estimación-de-la-varianza-de-los-estimadores-de-muestreo.html#disminución-de-la-varianza-ante-el-aumento-del-tamaño-de-muestra"><i class="fa fa-check"></i><b>11.6.2</b> Disminución de la varianza ante el aumento del tamaño de muestra</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
@@ -323,6 +324,9 @@ Ballin, Marco, y Giulio Barcaroli. 2013. <span>«Joint determination of optimal 
 </div>
 <div class="csl-entry">
 Barcaroli, Giulio. 2014. <span>«SamplingStrata: An R Package for the Optimization of Stratified Sampling»</span>. <em>Journal of Statistical Software</em> 61 (1): 1-24. <a href="https://doi.org/10.18637/jss.v061.i04">https://doi.org/10.18637/jss.v061.i04</a>.
+</div>
+<div class="csl-entry">
+Beaumont, J. F., y C. Bocci. 2016. <span>«Small area estimation in the Labour Force Survey»</span>. <em>Paper presented at the Advisory Committee on Statistical Methods.</em>
 </div>
 <div class="csl-entry">
 Biemer, Paul P., y Lars E. Lyberg. 2003. <em>Introduction to survey quality</em>. Wiley series en survey methodology. Wiley-Interscience.
@@ -373,7 +377,13 @@ Efron, Bradley, y Robert J. Tibshirani. 1993. <em>An Introduction to the Bootstr
 Estevao, Victor, y Carl-Erik Särndal. 2006. <span>«Survey Estimates by Calibration on Complex Auxiliary Information»</span>. <em>International Statistical Review / Revue Internationale de Statistique</em> 74 (2): 127-47.
 </div>
 <div class="csl-entry">
+Fay, R . E., y R. A. Herriot. 1979. <span>«Estimates of Income for Small Places: An Application of James-Stein Procedures to Census Data»</span>. <em>Journal of the American Statistical Association</em> 74 (366a): 269-77. <a href="https://doi.org/10.1080/01621459.1979.10482505">https://doi.org/10.1080/01621459.1979.10482505</a>.
+</div>
+<div class="csl-entry">
 Foster, James, Joel Greer, y Erik Thorbecke. 1984. <span>«A Class of Decomposable Poverty Measures»</span>. <em>Econometrica</em> 52 (3): 761-66. <a href="https://doi.org/10.2307/1913475">https://doi.org/10.2307/1913475</a>.
+</div>
+<div class="csl-entry">
+Fuquene, Jairo, Cesar Cristancho, Mariana Ospina, y Domingo Morales. 2019. <span>«Prevalence of international migration: an alternative for small area estimation»</span>. <em>arXiv:1905.00353 [stat]</em>, abril. <a href="http://arxiv.org/abs/1905.00353">http://arxiv.org/abs/1905.00353</a>.
 </div>
 <div class="csl-entry">
 Gambino, J. G., y PL. d N. Silva. 2009. <span>«Chapter 16 - Sampling and Estimation in Household Surveys»</span>. En <em>Handbook of Statistics</em>, 29:407-39. Handbook of Statistics. Elsevier. <a href="https://doi.org/10.1016/S0169-7161(08)00016-3">https://doi.org/10.1016/S0169-7161(08)00016-3</a>.
@@ -481,6 +491,9 @@ McCarthy, P. J. 1969. <span>«Pseudo-Replication: Half Samples»</span>. <em>Rev
 McLaren, C., y D. G. Steel. 2001. <span>«Rotation Patterns and Trend Estimation for Repeated Surveys Using Rotation Group Estimates»</span>. <em>Statistica Neerlandica</em> 55 (2): 221-38.
 </div>
 <div class="csl-entry">
+MDSF y CEPAL. 2021. <em>Estimaciones Comunales de Pobreza por ingresos en Chile Mediante Métodos de Estimación en Áreas Pequeñas</em>. Santiago de Chile: División de Estadísticas de la CEPAL y Observatorio Social del MDSF.
+</div>
+<div class="csl-entry">
 Mosteller, F. 1968. <em>Data Analysis, Including Statistics</em>. <a href="https://books.google.cl/books?id=6ptDHQAACAAJ">https://books.google.cl/books?id=6ptDHQAACAAJ</a>.
 </div>
 <div class="csl-entry">
@@ -524,6 +537,9 @@ Rao, J. N. K., y C. F. J. Wu. 1984. <span>«BOOTSTRAP INFERENCE FOR SAMPLE SURVE
 </div>
 <div class="csl-entry">
 ———. 1988. <span>«Resampling Inference with Complex Survey Data»</span>. <em>Journal of the American Statistical Association</em> 83 (401): 231-41. <a href="https://doi.org/10.1080/01621459.1988.10478591">https://doi.org/10.1080/01621459.1988.10478591</a>.
+</div>
+<div class="csl-entry">
+Rivest, Louis-Paul, y Eve Belmonte. 2000. <span>«A conditional mean squared error of small area estimators»</span>. <em>Survey Methodology</em> 26 (1): 67-78.
 </div>
 <div class="csl-entry">
 Rojas, Hugo Andres Gutierrez. 2020. <em>samplesize4surveys: Sample Size Calculations for Complex Surveys</em>.
@@ -616,7 +632,7 @@ Yates, F., y P. M. Grundy. 1953. <span>«Selection without replacement from with
           </div>
         </div>
       </div>
-<a href="consideraciones-adicionales.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="consideraciones-adicionales-sobre-la-estimación-de-la-varianza-de-los-estimadores-de-muestreo.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>

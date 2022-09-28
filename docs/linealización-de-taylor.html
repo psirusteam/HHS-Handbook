@@ -278,10 +278,11 @@ div.csl-indent {
 <li class="chapter" data-level="11.4.2" data-path="pesos-replicados.html"><a href="pesos-replicados.html#el-método-de-las-réplicas-repetidas-balanceadas"><i class="fa fa-check"></i><b>11.4.2</b> El método de las réplicas repetidas balanceadas</a></li>
 <li class="chapter" data-level="11.4.3" data-path="pesos-replicados.html"><a href="pesos-replicados.html#método-de-bootstrap"><i class="fa fa-check"></i><b>11.4.3</b> Método de Bootstrap</a></li>
 </ul></li>
-<li class="chapter" data-level="11.5" data-path="consideraciones-adicionales.html"><a href="consideraciones-adicionales.html"><i class="fa fa-check"></i><b>11.5</b> Consideraciones adicionales</a>
+<li class="chapter" data-level="11.5" data-path="función-generalizada-de-varianzas.html"><a href="función-generalizada-de-varianzas.html"><i class="fa fa-check"></i><b>11.5</b> Función generalizada de varianzas</a></li>
+<li class="chapter" data-level="11.6" data-path="consideraciones-adicionales-sobre-la-estimación-de-la-varianza-de-los-estimadores-de-muestreo.html"><a href="consideraciones-adicionales-sobre-la-estimación-de-la-varianza-de-los-estimadores-de-muestreo.html"><i class="fa fa-check"></i><b>11.6</b> Consideraciones adicionales sobre la estimación de la varianza de los estimadores de muestreo</a>
 <ul>
-<li class="chapter" data-level="11.5.1" data-path="consideraciones-adicionales.html"><a href="consideraciones-adicionales.html#estimaciones-negativas-de-varianza"><i class="fa fa-check"></i><b>11.5.1</b> Estimaciones negativas de varianza</a></li>
-<li class="chapter" data-level="11.5.2" data-path="consideraciones-adicionales.html"><a href="consideraciones-adicionales.html#disminución-de-la-varianza-ante-el-aumento-del-tamaño-de-muestra"><i class="fa fa-check"></i><b>11.5.2</b> Disminución de la varianza ante el aumento del tamaño de muestra</a></li>
+<li class="chapter" data-level="11.6.1" data-path="consideraciones-adicionales-sobre-la-estimación-de-la-varianza-de-los-estimadores-de-muestreo.html"><a href="consideraciones-adicionales-sobre-la-estimación-de-la-varianza-de-los-estimadores-de-muestreo.html#estimaciones-negativas-de-varianza"><i class="fa fa-check"></i><b>11.6.1</b> Estimaciones negativas de varianza</a></li>
+<li class="chapter" data-level="11.6.2" data-path="consideraciones-adicionales-sobre-la-estimación-de-la-varianza-de-los-estimadores-de-muestreo.html"><a href="consideraciones-adicionales-sobre-la-estimación-de-la-varianza-de-los-estimadores-de-muestreo.html#disminución-de-la-varianza-ante-el-aumento-del-tamaño-de-muestra"><i class="fa fa-check"></i><b>11.6.2</b> Disminución de la varianza ante el aumento del tamaño de muestra</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
@@ -355,7 +356,7 @@ e_k=\dfrac{1}{\hat{t}_{z,\pi}}(y_k-\hat{\theta}z_k)
 e_k=y_k-\mathbf{x}_k&#39;\mathbf{\hat{\theta}}
 \]</span></p>
 <p>En donde <span class="math inline">\(\mathbf{x}_k\)</span> son las variables relacionadas con el vector de totales auxiliares <span class="math inline">\(\mathbf{t}_{\mathbf{x}}\)</span>, medidas en la misma encuesta y <span class="math inline">\(\mathbf{\hat{\theta}}\)</span> es el vector estimado de coeficientes de regresión entre los valores que toman la característica de interés <span class="math inline">\(y_k\)</span> y el vector de información auxiliar <span class="math inline">\(\mathbf{x}_k\)</span>.</p>
-<p>En la región, tanto la <em>Pesquisa Nacional por Amostra de Domicilios Continua</em>, en Brasil, como la <em>Encuesta de Caracterización Socioeconómica Nacional</em>, en Chile, utilizan esquemas de linealización de Taylor en conjunción con el acercamiento del último conglomerado. En resumen, la linealización de Taylor supone que es posible definir una aproximación lineal de <span class="math inline">\(\hat{\theta}\)</span> así</p>
+<p>En la región, tanto la <em>Pesquisa Nacional por Amostra de Domicilios Continua</em> (PNADC), en Brasil, como la <em>Encuesta de Caracterización Socioeconómica Nacional</em> (CASEN), en Chile, utilizan esquemas de linealización de Taylor en conjunción con el acercamiento del último conglomerado. En resumen, la linealización de Taylor supone que es posible definir una aproximación lineal de <span class="math inline">\(\hat{\theta}\)</span> así</p>
 <p><span class="math display">\[
 \hat{\theta} - \theta
 \approx \sum_{j=1}^p \frac{\partial f(\hat{t}_1, \ldots, \hat{t}_p) }{\partial \hat{t}_j}(\hat{t}_j - t_j)
