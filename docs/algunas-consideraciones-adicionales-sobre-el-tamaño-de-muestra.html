@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 2 El paradigma del error total | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
+  <title>8.9 Algunas consideraciones adicionales sobre el tamaño de muestra | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Capítulo 2 El paradigma del error total | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
+  <meta property="og:title" content="8.9 Algunas consideraciones adicionales sobre el tamaño de muestra | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 2 El paradigma del error total | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
+  <meta name="twitter:title" content="8.9 Algunas consideraciones adicionales sobre el tamaño de muestra | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   
   <meta name="twitter:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="ingresos-y-gastos.html"/>
-<link rel="next" href="sesgos-generados-en-las-encuestas.html"/>
+<link rel="prev" href="algunas-relaciones-de-interés-para-proporciones.html"/>
+<link rel="next" href="referencias.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -252,25 +252,66 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="el-paradigma-del-error-total" class="section level1 hasAnchor" number="2">
-<h1><span class="header-section-number">Capítulo 2</span> El paradigma del error total<a href="el-paradigma-del-error-total.html#el-paradigma-del-error-total" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Este capítulo describe muy someramente el paradigma de los errores que se cometen en una encuesta y cómo al tenerlos en cuenta en la etapa de planificación, es posible medirlos acertádamente y acotarlos con base en el principio de representatividad. En general, todos los procesos en una encuesta deben estar planificados de antemano, antes y después de la recolección de los datos. Por ejemplo, el cuestionario (instrumento de medición) debe estar muy bien diseñado para que las respuestas de las personas describan acertadamente las características de los entrevistados. De la misma forma, el subconjunto de personas que participan en la encuesta debe ser expandido con precisión y confiabilidad para que represente con certeza a la población de interés.</p>
-<p>En una encuesta, el interés no se centra en las características particulares de un individuo sino en las características de la población a la cual ese individuo pertenece. De esta forma, la inferencia siempre se realiza teniendo en mente agregados (indicadores) poblacionales. Las siguientes son las dos fuentes principales de error cuando se realiza una encuesta:</p>
+<div id="algunas-consideraciones-adicionales-sobre-el-tamaño-de-muestra" class="section level2 hasAnchor" number="8.9">
+<h2><span class="header-section-number">8.9</span> Algunas consideraciones adicionales sobre el tamaño de muestra<a href="algunas-consideraciones-adicionales-sobre-el-tamaño-de-muestra.html#algunas-consideraciones-adicionales-sobre-el-tamaño-de-muestra" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Cuando la encuesta se ha planeado para que tenga representatividad para algún conjunto de estratos, es necesario replicar estas mismas expresiones en cada uno de los subgrupos de interés. Por otro lado, las anteriores aproximaciones al cálculo de tamaño de muestra son insuficientes ante la realidad de la ausencia de respuesta y las desactualizaciones de los marcos de muestreo. En esta sección se profundizará en estos tópicos.</p>
+<div id="asignación-del-tamaño-de-muestra-en-los-estratos-de-muestreo" class="section level3 hasAnchor" number="8.9.1">
+<h3><span class="header-section-number">8.9.1</span> Asignación del tamaño de muestra en los estratos de muestreo<a href="algunas-consideraciones-adicionales-sobre-el-tamaño-de-muestra.html#asignación-del-tamaño-de-muestra-en-los-estratos-de-muestreo" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Como se aclaró anteriormente, todas las encuestas de hogares en América Latina tienen un componente explícito de estratificación, y por ende una pregunta que surge inmediatamente es: ¿después de determinar el tamaño de muestra general, como asignarlo apropiadamente en todos los estratos de muestreo? En general, se supone que el tamaño de la muestra general es <span class="math inline">\(n\)</span> y que hay <span class="math inline">\(H\)</span> estratos fijos; por ende, se quiere determinar los tamaños de muestra <span class="math inline">\(n_h\)</span> para cada estrato <span class="math inline">\((h = 1, \ldots, H)\)</span>, de tal manera que se garantice la ganancia de precisión de la estrategia de muestreo.</p>
+<p>Existen varios tipos de asignación que pueden estudiarse para determinar la más apropiada, en términos de eficiencia; a continuación se presenta una lista no exhaustiva de ellas:</p>
 <ol style="list-style-type: decimal">
-<li><strong>Error de muestreo</strong>: ocurre porque no se incluyeron a todas las personas de la población y se seleccionó una muestra.</li>
-<li><strong>Error no muestral</strong>: se refiere a las posibles desviaciones de las respuestas provistas por un entrevistado con respecto al verdadero atributo que se desea medir.</li>
+<li><p>Asignación proporcional: en donde se selecciona una proporción de elementos en cada estrato siguiendo la estructura poblacional. <span class="citation">S. L. Lohr (<a href="#ref-Lohr_2019" role="doc-biblioref">2019</a>)</span> afirma que este tipo de asignación se utiliza cuando es deseable que la muestra se pueda ver como una versión miniatura de la población. <span class="citation">H. A. Gutiérrez (<a href="#ref-Gutierrez_2016" role="doc-biblioref">2016</a>)</span> señala que si se define la <em>fracción de muestreo</em> como <span class="math inline">\(f_h=n_h/N_h\)</span> en el estrato <span class="math inline">\(h\)</span>, entonces al utilizar la asignación proporcional la fracción de muestreo será la misma para todos los estratos, tal que <span class="math inline">\(f_h=f\)</span>. En este caso la probabilidad de inclusión de cualquier elemento en la población <span class="math inline">\(\pi_k=f_h=f\)</span> es constante y fija. De esta manera, cada unidad en la muestra representará el mismo número de elementos en la población, independientemente del estrato al que pertenezca. Bajo la asignación proporcional, el tamaño de muestra en cada estrato está dado por
+<span class="math display">\[
+n_h=f \times N_h
+\]</span></p></li>
+<li><p>Asignación de Neyman: en donde se selecciona una muestra de elementos en cada estrato de tal forma que se maximice la eficiencia estadística de la estrategia de muestreo. la estructura poblacional. <span class="citation">Groves et al. (<a href="#ref-Groves_Fowler_Couper_Lepkowski_Singer_Tourangeau_2009" role="doc-biblioref">2009</a>)</span> mencionan que, bajo este método, se producen las menores varianzas para la media muestral comparado con otras técnicas de asignación de tamaño de muestra. Bajo la asignación de Neyman, el tamaño de muestra que minimiza la varianza de la estrategia de muestreo está dado por
+<span class="math display">\[
+n_h=n\dfrac{N_hS_{yU_h}}{\sum_{h=1}^HN_hS_{yU_h}}
+\]</span>
+donde <span class="math inline">\(S_{yU_h}=\sqrt{S_{yU_h}^2}\)</span> es la raíz de la varianza de la característica de interés en cada estrato. <span class="citation">H. A. Gutiérrez (<a href="#ref-Gutierrez_2016" role="doc-biblioref">2016</a>)</span> afirma que, con respecto a la asignación de Neyman, es recomendable redondear el tamaño de muestra en cada estrato al entero más próximo.</p></li>
+<li><p>Asignación de Kish: al usar la asignación proporcional en los estratos pequeños, la muestra puede resultar muy pequeña, generando problemas de eficiencia y pérdida de precisión. Por otro lado, utilizar una asignación unifome (selección del mismo número de elementos en cada estrato <span class="math inline">\(n_h = c\)</span>) tendrá como consecuencia una variación sustancial en las fracciones de muestreo entre los estratos y, por ende, una fracción de muestreo muy grande del estrato más pequeño. Un punto intemedio entre la asignación proporcional y la asignación uniforme es la asignación propuesta por Kish, la cual toma la siguiente expresión:</p></li>
 </ol>
-<div class="figure">
-<img src="Pics/Picture9.png" alt="" />
-<p class="caption"><em>El paradignma del error total. Fuente: adaptación de <span class="citation">Groves et al. (<a href="#ref-Groves_Fowler_Couper_Lepkowski_Singer_Tourangeau_2009" role="doc-biblioref">2009</a>)</span></em></p>
+<p><span class="math display">\[
+n_h=n\frac{\sqrt{\frac{1}{H^2}+I\ W_h^2}}{\sum_{h=1}^{H}\sqrt{\frac{1}{H^2}+I\ W_h^2}}
+\]</span></p>
+<p>En donde <span class="math inline">\(W_h=N_h/N\)</span>, e <span class="math inline">\(I \geq 0\)</span> es el índice de asignación de Kish, que denota la importancia relativa entre las estimaciones nacionales y las de cada estrato. A medida que este índice se hace más pequeño, menor importancia se le dará a las estimaciones nacionales. La asignación de Kish proporciona un balance entre la asignación unifome y la proporcional. Cuando <span class="math inline">\(I=0\)</span>, se reduce a la asignación uniforme, mientras que si <span class="math inline">\(I \rightarrow \infty\)</span> tiende a un enfoque de asignación proporcional. Usualmente se utiliza <span class="math inline">\(I = 1\)</span> para garantizar que la precisión de las características de interés en lo nacional y en los estratos sea aproximadamente la misma.</p>
 </div>
-<p>Por ejemplo, en una encuesta de fuerza laboral mensual, puede haber confusión en el respondiente si no se hace hincapíe en el periodo de referencia; no es lo mismo indagar por la semana pasada, que por el mes pasado y el respondiente debe ser guiado para evitar equivocaciones. Además pueden existir no respondientes en algún subgrupo de interés, o incluso el marco puede estar desactualizado. Uno de los objetivos de la planeación concienzuda de la encuesta es minimizar los errores no muestrales. Es necesario minimizar las discrepancias encontradas entre la respuesta verdadera a una pregunta y la respuesta final.</p>
-<p><span class="citation">Groves et al. (<a href="#ref-Groves_Fowler_Couper_Lepkowski_Singer_Tourangeau_2009" role="doc-biblioref">2009</a>)</span> plantea que durante todo el siglo pasado, ha surgido una serie de teorías y principios que ofrecen un marco de referencia unificado en el diseño, implementación y evaluación de encuestas. Este marco de referencia se conoce comúnmente como el paradigma del error total de muestreo y ha encaminado la investigación moderna hacia una mejor calidad de las encuestas.</p>
+<div id="ajustes-de-subcobertura" class="section level3 hasAnchor" number="8.9.2">
+<h3><span class="header-section-number">8.9.2</span> Ajustes de subcobertura<a href="algunas-consideraciones-adicionales-sobre-el-tamaño-de-muestra.html#ajustes-de-subcobertura" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Debido a las características propias de las encuestas de hogares, siempre se presentará un fenómeno que puede ser descrito como una realidad: <em>existirá ausencia de respuesta en las encuestas de hogares</em>. En estos términos, los institutos nacionales de estadística deben tomar medidas preventivas al momento de adjudicar los tamaños de muestra en cada estrato, puesto que contar con un tamaño efectivo de muestra mucho menor al planeado inicialmente puede conllevar problemas de sesgo y de precisión en las estimaciones de las cifras nacionales o regionales, con las cuales se aborda la política económica y de desarrollo de los países de la región.</p>
+<p>En encuestas de hogares cuyo diseño es longitudinal, no solamente se debe abordar el problema de la ausencia de respuesta al momento de la aplicación de la encuesta, sino que debe ser visto de manera integral y más general debido a que un hogar que pertenezca a un panel puede decidir no participar más después de un par de visitas. Es así como la atrición se convierte en un problema que enmarca la ausencia de respuesta como un fenómeno al cual se debe prestar atención para evitar problemas de sesgo y baja confiabilidad.</p>
+<p><span class="citation">Kalton (<a href="#ref-Kalton_2009" role="doc-biblioref">2009</a>)</span> advierte que el diseño de la encuesta debe tener en cuenta el ajuste de submuestras; por ejemplo, para estimar el cambio de la condición de pobreza o indigencia en los hogares es necesario realizar un ajuste al tamaño de muestra inicial para que al final de la aplicación de la encuesta el tamaño de muestra efectivo cumpla con los requerimientos de precisión de la inferencia estadística. Los INE pueden estimar, con base en su basta experiencia en la realización de encuestas, la probabilidad de que una persona (o jefe de hogar) responda al instrumento. Si esta probabilidad es denotada como <span class="math inline">\(\phi=Pr(k \in s_r)\)</span>, en donde <span class="math inline">\(s_r\)</span> denota el subconjunto de respondientes efectivos, entonces los tamaños de muestra de individuos y hogares serán ajustados al dividirlos por <span class="math inline">\(\phi\)</span>.
+<span class="math display">\[n_{final} = \frac{n_{inicial}}{\phi}\]</span></p>
+<p>Por ejemplo, si esta probabilidad fue estimada en <span class="math inline">\(\phi = 0.8\)</span>, entonces todos los tamaños de muestra calculados en los pasos anteriores deberán ser ajustados como <span class="math inline">\(n_{final} = \frac{n_{inicial}}{0.8} = 1.25\times n_{inicial}\)</span>. Por último, si la información auxiliar lo permite, este ajuste debería realizarse de manera diferenciada en cada uno de los estratos. Por ejemplo, si se conoce que este fenómeno de ausencia de respuesta tiene una mayor incidencia en lo rural que en lo urbano, entonces este ajuste debería tenerse en cuenta de forma diferenciada.</p>
 </div>
+<div id="sustituciones-y-reemplazos" class="section level3 hasAnchor" number="8.9.3">
+<h3><span class="header-section-number">8.9.3</span> Sustituciones y reemplazos<a href="algunas-consideraciones-adicionales-sobre-el-tamaño-de-muestra.html#sustituciones-y-reemplazos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Una práctica común en los operativos de campo de las encuestas de hogares en Latinoamérica es sustituir las UPM y viviendas para las cuales no se ha obtenido respuesta. Por ejemplo, se consideraría el reemplazo de las UPM cuando no se puede acceder al sitio geográfico por diferentes razones; por ejemplo, problemas de orden público o seguridad, algún cambio importante en la infraestructura de la zona, o porque no se tiene el consentimiento informado de las autoridades de la comunidad. En este caso, si no se puede acceder a la UPM, no se puede tampoco acceder a ninguno de los hogares que la integran. Los esquemas de sustituciones y reemplazos en las encuestas de hogares utiliza, por lo general, la metodología de <em>estratificación implícita</em> que permite seleccionar de manera automática a los reemplazos adecuados de acuerdo a la conformación de subgrupos poblacionales similares.</p>
+<p>La estratificación implícita es usada cuando la encuesta está enfocada en un tema particular y, para su ejecución exitosa, requiere el uso del muestreo sistemático con probabilidades desiguales en la selección de las UPM, es decir en la definición del diseño de muestreo de la primera etapa. Según <span class="citation">UN (<a href="#ref-United_Nations_2008" role="doc-biblioref">2008b</a>, pág. 46)</span>, en la mayoría de países la secuencia podría empezar con el estrato urbano, desagregado por departamento, a su vez desagregado por municipio; el estrato rural, de forma similar, es desagregado por departamento, a su vez desagregado por comuna o vereda. Observe que la selección sistemática de UPM está condicionada a la medida de tamaño utilizada en la primera etapa, es decir el número de viviendas que la componen. De esta forma, la estratificación implícita consiste en que, para cada estrato explícito (urbano, rural, regiones, etc.) se crea una lista ordenada de UPM. Esta lista estará ordenada por los estratos implícitos definidas en la planeación de la encuesta (departamento, municipio) y dentro de cada subgrupo se ordenan las UPM en orden descendente (o ascendente). De esta forma, esta metodología constituye un método objetivo de selección de reemplazos, puesto que si no se puede acceder a la UPM seleccionada originalmente, su reemplazo será la inmediatamente anterior (o posterior) en la lista estratificada implícitamente. Este procedimiento seleccionará como reemplazo a la UPM ubicada en el mismo municipio, dentro del mismo departamento, en la misma zona y con un número similar de viviendas, respetando el principio de representatividad. De otra forma, si no se considera un procedimiento similar a la estratificación implícita, los reemplazos de las UPM podrían ser seleccionados aleatoriamente en otro departamento y con un número de viviendas mucho más grande o mucho más pequeño, añadiendo sesgo a la selección inicial.</p>
+<p>Aunque la estratificación implícita permite acotar el sesgo generado por la ausencia de respuesta de las UPM, <span class="citation">Vehovar (<a href="#ref-Vehovar_1999" role="doc-biblioref">1999</a>, págs. 348 - 349)</span> advierte que se debe tener precaución en cuanto a los usos de esta práctica puesto que también puede conllevar sesgos importantes en las estimaciones de interés. Lo anterior se desprende del hecho de que los individuos ubicados en zonas donde sí es posible acceder diferirán significativamente de aquellos individuos ubicados en las zonas de difícil acceso; es evidente que se trata de dos realidades diferentes. Por esta razón es útil que, después de haber valorado los posibles sesgos, si se ha tomado la determinación de realizar las sustituciones sobre las UPM de difícil acceso, se realice un seguimiento exhaustivo en cada levantamiento que permita clasificar el esquema de recolección de información primaria y se valore su impacto en la precisión de los estimadores resultantes.</p>
+
+</div>
+</div>
+<!-- </div> -->
 <h3>Referencias<a href="referencias.html#referencias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Groves_Fowler_Couper_Lepkowski_Singer_Tourangeau_2009" class="csl-entry">
 Groves, Robert, Floyd Fowler, Mick Couper, James Lepkowski, Eleanor Singer, y Roger Tourangeau. 2009. <em>Survey Methodology</em>. John Wiley; Sons.
+</div>
+<div id="ref-Gutierrez_2016" class="csl-entry">
+Gutiérrez, H. A. 2016. <em>Estrategias de muestreo: diseño de encuestas y estimación de parámetros</em>. Segunda edición. Ediciones de la U.
+</div>
+<div id="ref-Kalton_2009" class="csl-entry">
+Kalton, G. 2009. <span>«Some Issues in the Design and Analysis of Longitudinal Surveys»</span>. En.
+</div>
+<div id="ref-Lohr_2019" class="csl-entry">
+Lohr, Sharon L. 2019. <em>Sampling: Design and Analysis</em>. Duxbury Press.
+</div>
+<div id="ref-United_Nations_2008" class="csl-entry">
+———. 2008b. <em>Designing household survey samples: practical guidelines</em>. Studies en methods / United Nations, Department of Economic y Social Affairs, Statistics Division Series F. United Nations.
+</div>
+<div id="ref-Vehovar_1999" class="csl-entry">
+Vehovar, Vasja. 1999. <span>«Field Substitution and Unit Nonresponse»</span>. <em>Journal of Official Statistics</em> 15 (2): 335-50.
 </div>
 </div>
             </section>
@@ -278,8 +319,8 @@ Groves, Robert, Floyd Fowler, Mick Couper, James Lepkowski, Eleanor Singer, y Ro
           </div>
         </div>
       </div>
-<a href="ingresos-y-gastos.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="sesgos-generados-en-las-encuestas.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="algunas-relaciones-de-interés-para-proporciones.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="referencias.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -310,7 +351,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/psirusteam/HHS-Handbook/02ErrorTotal.Rmd",
+"link": "https://github.com/psirusteam/HHS-Handbook/08Tamano.Rmd",
 "text": "Edit"
 },
 "history": {

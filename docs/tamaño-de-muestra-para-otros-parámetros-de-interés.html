@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 2 El paradigma del error total | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
+  <title>8.7 Tamaño de muestra para otros parámetros de interés | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Capítulo 2 El paradigma del error total | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
+  <meta property="og:title" content="8.7 Tamaño de muestra para otros parámetros de interés | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 2 El paradigma del error total | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
+  <meta name="twitter:title" content="8.7 Tamaño de muestra para otros parámetros de interés | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   
   <meta name="twitter:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="ingresos-y-gastos.html"/>
-<link rel="next" href="sesgos-generados-en-las-encuestas.html"/>
+<link rel="prev" href="tamaño-de-muestra-para-upm-y-personas.html"/>
+<link rel="next" href="algunas-relaciones-de-interés-para-proporciones.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -252,34 +252,166 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="el-paradigma-del-error-total" class="section level1 hasAnchor" number="2">
-<h1><span class="header-section-number">Capítulo 2</span> El paradigma del error total<a href="el-paradigma-del-error-total.html#el-paradigma-del-error-total" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Este capítulo describe muy someramente el paradigma de los errores que se cometen en una encuesta y cómo al tenerlos en cuenta en la etapa de planificación, es posible medirlos acertádamente y acotarlos con base en el principio de representatividad. En general, todos los procesos en una encuesta deben estar planificados de antemano, antes y después de la recolección de los datos. Por ejemplo, el cuestionario (instrumento de medición) debe estar muy bien diseñado para que las respuestas de las personas describan acertadamente las características de los entrevistados. De la misma forma, el subconjunto de personas que participan en la encuesta debe ser expandido con precisión y confiabilidad para que represente con certeza a la población de interés.</p>
-<p>En una encuesta, el interés no se centra en las características particulares de un individuo sino en las características de la población a la cual ese individuo pertenece. De esta forma, la inferencia siempre se realiza teniendo en mente agregados (indicadores) poblacionales. Las siguientes son las dos fuentes principales de error cuando se realiza una encuesta:</p>
+<div id="tamaño-de-muestra-para-otros-parámetros-de-interés" class="section level2 hasAnchor" number="8.7">
+<h2><span class="header-section-number">8.7</span> Tamaño de muestra para otros parámetros de interés<a href="tamaño-de-muestra-para-otros-parámetros-de-interés.html#tamaño-de-muestra-para-otros-parámetros-de-interés" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>En las encuestas de hogares también surgen escenarios particulares que llevan a sugerir distintos caminos para la adopción de un determinado tamaño de muestra. En esta sección analizaremos los casos en los que los parámetros de interés son diferencias de proporciones y dobles diferencias. También se revisará el caso del planteamiento de pruebas de hipótesis y su relación con el tamaño de muestra.</p>
+<div id="tamaño-de-muestra-para-la-estimación-de-la-diferencia-de-dos-proporciones" class="section level3 hasAnchor" number="8.7.1">
+<h3><span class="header-section-number">8.7.1</span> Tamaño de muestra para la estimación de la diferencia de dos proporciones<a href="tamaño-de-muestra-para-otros-parámetros-de-interés.html#tamaño-de-muestra-para-la-estimación-de-la-diferencia-de-dos-proporciones" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Suponga una población <span class="math inline">\(U\)</span>, que se encuentra particionada<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a> en dos subpoblaciones <span class="math inline">\(U_1\)</span> de tamaño <span class="math inline">\(N_1\)</span> y <span class="math inline">\(U_2\)</span>, de tamaño <span class="math inline">\(N_2\)</span>. El interés del investigador está en conocer la diferencia de algunas proporciones entre estos grupos. Por ejemplo, suponga que se quiere conocer la diferencia entre las proporciones de niños desnutridos por sexo. Se espera que la proporción de niños desnutridos no supere la proporción de niñas desnutridas para verificar que no hay brechas de sexo. Por lo tanto, el parámetro de interés se escribe como:</p>
+<p><span class="math display">\[
+\theta=P_1-P_2=\frac{N_{d1}}{N_1}-\frac{N_{d2}}{N_2}
+\]</span></p>
+<p>En donde <span class="math inline">\(N_{di}=\sum_{k\in U_i}z_{dik}\)</span> <span class="math inline">\((i=1,2)\)</span> y <span class="math inline">\(z_{dik}\)</span> es una característica dicotómica que indica si el individuo <span class="math inline">\(k\)</span>-ésimo de la subpoblación <span class="math inline">\(U_i\)</span> está en estado de desnutrición. Por supuesto, bajo muestreo aleatorio simple, un estimador insesgado para <span class="math inline">\(\theta\)</span> es</p>
+<p><span class="math display">\[
+\hat{\theta}=\hat{P}_1-\hat{P}_2=\frac{\hat{N}_{d1}}{N_1}-\frac{\hat{N}_{d2}}{N_2}
+\]</span></p>
+<p>En donde, <span class="math inline">\(\hat{N}_{di}=\frac{N_i}{n_i}\sum_{k\in s_i}z_{dik}\)</span> y <span class="math inline">\(s_i\)</span> es la muestra asociada con la población <span class="math inline">\(U_i\)</span>. Luego, la varianza del anterior estimador es:</p>
+<p><span class="math display">\[
+Var(\hat{\theta})=Var\left(\hat{P}_1\right)+Var\left(\hat{P}_2\right)-2Cov\left(\hat{P}_1, \hat{P}_2\right)
+\]</span></p>
+<p>Por otro lado, siendo <span class="math inline">\(|U_i|\)</span> la cardinalidad del conjunto <span class="math inline">\(U_i\)</span>, se definen las siguientes relaciones:</p>
+<p><span class="math display">\[
+T_i = \frac{|U_1 \cap U_2|}{|U_i|} \ \ \ \ \ \ i =1, 2.
+\]</span></p>
+<p>De esta forma, <span class="math inline">\(T_1\)</span> y <span class="math inline">\(T_2\)</span> corresponde al porcentaje de traslape de las subpoblaciones. De la misma manera, definiendo a <span class="math inline">\(R_{1,2}\)</span> como la correlación de Pearson entre los datos observados de ambas subpoblaciones, entonces la covarianza entre este par de estimadores estaría determinada por la siguiente relación <span class="citation">(<a href="#ref-Kish_2004" role="doc-biblioref">Kish 2004</a>)</span>:</p>
+<p><span class="math display">\[
+Cov(\hat{P}_1, \hat{P}_2) = \sqrt{Var(\hat{P}_1)}\sqrt{Var(\hat{P}_2)}\sqrt{T_1}\sqrt{T_2}R_{1,2}
+\]</span></p>
+<p>En esta instancia, es útil recordar que si las poblaciones <span class="math inline">\(U_1\)</span> y <span class="math inline">\(U_2\)</span> son estratos (o agregaciones de estratos) que inducen conjuntos dijuntos y la selección de la muestra en cada uno es independiente por diseño, entonces <span class="math inline">\(Cov(\hat{P}_1, \hat{P}_2) = 0\)</span>. Si, por otro lado, no existe independencia en el muestreo de ambas poblaciones, entonces <span class="math inline">\(R_{1,2} \neq 0\)</span> necesariamente. Es útil recordar que esta correlación se debe evaluar a través de las UPM. Siguiendo con el ejemplo, a pesar de que las subpoblaciones son niños y niñas, <span class="math inline">\(R_{1,2} \neq 0\)</span>. Por otro lado, para encontrar el tamaño de muestra óptimo, es útil realizar los siguientes supuestos:</p>
 <ol style="list-style-type: decimal">
-<li><strong>Error de muestreo</strong>: ocurre porque no se incluyeron a todas las personas de la población y se seleccionó una muestra.</li>
-<li><strong>Error no muestral</strong>: se refiere a las posibles desviaciones de las respuestas provistas por un entrevistado con respecto al verdadero atributo que se desea medir.</li>
+<li>Asumir que las subpoblaciones son grandes y por ende <span class="math inline">\(N_1=N_2=N\)</span>.</li>
+<li>Por lo anterior, asumir que los tamaños de muestra pueden ser iguales, tales que <span class="math inline">\(n_1=n_2=n\)</span>.</li>
 </ol>
-<div class="figure">
-<img src="Pics/Picture9.png" alt="" />
-<p class="caption"><em>El paradignma del error total. Fuente: adaptación de <span class="citation">Groves et al. (<a href="#ref-Groves_Fowler_Couper_Lepkowski_Singer_Tourangeau_2009" role="doc-biblioref">2009</a>)</span></em></p>
+<p>Nótese a su vez que, si el levantamiento de las observaciones no puede ser realizado utilizando muestreo aleatorio simple, sino que por el contrario, la muestra aleatoria fue seleccionada mediante un diseño de muestreo complejo con un efecto de diseño<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a> <span class="math inline">\((DEFF)\)</span> no ignorable y mayor a uno, entonces la varianza tomaría la siguiente forma</p>
+<p><span class="math display">\[
+Var(\hat{\theta})=\frac{DEFF}{n}\left(1-\frac{n}{N}\right)S^2_{\theta}
+\]</span></p>
+<p>En donde, definiendo a <span class="math inline">\(Q_i = 1-P_i\)</span>, se tiene que:</p>
+<p><span class="math display">\[
+S^2_{\theta} = P_1Q_1+P_2Q_2 - 2 \sqrt{T_1}\sqrt{T_2}R_{1,2} \sqrt{P_1Q_1}\sqrt{P_2Q_2}
+\]</span>
+De esta manera, un intervalo de confianza del 95% para la diferencia de proporciones está dado por</p>
+<p><span class="math display">\[
+IC(95\%)_{\theta}=\hat{\theta} \pm z_{1-\alpha/2} \sqrt{\frac{DEFF}{n}\left(1-\frac{n}{N}\right)S^2_{\theta}}
+\]</span></p>
+<p>Lo anterior quiere decir que el margen de error <span class="math inline">\((ME)\)</span> de la encuesta debe ser tal que:</p>
+<p><span class="math display">\[
+ME &lt; z_{1-\alpha/2} \sqrt{\frac{DEFF}{n}\left(1-\frac{n}{N}\right)S^2_{\theta}}
+\]</span></p>
+<p>Por lo tanto, despejando <span class="math inline">\(n\)</span>, se tiene que la muestra en cada subgrupo debe mayor que:</p>
+<p><span class="math display">\[
+n&gt; \dfrac{DEFF \ S^2_{\theta}}{\dfrac{ME^2}{z_{1-\alpha/2}^2}+\dfrac{DEFF \ S^2_{\theta}}{N}}
+\]</span></p>
+<p>Nótese que, dependiendo de los pocentajes de traslape <span class="math inline">\(\sqrt{T_1}\)</span>, <span class="math inline">\(\sqrt{T_2}\)</span> y de la correlación de la característica de interés en ambas subpoblaciones <span class="math inline">\(R_{1,2}\)</span>, la varianza <span class="math inline">\(S^2_{\theta}\)</span> tomará diferentes formas, como se detalla a continuación:</p>
+<ol style="list-style-type: decimal">
+<li>Si no hay traslape, <span class="math inline">\(T_1 = T_2 = 0\)</span>, y <span class="math inline">\(S^2_{\theta} = P_1Q_1+P_2Q_2\)</span>.</li>
+<li>Si hay traslape completo, <span class="math inline">\(T_1 = T_2 = 1\)</span> y <span class="math inline">\(S^2_{\theta} = P_1Q_1+P_2Q_2 - 2 R_{1,2} \sqrt{P_1Q_1}\sqrt{P_2Q_2}\)</span>.</li>
+<li>Si hay traslape parcial y balanceo, <span class="math inline">\(T_1 = T_2 = T\)</span> y si además se considera que las varianzas en cada subgrupo o periodo son similares <span class="math inline">\(P_1Q_1 = P_2Q_2 = PQ\)</span>, entonces <span class="math inline">\(S^2_{\theta} = 2PQ (1- TR_{1,2})\)</span>.</li>
+</ol>
+<div id="covarianza-en-comparaciones-mensuales" class="section level4 hasAnchor" number="8.7.1.1">
+<h4><span class="header-section-number">8.7.1.1</span> Covarianza en comparaciones mensuales<a href="tamaño-de-muestra-para-otros-parámetros-de-interés.html#covarianza-en-comparaciones-mensuales" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Suponga que se quiere comparar la tasa de desempleo nacional entre dos meses consecutivos. En este escenario, asumiendo que existe independencia en el muestreo de los dos meses consecutivos, el porcentaje de traslape de muestra entre los dos meses (que por diseño es nulo) es igual a cero. Por lo tanto, <span class="math inline">\(T_1 = T_2 = 0\)</span>. Luego, el término de la covarianza se anula. En resumen, la varianza del estimador en este caso sería igual a:</p>
+<p><span class="math display">\[
+Var(\hat{P}_1-\hat{P}_2)
+= Var(\hat{P}_1) + Var(\hat{P}_2)
+\]</span></p>
 </div>
-<p>Por ejemplo, en una encuesta de fuerza laboral mensual, puede haber confusión en el respondiente si no se hace hincapíe en el periodo de referencia; no es lo mismo indagar por la semana pasada, que por el mes pasado y el respondiente debe ser guiado para evitar equivocaciones. Además pueden existir no respondientes en algún subgrupo de interés, o incluso el marco puede estar desactualizado. Uno de los objetivos de la planeación concienzuda de la encuesta es minimizar los errores no muestrales. Es necesario minimizar las discrepancias encontradas entre la respuesta verdadera a una pregunta y la respuesta final.</p>
-<p><span class="citation">Groves et al. (<a href="#ref-Groves_Fowler_Couper_Lepkowski_Singer_Tourangeau_2009" role="doc-biblioref">2009</a>)</span> plantea que durante todo el siglo pasado, ha surgido una serie de teorías y principios que ofrecen un marco de referencia unificado en el diseño, implementación y evaluación de encuestas. Este marco de referencia se conoce comúnmente como el paradigma del error total de muestreo y ha encaminado la investigación moderna hacia una mejor calidad de las encuestas.</p>
+<div id="covarianza-en-comparaciones-trimestrales-o-anuales" class="section level4 hasAnchor" number="8.7.1.2">
+<h4><span class="header-section-number">8.7.1.2</span> Covarianza en comparaciones trimestrales o anuales<a href="tamaño-de-muestra-para-otros-parámetros-de-interés.html#covarianza-en-comparaciones-trimestrales-o-anuales" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Bajo un esquema rotativo 2(2)2, suponga que se quiere comparar la tasa de desempleo nacional entre trimestres consecutivos o entre el mismo mes de dos años consecutivos. En este escenario no existe independencia en el muestreo de los dos trimestres consecutivos puestos que la estructura del panel garantiza un traslape del 50%. En este caso <span class="math inline">\(T_1 = T_2 \approx 0.5\)</span>.</p>
+<p>Por otro lado, existe una correlación natural entre las viviendas comunes en el panel que se midieron en los periodos de interés, por lo tanto <span class="math inline">\(R_{1,2} \neq 0\)</span>. Note que esta correlación se calcula sobre los individuos comunes en el panel y sobre la variable dicotómica que induce la tasa de desempleo (perteneciente a la población económicamente activa). En resumen, el término de covarianza en este caso sería igual a:</p>
+<p><span class="math display">\[
+Cov(\hat{P}_1, \hat{P}_2) = \frac{1}{2}\sqrt{Var(\hat{P}_1)}\sqrt{Var(\hat{P}_2)}R_{1,2}
+\]</span></p>
+</div>
+<div id="covarianza-en-comparaciones-de-un-mismo-mes" class="section level4 hasAnchor" number="8.7.1.3">
+<h4><span class="header-section-number">8.7.1.3</span> Covarianza en comparaciones de un mismo mes<a href="tamaño-de-muestra-para-otros-parámetros-de-interés.html#covarianza-en-comparaciones-de-un-mismo-mes" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>En primer lugar, suponga que se quiere comparar la tasa de desempleo entre hombres y mujeres en un mismo mes. En este escenario no existe independencia en el muestreo de hombres y mujeres puesto que estos grupos no son estratos de muestreo. En este caso <span class="math inline">\(T_1\)</span> es la proporción de hombres y <span class="math inline">\(T_2\)</span> es la proporción de mujeres. Nótese que <span class="math inline">\(T_1 \neq T_2\)</span>.</p>
+<p>Como se comentó anteriormente, existe una correlación natural entre las UPM que fueron seleccionadas y que contienen tanto a hombres como a mujeres, por lo tanto <span class="math inline">\(R_{12} \neq 0\)</span>. Note que esta correlación se calcula sobre todos los individuos pertenecientes a la fuerza de trabajo y sobre la variable dicotómica que induce la tasa de desempleo. En resumen, el término de covarianza en este caso sería igual a:</p>
+<p><span class="math display">\[
+Cov(\hat{P}_1, \hat{P}_2) = \sqrt{Var(\hat{P}_1)}\sqrt{Var(\hat{P}_2)}\sqrt{T_1}\sqrt{T_2}R_{1,2}
+\]</span></p>
+<p>Por otro lado, suponga que se quiere comparar la tasa de desempleo entre dos regiones del mismo país en un mismo mes. En este escenario existe independencia en el muestreo de las dos regiones porque la selección es independiente en cada región Esta independencia se tiene por definición del diseño de muestreo puesto que ambas regiones son agrupaciones disjuntas entre estratos de muestreo. En este caso <span class="math inline">\(T_1\)</span> es la proporción de personas de la primera ciudad y <span class="math inline">\(T_2\)</span> es la proporción de personas de la segunda ciudad. Además, tampoco no existe una correlación entre las UPM que fueron seleccionadas entre estas regiones porque la selección fue independiente, por lo tanto <span class="math inline">\(R_{12} = 0\)</span>. En resumen, el término de covarianza es nulo y por ende la varianza del estimador sería igual a:</p>
+<p><span class="math display">\[
+Var(\hat{d})
+= Var(\hat{P}_1) + Var(\hat{P}_2)
+\]</span></p>
+</div>
+</div>
+<div id="tamaño-de-muestra-para-la-estimación-del-impacto-en-dos-mediciones-longitudinales" class="section level3 hasAnchor" number="8.7.2">
+<h3><span class="header-section-number">8.7.2</span> Tamaño de muestra para la estimación del impacto en dos mediciones longitudinales<a href="tamaño-de-muestra-para-otros-parámetros-de-interés.html#tamaño-de-muestra-para-la-estimación-del-impacto-en-dos-mediciones-longitudinales" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Para las encuestas que planean un seguimiento panel o de panel rotativo, es posible contemplar escenarios en los que se quiera estimar el efecto de una intervención, definido como la diferencia en diferencias de las proporciones de interés. De esta forma, el efecto se define como:</p>
+<p><span class="math display">\[
+\theta = (P_{1,1}-P_{2,1})-(P_{1,2}-P_{2, 2})
+\]</span></p>
+<p>En donde <span class="math inline">\(P_{i,j}\)</span> <span class="math inline">\((i, j = 1, 2.)\)</span> corresponden a las proporciones del grupo <span class="math inline">\(i\)</span> en la oleada <span class="math inline">\(j\)</span>. Entonces el tamaño de muestra mínimo<a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a> necesario para lograr una estimación confiable de esta diferencia, con menos del <span class="math inline">\(ME \times 100\%\)</span> de margen de error, es:</p>
+<p><span class="math display">\[
+n \geq \dfrac{DEFF \ S^2_{\theta}}{\dfrac{ME^2}{z_{1 - \alpha/2}^2}+\dfrac{DEFF \ S^2_{\theta}}{N}}
+\]</span></p>
+<p>En donde</p>
+<p><span class="math display">\[
+S^2_{\theta} = (P_{1,1}Q_{1,1}+P_{1,2}Q_{1,2}+P_{2,1}Q_{2,1}+P_{2,2}Q_{2,2})(1-TR)
+\]</span></p>
+<p>En donde <span class="math inline">\(T\)</span> corresponde a la tasa de traslape (<span class="math inline">\(T=1\)</span> corresponde a un panel completo, <span class="math inline">\(T=0.5\)</span> a un semi-panel con traslape del 50% y el caso extremo <span class="math inline">\(T=0\)</span> a una encuesta en donde no hay traslape) y <span class="math inline">\(R\)</span> se define como la correlación entre las dos oleadas (<span class="math inline">\(R=0\)</span> implica que no hay correlación entre los dos momentos, <span class="math inline">\(R=-1\)</span> implica una máxima correlación negativa entre los dos momentos y <span class="math inline">\(R=1\)</span> implica una correlación positiva máxima entre los dos momentos).</p>
+<p>Por ejemplo, en una encuesta de fuerza laboral intemediada por alguna intervención gubernamental, puede ser de interés la evaluación del efecto de esa política de asistencia laboral entre hombres y mujeres en dos periodos de tiempo.</p>
+</div>
+<div id="tamaño-de-muestra-para-el-contraste-de-hipótesis-en-la-diferencia-de-proporciones" class="section level3 hasAnchor" number="8.7.3">
+<h3><span class="header-section-number">8.7.3</span> Tamaño de muestra para el contraste de hipótesis en la diferencia de proporciones<a href="tamaño-de-muestra-para-otros-parámetros-de-interés.html#tamaño-de-muestra-para-el-contraste-de-hipótesis-en-la-diferencia-de-proporciones" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Suponga que el investigador desea realizar el contraste de una hipótesis de interés. En particular, suponga que hay dos grupos de interés en la población finita y que la hipótesis está inducida por la diferencia de las proporciones en las dos poblaciones. El investigador considera que la diferencia es significativa para el fenómeno en cuestión si es mayor que un valor <span class="math inline">\(D\)</span> definido de antemano y conocido como el <em>tamaño del efecto</em> que el investigador desea detectar.</p>
+<p>Nótese que la significación estadística, inducida por un valor-p, no siempre tiene la misma connotación de significación científica o económica, que puede presentarse en fenómenos raros, para los cuales no necesariamente se gozaría de significación estadística. Por lo tanto el sistema de hipótesis que se quiere contrastar es el siguiente:</p>
+<p><span class="math display">\[
+H_o: P_1-P_2=0 \ \ \ \ \ vs.  \ \ \ \ \ H_a: P_1 -P_2 =D &gt; 0
+\]</span></p>
+<p>Nótese que, acudiendo a la distribución normal de los estimadores de las proporciones, y suponiendo independencia en el muestreo de los subgrupos, la regla de decisión en este caso induce el rechazo de la hipótesis nula cuando</p>
+<p><span class="math display">\[
+\dfrac{\hat{P}_1-\hat{P}_2}{\sqrt{Var(\hat{P}_1-\hat{P}_2)}} &gt; z_{1-\alpha}
+\]</span></p>
+<p>Si las características del estudio implican que el diseño de muestreo es complejo con un <span class="math inline">\(DEFF &gt; 1\)</span>, entonces esta regla de decisión rechaza la hipótesis nula si</p>
+<p><span class="math display">\[
+\dfrac{\hat{P}_1-\hat{P}_2}{\sqrt{\frac{DEFF}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)}} &gt; z_{1-\alpha}
+\]</span></p>
+<p>En este caso, es necesario controlar la probabilidad de cometer el error tipo-2 (aceptar una hipótesis nula, dado que ésta es falsa). A esta probabilidad se le conoce como <em>potencia</em> y, suponiendo que nuestro interés está en detectar un tamaño del efecto <span class="math inline">\(P_1 -P_2 =D\)</span>, la potencia está dada por</p>
+<p><span class="math display">\[\begin{align*}
+\beta &amp;\leq Pr\left(\dfrac{\hat{P}_1-\hat{P}_2}{\sqrt{\frac{DEFF}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)}} &gt; z_{1-\alpha} \left. | \right. P_1 -P_2 =D \right)\\
+&amp;= Pr\left(\dfrac{(\hat{P}_1-\hat{P}_2)-D}{\sqrt{\frac{DEFF}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)}} &gt; z_{1-\alpha} - \dfrac{D}{\sqrt{\frac{DEFF}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)}} | P_1 -P_2 =D
+\right)\\
+&amp;= 1-\Phi\left(z_{1-\alpha} - \dfrac{D}{\sqrt{\frac{DEFF}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)}} \right)
+\end{align*}\]</span></p>
+<p>Por lo anterior,
+<span class="math display">\[
+1-\beta \geq \Phi\left(z_{1-\alpha} - \dfrac{D}{\sqrt{\frac{DEFF}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)}} \right)
+\]</span></p>
+<p>Entonces, dado que la función <span class="math inline">\(\Phi()\)</span> es creciente, se tiene que</p>
+<p><span class="math display">\[
+z_{1-\beta} \geq z_{1-\alpha} - \dfrac{D}{\sqrt{\frac{DEFF}{n}\left(1-\frac{n}{N}\right)(P_1Q_1+P_2Q_2)}}
+\]</span></p>
+<p>En consecuencia, al despejar <span class="math inline">\(n\)</span>, se tiene que la muestra en cada subgrupo debe mayor que:</p>
+<p><span class="math display">\[
+n \geq \dfrac{DEFF(P_1Q_1+P_2Q_2)}{\dfrac{D^2}{(z_{1-\alpha}+z_{\beta})^2}+\dfrac{DEFF(P_1Q_1+P_2Q_2)}{N}}
+\]</span></p>
+</div>
 </div>
 <h3>Referencias<a href="referencias.html#referencias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-Groves_Fowler_Couper_Lepkowski_Singer_Tourangeau_2009" class="csl-entry">
-Groves, Robert, Floyd Fowler, Mick Couper, James Lepkowski, Eleanor Singer, y Roger Tourangeau. 2009. <em>Survey Methodology</em>. John Wiley; Sons.
+<div id="ref-Kish_2004" class="csl-entry">
+———. 2004. <em>Statistical Design for Research</em>. Wiley classic biblioteca edición. Wiley. <a href="https://www.wiley.com/en-us/Statistical+Design+for+Research-p-9780471691204">https://www.wiley.com/en-us/Statistical+Design+for+Research-p-9780471691204</a>.
 </div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="7">
+<li id="fn7"><p>Esta metodología también aplica en el caso en el que <span class="math inline">\(U \supset (U_1 \cup U_2)\)</span>.<a href="tamaño-de-muestra-para-otros-parámetros-de-interés.html#fnref7" class="footnote-back">↩︎</a></p></li>
+<li id="fn8"><p>Recuerde que si el muestreo es aleatorio simple, el efecto de diseño es <span class="math inline">\(DEFF=1\)</span>.<a href="tamaño-de-muestra-para-otros-parámetros-de-interés.html#fnref8" class="footnote-back">↩︎</a></p></li>
+<li id="fn9"><p>Note que el tamaño de muestra de toda la encuesta es <span class="math inline">\(4n\)</span>, en las dos oleadas, puesto que se debe seleccionar <span class="math inline">\(n\)</span> elementos en cada grupo y en cada oleada.<a href="tamaño-de-muestra-para-otros-parámetros-de-interés.html#fnref9" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="ingresos-y-gastos.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="sesgos-generados-en-las-encuestas.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="tamaño-de-muestra-para-upm-y-personas.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="algunas-relaciones-de-interés-para-proporciones.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -310,7 +442,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/psirusteam/HHS-Handbook/02ErrorTotal.Rmd",
+"link": "https://github.com/psirusteam/HHS-Handbook/08Tamano.Rmd",
 "text": "Edit"
 },
 "history": {
