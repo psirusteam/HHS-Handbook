@@ -105,7 +105,7 @@ Para ejemplificar la relación entre el ICC y el tamaño de muestra, considere l
 
 2. Si el ICC es cercano a uno, las UPM serán demasiado homogéneas por dentro y muy heterogéneas entre, por tanto se necesitará de una muestra grande de UPM para tener una inferencia precisa. Esto quiere decir que hay poca dispersión dentro de las UPM, pero a la vez hay mucha variación entre ellas. En el caso que el ICC sea idéntico a uno, para obtener una estimación precisa, se necesitaría de una muestra censal de UPM, en donde el submuestreo sea de una sola unidad (puesto que todas las unidades dentro de la UPM serán idénticas).
 
-En resumen, la construcción de las UPM es un proceso que requiere de la más alta disposición de capacidades para que todas las operaciones estadísticas del periodo intercensal sean balanceadas en presupuesto y esfuerzo logístico. La función objetivo de este proceso es el ICC que, como se verá en el capítulo nueve, determina el tamaño de muestra y la precisión de la inferencia. 
+En resumen, la construcción de las UPM es un proceso que requiere de la más alta disposición de capacidades para que todas las operaciones estadísticas del periodo intercensal sean balanceadas en presupuesto y esfuerzo logístico. La función objetivo de este proceso es el ICC que, como se verá en el capítulo ocho, determina el tamaño de muestra y la precisión de la inferencia. 
 
 ## Actualización continua del marco de muestreo 
 
