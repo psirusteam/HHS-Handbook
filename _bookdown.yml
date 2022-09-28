@@ -12,7 +12,7 @@ rmd_files: [
   "03Elementos.Rmd",
   "04Marcos.Rmd",
   "05Estratificar.Rmd",
-  # "06Diseno.Rmd",
+  "06Diseno.Rmd",
   # "07Deff.Rmd",
   # "08Tamano.Rmd",
   #  

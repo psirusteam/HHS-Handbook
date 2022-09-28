@@ -55,3 +55,13 @@ k-medias-de-jarque-kmj
 partición-genética-bb
 evaluación-y-escogencia-de-la-mejor-estratificación
 estratificación-implícita
+diseño-y-mecanismo-de-selección-de-la-muestra
+diseños-de-muestreo
+muestreo-aleatorio-simple
+muestreo-proporcional-al-tamaño
+muestreo-estratificado
+muestreo-de-conglomerados
+muestreo-en-varias-etapas
+muestreo-en-dos-fases
+muestreo-balanceado
+el-diseño-de-muestreo-estándar-en-una-encuesta-de-hogares
