@@ -16,7 +16,7 @@ rmd_files: [
   "07Deff.Rmd",
   "08Tamano.Rmd",
   #  
-  # "09Estimadores.Rmd",
+  "09Estimadores.Rmd",
   # "10Pesos.Rmd",
   # "11Varianza.Rmd",
   # "12Ausencia.Rmd",

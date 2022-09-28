@@ -30,7 +30,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="algunas-consideraciones-adicionales-sobre-el-tamaño-de-muestra.html"/>
+<link rel="prev" href="estimadores-de-calibración.html"/>
 
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -231,6 +231,23 @@ div.csl-indent {
 <li class="chapter" data-level="8.9.3" data-path="algunas-consideraciones-adicionales-sobre-el-tamaño-de-muestra.html"><a href="algunas-consideraciones-adicionales-sobre-el-tamaño-de-muestra.html#sustituciones-y-reemplazos"><i class="fa fa-check"></i><b>8.9.3</b> Sustituciones y reemplazos</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="9" data-path="estimación-de-parámetros.html"><a href="estimación-de-parámetros.html"><i class="fa fa-check"></i><b>9</b> Estimación de parámetros</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="el-estimador-de-horvitz-thompson-para-totales-y-tamaños-poblacionales.html"><a href="el-estimador-de-horvitz-thompson-para-totales-y-tamaños-poblacionales.html"><i class="fa fa-check"></i><b>9.1</b> El estimador de Horvitz-Thompson para totales y tamaños poblacionales</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="el-estimador-de-horvitz-thompson-para-totales-y-tamaños-poblacionales.html"><a href="el-estimador-de-horvitz-thompson-para-totales-y-tamaños-poblacionales.html#estimación-para-totales"><i class="fa fa-check"></i><b>9.1.1</b> Estimación para totales</a></li>
+<li class="chapter" data-level="9.1.2" data-path="el-estimador-de-horvitz-thompson-para-totales-y-tamaños-poblacionales.html"><a href="el-estimador-de-horvitz-thompson-para-totales-y-tamaños-poblacionales.html#el-estimador-ht-en-una-encuesta-de-hogares-regular"><i class="fa fa-check"></i><b>9.1.2</b> El estimador HT en una encuesta de hogares regular</a></li>
+<li class="chapter" data-level="9.1.3" data-path="el-estimador-de-horvitz-thompson-para-totales-y-tamaños-poblacionales.html"><a href="el-estimador-de-horvitz-thompson-para-totales-y-tamaños-poblacionales.html#estimación-para-tamaños-y-totales-en-dominios"><i class="fa fa-check"></i><b>9.1.3</b> Estimación para tamaños y totales en dominios</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="el-estimador-de-hájek-para-medias-y-proporciones.html"><a href="el-estimador-de-hájek-para-medias-y-proporciones.html"><i class="fa fa-check"></i><b>9.2</b> El estimador de Hájek para medias y proporciones</a></li>
+<li class="chapter" data-level="9.3" data-path="otros-estimadores-de-muestreo.html"><a href="otros-estimadores-de-muestreo.html"><i class="fa fa-check"></i><b>9.3</b> Otros estimadores de muestreo</a></li>
+<li class="chapter" data-level="9.4" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html"><i class="fa fa-check"></i><b>9.4</b> Estimadores de calibración</a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html#ganancia-en-eficiencia"><i class="fa fa-check"></i><b>9.4.1</b> Ganancia en eficiencia</a></li>
+<li class="chapter" data-level="9.4.2" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html#diferentes-formas-del-estimador-de-calibración"><i class="fa fa-check"></i><b>9.4.2</b> Diferentes formas del estimador de calibración</a></li>
+<li class="chapter" data-level="9.4.3" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html#la-calibración-como-un-cambio-de-paradigma"><i class="fa fa-check"></i><b>9.4.3</b> La calibración como un cambio de paradigma</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
 <li class="divider"></li>
 <li><a Diseño y análisis de encuestas de hogares</a></li>
@@ -300,6 +317,9 @@ DANE. 2017. <span>«Gran Encuesta Integrada de Hogares - - Departamento Administ
 </div>
 <div class="csl-entry">
 Duncan, G. J., y G. Kalton. 1987. <span>«Issues of Design and Analysis of Surveys across Time»</span>. <em>International Statistical Review / Revue Internationale de Statistique</em> 55 (1): 97. <a href="https://doi.org/10.2307/1403273">https://doi.org/10.2307/1403273</a>.
+</div>
+<div class="csl-entry">
+Estevao, Victor, y Carl-Erik Särndal. 2006. <span>«Survey Estimates by Calibration on Complex Auxiliary Information»</span>. <em>International Statistical Review / Revue Internationale de Statistique</em> 74 (2): 127-47.
 </div>
 <div class="csl-entry">
 Foster, James, Joel Greer, y Erik Thorbecke. 1984. <span>«A Class of Decomposable Poverty Measures»</span>. <em>Econometrica</em> 52 (3): 761-66. <a href="https://doi.org/10.2307/1913475">https://doi.org/10.2307/1913475</a>.
@@ -413,6 +433,9 @@ Rojas, Hugo Andres Gutierrez. 2020. <em>samplesize4surveys: Sample Size Calculat
 Särndal, Carl-Erik, Bengt Swensson, y Jan Wretman. 2003. <em>Model Assisted Survey Sampling</em>. Springer Science; Business Media.
 </div>
 <div class="csl-entry">
+Särndal, C-E. 2007. <span>«The calibration approach in survey theory and practice»</span>. <em>Survey Methodology</em> 33: 99-119.
+</div>
+<div class="csl-entry">
 Schwarz, Norbert, Bärbel Knäuper, Hans-J. Hippler, Elisabeth Noelle-Neumann, y Leslie Clark. 1991. <span>«Rating Scales: Numeric Values May Change the Meaning of Scale Labels»</span>. <em>The Public Opinion Quarterly</em> 55 (4): 570-82.
 </div>
 <div class="csl-entry">
@@ -452,12 +475,13 @@ Vehovar, Vasja. 1999. <span>«Field Substitution and Unit Nonresponse»</span>. 
 
 
 
+
             </section>
 
           </div>
         </div>
       </div>
-<a href="algunas-consideraciones-adicionales-sobre-el-tamaño-de-muestra.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="estimadores-de-calibración.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>

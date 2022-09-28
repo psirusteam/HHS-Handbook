@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>1.3 Otros estimadores de muestreo | 09Estimadores.knit</title>
+  <meta name="description" content="" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="1.3 Otros estimadores de muestreo | 09Estimadores.knit" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="1.3 Otros estimadores de muestreo | 09Estimadores.knit" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="el-estimador-de-hájek-para-medias-y-proporciones.html"/>
+<link rel="next" href="estimadores-de-calibración.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Diseño y análisis de encuestas de hogares</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="estimación-de-parámetros.html"><a href="estimación-de-parámetros.html"><i class="fa fa-check"></i><b>1</b> Estimación de parámetros</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="el-estimador-de-horvitz-thompson-para-totales-y-tamaños-poblacionales.html"><a href="el-estimador-de-horvitz-thompson-para-totales-y-tamaños-poblacionales.html"><i class="fa fa-check"></i><b>1.1</b> El estimador de Horvitz-Thompson para totales y tamaños poblacionales</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="el-estimador-de-horvitz-thompson-para-totales-y-tamaños-poblacionales.html"><a href="el-estimador-de-horvitz-thompson-para-totales-y-tamaños-poblacionales.html#estimación-para-totales"><i class="fa fa-check"></i><b>1.1.1</b> Estimación para totales</a></li>
+<li class="chapter" data-level="1.1.2" data-path="el-estimador-de-horvitz-thompson-para-totales-y-tamaños-poblacionales.html"><a href="el-estimador-de-horvitz-thompson-para-totales-y-tamaños-poblacionales.html#el-estimador-ht-en-una-encuesta-de-hogares-regular"><i class="fa fa-check"></i><b>1.1.2</b> El estimador HT en una encuesta de hogares regular</a></li>
+<li class="chapter" data-level="1.1.3" data-path="el-estimador-de-horvitz-thompson-para-totales-y-tamaños-poblacionales.html"><a href="el-estimador-de-horvitz-thompson-para-totales-y-tamaños-poblacionales.html#estimación-para-tamaños-y-totales-en-dominios"><i class="fa fa-check"></i><b>1.1.3</b> Estimación para tamaños y totales en dominios</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="el-estimador-de-hájek-para-medias-y-proporciones.html"><a href="el-estimador-de-hájek-para-medias-y-proporciones.html"><i class="fa fa-check"></i><b>1.2</b> El estimador de Hájek para medias y proporciones</a></li>
+<li class="chapter" data-level="1.3" data-path="otros-estimadores-de-muestreo.html"><a href="otros-estimadores-de-muestreo.html"><i class="fa fa-check"></i><b>1.3</b> Otros estimadores de muestreo</a></li>
+<li class="chapter" data-level="1.4" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html"><i class="fa fa-check"></i><b>1.4</b> Estimadores de calibración</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html#ganancia-en-eficiencia"><i class="fa fa-check"></i><b>1.4.1</b> Ganancia en eficiencia</a></li>
+<li class="chapter" data-level="1.4.2" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html#diferentes-formas-del-estimador-de-calibración"><i class="fa fa-check"></i><b>1.4.2</b> Diferentes formas del estimador de calibración</a></li>
+<li class="chapter" data-level="1.4.3" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html#la-calibración-como-un-cambio-de-paradigma"><i class="fa fa-check"></i><b>1.4.3</b> La calibración como un cambio de paradigma</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a Diseño y análisis de encuestas de hogares</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="otros-estimadores-de-muestreo" class="section level2 hasAnchor" number="1.3">
+<h2><span class="header-section-number">1.3</span> Otros estimadores de muestreo<a href="otros-estimadores-de-muestreo.html#otros-estimadores-de-muestreo" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>En presencia de información auxiliar es posible mejorar la eficiencia de la estimación acudiendo a diferentes formas funcionales que estiman el total; por ejemplo, con el estimador de razón:</p>
+<p><span class="math display">\[
+\hat{t}_{y, r} = t_x \frac{\sum_s d_k y_k}{\sum_s d_k x_k}
+\]</span></p>
+<p>En donde <span class="math inline">\(t_x\)</span> denota el total poblacional, que se supone conocido para toda la población, de una variable auxiliar <span class="math inline">\(x\)</span> que es preguntada en la encuesta de hogares. Por supuesto, en el análisis de este tipo de encuestas es común realizar inferencias sobre parámetros que tienen una forma no lineal. Uno de los más básicos es la razón poblacional <span class="math inline">\(R_U = t_{y_1} / t_{y_2}\)</span> cuya estimación se lleva a cabo estimando ambos componentes de la fracción</p>
+<p><span class="math display">\[
+\hat{R}= \frac{\hat{t}_{y_1}}{\hat{t}_{y_2}}
+= \frac{\sum_s d_k y_{1k}} {\sum_s d_k y_{2k}}
+\]</span></p>
+<p>Como se indicó anteriormente, la estimación de un promedio poblacional <span class="math inline">\(\bar{y}_U = t_y / N\)</span>, se lleva a cabo de forma eficiente estimando el tamaño de la población y se puede ver como un caso particular de la estimación de una razón. Por otra parte, las encuestas de hogares con diseños panel o rotativos, tienen un mayor interés en la estimación del cambio de indicadores en dos periodos tiempo <span class="math inline">\(\Delta = t_{y^{(t)}} - t_{y^{(t-1)}}\)</span>. Nótese que un estimador de este parámetro está dado por</p>
+<p><span class="math display">\[
+\hat{\Delta} = \hat{t}_{y^{(t)}} - \hat{t}_{y^{(t-1)}}
+\]</span></p>
+<p>Además, es posible mejorar la estimación del total actual <span class="math inline">\(t_y^{(t)}\)</span> al tener en cuenta la información inducida por el traslape de la encuesta en el segundo periodo, así:</p>
+<p><span class="math display">\[
+\tilde{t}_{y^{(t)}} = \alpha \hat{t}_{y^{(t)}}
++ (1 -\alpha) (\tilde{t}_{y^{(t-1)}} + \hat{\Delta})
+\]</span></p>
+<p>En donde <span class="math inline">\(0 &lt; \alpha &lt; 1\)</span>. Por otro lado, si el interés está en estimar algunas características asociadas con la pobreza, es posible utilizar estimadores más complejos. Siendo <span class="math inline">\(y_k\)</span> el ingreso del individuo <span class="math inline">\(k\)</span> y <span class="math inline">\(l\)</span> el umbral de pobreza, entonces el siguiente estimador puede ser utilizado</p>
+<p><span class="math display">\[
+\hat{F}_{\alpha}=\frac{1}{N}\sum_{k\in s} d_k
+\left(\frac{l-y_k}{l}\right)^{\alpha}I(y_k&lt;l)
+\]</span></p>
+<p>En donde <span class="math inline">\(I(y_k&lt;l)\)</span> es una variable indicadora que toma el valor uno si <span class="math inline">\(y_k&lt;l\)</span> o cero, en cualquier otro caso. Note que si <span class="math inline">\(\alpha = 0\)</span>, se tiene una estimación de la incidencia de la pobreza y si <span class="math inline">\(\alpha = 1\)</span>, se obtiene un estimación de la brecha de la pobreza <span class="citation">[@Foster_Greer_Thorbecke_1984]</span>.</p>
+<p>La selección del estimador está altamente relacionada con el diseño de la encuesta. Por ejemplo, si se pretende estimar un indicador para un periodo de tiempo definido, el diseño de la encuesta no debería inducir un esquema de rotación que tenga traslape de hogares, puesto que la correlación del indicador induciría un aumento de su varianza y por ende pérdida de eficiencia. Sin embargo, si se desea estimar el cambio del indicador entre dos periodos de tiempos, es necesario contar con un esquema de rotación que asegure un tamaño de muestra suficiente para estimar con precisión este cambio. <span class="citation">@Cochran_1977 [sección 12.13]</span> afirma que, cuando el interés se centra tanto en la estimación del indicador en el periodo actual como en la estimación del cambio entre periodos, es recomendable tener una tasa de traslape de 2/3, 3/4 o 4/5 de una ronda a otra.</p>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="el-estimador-de-hájek-para-medias-y-proporciones.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="estimadores-de-calibración.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/psirusteam/HHS-Handbook/%s",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": false,
+"toc": {
+"collapse": "section"
+},
+"tconfig": null
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
