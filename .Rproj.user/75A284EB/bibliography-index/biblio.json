@@ -88,6 +88,25 @@
             "type": ""
         },
         {
+            "URL": "https://repositorio.cepal.org/bitstream/handle/11362/47562/S2100743_es.pdf1",
+            "author": [
+                {
+                    "family": "CEPAL"
+                }
+            ],
+            "collection-title": "Documentos de proyectos",
+            "id": "cepalcenso",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "title": "Recomendaciones para los censos de población y vivienda en américa latina",
+            "type": "book"
+        },
+        {
             "ISSN": "252-2195",
             "author": [
                 {
