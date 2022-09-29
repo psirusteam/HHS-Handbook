@@ -90,6 +90,10 @@
 }
 \makeatother
 \usepackage[spanish, spanishkw, onelanguage, linesnumbered, amsmath]{}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{longtable}
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
@@ -111,7 +115,7 @@
 
 \title{Diseño y análisis estadístico en las encuestas de hogares de América Latina}
 \author{Andrés Gutiérrez\footnote{Experto Regional en Estadísticas Sociales - Comisión Económica para América Latina y el Caribe (CEPAL) - \href{mailto:andres.gutierrez@cepal.org}{\nolinkurl{andres.gutierrez@cepal.org}}}}
-\date{2022-09-28}
+\date{2022-09-29}
 
 \begin{document}
 \maketitle
@@ -137,7 +141,7 @@ La coordinación sustantiva de la colección Metodologías de la CEPAL está a c
 
 Esta publicación es el resultado de un proceso de varios años de investigación e interacción con los países miembros en diversas asistencias técnicas concernientes con el diseño, rediseño y análisis posterior de las encuestas de hogares. Dicho proceso fue llevado a cabo por la División de Estadísticas de la CEPAL, bajo la coordinación de Rolando Ocampo, Director de la División de Estadísticas y de Xavier Mancero, Jefe de la Unidad de Estadísticas Sociales.
 
-La redacción del documento estuvo a cargo de Andrés Gutiérrez, Asesor Regional en Estadísticas Sociales de la CEPAL. Las metodologías presentadas en este documento se han beneficiado de los valiosos aportes y sugerencias de funcionarios de la CEPAL, así como del personal de las Oficinas Nacionales de Estadística de los países beneficiarios de las asistencias técnicas durante los años entre 2017 y 2022. El autor agradece a Simone Ceccini y a Xavier Mancero por la lectura detallada de este documento y sus comentarios.
+La redacción del documento estuvo a cargo de Andrés Gutiérrez, Asesor Regional en Estadísticas Sociales de la CEPAL. Las metodologías presentadas en este documento se han beneficiado de los valiosos aportes y sugerencias de funcionarios de la CEPAL, así como del personal de las Oficinas Nacionales de Estadística de los países beneficiarios de las asistencias técnicas durante los años entre 2017 y 2022. El autor agradece a Simone Ceccini, a Hanwen Zhang y a Xavier Mancero por la lectura detallada de este documento y sus comentarios.
 
 \hypertarget{resumen}{%
 \chapter*{Resumen}\label{resumen}}
@@ -5226,6 +5230,909 @@ En este esquema de muestreo, la varianza del estimador de Horvitz-Thompson es ig
 \end{longtable}
 
 Nótese que en este esquema de muestreo, la varianza del estimador de Horvitz-Thompson es igual a \(Var(\hat t_{y, \pi}) = 2.3\). Por tanto, no es exacto afirmar que siempre que un diseño de muestreo contemple un tamaño de muestra más grande se tendrá obligatoriamente una reducción de la varianza.
+
+\hypertarget{representatividad-y-ausencia-de-respuesta}{%
+\chapter{Representatividad y ausencia de respuesta}\label{representatividad-y-ausencia-de-respuesta}}
+
+El problema de la ausencia de respuesta es una faceta normal, aunque no deseable, en el desarrollo de una encuesta. Todas las encuestas de hogares sufren del fenómeno de la ausencia de respuesta ya sea de hogares completos, de personas dentro de los hogares, o en en algunas de las variables de interés dentro de los cuestionarios. En algunas ocasiones y aún después de un diseño cuidadoso y una planificación logística exhaustiva, esta problemática puede ser tan grande que los resultados de la encuesta pueden quedar en entredicho. Por esta razón, este problema debe ser considerado en la planificación y el diseño de todos los levantamientos de información a través de encuestas y se debe contemplar varios ajustes que prevean las consecuencias de este fenómeno. Es por esto que en los capítulos anteriores se abordó el tema del ajuste de subcobertura, que garantiza que el tamaño de muestra efectivo sea el adecuado para realizar un inferencia precisa. De otra forma, si el diseño de la encuesta no tiene en cuenta estos ajustes, el tamaño de muestra final se verá reducido puesto que muchos hogares no contestarán algunas preguntas del cuestionarios, y en algunos casos, muchos hogares no contestarán la totalidad del cuestionario.
+
+Existe un consenso general de que la ausencia de respuesta puede perjudicar severamente la calidad de las estadísticas calculadas y publicadas en una encuesta. \citet{Lohr_2019} afirma que la mayoría de encuestas tienen cierta ausencia de respuesta residual, aún después de un diseño cuidadoso y un seguimiento de la ausencia de respuesta y establece que existen varios tipos de mecanismos de ausencia de respuesta.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Se define la ausencia de respuesta ignorable cuando la probabilidad de que un individuo responda no depende de la característica de interés. Nótese que el adjetivo ignorable hace referencia a que un modelo puede explicar el mecanismo de ausencia de respuesta y que ésta se puede ignorar después de que el modelo la toma en cuenta.
+\item
+  Por otra parte, la ausencia de respuesta se dice no ignorable cuando la probabilidad de que un individuo responda depende de la característica de interés. Por ejemplo, si en una encuesta de fuerza laboral, se desea estimar el número de personas empleadas o desempleadas, la ausencia de respuesta es no ignorable cuando depende de la clasificación laboral del individuo.
+\end{enumerate}
+
+En términos de literatura, el fenómeno de la ausencia de respuesta y sus repercusiones negativas sobre la calidad de las estimaciones ha sido ampliamente estudiado. Por ejemplo, \citet[capítulo 9]{Lumley_2010} hace un análisis detallado con la ausencia de respuesta individual, en donde existen datos parciales para un respondiente, considerando un enfoque que está basado en el diseño de muestreo al ajustar los pesos muestrales. \citet[capítulo 5]{Fuller} cita algunas técnicas de imputación para el tratamiento de la ausencia de respuesta y conjuga modelos probabilísticos junto con los pesos del diseño de muestreo para mitigar los efectos de este problema. \citet{Sar1} considera un enfoque asistido por modelos, en donde toma conjuntos balanceados para lograr mayor representatividad de las estimaciones. De la misma forma, \citet{Sar2} propone un conjunto de indicadores para juzgar la efectividad de la información auxiliar utilizada para controlar el sesgo generado por la ausencia de respuesta.
+
+\hypertarget{el-concepto-de-representatividad}{%
+\section{El concepto de representatividad}\label{el-concepto-de-representatividad}}
+
+El concepto de representatividad se utiliza a menudo en la investigación
+de encuestas, pero por lo general no está claro qué significa. En particular Kruskal y Mosteller presentan una amplia descripción
+de lo que se supone que significa el adjetivo representativo \citep[\citet{KruskalMosteller2}, \citet{KruskalMosteller3}, \citet{KruskalMosteller4}]{KruskalMosteller1}. El concepto de muestra representativa no está del todo estandarizado; \citet{Bethlehem_Cobben_Schouten_2009} menciona que algunos de estos conceptos son muy vagos e imprecisos; por ejemplo:
+
+\begin{itemize}
+\tightlist
+\item
+  Reconocimiento general de los datos.
+\item
+  Ausencia de fuerzas selectivas en la muestra.
+\item
+  Una muestra que sea una miniatura de la población.
+\item
+  Una muestra que contenga casos típicos o ideales.
+\item
+  Cobertura suficiente de la población,
+\item
+  Que permite una buena estimación,
+\item
+  Suficientemente bueno para un propósito particular.
+\end{itemize}
+
+En términos de notación, supongamos que se selecciona una muestra probabilística \(s\) de tamaño \(n\) sin reemplazo de una población finita \(U\) de tamaño \(N\). La muestra puede verse como un vector de \(N\) indicadores \(s=(I_{1},I_{2},\ldots,I_{N})\), donde el indicador \(I_{k}=1\) si se selecciona el elemento \(k\) en la muestra, y \(I_{k}=0\) en caso contrario (\(k=1,2,\ldots,N\)). El fenómeno de la ausencia de respuesta se modela por medio de las probabilidades de respuesta. Para esto, se supone que cada elemento \(k\) en la población tiene una cierta probabilidad desconocida \(\phi_{k}\) de responder cuando se selecciona en la muestra. La respuesta a la encuesta se puede representar mediante el vector de indicadores \(D=(D_{1},D_{2},\ldots,D_{N})\), donde \(D_{k}=1\) si el elemento \(k\) fue seleccionado en la muestra \((I_{k}=1)\) y respondió. De lo contrario, \(D_{k}=0\). Por ende, se deduce que
+
+\[
+\phi_{k}=P\left(D_{k}=1\mid I_{k}=1\right)
+\]
+
+Para poder definir un indicador de representatividad, el concepto
+de representatividad que mejor se acomoda se define como \emph{la ausencia de fuerzas selectivas}. Está claro que no existen fuerzas selectivas si todas las probabilidades de respuesta son uniformes. Esta observación forma la base de la primera definición de representatividad.
+
+\hypertarget{representatividad-fuerte}{%
+\subsection{Representatividad fuerte}\label{representatividad-fuerte}}
+
+La respuesta a una encuesta se denomina representativa fuerte con
+respecto a la muestra, si las probabilidades de respuesta de todos
+los elementos de la población son iguales y si la respuesta de un
+elemento es independiente de la respuesta de todos los demás elementos.
+En otras palabras:
+
+\[
+\phi_{k} = P\left(D_{k}=1\mid I_{k}=1\right) =  \phi  \ \ \ \ \ \ \ \ \ \ k=1,2,\ldots,N
+\]
+
+Se debe tener en cuenta que la representatividad fuerte se garantiza cuando el mecanismo de datos faltantes es MCAR para cada variable objetivo en el estudio. En este caso, la falta de respuesta no provoca que los estimadores estén sesgados. Esta es una definición atractiva, pero no es muy útil ya que en la práctica no es posible comparar las probabilidades de respuesta individual.
+
+\hypertarget{representatividad-duxe9bil}{%
+\subsection{Representatividad débil}\label{representatividad-duxe9bil}}
+
+Suponga que hay una variable auxiliar categórica \(X\) que tiene \(H\)
+categorías y divide la población en \(H\) estratos (subpoblaciones).
+El número de elementos en el estrato \(h\) se denota por \(N_{h}\),
+para \(h=1,2,\ldots,H\). Se asume que esta variable ha sido medida
+en la encuesta y que su valor está disponible para cada encuestado
+y no encuestado. La probabilidad de respuesta del elemento \(k\) en
+el estrato \(h\) está definida por \(\phi_{hk}\).
+
+La respuesta a una encuesta se denomina débilmente representativa
+con respecto a la muestra para la variable auxiliar \(X\) si la probabilidad
+de respuesta promedio es la misma en cada estrato, es decir,
+
+\[
+\bar{\phi}_{h} =  
+\frac{1}{N_{h}}\sum_{k=1}^{N_{h}}\phi_{hk} =
+\phi \ \ \ \ \ \ \ \ \ \  h=1,2,\ldots,H
+\]
+
+La representatividad débil significa que no es posible distinguir
+a los encuestados de los no encuestados simplemente usando información
+con respecto a \(X\). Si la respuesta es débilmente representativa con respecto a muchas variables auxiliares \(X\), existirán relaciones fuertes entre las variables objetivo y las variables auxiliares. Nótese que es posible estimar las medias de las probabilidades de respuesta en los estratos y, por lo tanto, se puede comprobar en la práctica el supuesto de representatividad débil.
+
+\hypertarget{indicadores-de-representatividad}{%
+\section{Indicadores de representatividad}\label{indicadores-de-representatividad}}
+
+Como se mencionó anteriormente, la mayoría de las encuestas adolecen de falta de respuesta y este fenómeno puede afectar seriamente la calidad de
+los resultados de una encuesta. De hecho, las estimaciones de las características de la población estarán sesgadas si, debido a la falta de respuesta, algunos grupos de la población quedan sobre-representados o sub-representados; el problema se agrava cuando estos grupos
+se comportan de manera diferente con respecto a las variables de la
+encuesta. En referencia a la ausencia de respuesta de unidad, en general los INE de la región a menudo usan la tasa de respuesta de la encuesta como un indicador de la calidad de la encuesta.
+
+Dado que una tasa de respuesta baja no implica necesariamente que la precisión de las estimaciones de la encuesta sea deficiente, centrarse solo en la tasa de respuesta como indicador de la calidad de la encuesta puede ser engañoso. Por ejemplo, \citet{Bethlehem_Cobben_Schouten_2009} ilustran esta situación con un ejemplo de la encuesta holandesa POLS en 1998 (Encuesta Integrada de Condiciones de Vida de los Hogares). Después de un mes de trabajo de campo, la tasa de respuesta fue del 47,2\%, mientras que después del período completo de dos meses, la tasa había aumentado al 59,7\%. El modo de recolección de datos en el primer mes fue CAPI (entrevista
+personal asistida por computadora). Los que no respondieron fueron
+contactados en el segundo mes con CATI (Entrevista Telefónica Asistida
+por Computadora) si tenían un teléfono fijo en la lista. El segundo mes de trabajo de campo aumentó la respuesta en un 12,5\%. Sin embargo, esto no resultó en mejores estimaciones puesto que el sesgo de los estimadores aumentó a partir del segundo mes, dado que las personas que habían reportado un número telefónico diferían de las que no reportaron este contacto.
+
+Adicional a la tasa de no respuesta, se necesitan indicadores
+de calidad de la encuesta que proporcionen más información sobre el
+posible riesgo de estimadores sesgados.
+
+\hypertarget{indicadores-r}{%
+\subsection{\texorpdfstring{Indicadores \(R\)}{Indicadores R}}\label{indicadores-r}}
+
+\citet{Shlomo_Skinner_Schouten_2012} estudian el uso de los \emph{indicadores de representatividad} (Indicadores \(R\)) que permiten conocer qué tanto la muestra de respondientes efectivos representa a la población y cómo la composición de la respuesta en la muestra diferiría de la composición de la población finita. Estos indicadores han probado ser una guía importante para determinar en qué medida el sesgo causado por la ausencia de respuesta afecta la encuesta. De hecho, en Europa el proyecto RISQ (\emph{Representativity Indicators for Survey Quality}) está basado en este enfoque y pretende desarrollar y probar indicadores R en varias encuestas de interés. Los países que participan en este proyecto Holanda, Noruega y Eslovenia, en conjunto con las universidad de Southampton (Reino Unido) y la Universidad de Lovaina (Bélgica).
+
+Los indicadores \(R\) miden hasta qué punto la composición de
+la respuesta a una encuesta se desvía de la muestra original. Si todas las probabilidades de respuesta son iguales, la respuesta
+es fuertemente representativa y no habrá diferencias sistemáticas
+entre la composición de la respuesta y la muestra. Por el contrario, si las probabilidades de respuesta no son iguales, es importante
+establecer en qué medida se ve afectada la composición de la respuesta. Esto se logra mediante la definición de una función de distancia
+que mide en qué medida las probabilidades de respuesta individuales
+difieren de la probabilidad de respuesta media.
+
+Supongamos que se conocen las probabilidades de respuesta individual
+\(\phi_{1},\phi_{2},\ldots,\phi_{N}\) de todos los elementos de la población.
+Entonces la desviación estándar es
+
+\[
+S\left(\phi\right)  =  \sqrt{\frac{1}{N-1}\sum_{k=1}^{N}\left(\phi_{k}-\bar{\phi}\right)^{2}}
+\]
+
+Nótese que \(S\left(\phi\right)=0\) si todas las probabilidades de respuesta
+son iguales y el valor de \(S\left(\phi\right)\) será mayor a medida
+que haya más variación en los valores de las probabilidades de respuesta. Además, el valor máximo de \(S\left(\phi\right)\) es igual a 0.5. Por ende, el indicador \(R\) se define como:
+
+\[
+R\left(\phi\right)=1-2\,S\left(\phi\right)
+\]
+
+Este indicador asume valores en el intervalo \(\left[0,1\right]\). De esta manera, un valor de uno implica una fuerte representatividad. Cuanto menor es su valor, más se desvía la composición de respuesta
+de la composición de la muestra. En general, los valores de las probabilidades de respuesta individuales se desconocen en la práctica. Este problema se resuelve estimando las probabilidades de respuesta. Esto se puede lograr si se dispone de información auxiliar adecuada; es decir, de variables que se han medido tanto para los encuestados como para los no encuestados. Para estimar estas probabilidades es posible utilizar varias técnicas, por ejemplo, modelos logísticos o probit, árboles de clasificación, entre otras.
+
+Al suponer que \(\hat{\phi}_{1},\hat{\phi}_{2},\ldots,\hat{\phi}_{n}\) son
+las probabilidades de respuesta estimadas para las unidades en la muestra.
+Entonces, la probabilidad de respuesta media se puede estimar mediante
+
+\[
+\hat{\bar{\phi}}  =  \frac{1}{N}\sum_{k=1}^{n}\frac{\hat{\phi}_{k}}{\pi_{k}}
+\]
+
+y
+
+\[
+\hat{R}\left(\phi\right)  =  1-2\sqrt{\frac{1}{N-1}\sum_{k=1}^{n}\frac{\left(\hat{\phi}_{k}-\hat{\bar{\phi}}\right)^{2}}{\pi_{k}}}
+\]
+
+Nótese que el indicador \(R\) mide la desviación de la representatividad débil y no de la representatividad fuerte. Por ende, este enfoque no es capaz de detectar y cuantificar las diferencias
+entre las probabilidades de respuesta individual dentro de las clases obtenidas al cruzar las variables auxiliares. Suponiendo que las clases están definidas por una variable auxiliar \(X\) que tiene \(H\) categorías. Sea \(N_{h}\) el tamaño de la clase \(h\) y sea \(\bar{\phi}_{h}\) la media poblacional de las probabilidades de respuesta en el estrato \(h\). Si se utiliza un modelo estándar como la regresión logística, el indicador \(R\) se calcula como:
+
+\[
+R_{x}\left(\phi\right)  =  1-2\sqrt{\frac{1}{n-1}\sum_{h=1}^{H}N_{h}\left(\bar{\phi}_{h}-\bar{\phi}\right)^{2}}
+\]
+
+En este caso, \(R_{x}\left(\phi\right)\) mide la variación de las probabilidades de respuesta entre clases \(X\). Si se supone que la variación dentro de la clase es cero en todas las clases, entonces \(R_{x}\left(\phi\right) = R\left(\phi\right)\).
+
+\hypertarget{el-indicador-r-en-la-pruxe1ctica}{%
+\subsection{\texorpdfstring{El indicador \(R\) en la práctica}{El indicador R en la práctica}}\label{el-indicador-r-en-la-pruxe1ctica}}
+
+\citet{Bethlehem_Cobben_Schouten_2009} mencionan que de julio a diciembre de 2005, Statistics Netherlands realizó un seguimiento a gran escala entre los no encuestados en la Encuesta de Población Activa (EPA) de Holanda. En el estudio, se abordó a dos muestras de personas que no respondieron en la EPA utilizando, por un lado, el enfoque de devolución de llamada con el cuestionario completo de la EPA y, por el otro lado, el enfoque de preguntas básicas con un cuestionario muy corto. Se usó CATI en el enfoque de devolución de llamada, y el enfoque de preguntas básicas se utilizó un diseño de recolección mixto que involucró cuestionarios \emph{online} y recolección presencial con papel y CAPI. Los indicadores R se estimaron utilizando modelos de regresión logística que incluían una gran cantidad de variables explicativas que medían características demográficas, geográficas y socioeconómicas en los hogares. Los resultados de este estudio se dan a continuación:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Se reportó que el valor del indicador \(R\) para la respuesta inicial de la EPA es igual a 0.8, que es menor que el valor ideal de 1. Entonces, esta respuesta no es fuertemente representativa. La aplicación del enfoque de devolución de llamada aumentó la
+  tasa de respuesta del 62.2\% al 76.9\%. Luego de esto, el valor del indicador \(R\) aumentó de 0.8 a 0.85. Como los intervalos de confianza no se superponían, hubo indicios de que la respuesta adicional mejoró la composición del conjunto de datos.
+\item
+  La aplicación del enfoque de preguntas básicas dio como resultado
+  una conclusión diferente. Aunque la tasa de respuesta aumentó del 62.2\% al 75.6\%, el valor del indicador \(R\) disminuyó de 0.80 a 0.78. Los intervalos para la EPA inicial y la EPA con preguntas básicas, se superpusieron. Por lo tanto, aparentemente, el enfoque de preguntas básicas no mejoró la composición del conjunto de datos.
+\end{enumerate}
+
+Este último enfoque no es novedoso y agudiza el contraste entre respondientes y no respondientes. Dado que las probabilidades de respuesta estimadas se utilizan para calcular
+el indicador \(R\) y esta estimación se basa en un modelo lineal que utiliza un conjunto de variables auxiliares como variables explicativas.
+
+La dependencia del indicador \(R\) del conjunto de variables auxiliares utilizadas tiene implicaciones para comparar diferentes conjuntos de datos (por ejemplo, en el tiempo o en dominios). Un enfoque apropiado podría ser fijar el conjunto de variables auxiliares de antemano y mantenerlas iguales para todos los conjuntos de datos. Para ello, debe elegirse el máximo posible de variables. Por otro lado, debido al sobreajuste, el error estándar (estimado) puede verse
+afectado, pero las probabilidades de respuesta estimadas no serán sesgadas.
+
+Otro enfoque que se recomienda, es intentar encontrar el mejor modelo para cada conjunto de datos utilizando técnicas de selección de modelos. Esto hace que los modelos dependan del tamaño de la muestra: cuanto
+mayor sea la muestra, más variables del modelo tendrán una contribución significativa. Las muestras pequeñas simplemente no permiten una estimación adecuada de las probabilidades de respuesta y conducirán a una visión más optimista de la representatividad.
+
+Con esta metodología es posible determinar si la composición de la muestra de respondientes efectivos difiere o no de la de la muestra inicial. Los resultados de este proceso de seguimiento pueden ayudar a sustentar
+la decisión de iniciar esfuerzos adicionales para obtener datos para grupos específicos de la población objetivo; este enfoque también puede resultar útil para evaluar si volver a abordar una muestra de personas que no respondieron sería una buena estrategia para acotar el sesgo, o si con un enfoque de preguntas básicas sería suficiente.
+
+El uso de esta metodología durante la fase de recolección de datos podría revelar que la composición de los datos observados se está desviando cada vez más de la estructura poblacional esperada. Esto podría llevar a la decisión de enfocar el resto del proceso de recolección en los grupos que están subrepresentados. Estos cambios en medio de la encuesta se conocen en la literatura especializada como \emph{diseños receptivos}. Otra forma de utilizar el indicador \(R\) para controlar el proceso de la encuesta es analizar la representatividad de una versión anterior de la encuesta. Los resultados de dicho análisis pueden proporcionar información para implementar una estrategia mejorada de recopilación de datos para una nueva versión de la encuesta.
+
+\hypertarget{clasificaciuxf3n-de-la-ausencia-de-respuesta}{%
+\section{Clasificación de la ausencia de respuesta}\label{clasificaciuxf3n-de-la-ausencia-de-respuesta}}
+
+Por otra parte, \citet{Lund} aclaran que existe una gran cantidad de literatura acerca de la ausencia de respuesta y muchos artículos recientes. Esta literatura examina dos aspectos diferentes pero complementarios en el ejercicio de una encuesta: la prevención de la ausencia de respuesta (antes de que ocurra) y las técnicas de estimación necesarias para tener en cuenta la ausencia de respuesta de manera apropiada en el proceso de inferencia. Esta segunda actividad se conoce con el nombre de ajuste para la ausencia de respuesta. \citet{LR2002} establecen tres tipos de ausencia de respuesta.
+
+\hypertarget{mcar}{%
+\subsection{MCAR}\label{mcar}}
+
+La ausencia de respuesta completamente aleatoria (MCAR - \emph{missing completely at random}) se presenta cuando la probabilidad de que un individuo responda no depende de la característica de interés, ni de alguna otra covariable auxiliar. Por ejemplo, si la ausencia de respuesta en una encuesta laboral, no depende del estado actual de empleo del respondiente, ni de alguna característica auxiliar. De esta forma, la ausencia de respuesta está dispersa de manera uniforme sobre toda la población.
+
+Es decir que, cuando el investigador produzca estadísticas descriptivas sobre las personas que respondieron la encuesta, ese porcentaje de personas sea muy similar y tenga un comportamiento uniforme sobre todas las posibles covariables que afecten al individuo. El gráfico \ref{fig:mcar} podría mostrar algunos indicios de que el patrón de ausencia de respuesta podría ser MCAR puesto que el porcentaje de respuesta es similar en las variables auxiliares.
+
+\begin{figure}
+\centering
+\includegraphics{12Ausencia_files/figure-latex/mcar-1.pdf}
+\caption{\label{fig:mcar}Patrón de respuesta MCAR}
+\end{figure}
+
+\hypertarget{mar}{%
+\subsection{MAR}\label{mar}}
+
+La ausencia de respuesta aleatoria (MAR - \emph{missing at random}) se establece cuando la probabilidad de que un individuo responda depende de algunas covariables auxiliares, pero no depende de la característica de interés. Por ejemplo, en una encuesta de fuerza laboral, la ausencia de respuesta puede depender de la edad del respondientes, o del sexo, o incluso del nivel económico del individuo, pero no depende de su clasificación laboral. El gráfico \ref{fig:mar} muestra que el patrón de ausencia de respuesta podría ser MAR puesto que el sexo y la zona del respondiente están influenciando el porcentaje de respuesta, aunque no el estado de ocupación.
+
+\begin{figure}
+\centering
+\includegraphics{12Ausencia_files/figure-latex/mar-1.pdf}
+\caption{\label{fig:mar}Patrón de respuesta MAR}
+\end{figure}
+
+\hypertarget{nmar}{%
+\subsection{NMAR}\label{nmar}}
+
+Por último, la ausencia de respuesta no aleatoria (NMAR - \emph{not missing at random}) se presenta cuando la ausencia de respuesta depende de la característica de interés. El gráfico \ref{fig:nmar} muestra indicios de que el patrón de respuesta es NMAR, puesto que la condición de ocupación es la que influencia el porcentaje de respuesta; esto es contraproducente porque no existirá una forma simple de mitigar el sesgo generado por esta clase de ausencia de respuesta.
+
+\begin{figure}
+\centering
+\includegraphics{12Ausencia_files/figure-latex/nmar-1.pdf}
+\caption{\label{fig:nmar}Patrón de respuesta MNAR}
+\end{figure}
+
+\hypertarget{ausencia-de-respuesta-de-registro-y-de-unidad}{%
+\section{Ausencia de respuesta de registro y de unidad}\label{ausencia-de-respuesta-de-registro-y-de-unidad}}
+
+Nótese que a pesar de que se hayan tomado las medidas de ajuste necesarias en el diseño de la encuesta, cuando ya ha terminado el proceso de recolección de información, se debe lidiar con la ausencia de respuesta para evitar sesgos y aumentar la precisión de los estimadores en la encuesta. La literatura especializada examina dos metodologías diferentes pero complementarias en el ejercicio de una encuesta: la prevención de la ausencia de respuesta (antes de que ocurra) y las técnicas de estimación necesarias para tener en cuenta la ausencia de respuesta de manera apropiada en el proceso de inferencia, después de la recolección de los datos.
+
+Si el mecanismo de ausencia de respuesta se asume MCAR, es posible contemplar en el proceso de inferencia únicamente a aquellas unidades que tienen registros completos y eliminar de la base de datos a aquellas unidades que no contestaron (\emph{list-wise deletion}). A pesar de que este tipo de análisis es simple, para evitar subestimaciones de los parámetros de interés, se debe realizar un ajuste de los factores de expansión inducidos por el diseño muestral, que originalmente fue planeado con un tamaño de muestra más grande que el efectivo. De esta forma, es posible suponer que la muestra de respondientes corresponde a una submuestra completamente aleatoria de la población y utilizar los principios de los diseños en dos fases. \citet[capítulo 11]{Heeringa_West_Berglund_2010} afirman que este tipo de análisis, además de inducir posibles sesgos si el supuesto MCAR no se cumple, reduce la eficiencia de la inferencia debido al decremento del tamaño de muestra efectivo. Por lo tanto, en la mayoría de encuestas, este supuesto no se asume y se realiza un ajuste adicional, después de que ha ocurrido la ausencia de respuesta.
+
+En general se puede afirmar que existen dos tipos de ausencia de respuesta: la primera, debido a la falta de respuesta de una unidad de observación (ausencia de respuesta de unidad), y la segunda debido a la falta de respuesta de una unidad en algunas variables de interés (ausencia de respuesta por registro). Es por esto que \citet[sección 15.5]{Sarndal_Swensson_Wretman_2003} afirman que las principales técnicas para tratar la ausencia de respuesta son el ajuste a los pesos de muestreo y la imputación. El ajuste por ponderación implica aumentar los pesos aplicados en la estimación de los valores y de los encuestados para compensar los valores que se pierden debido a la ausencia de respuesta, mientras que la imputación implica la sustitución de los valores faltantes por valores artificiales.
+
+La ausencia de respuesta tiene una repercusión evidente en la base de datos de la encuesta. Por ejemplo, en la base de datos inicial puede faltar toda la información de una unidad de observación; esto suele suceder porque el encuestador no pudo establecer contacto con el hogar, o porque la persona seleccionada no puede responder o simplemente porque se rehúsa a participar. En esta etapa es recomendable que el encuestador pueda determinar algunas características demográficas del hogar para poder realizar los ajustes pertinentes en el proceso de análisis. También es posible que en la base de datos exista información faltante en algunas registros de las unidades; esto puede deberse a muchas más causas y se evidencia en la base de datos inicial porque faltan algunos registros de la unidad de observación, aunque otros sí están efectivamente respondidos. Algunas causas asociadas a este fenómeno pueden ser estar relacionadas con que el respondiente se sintió agotado en algún momento del cuestionario, o porque alguna pregunta en particular no fue respondida por considerarse sensible.
+
+\hypertarget{efectos-y-consecuencias-de-la-ausencia-de-respuesta}{%
+\section{Efectos y consecuencias de la ausencia de respuesta}\label{efectos-y-consecuencias-de-la-ausencia-de-respuesta}}
+
+En general, es posible hacer frente a este fenómeno indeseado desde varias perspectiva. Los siguientes son algunos puntos de vista para enfrentar la ausencia de respuesta:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \emph{Ignorancia}: lamentablemente, no es raro que se pretenda ignorar la ausencia de respuesta en la encuesta y realizar inferencias con los datos recopilados de las unidades respondientes, sin realizar ningún tipo de acercamiento estadístico para ajustar la inferencia.
+\item
+  \emph{Prevención}: diseñar la encuesta de modo que la ausencia de respuesta sea pequeña. Éste es el mejor método de enfrentarla. La capacitación al equipo encuestador, la redacción de las preguntas, la longitud del cuestionario, las revisitas y el agendamiento de las entrevistas pueden palear las altas tasas de ausencia de respuesta.
+\item
+  \emph{Reacción}: utilizar herramientas para analizar la encuesta de modo que se corrijan los sesgos causados por la ausencia de respuesta. En este caso es posible ajustar los ponderadores de las unidades, o establecer procedimientos de imputación en los registros.
+\end{enumerate}
+
+Ignorar la ausencia de respuesta puede tener consecuencias graves en el entendimiento del constructo de interés en la encuesta. Más aún, puede llevar a tomar decisiones erradas de política pública. Por ejemplo, si se omite el efecto de la ausencia de respuesta en una encuesta de ingresos y gastos, se podría subestimar el ingreso medio y el ingreso total en un país; si se omite el efecto de la ausencia de respuesta en una encuesta de desempleo, se podría subestimar el número total de desempleados; además, si se omite el efecto de la ausencia de respuesta en una encuesta de victimización, se podría subestimar el número total de víctimas.
+
+La ausencia de repuesta conlleva grandes efectos de sesgo en los resultados de calidad de las estimaciones. Debe contemplarse muy bien la mejor estrategia para hacer frente a sus consecuencias. Por ejemplo, si se aumentara el tamaño de muestra para enfrentar la ausencia de respuesta, es posible que nos encontremos con una mayor cantidad de personas de la misma clase de respondientes (homogeneidad). En este caso, el sesgo puede aumentar porque se malgastaron recursos que hubiesen servido para remediar la ausencia de respuesta con otras medidas.
+
+\hypertarget{posibles-soluciones}{%
+\section{Posibles soluciones}\label{posibles-soluciones}}
+
+Al lidiar con la ausencia de respuesta, podemos distinguir algunas prácticas que guían a diferentes tratamientos metodológicos diferentes. En general, se pueden distinguir las siguientes prácticas:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Imputación total}: se trata de imputar todos los valores faltantes para los individuos con al menos un valor perdido. En otras palabras, la imputación se considera como la única forma de tratar la ausencia de respuesta.
+\item
+  \textbf{Ponderación total}: se trata de ponderar cada una de las variables de interés, así sea de manera diferenciada. No se utiliza la imputación y existirán tantos conjuntos de factores de expansión como variables con valores perdidos.
+\item
+  \textbf{Eliminación total}: se trata de eliminar todos los registros con algún valor perdido y hacer el análisis con el conjunto restante de valores respondidos.
+\item
+  \textbf{Enfoque combinado}: se trata de imputar únicamente en los elementos que tienen al menos un registro (no todos) perdido y modificar los factores de expansión en aquellos casos en donde hay omisión de todos los registros del cuestionario.
+\end{itemize}
+
+Siguiendo la notación de \citet{Sarndal_Lundstrom_2006}, consideramos una muestra de unidades \(s\), de la cual \(r\) denota el conjunto de respondientes que han contestado a una o más de las \(I\) variables de interés. Por tanto, una unidad que no responde a ninguna variable pertenece al conjunto \(s-r\). El conjunto de unidades que han respondido a una variable del estudio en particular se denota por \(r_i\). Nótese que
+
+\[
+r_i\subseteq r \subseteq s
+\]
+
+Finalmente, si se supone que \(y_k\) es faltante y se considera para la imputación, entonces \(\hat{y}_k\) denotará su valor imputado. La figura \ref{fig:figbaseincom} ilustra\footnote{Las celdas en color blanco representas registros respondidos y las celdas en color negro representan registros no respondidos y faltantes} cómo, después de la recolección de datos, hay individuos que no respondieron a una o todas las variables de la encuesta. En esta ilustración, las unidades están representadas por las filas y las variables por las columnas. Observe que lo primeros tres individuos contestaron a todas las preguntas del cuestionario; el cuarto individuo no contestó las últimas dos preguntas; el quinto individuo no contestó ni la primera ni la última pregunta; el sexto individuo no contestó a la tercera pregunta; y así sucesivamente, hasta llegar a los últimos dos individuos quienes no contestaron a ninguna pregunta del cuestionario. Para este ejemplo particular, se observa que:
+
+\begin{itemize}
+\tightlist
+\item
+  El número de variables de interés en la encuesta de hogares es \(I=8\).
+\item
+  El número de unidades incluidas en la muestra \(s\) es \(n=\#(s)=14\).
+\item
+  El número de respondientes efectivos en la primera variable es \(\#(r_1)=10\), en la segunda variable es \(\#(r_2)=9\), y así sucesivamente hasta notar que el número de respondientes efectivos en la última variable de la base de datos es de \(\#(r_8)=8\).
+\end{itemize}
+
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{Pics/j1} \caption{Un conjunto de datos después del proceso de observación.}\label{fig:figbaseincom}
+\end{figure}
+
+\hypertarget{imputaciuxf3n-total}{%
+\subsection{Imputación total}\label{imputaciuxf3n-total}}
+
+En este enfoque se imputarían todos los valores \(y_k\) que están perdidos, sin importar si la pérdida es debida a la ausencia del registro o del individuo. En este caso, tendríamos un conjunto completo de datos con los valores \(\{y_{\circ \  k}: k\in s\}\), donde
+
+\[
+y_{\circ \  k} = 
+\begin{cases}
+y_k, \ \text{for $k \in r_i$} \\
+\hat{y}_k, \ \text{for $k \in s - r_i$}
+\end{cases}
+\]
+
+y \(\hat{y}_k\) es el valor imputado. Por ejemplo, el estimador del total utilizando este enfoque estaría dado por la siguiente expresión.
+
+\[
+\hat{t}_{y,\pi} = \sum_s d_{k}y_{\circ \  k}
+= \sum_{r_i}d_{k}y_k + \sum_{s - r_i}d_{k}\hat{y}_k
+\]
+
+La figura \ref{fig:figimptotal} muestra un ejemplo de las unidades que serían consideradas para el análisis después de la imputación. Nótese entonces que las tres unidades que respondieron todas las preguntas del cuestionario entran al análisis sin ningún ajuste; mientras que las nueve unidades que no respondieron a todo el cuestionario entran al análisis habiéndose imputado las celdas correspondientes a la ausencia de respuesta; además, las dos unidades que no respondieron ninguna pregunta del cuestionario también entran al análisis puesto que todas sus respuestas fueron imputadas. Luego, en este enfoque todas las unidades en el conjunto \(s\) se consideran para el análisis posterior.
+
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{Pics/j3} \caption{Imputación total: todas las unidades que no respondieron son imputadas (las celdas en gris indican los valores que fueron imputados).}\label{fig:figimptotal}
+\end{figure}
+
+\hypertarget{ponderaciuxf3n-total}{%
+\subsection{Ponderación total}\label{ponderaciuxf3n-total}}
+
+Al usar el enfoque de ponderación total es posible usar pesos de calibración específicos \(w_k = d_k F_{ik}\) que compensarían la ausencia de respuesta de unidad y de registro. De esta forma, el estimador del total estaría dado por la siguiente expresión:
+
+\[
+\hat{y}_{cal}=\sum_{r_i}w_ky_k = 
+\sum_{r_i}d_k F_{ik} y_k
+\]
+
+Si todos los \(r_i\) son diferentes, entonces cada variable de estudio requerirá un conjunto de ponderadores diferentes. Al final este enfoque induce un número no uniforme de casos por variable. Para este esquema, se utilizan pesos \(w_k^{(i)}\) para cada variable \(i \in I\) que compensan la ausencia de respuesta de la unidad. Si todos los \(r_i\) son diferentes, cada variable de estudio requerirá un conjunto de pesos diferente.
+
+Siguiendo con el ejemplo, a partir de la figura \ref{fig:figpondtotal} se nota que la primera variable del cuestionario fue respondida por 10 personas, y cuatro personas no respondieron esta pregunta. Por lo tanto, en este enfoque se crearán pesos \(w_k^{(1)}\) para cada \(k\in r_1\) que ponderen satisfactoriamente la información recolectada en esta variable. Sin embargo, este conjunto de pesos no será único, puesto que, en particular, la segunda variable del cuestionario fue respondida por nueve personas, y tres personas no respondieron esta pregunta. Por lo tanto, en este enfoque se crearán pesos \(w_k^{(2)}\) para cada \(k\in r_2\) que ponderen esta información recolectada en esta variable. Nótese que en general \(w_k^{(1)} \neq w_k^{(2)}\) y, por ende, cada una de las \(I=8\) variables del estudio tendrá su propio conjunto de ponderadores.
+
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{Pics/j4} \caption{Ponderación total: cada variable tendrá un conjunto de pesos diferente. No se utiliza ningún método de imputación.}\label{fig:figpondtotal}
+\end{figure}
+
+\hypertarget{eliminaciuxf3n-total}{%
+\subsection{Eliminación total}\label{eliminaciuxf3n-total}}
+
+En este enfoque se eliminarán de la base de datos todas las unidades que contengan al menos un registro perdido. Se recomienda fuertemente abstenerse de tomar este camino, puesto que, aunque induciría un solo conjunto de ponderadores, tendríamos un decrecimiento considerable y deliberado en el tamaño de muestra, asociado con pérdida de información, incremento sustancial de sesgos y decremento de la precisión de los estimadores. Note que en este enfoque sólo las unidades del conjunto de respondientes efectivos en todas las variables se consideran para el análisis posterior de la encuesta. Este subgrupo de individuos está dado por:
+\[
+\bigcap_{i=1}^I r_i
+\]
+Por supuesto, en general, esto no es aconsejable puesto que trae problemas de sesgo, dado que las unidades que contestaron todo el cuestionario generalmente difieren de forma estructural de las unidades que no contestaron; además trae problemas de eficiencia estadística, puesto que el tamaño de la muestra efectiva, después de la eliminación de unidades, será insuficiente para garantizar los mínimos requeridos en la inferencia.
+
+La gráfica \ref{fig:figelimtotal} representa este enfoque en donde es evidente que el decrecimiento en el tamaño de muestra podría tener repercusiones nefastas en la inferencia de la encuesta. Teniendo en cuenta el ejemplo anterior, solo tres unidades serían tenidas en cuenta para el análisis de la información, mientras que nueve unidades, que no contestaron al menos una pregunta, más las dos unidades que no contestaron ninguna pregunta, serían eliminadas del análisis estadístico. Es decir, la mayoría de unidades de la muestra inicial serían descartadas.
+
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{Pics/j2} \caption{Enfoque de eliminación: únicamente se consideran las unidades que respondedieron a todas las varaibles.}\label{fig:figelimtotal}
+\end{figure}
+
+\hypertarget{enfoque-combinado}{%
+\subsection{Enfoque combinado}\label{enfoque-combinado}}
+
+Por el contrario, es recomendable escoger un camino parsimonioso que combine estas estrategias de forma diferencial a lo largo de la encuesta. El enfoque combinado usa la imputación para afrontar la ausencia de respuesta por registro para las variables (columnas de la base de datos) específicas que lo necesiten y luego utiliza un ajuste a los factores de ponderación para afrontar la ausencia de respuesta por unidad (filas de la base de datos). Usualmente, los pesos finales se producen utilizando un enfoque de calibración que hace uso de información auxiliar externa.
+
+Cuando se presenta ausencia de respuesta por registro y por unidad, el enfoque combinado imputa primero para luego obtener una matriz rectangular completa. Luego de lo anterior se procede a realizar un ajuste a los ponderadores. El conjunto de datos completo para la variable de interés \(y\) está dado por \(\{y_{\circ \  k}: k\in r\}\)
+
+\[
+y_{\circ \  k} = 
+\begin{cases}
+y_k, \ \text{for $k \in r_i$} \\
+\hat{y}_k, \ \text{for $k \in r - r_i$}
+\end{cases}
+\]
+
+En donde \(\hat{y}_k\) es el valor imputado. Note que en el enfoque de imputación total, también se imputa para \(k \in s-r\). La gráfica \ref{fig:figenfcomb} representa este enfoque parsimonioso en donde los valores imputados (en gris) entran a ser parte de la inferencia y las unidades que nunca respondieron (en negro) y que tienen todos sus registros faltantes son retiradas de la base de datos final.
+
+Se observa que los dos últimos individuos de la muestra fueron totalmente descartados puesto que no contestaron ninguna pregunta del cuestionario; además, para la primera variable, los valores del quinto y noveno individuo fueron imputados. De la misma manera, para la segunda variable, los valores de los individuos diez, once y doce fueron imputados; y así sucesivamente, hasta llegar a la última variable en donde los valores de los individuos cuatro, cinco, siete y nueve fueron imputados.
+
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{Pics/j5} \caption{Enfoque combinado: las unidades que no respondieron a ningún ítem son eliminadas del análisis y los respondientes parciales son imputados.}\label{fig:figenfcomb}
+\end{figure}
+
+Los capítulos anteriores profundizaron en el tema de la creación de factores de expansión para los individuos presentes en la base de datos final. De tal forma que en los capítulos posteriores se abordará algunas metodologías de imputación que pueden ser recomendables a la hora de completar una base de datos estructurada y rectangular cuyas entradas estén completas. Antes de introducir estos temas se presentarán algunas medidas descriptivas que pueden ser usadas para generar alertas sobre la pérdida de representatividad debido a la ausencia de respuesta.
+
+\hypertarget{ausencia-de-respuesta-de-unidad}{%
+\chapter{Ausencia de respuesta de unidad}\label{ausencia-de-respuesta-de-unidad}}
+
+En una encuesta la información auxiliar puede utilizarse en dos etapas: en la planeación del diseño de muestreo y en la escogencia del estimador. En el primer caso, es posible utilizar la información auxiliar para construir estratos, definir conglomerados, asignar los tamaños de muestra dentro de los estratos, o incluso construir probabilidades de selección desiguales. De la misma forma, en el segundo caso, la información auxiliar puede utilizarse en la estimación de los parámetros de interés al definir nuevos ajustes de ponderación, al imponer restricciones de consistencia con la información auxiliar disponible a nivel de censos, registros o encuestas para que la distribución de la muestra expandida coincida plenamente con algunas características poblacionales. En este capítulo se aborda el uso de la información auxiliar en el estimador para corregir los sesgos generados por la ausencia de respuesta.
+
+Como se ha expuesto anteriormente, la ausencia de respuesta a nivel de unidad puede tener consecuencias muy graves en la inferencia resultante de las encuestas de hogares, puesto que si el conjunto de respondientes tiene características distintas al conjunto de no respondientes, entonces se introducirá sesgo en la estimación de los parámetros de interés.
+
+\hypertarget{sesgo-sobre-los-estimadores}{%
+\section{Sesgo sobre los estimadores}\label{sesgo-sobre-los-estimadores}}
+
+Asumiendo que existe ausencia de respuesta en la muestra, considere la siguiente forma de estimar (ingenuamente) el promedio poblacional \(\bar{y}_U\) mediante el estimador de Hájek
+
+\[
+\tilde{y}_s = \frac{\sum_{s_r}d_ky_k}{\sum_{s_r}d_k} = \frac{\hat{t}_y}{\hat{N}}
+\]
+
+Siendo \(\bar{\phi}\) el promedio de las probabilidades de respuesta, el sesgo generado por la ausencia de respuesta puede cuantificarse de la siguiente manera:
+
+\[
+B\left(\tilde{y}_s\right)  = 
+\frac{1}{N\bar{\phi}}\sum_U(y_k-\bar{y}_U)(\phi_k-\bar{\phi})
+= \frac{Cov\left(\bar{y},\phi\right)}{\bar{\phi}}
+= \frac{Cor\left(Y,\phi\right)S\left(Y\right)S\left(\phi\right)}{\bar{\phi}}
+\]
+
+En donde \(Cov\left(Y,\phi\right)\) es la covarianza poblacional entre
+los valores de la característica de interés y las probabilidades de respuesta,
+\(cor\left(Y,\phi\right)\) es el coeficiente de correlación poblacional
+y \(S\left(Y\right)\) es la desviación estandar poblacional de la variable objetivo. Dado que el valor del coeficiente de correlación está restringido
+al intervalo \([-1, 1]\), el valor máximo del sesgo absoluto será igual a
+
+\[
+|B\left(\tilde{y}_s\right)| \leq 
+\frac{S\left(\phi\right)S\left(y\right)}{\bar{\phi}}
+= \frac{\left(1-R\left(\phi\right)\right)S\left(y\right)}{2\bar{\phi}}
+\]
+
+A pesar de que este límite superior no se puede calcular en situaciones prácticas, sí es posible estimarlo utilizando los datos de la muestra y las probabilidades
+de respuesta estimadas. Nótese que si el mecanismo de ausencia de respuesta fuese MCAR, entonces el valor de \(R\left(\phi\right)\) sería uno, y por consiguiente no habría sesgo. De la misma forma, en el caso extremo en el que la característica de interés fuese homogénea en toda la población, tampoco habría sesgo en el estimador, y bastaría con utilizar los datos de la muestra de respondientes efectivos, sin ningún tipo de corrección.
+
+Además de las anteriores consideraciones, es posible evaluar las propuestas de escogencia de variables para calibración de \citet{KaltonFloresCervantes_2003} y de \citet{Sarndal_2011}. En particular, este último autor considera un indicador del sesgo por ausencia de respuesta sobre los estimadores de calibración, cuya lógica se basa en que, en el mejor de los casos, en el que no hubiese errores de cobertura ni ausencia de respuesta, el estimador de expansión \(\hat{t}_{y}\) sería insesgado y la distancia que habría entre este y el estimador de calibración \(\hat{t}_{y,cal}\) se podría cuantificar como \(\Delta_A = \frac{(\hat{t}_{y,cal} - \hat{t}_{y})}{N}\). Este indicador se sugiere como una posible herramienta para comparar potenciales variables de calibración, de tal forma que cuando el valor de \(|\Delta_A|\) sea grande habría un indicio para preferir un vector de calibración sobre otro. Además, al estandarizarla, esta medida puede ser descompuesta en los siguiente tres factores:
+
+\[\frac{\Delta_A}{S_y} = cv_g \ \times R_{y,\mathbf{x}} \ \times R_{D,C}\]
+
+De esta forma, el primer factor representa el coeficiente de variación de los pesos \(g_k\); el segundo factor al cuadrado es el coeficiente de determinación de una regresión múltiple entre la variable de estudio y las variables del vector de calibración; el último factor al cuadrado es el coeficiente de determinación (proporción de varianza explicada) en una regresión ponderada que pasa por el origen entre las desviaciones de las covariables \(D_j = \hat{t}_{x, j} - t_{x,j}\) y las covarianzas de la variable de estudio y las covariables \(C_j = cov(y, x_j)\).
+
+\hypertarget{soluciones}{%
+\section{Soluciones}\label{soluciones}}
+
+Como se expuso en la sección anterior, si no hay correlación entre la variable de interés y la estructura de la ausencia de respuesta entonces no hay sesgo en los estimadores. Esto quiere decir que, si la probabilidad de respuesta es homogénea (representatividad fuerte) o pudiera modelarse (representatividad débil) para todos los individuos, entonces el sesgo se podría eliminar. En esta sección se explorarán dos caminos que, al incorporar información auxiliar, eliminan el sesgo causado por el fenómeno de la ausencia de respuesta.
+
+Ambas opciones, ajuste de factores de expansión mediante modelos de \emph{propensity score} y estimadores de calibración, descansan en el paradigma de la inferencia basada en el diseño de muestreo y por ende se contemplan como dos posibilidades atractivas que mantienen la buenas propiedades de la estimación directa en encuestas de hogares.
+
+\hypertarget{propensity-score}{%
+\subsection{Propensity Score}\label{propensity-score}}
+
+Como se mencionó anteriormente, uno de los ajustes que se debe realizar en la generación de los ponderadores finales es la corrección por ausencia de respuesta. En donde
+
+\[d_{4k} =  \frac{d_{3k}}{\hat{\phi_k}}\]
+
+Como ya se había mencionado en los capítulos anteriores, si el patrón de ausencia de respuesta es NMAR, entonces \(\phi_k = f(\mathbf{y}_k, \beta)\) y en este caso, como no es posible tener acceso a los determinantes de la respuesta (porque precisamente son las mismas variables de interés en la encuesta), entonces no es posible estimar el patrón de ausencia de respuesta. Por ende, en este escenario habrá sesgo siempre. Por el contrario, si el patrón de ausencia de respuesta es MCAR o MAR, entonces \(\phi_k = f(\mathbf{x}_k, \boldsymbol{\beta})\); en este caso, si fuese posible tener acceso a las covariables \(\mathbf{x}\) que determinan el mecanismo de respuesta, entonces es posible estimar las probabilidades de respuesta mediante \(\hat{\phi}_k = f(\mathbf{x}_k, \hat{\boldsymbol{\beta}})\). Efectivamente, en el caso del estimador de Horvitz-Thompson, el sesgo del estimador se anula puesto que
+
+\begin{align*}
+E(\hat{t}_y) &= E\left(\sum_{k\in s_r}d_{3k}y_k\right) \\
+&= E\left(\sum_{k\in s_r}\frac{y_k}{\pi_k \hat{\phi_k}}\right)\\
+&= E\left(E\left(\sum_{k\in U}\frac{y_k}{\pi_k \hat{\phi_k}}I_kD_k|I_k\right)\right)\\
+&= \sum_{k\in U}\frac{y_k}{\pi_k \hat{\phi_k}}E\left(I_k\right)E\left(D_k|I_k\right)\\
+&= \sum_{k\in U}\frac{y_k}{\pi_k \hat{\phi_k}}\pi_k\phi_k = t_y
+\end{align*}
+
+Asumiendo que el modelo está bien establecido, entonces se tendrá una concordancia directa entre \(\hat{\phi_k}\) y \(\phi_k\); por lo tanto se anularían en la última igualdad de la ecuación anterior. Además, el insesgamiento viene supeditado puesto que,
+
+\[
+E(I_kD_k) 
+= E\left(E(I_kD_k|I_k) \right)
+= E(I_k)E(D_k|I_k) = \pi_k \phi_k
+\]
+
+En resumen, si se tiene acceso a información auxiliar (contenida en el marco de muestreo o en otras preguntas de la encuesta), y si se considera que el mecanismo que genera la ausencia de respuesta en la encuesta de hogares es MAR o MCAR, es posible ajustar un modelo de \emph{propensity score} para la ausencia de respuesta (en donde la variable dependiente es una variable indicadora de la respuesta del individuo por lo general supeditado a una distribución Bernoulli o Binomial). En resumen, es posible definir el siguiente estimador insesgado
+
+\[
+\hat{t}_y=\sum_{k\in s_{ER}}d_{4k}y_k
+\]
+
+En donde
+
+\[
+d_{4k} = \frac{d_{3k}}{\hat{\phi_k}}  \ \ \ \ \ \ \ \ \forall \ k  \in s_{ER}
+\]
+
+Siempre es muy importante realizar una validación exhaustiva de los modelos utilizados para estimar la probabilidad de respuesta. En general, es necesario que el modelo satisfaga las siguientes dos condiciones:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \emph{Soporte común}: al igual que en un experimento aleatorizado, es necesario garantizar que ninguna combinación de las covariables induzca un estado (respuesta o ausencia de respuesta) de forma determinística. Es decir sobre todas las combinaciones en las covariables deben existir respondientes y no respondientes. Esta condición se puede escribir como:
+  \[
+  0 < Pr(D_{1,k} = 1 |\mathbf{x}_{1}) < 1 
+  \]
+\item
+  \emph{Balanceo}: como la respuesta de las unidades de muestreo no provienen de un estudio aleatorizado, es necesario garantizar que la distribución de las \(\hat\phi_k\) sea similar entre respondientes y no respondientes. De esta forma, es posible expandir el subconjunto de respondientes efectivos a la muestra original (que incluye a las unidades no respondientes), la cual a su vez expande a toda la población de interés. Esta condición se puede escribir como:
+\end{enumerate}
+
+\begin{align*}
+\hat\phi_{1, k} &= Pr[D_{1, k} | I_{1, k} = 1,\mathbf{x}] \\
+&= Pr[D_{1, k} | k \in s_r, I_{1, k} = 1, \mathbf{x}] \\
+&= Pr[D_{1, k} | k \notin s_r, I_{1, k} = 1, \mathbf{x}]
+\end{align*}
+
+Por último, se debe corroborar que la suma de los pesos ajustados por la ausencia de respuesta esté cercana al tamaño de la población que se quiere representar. La figura \ref{fig:figel3a} permite ilustrar el soporte común entre respondientes y no respondientes para un modelo de \emph{propensity score}; nótese que ambas distribuciones son similares, por lo que es posible concluir que efectivamente las covariables usadas están representando bien la estructura estocástica en respondientes y no respondientes.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{Pics/el3a} 
+
+}
+
+\caption{Distribución de las probabilidades estimadas de respuesta: respondientes (arriba), no respondientes (medio), ambos (abajo).}\label{fig:figel3a}
+\end{figure}
+
+Además, la figura \ref{fig:figel3b} muestra la propiedad de balanceo en el modelo; véase cómo ambas distribuciones se alejan de los extremos (ceros y uno) y presentan una caracterización similar.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{Pics/el3b} 
+
+}
+
+\caption{Balanceo entre respondientes y no respondientes}\label{fig:figel3b}
+\end{figure}
+
+\hypertarget{calibraciuxf3n}{%
+\subsection{Calibración}\label{calibraciuxf3n}}
+
+Como lo afirma \citet{Sar08}, la calibración provee una forma sistemática para involucrar la información auxiliar. En la mayoría de aplicaciones prácticas, la calibración provee un enfoque simple para incorporar esta información dentro de la etapa de estimación. La información auxiliar fue usada para mejorar la precisión de los estimativos mucho antes que el término calibración fuera popular. La calibración puede ser usada efectivamente en encuestas donde la información auxiliar está disponible en diferentes niveles. Por ejemplo, al realizar un muestreo en dos etapas la información auxiliar puede existir para las unidades de la primera etapa (los conglomerados) y puede existir otra información para las unidades de la segunda etapa (elementos o conglomerados).
+
+Como se ha detallado con amplitud en este y los capítulos anteriores, la ausencia de respuesta de unidad tiene consecuencias dañinas en la inferencia con encuestas de hogares. En este caso es altamente recomendable que se implemente ajuste a los factores de ponderación de las unidades (hogares o personas). A pesar de que los modelos de \emph{propensity score} tienen una larga trayectoria en el manejo de la ausencia de respuesta, la calibración utilizada para corregir estos sesgos ofrece una relativamente nueva perspectiva. Nótese que el estimador tradicional toma la siguiente forma:
+
+\[
+\hat t_y^* = \sum_{s_r} w_k\ y_k = \sum_{s_r} \frac{d_k}{\phi_k} y_k 
+\]
+
+Esta anterior expresión indica que implícitamente se genera un procedimiento en dos etapas en donde, en primer lugar, se calculan lo pesos básicos inducidos por el diseño de muestreo, luego se ajusta un modelo de \emph{propensity score} para estimar las probabilidades de respuesta \(\phi_k\). A esta estrategia generalmente se le agrega una tercera etapa en donde se crean nuevos pesos calibrados con respecto a proyecciones demográficas post-censales, como por ejemplo los cruces entre edad, sexo y región. Al ajustar los pesos para que sumen exactamente la cifra de las proyecciones censales, se reduce el sesgo de subcobertura.
+
+\citet{Sar08} afirma que la práctica general es asumir que el estimador \(\hat t_y^*\) es insesgado, cuando en realidad no lo es, puesto que no es posible conocer todos los determinantes del mecanismo de respuesta para ajustar el modelo que estima las probabilidades de respuesta. Además, de la sección anterior se deduce que este supuesto implica que se considere que \(\pi_k \hat\phi_k\) es la verdadera probabilidad de inclusión de la unidad, cuando en realidad no es así. Por lo tanto, realizar un ajuste a los factores de expansión únicamente basados en los modelos de \emph{propensity score} traerá inevitablemente una cierta cantidad de sesgo en la estimación de los parámetros en las encuestas de hogares.
+
+Bajo este escenario, el enfoque de calibración doble surge como un proceso metodológico adicional que pretende corregir estos sesgos. Para poder utilizarlo, es necesario tener información auxiliar en dos niveles: la población y la muestra. Este tipo de metodologías pueden ser usadas en las encuestas tipo panel, o panel rotativo. En este proceso es necesario contar con dos tipos de información auxiliar:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Por un lado tendremos la información poblacional usual que se utiliza para calibrar los factores de expansión en un levantamiento regular. Las variables que intervienen en esta calibración las notaremos como \(\boldsymbol{x}_{1k}\) y por lo general denotan la pertenencia de los individuos a regiones, o grupos de edad, sexo o área (urbano, rural).
+\item
+  Por otro lado deberemos tener acceso a información auxiliar en la muestra original (que incluya a las unidades respondientes y no respondientes) y que notaremos como \(\boldsymbol{x}_{2k}\). Por ejemplo, utilizando la información del panel al momento de la primera medición, sería posible contar con información concerniente a la condición de ocupación, ingresos, o cualquier otra variable medida en la primera oleada del panel.
+\end{enumerate}
+
+Por lo tanto, es posible calibrar los pesos en la muestra de respondientes (\(s_r\)) a nivel de la información auxiliar disponible en la muestra original (\(s\)), y luego a nivel nacional (\(U\)) o por los estratos de interés. Si el mecanismo que genera la ausencia de respuesta es MAR o MCAR, es posible que los ponderadores de calibración eliminen el sesgo en las estimaciones finales si es que las variables que generan este mecanismo se han calibrado en alguno de las dos niveles mencionados. \citet{Sarndal_Lundstrom_2006} proponen que, para lograr este objetivo, se encuentre un primer conjunto de pesos calibrados sujetos a la siguiente restricción:
+
+\[
+\sum_{s}w_{1k}\boldsymbol{x}_{1k} = \sum_{U}\boldsymbol{x}_{1k}
+\]
+
+Luego, en una segunda etapa, se deben usar estos pesos intermedios \(w_{1k}\) para calcular los pesos finales de calibración \(w_{k}\) de la muestra de respondientes efectivos que están sujetos a la siguiente restricción:
+
+\[
+\sum_{s_r}w_{k}\boldsymbol{x}_{2k} = \sum_{s}w_{1k}\boldsymbol{x}_{k} = 
+\begin{pmatrix}
+\sum_{U}\boldsymbol{x}_{1k}\\
+\sum_{s_r}w_{1k}\boldsymbol{x}_{2k}
+\end{pmatrix}
+\]
+
+En este sentido, nótese que la forma funcional de los pesos de calibración doble resultantes de este proceso de optimización se pueden escribir de la siguiente manera:
+
+\[
+w_k = d_k \times g_k  \cong d_k \times \hat \phi_k
+\]
+
+Por ende, bajo el raciocinio de la calibración, los pesos \(g_k\) se pueden ver como una estimación de las probabilidades de respuesta \(\phi_k\). Por otra parte, de las expresiones, sobre el sesgo de los estimadores que no contienen ningún tipo de corrección, se puede notar que el sesgo se propaga a través de las variables de la encuesta y se propaga con más fuerza en las variables correlacionadas con los determinantes de la ausencia de respuesta.
+
+Para mostrar cómo el ajuste a los factores de expansión, con las dos metodologías anteriormente mencionadas, inducen menor sesgo que los estimadores comunes, se planeó el siguiente experimento:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Se generó una población compuesta por individuos con diferente propensión de respuesta MCAR.
+\item
+  Se utilizaron metodologías de calibración y se comparó, de forma empírica, el efecto de la ausencia de respuesta sobre las estimaciones finales.
+\end{enumerate}
+
+En primera instancia, cabe mencionar que la población se definió a partir del ingreso del hogar, y se creó usando variables auxiliares disponibles (sexo). De esta forma, se le dio una probabilidad de respuesta diferencial entre los grupos correspondientes al cruce de las categorías de estas dos variables. Como resultado de las simulaciones, se generaron estimaciones para el estimador de Horvitz-Thompson sin ajuste de ningún tipo y para un estimador de calibración que tuvo en cuenta los conteos poblacionales censales para cada las dos categorías de la variables sexo. La figura \ref{fig:fightcal} muestra el comportamiento de ambas estimaciones. La línea roja refleja el parámetro desconocido, los puntos negros indican las estimaciones del estimador de calibración en cada iteración de la simulación, mientras que los puntos grises muestran las estimaciones del estimador de Horvitz-Thompson en cada iteración de la simulación
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{Pics/c9} 
+
+}
+
+\caption{Estimaciones de Horvtiz-Thompson y de calibración.}\label{fig:fightcal}
+\end{figure}
+
+En conjunto con la gráfica anterior, la figura \ref{fig:fightcaldist} muestra la distribución sesgada del estimador de Horvitz-Thompson (gris) en comparación con el insesgamiento del estimador de calibración (negro). Bajo este esquema de respuesta, incluir en la calibración las variables pertinentes corrige el sesgo generado por la ausencia de respuesta. En este estudió se encontró que el estimador ingenuo (HT) produjo sesgo para la estimación de los tamaños de hombres y mujeres, para el tamaño de la población, para los ingresos de hombres y mujeres y para los ingresos de la población.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{Pics/c10} 
+
+}
+
+\caption{Distribuciones del estimador de Horvtiz-Thompson y del estimador de calibración}\label{fig:fightcaldist}
+\end{figure}
+
+Como se mencionó anteriormente, hay mejores formas de calibrar, puesto que el problema de la calibración se reduce a cómo introducir la información auxiliar en la estructura de estimación de la encuesta, es posible que existan variables que reduzcan el sesgo, pero no todas las variables inducirán el mismo nivel de precisión. Al momento de escoger, se deberían seleccionar aquellas variables que reduzcan el sesgo y que además reduzcan la varianza. Por tanto, las variables auxiliares que se usen como insumo en los procesos de calibración deben:
+
+\begin{itemize}
+\tightlist
+\item
+  Ser capaces de explicar la variación de la probabilidad de respuesta.
+\item
+  Estar correlacionadas con las variables de interés.
+\item
+  Identificar los dominios de estimación más importantes.
+\end{itemize}
+
+En particular al introducir otras covariables en la calibración (grupo de edad, escolaridad, región, área), además de la corrección del sesgo se evidencia un aumento de la precisión en las nuevas estimaciones, tal como lo muestra las distribuciones de los estimadores en la figura \ref{fig:fightcal2dist}, en donde se consideran tres estimadores: el estimador de Horvitz-Thompson (gris claro), el estimador de calibración con restricción de sexo (negro) y el estimador de calibración con todas las restricciones (gris oscuro).
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{Pics/c12} 
+
+}
+
+\caption{Distribuciones del estimador de Horvtiz-Thompson y de dos estimadores de calibración}\label{fig:fightcal2dist}
+\end{figure}
+
+\hypertarget{las-consecuencias-de-la-pandemia-por-covid-19-en-las-encuestas-de-la-regiuxf3n}{%
+\section{Las consecuencias de la pandemia por COVID-19 en las encuestas de la región}\label{las-consecuencias-de-la-pandemia-por-covid-19-en-las-encuestas-de-la-regiuxf3n}}
+
+Siguiendo a \citet{CEPAL_sesgos2020}, en su intento por frenar la velocidad de contagio del COVID-19, los gobiernos de la región determinaron la imposición de restricciones de movilidad que truncaron la recolección presencial de las encuestas de hogares. Para hacer frente a este inconveniente y poder seguir produciendo estadísticas oficiales pertinentes y oportunas, la mayoría de INE en la región decidieron realizar el seguimiento continuo a un panel seleccionado de un periodo reciente y mediante contacto telefónico seguir con la recolección de la información primaria. Uno de los retos más importantes que esta pandemia le impuso a los INE fue la corrección del sesgo de selección en las encuestas de hogares. A pesar de los ingentes esfuerzos que se hicieron por minimizarlo durante la recolección, el cambio de un modo presencial a un modo telefónico trajo consigo consecuencias indeseadas que se pudieron enfrentar con algunas de las metodologías que se explicaron en esta sección.
+
+En \citet{CEPAL_publica}, se afirma que un buen punto de partida para los INE fue poder contar con una muestra probabilística de meses anteriores y conformar con ella un panel de seguimiento durante el periodo en el que se tuvieron estas restricciones de movilidad. En términos de notación, llamémosla la muestra maestra. Sin embargo, se debe tener en cuenta los siguientes dos aspectos importantes:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  No todos los hogares seleccionados de forma probabilística proveyeron su información de contacto telefónico.
+\item
+  No todos los hogares contactables respondieron el cuestionario de la encuesta.
+\end{enumerate}
+
+Haciendo cálculos gruesos, si suponemos que la cobertura de la submuestra que sí proveyó datos de contacto asciende al 85 \% y que la probabilidad de que un hogar contactado responda toda la encuesta es del 80 \%, entonces contaríamos solamente con un 68\% de la muestra original. A estas cuentas habría que ajustarlas con el efecto de la atrición en el panel, que crece a medida que se siga utilizando. En estos términos, sería un grave error y una suposición poco plausible asumir que los hogares respondientes efectivos se comportan de manera similar a los hogares no respondientes y a los hogares no cubiertos. El mejor escenario que puede plantearse es considerar que la muestra efectiva no está libre de sesgos, hacer una búsqueda exploratoria de su magnitud con los datos recolectados y tratar de minimizarlo (o incluso eliminarlo) utilizando alguna de las técnicas estadísticas que mencionamos en este documento.
+
+La figura \ref{fig:fight3dist} presenta tres posibles escenarios que los INE pudieron encontrar en esta búsqueda. En el diagrama de la izquierda se verifica la ausencia de sesgo, en el diagrama del centro y en el de la derecha se confirma que la magnitud del sesgo es significativa. Nótese que la línea horizontal azul correspondería a la estimación publicada en el mes en el que se seleccionó la muestra maestra, mientras que la línea roja horizontal representa el promedio de las simulaciones con la muestra efectiva. Cada uno de los resultados de las simulaciones está representado por las fluctuaciones punteadas.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{Pics/calnr1} 
+
+}
+
+\caption{Distribuciones del estimador de Horvtiz-Thompson en tres escenarios de interés.}\label{fig:fight3dist}
+\end{figure}
+
+La figura \ref{fig:fight4dist} muestra un escenario simulado en donde se contempla el uso del estimador ajustado con la técnica de \emph{propensity score} (línea verde) y el estimador de calibración en dos etapas (línea azul) comparado con el estimador sin ningún tipo de ajuste (línea negra). Lo que se esperaría es que es estimador ingenuo subestime los tamaños poblacionales y los indicadores de interés; mientras que los estimadores ajustados, siempre que el mecanismo de ausencia de respuesta sea MAR o MCAR, elimina este sesgo.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{Pics/calnr2} 
+
+}
+
+\caption{Distribuciones del estimador de Horvtiz-Thompson y de dos estimadores ajustados.}\label{fig:fight4dist}
+\end{figure}
+
+Los caminos que se deben seguir luego de corroborar la presencia (o ausencia) de sesgo dependerán de la estrategia de levantamiento de información que los países hayan decidido hacer. En el escenario más optimista, ante la ausencia de sesgo, se estaría en una buena posición para replicar los procesos usuales de inferencia. Sin embargo, ante la sospecha de que sí existe sesgo - posición parsimoniosa y recomendada por \citet{CEPAL_sesgos2020} -, y dependiendo de la información auxiliar disponible, los INE pudieron disponer de las dos alternativas metodológicas que se describieron anteriormente.
+
+Muchos países de la región decidieron realizar un seguimiento mensual telefónico a la muestra maestra como alternativa a las restricciones de movilidad que se han impuesto en los países y que impiden la recolección presencial de la información. En este caso, partiendo de una muestra probabilística se pueden realizar ajustes a los factores de expansión de manera diferencial \citep{CEPAL_continua}.
+
+En particular, dado que se tuvo acceso a todo un conjunto de covariables \(\mathbf{x}\) en la muestra maestra, fue posible determinar el mejor modelo para estimar el patrón de ausencia de respuesta en la muestra de respondientes efectivos. En este paso se asumió que la probabilidad de respuesta dependía de alguna combinación lineal de las covariables en la muestra maestra; es decir que el mecanismo que genera esa ausencia de respuesta se pudo describir mediante \(\mathbf{x}\). Teniendo en cuenta que los pesos originales de la encuesta telefónica se denotan como \(d_k\), y habiendo estimado \(\hat\phi_{k}\) para respondientes y no respondientes de la muestra telefónica, entonces el factor de expansión ajustado tomó forma \(w_k = \frac{d_k}{\hat{\phi}_k}\).
+
+En este sentido, utilizar el factor de expansión \(w_k\) minimizaría el sesgo de selección que se generó por el cambio de modo en la recolección de la información. Por ejemplo, podría considerarse que un buen modelo de \emph{propensity score} contemplase la edad, el nivel educativo, el área de residencia (rural/urbano), el sexo del respondiente, la región geográfica, el estado de ocupación en el mes de observación de la muestra maestra y el ingreso percápita del hogar. Nótese que todas las covariables en el modelo, salvo el área y la región geográfica, necesariamente provienen de las observaciones obtenidas en la muestra maestra.
+
+Por otro lado, \citet{CEPAL_publica} afirma que al imponer una cierta coherencia entre las cifras oficiales ya publicadas y las que la encuesta telefónica pudo producir, es preferible el uso de los estimadores de calibración. Al usar este enfoque se asegura una estructura inferencial robusta en presencia de la información disponible puesto que se reduce tanto el error de muestreo (aumentando la precisión) como el error debido a la ausencia de respuesta (eliminando el sesgo). A manera de ejemplo, podríamos considerar que las siguientes dos etapas de la calibración son suficientes para eliminar el sesgo generado por el cambio de modo de recolección:
+
+\begin{itemize}
+\tightlist
+\item
+  En la primera etapa se calibran los pesos de la muestra maestra usando las variables de edad, región, área y sexo, definidas convenientemente en \(\boldsymbol{x}_{1k}\). Los totales de estas variables se encuentran en los conteos censales o en su defecto, en las proyecciones demográficas.
+\item
+  En una segunda etapa se calibrarán los pesos de la muestra telefónica usando las anteriores variables \(\boldsymbol{x}_{1k}\) y además las variables de ingreso percápita, condición de ocupación, rama de actividad y escolaridad, definidas convenientemente en en \(\boldsymbol{x}_{2k}\). Los totales de estas variables fueron estimados en la misma publicación de la encuesta basada en la muestra maestra.
+\end{itemize}
+
+\hypertarget{ejemplo}{%
+\subsection{Ejemplo}\label{ejemplo}}
+
+Esta sección revisa los pasos principales que se debieron considerar para erradicar (o al menos minimizar en la medida más considerable) el sesgo de selección de una encuesta recopilada durante la pandemia por COVID19. Los datos que se usarán son artificiales, pero sirven para mostrar y ejemplificar las diferentes etapas propuestas para la evaluación y minimización del impacto del COVID-19 en la calidad de las encuestas.
+
+Supongamos un conjunto de datos artificial que define una población finita \(U\) de tamaño \(N = 50000\), y supongamos que estamos interesados en observar la situación laboral de cada persona en \(U\). En aras de la simplicidad, supondremos que una persona solo puede estar \emph{empleada} o \emph{desempleada}. Quisiéramos observar esta característica de interés en dos periodos diferentes \(t_0\) y \(t_1\). Por un lado, suponga que \(t_0\) corresponde a un período de recolección regular antes de la pandemia; por otro lado, supongamos que \(t_1\) corresponde al período donde las restricciones de movimiento debido a la pandemia afectaron la recolección estándar de encuestas por muestreo.
+
+Si tuviéramos acceso a toda la población, nos encontraríamos con que en \(t_0\), el 80\% de las personas estaría empleada, mientras que el 20\% estaría desempleada. Sin embargo, debido al impacto de la pandemia en los indicadores sociales (e.g., pobreza y mercado laboral), en \(t_1\), observaríamos que muchas personas perdieron su trabajo, y la mitad de la población está desempleada.
+
+El siguiente conjunto de datos muestra una versión reducida de 20 individuos de esta población finita.
+
+\begin{longtable}{l|ll}
+\caption*{
+{\large Un vistazo a la población} \\ 
+{\small 20 filas de un total de 50000}
+} \\ 
+\toprule
+\multicolumn{1}{l}{} & y0 & y1 \\ 
+\midrule
+1 & Employed & Employed \\ 
+2 & Employed & Unemployed \\ 
+3 & Employed & Employed \\ 
+4 & Employed & Employed \\ 
+5 & Employed & Unemployed \\ 
+6 & Employed & Unemployed \\ 
+7 & Employed & Employed \\ 
+8 & Unemployed & Unemployed \\ 
+9 & Employed & Unemployed \\ 
+10 & Employed & Unemployed \\ 
+11..49990 &  &  \\ 
+49991 & Unemployed & Unemployed \\ 
+49992 & Unemployed & Unemployed \\ 
+49993 & Employed & Unemployed \\ 
+49994 & Unemployed & Unemployed \\ 
+49995 & Employed & Employed \\ 
+49996 & Employed & Employed \\ 
+49997 & Employed & Employed \\ 
+49998 & Employed & Employed \\ 
+49999 & Employed & Employed \\ 
+50000 & Employed & Employed \\ 
+\bottomrule
+\end{longtable}
+
+Las siguientes tablas muestran los flujos netos de la población finita en los dos períodos considerados. Tenga en cuenta que \(y_0\) representa la característica de interés en el período previo a la pandemia; mientras tanto, \(y_1\) representa la característica de interés en el período de la pandemia por COVID-19.
+
+\begin{longtable}{lrr}
+\caption*{
+{\large Flujos netos verdaderos en la población finita} \\ 
+{\small Antes de la pandemia por COVID-19}
+} \\ 
+\toprule
+y0 & n & prop \\ 
+\midrule
+Employed & 40000 & 0.8 \\ 
+Unemployed & 10000 & 0.2 \\ 
+\bottomrule
+\end{longtable}
+\begin{longtable}{lrr}
+\caption*{
+{\large Flujos netos verdaderos en la población finita} \\ 
+{\small En medio de la pandemia por COVID-19}
+} \\ 
+\toprule
+y1 & n & prop \\ 
+\midrule
+Employed & 25000 & 0.5 \\ 
+Unemployed & 25000 & 0.5 \\ 
+\bottomrule
+\end{longtable}
+
+La siguiente tabla muestra los flujos brutos de la población finita entre los dos periodos considerados. Como se puede observar, 25000 personas permanecieron ocupadas en los dos periodos, y 15000 personas cambiaron su situación laboral de ocupadas a desocupadas; de los desempleados en el primer período, ninguno pudo conseguir trabajo, mientras que 10000 personas permanecieron desempleadas en ambos períodos.
+
+\begin{longtable}{rr}
+\caption*{
+{\large Flujos brutos verdaderos en la población finita} \\ 
+{\small Cambio en el estado laboral}
+} \\ 
+\toprule
+Employed & Unemployed \\ 
+\midrule
+\multicolumn{2}{l}{Employed} \\ 
+\midrule
+25000 & 15000 \\ 
+\midrule
+\multicolumn{2}{l}{Unemployed} \\ 
+0 & 10000 \\ 
+\bottomrule
+\end{longtable}
+
+La medición y observación de la situación laboral se realiza a través de una encuesta por muestreo en ambos períodos. De esta forma, supongamos que se selecciona una muestra aleatoria simple sin reemplazo \(s_0\) de tamaño \(n_0 = 4000\) de \(U\). Para simplificar, supongamos que se pretende observar la misma muestra en ambos períodos (tipo panel).
+
+Como el lector debe considerar, la muestra anterior a la pandemia tenía un modo regular de recolección presencial. Sin embargo, dadas las restricciones de movilidad impuestas por los gobiernos para frenar la propagación de la pandemia, la modalidad de recolección del último período debió cambiar. Los INE usaron los registros de la muestra anterior (antes del COVID-19) para obtener el número de teléfono de los hogares seleccionados, tratar de hacer un contacto exitoso y administrar un cuestionario por teléfono. Por supuesto, las tasas de muestreo en ambos períodos diferirían, puesto que no todos los hogares de la primera muestra proporcionaron un número de teléfono válido y, de los válidos, no todos contestaron la encuesta telefónica.
+
+La muestra telefónica es más pequeña (2305) que la muestra realizada cara a cara (4000). Los investigadores sospechan que los sesgos de selección no son despreciables en la muestra telefónica. Las siguientes tablas muestran los resultados basados en las muestras (no ponderados) para la encuesta cara a cara y la encuesta telefónica, respectivamente.
+
+\begin{longtable}{lrr}
+\toprule
+Estado & n & prop \\ 
+\midrule
+Employed & 3180 & 0.795 \\ 
+Unemployed & 820 & 0.205 \\ 
+\bottomrule
+\end{longtable}
+\begin{longtable}{lrr}
+\toprule
+Estado & n & prop \\ 
+\midrule
+Employed & 1396 & 0.6056399 \\ 
+Unemployed & 909 & 0.3943601 \\ 
+\bottomrule
+\end{longtable}
+
+El primer paso en la búsqueda de sesgos de selección es calcular la tasa de respuesta. En este caso, de 4000 encuestados seleccionados originalmente, solo 2305 respondió a la entrevista telefónica. Lo que equivale a una tasa de respuesta de tan solo el 58 \%.
+
+Luego, se debe evaluar la naturaleza de la ausencia de repuesta. Este paso está dedicado a reconocer si la falta de respuesta sigue una estructura MAR o MCAR. Bajo el supuesto MCAR, uno no esperaría encontrar patrones fuertes en las covariables; es decir, ninguna categoría dentro de las covariables debe mostrar una tasa de respuesta diferente. Por otro lado, bajo el supuesto MAR, uno puede encontrar patrones fuertes en una o múltiples covariables. Para verificar qué supuesto (MAR o MCAR) se ajusta mejor a las observaciones de la muestra seleccionada durante el COVID19, supongamos que sí tenemos acceso a los datos de la muestra de la muestra pre-pandemia y podemos identificar a los individuos, encuestados y no encuestados, de la última muestra.
+
+Como se ve en la siguiente tabla, de los 2305 encuestados en la encuesta telefónica, 96.1822126\% estaban empleados en el período anterior, y aproximadamente 3.8177874\% estaban desempleados, lo que indica un patrón sólido que puede indicar un proceso MAR.
+
+\begin{longtable}{lrr}
+\toprule
+Estado & n & prop \\ 
+\midrule
+Employed & 2217 & 0.96182213 \\ 
+Unemployed & 88 & 0.03817787 \\ 
+\bottomrule
+\end{longtable}
+
+Finalmente, al examinar el estado anterior de los 1695 no encuestados, se observa que casi el 56.8141593\% estaban empleados en el periodo anterior, mientras que el 43.1858407\% estaban desempleados. Las proporciones no son similares en ningún aspecto, lo que apunta a un posible sesgo de selección.
+
+\begin{longtable}{lrr}
+\toprule
+Estado & n & prop \\ 
+\midrule
+Employed & 963 & 0.5681416 \\ 
+Unemployed & 732 & 0.4318584 \\ 
+\bottomrule
+\end{longtable}
+
+Para verificar la asociación entre la respuesta en la encuesta telefónica y la situación laboral en la encuesta presencial, se puede utilizar herramientas de inferencia clásica, como la estadística Ji-cuadrado de Pearson y el estadístico V de Cramer. La siguiente tabla resume el comportamiento de la respuesta en la encuesta telefónica dada la situación laboral en la encuesta presencial.
+
+\begin{longtable}{ccr}
+\toprule
+Estado & Respuesta & Freq \\ 
+\midrule
+Employed & 0 & 963 \\ 
+Unemployed & 0 & 732 \\ 
+Employed & 1 & 2217 \\ 
+Unemployed & 1 & 88 \\ 
+\bottomrule
+\end{longtable}
+
+De la tabla anterior se puede realizar la prueba de bondad de ajuste de Pearson entre las dos variables de interés (respuesta en la encuesta telefónica y situación laboral en la encuesta presencial) para determinar si existe una correlación significativa. El sistema de hipótesis es el siguiente:
+
+\begin{itemize}
+\tightlist
+\item
+  H0: Las dos variables son independientes.
+\item
+  H1: Las dos variables se relacionan entre sí.
+\end{itemize}
+
+A partir de estos datos, la estadística de prueba toma el valor de 944 (muy grande) con un valor-p muy pequeño y cercano a cero, lo que indica una fuerte relación. Finalmente, la estadística V de Cramer mide la fuerza de la asociación entre dos variables nominales, y toma valores entre cero (sin asociación) y uno (asociación fuerte). Para este caso, el valor del estadístico es cercano a 0,5, indicando una asociación significativa que debe ser considerada en los próximos pasos para minimizar el posible sesgo de selección que puede afectar la inferencia de la encuesta telefónica.
+
+Como se pudo observar anteriormente, existe fuerte evidencia de que el mecanismo de respuesta de la encuesta telefónica depende de la situación laboral del individuo en el período anterior. Eso significa que las personas que estaban desempleadas tienden a responder menos que las personas que estaban empleadas. Para simplificar el ejemplo, asumimos que la probabilidad de ser un encuestado depende de la situación laboral anterior. De esta forma, \(\phi_k\) puede escribirse como una función de ese estado laboral anterior, incluido en las covariables \(\mathbf{z}\).
+
+\[
+{\phi}_k = f(\mathbf{z}_k, {\boldsymbol{\beta}})   
+\]
+
+Como \(\phi_k\) se puede escribir como una función de las covariables disponibles, podemos afirmar que el mecanismo de respuesta sigue un enfoque MAR. Como el patrón de no respuesta es MAR, y es posible tener acceso a las covariables \(\mathbf{z}\) que determinan el mecanismo de respuesta, entonces también será posible estimar las probabilidades de respuesta por \(\hat{\phi}_k = f(\mathbf{z }_k, \hat{\boldsymbol{\beta}})\) para usarlo en la generación de nuevos pesos. Después de ajustar un modelo de \emph{propensity-score}, la siguiente figura muestra el histograma de laas probabilidades de respuesta estimadas, las cuales solo toman dos valores (0.6971698 y 0.1073171 ), uno para cada categoría de la situación laboral en la encuesta presencial.
+
+\begin{center}\includegraphics{13SesgoUnidad_files/figure-latex/unnamed-chunk-14-1} \end{center}
+
+Luego, utilizando los datos telefónicos y el nuevo conjunto de ponderaciones \(d_{4k}\), ajustado por el puntaje de propensión estimado, tenemos que el número estimado de empleados en el período COVID es \(\hat{t}_y=\sum_{k\in s_{ER}}d_{4k}y_{1k} =\) 25029.77.
+
+Por otra parte, también es posible calibrar los pesos en la muestra telefónica a nivel de la información auxiliar disponible en la muestra presencial, y luego a nivel nacional. Como el mecanismo que genera la falta de respuesta es MAR, es posible que este nuevo conjunto de pesos de calibración elimine el sesgo. Para lograr este objetivo, se encuentra un primer conjunto de pesos calibrados sujetos a la siguiente restricción:
+
+\[
+\sum_{s_0}w_{0k}\boldsymbol{x}_{k} = \sum_{U}\boldsymbol{x}_{k} = \mathbf{t_x}
+\]
+
+Donde \(\mathbf{t_x}\) puede representar conteos nacionales provenientes de censos o proyecciones demográficas. Luego, en una segunda etapa, estos pesos intermedios \(w_{0k}\) deben utilizarse para calcular los pesos finales de calibración \(w_{1k}\) de la muestra de encuestados efectivos que están sujetos a la siguiente restricción:
+
+\[
+\sum_{s_0}w_{1k}\boldsymbol{x}_{k} =
+\begin{pmatrix}
+\sum_{U}\boldsymbol{x}_{k}\\
+\sum_{s_1}w_{0k}\boldsymbol{z}_{k} 
+\end{pmatrix} =
+\begin{pmatrix}
+\mathbf{t_x}\\
+\hat{\mathbf{t}}_\mathbf{z}
+\end{pmatrix}
+\]
+
+En donde, \(\hat{\mathbf{t}}_\mathbf{z}\) representa las cifras estimadas provenientes de la encuesta presencial. El estimador de calibración se puede escribir de la siguiente manera:
+
+\[
+\hat{t}_y^{cal}=\sum_{k\in s_1}w_{1k}y_{1k}
+\]
+
+Después de realizar la calibración en dos etapas, y utilizando los datos de la encuestas telefónica junto con el nuevo conjunto de pesos calibradas, tenemos que el número estimado de empleados en el período COVID es \(\hat{t}_y^{cal}=\sum_{k\in s_1}w_{1k}y_{1k}=\) \texttt{format\ r(Tyhat.cal,\ scientific\ =\ F)}. Tenga en cuenta que la forma funcional de los pesos de calibración doble resultantes de este proceso de optimización se pueden escribir de la siguiente manera:
+
+\[
+w_{1k} = d_k \times g_{0k} \times g_{1k} \cong d_k \times \hat \phi_k
+\]
+
+Por lo tanto, bajo este escenario, los pesos \(g_k\) pueden verse como una estimación de las probabilidades de respuesta \(\phi_k\). La siguiente figura muestra el histograma de los puntajes de propensión pronosticados. Solo toman dos valores (0.6928125 y 0.11 ), uno para cada categoría del estatus laboral en la encuesta cara a cara.
+
+\begin{center}\includegraphics{13SesgoUnidad_files/figure-latex/unnamed-chunk-17-1} \end{center}
+
+Por último, nótese que si no se considera el mecanismo de ausencia de respuesta, sería fácil obtener estimaciones engañosas y sesgadas. Este enfoque ingenuo e incorrecto conduce al siguiente estimador sesgado
+
+\[
+\hat{t}_y^{exp}=\sum_{k\in s_1}d_{3k}y_{1k}
+\]
+
+Donde \(d_{1k}\) se refiere a los pesos muestrales no ajustados de la encuesta telefónica. Bajo este escenario, el número estimado de empleados en el período COVID es \(\hat{t}_y^{exp}=\sum_{k\in s_1}d_{1k}y_{1k} =\) 30282.
 
 \hypertarget{referencias}{%
 \chapter*{Referencias}\label{referencias}}
