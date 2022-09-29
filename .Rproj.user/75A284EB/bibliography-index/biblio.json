@@ -749,6 +749,24 @@
             "volume": "63"
         },
         {
+            "author": [
+                {
+                    "family": "CEPAL"
+                }
+            ],
+            "id": "BADEHOG",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022
+                    ]
+                ]
+            },
+            "publisher": "Naciones Unidas Comisión Económica para América Latina y el Caribe (CEPAL)",
+            "title": "BADEHOG: Banco de Datos de Encuestas de Hogares",
+            "type": "report"
+        },
+        {
             "ISBN": "978-0-387-40620-6",
             "author": [
                 {

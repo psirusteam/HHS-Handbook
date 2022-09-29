@@ -5,6 +5,9 @@
 
 Este capítulo describe muy someramente el paradigma de los errores que se cometen en una encuesta y cómo al tenerlos en cuenta en la etapa de planificación, es posible medirlos acertádamente y acotarlos con base en el principio de representatividad. En general, todos los procesos en una encuesta deben estar planificados de antemano, antes y después de la recolección de los datos. Por ejemplo, el cuestionario (instrumento de medición) debe estar muy bien diseñado para que las respuestas de las personas describan acertadamente las características de los entrevistados. De la misma forma, el subconjunto de personas que participan en la encuesta debe ser expandido con precisión y confiabilidad para que represente con certeza a la población de interés. 
 
+
+@Beland_Dale_Dufour_Hamel_2005 describen los principales elementos del diseño de una encuesta de hogares y esta es una tarea que deben afrontar los equipos técnicos de las ONE en términos de aprender de las experiencias del pasado para mejorar los procesos operativos, metodológicos y logísticos en las siguientes aplicaciones de las encuestas. Es así como ante la nueva oleada de censos que se avecina en la próxima década, será natural actualizar los marcos de muestreo y con ello se viene un reto para los equipos técnicos encargados de la encuestas de hogares en América Latina que consiste en evaluar el impacto del cambio de los marcos de muestreo y sus efectos en la comparabilidad de las cifras oficiales.
+
 En una encuesta, el interés no se centra en las características particulares de un individuo sino en las características de la población a la cual ese individuo pertenece. De esta forma, la inferencia siempre se realiza teniendo en mente agregados (indicadores) poblacionales. Las siguientes son las dos fuentes principales de error  cuando se realiza una encuesta:  
 
 1. **Error de muestreo**:  ocurre porque no se incluyeron a todas las personas de la población y se seleccionó una muestra.
