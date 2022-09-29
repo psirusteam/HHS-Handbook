@@ -1,6 +1,6 @@
 # Criterios de calidad y difusión
 
-Como se ha establecido a lo largo de este docuemnto, las encuestas de hogares de la región tienen un diseño complejo, probabilístico, estratificado, multietápico y con probabilidades de inclusión no uniformes. Por ende, las estimaciones elaboradas a partir de estas operaciones estadísticas están sujetas al error muestral, y se requiere evaluar su validez estadística mediante diversos indicadores de calidad que describen su precisión y confiabilidad y que a su vez alertan al usuario cuando la precisión de la estimación no es confiable. Una vez obtenido el indicador de interés (por ejemplo, la proporción de personas en situación de pobreza y de pobreza extrema), se estiman los intervalos de confianza y otros indicadores de calidad con base en la información sobre el diseño muestral complejo, resumida en el factor de expansión, los estratos y las unidades primarias de muestreo (UPM). 
+Como se ha establecido a lo largo de este documento, las encuestas de hogares de la región tienen un diseño complejo, probabilístico, estratificado, multietápico y con probabilidades de inclusión no uniformes. Por ende, las estimaciones elaboradas a partir de estas operaciones estadísticas están sujetas al error muestral, y se requiere evaluar su validez estadística mediante diversos indicadores de calidad que describen su precisión y confiabilidad y que a su vez alertan al usuario cuando la precisión de la estimación no es confiable. Una vez obtenido el indicador de interés (por ejemplo, la proporción de personas en situación de pobreza y de pobreza extrema), se estiman los intervalos de confianza y otros indicadores de calidad con base en la información sobre el diseño muestral complejo, resumida en el factor de expansión, los estratos y las unidades primarias de muestreo (UPM). 
 
 Una gran cantidad de indicadores sociales son estimados a partir de las encuestas de hogares. En esta sección, se plantea la necesidad de generar una metodología de procesamiento de las bases en los INE de la región que le permita a los analistas, investigadores y usuarios de las bases de datos de las encuestas de hogares decidir acerca de la pertinencia de una estimación con base en algunos criterios de calidad que resumen la precisión de las estimaciones. Existen cruces derivados del procesamiento de las bases de datos que no necesariamente deben ser tenidos en cuenta a la hora de tomar decisiones de política pública. La razón por la cual se hace esta afirmación es que simplemente las encuestas no son planeadas con el propósito de ser representativas de todos los posibles procesamientos que se puedan hacer. 
 
@@ -66,7 +66,7 @@ $$
 
 Nótese que en los casos en los que el intervalo de confianza clásico se sale de los límites naturales de la proporción, es recomendable utilizar este último enfoque. 
 
-### Coeficientes de variación 
+### Coeficiente de variación 
 
 Esta medida configura un acercamiento al error de muestreo que permite verificar si la inferencia es válida, su definición es como sigue:
 
@@ -74,13 +74,13 @@ $$
 CV(\hat\theta) = \frac{se(\hat\theta)}{\hat\theta} = \frac{\sqrt{\widehat{Var}(\hat\theta)}}{\hat\theta}
 $$
 
-Esta medida de precisión de las estimaciones se ha consolidado como un estándar de calidad que ha permeado la práctica de los INE en la publicación de estadísticas oficiales. Su uso es transversal puesto que, por su definición, tiene una naturaleza relativa, liberando al usuario de la unidad de medida inducida por la varaible de interés. Además, es posible reformular los intervalos de confianza en términos del coeficiente de varaición, de la siguiente manera:
+Esta medida de precisión de las estimaciones se ha consolidado como un estándar de calidad que ha permeado la práctica de los INE en la publicación de estadísticas oficiales. Su uso es transversal puesto que, por su definición, tiene una naturaleza relativa, liberando al usuario de la unidad de medida inducida por la variable de interés. Además, es posible reformular los intervalos de confianza en términos del coeficiente de variación, de la siguiente manera:
 
 $$
 \hat\theta \pm t_{0,975, gl} * se(\hat\theta) = \hat\theta  \left(1 \pm t_{0,975, gl} * CV(\hat\theta)\right)
 $$
 
-Como lo afirman @Singh_Westlake_Feder_2004, esta es una medida de fácil interpretación, proporcional a la amplitud del intervalo de confianza, que provee una medida estadarizada y relativa de la precisión alrededor de la estimación puntual, que permite comparar dos estimaciones del mismo indicador en diferentes sub-poblaciones, y además que es utilizada en el diseño y a re-diseño de las encuestas, entre otras cualidades. Por ejemplo, desde el punto de vista teórico, @Sarndal_Swensson_Wretman_2003 expresan que un estadístico puede expresar su opinión de "que un valor del coeficiente de variación del 2% es bueno, considerando las restricciones de la encuesta, mientras que un valor del coeficiente de variación de 9% puede ser considerado inaceptable." De esta forma, muchos institutos nacionales de estadística alrededor del mundo han considerado que las precisiones de las estadísticas resultantes de una encuesta estén supeditadas al comportamiento de su coeficiente de variación. En el contexto de la calidad de las estimaciones provenientes de encuestas de hogares, mucho se ha discutido acerca del uso del coeficiente de variación en la validación de la confiabilidad y precisión de las cifras que provienen de estudios por muestreo. 
+Como lo afirman @Singh_Westlake_Feder_2004, esta es una medida de fácil interpretación, proporcional a la amplitud del intervalo de confianza, que provee una medida estandarizada y relativa de la precisión alrededor de la estimación puntual, que permite comparar dos estimaciones del mismo indicador en diferentes sub-poblaciones, y además que es utilizada en el diseño y a re-diseño de las encuestas, entre otras cualidades. Por ejemplo, desde el punto de vista teórico, @Sarndal_Swensson_Wretman_2003 expresan que un estadístico puede expresar su opinión de "que un valor del coeficiente de variación del 2% es bueno, considerando las restricciones de la encuesta, mientras que un valor del coeficiente de variación de 9% puede ser considerado inaceptable." De esta forma, muchos institutos nacionales de estadística alrededor del mundo han considerado que las precisiones de las estadísticas resultantes de una encuesta estén supeditadas al comportamiento de su coeficiente de variación. En el contexto de la calidad de las estimaciones provenientes de encuestas de hogares, mucho se ha discutido acerca del uso del coeficiente de variación en la validación de la confiabilidad y precisión de las cifras que provienen de estudios por muestreo. 
 
 Nótese que, cuando se están estimando proporciones, esta medida tiene algunas consideraciones importantes. En primer lugar, fijar un umbral para el coeficiente de variación tiene una interpretación directa sobre la amplitud relativa del intervalo de confianza. Por ejemplo, si la ONE decide fijar como umbral para el coeficiente de variación un 30%, esto implica que la amplitud relativa (AR) del intervalo de confianza se fija de forma automática alrededor de 118%, puesto que:
 
@@ -130,50 +130,20 @@ $$
 n \geq \dfrac{P \ (1-P) \  DEFF}{\frac{P \  (1-P) \ DEFF}{N}+\log^2\ (P) \ P^2 \ CVE^2}
 $$
 
-La expresión anterior se obtiene teniendo en cuenta el siguiente desarrollo algebraico. En particular, cuando $P > 0,5$, se desea que el coeficiente de variación logarítmico sea menor a un umbral $\delta$ y, por lo tanto, habiendo definido $S^2 = P\ (1-P) \  DEFF$, se tiene el siguiente conjunto de implicaciones.
+La expresión anterior se obtiene teniendo en cuenta el siguiente desarrollo algebraico. En particular, cuando $P > 0,5$, se desea que el coeficiente de variación logarítmico sea menor a un umbral $\delta$ y, por lo tanto, habiendo definido $S^2 = P\ (1-P) \  DEFF$, se tiene la siguiente implicación.
 
 $$
-\begin{align*}
 CV(\hat{L}) \leq \delta 
-&\Longrightarrow \ \ \ \ \dfrac{SE(\hat{P})}{-\log(1-\hat{P})(1-\hat{P})} \leq \delta \\
-&\Longrightarrow \ \ \ \ \dfrac{\sqrt{\frac{1}{n}(1-\frac{n}{N})S^2}}{-\log (1-\hat{P})(1-\hat{P})} \leq \delta \\
-&\Longrightarrow \ \ \ \ 
-\frac{1}{n}(1-\frac{n}{N})S^2 \leq \delta^2 (1-\hat{P})^2(-\log (1-\hat{P}))^2 \\ 
-&\Longrightarrow \ \ \ \ 
-\frac{1}{n}-\frac{1}{N} \leq \frac{\delta^2 (1-\hat{P})^2(\log (1-\hat{P}))^2}{S^2} \\
-&\Longrightarrow \ \ \ \ 
-\frac{1}{n} \leq \frac{\delta^2 (1-\hat{P})^2\log^2(1-\hat{P})}{S^2} + \frac{1}{N} \\ 
-&\Longrightarrow \ \ \ \ 
-\frac{1}{n} \leq \frac{N\ \delta^2(1-\hat{P})^2\log^2(1-\hat{P}) +S^2}{S^2N} \\
-&\Longrightarrow \ \ \ \ 
-n \geq \frac{S^2N}{N\ \delta^2(1-\hat{P})^2\log^2(1-\hat{P}) +S^2} \\
-&\Longrightarrow \ \ \ \ 
+\Longrightarrow
 n \geq \frac{S^2}{\ \delta^2(1-\hat{P})^2\log^2(1-\hat{P}) +\frac{S^2}{N}}
-\end{align*}
 $$
 
 Análogamente, cuando $P \leq 0.5$, se tiene que
 
 $$
-\begin{align*}
 CV(\hat{L}) \leq \delta
-&\Longrightarrow \ \ \ \ 
-\frac{SE(\hat{P})}{-\log(\hat{P})\hat{P}} \leq \delta \\
-&\Longrightarrow \ \ \ \ 
-\frac{\sqrt{\frac{1}{n}(1-\frac{n}{N})S^2}}{-\log(\hat{P})\hat{P}}\leq \delta \\
-&\Longrightarrow \ \ \ 
-(-\log (\hat{P})\hat{P}\delta)^2 \leq \frac{1}{n}(1-\frac{n}{N})S^2 \\
-&\Longrightarrow \ \ \ 
-(\log (\hat{P}))^2\hat{P}^2\delta^2 \leq (\frac{1}{n}-\frac{1}{N})S^2 \\
-&\Longrightarrow \ \ \ 
-\dfrac{\log^2(\hat{P})\hat{P}^2\delta^2}{S^2} \leq \frac{1}{n} - \frac{1}{N} \\
-&\Longrightarrow \ \ \ 
-\dfrac{\log^2(\hat{P})\hat{P}^2\delta^2}{S^2} + \frac{1}{N} \leq \frac{1}{n} \\ 
-&\Longrightarrow \ \ \ 
-n \geq \dfrac{S^2N}{\log^2(\hat{P})\hat{P}^2\delta^2N + S^2}\\
-&\Longrightarrow \ \ \ 
+\Longrightarrow
 n \geq \dfrac{S^2}{\frac{S^2}{N}+\log^2(\hat{P})\hat{P}^2\delta^2}
-\end{align*}
 $$
 
 ### El efecto de diseño DEFF 
@@ -255,11 +225,9 @@ $$
 
 En muchos países las encuestas de hogares son usadas por las autoridades gubernamentales para asignar recursos a una población potencial. En estos casos, es de particular interés conocer el número de personas que serán susceptible de participar en la repartición de recursos. Por ende, si la estimación de la incidencia total del fenómeno en la población no es precisa, difícilmente se podrá establecer un rubro presupuestal para atender a esta población. Por ejemplo, si la estimación del total de personas afectadas por el fenómeno es del orden de 5% y su margen de error es 5%, entonces el coeficiente de variación será de 100% y el intervalo de confianza de la proporción será $(0 \%, 10 \%)$, demasiado amplio para tomar algún tipo de decisión sobre los recursos públicos de un país. Nótese que esta amplitud se magnifica cuando el número de casos no ponderado no es suficiente. 
 
-## Consideraciones adicionales
+## Criterios de calidad en subpoblaciones
 
 En esta sección se abordan temáticas referentes al procesamiento apropiado de los indicadores de interés en las subpoblaciones y, habiendo realizado las estimaciones y calculado sus respectivos criterios de calidad, se plantea la utilización de umbrales apropiados para la supresión, revisión o publicación de cifras.
-
-### Variables y subpoblaciones 
 
 El análisis apropiado de las estadísticas generadas a partir de las encuestas de hogares debe pasar por una definición clara tanto de las subpoblaciones sobre las cuales se quiere realizar la inferencia, como de las variables que generan el indicador de interés. De hecho, como se mostrará más adelante, algunas variables pueden definir una subpoblación y, por ende, es posible que se dé lugar a confusiones. Para aclarar esto, se proponen a continuación algunos ejemplos que permiten dilucidar el cálculo de las medidas de calidad sobre un conjunto no exhaustivo de indicadores de interés.
 
@@ -383,7 +351,7 @@ $$
 
 En este caso el tamaño de muestra es $n = \sum_s z_{g_k}$, es decir el número de personas en la muestra que están en edad de trabajar, son hombres migrantes y están activos. El conteo no ponderado de casos corresponde al número de individuos en la muestra que son hombres migrantes y están desocupados. Además, los grados de libertad corresponden a todas las UPM menos todos los estratos de la encuesta en el país en los que se encontraron hogares con hombres migrantes y activos en la fuerza de trabajo.
 
-### Secuencia lógica para crear reglas de supresión 
+## Secuencia lógica para crear reglas de supresión 
 
 En esta sección se ha querido enfatizar el hecho de que la precisión de una estimación recae directamente en los intervalos de confianza, los cuales pueden ser descompuestos en elementos fundamentales que permiten crear una secuencia lógica de revisión, publicación o supresión de cifras. Nótese que lo anterior se basa en que la longitud de los intervalos de confianza induce la seguridad de que un estimador es o no es preciso. Considere los siguientes ejemplos prácticos:
 
@@ -393,7 +361,7 @@ En esta sección se ha querido enfatizar el hecho de que la precisión de una es
 
 Claramente, en la última situación ejemplificada, el intervalo de confianza no brinda la precisión adecuada para que una Oficina Nacional de Estadística publique esta cifra confiadamente, o para que un gobierno pueda realizar algún tipo de política pública educativa, y mucho menos para estimar los recursos que una de intervención estatal sobre la población de interés. Como se ha descrito a lo largo de este documento, utilizar únicamente el coeficiente de variación como estándar para la supresión de cifras es un criterio que no tiene en cuenta toda las variantes asociadas a la inferencia en un muestreo complejo. A continuación se incorporan algunas recomendaciones internacionales que incorporan otros criterios adicionales a este.
 
-- **Coeficiente de variación**: @CepalSAe2018 realizó una revisión de las experiencias internacionales, con base en la información publicada en las páginas web de los INE, para determinar cómo son usados los criterios de supresión de información y los umbrales que las oficinas nacionales de estadística definen para la validación de las cifras. Para encuestas de hogares, se encontró que Estados Unidos y los países del Mercosur utilizan un umbral de $CV > 30\%$, Canadá y México usan como referencia un umbral del $CV > 25\%$, Chile y Costa Rica utilizan un umbral del $CV > 20\%$, Ecuador y Perú utilizan un umbral del $CV > 15\%$, mientras que Colombia usa un umbral del $CV > 10\%$. De esta forma, cualquier cifra estimada cuyo coeficiente de variación sea mayor al umbral predefinido es suprimida o marcada como una cifra poco confiable.
+- **Coeficiente de variación**: @CepalSAe2018 realizó una revisión de las experiencias internacionales, con base en la información publicada en las páginas web de los INE, para determinar cómo son usados los criterios de supresión de información y los umbrales que las oficinas nacionales de estadística definen para la validación de las cifras. Para encuestas de hogares, se encontró que Estados Unidos y los países del Mercosur utilizan un umbral de $CV > 30\%$, Canadá y México usan como referencia un umbral del $CV > 25\%$, Chile y Costa Rica utilizan un umbral del $CV > 20\%$, Ecuador y Perú utilizan un umbral del $CV > 15\%$, mientras que Colombia usa un umbral del $CV > 10\%$. De esta forma, cualquier cifra estimada cuyo coeficiente de variación sea mayor al umbral predefinido es suprimida o marcada como una cifra poco confiable. 
 - **Tamaño de muestra**: este criterio debe ser considerado como uno de los más importantes a la hora de decidir la ruta de publicación de una cifra, puesto que los desarrollos teóricos en términos de inferencia estadística para encuestas dependen de este término. La cobertura de los intervalos de confianza y la distribución de los estimadores dependen de qué tanto el tamaño de la subpoblación como su tamaño de muestra asociado no sean pequeños. En este espíritu, @Barnett_Walker_Chromy_Davis_Emrich_Odom_Packer_2003 proponen que todas las estimaciones basadas en un tamaño de muestra menor a 100 unidades deberían ser suprimidas o marcadas como no confiables.
 - **Tamaño de muestra efectivo**: al igual que con el anterior criterio, el tamaño de muestra efectivo induce que las aproximaciones teóricas, en términos de convergencia de las distribuciones de los estimadores y la cobertura de los intervalos de confianza, se cumplan.  @Hornik_Maklan_Cadell_Prado_Barmada_Jacobsohn_Orwin_Sridharan_Zador_Southwell_etal consideran que si el tamaño de muestra efectivo no es mayor a 140, entonces la cifra no debería ser considerada para publicación. Por otro lado, teniendo en cuenta el tamaño de muestra inducido por la transformación logarítmica, @Barnett_Walker_Chromy_Davis_Emrich_Odom_Packer_2003 afirman que cuando la proporción se encuentra entre $0.05$ y $0.95$, entonces el tamaño de muestra efectivo es máximo cuando $P = 0,5$, siendo su valor $n_{eff} = 68$. 
 - **Conteo de casos no ponderado**: cuando la incidencia de un fenómeno es muy baja y el diseño de la encuesta no lo tuvo en cuenta, entonces es posible que las estimaciones asociadas a tamaños, totales y proporciones sobre este fenómeno no sean confiables. En particular, para las proporciones es posible restringir las estimaciones tales que $\hat P <0,001$, pero es más expedito crear una regla a partir del conteo de casos en la muestra. Por ejemplo, @AmericanCommunitySurvey plantea que si el número de casos no ponderados es menor a 50 unidades entonces la estimación no es publicada.
@@ -402,11 +370,13 @@ Claramente, en la última situación ejemplificada, el intervalo de confianza no
 
 Nótese que los criterios mencionados en este documento no deberían ser aplicados de manera independiente, sino que tendrían que seguir cierta lógica, puesto que es posible, por ejemplo para una variable con poca homogeneidad en las UPM, que con un tamaño de muestra de $n=90$, se haya estimado un efecto de diseño de $DEFF=0,5$, lo cual implicaría un tamaño de muestra efectivo de  $n_{eff}=180$. En este caso, si los criterios de supresión se aplicaran de manera independiente, se concluiría que la cifra debería ser suprimida por tener un tamaño de muestra insuficiente, pero a la vez, que la cifra debería ser publicada, por tener un tamaño de muestra efectivo suficiente. Lo anterior, podría llevar a contradicciones por parte de los INE y malas interpretaciones por parte los usuarios finales de los datos.
 
-De manera general, se recomienda que los INE estudien a profundidad sus políticas de supresión, revisión y publicación de cifras en cada una de las encuestas que realiza y, de manera independiente, defina las reglas apropiadas para cada caso y que los criterios de supresión sean plasmados en forma de diagrama de flujo en la documentación de las encuestas. Además, cada encuesta debería considerar un algoritmo de forma particular; es decir, los criterios de supresión no necesariamente deben coincidir para cada operación estadística. 
+De manera general, se recomienda que los INE estudien a profundidad sus políticas de supresión, revisión y publicación de cifras en cada una de las encuestas que realiza y, de manera independiente, defina las reglas apropiadas para cada caso y que los criterios de supresión sean plasmados en forma de diagrama de flujo en la documentación de las encuestas. Además, cada encuesta debería considerar un algoritmo de forma particular; es decir, los criterios de supresión no necesariamente deben coincidir para cada operación estadística, aunque sí debiesen acogerse unos mínimos en cada ONE para garantizar la calidad de la estimaciones publicadas provenientes de las encuestas de hogares. 
+
+Teniendo en cuenta las particularidades de la región, en este documento se recomienda mantener un umbral del coeficiente de variación $CV > 20\%$ y del coeficiente de variación logarítmico $CV(\hat{L}) > 17.5%$ como generadores de alertas sobre la calidad de la estimación; además se recomienda tener mínimo 14 grados de libertad, los cuales implican al menos 15 UPM que inducirían una convergencia en la distribución del estimador [@Gutierrez_2016, figura 8.1]. A partir de esta cifra es posible continuar el análisis de las recomendaciones con las particularidades de cada encuesta en cada país. Por ejemplo, # si se espera un mínimo de 15 UPM, y en cada una se seleccionan 12 hogares, entonces la muestra esperada es de 180 hogares, y tomando una tasa de efectividad del 85%, esta se reduce a $n < 153$ como generados de alertas. Asimismo, tomando en cuenta un efecto de diseño promedio de 2.5 (calculado según el indicador de interés), se obtendría un tamaño de muestra efectivo de $n_{eff} = 61$ como generador de alertas. Asimismo, se recomienda mantener el conteo de casos no ponderado en $n_y < 40$ e inmediatamente generar una alerta sobre todas las cifras que reporten un efecto de diseño $DEFF < 1$. 
 
 Por ejemplo, la figura \@ref(fig:figCSj1) muestra una propuesta preliminar, para la estimación de proporciones o razones, en cuanto a los criterios de supresión de cifras. En una primera instancia se realiza la estimación clásica de los parámetros de interés y se genera una tabla que adjunte el cálculo de todos los criterios descritos anteriormente. Luego, dependiendo de la naturaleza del fenómeno investigado, se deben establecer los criterios que se van a tener en cuenta y los umbrales en cada caso. El próximo paso es decidir, para cada cifra de la tabla generada, si se va a publicar o suprimir, y en algunos casos si se revisará la cifra con mayor detenimiento. Por ejemplo, en el diagrama propuesto se definen seis criterios como condiciones necesarias para la publicación inmediata de una cifra; los primeros cuatro, son condiciones necesarias para la revisión temática. Si alguno de los primeros cuatro criterios no se satisface, entonces la cifra es suprimida. 
 
-```{r, figCSj1, fig.cap="Diagrama de flujo propuesto para la publicación, supresión y revisión de estimaciones de proporciones o razones en encuestas de hogares.", echo=FALSE, out.width='50%'}
+```{r, figCSj1, fig.cap="Ejemplo de un diagrama de flujo para la publicación, supresión y revisión de estimaciones de proporciones o razones en encuestas de hogares.", echo=FALSE, out.width='50%'}
 knitr::include_graphics("Pics/CSj1.png")
 ```
 

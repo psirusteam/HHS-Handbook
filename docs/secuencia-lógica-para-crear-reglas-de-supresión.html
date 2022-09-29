@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>13.1 Sesgo sobre los estimadores | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
+  <title>19.3 Secuencia lógica para crear reglas de supresión | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="13.1 Sesgo sobre los estimadores | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
+  <meta property="og:title" content="19.3 Secuencia lógica para crear reglas de supresión | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="13.1 Sesgo sobre los estimadores | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
+  <meta name="twitter:title" content="19.3 Secuencia lógica para crear reglas de supresión | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   
   <meta name="twitter:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="ausencia-de-respuesta-de-unidad.html"/>
-<link rel="next" href="soluciones.html"/>
+<link rel="prev" href="criterios-de-calidad-en-subpoblaciones.html"/>
+<link rel="next" href="referencias.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -428,42 +428,55 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="sesgo-sobre-los-estimadores" class="section level2 hasAnchor" number="13.1">
-<h2><span class="header-section-number">13.1</span> Sesgo sobre los estimadores<a href="sesgo-sobre-los-estimadores.html#sesgo-sobre-los-estimadores" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Asumiendo que existe ausencia de respuesta en la muestra, considere la siguiente forma de estimar (ingenuamente) el promedio poblacional <span class="math inline">\(\bar{y}_U\)</span> mediante el estimador de Hájek</p>
-<p><span class="math display">\[
-\tilde{y}_s = \frac{\sum_{s_r}d_ky_k}{\sum_{s_r}d_k} = \frac{\hat{t}_y}{\hat{N}}
-\]</span></p>
-<p>Siendo <span class="math inline">\(\bar{\phi}\)</span> el promedio de las probabilidades de respuesta, el sesgo generado por la ausencia de respuesta puede cuantificarse de la siguiente manera:</p>
-<p><span class="math display">\[
-B\left(\tilde{y}_s\right)  =
-\frac{1}{N\bar{\phi}}\sum_U(y_k-\bar{y}_U)(\phi_k-\bar{\phi})
-= \frac{Cov\left(\bar{y},\phi\right)}{\bar{\phi}}
-= \frac{Cor\left(Y,\phi\right)S\left(Y\right)S\left(\phi\right)}{\bar{\phi}}
-\]</span></p>
-<p>En donde <span class="math inline">\(Cov\left(Y,\phi\right)\)</span> es la covarianza poblacional entre
-los valores de la característica de interés y las probabilidades de respuesta,
-<span class="math inline">\(cor\left(Y,\phi\right)\)</span> es el coeficiente de correlación poblacional
-y <span class="math inline">\(S\left(Y\right)\)</span> es la desviación estandar poblacional de la variable objetivo. Dado que el valor del coeficiente de correlación está restringido
-al intervalo <span class="math inline">\([-1, 1]\)</span>, el valor máximo del sesgo absoluto será igual a</p>
-<p><span class="math display">\[
-|B\left(\tilde{y}_s\right)| \leq
-\frac{S\left(\phi\right)S\left(y\right)}{\bar{\phi}}
-= \frac{\left(1-R\left(\phi\right)\right)S\left(y\right)}{2\bar{\phi}}
-\]</span></p>
-<p>A pesar de que este límite superior no se puede calcular en situaciones prácticas, sí es posible estimarlo utilizando los datos de la muestra y las probabilidades
-de respuesta estimadas. Nótese que si el mecanismo de ausencia de respuesta fuese MCAR, entonces el valor de <span class="math inline">\(R\left(\phi\right)\)</span> sería uno, y por consiguiente no habría sesgo. De la misma forma, en el caso extremo en el que la característica de interés fuese homogénea en toda la población, tampoco habría sesgo en el estimador, y bastaría con utilizar los datos de la muestra de respondientes efectivos, sin ningún tipo de corrección.</p>
-<p>Además de las anteriores consideraciones, es posible evaluar las propuestas de escogencia de variables para calibración de <span class="citation">Graham Kalton y Flores-Cervantes (<a href="#ref-KaltonFloresCervantes_2003" role="doc-biblioref">2003</a>)</span> y de <span class="citation">Sarndal (<a href="#ref-Sarndal_2011" role="doc-biblioref">2011</a>)</span>. En particular, este último autor considera un indicador del sesgo por ausencia de respuesta sobre los estimadores de calibración, cuya lógica se basa en que, en el mejor de los casos, en el que no hubiese errores de cobertura ni ausencia de respuesta, el estimador de expansión <span class="math inline">\(\hat{t}_{y}\)</span> sería insesgado y la distancia que habría entre este y el estimador de calibración <span class="math inline">\(\hat{t}_{y,cal}\)</span> se podría cuantificar como <span class="math inline">\(\Delta_A = \frac{(\hat{t}_{y,cal} - \hat{t}_{y})}{N}\)</span>. Este indicador se sugiere como una posible herramienta para comparar potenciales variables de calibración, de tal forma que cuando el valor de <span class="math inline">\(|\Delta_A|\)</span> sea grande habría un indicio para preferir un vector de calibración sobre otro. Además, al estandarizarla, esta medida puede ser descompuesta en los siguiente tres factores:</p>
-<p><span class="math display">\[\frac{\Delta_A}{S_y} = cv_g \ \times R_{y,\mathbf{x}} \ \times R_{D,C}\]</span></p>
-<p>De esta forma, el primer factor representa el coeficiente de variación de los pesos <span class="math inline">\(g_k\)</span>; el segundo factor al cuadrado es el coeficiente de determinación de una regresión múltiple entre la variable de estudio y las variables del vector de calibración; el último factor al cuadrado es el coeficiente de determinación (proporción de varianza explicada) en una regresión ponderada que pasa por el origen entre las desviaciones de las covariables <span class="math inline">\(D_j = \hat{t}_{x, j} - t_{x,j}\)</span> y las covarianzas de la variable de estudio y las covariables <span class="math inline">\(C_j = cov(y, x_j)\)</span>.</p>
+<div id="secuencia-lógica-para-crear-reglas-de-supresión" class="section level2 hasAnchor" number="19.3">
+<h2><span class="header-section-number">19.3</span> Secuencia lógica para crear reglas de supresión<a href="secuencia-lógica-para-crear-reglas-de-supresión.html#secuencia-lógica-para-crear-reglas-de-supresión" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>En esta sección se ha querido enfatizar el hecho de que la precisión de una estimación recae directamente en los intervalos de confianza, los cuales pueden ser descompuestos en elementos fundamentales que permiten crear una secuencia lógica de revisión, publicación o supresión de cifras. Nótese que lo anterior se basa en que la longitud de los intervalos de confianza induce la seguridad de que un estimador es o no es preciso. Considere los siguientes ejemplos prácticos:</p>
+<ul>
+<li>La incidencia de la pobreza en un departamento de un país se estimó en <span class="math inline">\(5,2\)</span>%, con un intervalo de confianza de (<span class="math inline">\(5,15\)</span>%, <span class="math inline">\(5,25\)</span>%).</li>
+<li>La tasa de desocupación en el país para los hombres se ubicó en <span class="math inline">\(7,5\)</span>%, con un intervalo de confianza de (<span class="math inline">\(7,1\)</span>%, <span class="math inline">\(7,9\)</span>%); mientras que para las mujeres se ubicó en <span class="math inline">\(9,2\)</span>%, con intervalo de confianza de (<span class="math inline">\(8,8\)</span>%, <span class="math inline">\(9,6\)</span>%).</li>
+<li>La tasa de asistencia neta estudiantil en primaria para el último quintil de ingreso se estimó en <span class="math inline">\(85\)</span>%, con un intervalo de confianza de (<span class="math inline">\(48,2\)</span>%, <span class="math inline">\(100,0\)</span>%).</li>
+</ul>
+<p>Claramente, en la última situación ejemplificada, el intervalo de confianza no brinda la precisión adecuada para que una Oficina Nacional de Estadística publique esta cifra confiadamente, o para que un gobierno pueda realizar algún tipo de política pública educativa, y mucho menos para estimar los recursos que una de intervención estatal sobre la población de interés. Como se ha descrito a lo largo de este documento, utilizar únicamente el coeficiente de variación como estándar para la supresión de cifras es un criterio que no tiene en cuenta toda las variantes asociadas a la inferencia en un muestreo complejo. A continuación se incorporan algunas recomendaciones internacionales que incorporan otros criterios adicionales a este.</p>
+<ul>
+<li><strong>Coeficiente de variación</strong>: <span class="citation">CEPAL (<a href="#ref-CepalSAe2018" role="doc-biblioref">2018b</a>)</span> realizó una revisión de las experiencias internacionales, con base en la información publicada en las páginas web de los INE, para determinar cómo son usados los criterios de supresión de información y los umbrales que las oficinas nacionales de estadística definen para la validación de las cifras. Para encuestas de hogares, se encontró que Estados Unidos y los países del Mercosur utilizan un umbral de <span class="math inline">\(CV &gt; 30\%\)</span>, Canadá y México usan como referencia un umbral del <span class="math inline">\(CV &gt; 25\%\)</span>, Chile y Costa Rica utilizan un umbral del <span class="math inline">\(CV &gt; 20\%\)</span>, Ecuador y Perú utilizan un umbral del <span class="math inline">\(CV &gt; 15\%\)</span>, mientras que Colombia usa un umbral del <span class="math inline">\(CV &gt; 10\%\)</span>. De esta forma, cualquier cifra estimada cuyo coeficiente de variación sea mayor al umbral predefinido es suprimida o marcada como una cifra poco confiable.</li>
+<li><strong>Tamaño de muestra</strong>: este criterio debe ser considerado como uno de los más importantes a la hora de decidir la ruta de publicación de una cifra, puesto que los desarrollos teóricos en términos de inferencia estadística para encuestas dependen de este término. La cobertura de los intervalos de confianza y la distribución de los estimadores dependen de qué tanto el tamaño de la subpoblación como su tamaño de muestra asociado no sean pequeños. En este espíritu, <span class="citation">Barnett-Walker et al. (<a href="#ref-Barnett_Walker_Chromy_Davis_Emrich_Odom_Packer_2003" role="doc-biblioref">2003</a>)</span> proponen que todas las estimaciones basadas en un tamaño de muestra menor a 100 unidades deberían ser suprimidas o marcadas como no confiables.</li>
+<li><strong>Tamaño de muestra efectivo</strong>: al igual que con el anterior criterio, el tamaño de muestra efectivo induce que las aproximaciones teóricas, en términos de convergencia de las distribuciones de los estimadores y la cobertura de los intervalos de confianza, se cumplan. <span class="citation">Hornik et al. (<a href="#ref-Hornik_Maklan_Cadell_Prado_Barmada_Jacobsohn_Orwin_Sridharan_Zador_Southwell_etal" role="doc-biblioref">2002</a>)</span> consideran que si el tamaño de muestra efectivo no es mayor a 140, entonces la cifra no debería ser considerada para publicación. Por otro lado, teniendo en cuenta el tamaño de muestra inducido por la transformación logarítmica, <span class="citation">Barnett-Walker et al. (<a href="#ref-Barnett_Walker_Chromy_Davis_Emrich_Odom_Packer_2003" role="doc-biblioref">2003</a>)</span> afirman que cuando la proporción se encuentra entre <span class="math inline">\(0.05\)</span> y <span class="math inline">\(0.95\)</span>, entonces el tamaño de muestra efectivo es máximo cuando <span class="math inline">\(P = 0,5\)</span>, siendo su valor <span class="math inline">\(n_{eff} = 68\)</span>.</li>
+<li><strong>Conteo de casos no ponderado</strong>: cuando la incidencia de un fenómeno es muy baja y el diseño de la encuesta no lo tuvo en cuenta, entonces es posible que las estimaciones asociadas a tamaños, totales y proporciones sobre este fenómeno no sean confiables. En particular, para las proporciones es posible restringir las estimaciones tales que <span class="math inline">\(\hat P &lt;0,001\)</span>, pero es más expedito crear una regla a partir del conteo de casos en la muestra. Por ejemplo, <span class="citation">National Research Council (<a href="#ref-AmericanCommunitySurvey" role="doc-biblioref">2015</a>)</span> plantea que si el número de casos no ponderados es menor a 50 unidades entonces la estimación no es publicada.</li>
+<li><strong>Grados de libertad</strong>: este criterio apunta a aislar el efecto inflacionario del tamaño de muestra en una encuesta compleja y plantea una aproximación al número de unidades independientes en la inferencia. Además, a medida que crece, la amplitud del intervalo de confianza se estabiliza. <span class="citation">Parker, Talih, y Malec (<a href="#ref-Parker_Talih_Malec_2017" role="doc-biblioref">2017</a>)</span> consideran que si los grados de libertad inducidos por la subpoblación son menos de ocho, la cifra debería ser suprimida.</li>
+<li><strong>Coeficiente de variación logarítmico</strong>: Esta medida de suavizamiento toma valores altos cuando las proporciones estimadas están demasiado cercanas a cero o a uno. <span class="citation">Barnett-Walker et al. (<a href="#ref-Barnett_Walker_Chromy_Davis_Emrich_Odom_Packer_2003" role="doc-biblioref">2003</a>)</span> proponen que la cifra debe ser suprimida si el coeficiente de variación logarítmico es mayor que 17.5%.</li>
+</ul>
+<p>Nótese que los criterios mencionados en este documento no deberían ser aplicados de manera independiente, sino que tendrían que seguir cierta lógica, puesto que es posible, por ejemplo para una variable con poca homogeneidad en las UPM, que con un tamaño de muestra de <span class="math inline">\(n=90\)</span>, se haya estimado un efecto de diseño de <span class="math inline">\(DEFF=0,5\)</span>, lo cual implicaría un tamaño de muestra efectivo de <span class="math inline">\(n_{eff}=180\)</span>. En este caso, si los criterios de supresión se aplicaran de manera independiente, se concluiría que la cifra debería ser suprimida por tener un tamaño de muestra insuficiente, pero a la vez, que la cifra debería ser publicada, por tener un tamaño de muestra efectivo suficiente. Lo anterior, podría llevar a contradicciones por parte de los INE y malas interpretaciones por parte los usuarios finales de los datos.</p>
+<p>De manera general, se recomienda que los INE estudien a profundidad sus políticas de supresión, revisión y publicación de cifras en cada una de las encuestas que realiza y, de manera independiente, defina las reglas apropiadas para cada caso y que los criterios de supresión sean plasmados en forma de diagrama de flujo en la documentación de las encuestas. Además, cada encuesta debería considerar un algoritmo de forma particular; es decir, los criterios de supresión no necesariamente deben coincidir para cada operación estadística, aunque sí debiesen acogerse unos mínimos en cada ONE para garantizar la calidad de la estimaciones publicadas provenientes de las encuestas de hogares.</p>
+<p>Teniendo en cuenta las particularidades de la región, en este documento se recomienda mantener un umbral del coeficiente de variación <span class="math inline">\(CV &gt; 20\%\)</span> y del coeficiente de variación logarítmico <span class="math inline">\(CV(\hat{L}) &gt; 17.5%\)</span> como generadores de alertas sobre la calidad de la estimación; además se recomienda tener mínimo 14 grados de libertad, los cuales implican al menos 15 UPM que inducirían una convergencia en la distribución del estimador <span class="citation">(<a href="#ref-Gutierrez_2016" role="doc-biblioref">H. A. Gutiérrez 2016, fig. 8.1</a>)</span>. A partir de esta cifra es posible continuar el análisis de las recomendaciones con las particularidades de cada encuesta en cada país. Por ejemplo, # si se espera un mínimo de 15 UPM, y en cada una se seleccionan 12 hogares, entonces la muestra esperada es de 180 hogares, y tomando una tasa de efectividad del 85%, esta se reduce a <span class="math inline">\(n &lt; 153\)</span> como generados de alertas. Asimismo, tomando en cuenta un efecto de diseño promedio de 2.5 (calculado según el indicador de interés), se obtendría un tamaño de muestra efectivo de <span class="math inline">\(n_{eff} = 61\)</span> como generador de alertas. Asimismo, se recomienda mantener el conteo de casos no ponderado en <span class="math inline">\(n_y &lt; 40\)</span> e inmediatamente generar una alerta sobre todas las cifras que reporten un efecto de diseño <span class="math inline">\(DEFF &lt; 1\)</span>.</p>
+<p>Por ejemplo, la figura <a href="secuencia-lógica-para-crear-reglas-de-supresión.html#fig:figCSj1">19.2</a> muestra una propuesta preliminar, para la estimación de proporciones o razones, en cuanto a los criterios de supresión de cifras. En una primera instancia se realiza la estimación clásica de los parámetros de interés y se genera una tabla que adjunte el cálculo de todos los criterios descritos anteriormente. Luego, dependiendo de la naturaleza del fenómeno investigado, se deben establecer los criterios que se van a tener en cuenta y los umbrales en cada caso. El próximo paso es decidir, para cada cifra de la tabla generada, si se va a publicar o suprimir, y en algunos casos si se revisará la cifra con mayor detenimiento. Por ejemplo, en el diagrama propuesto se definen seis criterios como condiciones necesarias para la publicación inmediata de una cifra; los primeros cuatro, son condiciones necesarias para la revisión temática. Si alguno de los primeros cuatro criterios no se satisface, entonces la cifra es suprimida.</p>
+<div class="figure"><span style="display:block;" id="fig:figCSj1"></span>
+<img src="Pics/CSj1.png" alt="Diagrama de flujo propuesto para la publicación, supresión y revisión de estimaciones de proporciones o razones en encuestas de hogares." width="50%" />
+<p class="caption">
+Figura 19.2: Diagrama de flujo propuesto para la publicación, supresión y revisión de estimaciones de proporciones o razones en encuestas de hogares.
+</p>
 </div>
+
+</div>
+<!-- </div> -->
 <h3>Referencias<a href="referencias.html#referencias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-KaltonFloresCervantes_2003" class="csl-entry">
-Kalton, Graham, y Ismael Flores-Cervantes. 2003. <span>«Weighting methods»</span>. <em>Journal of Official Statistics</em> 19 (2): 17.
+<div id="ref-Barnett_Walker_Chromy_Davis_Emrich_Odom_Packer_2003" class="csl-entry">
+Barnett-Walker, Kortnee C., James R. Chromy, Teresa R. Davis, Steven L. Emrich, Dawn M. Odom, y Lisa E. Packer. 2003. <span>«2001 National Household Survey on Drug Abuse»</span>.
 </div>
-<div id="ref-Sarndal_2011" class="csl-entry">
-Sarndal, Carl-Erik. 2011. <span>«Three Factors to Signal Non‐Response Bias With Applications to Categorical Auxiliary Variables»</span>. <em>International Statistical Review / Revue Internationale de Statistique</em> 79 (2).
+<div id="ref-CepalSAe2018" class="csl-entry">
+———. 2018b. <span>«Taller regional sobre desagregación de estadísticas sociales mediante metodologías de estimación en áreas pequeñas»</span>.
+</div>
+<div id="ref-Gutierrez_2016" class="csl-entry">
+———. 2016. <em>Estrategias de muestreo: diseño de encuestas y estimación de parámetros</em>. Segunda edición. Ediciones de la U.
+</div>
+<div id="ref-Hornik_Maklan_Cadell_Prado_Barmada_Jacobsohn_Orwin_Sridharan_Zador_Southwell_etal" class="csl-entry">
+Hornik, Robert, David Maklan, Diane Cadell, Amalia Prado, Carlin Barmada, Lela Jacobsohn, Robert Orwin, et al. 2002. <span>«Evaluation of the National Youth Anti-Drug Media Campaign: Fourth Semi-Annual Report of Findings»</span>, 740.
+</div>
+<div id="ref-AmericanCommunitySurvey" class="csl-entry">
+National Research Council. 2015. <em>Realizing the Potential of the American Community Survey: Challenges, Tradeoffs, and Opportunities</em>. National Academies Press. <a href="https://doi.org/10.17226/21653">https://doi.org/10.17226/21653</a>.
+</div>
+<div id="ref-Parker_Talih_Malec_2017" class="csl-entry">
+Parker, JD, M Talih, y DJ Malec. 2017. <span>«National Center for Health Statistics Data Presentation Standards for Proportions»</span>. <em>Vital Health Stat</em> 2 (175).
 </div>
 </div>
             </section>
@@ -471,8 +484,8 @@ Sarndal, Carl-Erik. 2011. <span>«Three Factors to Signal Non‐Response Bias Wi
           </div>
         </div>
       </div>
-<a href="ausencia-de-respuesta-de-unidad.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="soluciones.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="criterios-de-calidad-en-subpoblaciones.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="referencias.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -503,7 +516,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/psirusteam/HHS-Handbook/13SesgoUnidad.Rmd",
+"link": "https://github.com/psirusteam/HHS-Handbook/19Calidad.Rmd",
 "text": "Edit"
 },
 "history": {

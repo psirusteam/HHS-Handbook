@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>13.1 Sesgo sobre los estimadores | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
+  <title>19.2 Criterios de calidad en subpoblaciones | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="13.1 Sesgo sobre los estimadores | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
+  <meta property="og:title" content="19.2 Criterios de calidad en subpoblaciones | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="13.1 Sesgo sobre los estimadores | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
+  <meta name="twitter:title" content="19.2 Criterios de calidad en subpoblaciones | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   
   <meta name="twitter:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="ausencia-de-respuesta-de-unidad.html"/>
-<link rel="next" href="soluciones.html"/>
+<link rel="prev" href="medidas-de-calidad.html"/>
+<link rel="next" href="secuencia-lógica-para-crear-reglas-de-supresión.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -428,51 +428,108 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="sesgo-sobre-los-estimadores" class="section level2 hasAnchor" number="13.1">
-<h2><span class="header-section-number">13.1</span> Sesgo sobre los estimadores<a href="sesgo-sobre-los-estimadores.html#sesgo-sobre-los-estimadores" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Asumiendo que existe ausencia de respuesta en la muestra, considere la siguiente forma de estimar (ingenuamente) el promedio poblacional <span class="math inline">\(\bar{y}_U\)</span> mediante el estimador de Hájek</p>
+<div id="criterios-de-calidad-en-subpoblaciones" class="section level2 hasAnchor" number="19.2">
+<h2><span class="header-section-number">19.2</span> Criterios de calidad en subpoblaciones<a href="criterios-de-calidad-en-subpoblaciones.html#criterios-de-calidad-en-subpoblaciones" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>En esta sección se abordan temáticas referentes al procesamiento apropiado de los indicadores de interés en las subpoblaciones y, habiendo realizado las estimaciones y calculado sus respectivos criterios de calidad, se plantea la utilización de umbrales apropiados para la supresión, revisión o publicación de cifras.</p>
+<p>El análisis apropiado de las estadísticas generadas a partir de las encuestas de hogares debe pasar por una definición clara tanto de las subpoblaciones sobre las cuales se quiere realizar la inferencia, como de las variables que generan el indicador de interés. De hecho, como se mostrará más adelante, algunas variables pueden definir una subpoblación y, por ende, es posible que se dé lugar a confusiones. Para aclarar esto, se proponen a continuación algunos ejemplos que permiten dilucidar el cálculo de las medidas de calidad sobre un conjunto no exhaustivo de indicadores de interés.</p>
+<p><strong>Promedio del ingreso per cápita en el país</strong></p>
+<p>En este caso la variable de interés es una característica continua <span class="math inline">\(y_k \geq 0 \ \ \ (\forall k \in U)\)</span> definida sobre toda la población del país, mientras que el indicador se escribe como una razón.</p>
 <p><span class="math display">\[
-\tilde{y}_s = \frac{\sum_{s_r}d_ky_k}{\sum_{s_r}d_k} = \frac{\hat{t}_y}{\hat{N}}
+\hat {\bar y}_{nacional} = \frac{\hat t_y}{\hat N} =\frac{\sum_h\sum_i\sum_k w_ky_{k}}{\sum_h\sum_i\sum_k w_k}
 \]</span></p>
-<p>Siendo <span class="math inline">\(\bar{\phi}\)</span> el promedio de las probabilidades de respuesta, el sesgo generado por la ausencia de respuesta puede cuantificarse de la siguiente manera:</p>
+<p>En donde los subíndices <span class="math inline">\(h\)</span>, <span class="math inline">\(i\)</span> y <span class="math inline">\(k\)</span>, se refieren a los estratos, las UPM y los individuos, respectivamente. Nótese que la variable que define la población es siempre determinista puesto que <span class="math inline">\(z_{g_k} = 1\)</span> para todos los individuos que residen en el país, es decir para todos lo individuos de la muestra. En este caso se tiene que los grados de libertad corresponden a todas las UPM menos todos los estratos de la encuesta en el país.</p>
+<p><strong>Promedio del ingreso per cápita en una ciudad</strong></p>
+<p>En este caso la variable de interés está definida sobre un subgrupo poblacional <span class="math inline">\(U_g\)</span>, correspondiente a la ciudad de interés. El estimador del indicador se escribe como una razón.</p>
 <p><span class="math display">\[
-B\left(\tilde{y}_s\right)  =
-\frac{1}{N\bar{\phi}}\sum_U(y_k-\bar{y}_U)(\phi_k-\bar{\phi})
-= \frac{Cov\left(\bar{y},\phi\right)}{\bar{\phi}}
-= \frac{Cor\left(Y,\phi\right)S\left(Y\right)S\left(\phi\right)}{\bar{\phi}}
+\hat {\bar y}_{ciudad}= \frac{\hat t_{y_g}}{\hat N_g} =\frac{\sum_h\sum_i\sum_k w_kz_{g_k}y_{k}}{\sum_h\sum_i\sum_k w_kz_{g_k}}
 \]</span></p>
-<p>En donde <span class="math inline">\(Cov\left(Y,\phi\right)\)</span> es la covarianza poblacional entre
-los valores de la característica de interés y las probabilidades de respuesta,
-<span class="math inline">\(cor\left(Y,\phi\right)\)</span> es el coeficiente de correlación poblacional
-y <span class="math inline">\(S\left(Y\right)\)</span> es la desviación estandar poblacional de la variable objetivo. Dado que el valor del coeficiente de correlación está restringido
-al intervalo <span class="math inline">\([-1, 1]\)</span>, el valor máximo del sesgo absoluto será igual a</p>
+<p>Nótese que la variable que define la subpoblación es dicotómica dada por</p>
 <p><span class="math display">\[
-|B\left(\tilde{y}_s\right)| \leq
-\frac{S\left(\phi\right)S\left(y\right)}{\bar{\phi}}
-= \frac{\left(1-R\left(\phi\right)\right)S\left(y\right)}{2\bar{\phi}}
+z_{g_k}=
+\begin{cases}
+1, \ \text{Si $k$ reside en la ciudad $U_g$} \\
+0, \ \text{en otro caso}
+\end{cases}
 \]</span></p>
-<p>A pesar de que este límite superior no se puede calcular en situaciones prácticas, sí es posible estimarlo utilizando los datos de la muestra y las probabilidades
-de respuesta estimadas. Nótese que si el mecanismo de ausencia de respuesta fuese MCAR, entonces el valor de <span class="math inline">\(R\left(\phi\right)\)</span> sería uno, y por consiguiente no habría sesgo. De la misma forma, en el caso extremo en el que la característica de interés fuese homogénea en toda la población, tampoco habría sesgo en el estimador, y bastaría con utilizar los datos de la muestra de respondientes efectivos, sin ningún tipo de corrección.</p>
-<p>Además de las anteriores consideraciones, es posible evaluar las propuestas de escogencia de variables para calibración de <span class="citation">Graham Kalton y Flores-Cervantes (<a href="#ref-KaltonFloresCervantes_2003" role="doc-biblioref">2003</a>)</span> y de <span class="citation">Sarndal (<a href="#ref-Sarndal_2011" role="doc-biblioref">2011</a>)</span>. En particular, este último autor considera un indicador del sesgo por ausencia de respuesta sobre los estimadores de calibración, cuya lógica se basa en que, en el mejor de los casos, en el que no hubiese errores de cobertura ni ausencia de respuesta, el estimador de expansión <span class="math inline">\(\hat{t}_{y}\)</span> sería insesgado y la distancia que habría entre este y el estimador de calibración <span class="math inline">\(\hat{t}_{y,cal}\)</span> se podría cuantificar como <span class="math inline">\(\Delta_A = \frac{(\hat{t}_{y,cal} - \hat{t}_{y})}{N}\)</span>. Este indicador se sugiere como una posible herramienta para comparar potenciales variables de calibración, de tal forma que cuando el valor de <span class="math inline">\(|\Delta_A|\)</span> sea grande habría un indicio para preferir un vector de calibración sobre otro. Además, al estandarizarla, esta medida puede ser descompuesta en los siguiente tres factores:</p>
-<p><span class="math display">\[\frac{\Delta_A}{S_y} = cv_g \ \times R_{y,\mathbf{x}} \ \times R_{D,C}\]</span></p>
-<p>De esta forma, el primer factor representa el coeficiente de variación de los pesos <span class="math inline">\(g_k\)</span>; el segundo factor al cuadrado es el coeficiente de determinación de una regresión múltiple entre la variable de estudio y las variables del vector de calibración; el último factor al cuadrado es el coeficiente de determinación (proporción de varianza explicada) en una regresión ponderada que pasa por el origen entre las desviaciones de las covariables <span class="math inline">\(D_j = \hat{t}_{x, j} - t_{x,j}\)</span> y las covarianzas de la variable de estudio y las covariables <span class="math inline">\(C_j = cov(y, x_j)\)</span>.</p>
-</div>
-<h3>Referencias<a href="referencias.html#referencias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-KaltonFloresCervantes_2003" class="csl-entry">
-Kalton, Graham, y Ismael Flores-Cervantes. 2003. <span>«Weighting methods»</span>. <em>Journal of Official Statistics</em> 19 (2): 17.
-</div>
-<div id="ref-Sarndal_2011" class="csl-entry">
-Sarndal, Carl-Erik. 2011. <span>«Three Factors to Signal Non‐Response Bias With Applications to Categorical Auxiliary Variables»</span>. <em>International Statistical Review / Revue Internationale de Statistique</em> 79 (2).
-</div>
+<p>En este caso el tamaño de muestra es <span class="math inline">\(n_g = \sum_s z_{g_k}\)</span>, es decir el tamaño de muestra de la ciudad; los grados de libertad corresponden a todas las UPM en la ciudad menos todos los estratos en la ciudad.</p>
+<p><strong>Proporción de personas pobres en el área urbana</strong></p>
+<p>En este ejemplo, el estimador del indicador se escribe como una razón sobre el área urbana <span class="math inline">\(U_g\)</span>.</p>
+<p><span class="math display">\[
+\hat{P}_{urbano} = \frac{\hat t_{y_g}}{\hat N_g} =\frac{\sum_h\sum_i\sum_k w_kz_{g_k}y_{k}}{\sum_h\sum_i\sum_k w_kz_{g_k}}
+\]</span></p>
+<p>En donde <span class="math inline">\(y_{k}\)</span> es la variable de interés que define una característica dicotómica de la siguiente manera
+<span class="math display">\[
+y_k=
+\begin{cases}
+1, &amp;\text{si el ingreso per cápita de la persona está por debajo de la línea de pobreza}\\
+0, &amp;\text{en otro caso.}
+\end{cases}
+\]</span></p>
+<p>Las mediciones se realizan sobre la subpoblación definida por la siguiente variable</p>
+<p><span class="math display">\[
+z_{g_k}=
+\begin{cases}
+1, &amp;\text{si la persona reside en el área urbana $U_g$}\\
+0, &amp;\text{en otro caso.}
+\end{cases}
+\]</span></p>
+<p>En este caso el tamaño de muestra es <span class="math inline">\(n_g = \sum_s z_{g_k}\)</span>, es decir el tamaño de muestra del área urbana; los grados de libertad corresponden a todas las UPM del área urbana menos todos los estratos del área urbana.</p>
+<p><strong>Tasa de desocupación nacional</strong></p>
+<p>Este indicador está definido como la división entre el total de personas desocupadas sobre el total de personas activas en la fuerza de trabajo. El estimador del indicador está definido como una razón de dos estimadores de totales poblacionales:</p>
+<p><span class="math display">\[
+\widehat{TD}_{nacional} =  \frac{\hat t_y}{\hat t_z} =\frac{\sum_h\sum_i\sum_k w_kz_{k}y_{k}}{\sum_h\sum_i\sum_k w_kz_{k}}
+\]</span></p>
+<p>En donde la variables de interés toman la siguiente forma
+<span class="math display">\[
+y_{k}=
+\begin{cases}
+1, &amp;\text{si el individuo es desocupado,}\\
+0, &amp;\text{si el individuo no es desocupado,}\\
+NA, &amp;\text{si no está en edad de trabajar.}
+\end{cases}
+\]</span></p>
+<p>Y la variable que define la subpoblación es
+<span class="math display">\[
+z_{k}=
+\begin{cases}
+1, &amp;\text{si el individuo es activo,}\\
+0, &amp;\text{si el individuo es inactivo,}\\
+NA, &amp;\text{si el individuo no está en edad de trabajar.}
+\end{cases}
+\]</span></p>
+<p>En este caso el tamaño de muestra es <span class="math inline">\(n = \sum_s z_{k}\)</span>, es decir el número de personas en la muestra que están en edad de trabajar y son activas. Los grados de libertad corresponden a todas las UPM menos todos los estratos de la encuesta en el país en los que se encontraron hogares con individuos en edad de trabajar y activas. Nótese que estos son los mismos grados de libertad inducidos por la tasa de ocupación. Además, el conteo de casos no ponderado corresponde al número de individuos desocupados en la muestra.</p>
+<p><strong>Tasa de desocupación masculina en migrantes</strong></p>
+<p>Este indicador está definido como la división entre el total de hombres migrantes desocupados sobre el total de hombres migrantes activos. El estimador del indicador está definido como una razón de dos estimadores de totales poblacionales:</p>
+<p><span class="math display">\[
+\widehat{TD}_{hombre-migrante} =  \frac{\hat t_{y_g}}{\hat t_{z_g}} =\frac{\sum_h\sum_i\sum_k w_kz_{g_k}y_{k}}{\sum_h\sum_i\sum_k w_kz_{g_k}}
+\]</span></p>
+<p>En donde la variables de interés toman la siguiente forma
+<span class="math display">\[
+y_{k}=
+\begin{cases}
+1, &amp;\text{si el individuo es desocupado,}\\
+0, &amp;\text{si el individuo no es desocupado,}\\
+NA, &amp;\text{si no está en edad de trabajar.}
+\end{cases}
+\]</span></p>
+<p>Y la variable que define la subpoblación es
+<span class="math display">\[
+z_{g_k}=
+\begin{cases}
+1, &amp;\text{si el individuo es activo, hombre y migrante,}\\
+0, &amp;\text{si el individuo es inactivo, hombre y migrante}\\
+NA, &amp;\text{si el individuo no está en edad de trabajar, o es mujer o es no migrante.}
+\end{cases}
+\]</span></p>
+<p>En este caso el tamaño de muestra es <span class="math inline">\(n = \sum_s z_{g_k}\)</span>, es decir el número de personas en la muestra que están en edad de trabajar, son hombres migrantes y están activos. El conteo no ponderado de casos corresponde al número de individuos en la muestra que son hombres migrantes y están desocupados. Además, los grados de libertad corresponden a todas las UPM menos todos los estratos de la encuesta en el país en los que se encontraron hogares con hombres migrantes y activos en la fuerza de trabajo.</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="ausencia-de-respuesta-de-unidad.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="soluciones.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="medidas-de-calidad.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="secuencia-lógica-para-crear-reglas-de-supresión.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -503,7 +560,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/psirusteam/HHS-Handbook/13SesgoUnidad.Rmd",
+"link": "https://github.com/psirusteam/HHS-Handbook/19Calidad.Rmd",
 "text": "Edit"
 },
 "history": {
