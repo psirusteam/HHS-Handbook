@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>7.1 Estimación del efecto de diseño | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
+  <title>15.2 Ejemplo: detección de valores atípicos en una encuesta de presupeustos familiares y gastos | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="7.1 Estimación del efecto de diseño | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
+  <meta property="og:title" content="15.2 Ejemplo: detección de valores atípicos en una encuesta de presupeustos familiares y gastos | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="7.1 Estimación del efecto de diseño | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
+  <meta name="twitter:title" content="15.2 Ejemplo: detección de valores atípicos en una encuesta de presupeustos familiares y gastos | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   
   <meta name="twitter:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="el-efecto-de-diseño.html"/>
-<link rel="next" href="descomposición-del-efecto-de-diseño-en-las-encuestas-de-hogares.html"/>
+<link rel="prev" href="algunos-métodos-de-detección-de-valores-extremos.html"/>
+<link rel="next" href="referencias.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -384,43 +384,514 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="estimación-del-efecto-de-diseño" class="section level2 hasAnchor" number="7.1">
-<h2><span class="header-section-number">7.1</span> Estimación del efecto de diseño<a href="estimación-del-efecto-de-diseño.html#estimación-del-efecto-de-diseño" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>En la expresión de efecto de diseño se debe notar dos hechos importantes, en primer lugar, DEFF depende del diseño muestral <span class="math inline">\(p(s)\)</span>, y en segundo lugar, depende del estimador del parámetro <span class="math inline">\(\theta\)</span>. De esta forma, no es correcto describir al <span class="math inline">\(DEFF\)</span> únicamente como una medidad de eficiencia del diseño muestral, puesto que bajo un mismo diseño, este puede tomar diferentes valores según el parámetro que se quiera estimar.</p>
-<p>Nótese que ninguno de los componentes del efecto de diseño se conoce y por ende deben ser estimados. En particular, un estimador aproximadamente insesgado de la varianza poblacional <span class="math inline">\(S^2_{y_U}\)</span> es la varianza muestral ponderada, la cual está dada por la siguiente expresión:</p>
-<p><span class="math display">\[
-\hat{S}^2_{y_U} = \left(\frac{n}{n-1}\right)
-\frac{\sum_s{ w_k ( y_k - \hat{\theta})^2}}{\sum_s{w_k} -1 }
-\]</span></p>
-<p>De esta forma, en el caso en el que <span class="math inline">\(\theta\)</span> corresponda a un promedio poblacional, una estimación de la varianza <span class="math inline">\({Var}_{MAS}(\hat{\theta})\)</span> bajo muestreo aleatorio simple está dada por la siguiente expresión:</p>
-<p><span class="math display">\[
-\widehat{Var}_{MAS}(\hat{\theta}) = \frac{1}{n} \left(1-\frac{n}{\hat N}\right)  \hat{S}^2_{y_U}
-\]</span></p>
-<p>En donde <span class="math inline">\(\hat N = \sum_s w_k\)</span>. Por lo tanto, la estimación del efecto de diseño DEFF está dada por</p>
-<p><span class="math display">\[
-\widehat{DEFF} = \frac{\widehat{Var}(\hat\theta)}{\widehat{Var}_{MAS}(\hat{\theta})}
-\]</span></p>
-<p>La idea central del efecto de diseño recae en la evaluación del mismo estimador bajo diferentes escenarios de muestreo. Como el estimador que se está estudiando <span class="math inline">\(\hat \theta\)</span> viene ponderado por los factores de expansión de la encuesta, entonces lo más conveniente es utilizar el mismo rasero para evaluar ambas estrategias de muestreo. Es posible encontrar una discusión más profunda sobre el efecto de diseño en <span class="citation">Jack G. Gambino (<a href="#ref-Gambino_2009" role="doc-biblioref">2009, sec. 4</a>.)</span>, <span class="citation">C.-E. Särndal, Swensson, y Wretman (<a href="#ref-Sarndal_Swensson_Wretman_2003" role="doc-biblioref">2003, 188</a>)</span> y <span class="citation">A. Gutiérrez, Zhang, y Montaño (<a href="#ref-Gutierrez_Zhang_Montano_2016" role="doc-biblioref">2016, 101</a>)</span>.</p>
+<div id="ejemplo-detección-de-valores-atípicos-en-una-encuesta-de-presupeustos-familiares-y-gastos" class="section level2 hasAnchor" number="15.2">
+<h2><span class="header-section-number">15.2</span> Ejemplo: detección de valores atípicos en una encuesta de presupeustos familiares y gastos<a href="ejemplo-detección-de-valores-atípicos-en-una-encuesta-de-presupeustos-familiares-y-gastos.html#ejemplo-detección-de-valores-atípicos-en-una-encuesta-de-presupeustos-familiares-y-gastos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>En genral, para cualquier tipo de encuesta, a la hora de detectar valores atípicos podría considerarse la estructura multivariante de los datos (relación con otras variables) en la búsqueda de valores atípicos. Para esto se debería elegir un conjunto de covariables de acuerdo con el juicio de los expertos y la desagregación necesaria. A pesar de que en la base de datos existan registros y valores observados para una observación, es posible que, después de la detección de valores atípicos, toda la información de una unidad sea declarada sospechosa. Por ende, una vez que se ha detectado una unidad con valores atípicos potenciales, es posible decidir que todos sus registros sean eliminados (creando deliberadamente una ausencia de respuesta de unidad) de no comprobarse la fiabilidad de la información. Por consiguiente, si se mantiene la unidad, toda su información se declara como confiable y valdrá la pena analizarla. De lo contrario, el registro se eliminará de los datos de la muestra que afectan la estructura del esquema de ponderación. Luego, la unidad se declarará como una unidad eligibles no respondientes (ENR, ver capitulo 10).</p>
+<p>Después de decidir acerca de los valores atípicos de la unidad, es necesario detectar los valores atípicos de los registros para las variables específicas de la encuesta. Por ejemplo, en una encuesta de presupuestos familiares, las variables de interés serán los rubros asociados a los ingresos y a los gastos del hogar. En este caso, se sugiere que la variable de interés de una categoría particular se transforme utilizando el enfoque de Box-Cox. Esto se hace porque las distribuciones de ingresos y gastos siempre están sesgadas. Una vez transformados, es posible utilizar las medidas anteriormente mencionadas para decidir acerca de la eliminación del registro. Por ejemplo, si dos o tres de los métodos detectan un registro como un posible valor atípico, entonces se verifica la información sobre ese registro. Si la información del elemento es sospechosa, se debe eliminar y utilizar un enfoque de imputación sobre ese registro.</p>
+<p>Siguiendo con el esquema de la encuesta de presupuestos familiares, podría ser conveniente que, a nivel de gasto, la detección de los valores atípicos se realizara, no sobre cada artículo, sino a nivel agregado para cada nivel de la clasificación de consumo (COICOP, <em>Classification of Individual Consumption According to Purpose</em>). Además se deben tener en cuenta que, en este tipo de encuestas, los valores nulos para el gasto o consumo de artículos particulares son frecuentes, ya que no se puede esperar que todos los hogares consuman todos los artículos posibles. Estos valores cero se denominan <em>ceros estructurales</em>. Por ende, es muy pertinente estudiar y decidir si la metodología de detección de valores atípicos tendrá en cuenta los ceros o no. En general, cuando la incidencia de los ceros es baja no debería existir ningún inconveniente en analizar el conjunto de datos incluyendo estos ceros. Por ende, esta decisión debería ser independiente para cada división.</p>
+<p>Para algunos componentes concretos, el número de ceros puede ser bastante alto y los algoritmos de detección de valores atípicos pueden fallar si el número de ceros está por encima de un determinado umbral. Las observaciones podrían incluso convertirse en valores atípicos debido a los ceros cuando se aplican métodos de detección. En este sentido, es necesario contemplar umbrales flexibles para cada división. Por ejemplo, un valor de cero en los gastos de alimentos sería poco realista, pero podría ser cierto para los gastos en ropa de bebé o muebles. Por las anteriores razones, es plausible recomendar la agregación de los componentes del consumo en grandes categorías a nivel de producto/servicio o grupos agregados de productos y servicios.</p>
+<p>Un indicador fiable, no solo para medir la desigualdad en el consumo sino también para realizar un seguimiento de los cambios en el proceso de detección de valores atípicos y la imputación posterior, es el coeficiente de Gini. Por ejemplo, considere la siguiente tabla que muestra la presencia de ceros en cada división COICOP junto con el Gini para algunas de las categorías anteriormente mencionadas. Nótese que la incidencia de ceros es mucho menor en la categoría de vivienda que en las categorías de educación o recreación.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Categoría</th>
+<th align="center">Ceros</th>
+<th align="center">Gini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Alimentos</td>
+<td align="center">27</td>
+<td align="center">36</td>
+</tr>
+<tr class="even">
+<td align="center">Alcohol</td>
+<td align="center">4333</td>
+<td align="center">90</td>
+</tr>
+<tr class="odd">
+<td align="center">Ropa</td>
+<td align="center">2558</td>
+<td align="center">78</td>
+</tr>
+<tr class="even">
+<td align="center">Vivienda</td>
+<td align="center">5</td>
+<td align="center">48</td>
+</tr>
+<tr class="odd">
+<td align="center">Muebles</td>
+<td align="center">85</td>
+<td align="center">53</td>
+</tr>
+<tr class="even">
+<td align="center">Salud</td>
+<td align="center">2746</td>
+<td align="center">78</td>
+</tr>
+<tr class="odd">
+<td align="center">Transporte</td>
+<td align="center">616</td>
+<td align="center">69</td>
+</tr>
+<tr class="even">
+<td align="center">TIC</td>
+<td align="center">551</td>
+<td align="center">62</td>
+</tr>
+<tr class="odd">
+<td align="center">Recreación</td>
+<td align="center">3538</td>
+<td align="center">92</td>
+</tr>
+<tr class="even">
+<td align="center">Educación</td>
+<td align="center">4802</td>
+<td align="center">90</td>
+</tr>
+<tr class="odd">
+<td align="center">Restaurantes</td>
+<td align="center">1421</td>
+<td align="center">65</td>
+</tr>
+<tr class="even">
+<td align="center">Seguros</td>
+<td align="center">4837</td>
+<td align="center">90</td>
+</tr>
+<tr class="odd">
+<td align="center">Cuidado personal</td>
+<td align="center">129</td>
+<td align="center">51</td>
+</tr>
+</tbody>
+</table>
+<p>Esta metodología también se puede aplicar para grupos. La siguiente tabla muestra la presencia de ceros estructurales para algunos artículos de la sección Alimentos. Una vez más, dependiendo del país, sería esperable encontrar una mayor incidencia de ceros en algunos artículos. En este caso particular, nótese que hay una mayor cantidad de ceros en artículos como té o café, que en artículos como cereal, azúcar o leche.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Artículos</th>
+<th align="center">Ceros</th>
+<th align="center">Gini</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Cereales</td>
+<td align="center">87</td>
+<td align="center">37</td>
+</tr>
+<tr class="even">
+<td align="center">Carne</td>
+<td align="center">481</td>
+<td align="center">47</td>
+</tr>
+<tr class="odd">
+<td align="center">Pescado</td>
+<td align="center">305</td>
+<td align="center">56</td>
+</tr>
+<tr class="even">
+<td align="center">Leche</td>
+<td align="center">290</td>
+<td align="center">47</td>
+</tr>
+<tr class="odd">
+<td align="center">Aceites</td>
+<td align="center">482</td>
+<td align="center">51</td>
+</tr>
+<tr class="even">
+<td align="center">Frutas</td>
+<td align="center">981</td>
+<td align="center">67</td>
+</tr>
+<tr class="odd">
+<td align="center">Verduras</td>
+<td align="center">188</td>
+<td align="center">47</td>
+</tr>
+<tr class="even">
+<td align="center">Azucares</td>
+<td align="center">290</td>
+<td align="center">56</td>
+</tr>
+<tr class="odd">
+<td align="center">Comida procesada</td>
+<td align="center">253</td>
+<td align="center">43</td>
+</tr>
+<tr class="even">
+<td align="center">Jugos</td>
+<td align="center">3650</td>
+<td align="center">79</td>
+</tr>
+<tr class="odd">
+<td align="center">Café</td>
+<td align="center">5286</td>
+<td align="center">86</td>
+</tr>
+<tr class="even">
+<td align="center">Té</td>
+<td align="center">4709</td>
+<td align="center">86</td>
+</tr>
+<tr class="odd">
+<td align="center">Cacao</td>
+<td align="center">4421</td>
+<td align="center">78</td>
+</tr>
+<tr class="even">
+<td align="center">Agua</td>
+<td align="center">5287</td>
+<td align="center">86</td>
+</tr>
+<tr class="odd">
+<td align="center">Refresco</td>
+<td align="center">4859</td>
+<td align="center">86</td>
+</tr>
+<tr class="even">
+<td align="center">Otras bebidas</td>
+<td align="center">3353</td>
+<td align="center">79</td>
+</tr>
+</tbody>
+</table>
+<p>Como se resaltó anteriormente, para datos muy sesgados, los métodos para la detección de valores atípicos podrían resultar problemáticos, ya que el intervalo en el que los puntos de datos no se consideran valores atípicos es simétrico alrededor de la mediana. Por ejemplo, la figura <a href="ejemplo-detección-de-valores-atípicos-en-una-encuesta-de-presupeustos-familiares-y-gastos.html#fig:figou2">15.1</a> muestra el comportamiento estructural de algunas divisiones, es notable que todas las distribuciones de gasto y consumo en estos conceptos están extremadamente sesgadas.</p>
+<div class="figure"><span style="display:block;" id="fig:figou2"></span>
+<img src="Pics/ou2.png" alt="Distribución del consumo para algunas categorías del gasto." width="50%" />
+<p class="caption">
+Figura 15.1: Distribución del consumo para algunas categorías del gasto.
+</p>
 </div>
-<h3>Referencias<a href="referencias.html#referencias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-Gambino_2009" class="csl-entry">
-Gambino, Jack G. 2009. <span>«Design Effect Caveats»</span>. <em>The American Statistician</em> 63 (2): 141-46. <a href="https://doi.org/10.1198/tast.2009.0028">https://doi.org/10.1198/tast.2009.0028</a>.
+<p>Para ajustarse a este problema es posible utilizar la transformación de Box-Cox con el fin de obtener una distribución simétrica para los datos antes de determinar los posibles valores atípicos. La figura <a href="ejemplo-detección-de-valores-atípicos-en-una-encuesta-de-presupeustos-familiares-y-gastos.html#fig:figou1">15.2</a> muestra el proceso de iteración de esta metodología en algunas divisiones. La línea vertical en cada gráfica corresponde al mejor valor que podría tomar <span class="math inline">\(\lambda\)</span> para que los datos se ajusta a una distribución normal.</p>
+<div class="figure"><span style="display:block;" id="fig:figou1"></span>
+<img src="Pics/ou1.png" alt="Valores óptimos para las transformaciones de Box-Cox en algunas categorías del gasto." width="50%" />
+<p class="caption">
+Figura 15.2: Valores óptimos para las transformaciones de Box-Cox en algunas categorías del gasto.
+</p>
 </div>
-<div id="ref-Gutierrez_Zhang_Montano_2016" class="csl-entry">
-Gutiérrez, Andrés, Hanwen Zhang, y Cristian Montaño. 2016. <span>«Calculo del tamaño de muestra para la estimación de una varianza en poblaciones finitas con funciones en R»</span>. <em>Comunicaciones en Estadística</em> 9 (1): 109. <a href="https://doi.org/10.15332/s2027-3355.2016.0001.06">https://doi.org/10.15332/s2027-3355.2016.0001.06</a>.
+<p>Luego de haber transformado apropiadamente los datos, es posible utilizar la metodología de Boxplot, uno de los métodos más básicos (aunque muy poderoso), para identificar valores atípicos. Como se mencionó en la sección anterior, la gráfica mostrará el mínimo de la muestra, el primer cuartil, la mediana, el tercer cuartil y el máximo. La caja va del primer al tercer cuartil (que contiene por definición el 50% de los datos más internos), así como la mediana que generalmente está marcada por una línea media. Para la aplicación específica de la detección de valores atípicos dentro de las divisiones COICOP es posible que la constante predeterminada <span class="math inline">\(c\)</span> varíe entre divisiones. Por ejemplo, la siguiente tabla muestra el número de valores atípicos detectados en cada división por este método.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">División</th>
+<th align="center">Valores atípicos</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Alimentos</td>
+<td align="center">222</td>
+</tr>
+<tr class="even">
+<td align="center">Alcohol</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center">Ropa</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center">Vivienda</td>
+<td align="center">87</td>
+</tr>
+<tr class="odd">
+<td align="center">Muebles</td>
+<td align="center">330</td>
+</tr>
+<tr class="even">
+<td align="center">Salud</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center">Transporte</td>
+<td align="center">743</td>
+</tr>
+<tr class="even">
+<td align="center">TIC</td>
+<td align="center">668</td>
+</tr>
+<tr class="odd">
+<td align="center">Recreación</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center">Educación</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center">Restaurantes</td>
+<td align="center">31</td>
+</tr>
+<tr class="even">
+<td align="center">Seguros</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center">Cuidado personal</td>
+<td align="center">400</td>
+</tr>
+</tbody>
+</table>
+<p>Por otro lado, también es posible tener en cuenta la relación entre el gasto en cada división y el ingreso reportado por el hogar en la encuesta. En general, no se puede suponer que esta relación es homogénea entre todos los encuestados, máxime si se tiene en cuenta que la selección de las unidades muestrales se hace en todos los grupos socioeconómicos del país. Sin embargo, sí es posible hacer este supuesto dentro de clases homogéneas, como por ejemplo el cruce entre los quintiles (o deciles) del ingreso y las regiones del país. De esta forma, dentro de cada grupo se supondría que la relación entre el gasto y el ingreso es uniforme. Por ejemplo, en la siguiente tabla se muestra el número de valores atípicos detectados en cada división mediante el método Hidiroglou-Bertholot.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">División</th>
+<th align="center">Valores atípicos</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Alimentos</td>
+<td align="center">74</td>
+</tr>
+<tr class="even">
+<td align="center">Alcohol</td>
+<td align="center">141</td>
+</tr>
+<tr class="odd">
+<td align="center">Ropa</td>
+<td align="center">73</td>
+</tr>
+<tr class="even">
+<td align="center">Vivienda</td>
+<td align="center">53</td>
+</tr>
+<tr class="odd">
+<td align="center">Muebles</td>
+<td align="center">177</td>
+</tr>
+<tr class="even">
+<td align="center">Salud</td>
+<td align="center">71</td>
+</tr>
+<tr class="odd">
+<td align="center">Transporte</td>
+<td align="center">89</td>
+</tr>
+<tr class="even">
+<td align="center">TIC</td>
+<td align="center">128</td>
+</tr>
+<tr class="odd">
+<td align="center">Recreación</td>
+<td align="center">168</td>
+</tr>
+<tr class="even">
+<td align="center">Educación</td>
+<td align="center">117</td>
+</tr>
+<tr class="odd">
+<td align="center">Restaurantes</td>
+<td align="center">48</td>
+</tr>
+<tr class="even">
+<td align="center">Seguros</td>
+<td align="center">100</td>
+</tr>
+<tr class="odd">
+<td align="center">Cuidado personal</td>
+<td align="center">247</td>
+</tr>
+</tbody>
+</table>
+<p>Es necesario tener en cuenta que, como la lógica detrás de estos dos métodos difiere, cada uno identificará un número diferente de valores atípicos. Esto es una ventaja, porque los métodos son complementarios. Por ejemplo, en divisiones como ropa, vivienda, salud, recreación y educación, donde el método Boxplot no encontró ningún valor atípico posible, el método HB sí lo encontró. Es así como, teniendo en cuenta los resultados de estos dos métodos, se puede especificar una regla lógica para asignar una marca a los registros de la base de datos que deban ser revisados por considerarse sospechosos. Por ejemplo, es posible que haya categorías en las que la regla lógica sea una conjunción de los resultados de los métodos, mientras que podría haber otras en las que la regla lógica sea una disyunción entre los resultados.</p>
+<p>Al final, se debe imputar cualquier valor que se considere como un valor atípico. Como se vio en los capítulos anteriores, la imputación puede estar apoyada por un enfoque basado en modelos. Por ejemplo, para imputar el gasto percápita anualizado, es posible utilizar el método de regresión con el vecino más cercano, donde se define un modelo lineal para las unidades encuestadas (sin incluir los valores atípicos). Una vez estimados los coeficientes de regresión, se calcula un valor previsto para esas unidades de valores atípicos y se identifica a un solo donante como el hogar cuyo gasto total en esa División está más cerca de la predicción. En la siguiente tabla se presentan algunos resúmenes de la distribución de los gastos a nivel de división antes de imputar los valores atípicos.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">División</th>
+<th align="center">Mínimo</th>
+<th align="center">Mediana</th>
+<th align="center">Máximo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Alimentos</td>
+<td align="center">0</td>
+<td align="center">164587</td>
+<td align="center">1819370</td>
+</tr>
+<tr class="even">
+<td align="center">Alcohol</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">5475960</td>
+</tr>
+<tr class="odd">
+<td align="center">Ropa</td>
+<td align="center">0</td>
+<td align="center">8180</td>
+<td align="center">3474000</td>
+</tr>
+<tr class="even">
+<td align="center">Vivienda</td>
+<td align="center">0</td>
+<td align="center">89040</td>
+<td align="center">1835500</td>
+</tr>
+<tr class="odd">
+<td align="center">Muebles</td>
+<td align="center">0</td>
+<td align="center">10503</td>
+<td align="center">3871476</td>
+</tr>
+<tr class="even">
+<td align="center">Salud</td>
+<td align="center">0</td>
+<td align="center">2400</td>
+<td align="center">735180</td>
+</tr>
+<tr class="odd">
+<td align="center">Transporte</td>
+<td align="center">0</td>
+<td align="center">24700</td>
+<td align="center">9038783</td>
+</tr>
+<tr class="even">
+<td align="center">TIC</td>
+<td align="center">0</td>
+<td align="center">16125</td>
+<td align="center">1642500</td>
+</tr>
+<tr class="odd">
+<td align="center">Recreación</td>
+<td align="center">0</td>
+<td align="center">860</td>
+<td align="center">6307200</td>
+</tr>
+<tr class="even">
+<td align="center">Educación</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">1800000</td>
+</tr>
+<tr class="odd">
+<td align="center">Restaurante</td>
+<td align="center">0</td>
+<td align="center">22100</td>
+<td align="center">2184000</td>
+</tr>
+<tr class="even">
+<td align="center">Seguro</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">2932400</td>
+</tr>
+<tr class="odd">
+<td align="center">Cuidado personal</td>
+<td align="center">0</td>
+<td align="center">18540</td>
+<td align="center">1223734</td>
+</tr>
+</tbody>
+</table>
+<p>Por último, en la tabla que se muestra a continuación se examinan algunos resúmenes sobre la distribución de los gastos a nivel de división habiendo imputado los valores atípicos de forma diferencial y con independencia ne cada división. Se nota cómo la imputación pasa realmente cambia la perspectiva del consumo mínimo y máximo. Esto significa que la detección de valores atípicos se centró en ambos lados de la distribución del gasto.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">División</th>
+<th align="center">Mínimo</th>
+<th align="center">Mediana</th>
+<th align="center">Máximo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Alimentos</td>
+<td align="center">4560</td>
+<td align="center">166280</td>
+<td align="center">1616504</td>
+</tr>
+<tr class="even">
+<td align="center">Alcohol</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">930400</td>
+</tr>
+<tr class="odd">
+<td align="center">Ropa</td>
+<td align="center">0</td>
+<td align="center">8250</td>
+<td align="center">1446532</td>
+</tr>
+<tr class="even">
+<td align="center">Vivienda</td>
+<td align="center">3000</td>
+<td align="center">89280</td>
+<td align="center">726000</td>
+</tr>
+<tr class="odd">
+<td align="center">Muebles</td>
+<td align="center">243</td>
+<td align="center">10730</td>
+<td align="center">279382</td>
+</tr>
+<tr class="even">
+<td align="center">Salud</td>
+<td align="center">0</td>
+<td align="center">2400</td>
+<td align="center">654000</td>
+</tr>
+<tr class="odd">
+<td align="center">Transporte</td>
+<td align="center">60</td>
+<td align="center">29900</td>
+<td align="center">365000</td>
+</tr>
+<tr class="even">
+<td align="center">TIC</td>
+<td align="center">0</td>
+<td align="center">16627</td>
+<td align="center">591000</td>
+</tr>
+<tr class="odd">
+<td align="center">Recreación</td>
+<td align="center">0</td>
+<td align="center">867</td>
+<td align="center">1054100</td>
+</tr>
+<tr class="even">
+<td align="center">Educación</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">494000</td>
+</tr>
+<tr class="odd">
+<td align="center">Restaurantes</td>
+<td align="center">0</td>
+<td align="center">22133</td>
+<td align="center">520000</td>
+</tr>
+<tr class="even">
+<td align="center">Seguro</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">723000</td>
+</tr>
+<tr class="odd">
+<td align="center">Cuidado personal</td>
+<td align="center">400</td>
+<td align="center">18855</td>
+<td align="center">658960</td>
+</tr>
+</tbody>
+</table>
+
 </div>
-<div id="ref-Sarndal_Swensson_Wretman_2003" class="csl-entry">
-Särndal, Carl-Erik, Bengt Swensson, y Jan Wretman. 2003. <em>Model Assisted Survey Sampling</em>. Springer Science; Business Media.
-</div>
-</div>
+<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="el-efecto-de-diseño.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="descomposición-del-efecto-de-diseño-en-las-encuestas-de-hogares.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="algunos-métodos-de-detección-de-valores-extremos.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="referencias.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -451,7 +922,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/psirusteam/HHS-Handbook/07Deff.Rmd",
+"link": "https://github.com/psirusteam/HHS-Handbook/15Outliers.Rmd",
 "text": "Edit"
 },
 "history": {

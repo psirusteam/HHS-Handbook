@@ -20,10 +20,10 @@ En condiciones ideales el marco de muestreo debería coincidir plenamente con la
 
 Para hacerle frente a las imperfeccciones del marco, @Valliant_Dever_2017 recomienda el uso de los códigos de disposición estandarizados por la *American Association for Public Opinion Research* (AAPOR) recomienda tratar la ausencia de respuesta de manera diferenciada y clasificar a cada unidad en la muestra en algunas de las siguientes categorías:
 
-1. ER (*unidades elegibles que fueron respondientes efectivos*): casos elegibles para los cuales se ha recolectado una cantidad suficiente de información.
-2. ENR (*unidades eligibles no respondientes*): casos elegibles para los cuales no se recolectó ningún dato o la información fue parcialmente recolectada. 
-3. IN (*unidades no elegibles*): casos de miembros no elegibles que no hacen parte de la población de interés. 
-4. UNK (*unidades con elegibilidad desconocida*): casos en donde no se puede conocer si la unidad es elegible o no.
+1. ER (*elegible respondents*), unidades elegibles que fueron respondientes efectivos que denotan casos elegibles para los cuales se ha recolectado una cantidad suficiente de información.
+2. ENR (*elegible nonrespondents*), unidades eligibles no respondientes que denotan los casos elegibles para los cuales no se recolectó ningún dato o la información fue parcialmente recolectada. 
+3. IN (*ineligibles*), unidades no elegibles que conforman los casos de miembros no elegibles que no hacen parte de la población de interés. 
+4. UNK (*unknown elegibility*), unidades con elegibilidad desconocida que denotan los casos en donde no se puede conocer si la unidad es elegible o no.
 
 Para construir los factores de expansión de una encuesta se recomienda seguir en este orden los siguientes procesos:
 

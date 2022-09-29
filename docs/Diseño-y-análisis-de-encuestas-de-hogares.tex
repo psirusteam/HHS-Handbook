@@ -3740,13 +3740,13 @@ Para hacerle frente a las imperfeccciones del marco, \citet{Valliant_Dever_2017}
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  ER (\emph{unidades elegibles que fueron respondientes efectivos}): casos elegibles para los cuales se ha recolectado una cantidad suficiente de información.
+  ER (\emph{elegible respondents}), unidades elegibles que fueron respondientes efectivos que denotan casos elegibles para los cuales se ha recolectado una cantidad suficiente de información.
 \item
-  ENR (\emph{unidades eligibles no respondientes}): casos elegibles para los cuales no se recolectó ningún dato o la información fue parcialmente recolectada.
+  ENR (\emph{elegible nonrespondents}), unidades eligibles no respondientes que denotan los casos elegibles para los cuales no se recolectó ningún dato o la información fue parcialmente recolectada.
 \item
-  IN (\emph{unidades no elegibles}): casos de miembros no elegibles que no hacen parte de la población de interés.
+  IN (\emph{ineligibles}), unidades no elegibles que conforman los casos de miembros no elegibles que no hacen parte de la población de interés.
 \item
-  UNK (\emph{unidades con elegibilidad desconocida}): casos en donde no se puede conocer si la unidad es elegible o no.
+  UNK (\emph{unknown elegibility}), unidades con elegibilidad desconocida que denotan los casos en donde no se puede conocer si la unidad es elegible o no.
 \end{enumerate}
 
 Para construir los factores de expansión de una encuesta se recomienda seguir en este orden los siguientes procesos:
@@ -6133,6 +6133,783 @@ Por último, nótese que si no se considera el mecanismo de ausencia de respuest
 \]
 
 Donde \(d_{1k}\) se refiere a los pesos muestrales no ajustados de la encuesta telefónica. Bajo este escenario, el número estimado de empleados en el período COVID es \(\hat{t}_y^{exp}=\sum_{k\in s_1}d_{1k}y_{1k} =\) 30282.
+
+\hypertarget{ausencia-de-respuesta-por-registro}{%
+\chapter{Ausencia de respuesta por registro}\label{ausencia-de-respuesta-por-registro}}
+
+En el diseño y puesta en marcha de una encuesta puede ocurrir cierto tipo de situaciones que pueden sesgar las estimaciones finales. Este tipo de sesgos puede ocurrir antes, durante y después de la recolección de los datos. Es tarea del estadístico advertir ante todas las posibles instancias de los problemas que causan los sesgos y procurar que, en todas las etapas de la encuesta, se minimice el error humano y el error estadístico para que al final los resultados del estudio sean tan confiables como sea posible.
+
+Como se mencionó en los capítulos anteriores, el enfoque recomendado para hacer frente a la ausencia de respuesta es una combinación de los procedimientos de imputación y ponderación y se conoce como el \textbf{enfoque combinado}, el cual imputa los valores de las celdas vacías para los individuos que tienen al menos un registro faltante en la base de datos (exceptuando a aquellos que tienen todos o la mayoría de registros faltantes). En resumen, los individuos que no contestaron ninguna pregunta del cuestionario son eliminados del análisis, mientras que los restantes serán considerado en el análisis con sus respuestas originales o con la imputación de las celdas vacías.
+
+En este capítulo se abordara el enfoque de la imputación utilizada para tratar la ausencia de respuesta por registro, y los posibles métodos que pueden utilizarse para identificar valores atípicos en la base de datos que, por consiguiente, pueden también ser imputados. Nótese que el verbo ``imputar'' viene del latín \emph{impute}, cuya traducción al español puede ser calcular, estimar o atribuir. En el siglo XIX se utilizó el término \textbf{ingreso imputado} para denotar el ingreso derivado de los bienes raíces. Según \citet{VanBuuren}, la connotación de la imputación, en el sentido de completar valores en una base de datos, aparece por primera vez en 1957 en el \emph{U.S. Census Bureau}. Es así como el tratamiento de datos faltantes consiste en \textbf{estimar} qué valores son \textbf{plausibles} para los datos faltantes, dados los demás valores en la base de datos.
+
+\hypertarget{modelos-para-la-imputaciuxf3n}{%
+\section{Modelos para la imputación}\label{modelos-para-la-imputaciuxf3n}}
+
+El término imputación se refiere al conjunto de técnicas por las cuales los valores faltantes en una o más variables se reemplazan con información plausible con el objetivo de lograr valores sustitutivos en una base de datos que pueda ser analizada posteriormente. Este proceso introduce un nuevo elemento de error, conocido como el error de imputación, debido a la incertidumbre que introducen los valores no observados. Cuando se tiene ausencia de respuesta por registro, las técnicas de imputación se prefieren antes que la utilización de los esquemas de ponderación en la muestra. De esta manera, es posible crear un conjunto completo y rectangular de datos mediante la imputación de los valores faltantes, puesto que después de realizar la imputación, se espera que todos los valores del cuestionario de un individuo contengan información y no exista ningún vacío.
+
+Para lograr la sustitución de los valores faltantes con información plausible, es posible encontrar donantes apropiados, en la misma muestra que se ha conseguido, definidos como respondientes que comparten características demográficas similares con el individuo que no respondió. Por lo tanto, la información del respondiente donante (o una función de estos valores) se copiará en las celdas vacías del no respondiente. Para encontrar los donantes es posible realizar un análisis estadístico con base en métodos de clasificación. Dentro de los métodos de imputación más usados en encuestas de hogares se encuentran los siguientes:
+
+\begin{itemize}
+\tightlist
+\item
+  Imputación promedio (\emph{mean value imputation}) que utiliza la media de la variable (dentro de las UPM o en un subconjunto apropiado de datos). En este caso, si se encuentra un valor faltante, inmediatamente será reemplazado por el promedio de los datos de los respondientes en un subgrupo apropiado.
+\item
+  Imputación por paquete caliente (\emph{hot deck imputation}) que reemplaza los valores faltantes por los valores de un donante que es un respondiente de la encuesta en el mismo levantamiento. En este caso, el valor faltante es reemplazado por la información del individuo escogido de antemano.
+\item
+  Imputación por paquete frío (\emph{cold deck imputation}) que reemplaza los valores faltantes por los valores de un donante que es un respondiente de la misma encuesta, pero en un levantamiento anterior. En este caso, el valor faltante es reemplazado por la información auxiliar de un individuo escogido de encuestas anteriores.
+\item
+  Imputación estadística basada en modelos estadísticos en donde la variable dependiente es aquella que se quiere imputar y las covariables se derivan del restante conjunto de datos. En este caso, el valor faltante es reemplazado por la predicción (o una función) del modelo ajustado con la información en la muestra.
+\end{itemize}
+
+Como se mencionó anteriormente, cuando se trata de imputación, se pueden definir dos tipos de métodos. La imputación de la unidad completa, que se produce cuando toda la información de un individuo es imputada, y la imputación de registros, que se da cuando los valores faltantes son imputados a nivel de los individuos. Observe que la imputación de la unidad se utiliza para hacerle frente a la ausencia de respuesta de la unidad, cuando no hay datos para el individuo, mientras que la imputación del registro se utiliza para la no respuesta del registro, cuando no todos los valores se proporcionan para un individuo, pero algunos sí.
+
+La imputación se realiza a menudo en grupos no traslapados \(g= 1, \ldots, G\), donde la unión de \(s_1, \ldots, s_G\) equivale a la muestra completa \(s\). Se pueden utilizar diferentes métodos para cada grupo, pero dentro de cada grupo se debe utilizar el mismo método de imputación. Esto se debe a que pueden existir diferentes covariables disponibles para cada grupo. Cuando la disponibilidad de las variables auxiliares (covariables) es limitada, es posible considerar una jerarquía de métodos de imputación. De esta forma, para los grupos con más información disponible, es posible utilizar métodos más sofisticados de imputación; mientras que para grupos con menos información auxiliar disponible, se deben usar métodos de imputación más simples. \citet{Sarndal_Lundstrom_2006} presentan una discusión acerca del uso de esta técnica en combinación con los estimadores utilizados en las encuestas de hogares que proveen estadísticas oficiales. A continuación, se presenta una compilación no exhaustiva de algunos de los principales métodos de imputación que se utilizan en las encuestas de hogares.
+
+\hypertarget{imputaciuxf3n-por-regresiuxf3n}{%
+\subsection{Imputación por regresión}\label{imputaciuxf3n-por-regresiuxf3n}}
+
+En este método determinístico, el valor imputado para el valor faltante \(y_k\) se calcula utilizando una regresión lineal.
+
+\[
+\hat{y}_k = \mathbf{x}_k \hat{\boldsymbol{\beta}}_i
+\]
+
+Donde,
+
+\[
+\hat{\boldsymbol{\beta}}_i = \left(\sum_{r_i} a_k\mathbf{x}_k\mathbf{x}_k'\right)^{-1}
+\sum_{r_i} a_k\mathbf{x}_ky_k
+\]
+
+El vector de coeficientes de regresión \(\hat{\boldsymbol{\beta}}_i\) se produce a partir de un ajuste de regresión múltiple utilizando los datos \((y_k, \mathbf{x}_k)\) disponibles para cada unidad \(k \in r_i\) con pesos \(a_k\) especificados adecuadamente. Nótese que, en general, las predicciones del modelo de regresión no necesariamente serán valores observados en algún otro individuo de la muestra. Por lo tanto, este método inducirá valores imputados que no han sido observados en la encuesta. Además, se deberán generar tantos modelos de regresión como variables con valores faltantes existan.
+
+\hypertarget{imputaciuxf3n-de-razuxf3n}{%
+\subsection{Imputación de razón}\label{imputaciuxf3n-de-razuxf3n}}
+
+Un caso especial del anterior método se da cuando solo se tiene acceso a una sola covariable (positiva) \(\mathbf{x}_k = x_k\), y definiendo \(a_k = \frac{1}{x_k}\). En este caso, la estimación del coeficiente de regresión será
+
+\[
+\hat{{\beta}}_i = \frac{\sum_{r_i}y_k}{\sum_{r_i}x_k} = R_i
+\]
+
+Y por tanto, la imputación para el valor faltante se convierte en
+
+\[
+\hat{y}_k = x_k \hat{\beta}_i = x_k \frac{\sum_{r_i}y_k}{\sum_{r_i}x_k} = x_k R_i
+\]
+
+Este método se utiliza a menudo cuando la misma variable se mide en dos momentos diferentes en la misma encuesta. Por ejemplo, si \(y\) indica la variable de estudio en el momento actual, \(x\) indica la variable en el punto de tiempo anterior, entonces el coeficiente utilizado para la imputación es la relación entre los dos puntos en el tiempo.
+
+\hypertarget{imputaciuxf3n-de-promedio}{%
+\subsection{Imputación de promedio}\label{imputaciuxf3n-de-promedio}}
+
+El caso más sencillo de la imputación por regresión se da cuando \(a_k = x_k = 1\) para todo \(k \in r_i\). En este escenario, el valor imputado se convierte en
+
+\[
+\hat{y}_k  = \frac{\sum_{r_i}y_k}{\sum_{r_i}1}= \bar{y}_{r_i}
+\]
+
+Por lo tanto, todos los valores faltantes recibirán el mismo valor imputado, que es justamente el promedio de la variable en el conjunto de respondientes. Nótese que no se requiere de ninguna información adicional en este método.
+
+\hypertarget{el-vecino-muxe1s-cercano}{%
+\subsection{El vecino más cercano}\label{el-vecino-muxe1s-cercano}}
+
+Si asumimos que valores similares de \(x\) producirán valores similares de \(y\), podemos ``pedir prestado'' un valor de \(y\) para imputar el valor faltante de un ``vecino'' con valores similares en \(x\). En este caso, el valor imputado para la unidad \(k\) está dado por
+
+\[
+\hat{y}_k = y_{l(k)}
+\]
+
+Dónde \(l(k)\) es el ``elemento donante'', determinado al minimizar una ecuación de distancia. En el caso más simple, para una sola covariable de imputación \(x_k\), la distancia entre los posibles donantes \(l\) a la unidad \(k\) es:
+
+\[
+D_{lk} = |x_k - x_l|
+\]
+
+El donante \(l\) del elemento \(k\) es aquel individuo con la menor distancia \(D_{lk}\) entre todos los posibles elementos \(l\in r_i\). Para el caso en donde se contemple más de una covariable de imputación, es posible considerar la siguiente distancia
+
+\[
+D_{lk} = \left( \sum_{j=1}^J h_j (x_{jk} - x_{jl})^2 \right)
+\]
+
+En donde \(h_j\) se utiliza para ponderar adecuadamente cada una de las \(J\) covariables de la matriz de imputación.
+
+\hypertarget{imputaciuxf3n-por-paquete-caliente-hot-deck}{%
+\subsection{Imputación por paquete caliente (Hot-Deck)}\label{imputaciuxf3n-por-paquete-caliente-hot-deck}}
+
+La imputación por regresión y el vecino más cercano son métodos que asumen una fuerte relación entre la variable de interés \(y\) y las covariables \(\mathbf{x}\). Sin embargo, en algunas aplicaciones esta relación no se puede establecer fácilmente, y no es plausible validar los supuestos de modelación que otros métodos requieren. Por lo tanto, en este tipo de técnica, el valor imputado para el individuo \(k\) está dado por:
+
+\[
+\hat{y}_k = y_{l(k)}
+\]
+
+Donde el valor imputado \(y_{l(k)}\) es proporcionado por un donante seleccionado aleatoriamente del conjunto de datos de la variable de interés. Este método no se recomienda cuando existen mejores opciones, ya que no se cuenta con información auxiliar para determinar un buen sustituto.
+
+\hypertarget{imputaciuxf3n-muxfaltiple}{%
+\subsection{Imputación múltiple}\label{imputaciuxf3n-muxfaltiple}}
+
+Cuando existe información auxiliar que permita relacionar las covariables con la variable de interés, es posible establecer mejores modelos que no solo mantienen el insesgamiento de la inferencia, sino que estiman con bastante precisión el error de muestreo. Con respecto a esta última categoría de imputación, es posible completar el conjunto de datos utilizando información auxiliar de los respondientes en la encuesta (o encuestas anteriores, si se trata de un diseño rotativo) y la información disponible a nivel de la población para predecir los valores faltantes usando un modelo de regresión. Una de las técnicas más robustas es la imputación múltiple que consiste en formular un modelo probabilístico entre la variable de interés y las covariables disponibles en la encuesta \citep{Rubin_1987}. Suponga que este modelo es de la forma
+
+\[
+y_k = f(\mathbf{x_k},\boldsymbol{\beta}) + \varepsilon_k, \ \ \ \ \ \ k\in r_i
+\]
+
+En donde \(\varepsilon_k\) es un término de error aleatorio. Una vez formulado el modelo, y debido a la naturaleza estocástica de \(\varepsilon_k\), es posible generar \(M>1\) realizaciones de la variable de interés para los registros faltantes; esto se logra de manera muy sencilla, simulando \(M\) valores del término de error. De esta forma, se generan \(M\) conjuntos de datos completos. Para cada conjunto de datos, se generarán \(M\) estimaciones de interés que luego se promedian para obtener una estimación puntual.
+
+\hypertarget{consideraciones-sobre-la-imputaciuxf3n-muxfaltiple}{%
+\section{Consideraciones sobre la imputación múltiple}\label{consideraciones-sobre-la-imputaciuxf3n-muxfaltiple}}
+
+Antes de escoger un método particular, es pertinente observar qué efectos conlleva esta escogencia en las propiedades estadísticas de los estimadores en las encuestas de hogares. En cuanto a la imputación múltiple, las propiedades estadísticas de los estimadores deben ser modificadas acordemente. Subestimar la variación de las estimaciones puede ser un error muy grave, puesto que afecta la cobertura nominal de los intervalos de confianza y a su vez influye en las pruebas de hipótesis y en el cálculo de los valores \(p\).
+
+Por ejemplo, suponga que existe una muestra aleatoria \(s\) compuesta por un conjunto de \(n\) datos que relacionan dos variables \(X\), \(Y\), a través del siguiente modelo de regresión simple:
+
+\[
+y_k = \beta x_k + \varepsilon_k
+\]
+
+En donde los errores tienen distribución normal con \(E(\varepsilon_k) = 0\) y \(Var(\varepsilon_k) = \sigma ^2\) para todo \(k\in s\). Bajo esta perspectiva, suponga que la variable dependiente de interés sólo pudo ser observada para un conjunto de individuos de tamaño \(n_1\), mientras que para los \(n_0\) individuos restantes (es decir, \(n_1 + n_0 = n\)), no existen datos para la variable de interés; además se asume que sí fue posible observar los valores de la covariable \(X\) para todos los individuos en la muestra.
+
+El valor agregado de la imputación múltiple \citep{Rubin_1987} realmente está en la estimación de los errores estándar. No tener en cuenta la naturaleza estocástica de los valores imputados arroja estimaciones de la varianza mucho menores. La idea consiste en generar \(M > 1\) conjuntos de valores para los registros faltantes. Al final, el valor \emph{imputado} corresponderá al promedio de esos \(M\) valores. Por tanto el modelo final de imputación (para los valores faltantes) toma la siguiente forma:
+
+\[\dot{y}_i = \dot{\beta} x_{i_{(missing)}}+ \dot{\varepsilon_i}\]
+
+Para este caso, se consideran dos maneras de realizar la imputación; la primera basada en la esperanza del modelo (sin imputación múltiple) y la segunda basada en la adición del término de error del modelo (imputación múltiple):
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Ingenua}: en este escenario, el valor imputado para el registro faltante toma la siguiente forma:
+  \[
+  \dot{y}_i = \hat\beta x_{i_{(missing)}}
+  \]
+  Esta clase de imputación carece de aleatoriedad y por tanto, la varianza de \(\beta\) será subestimada.
+\item
+  \textbf{Múltiple}: en este caso, se tiene en cuenta el término de error en la generación de los valores imputados, tales que
+  \[
+  \dot{y}_i = \dot{\beta} x_{i_{(missing)}}+ \dot{\varepsilon_i}
+  \]
+\end{itemize}
+
+Es posible realizar la imputación múltiple de forma frecuentista o bayesiana. Por ejemplo, es posible seleccionar \(M\) muestras \emph{bootstrap}, y para cada una se estiman los parámetros \(\beta\) y \(\sigma\) para generar \(\dot{y}_i\). Al final se promedian los \(M\) valores y se imputa el valor faltante. Por otro lado, teniendo en cuenta el acercamiento bayesiano, se definen las distribuciones posteriores de \(\beta\) y \(\sigma\) para generar \(M\) valores de estos parámetros y por tanto \(M\) valores de \(\dot{y}_i\). De igual manera, al final se promedian los \(M\) valores y se imputa el valor faltante.
+
+Por ejemplo, si el interés es la estimación de un parámetro \(\beta\), entonces la esperanza estimada al utilizar la metodología de imputación múltiple está dada por:
+
+\[
+E(\hat{\beta} | Y_{obs}) = E(E(\hat{\beta} | Y_{obs}, Y_{mis}) | Y_{obs})
+\]
+
+Esta expresión es estimada por el promedio de las \(M\) estimaciones puntuales de \(\hat{\beta}\) sobre las \(M\) imputaciones, dado por:
+
+\[
+\bar{\hat{\beta}} = \frac{1}{M} \sum_{m = 1} ^ M \hat{\beta}_m
+\]
+
+Entre tanto, la varianza estimada al utilizar la metodología de imputación múltiple está dada por la siguiente expresión:
+
+\[
+V(\hat{\beta} | Y_{obs}) = E(V(\hat{\beta} | Y_{obs}, Y_{mis}) | Y_{obs}) +
+V(E(\hat{\beta} | Y_{obs}, Y_{mis}) | Y_{obs}) 
+\]
+
+La primera parte de la anterior expresión se estima como el promedio de las varianzas muestrales de \(\hat{\beta}\) sobre las \(M\) imputaciones, dado por:
+
+\[
+\bar{U} = \frac{1}{M} \sum_{m = 1} ^ M Var(\hat{\beta})
+\]
+
+El segundo término se estima como la varianza muestral de las \(M\) estimaciones puntuales de \(\hat{\beta}\) sobre las \(M\) imputaciones, dada por:
+\[
+B = \frac{1}{M-1} \sum_{m = 1} ^ M (\hat{\beta}_m - \bar{\hat{\beta}})^2
+\]
+
+Además, es necesario tener en cuenta un factor de corrección (puesto que \(M\) es finito). Por tanto, la estimación del segundo término viene dada por la siguiente expresión:
+
+\[
+\left(1 + \frac{1}{M}\right) B
+\]
+
+Por tanto, la varianza estimada es igual a:
+
+\[
+\hat{V}(\hat{\beta} | Y_{obs}) = \bar{U} + \left(1 + \frac{1}{M}\right) B
+\]
+
+Por ejemplo, si se quiere realizar mediciones de pobreza utilizando la imputación múltiple es necesario primero establecer un modelo sobre los ingresos \(y_k\) y luego generar \(Q\) posibles valores \(y_k^q \ (q=1, \ldots, Q)\) para cada individuo que no respondió. Luego, utilizando los \(Q\) conjuntos de datos completos, es necesario estimar la siguientes cantidades
+
+\[
+\hat{F}_{\alpha}^{q}=\frac{1}{N}\sum_{k\in s} w_k 
+\left(\frac{l-y_k}{l}\right)^{\alpha}I(y_k<l) \ \ \ \ \ \ \ \ \ 
+q= 1,\ldots, Q.
+\]
+
+El estimador final basado en la técnica de imputación múltiple será el promedio simple de las anteriores estimaciones, dado por
+
+\[
+\tilde{F}_{\alpha}=\frac{1}{Q}\sum_{q=1}^Q \hat{F}_{\alpha}^{q}
+\]
+
+La varianza de esta metodología se puede dividir en dos componentes, el primero correspondiente a la variación dentro de cada conjunto de datos creado, y el segundo correspondiente a la variación entre cada estimación resultante. Por lo tanto, la varianza asociada a \(\tilde{F}_{\alpha}\) es
+
+\[
+\hat{V}(\tilde{F}_{\alpha})
+= \frac{1}{Q}\sum_{q=1}^Q \hat{V}(\hat{F}_{\alpha}^{q})
++ \left(1+\frac{1}{Q}\right)\frac{1}{Q-1}\sum_{q=1}^Q (\hat{F}_{\alpha}^{q}-\tilde{F}_{\alpha})^2
+\]
+
+Una vez que se tienen los conjuntos de datos completos, es posible estimar \(\hat{V}(\hat{F}_{\alpha}^{q})\) utilizando las técnicas del último conglomerado en conjunción con el Jackkinfe. La característica principal del proceso imputación es utilizar la información auxiliar para aproximar con precisión los valores faltantes. De esta forma, las estimaciones poblacionales de los parámetros de interés tendrán sesgo nulo o despreciable y la confiabilidad de la estrategia de muestreo se mantendrá como se planeó en una primera instancia. L siguiente simulación ejemplifica las ventajas de la imputación múltiple.
+
+\hypertarget{simulaciuxf3n-empuxedrica}{%
+\subsection{Simulación empírica}\label{simulaciuxf3n-empuxedrica}}
+
+Para ejemplificar los anteriores escenarios, en esta sección se muestran los resultados empíricos de una simulación que asumió un conjunto de \(n = 100\) datos con una pendiente \(\beta = 100\) y con una dispersión de \(\sigma = 2\). A su vez, el conjunto de datos tendrá \(n_0 = 40\) valores faltantes en la variable respuesta. A continuación se muestran las primeras diez filas de esta base de datos simulados. Nótese que las dos primeras columnas corresponden a los valores verdaderos de la covariable y la variable de interés, respectivamente. La tercera columna identifica cuáles de estos valores son faltantes y la cuarta columna representaría la información disponible en la base de datos de la muestra \(s\).
+
+\begin{longtable}[]{@{}cccc@{}}
+\toprule()
+x & y & faltantes & y (no imputado) \\
+\midrule()
+\endhead
+11 & 991 & Si & NA \\
+12 & 1282 & Si & NA \\
+12 & 1164 & No & 1164 \\
+12 & 1217 & No & 1217 \\
+13 & 1325 & No & 1325 \\
+11 & 1086 & No & 1086 \\
+12 & 1210 & Si & NA \\
+13 & 1272 & Si & NA \\
+15 & 1459 & Si & NA \\
+11 & 1182 & No & 1182 \\
+\bottomrule()
+\end{longtable}
+
+Con el 40\% de valores faltantes, es necesario realizar una imputación para obtener registros completos en la base de datos. Para este ejemplo, la figura \ref{fig:figim1} relaciona las variables con (izquierda) y sin (derecha) valores faltantes se presentan a continuación.
+
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{Pics/im1} \caption{Relación de la variable de interés para los datos completos (izquierda) y con ausencia de valores (derecha).}\label{fig:figim1}
+\end{figure}
+
+Al aplicar una imputación ingenua, por ejemplo basada en un modelo de regresión simple, se obtendría un conjunto de datos completo, ejemplificado (solo las primeras diez filas de la base) en la siguiente tabla:
+
+\begin{longtable}[]{@{}cccc@{}}
+\toprule()
+x & y (original) & faltantes & y (imputado) \\
+\midrule()
+\endhead
+11 & 991 & Si & 1047 \\
+12 & 1282 & Si & 1221 \\
+12 & 1164 & No & 1164 \\
+12 & 1217 & No & 1217 \\
+13 & 1325 & No & 1325 \\
+11 & 1086 & No & 1086 \\
+12 & 1210 & Si & 1221 \\
+13 & 1272 & Si & 1290 \\
+15 & 1459 & Si & 1485 \\
+11 & 1182 & No & 1182 \\
+\bottomrule()
+\end{longtable}
+
+En general, usar un enfoque simple no afecta la estimación puntual del parámetro de interés, sino la estimación del error estándar, puesto que la variación natural de los datos se subestima dramáticamente. Por ejemplo, la figura \ref{fig:figim2} muestra que con la imputación simple, \emph{todos} los valores faltantes imputados están sobre la línea de regresión.
+
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{Pics/im2} \caption{Relación de la variable de interés con la covariable auxiliar para el enfoque de imputación ingenua.}\label{fig:figim2}
+\end{figure}
+
+Si se considera la imputación múltiple con el enfoque \emph{bootstrap}, también se obtedrá un conjunto de datos aumentado por cada una de las \(M\) realizaciones que se ejecuten. Por ejemplo, a continuación se ilustra el conjunto de datos obtenido con \(M=3\) realizaciones. Nótese que los valores de la variable de interés cambian en cada realización; estas realizaciones se conocen en la literatura como \emph{valores plausibles}.
+
+\begin{longtable}[]{@{}
+  >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.0667}}
+  >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1867}}
+  >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1467}}
+  >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2000}}
+  >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2000}}
+  >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\centering
+x
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+y (original)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+faltantes
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+y1 (imputado)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+y2 (imputado)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+y3 (imputado)
+\end{minipage} \\
+\midrule()
+\endhead
+11 & 991 & Si & 1047 & 950 & 1040 \\
+12 & 1282 & Si & 1221 & 1254 & 1198 \\
+12 & 1164 & No & 1164 & 1164 & 1164 \\
+12 & 1217 & No & 1217 & 1217 & 1217 \\
+13 & 1325 & No & 1325 & 1325 & 1325 \\
+11 & 1086 & No & 1086 & 1086 & 1086 \\
+12 & 1210 & Si & 1252 & 1199 & 1198 \\
+13 & 1272 & Si & 1304 & 1302 & 1292 \\
+15 & 1459 & Si & 1485 & 1493 & 1478 \\
+11 & 1182 & No & 1182 & 1182 & 1182 \\
+\bottomrule()
+\end{longtable}
+
+Existe una buena dispersión en los valores imputados y la gráfica \ref{fig:figim3} muestra cómo este enfoque es mucho más realista al considerar la variación natural del fenómeno de interés en los valores imputados.
+
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{Pics/im3} \caption{Relación de la variable de interés con la covariable auxiliar para el enfoque de imputación múltiple Bootstrap}\label{fig:figim3}
+\end{figure}
+
+Por otro lado, bajo distribuciones previas no informativas, es bien sabido que la distribución posterior de \(\sigma^2\) es:
+
+\[
+\sigma^2| y, x  \sim \frac{\sum_{i = 1}^{n_1} (y_i - \hat{\beta} x_i)^2}{\chi ^2_{n_1-1}}
+\]
+
+con \(\hat{\beta} = \frac{\sum_{i = 1}^{n_1} x_i y_i}{\sum_{i = 1}^{n_1} x_i^2}\). Asimismo, la distribución posterior de \(\beta\) es:
+
+\[
+\beta | \sigma^2, y, x \sim Normal \left(\hat{\beta}, \frac{\sigma^2}{\sum_{i = 1}^{n_1} x_i^2} \right)
+\]
+
+Asumiendo el anterior enfoque bayesiano de imputación múltiple, se llega a resultados similares. En ambos casos existe una buena dispersión en los valores imputados, respetando la distribución natural de la característica de interés. La siguiente gráfica así lo demuestra.
+
+En resumen, a partir de esta simulación de Monte Carlo, se concluye rápidamente que imputar de manera determinista puede conllevar a la subestimación de la dispersión de la variable de interés. La siguiente tabla muestra que los tres métodos de imputación arrojaron estimaciones puntuales insesgadas. Sin embargo, el error estándar de la estimación simple es gravemente subestimado. De esta forma, la amplitud de los intervalos de confianza al 95\% inducidos por la estimación simple es inferior al de los otros dos métodos, causando que la cobertura del método simple sea deficiente, pues su nivel nominal en realidad no es del 95\%, sino del 83\%.
+
+\begin{longtable}[]{@{}cccc@{}}
+\toprule()
+Propiedades & Ingenuo & Bootstrap & Bayesiano \\
+\midrule()
+\endhead
+Esperanza & 100.00 & 100.01 & 100.01 \\
+Error estándar & 0.24 & 0.41 & 0.42 \\
+Amplitud & 0.96 & 1.60 & 1.66 \\
+Cobertura & 0.83 & 0.97 & 0.95 \\
+\bottomrule()
+\end{longtable}
+
+\hypertarget{ejemplo-de-imputaciuxf3n-en-una-encuesta-de-ingresos-y-gastos}{%
+\section{Ejemplo de imputación en una encuesta de ingresos y gastos}\label{ejemplo-de-imputaciuxf3n-en-una-encuesta-de-ingresos-y-gastos}}
+
+Una vez que se ha discutido acerca de los propósitos de la imputación en una encuesta de hogares, se debe escoger un método (o métodos) de imputación y una vez establecido el mecanismo de imputación, generar el conjunto de datos rectangular y completo. En esta sección analizaremos, a la luz de las particularidades de una encuesta de hogares de ingresos y gastos, los pasos que se deben surtir para completar un proceso de imputación. Por sus características, este tipo de encuestas presenta tasas elevadas de ausencia de respuesta de registro, aunque también de individuo.
+
+En general, el levantamiento común de este tipo de encuestas se centra en un trabajo de campo masivo que visita al hogar en varias ocasiones, pidiéndole al respondiente que diligencie sendos cuestionarios, y registre toda la información asociada al gasto y a los ingresos del hogar, durante un periodo de al menos dos semanas. Por supuesto, para que esto pueda realizarse, es necesario contar con la colaboración activa de todos los miembros del hogar. En el mejor de los casos, el encuestador habrá visitado varias veces el domicilio del hogar en el periodo de observación y tendrá un formulario totalmente diligenciado. Sin embargo, en muchas otras ocasiones, a pesar del seguimiento exhaustivo del encuestado, no se obtendrá el gasto de la totalidad de las categorías de la encuesta, sino que se obtendrá información parcial que se transformará en celdas vacías por la ausencia de respuesta. En el peor de los casos se obtendrán cuestionarios diligenciados en porcentaje tan bajo, que al final serán declarados como faltantes, lo cual se transforma en ausencia de respuesta de ese hogar.
+
+El siguiente ejemplo trata de ilustrar de manera escueta cómo se debería realizar el procedimiento de imputación en una encuesta de ingresos y gastos. El lector encontrará varios pasos en esta metodología, puesto que antes de imputar las variables de interés, es necesario conocer qué covariables se relacionan fuertemente con las variables que se quieren imputar. Además de eso, es necesario primero imputar todas las covariables en primer lugar y reemplazar sus valores faltantes con información plausible que pueda ser utilizada en los modelos que se ajusten. Suponga que, para el conjunto de hogares que se consideró con fines de imputación, se observaron al menos las siguientes variables:
+
+\begin{itemize}
+\tightlist
+\item
+  Tamaño del hogar.
+\item
+  Número de hombres y mujeres dentro del hogar.
+\item
+  Número de niños y adultos en el hogar.
+\item
+  Edad del jefe de hogar.
+\item
+  Estado de ocupación del jefe de hogar.
+\item
+  Grado educativo más alto del jefe de hogar.
+\item
+  Número de personas empleadas en el hogar.
+\end{itemize}
+
+El camino que se seguirá en este ejemplo será primero la imputación de los ingresos, como principal covariable del gasto y del consumo. Una vez que se imputaron las covariables, el segundo paso de este proceso se relaciona con la imputación de los filtros, que son las preguntas que se realizan para conocer si un hogar ha adquirido un bien o servicio específico. El resultado de este paso produjo el tercer paso dedicado a la imputación de los valores de gasto anualizados en cada unidad. Esta serie de pasos metodológicos ha sido recomendados por diferentes agencias de estadística, incluyendo institutos y oficinas nacionales de estadística. Por ejemplo, \citet{Hayes_Watson_2009} y \citet{Sun_2010} siguen esta metodología en el \emph{Australian Bureau of Statistics} para imputación en la encuesta \emph{Household, Income and Labour Dynamics in Australia (HILDA)}
+
+\hypertarget{imputaciuxf3n-del-ingreso}{%
+\subsection{Imputación del ingreso}\label{imputaciuxf3n-del-ingreso}}
+
+En primer lugar, recuérdese que existen múltiples \emph{fuentes de ingreso} en el hogar, como por ejemplo el ingreso el trabajo, la propiedad de activos, la producción de servicios para consumo propio, y las transferencias (condicionadas o no) gubernamentales. Además debe ser notado que tanto teórica como empíricamente, los ingresos han demostrado ser un potente predictor de los gastos \citep{Starick_Watson_2011}.
+
+La imputación del ingreso podría estar basada en un enfoque de modelos predictivos y la técnica que se podría utilizar para imputar esta covariable es la del vecino más cercano con regresión. De esta forma, se define un modelo lineal para las unidades encuestadas y luego se estiman los coeficientes de regresión para obtener un valor pronosticado que se computa para las unidades que faltan. Así, para cada unidad con información faltante en el ingreso, se identifica un solo donante que corresponderá al hogar cuyo ingreso disponible es más cercano a la predicción del modelo de regresión. Por ende, todos los componentes de los ingresos serán imputados con la información del donante. El modelo lineal se describe como se indica a continuación y la predicción de los ingresos para los hogares faltantes se calcula utilizando una regresión lineal.
+
+\[\tilde{y}_k = \mathbf{x}_k \hat{\boldsymbol{\beta}}_i\]
+
+Donde, \(\tilde{y}_k\) es el valor pronosticado del ingreso disponible para el hogar \(k\), \(\mathbf{x}_k\) es el vector de las covariables del modelo, y los coeficientes de regresión estimados están dados por:
+
+\[
+\hat{\boldsymbol{\beta}}_i = \left(\sum_{r_i} a_k\mathbf{x}_k\mathbf{x}_k'\right)^{-1}
+\sum_{r_i} a_k\mathbf{x}_ky_k
+\]
+
+Este vector de coeficiente de regresión \(\hat{\boldsymbol{\beta}}_i\) se produce a partir de un ajuste de regresión múltiple utilizando los datos \((y_k, \mathbf{x}_k)\) disponibles para cada unidad \(k \in r_i\) con pesos \(a_k\) especificados adecuadamente para incluir la posible heteroscedasticidad de los residuales. Por ejemplo, es recomendable que la información incluida en el vector de covariables \(\mathbf{x}_k\)) contenga la siguiente información:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Composición del hogar}: número de adultos, número de niños, número de hombres, número de mujeres, edad adulta media, edad media de los niños, edad de la persona más joven, edad de la persona mayor, edad del jefe de hogar, grado educativo más alto del jefe de hogar.
+\item
+  \textbf{Ocupación y fuerza de trabajo}: situación laboral del jefe de hogar, número de personas empleadas, número de desempleados en el hogar.
+\item
+  \textbf{Calidad de la vivienda}: creada creado a partir de la sección de calidad de la vivienda, incluye por ejemplo, un índice de hacinamiento (como la relación entre número de habitaciones utilizadas principalmente para dormir y el número de personas en el hogar), el material de las paredes, y la principal fuente de agua potable en el hogar.
+\item
+  \textbf{Ubicación del hogar}: municipalidad y provincia, como primera y segunda desagregación cartográfica del país.
+\end{itemize}
+
+Asumiendo que valores similares de las predicciones del modelo lineal \(\tilde y\) producirán valores similares en las observaciones del ingreso \(y\), podríamos pedir prestado un valor real de ingreso \(y\) para imputar el valor faltante con la información de este vecino que tiene valores similares en las predicciones \(\tilde y\) del modelo lineal. Así, el valor imputado para la unidad \(k\) es dada por
+
+\[\hat{y}_k = y_{l(k)}\]
+
+Donde \(l(k)\) es el \emph{elemento donante}, determinado por medio de la minimización de una medida simple de distancia entre todos posibles donantes \(l\) y la unidad \(k\). Esta distancia está dada por:
+
+\[
+D_{lk} = |\tilde y_k - y_l|
+\]
+
+El donante \(l\) al elemento \(k\) será aquel hogar en el conjunto \(r_i\) con la menor distancia \(D_{lk}\). Como regla general, todo los donantes deben estar ubicados en la misma provincia que la unidad faltante. La figura \ref{fig:fig10} muestra un diagrama de caja junto con el histograma de los ingresos (antes de la imputación), así como la relación lineal entre los valores pronosticados derivados del modelo y los valores imputados tomados de los donantes.
+
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{Pics/10} \caption{Distribución de los ingresos (izquierda y centro) y Relación entre los valores predichos e imputados para los hogares con datos de ingresos faltantes (derecha).}\label{fig:fig10}
+\end{figure}
+
+Por último, nótese que si la base de datos contiene hogares que reportaron un ingreso nulo en todo el año, es posible que esos valores se consideren como faltantes porque se asume que la probabilidad de que un hogar no genere ningún tipo de ingreso durante todo un año es bastante baja. Además, los hogares con ingresos superiores a un límite también pueden ser considerados como valores atípicos y luego ser imputados.
+
+\hypertarget{imputaciuxf3n-del-filtro}{%
+\subsection{Imputación del filtro}\label{imputaciuxf3n-del-filtro}}
+
+El siguiente paso, luego de haber logrado imputar con éxito las covariables determinantes del gasto, es precisamente utilizarlas para lograr imputar el gasto en bienes o servicios. Por lo general, las encuestas de ingresos y gastos preguntan si el hogar consumió o adquirió cierto bien o servicio específico. En caso de responder afirmativamente, se pregunta por la cantidad de dinero gastado en el bien o servicio y por la cantidad de artículos adquiridos en el periodo de referencia; en caso de responder negativamente, se procede a preguntar por el siguiente bien o servicio. Por supuesto, diferentes artículos tiene diferentes tasas de respuesta en sus filtros. De aquí en adelante, el valor a ser imputado en esta etapa es dicotómico: sí o no. Si el valor imputado hubiera sido no, eso significaría que el hogar no debería tener ningún gasto asociado a ese registro. Debido a la naturaleza del filtro, un modelo de regresión logística es conveniente para modelar la ausencia de respuesta en el filtro. De esta manera, la probabilidad de consumo (o compra) a un artículo \(i\) en particular es \(p_k = Pr(Filtro_i = 1)\) y puede ser estimada por medio del siguiente modelo de regresión logística:
+
+\[
+\tilde{p}_k = logit^{-1}(\mathbf{x}_k \hat{\boldsymbol{\beta}}_i) =
+\frac{exp(\mathbf{x}_k \hat{\boldsymbol{\beta}}_i)}{1+exp(\mathbf{x}_k \hat{\boldsymbol{\beta}}_i)}
+\]
+
+Las covariables incluidas en la matriz \(\mathbf{x}\) podrían ser las mismas utilizados para la imputación de los ingresos y, por supuesto, los ingresos en sí. Es decir, las covariables incluidas serían la composición del hogar, el estado ocupación y fuerza de trabajo de los miembros del hogar, la calidad de la vivienda, la ubicación del hogar y los ingresos del hogar. Asumiendo que los similares valores de \(\tilde p\) producirán valores de filtro similares, podemos ``pedir prestado'' un valor de filtro para imputar el que falta de un vecino con un valor similar de \(\tilde p\). Por lo tanto, el valor imputado del filtro para la unidad \(k\) es dado por \(Filtro_k = Filtro_{l(k)}\); donde \(l(k)\) es el elemento donante, determinado por la minimización de la distancia \(D_{lk} = |\tilde p_k - p_l|\). Se enfatiza en que el donante \(l\) del elemento \(k\) es el elemento en el conjunto \(r_i\) con el valor más pequeño de la distancia \(D_{lk}\).
+
+Por regla general, todo los donantes deben estar en la misma provincia que la unidad con el valor faltante. Por ejemplo, considere el artículo arroz, para el cual algunos hogares no proveyeron ninguna respuesta asociada al filtro de compra. Como este es un artículo de consumo masivo en nuestra región, se supondría que la mayoría de hogares respondiera que efectivamente ha comprado arroz en el periodo de referencia. De esta manera, al utilizar la regresión logística como modelo para la ausencia de respuesta del filtro del arroz, es posible encontrar que la distribución de las probabilidades estimadas de compra de arroz esté sesgada hacia el valor uno y alejada del valor cero, como lo muestra la figura \ref{fig:fig11}. Está claro que la distribución de los valores imputados también debería estar cargada hacia el uno, reflejando la realidad de la compra de un artículo esencial como el arroz.
+
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{Pics/11} \caption{Distribución de las probabilidades estimadas de compra de arroz (izquierda) y valores imputados para los hogares con valores faltantes en el filtro (derecha).}\label{fig:fig11}
+\end{figure}
+
+Por otro lado, el filtro para algunos artículos de bajo consumo estará más sesgado hacia el valor cero. La figura \ref{fig:fig12} muestra la distribución de las probabilidades estimadas de compra de un artículo de bajo consumo, así como los valores imputados.
+
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{Pics/12} \caption{Distribución de la probabilidad estimada de compra de un artículo de bajo consumo (izquierda) y sus valores imputados para los hogares que no respondieron el filtro (derecha).}\label{fig:fig12}
+\end{figure}
+
+\hypertarget{imputaciuxf3n-del-gasto}{%
+\subsection{Imputación del gasto}\label{imputaciuxf3n-del-gasto}}
+
+Éste es el paso final del proceso de imputación y está fuertemente influenciado por los resultados de la imputación de la pregunta de filtro. En este paso, los hogares cuyo valor imputado de filtro es cero automáticamente tendrá un cero imputado como la cantidad de dinero gastado en ese artículo. Es decir, si el resultado de la imputación en el filtro es cero, esto implica directamente que el hogar no compró (o produjo) el artículo en el periodo de referencia, y por tanto la frecuencia de compra, la cantidad que registros comprados y la cantidad de dinero gastado en ese artículo debe ser cero. Las unidades restantes deben tener un valor observado o imputado de uno en el filtro, y por lo tanto los valores faltantes del gasto deben ser imputados.
+
+Observe que el grupo de donantes está restringido a los que tienen un valor de gasto distinto de cero en el artículo específico. Es decir, para aquellas unidades con un valor de filtro distinto de cero, un donante debe ser identificado. Para la imputación del gasto, la técnica del vecino más cercano con el método de regresión puede considerarse en el mismo sentido que fue implementado en la imputación de los ingresos. Por lo tanto, se considera un modelo lineal en donde las covariables incluidas en la matriz \(\mathbf{x}\) son la composición del hogar, el estado de ocupación y fuerza de trabajo, la calidad de la vivienda, la ubicación del hogar y los ingresos.
+
+Volviendo a los ejemplos anteriores, la figura \ref{fig:fig13} muestra la distribución de los gastos imputados en consumo de salmón. Se nota que la cantidad de dinero gastado en este artículo es baja y que la relación entre los valores pronosticados del modelo y los valores imputados es fuertemente lineal.
+
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{Pics/13} \caption{Distribución de los gastos imputados sobre el salmón (izquierda) y relación entre los valores predichos e imputados para los hogares con valores faltantes en el gasto (derecha).}\label{fig:fig13}
+\end{figure}
+
+\hypertarget{detecciuxf3n-de-datos-atuxedpicos}{%
+\chapter{Detección de datos atípicos}\label{detecciuxf3n-de-datos-atuxedpicos}}
+
+En esta sección se describen los aspectos teóricos y prácticos de la identificación de valores atípicos en una base de datos completa (incluso con registros que ya han sido imputados), basándose en métodos que han mostrado buenas propiedades en la inferencia de encuestas de hogares. Después de una breve introducción, se presenta un enfoque no exhaustivo del problema de la identificación de valores atípicos, así como la teoría detrás de los métodos y algunos hallazgos empíricos de la imputación de valores atípicos.
+
+Luego de detectar los posibles valores atípicos, el investigador debe enfrentarse al problema de decidir qué hacer con ellos; en general hay tres posible soluciones: mantenerlos en la base de datos final (sin ningún cambio), corregirlos (verificar exhaustivamente en los registros y cuestionarios, encontrar el error en la captura y reemplazarlo por el valor verdadero), o imputarlos (eliminarlos y reemplazarlos por un valor adecuado que no fue provisto por el respondiente). El enfoque de imputación de valores atípicos sigue los mismos principios que los método utilizado para imputar registros en el capítulo anterior. Al final, se recomienda que cuando se encuentren valores atípicos, se marquen para su revisión. Cuando se revisan, es posible encontrar que el valor es simplemente erróneo, debido a algún problema en la captura de los datos datos (error de medición); también es posible que el valor sea improbable y raro, pero que corresponda a un valor válido. En el primer caso el error se corrige (si el valor atípico es erróneo) y las estimaciones se ajustan. Si el valor atípico corresponde a un dato erróneo y no se puede localizar al encuestado, se recomienda imputarlo.
+
+Por tanto, estamos interesados en detectarlos, y en solucionar el problema reemplazando los valores inverosímiles por otros más realistas. Detectar valores atípicos y distinguir aquellos que son errores de aquellos que son inusualmente altos (o bajos) pero valores correctos, es un desafío. Hacer estas
+correcciones en los microdatos (es decir, en los datos a nivel del hogar) se suma al desafío. En general, un valor atípico es una observación que está distante de todos las demás observaciones o datos en la variable de interés de la base de datos.
+
+Así como los valores erróneos deben corregirse, eliminarse o imputarse, por otro lado, se deben mantener los valores improbables en el conjunto de datos y se debe tomar una decisión para reducir su impacto en el análisis de la encuesta. Hay que tener en cuenta que existen valores verídicos en las observaciones que, aunque tienen una incidencia baja, deben conservarse en el análisis. Los valores que se apartan de la distribución habitual pueden clasificarse como valores atípicos o como puntos influyentes. El tratamiento de estos valores para el análisis vendrá definido por su clasificación.
+
+\begin{itemize}
+\tightlist
+\item
+  \emph{Valores atípicos representativos}: valores que se han registrado correctamente y representan otras unidades de población con valores similares.
+\item
+  \emph{Valores atípicos no representativos}: registrados incorrectamente o únicos, lo que significa que no hay otra persona como ellos.
+\item
+  \emph{Puntos de influencia}: cuando el efecto conjunto del punto de datos atípicos y su respectivo peso muestral tienen un efecto significativo en la inferencia.
+\end{itemize}
+
+A menudo, los valores atípicos pueden ser representativos de otros en la población, por lo que siguen siendo importantes y deben permanecer en el conjunto de datos. Al final, el proceso de identificación de valores atípicos se trata de un compromiso entre el sesgo y la varianza. Los valores atípicos pueden tener un gran impacto en los estimadores de ubicación y escala, como la media y la varianza, así como en los estimadores de totales y tamaños de subpoblaciones. Aunque estos estimadores permanecen insesgados, su varianza crece en presencia de valores atípicos.
+
+\hypertarget{algunos-muxe9todos-de-detecciuxf3n-de-valores-extremos}{%
+\section{Algunos métodos de detección de valores extremos}\label{algunos-muxe9todos-de-detecciuxf3n-de-valores-extremos}}
+
+\citet{Filzmoser_Gussenbauer_Templ_2016} afirma que en el proceso de entrada de datos se pueden cometer errores. Por ejemplo, la introducción de valores de gasto imposibles, es decir, valores que son demasiado altos o demasiado bajos para ser plausibles. Estos valores extremos pueden tener un impacto significativo en algunos análisis particulares (como por ejemplo en el estudio de indicadores de desigualdad, o ajuste de modelos de regresión) que pueden verse significativamente afectados por un número reducido de valores influyentes en el conjunto de datos. En esta sección se realizará un recorrido no exhaustivo sobre algunos métodos para detectar valores extremos.
+
+\hypertarget{muxe9todo-top-down}{%
+\subsection{Método Top-Down}\label{muxe9todo-top-down}}
+
+Suponga que \(y_{(1)}\le\cdots\le y_{(n)}\) denota los valores ordenados de la variable de interés \(y\) en la muestra \(s\). Considerando el total de la variable de interés para todos los elementos en la muestra, se define el porcentaje de contribución acumulado \(P_j\) de la siguiente manera:
+
+\[
+P_j=100\times\frac{\sum_{i=j}^n y_{(i)}}{\sum_{k=1}^n y_k}; \ \ \ \ \ \ \ j = 1, \ldots, n.
+\]
+
+Grandes cambios entre los valores de \(P_j\) significan posibles valores atípicos. También es posible calcular esta medida incluyendo el peso de muestreo para localizar qué valores ponderados tienen efectos anormalmente grandes.
+
+\[
+P_j^*=100\times\frac{\sum_{i=j}^n d_i \ y_{(i)}}{\hat t_{y, \pi}}; \ \ \ \ \ \ \ j = 1, \ldots, n.
+\]
+
+\hypertarget{muxe9todo-de-boxplot}{%
+\subsection{Método de boxplot}\label{muxe9todo-de-boxplot}}
+
+Uno de los métodos más básicos para identificar valores atípicos es construir un diagrama de caja utilizando la mediana y el rango intercuartílico \((RIC)\) de la variable de interés. En primer lugar, se define su \(RIC = Q_3 - Q_1\) y su mediana como \(m=Q_2\). Por consiguiente, un elemento se marcará como un valor atípico si cae fuera del siguiente intervalo:
+
+\[
+(m-c \times RIC,\ m+c \times RIC)
+\]
+En donde \(c\) es una constante predeterminada por el investigador, usualmente fijada entre 1.5 y 3.
+
+\hypertarget{transformaciuxf3n-de-box-cox}{%
+\subsection{Transformación de Box-Cox}\label{transformaciuxf3n-de-box-cox}}
+
+Si la distribución de la variable es sesgada (como usualmente lo son los ingresos y gastos), es útil transformar la distribución para lograr una distribución simétrica antes de determinar los posibles valores atípicos. La transformación de Box-Cox se tiene la siguiente forma:
+
+\[
+y(\lambda)=
+\left\{
+\begin{matrix}\frac{y^\lambda-1}{\lambda},\; si\ \lambda\neq0,\\
+log(y),\;si\ \lambda=0
+\end{matrix}\right.
+\]
+
+En donde \(\lambda\in(-5,5)\). De esta forma, un ordenador iterará entre cada posible valor de \(\lambda\) para encontrar el que mejor reproduzca una distribución normal. Con esta nueva distribución, se puede utilizar el criterio de decisión de boxplot.
+
+\hypertarget{muxe9todo-de-distancia-estandarizada}{%
+\subsection{Método de distancia estandarizada}\label{muxe9todo-de-distancia-estandarizada}}
+
+La transformación anterior solo funciona para valores positivos. El siguiente método muestra otra forma de transformar y estandarizar los datos. Suponga que \(z_k=w_ky_k\); si \(m_z\) es una estimación para la ubicación de \(z\), y \(\sigma_z\) es una estimación para la escala de \(z\). Entonces, la distancia estandarizada puede entonces definirse como
+
+\[
+\delta_{z_k}=\frac{z_k-m_z}{\sigma_z}
+\]
+
+De forma similar al método de boxplot, los registros se clasificaran como valores atípicos si el valor absoluto de \(\delta_{z_k}\) es mayor que un umbral predeterminado (normalmente 3). La media y la varianza de la muestra se pueden utilizar para las estimaciones de ubicación y escala para \(z_k\), pero no son robustas, ya que incluirán los valores atípicos potenciales, lo que a su vez reduce la probabilidad de que se identifiquen correctamente los registros atípicos. Por consiguiente, es posible utilizar estimadores robustos (resistentes a valores atípicos) para \(m_z\) y \(\sigma_z\), como por ejemplo la mediana y el rango intercuartílico de \(z_k\), respectivamente.
+
+\hypertarget{muxe9todo-de-hidiroglou-bertholot}{%
+\subsection{Método de Hidiroglou-Bertholot}\label{muxe9todo-de-hidiroglou-bertholot}}
+
+Es posible utilizar una distancia estandarizada para detectar si la relación entre dos variables \(x\) y \(y\) en una unidad de la muestra difiere estructuralmente de las otras unidades en la muestra. Este método utiliza la idea de distancia estandarizada y también incorpora una medida de importancia para el tamaño de la unidad, con el fin de determinar el umbral para considerar un registro como un valor atípico. El algoritmo de identificación sigue los siguientes pasos:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Para cada elemento calcular \(r_k=y_k/x_k\) para \(k\in s\).
+\item
+  Transformar los datos para poder detectar valores atípicos en cualquier extremo de la distribución. Los datos transformados están dados por:
+  \[s_k=\left\{\begin{matrix}1-\frac{med(r_k)}{r_k},\;\ si\ 0\le r_k\le m e d(r_k)\\\frac{med(r_k)}{r_k}-1,\;\ en \ otro \ caso\\\end{matrix}\right.\] En donde \(med(r_k)\) corresponde a la mediana de los cocientes definidos en el paso anterior.\\
+\item
+  Incorporar la magnitud de los datos calculando los efectos \(E_k\) dados por
+  \[
+  E_k = s_k  \left( \max(x_k,y_k) \right)^\phi
+  \]
+  El parámetro \(\phi\) proporciona una medida de control para el impacto del tamaño en el efecto.
+\item
+  A continuación, calcular el primer, segundo y tercer cuartil de los efectos dados por \(E_{Q_1}, \ E_{Q_2}, \ E_{Q_3}\), respectivamente.
+\item
+  Los rangos intercuartílicos se calculan entonces como
+  \[
+  d_{Q_1} = \max\left(E_{Q_2} - E_{Q_1}\ , \ |0.5 \times E_{Q_2}|\right)
+  \]
+  \[
+  d_{Q_3} = \max\left(E_{Q_3} - E_{Q_2}\ , \ |0.5 \times E_{Q_2}|\right) 
+  \]
+\end{enumerate}
+
+Nótese que la cantidad \(|0.5*E_{Q_2}|\) es utilizada para reducir la tendencia a declarar falsos valores atípicos. Por ejemplo, esto ayudaría si la mayoría de los valores estuvieran agrupados alrededor de un valor particular, con unos pocos registros desviándose de él. Por último, los registros son declarados como valores atípicos si el valor de su efecto \(E_k\) queda fuera del intervalo \((E_{Q_2} - c \times d_{Q_1} \ , \ E_{Q_2} + c \times d_{Q_3})\); en donde al igual que en el método de boxplot, \(c\) controla el ancho de la región de aceptación.
+
+\hypertarget{muxe9todo-de-la-distancia-de-mahalanobis}{%
+\subsection{Método de la distancia de Mahalanobis}\label{muxe9todo-de-la-distancia-de-mahalanobis}}
+
+Este método tiene en cuenta la estructura multidimensional de los datos observados en todos los registros comunes de un mismo módulo; por ejemplo, en el módulo de ingresos del hogar en una encuesta de hogares, o en el módulo de gastos de una encuesta de presupuestos familiares. En primer lugar, se supone que \(\mathbf{y}_k = (y_{k1}, y_{k2}, \ldots, y_{kQ} )'\) define el vector de valores observados del individuo \(k\) en todas las \(Q\) variables del módulo de interés. Por tanto, la distancia de Mahalanobis para una unidad se puede definir como
+\[
+MD_k^2=(\mathbf{y}_k-\bar{\mathbf{y}})' \ \mathbf{S}^{-1} \ (\mathbf{y}_k-\bar{\mathbf{y}})
+\]
+
+En donde \(\bar{\mathbf{y}}\) y \(\mathbf{S}\) son respectivamente el vector de medias muestrales y la matriz de covarianzas de las \(Q\) variables en el módulo. Si los datos siguen una distribución normal multivariante, se puede demostrar que la distribución de esta distancia es Ji-cuadrado con \(Q\) grados de libertad, \(MD_k^2 \sim \chi_Q^2\). A continuación, las unidades se declaran como potencialmente atípicas si superan el umbral del percentil 0.95 de la distribución \(\chi_{Q}^2\).
+
+\hypertarget{la-distancia-de-cook}{%
+\subsection{La distancia de Cook}\label{la-distancia-de-cook}}
+
+Los registros influyentes son valores atípicos que afectan significativamente a los modelos de regresión. Para ubicarlos, es posible utilizar la distancia de Cook, que mide cuánto impacta la unidad \(i\)-ésima en la estimación de la unidad \(j\)-ésima, en un modelo de regresión con \(p\) variables explicativas. Esta medida está dada por la siguiente expresión:
+
+\[
+DC_{(i)} = \dfrac{\sum_{\substack{j=1\\ j\neq i}}^{n}(\hat y_j- \hat y_{j(i)})^2}{(p+1) \hat{\sigma}^2} 
+\]
+
+En donde \(\hat{\sigma}^2 = \frac{\sum_k (\varepsilon_k - \bar{e})^2}{n-p}\) es la varianza de los residuales del modelo \((\varepsilon_k)\); además, \(\hat y_j\) es la estimación de la \(j\)-ésima unidad en el modelo de regresión ajustado con todos los datos observados, mientras que \(\hat y_{j(i)}\) es la estimación de la \(j\)-ésima unidad cuando se excluye la \(i\)-ésima unidad. Entre más grande sea el valor de la estadística, es más probable que la observación de la unidad \(i\) se considere como un valor influyente. Algunos autores afirman que cualquier valor \(DC_{(i)}\) mayor que uno debe considerarse influyente, mientras que otros afirman que el umbral debe ser \(4/n\) o \(4/(n-p-1)\).
+
+\hypertarget{el-criterio-dfbetas}{%
+\subsection{El criterio DFBETAS}\label{el-criterio-dfbetas}}
+
+Por otra parte, el estadístico DFBETAS mide cuánto influye la observación \(i\)-ésima en los estimadores de los coeficientes de regresión en un modelo lineal. La estadística se puede escribir como sigue:
+
+\[
+DFBETAS_{j(i)} = \dfrac{b_j-b_{j(i)}}{\sqrt{S^2_{(i)}C_{jj}}} 
+\]
+
+En donde \(b_j\) es la estimación para el \(j\)-ésimo coeficiente de regresión, \(b_{j(i)}\) es la estimación calculada sin la observación \(i\)-ésima; además \(S^2_{(i)}\) es la varianza muestral de la variable de interés sin la observación \(i\)-ésima y \(C_{jj}\) es el \(j\)-ésimo elemento de la diagonal de la matriz \((\mathbf x' \mathbf x)\), de dimensión \(n\times n\). Es posible considerar que cualquier cifra cuyo valor absoluto sea mayor o igual que \(2/\sqrt n\) determina que el valor atípico es influyente.
+
+\hypertarget{ejemplo-detecciuxf3n-de-valores-atuxedpicos-en-una-encuesta-de-presupeustos-familiares-y-gastos}{%
+\section{Ejemplo: detección de valores atípicos en una encuesta de presupeustos familiares y gastos}\label{ejemplo-detecciuxf3n-de-valores-atuxedpicos-en-una-encuesta-de-presupeustos-familiares-y-gastos}}
+
+En genral, para cualquier tipo de encuesta, a la hora de detectar valores atípicos podría considerarse la estructura multivariante de los datos (relación con otras variables) en la búsqueda de valores atípicos. Para esto se debería elegir un conjunto de covariables de acuerdo con el juicio de los expertos y la desagregación necesaria. A pesar de que en la base de datos existan registros y valores observados para una observación, es posible que, después de la detección de valores atípicos, toda la información de una unidad sea declarada sospechosa. Por ende, una vez que se ha detectado una unidad con valores atípicos potenciales, es posible decidir que todos sus registros sean eliminados (creando deliberadamente una ausencia de respuesta de unidad) de no comprobarse la fiabilidad de la información. Por consiguiente, si se mantiene la unidad, toda su información se declara como confiable y valdrá la pena analizarla. De lo contrario, el registro se eliminará de los datos de la muestra que afectan la estructura del esquema de ponderación. Luego, la unidad se declarará como una unidad eligibles no respondientes (ENR, ver capitulo 10).
+
+Después de decidir acerca de los valores atípicos de la unidad, es necesario detectar los valores atípicos de los registros para las variables específicas de la encuesta. Por ejemplo, en una encuesta de presupuestos familiares, las variables de interés serán los rubros asociados a los ingresos y a los gastos del hogar. En este caso, se sugiere que la variable de interés de una categoría particular se transforme utilizando el enfoque de Box-Cox. Esto se hace porque las distribuciones de ingresos y gastos siempre están sesgadas. Una vez transformados, es posible utilizar las medidas anteriormente mencionadas para decidir acerca de la eliminación del registro. Por ejemplo, si dos o tres de los métodos detectan un registro como un posible valor atípico, entonces se verifica la información sobre ese registro. Si la información del elemento es sospechosa, se debe eliminar y utilizar un enfoque de imputación sobre ese registro.
+
+Siguiendo con el esquema de la encuesta de presupuestos familiares, podría ser conveniente que, a nivel de gasto, la detección de los valores atípicos se realizara, no sobre cada artículo, sino a nivel agregado para cada nivel de la clasificación de consumo (COICOP, \emph{Classification of Individual Consumption According to Purpose}). Además se deben tener en cuenta que, en este tipo de encuestas, los valores nulos para el gasto o consumo de artículos particulares son frecuentes, ya que no se puede esperar que todos los hogares consuman todos los artículos posibles. Estos valores cero se denominan \emph{ceros estructurales}. Por ende, es muy pertinente estudiar y decidir si la metodología de detección de valores atípicos tendrá en cuenta los ceros o no. En general, cuando la incidencia de los ceros es baja no debería existir ningún inconveniente en analizar el conjunto de datos incluyendo estos ceros. Por ende, esta decisión debería ser independiente para cada división.
+
+Para algunos componentes concretos, el número de ceros puede ser bastante alto y los algoritmos de detección de valores atípicos pueden fallar si el número de ceros está por encima de un determinado umbral. Las observaciones podrían incluso convertirse en valores atípicos debido a los ceros cuando se aplican métodos de detección. En este sentido, es necesario contemplar umbrales flexibles para cada división. Por ejemplo, un valor de cero en los gastos de alimentos sería poco realista, pero podría ser cierto para los gastos en ropa de bebé o muebles. Por las anteriores razones, es plausible recomendar la agregación de los componentes del consumo en grandes categorías a nivel de producto/servicio o grupos agregados de productos y servicios.
+
+Un indicador fiable, no solo para medir la desigualdad en el consumo sino también para realizar un seguimiento de los cambios en el proceso de detección de valores atípicos y la imputación posterior, es el coeficiente de Gini. Por ejemplo, considere la siguiente tabla que muestra la presencia de ceros en cada división COICOP junto con el Gini para algunas de las categorías anteriormente mencionadas. Nótese que la incidencia de ceros es mucho menor en la categoría de vivienda que en las categorías de educación o recreación.
+
+\begin{longtable}[]{@{}ccc@{}}
+\toprule()
+Categoría & Ceros & Gini \\
+\midrule()
+\endhead
+Alimentos & 27 & 36 \\
+Alcohol & 4333 & 90 \\
+Ropa & 2558 & 78 \\
+Vivienda & 5 & 48 \\
+Muebles & 85 & 53 \\
+Salud & 2746 & 78 \\
+Transporte & 616 & 69 \\
+TIC & 551 & 62 \\
+Recreación & 3538 & 92 \\
+Educación & 4802 & 90 \\
+Restaurantes & 1421 & 65 \\
+Seguros & 4837 & 90 \\
+Cuidado personal & 129 & 51 \\
+\bottomrule()
+\end{longtable}
+
+Esta metodología también se puede aplicar para grupos. La siguiente tabla muestra la presencia de ceros estructurales para algunos artículos de la sección Alimentos. Una vez más, dependiendo del país, sería esperable encontrar una mayor incidencia de ceros en algunos artículos. En este caso particular, nótese que hay una mayor cantidad de ceros en artículos como té o café, que en artículos como cereal, azúcar o leche.
+
+\begin{longtable}[]{@{}ccc@{}}
+\toprule()
+Artículos & Ceros & Gini \\
+\midrule()
+\endhead
+Cereales & 87 & 37 \\
+Carne & 481 & 47 \\
+Pescado & 305 & 56 \\
+Leche & 290 & 47 \\
+Aceites & 482 & 51 \\
+Frutas & 981 & 67 \\
+Verduras & 188 & 47 \\
+Azucares & 290 & 56 \\
+Comida procesada & 253 & 43 \\
+Jugos & 3650 & 79 \\
+Café & 5286 & 86 \\
+Té & 4709 & 86 \\
+Cacao & 4421 & 78 \\
+Agua & 5287 & 86 \\
+Refresco & 4859 & 86 \\
+Otras bebidas & 3353 & 79 \\
+\bottomrule()
+\end{longtable}
+
+Como se resaltó anteriormente, para datos muy sesgados, los métodos para la detección de valores atípicos podrían resultar problemáticos, ya que el intervalo en el que los puntos de datos no se consideran valores atípicos es simétrico alrededor de la mediana. Por ejemplo, la figura \ref{fig:figou2} muestra el comportamiento estructural de algunas divisiones, es notable que todas las distribuciones de gasto y consumo en estos conceptos están extremadamente sesgadas.
+
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{Pics/ou2} \caption{Distribución del consumo para algunas categorías del gasto.}\label{fig:figou2}
+\end{figure}
+
+Para ajustarse a este problema es posible utilizar la transformación de Box-Cox con el fin de obtener una distribución simétrica para los datos antes de determinar los posibles valores atípicos. La figura \ref{fig:figou1} muestra el proceso de iteración de esta metodología en algunas divisiones. La línea vertical en cada gráfica corresponde al mejor valor que podría tomar \(\lambda\) para que los datos se ajusta a una distribución normal.
+
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{Pics/ou1} \caption{Valores óptimos para las transformaciones de Box-Cox en algunas categorías del gasto.}\label{fig:figou1}
+\end{figure}
+
+Luego de haber transformado apropiadamente los datos, es posible utilizar la metodología de Boxplot, uno de los métodos más básicos (aunque muy poderoso), para identificar valores atípicos. Como se mencionó en la sección anterior, la gráfica mostrará el mínimo de la muestra, el primer cuartil, la mediana, el tercer cuartil y el máximo. La caja va del primer al tercer cuartil (que contiene por definición el 50\% de los datos más internos), así como la mediana que generalmente está marcada por una línea media. Para la aplicación específica de la detección de valores atípicos dentro de las divisiones COICOP es posible que la constante predeterminada \(c\) varíe entre divisiones. Por ejemplo, la siguiente tabla muestra el número de valores atípicos detectados en cada división por este método.
+
+\begin{longtable}[]{@{}cc@{}}
+\toprule()
+División & Valores atípicos \\
+\midrule()
+\endhead
+Alimentos & 222 \\
+Alcohol & 0 \\
+Ropa & 0 \\
+Vivienda & 87 \\
+Muebles & 330 \\
+Salud & 0 \\
+Transporte & 743 \\
+TIC & 668 \\
+Recreación & 0 \\
+Educación & 0 \\
+Restaurantes & 31 \\
+Seguros & 0 \\
+Cuidado personal & 400 \\
+\bottomrule()
+\end{longtable}
+
+Por otro lado, también es posible tener en cuenta la relación entre el gasto en cada división y el ingreso reportado por el hogar en la encuesta. En general, no se puede suponer que esta relación es homogénea entre todos los encuestados, máxime si se tiene en cuenta que la selección de las unidades muestrales se hace en todos los grupos socioeconómicos del país. Sin embargo, sí es posible hacer este supuesto dentro de clases homogéneas, como por ejemplo el cruce entre los quintiles (o deciles) del ingreso y las regiones del país. De esta forma, dentro de cada grupo se supondría que la relación entre el gasto y el ingreso es uniforme. Por ejemplo, en la siguiente tabla se muestra el número de valores atípicos detectados en cada división mediante el método Hidiroglou-Bertholot.
+
+\begin{longtable}[]{@{}cc@{}}
+\toprule()
+División & Valores atípicos \\
+\midrule()
+\endhead
+Alimentos & 74 \\
+Alcohol & 141 \\
+Ropa & 73 \\
+Vivienda & 53 \\
+Muebles & 177 \\
+Salud & 71 \\
+Transporte & 89 \\
+TIC & 128 \\
+Recreación & 168 \\
+Educación & 117 \\
+Restaurantes & 48 \\
+Seguros & 100 \\
+Cuidado personal & 247 \\
+\bottomrule()
+\end{longtable}
+
+Es necesario tener en cuenta que, como la lógica detrás de estos dos métodos difiere, cada uno identificará un número diferente de valores atípicos. Esto es una ventaja, porque los métodos son complementarios. Por ejemplo, en divisiones como ropa, vivienda, salud, recreación y educación, donde el método Boxplot no encontró ningún valor atípico posible, el método HB sí lo encontró. Es así como, teniendo en cuenta los resultados de estos dos métodos, se puede especificar una regla lógica para asignar una marca a los registros de la base de datos que deban ser revisados por considerarse sospechosos. Por ejemplo, es posible que haya categorías en las que la regla lógica sea una conjunción de los resultados de los métodos, mientras que podría haber otras en las que la regla lógica sea una disyunción entre los resultados.
+
+Al final, se debe imputar cualquier valor que se considere como un valor atípico. Como se vio en los capítulos anteriores, la imputación puede estar apoyada por un enfoque basado en modelos. Por ejemplo, para imputar el gasto percápita anualizado, es posible utilizar el método de regresión con el vecino más cercano, donde se define un modelo lineal para las unidades encuestadas (sin incluir los valores atípicos). Una vez estimados los coeficientes de regresión, se calcula un valor previsto para esas unidades de valores atípicos y se identifica a un solo donante como el hogar cuyo gasto total en esa División está más cerca de la predicción. En la siguiente tabla se presentan algunos resúmenes de la distribución de los gastos a nivel de división antes de imputar los valores atípicos.
+
+\begin{longtable}[]{@{}cccc@{}}
+\toprule()
+División & Mínimo & Mediana & Máximo \\
+\midrule()
+\endhead
+Alimentos & 0 & 164587 & 1819370 \\
+Alcohol & 0 & 0 & 5475960 \\
+Ropa & 0 & 8180 & 3474000 \\
+Vivienda & 0 & 89040 & 1835500 \\
+Muebles & 0 & 10503 & 3871476 \\
+Salud & 0 & 2400 & 735180 \\
+Transporte & 0 & 24700 & 9038783 \\
+TIC & 0 & 16125 & 1642500 \\
+Recreación & 0 & 860 & 6307200 \\
+Educación & 0 & 0 & 1800000 \\
+Restaurante & 0 & 22100 & 2184000 \\
+Seguro & 0 & 0 & 2932400 \\
+Cuidado personal & 0 & 18540 & 1223734 \\
+\bottomrule()
+\end{longtable}
+
+Por último, en la tabla que se muestra a continuación se examinan algunos resúmenes sobre la distribución de los gastos a nivel de división habiendo imputado los valores atípicos de forma diferencial y con independencia ne cada división. Se nota cómo la imputación pasa realmente cambia la perspectiva del consumo mínimo y máximo. Esto significa que la detección de valores atípicos se centró en ambos lados de la distribución del gasto.
+
+\begin{longtable}[]{@{}cccc@{}}
+\toprule()
+División & Mínimo & Mediana & Máximo \\
+\midrule()
+\endhead
+Alimentos & 4560 & 166280 & 1616504 \\
+Alcohol & 0 & 0 & 930400 \\
+Ropa & 0 & 8250 & 1446532 \\
+Vivienda & 3000 & 89280 & 726000 \\
+Muebles & 243 & 10730 & 279382 \\
+Salud & 0 & 2400 & 654000 \\
+Transporte & 60 & 29900 & 365000 \\
+TIC & 0 & 16627 & 591000 \\
+Recreación & 0 & 867 & 1054100 \\
+Educación & 0 & 0 & 494000 \\
+Restaurantes & 0 & 22133 & 520000 \\
+Seguro & 0 & 0 & 723000 \\
+Cuidado personal & 400 & 18855 & 658960 \\
+\bottomrule()
+\end{longtable}
 
 \hypertarget{referencias}{%
 \chapter*{Referencias}\label{referencias}}

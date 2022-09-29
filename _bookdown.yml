@@ -21,8 +21,8 @@ rmd_files: [
   "11Varianza.Rmd",
   "12Ausencia.Rmd",
   "13SesgoUnidad.Rmd",
-  # "14Imputar.Rmd",
-  # "15Outliers.Rmd",
+  "14Imputar.Rmd",
+  "15Outliers.Rmd",
   # 
   # "16Agregar.Rmd",
   # "17Longitudinal.Rmd",
