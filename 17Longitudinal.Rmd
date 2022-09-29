@@ -6,7 +6,7 @@ Para algunos INE puede ser necesario contar con una estructura de ponderación l
 
 Asimismo, con el análisis de los datos longitudinales es posible hacer otros tipos de análisis como por ejemplo: 
 
-* Inferencia sobre la caracterización de las unidades observacionales que han cambiado de un estatus a otro: desde las bases de datos longitudinales es posible determinar las características de los hogares o personas que han sufrido algún cambio en las variables de interes. Por ejemplo, es posible determinar las características de los hogares que han salido (o entrado) de (a) la pobreza extrema, sin importar si se muestra un cambio neto significativo en el periodo de estudio.
+* Inferencia sobre la caracterización de las unidades observacionales que han cambiado de un estatus a otro: desde las bases de datos longitudinales es posible determinar las características de los hogares o personas que han sufrido algún cambio en las variables de interés. Por ejemplo, es posible determinar las características de los hogares que han salido (o entrado) de (a) la pobreza extrema, sin importar si se muestra un cambio neto significativo en el periodo de estudio.
 * Inferencia acerca de la estabilidad (o inestabilidad) de características de interés sobre las observaciones longitudinales: combinando varios periodos de seguimiento es posible detectar que algunas unidades observacionales experimentan periodos de estabilidad (o fluctuación) sobre el fenómeno de interés. Por ejemplo, el análisis de este tipo de problemáticas puede propiciar un mejor entendimiento de las situaciones que confluyen para que un hogar entre a la pobreza extrema y se mantenga en ese estado por un periodo determinado.
 * Caracterización de los eventos y fenómenos: con las encuestas longitudinales es posible entender a profundidad la duración de los periodos en los que una unidad observacional cambia de un estado a otro y persiste en este último. Por ejemplo, entrar a la pobreza, entrar a la inactividad económica, entrar a la desocupación, abandonar la educación, entre otros.
 * Análisis de impactos, efectos y relaciones causales: los datos longitudinales pueden usarse muy efectivamente a la hora de establecer relaciones causales entre una intervención y un fenómeno de interés. Por ejemplo, es posible evaluar la magnitud del impacto que la pandemia por COVID-19 trajo sobre la tasa de desocupación y sus efectos a lo largo del año. 
@@ -76,7 +76,7 @@ El objetivo de esta sección es generar pesos longitudinales para todos los indi
 2. Generación de los pesos longitudinales: la muestra debe ser modificada y ajustada para que refleje los cambios en la duración del panel para la población objetivo en los dos periodos de interés. En este caso se plantean al menos tres tipos de ajuste:
     - Definición de la población longitudinal (supeditada a los hogares que salen y entran en el periodo de referencia).
     - Ausencia de respuesta y pérdidas en la muestra debido a la atrición (ausencia de respuesta en el panel).
-    - Calibración de los pesos logitudinales.
+    - Calibración de los pesos longitudinales.
     
 El primer paso en la generación de los pesos longitudinales consiste en realizar una consolidación (combinación) de bases de datos, en donde se integren únicamente los periodos de interés. Es decir que este proceso producirá bases de datos de diferentes tamaños para dos, tres o cuatro periodos. En general, se esperaría contar con un mayor número de unidades observacionales en el primer caso (dos periodos) y un número menor de unidades observacionales en el último caso (cuatro periodos). Nótese que en el caso particular del ejemplo (encuesta con un esquema rotativo 4(0)1), no es posible realizar la integración de cinco periodos consecutivos, puesto que el esquema solo define el traslape de hasta cuatro periodos consecutivos. 
 
@@ -136,9 +136,11 @@ Como se mencionó en los capítulos anteriores, es necesario verificar las propi
 
 ### Creación de los pesos longitudinales finales   
 
+En este último paso, después de haber creado lo pesos longitudinales iniciales, se hacen algunos ajustes concernientes al periodo de combinación de las bases longitudinales, a la ausencia de respuesta entre estos periodos, y finalmente se realiza la calibración final para generar los pesos definitivos de la base de datos longitudinal. 
+
 #### Definición de la población longitudinal 
 
-La población longitudinal está supeditada a todas aquellas unidades que han permanecido en la población de interés entre el primer y el segundo periodo; en el caso de la ENE la población longitudinal del primer semestre del 2020 serían todas las personas que estuvieron en la población objetivo del primer periodo y que han permanecido en la población hasta el segundo periodo, inclusive. 
+La población longitudinal está supeditada a todas aquellas unidades que han permanecido en la población de interés entre el primer y el segundo periodo. Por ejemplo, en el caso de la encuesta que ejemplifica este capítulo, la población longitudinal del primer semestre del 2020 serían todas las personas que estuvieron en la población objetivo del primer periodo y que han permanecido en la población hasta el segundo periodo, inclusive. 
 
 Por supuesto, es necesario tener en cuenta que entre ambos periodos pueden haber ocurrido cambios en la población, como personas que han dejado de pertenecer a la población objetivo (por diversos motivos como la muerte, reclutamiento, internamiento en alguna institución, migración, entre otros). Siendo así, la población de interés en el segundo periodo sí contiene a las personas que han entrado (nacimientos, migración, licenciamiento de alguna institución, etc.) a conformar la población de interés desde el primer periodo, mientras que la población longitudinal no los contiene.
 
@@ -177,7 +179,7 @@ d_{2, k}^{longitudinal} = \frac{d_{2, k}^{inicial}}{\hat{\phi}_{2, k} }
 $$
 
 
-#### Calibración de los pesos logitudinales 
+#### Calibración de los pesos longitudinales 
 
 Luego del ajuste por ausencia de respuesta es aconsejable imponer algunas restricciones sobre los factores de expansión; en particular, se busca que la suma de los pesos reproduzca con exactitud los conteos poblacionales, o las proyecciones demográficas, en el país, en las regiones o departamentos, en los subgrupos de edad y sexo, en las áreas urbana y rural, etc. En general, en las restricciones de la calibración pueden intervenir tanto variables a nivel de individuo como de hogar. Es importante enfatizar que los totales auxiliares usados en la calibración deben representar la población del primer periodo de interés, puesto que, al conformar un panel que no adiciona elementos a lo largo de los periodos de medición, la muestra será representativa únicamente del periodo en cual fue seleccionada. Teniendo en cuenta que las variables de calibración están representadas por el vector $\mathbf{z}_k$ y que sus totales poblacionales están disponibles en forma de proyecciones poblacionales, entonces este conjunto de restricciones sobre los nuevos pesos longitudinales calibrados $w_{2, k}^{calibrado}$ se puede escribir como:
 
