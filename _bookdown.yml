@@ -5,9 +5,9 @@ new_session: yes
 
 rmd_files: [
   "index.Rmd",
-  
+  #
   "01Intro.Rmd",
-  
+  #
   "02ErrorTotal.Rmd",
   "03Elementos.Rmd",
   "04Marcos.Rmd",
@@ -26,7 +26,7 @@ rmd_files: [
   # 
   "16Agregar.Rmd",
   "17Longitudinal.Rmd",
-  # "18Transicion.Rmd",
+  "18Transicion.Rmd",
   # "19Calidad.Rmd",
   # 
   # "20Apendice.Rmd",
