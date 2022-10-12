@@ -2055,6 +2055,50 @@
             "volume": "55"
         },
         {
+            "author": [
+                {
+                    "family": "Fuller",
+                    "given": "Wayne A"
+                },
+                {
+                    "family": "Rao",
+                    "given": "J N K"
+                }
+            ],
+            "container-title": "Survey Methodology",
+            "id": "Fuller_Rao_2001",
+            "issue": "12",
+            "issued": {
+                "date-parts": [
+                    [
+                        2001
+                    ]
+                ]
+            },
+            "page": "7",
+            "title": "A regression composite estimator with application to the canadian labour force survey",
+            "type": "article-journal"
+        },
+        {
+            "author": [
+                {
+                    "family": "Ferreira",
+                    "given": "Juan Pablo"
+                }
+            ],
+            "id": "INEURY",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "page": "33",
+            "title": "Implementación de estimadores compuesto de regresión en la encuesta continua de hogares de uruguay",
+            "type": "article-journal"
+        },
+        {
             "DOI": "10.1016/S0169-7161(08)00016-3",
             "author": [
                 {
@@ -2082,6 +2126,36 @@
             "title": "Chapter 16 - sampling and estimation in household surveys",
             "type": "chapter",
             "volume": "29"
+        },
+        {
+            "author": [
+                {
+                    "family": "Gambino",
+                    "given": "Jack"
+                },
+                {
+                    "family": "Kennedy",
+                    "given": "Brian"
+                },
+                {
+                    "family": "Singh",
+                    "given": "Mangala P"
+                }
+            ],
+            "container-title": "Survey Methodology",
+            "id": "Gambino_Kennedy_Singh_2001",
+            "issue": "12",
+            "issued": {
+                "date-parts": [
+                    [
+                        2001
+                    ]
+                ]
+            },
+            "page": "10",
+            "title": "Regression composite estimation for the canadian labour force survey: Evaluation and implementation",
+            "title-short": "Regression composite estimation for the canadian labour force survey",
+            "type": "article-journal"
         },
         {
             "author": [
@@ -4276,6 +4350,30 @@
             "title": "Effects of composite weights on some estimates from the current population survey",
             "type": "article-journal",
             "volume": "15"
+        },
+        {
+            "author": [
+                {
+                    "family": "Gurney",
+                    "given": "M."
+                },
+                {
+                    "family": "Daly",
+                    "given": "J."
+                }
+            ],
+            "container-title": "Proceedings of the social statistics section, american statistical association",
+            "id": "Gurney_Daly_1965",
+            "issued": {
+                "date-parts": [
+                    [
+                        1965
+                    ]
+                ]
+            },
+            "page": "242-257",
+            "title": "A multivariate approach to estimation in periodic sample surveys",
+            "type": "paper-conference"
         },
         {
             "author": [

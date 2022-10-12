@@ -246,14 +246,7 @@ $$
 \hat{\Delta} = \hat{t}_{y^{(t)}} - \hat{t}_{y^{(t-1)}}
 $$
 
-Además, es posible mejorar la estimación del total actual $t_y^{(t)}$ al tener en cuenta la información inducida por el traslape de la encuesta en el segundo periodo, así:
-
-$$
-\tilde{t}_{y^{(t)}} = \alpha \hat{t}_{y^{(t)}} 
-+ (1 -\alpha) (\tilde{t}_{y^{(t-1)}} + \hat{\Delta})
-$$
-
-En donde $0 < \alpha < 1$. Por otro lado, si el interés está en estimar algunas características asociadas con la pobreza, es posible utilizar estimadores más complejos. Siendo $y_k$ el ingreso del individuo $k$ y $l$ el umbral de pobreza, entonces el siguiente estimador puede ser utilizado 
+Además, si el interés está en estimar algunas características asociadas con la pobreza, es posible utilizar estimadores más complejos. Siendo $y_k$ el ingreso del individuo $k$ y $l$ el umbral de pobreza, entonces el siguiente estimador puede ser utilizado 
 
 $$
 \hat{F}_{\alpha}=\frac{1}{N}\sum_{k\in s} d_k 
@@ -371,3 +364,61 @@ En donde $u_h$ es una función de los totales marginales de las filas de la tabl
 >> 3. *La calibración debe ser de fácil interpretación.* El enfoque de calibración ha ganado popularidad en las aplicaciones reales debido a que las estimaciones resultantes son fáciles de interpretar y de motivar puesto que están directamente relacionadas a los pesos inducidos por el diseño de muestreo. La calibración sobre los totales conocidos brinda al usuario una forma natural y transparente de estimación. El usuario que entiende la ponderación muestral aprecia el método de calibración puesto que modifica sutilmente los pesos originales, pero al mismo tiempo respeta los totales de la información auxiliar. Además, la calibración induce un único vector de ponderaciones aplicable a todas las variables involucradas en el estudio. Esta última razón hace que este método sea muy apetecido en las entidades oficiales que manejan encuestas muy extensas.
 
 >> 4. *La calibración representa un enfoque exhaustivo y unificado basado en los avances de teorías anteriores.* En la práctica de las enceustas de hogares, es cpmún encontrar problemas como la ausencia de respuesta, deficiencias del marco muestral y errores de medición. Aunque algunos procesos como la imputación y la reponderación son ampliamente difundidos y usados en la práctica, estos métodos no están necesariamente enmarcados dentro de una teoría exhaustiva de inferencia en poblaciones finitas. La mayoría de artículos teóricos tratan con la estimación de parámetros bajo un mundo ideal, que no existe en la práctica, donde la ausencia de respuesta y otros errores no muestrales están ausentes. La calibración proporciona una teoría unificada que hace frente a estos inconvenientes. 
+
+## Estimadores compuestos
+
+Es posible mejorar la estimación del total actual $t_y^{(t)}$ al tener en cuenta la información inducida por el traslape^[En esta sección, la notación para la parte traslapada $s_M$ de la muestra actual usará el superíndice $M$ (*matched*); mientras que se utilizará el superíndice $U$ (*unmatched*) para refereirse a la parte no traslapada $s_U$ de la muestra actual.] de la encuesta en el segundo periodo, así:
+
+$$
+\hat{t}_{y^{(t)}}^K = (1-K) \hat{t}_{y^{(t)}} 
++ K (\hat{t}_{y^{(t-1)}} + \hat{\Delta}_M)
+$$
+
+En donde $0 < \alpha < 1$ y $\hat{\Delta}_M=\hat{t}_{y^{(t)}}^M - \hat{t}_{y^{(t-1)}}^M$ es la diferencia de las estimaciones actual y previa en la muestra traslapada. Por otro lado, es posible añadir un término que dé cuenta de la diferencia entre las estimaciones actuales de las muestras con y sin traslape. De esta forma, un estimador compuesto es el siguiente:
+
+$$
+\hat{t}_{y^{(t)}}^{AK} = \hat{t}_{y^{(t)}}^K + A  (\hat{t}_{y^{(t)}}^U - \hat{t}_{y^{(t)}}^M)
+$$
+
+@Steel_McLaren_2008 afirman que esta clase de estimadores pueden generar ganancias en eficiencia porque aprovechan la correlación entre las estimaciones del mismo panel a lo largo del tiempo y puede otorgar una ventaja adicional a la estimación tradicional que utiliza únicamente la muestra actual como un todo, sin detenerse en su composición: parte traslapada y parte no traslapada. Estos estimadores pueden usar diferentes valores para las constantes $A$ y $K$, las cuales pueden ser escogidas con el objetivo de minimizar la varianza del estimador, o pueden ser escogidas de forma separada para aumentar la eficiencia del estimador con respecto a estimadores de niveles, como totales o proporciones del periodo actual, o de cambios temporales. @Gurney_Daly_1965 utilizan $A=0.4$ y $K=0.2$ en una aplicación con paneles rotativos.
+
+Estos estimadores también pueden ser escritos como estimadores de regresión o calibración. En efecto, @Gambino_Kennedy_Singh_2001 proponen que, además de las covariables y restricciones de calibración usuales, es posible usar la siguiente covariable de calibración para estimar indicadores de nivel:
+
+$$
+x_k^{(l)} = 
+\begin{cases}
+\hat {\bar y} ^{(t-1)}, \ \ \ \ \ k \in s_U \\
+y_{k}^{(t-1)}, \ \ \ \ \ k \in s_M 
+\end{cases}
+$$
+
+Por ejemplo, si el interés está en la estimación de la proporción actual de personas ocupadas, entonces $x_k^{(l)}$ representará la covariable que se deberá añadir al sistema de calibración, $\hat {\bar y} ^{(t-1)}$ será la proporción estimada de personas ocupadas en el periodo anterior, mientras que $y_{k}^{(t-1)}$ representará una variable dicotómica sobre la población económicamente activa que toma el valor uno, si la persona estuvo ocupada en el periodo anterior, o cero, si no. En este caso, el total de control correspondiente estará definido por el total nacional estimado de personas ocupadas en el periodo anterior. Por lo tanto, como es de esperarse, la suma ponderada (con los pesos de calibración) de esta covariable deberá ser igual a su total de control. 
+
+Para estimadores de cambio, @Gambino_Kennedy_Singh_2001 proponen la siguiente covariable:
+
+$$
+x_k^{(c)} = 
+\begin{cases}
+y_{k}^{(t)}, \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ k \in s_U \\
+y_{k}^{(t)} - R(y_{k}^{(t)} - y_{k}^{(t-1)}), \ \ \ \ \ k \in s_M 
+\end{cases}
+$$
+
+En donde $R = \sum_s w_k / \sum_{s_M} w_k $ es el inverso de la proporción de traslape real en el levantamiento. Siguiendo con el ejemplo, $y_{k}^{(t)}$ representa una variable dicotómica sobre la población económicamente activa que toma el valor uno, si la persona estuvo ocupada en el periodo actual, o cero, si no. En este caso, el total de control correspondiente sigue estando definido por el total nacional estimado de personas ocupadas en el periodo anterior. Por lo tanto, al sumar sobre la muestra expandida, se presenta la siguiente relación $\hat{t}_{y^{(t-1)}} = \hat{t}_{y^{(t)}} - \hat{\Delta}_M)$; es decir, que la estimación del periodo anterior es igual a la estimación del mes actual menos una diferencia de estimaciones en la muestra traslapada.  
+
+Es posible usar ambas covariables $x_k^{(c)}$ y $x_k^{(l)}$ en el sistema de calibración, aunque es probable sea encontrar pesos resultantes negativos o menores que uno. Para evitar estos inconvenientes numéricos, y dado que para ambas variables se tiene el mismo total de control, es posible definir una combinación lineal convexa y crear una nueva covariable de calibración, de la siguiente manera:
+
+$$
+x_k = (1-\alpha) x_k^{(l)} + \alpha x_k^{(c)}
+$$
+
+@Fuller_Rao_2001 mencionan que en algunas aplicaciones particulares, se ha encontrado mayor eficiencia (menor varianza) al utilizar valores de $\alpha = 0.65$ o $\alpha = 0.75$; aunque se recomienda usar $\alpha = 2/3$ en los sistemas de producción de las ONE. 
+
+@Gambino_Kennedy_Singh_2001 afirman que existe una facilidad en la implementación de estos estimadores puesto que se corresponde con la manera usual de un sistema tradicional de ponderación en las encuestas de hogares; es decir, se crea una columna nueva en la base de datos definiendo el nuevo factor de expansión, y esto se logra simplemente con la adición de nuevas covariables a la matriz de calibración. 
+
+En América Latina, El Instituto Nacional de Estadística del Uruguay, decidió rediseñar en 2021 la Encuesta Continua de Hogares en 2019, la cual estaba definida desde el 2006 con base en la selección de muestras mensuales independientes. En la metodología nueva, se implementó un sistema de panel rotativo, en donde la muestra de un mes está compuesta por seis grupos de rotación y la recolección de la información tiene un carácter mixto: para la recolección de la información en la primera visita, de forma presencial y, para el seguimiento durante los siguientes cinco meses, de forma telefónica. Además, el INE implementó un sistema de estimación basado en los estimadores compuestos con mejoras en la eficiencia estadística [@INEURY] 
+
+
+
+
+

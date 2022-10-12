@@ -23,7 +23,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-10-07" />
+<meta name="date" content="2022-10-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -248,6 +248,7 @@ div.csl-indent {
 <li class="chapter" data-level="9.4.2" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html#diferentes-formas-del-estimador-de-calibración"><i class="fa fa-check"></i><b>9.4.2</b> Diferentes formas del estimador de calibración</a></li>
 <li class="chapter" data-level="9.4.3" data-path="estimadores-de-calibración.html"><a href="estimadores-de-calibración.html#la-calibración-como-un-cambio-de-paradigma-en-una-teoría-de-estimación-exhaustiva"><i class="fa fa-check"></i><b>9.4.3</b> La calibración como un cambio de paradigma en una teoría de estimación exhaustiva</a></li>
 </ul></li>
+<li class="chapter" data-level="9.5" data-path="estimadores-compuestos.html"><a href="estimadores-compuestos.html"><i class="fa fa-check"></i><b>9.5</b> Estimadores compuestos</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="construcción-de-los-factores-de-expansión.html"><a href="construcción-de-los-factores-de-expansión.html"><i class="fa fa-check"></i><b>10</b> Construcción de los factores de expansión</a>
 <ul>
@@ -488,12 +489,7 @@ div.csl-indent {
 <p><span class="math display">\[
 \hat{\Delta} = \hat{t}_{y^{(t)}} - \hat{t}_{y^{(t-1)}}
 \]</span></p>
-<p>Además, es posible mejorar la estimación del total actual <span class="math inline">\(t_y^{(t)}\)</span> al tener en cuenta la información inducida por el traslape de la encuesta en el segundo periodo, así:</p>
-<p><span class="math display">\[
-\tilde{t}_{y^{(t)}} = \alpha \hat{t}_{y^{(t)}}
-+ (1 -\alpha) (\tilde{t}_{y^{(t-1)}} + \hat{\Delta})
-\]</span></p>
-<p>En donde <span class="math inline">\(0 &lt; \alpha &lt; 1\)</span>. Por otro lado, si el interés está en estimar algunas características asociadas con la pobreza, es posible utilizar estimadores más complejos. Siendo <span class="math inline">\(y_k\)</span> el ingreso del individuo <span class="math inline">\(k\)</span> y <span class="math inline">\(l\)</span> el umbral de pobreza, entonces el siguiente estimador puede ser utilizado</p>
+<p>Además, si el interés está en estimar algunas características asociadas con la pobreza, es posible utilizar estimadores más complejos. Siendo <span class="math inline">\(y_k\)</span> el ingreso del individuo <span class="math inline">\(k\)</span> y <span class="math inline">\(l\)</span> el umbral de pobreza, entonces el siguiente estimador puede ser utilizado</p>
 <p><span class="math display">\[
 \hat{F}_{\alpha}=\frac{1}{N}\sum_{k\in s} d_k
 \left(\frac{l-y_k}{l}\right)^{\alpha}I(y_k&lt;l)

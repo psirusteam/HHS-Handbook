@@ -36,7 +36,10 @@ Con base en lo anteriomente mencionado, es necesario tener en cuenta que sin est
 
 @Brakel2008 menciona que hay varias posibilidades para llevar a cabo este tipo de experimentos paralelos; por una parte es posible tener dos operaciones estadísticas en campo con el mismo tamaño de muestra, o que la nueva operación tenga un tamaño de muestra menor e inclusive esté restringida a alguna subpoblación de interés. En cualquier caso, son la forma correcta para evitar efectos de confusión. De lo contrario, incluso ante cambios nulos, no se podrá discernir si esto es el resultado de la coyuntura de interés, o del rediseño de la encuesta. La figura \@ref(fig:fig20_1) muestra un ejemplo simulado del resultado esperado de un experimento paralelo. La línea negra representa la serie regular, la linea azul representa la nueva serie con los cambios del rediseño y la distancia entre ambas, representa el impacto del rediseño en cada punto del tiempo. 
 
-![(\#fig:fig20_1)Series de tiempo para el rediseño de una encuesta. La línea negra representa la serie regular; la línea azul representa la serie nueva. Fuente: elaboración propia.](20Empalme_files/figure-latex/fig20_1-1.pdf) 
+<div class="figure">
+<img src="20Empalme_files/figure-html/fig20_1-1.svg" alt="Series de tiempo para el rediseño de una encuesta. La línea negra representa la serie regular; la línea azul representa la serie nueva. Fuente: elaboración propia." width="672" />
+<p class="caption">(\#fig:fig20_1)Series de tiempo para el rediseño de una encuesta. La línea negra representa la serie regular; la línea azul representa la serie nueva. Fuente: elaboración propia.</p>
+</div>
 
 Sin embargo, en algunos casos se hace imposible realizar dos levantamientos paralelos. Un claro ejemplo de este escenario lo tenemos en la pandemia por COVID-19, su efecto en las condiciones socioeconómicas de los hogares y su efecto en el modo de recolección de las encuestas. Como lo afirma @CEPAL_continua, desde la emergencia sanitaria derivada de la pandemia, las oficinas nacionales de estadística (ONE) tuvieron que interrumpir abruptamente la recopilación de información primaria como parte de muchas de sus operaciones estadísticas, incluidas las encuestas de hogares. A pesar de esto, las ONE pudieron seguir con sus levantamientos migrando de un modo de recolección presencial a telefónico. 
 Este rediseño repentino (cambio en la metodología de recolección) fue necesario para que se siguieran produciendo cifras de empleo y pobreza, indicadores particularmente importantes en el contexto de la pandemia, dado el profundo impacto que las mismas restricciones de movimiento y cuarentenas tuvieron en la condición de ocupación de las personas de la región y, por ende, en la afectación de sus ingresos. Nótese que en este caso, no fue posible que las ONE pudiesen realizar experimentos paralelos.
@@ -84,7 +87,10 @@ $$
 
 En la Figura \@ref(fig:fig20_2) es posible observar cómo se empalman las series regular y nueva a partir del ajuste proporcional. Nótese que la estructura de la serie se mantiene integralmente. 
 
-![(\#fig:fig20_2)Empalme de series de tiempo con el método del factor suavizado. La línea negra corresponde a la serie regular; la línea azul representa la serie nueva; la línea roja denota la serie empalmada. Fuente: elaboración propia.](20Empalme_files/figure-latex/fig20_2-1.pdf) 
+<div class="figure">
+<img src="20Empalme_files/figure-html/fig20_2-1.svg" alt="Empalme de series de tiempo con el método del factor suavizado. La línea negra corresponde a la serie regular; la línea azul representa la serie nueva; la línea roja denota la serie empalmada. Fuente: elaboración propia." width="672" />
+<p class="caption">(\#fig:fig20_2)Empalme de series de tiempo con el método del factor suavizado. La línea negra corresponde a la serie regular; la línea azul representa la serie nueva; la línea roja denota la serie empalmada. Fuente: elaboración propia.</p>
+</div>
 
 ### Ajuste sintético aditivo y multiplicativo
 
@@ -113,7 +119,10 @@ $$
 $$
 
 
-![(\#fig:fig20_3)Empalme de series de tiempo con el ajuste sintético multiplicativo. La línea negra corresponde a la serie regular; la línea azul representa la serie nueva; la línea roja denota la serie empalmada. Fuente: elaboración propia.](20Empalme_files/figure-latex/fig20_3-1.pdf) 
+<div class="figure">
+<img src="20Empalme_files/figure-html/fig20_3-1.svg" alt="Empalme de series de tiempo con el ajuste sintético multiplicativo. La línea negra corresponde a la serie regular; la línea azul representa la serie nueva; la línea roja denota la serie empalmada. Fuente: elaboración propia." width="672" />
+<p class="caption">(\#fig:fig20_3)Empalme de series de tiempo con el ajuste sintético multiplicativo. La línea negra corresponde a la serie regular; la línea azul representa la serie nueva; la línea roja denota la serie empalmada. Fuente: elaboración propia.</p>
+</div>
 
 
 ### Modelos estructurales
@@ -199,7 +208,10 @@ $$
 
 Los resultados de la aplicación del modelo son bastante satisfactorios, puesto que además de extraer la estructura de la serie, el modelo estructural es capaz de estimar correctamente el impacto de la intervención, sin necesidad de tener las dos series en paralelo. La Figura \@ref(fig:fig20_4) muestra el empalme de las series usando este acercamiento. Este tipo de modelos tienen bastantes ventajas metodológicas; por ejemplo, es posible ajustar más de un punto de intervención e incluso es posible incluir intervenciones de todo tipo (efecto en un solo tiempo, el mismo efecto o efecto creciente a partir de un tiempo). También es posible extraer la tendencia para suavizar la serie, la cual puede incluir componentes de estacionalidad o ciclos; además, es posible incluir otras series como covariables (con relaciones cambiantes en el tiempo).  
 
-![(\#fig:fig20_4)Empalme de series de tiempo usando un modelo estructural. La línea negra corresponde a la serie regular; la línea azul representa la serie nueva; la línea roja denota la serie empalmada. Fuente: elaboración propia.](20Empalme_files/figure-latex/fig20_4-1.pdf) 
+<div class="figure">
+<img src="20Empalme_files/figure-html/fig20_4-1.svg" alt="Empalme de series de tiempo usando un modelo estructural. La línea negra corresponde a la serie regular; la línea azul representa la serie nueva; la línea roja denota la serie empalmada. Fuente: elaboración propia." width="672" />
+<p class="caption">(\#fig:fig20_4)Empalme de series de tiempo usando un modelo estructural. La línea negra corresponde a la serie regular; la línea azul representa la serie nueva; la línea roja denota la serie empalmada. Fuente: elaboración propia.</p>
+</div>
 
 Por último, en el caso en el que se disponga de ambas series en paralelo, también es posible proponer un modelo estructural bivariado. Asumiendo que las dos series no tienen componente estacional, podemos formular el modelo estructural bivariado para el vector $(\hat \theta^{R}_t,\hat \theta^{N}_t)'$ está dado por:
 
@@ -227,7 +239,10 @@ $$
 
 Al igual que en el modelo estructural univariado, los resultados de la aplicación logran extraer la estructura de la serie y estimar correctamente el impacto de la intervención. La Figura \@ref(fig:fig20_5) muestra el empalme de las series usando este acercamiento. 
 
-![(\#fig:fig20_5)Empalme de series de tiempo usando un modelo estructural. La línea negra corresponde a la serie regular; la línea azul representa la serie nueva; la línea roja denota la serie empalmada. Fuente: elaboración propia.](20Empalme_files/figure-latex/fig20_5-1.pdf) 
+<div class="figure">
+<img src="20Empalme_files/figure-html/fig20_5-1.svg" alt="Empalme de series de tiempo usando un modelo estructural. La línea negra corresponde a la serie regular; la línea azul representa la serie nueva; la línea roja denota la serie empalmada. Fuente: elaboración propia." width="672" />
+<p class="caption">(\#fig:fig20_5)Empalme de series de tiempo usando un modelo estructural. La línea negra corresponde a la serie regular; la línea azul representa la serie nueva; la línea roja denota la serie empalmada. Fuente: elaboración propia.</p>
+</div>
 
 
 

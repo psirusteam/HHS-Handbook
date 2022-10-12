@@ -171,15 +171,17 @@ Esta metodología también se puede aplicar para grupos. La siguiente tabla mues
 
 Como se resaltó anteriormente, para datos muy sesgados, los métodos para la detección de valores atípicos podrían resultar problemáticos, ya que el intervalo en el que los puntos de datos no se consideran valores atípicos es simétrico alrededor de la mediana. Por ejemplo, la figura \@ref(fig:figou2) muestra el comportamiento estructural de algunas divisiones, es notable que todas las distribuciones de gasto y consumo en estos conceptos están extremadamente sesgadas.
 
-\begin{figure}
-\includegraphics[width=0.5\linewidth]{Pics/ou2} \caption{Distribución del consumo para algunas categorías del gasto.}(\#fig:figou2)
-\end{figure}
+<div class="figure">
+<img src="Pics/ou2.png" alt="Distribución del consumo para algunas categorías del gasto." width="50%" />
+<p class="caption">(\#fig:figou2)Distribución del consumo para algunas categorías del gasto.</p>
+</div>
 
 Para ajustarse a este problema es posible utilizar la transformación de Box-Cox con el fin de obtener una distribución simétrica para los datos antes de determinar los posibles valores atípicos. La figura \@ref(fig:figou1) muestra el proceso de iteración de esta metodología en algunas divisiones. La línea vertical en cada gráfica corresponde al mejor valor que podría tomar $\lambda$ para que los datos se ajusta a una distribución normal.
 
-\begin{figure}
-\includegraphics[width=0.5\linewidth]{Pics/ou1} \caption{Valores óptimos para las transformaciones de Box-Cox en algunas categorías del gasto.}(\#fig:figou1)
-\end{figure}
+<div class="figure">
+<img src="Pics/ou1.png" alt="Valores óptimos para las transformaciones de Box-Cox en algunas categorías del gasto." width="50%" />
+<p class="caption">(\#fig:figou1)Valores óptimos para las transformaciones de Box-Cox en algunas categorías del gasto.</p>
+</div>
 
 Luego de haber transformado apropiadamente los datos, es posible utilizar la metodología de Boxplot, uno de los métodos más básicos (aunque muy poderoso), para identificar valores atípicos. Como se mencionó en la sección anterior, la gráfica mostrará el mínimo de la muestra, el primer cuartil, la mediana, el tercer cuartil y el máximo. La caja va del primer al tercer cuartil (que contiene por definición el 50% de los datos más internos), así como la mediana que generalmente está marcada por una línea media. Para la aplicación específica de la detección de valores atípicos dentro de las divisiones COICOP es posible que la constante predeterminada $c$ varíe entre divisiones. Por ejemplo, la siguiente tabla muestra el número de valores atípicos detectados en cada división por este método.
 
