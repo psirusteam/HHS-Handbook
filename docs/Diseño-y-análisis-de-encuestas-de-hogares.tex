@@ -35,6 +35,19 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Diseño y análisis estadístico en las encuestas de hogares de América Latina},
+  pdfauthor={Andrés Gutiérrez},
+  pdflang={es},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
 \usepackage[margin = 2cm]{geometry}
 \usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
@@ -99,23 +112,10 @@
 \fi
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
-\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\urlstyle{same} % disable monospaced font for URLs
-\hypersetup{
-  pdftitle={Diseño y análisis estadístico en las encuestas de hogares de América Latina},
-  pdfauthor={Andrés Gutiérrez},
-  pdflang={es},
-  colorlinks=true,
-  linkcolor={blue},
-  filecolor={Maroon},
-  citecolor={Blue},
-  urlcolor={Blue},
-  pdfcreator={LaTeX via pandoc}}
 
 \title{Diseño y análisis estadístico en las encuestas de hogares de América Latina}
 \author{Andrés Gutiérrez\footnote{Experto Regional en Estadísticas Sociales - Comisión Económica para América Latina y el Caribe (CEPAL) - \href{mailto:andres.gutierrez@cepal.org}{\nolinkurl{andres.gutierrez@cepal.org}}}}
-\date{2022-09-29}
+\date{2022-10-07}
 
 \begin{document}
 \maketitle
@@ -141,7 +141,7 @@ La coordinación sustantiva de la colección Metodologías de la CEPAL está a c
 
 Esta publicación es el resultado de un proceso de varios años de investigación e interacción con los países miembros en diversas asistencias técnicas concernientes con el diseño, rediseño y análisis posterior de las encuestas de hogares. Dicho proceso fue llevado a cabo por la División de Estadísticas de la CEPAL, bajo la coordinación de Rolando Ocampo, Director de la División de Estadísticas y de Xavier Mancero, Jefe de la Unidad de Estadísticas Sociales.
 
-La redacción del documento estuvo a cargo de Andrés Gutiérrez, Asesor Regional en Estadísticas Sociales de la CEPAL. Las metodologías presentadas en este documento se han beneficiado de los valiosos aportes y sugerencias de funcionarios de la CEPAL, así como del personal de las Oficinas Nacionales de Estadística de los países beneficiarios de las asistencias técnicas durante los años entre 2017 y 2022. El autor agradece a Simone Ceccini, a Hanwen Zhang y a Xavier Mancero por la lectura detallada de este documento y sus comentarios.
+La redacción del documento estuvo a cargo de Andrés Gutiérrez, Asesor Regional en Estadísticas Sociales de la CEPAL. Las metodologías presentadas en este documento se han beneficiado de los valiosos aportes y sugerencias de funcionarios de la CEPAL, así como del personal de las Oficinas Nacionales de Estadística de los países beneficiarios de las asistencias técnicas durante los años entre 2017 y 2022. El autor agradece a Simone Ceccini, y a Hanwen Zhang por la lectura detallada de este documento y sus comentarios.
 
 \hypertarget{resumen}{%
 \chapter*{Resumen}\label{resumen}}
@@ -584,7 +584,7 @@ Este tipo de encuestas son diseñadas para recolectar información únicamente e
   >{\centering\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1449}}
   >{\centering\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1449}}@{}}
 \caption{\emph{Esquema de una encuesta transversal.}}\tabularnewline
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\centering
 Hogar
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
@@ -600,9 +600,9 @@ Tiempo 4
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
 Tiempo \(T\)
 \end{minipage} \\
-\midrule()
+\midrule
 \endfirsthead
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\centering
 Hogar
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
@@ -618,7 +618,7 @@ Tiempo 4
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
 Tiempo \(T\)
 \end{minipage} \\
-\midrule()
+\midrule
 \endhead
 1 & & \textbf{x} & & & & \\
 2 & & \textbf{x} & & & & \\
@@ -626,7 +626,7 @@ Tiempo \(T\)
 4 & & \textbf{x} & & & & \\
 \ldots{} & & \textbf{x} & & & & \\
 \(n\) & & \textbf{x} & & & & \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 \hypertarget{encuestas-repetidas}{%
@@ -643,7 +643,7 @@ Cuando existe interés en realizar un seguimiento del fenómeno en observación 
   >{\centering\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1449}}
   >{\centering\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1449}}@{}}
 \caption{\emph{Esquema de una encuesta repetida.}}\tabularnewline
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\centering
 Hogar
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
@@ -659,9 +659,9 @@ Tiempo 4
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
 Tiempo \(T\)
 \end{minipage} \\
-\midrule()
+\midrule
 \endfirsthead
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\centering
 Hogar
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
@@ -677,7 +677,7 @@ Tiempo 4
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
 Tiempo \(T\)
 \end{minipage} \\
-\midrule()
+\midrule
 \endhead
 1 & \textbf{x} & & & & & \\
 2 & & \textbf{x} & & & & \\
@@ -685,7 +685,7 @@ Tiempo \(T\)
 4 & & & & \textbf{x} & & \\
 \ldots{} & & & & & \textbf{x} & \\
 \(n\) & & & & & & \textbf{x} \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 \hypertarget{encuestas-panel}{%
@@ -702,7 +702,7 @@ Las encuestas en panel están diseñadas para recolectar información periódica
   >{\centering\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1449}}
   >{\centering\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1449}}@{}}
 \caption{\emph{Esquema de una encuesta tipo panel.}}\tabularnewline
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\centering
 Hogar
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
@@ -718,9 +718,9 @@ Tiempo 4
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
 Tiempo \(T\)
 \end{minipage} \\
-\midrule()
+\midrule
 \endfirsthead
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\centering
 Hogar
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
@@ -736,7 +736,7 @@ Tiempo 4
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
 Tiempo \(T\)
 \end{minipage} \\
-\midrule()
+\midrule
 \endhead
 1 & \textbf{x} & \textbf{x} & \textbf{x} & \textbf{x} & \textbf{x} & \textbf{x} \\
 2 & \textbf{x} & \textbf{x} & \textbf{x} & \textbf{x} & \textbf{x} & \textbf{x} \\
@@ -744,7 +744,7 @@ Tiempo \(T\)
 4 & & & & & & \\
 \ldots{} & & & & & & \\
 \(n\) & & & & & & \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 \hypertarget{encuestas-de-panel-dividido}{%
@@ -761,7 +761,7 @@ Para hacerle frente a las dificultades propias de las encuestas de panel y poder
   >{\centering\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1449}}
   >{\centering\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1449}}@{}}
 \caption{\emph{Esquema de una encuesta de panel dividido.}}\tabularnewline
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\centering
 Hogar
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
@@ -777,9 +777,9 @@ Tiempo 4
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
 Tiempo \(T\)
 \end{minipage} \\
-\midrule()
+\midrule
 \endfirsthead
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\centering
 Hogar
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
@@ -795,7 +795,7 @@ Tiempo 4
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
 Tiempo \(T\)
 \end{minipage} \\
-\midrule()
+\midrule
 \endhead
 1 & \textbf{x} & \textbf{x} & \textbf{x} & \textbf{x} & \textbf{x} & \textbf{x} \\
 2 & \textbf{x} & & & & & \\
@@ -804,7 +804,7 @@ Tiempo \(T\)
 5 & & & & \textbf{x} & & \\
 \ldots{} & & & & & \textbf{x} & \\
 \(n\) & & & & & & \textbf{x} \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 \hypertarget{encuestas-de-panel-rotativo}{%
@@ -821,7 +821,7 @@ Mantener una muestra de panel es un proceso costoso desde una perspectiva econó
   >{\centering\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1449}}
   >{\centering\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1449}}@{}}
 \caption{\emph{Esquema de una encuesta de panel rotativo.}}\tabularnewline
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\centering
 Hogar
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
@@ -837,9 +837,9 @@ Tiempo 5
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
 Tiempo 6
 \end{minipage} \\
-\midrule()
+\midrule
 \endfirsthead
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\centering
 Hogar
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
@@ -855,7 +855,7 @@ Tiempo 5
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
 Tiempo 6
 \end{minipage} \\
-\midrule()
+\midrule
 \endhead
 1 & \textbf{x} & & & & & \\
 2 & \textbf{x} & \textbf{x} & & & & \\
@@ -865,7 +865,7 @@ Tiempo 6
 6 & & & & \textbf{x} & \textbf{x} & \textbf{x} \\
 \ldots{} & & & & & \textbf{x} & \textbf{x} \\
 \(n\) & & & & & & \textbf{x} \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 \hypertarget{rotaciuxf3n-de-paneles}{%
@@ -889,13 +889,13 @@ En América Latina hay una gran variedad de encuestas de hogares que utilizan di
 
 \begin{longtable}[]{@{}cccccc@{}}
 \caption{\emph{Rotación de paneles en un diseño 2(2)2.}}\tabularnewline
-\toprule()
+\toprule
 Año & Trimestre & A & B & C & D \\
-\midrule()
+\midrule
 \endfirsthead
-\toprule()
+\toprule
 Año & Trimestre & A & B & C & D \\
-\midrule()
+\midrule
 \endhead
 2016 & T1 & \emph{a1} & \emph{b1} & \emph{c1} & \emph{d1} \\
 & T2 & \emph{a1} & \emph{b2} & \emph{c2} & \emph{d1} \\
@@ -909,7 +909,7 @@ Año & Trimestre & A & B & C & D \\
 & T2 & \emph{a3} & \emph{b4} & \emph{c4} & \emph{d3} \\
 & T3 & \emph{a4} & \emph{b4} & \emph{c4} & \emph{d4} \\
 & T4 & \emph{a4} & \emph{b3} & \emph{c5} & \emph{d4} \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 Otro ejemplo de una encuesta que utiliza rotación de paneles es la \emph{Encuesta Continua de Empleo} de Bolivia que, aplicada por el Instituto Nacional de Estadística, hace uso de una metodología mixta que permite el seguimiento continuo y transversal a la tasa de desempleo y a la tasa de subocupación, así como el seguimiento a los cambios que se presentan entre los periodos de interés (trimestres y semestres), a través del análisis longitudinal de los datos en el sector urbano (pues el diseño no es rotativo en el sector rural, debido a la baja incidencia de desempleo en esta zona). En este esquema rotacional 4(0)1 una vivienda es entrevistada durante cuatro trimestres consecutivos, y luego sale del panel definitivamente. Un ejemplo de este tipo de esquemas se presenta en la siguiente tabla.
@@ -928,13 +928,13 @@ Otro ejemplo de una encuesta que utiliza rotación de paneles es la \emph{Encues
 
 \begin{longtable}[]{@{}cccccc@{}}
 \caption{\emph{Rotación de paneles en un diseño 4(0)1.}}\tabularnewline
-\toprule()
+\toprule
 Año & Trimestre & A & B & C & D \\
-\midrule()
+\midrule
 \endfirsthead
-\toprule()
+\toprule
 Año & Trimestre & A & B & C & D \\
-\midrule()
+\midrule
 \endhead
 2016 & T1 & \emph{a1} & \emph{b1} & \emph{c1} & \emph{d1} \\
 & T2 & \emph{a1} & \emph{b2} & \emph{c1} & \emph{d1} \\
@@ -948,7 +948,7 @@ Año & Trimestre & A & B & C & D \\
 & T2 & \emph{a3} & \emph{b4} & \emph{c3} & \emph{d3} \\
 & T3 & \emph{a3} & \emph{b4} & \emph{c4} & \emph{d3} \\
 & T4 & \emph{a3} & \emph{b4} & \emph{c4} & \emph{d4} \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 Los diseños de las encuestas de hogares deben tener en cuenta la rotación de los paneles y el número de veces que es visitado un hogar. Esta caracterización depende directamente de los indicadores a los cuales la encuesta debe responder. Por ejemplo, el diseño de rotación debe ser diferente si el interés se centra en indicadores de cambio trimestral, a si se requieren indicadores de cambio anual. Por ejemplo, el diseño 4(0)1 es conveniente si el objetivo está en comparar las estimaciones de la tasa de desocupación el mismo mes entre diferentes años, pero no lo será si se quiere conocer el cambio de estado en la situación del trabajo para las mismas personas en dos meses iguales de diferentes años. Nótese que un aspecto importante en la definición de los esquemas longitudinales radica en el tiempo en el que un hogar pertenecerá al panel. Por supuesto, hay que tener en cuenta que la tasa de ausencia de respuesta y pérdida de muestra por desgaste del respondiente crecerá en la medida en que se le pida a un hogar una participación más duradera en el tiempo.
@@ -1048,7 +1048,7 @@ En donde \(t_{y^{(2)}}\) es el total de interés en el tiempo \(t = 2\), y \(t_{
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1552}}
   >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1552}}@{}}
 \caption{\emph{Composición del mercado de trabajo en dos periodos de tiempo (cifras en miles de personas). Las columnas corresponden al segundo periodo y las filas al primero.}}\tabularnewline
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\centering
 Condición
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
@@ -1060,9 +1060,9 @@ Inactivo
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
 \textbf{Total}
 \end{minipage} \\
-\midrule()
+\midrule
 \endfirsthead
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\centering
 Condición
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
@@ -1074,13 +1074,13 @@ Inactivo
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
 \textbf{Total}
 \end{minipage} \\
-\midrule()
+\midrule
 \endhead
 Ocupado & 9222 & 128 & 662 & \textbf{10012} \\
 Desocupado & 221 & 322 & 151 & \textbf{694} \\
 Inactivo & 256 & 164 & 5941 & \textbf{6361} \\
 \textbf{Total} & \textbf{9699} & \textbf{614} & \textbf{6754} & \textbf{17067} \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 Una comparación más profunda está dada en términos de los \textbf{cambios brutos}, que corresponden a las entradas de la tabla cruzada. De esta manera, los cambios en la fuerza de trabajo de un periodo a otro, se explican porque el \(92.1 \%=(9222/10012) \times 100 \%\) de los empleados conservó su empleo; el \(31.8\% = (221 / 694 )\times 100 \%\) de los desempleados y el \(4.0 \% = (256/6361)\times 100 \%\) de los inactivos consiguió un nuevo empleo; el \(6.6\% = (662/10012)\times 100 \%\) de los empleados es ahora inactivo en la fuerza laboral y el \(1.3\% = (128/10012)\times 100 \%\) de los empleados perdió su empleo. Así mismo, el \(46.4\% = (322/694)\times 100 \%\) de los desempleados conservó su clasificación; el \(2.6\% = (256 / 6361)\times 100 \%\) de los inactivos entró a la fuerza laboral como desempleado y el \(21.8\% = (151 / 694)\times 100 \%\) de los desempleados es ahora inactivo.
@@ -1551,7 +1551,7 @@ El siguiente cuadro ejemplifica la evaluación de estas técnicas para dos escen
   >{\raggedleft\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.0833}}
   >{\raggedleft\arraybackslash}p{(\columnwidth - 24\tabcolsep) * \real{0.0758}}@{}}
 \caption{\emph{Efectos de diseño \(DEFF_p\) y efecto de diseño generalizado \(G(S)\) considerando tres (\(H=3\)) y cuatro (\(H=4\)) estratos para ocho variables.}}\tabularnewline
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\raggedleft
 DEFF
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
@@ -1579,9 +1579,9 @@ KmJ (H=4)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
 BB (H=4)
 \end{minipage} \\
-\midrule()
+\midrule
 \endfirsthead
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\raggedleft
 DEFF
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
@@ -1609,7 +1609,7 @@ KmJ (H=4)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
 BB (H=4)
 \end{minipage} \\
-\midrule()
+\midrule
 \endhead
 \(\bar x_1\) & 0.87 & 0.85 & 0.81 & 0.82 & 1 & 0.88 & 0.8 & 0.70 & 0.76 & 0.72 & 0.71 & 0.77 \\
 \(\bar x_2\) & 0.89 & 0.82 & 0.95 & 0.97 & 0.94 & 0.88 & 0.79 & 0.74 & 0.75 & 0.77 & 0.75 & 0.71 \\
@@ -1620,7 +1620,7 @@ BB (H=4)
 \(\bar x_7\) & 0.87 & 0.95 & 0.99 & 0.83 & 0.86 & 0.84 & 0.75 & 0.7 & 0.77 & 0.72 & 0.77 & 0.77 \\
 \(\bar x_8\) & 0.93 & 0.82 & 0.91 & 0.99 & 0.93 & 0.88 & 0.77 & 0.74 & 0.72 & 0.78 & 0.76 & 0.75 \\
 G(S) & 7.07 & 7.01 & 7.16 & 7.35 & 7.27 & 7.05 & 6.22 & 5.81 & 6.08 & 5.87 & 6.03 & 5.97 \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 \normalsize
@@ -1641,7 +1641,7 @@ El efecto diseño no es el único aspecto por evaluar para la elección del proc
   >{\centering\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1013}}
   >{\centering\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1646}}@{}}
 \caption{\emph{Matriz de coincidencias, cuyas entradas están definidas como el porcentaje de UPM coincidentes en cada uno de los estratos creados por los métodos estudiados.}}\tabularnewline
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\centering
 Técnica
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
@@ -1659,9 +1659,9 @@ LH-K
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
 Percentil
 \end{minipage} \\
-\midrule()
+\midrule
 \endfirsthead
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\centering
 Técnica
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
@@ -1679,7 +1679,7 @@ LH-K
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
 Percentil
 \end{minipage} \\
-\midrule()
+\midrule
 \endhead
 \textbf{Q} & 1 & 0,64 & 0,92 & 0,84 & 0,89 & 0,89 & 0,82 \\
 \textbf{DH} & 0,64 & 1 & 0,68 & 0,62 & 0,71 & 0,71 & 0,74 \\
@@ -1687,7 +1687,7 @@ Percentil
 \textbf{GH} & 0,84 & 0,62 & 0,82 & 1 & 0,78 & 0,78 & 0,73 \\
 \textbf{KmJ} & 0,89 & 0,71 & 0,96 & 0,78 & 1 & 1,00 & 0,93 \\
 \textbf{BB} & 0,89 & 0,71 & 0,96 & 0,78 & 1,00 & 1 & 0,93 \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 Por último, también se debe evaluar la coherencia de la distribución de las diferentes variables agregadas a nivel de UPM en los estratos. Por ejemplo, la proporción de personas mayores de 15 años alfabetizadas debería tener mayor incidencia en los estratos más altos, y este patrón también se debería observar para diferentes indicadores como la proporción de hogares con internet, la proporción de tenencia de refrigerador, la proporción de tenencia de televisión por cable, la proporción de tenencia de automóvil, la proporción de hogares con saneamiento adecuado, la proporción de hogares con pisos adecuados, la proporción de personas con educación superior, entre otras. La figura \ref{fig:estrata} muestra el comportamiento esperado en los estratos de muestreo para algunas variables de interés. De esta forma, el estrato uno debería presentar condiciones económicas más adversas, el estrato dos debería tener mejores condiciones, siendo el tercer estrato el que agrupa a las UPM con menores dificultades socioeconómicas. En el área rural debiesen aparecer una menor proporción de UPM en el estrato 3, dadas las condiciones menos favorables.
@@ -2397,7 +2397,7 @@ La siguiente tabla resume los resultados del ejercicio para \(\bar{n}_{II} =\) 1
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1579}}
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1579}}
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1579}}@{}}
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\centering
 Hogares promedio por UPM \((\bar{n}_{II})\)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
@@ -2411,10 +2411,10 @@ Muestra de hogares \((n_{II})\)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
 Muestra de personas \((n)\)
 \end{minipage} \\
-\midrule()
+\midrule
 \endhead
 10 & 35 & 2.2 & 1598 & 15982 & 55936 \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 Por supuesto que es posible plantear otros escenarios a medida que se evalúe el efecto que conlleva el cambio del número de hogares que se seleccionan en cada UPM. Por ejemplo, el investigador podría proponer que se seleccionarán en promedio 5 hogares por UPM, lo cual cambiaría el número de UPM que serían seleccionadas en la muestra de la primera etapa, así como también el número total de personas que serían seleccionadas en todo el operativo. Debido a que el efecto de diseño es una función del número de hogares promedio a seleccionar en las UPM, esta cifra también variará. A continuación se muestran algunos resultados que permiten establecer estos escenarios cuando se varía el tamaño de muestra promedio de hogares por UPM. La escogencia del escenario ideal se debe dar en términos de la conveniencia logística y presupuestal en el estudio. Siguiendo las recomendaciones internacionales, se desestimarían los escenarios con efectos de diseño mayores a 3.
@@ -2426,7 +2426,7 @@ Por supuesto que es posible plantear otros escenarios a medida que se evalúe el
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1579}}
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1579}}
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1579}}@{}}
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\centering
 Hogares promedio por UPM \((\bar{n}_{II})\)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
@@ -2440,7 +2440,7 @@ Muestra de hogares \((n_{II})\)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
 Muestra de personas \((n)\)
 \end{minipage} \\
-\midrule()
+\midrule
 \endhead
 5 & 18 & 1.6 & 2315 & 11575 & 40512 \\
 10 & 35 & 2.2 & 1598 & 15982 & 55936 \\
@@ -2451,7 +2451,7 @@ Muestra de personas \((n)\)
 35 & 122 & 5.1 & 1085 & 37976 & 132915 \\
 40 & 140 & 5.7 & 1059 & 42366 & 148282 \\
 45 & 158 & 6.3 & 1039 & 46754 & 163640 \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 \hypertarget{ejemplo-ingreso-promedio-por-persona}{%
@@ -2468,7 +2468,7 @@ La siguiente tabla muestra los resultados del ejercicio al seleccionar \(\bar{n}
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1579}}
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1579}}
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1579}}@{}}
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\centering
 Hogares promedio por UPM \((\bar{n}_{II})\)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
@@ -2482,10 +2482,10 @@ Muestra de hogares \((n_{II})\)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
 Muestra de personas \((n)\)
 \end{minipage} \\
-\midrule()
+\midrule
 \endhead
 15 & 57 & 3 & 859 & 12892 & 48861 \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 A continuación se muestran algunos resultados que permiten establecer otros escenarios de muestreo cuando se varía el tamaño de muestra promedio de hogares por UPM. Recuérdese que cualquiera de estos escenarios es válido, desde el punto de vista de la eficiencia estadística, aunque no todos serán válidos si se tienen en cuenta otros aspectos como los logísticos o presupuestales. Por ejemplo, si se escogiera el penúltimo escenario, entonces para 50 hogares por UPM, se debería encuestar en promedio a 190 personas, lo cual reduciría el número de UPM a 662, pero aumentaría el tamaño de muestra general a 33098 personas, lo cual involucraría mayores costos de contratación de encuestadores, supervisores y seguramente un operativo de campo de más días de duración. Siguiendo las recomendaciones internacionales, se desestimarían los escenarios con efectos de diseño mayores a 3.
@@ -2497,7 +2497,7 @@ A continuación se muestran algunos resultados que permiten establecer otros esc
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1579}}
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1579}}
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1579}}@{}}
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\centering
 Hogares promedio por UPM \((\bar{n}_{II})\)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
@@ -2511,7 +2511,7 @@ Muestra de hogares \((n_{II})\)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
 Muestra de personas \((n)\)
 \end{minipage} \\
-\midrule()
+\midrule
 \endhead
 5 & 19 & 1.6 & 1422 & 7108 & 26938 \\
 10 & 38 & 2.3 & 1000 & 10001 & 37902 \\
@@ -2521,7 +2521,7 @@ Muestra de personas \((n)\)
 30 & 114 & 4.9 & 719 & 21560 & 81711 \\
 50 & 190 & 7.6 & 662 & 33098 & 125443 \\
 100 & 379 & 14.2 & 619 & 61857 & 234439 \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 \hypertarget{ejemplo-tasa-de-desocupaciuxf3n-en-adultos-mayores}{%
@@ -2538,7 +2538,7 @@ La siguiente tabla muestra los resultados del ejercicio, que implica que selecci
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1579}}
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1579}}
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1579}}@{}}
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\centering
 Hogares promedio por UPM \((\bar{n}_{II})\)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
@@ -2552,10 +2552,10 @@ Muestra de hogares \((n_{II})\)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
 Muestra de personas \((n)\)
 \end{minipage} \\
-\midrule()
+\midrule
 \endhead
 20 & 4.6 & 3.5 & 1581 & 31617 & 7272 \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 En este caso la muestra en los 31617 hogares induce un operativo muy grande que implicaría la observación de \(31617 * 5 = 158085\) personas en los hogares, de las cuales \(n = 7272\) serían los casos de interés. Como se ha visto en los anteriores ejemplos, es posible plantear otros escenarios a medida que se evalúe el efecto que conlleva el cambio del número de hogares que se seleccionan en cada UPM. A continuación se muestran algunos resultados que permite establecer estos escenarios cuando se varía el tamaño de muestra promedio de hogares por UPM. Siguiendo las recomendaciones internacionales, se desestimarían los escenarios con efectos de diseño mayores a 3.
@@ -2567,7 +2567,7 @@ En este caso la muestra en los 31617 hogares induce un operativo muy grande que 
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1579}}
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1579}}
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1579}}@{}}
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\centering
 Hogares promedio por UPM \((\bar{n}_{II})\)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
@@ -2581,7 +2581,7 @@ Muestra de hogares \((n_{II})\)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
 Muestra de personas \((n)\)
 \end{minipage} \\
-\midrule()
+\midrule
 \endhead
 5 & 1.1 & 1.1 & 1985 & 9926 & 2283 \\
 10 & 2.3 & 1.9 & 1716 & 17157 & 3946 \\
@@ -2591,7 +2591,7 @@ Muestra de personas \((n)\)
 30 & 6.9 & 5.1 & 1536 & 46074 & 10597 \\
 50 & 11.5 & 8.3 & 1500 & 74983 & 17246 \\
 100 & 23.0 & 16.4 & 1472 & 147222 & 33861 \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 \hypertarget{tamauxf1o-de-muestra-para-upm-y-hogares}{%
@@ -2638,7 +2638,7 @@ La siguiente tabla muestra los resultados del ejercicio para \(\bar{n}_{II} = 12
   >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1765}}
   >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1765}}
   >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2647}}@{}}
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\centering
 Hogares promedio por UPM \((\bar{n}_{II})\)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
@@ -2648,10 +2648,10 @@ Muestra de UPM \((n_I)\)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
 Muestra de hogares \((n_{II})\)
 \end{minipage} \\
-\midrule()
+\midrule
 \endhead
 12 & 2.9 & 1338 & 16056 \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 A continuación se muestran algunos resultados que permiten establecer otros escenarios de muestreo al variar el tamaño de muestra promedio de hogares por UPM. Nótese que, por ejemplo, en el caso de seleccionar 20 hogares por UPM, se debería seleccionar una muestra de 23695 hogares en tan solo 1185 UPM. Por otro lado, si sólo se seleccionaran 2 hogares por UPM, se tendrían que visitar 3246 UPM en todo el país, aunque el número de encuestas totales descendería a 6493.
@@ -2663,7 +2663,7 @@ Para este tipo de operativos, en donde los cuestionarios de gasto de los hogares
   >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1765}}
   >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1765}}
   >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2647}}@{}}
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\centering
 Hogares promedio por UPM \((\bar{n}_{II})\)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
@@ -2673,7 +2673,7 @@ Muestra de UPM \((n_I)\)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
 Muestra de hogares \((n_{II})\)
 \end{minipage} \\
-\midrule()
+\midrule
 \endhead
 2 & 1.2 & 3246 & 6493 \\
 4 & 1.5 & 2102 & 8407 \\
@@ -2685,7 +2685,7 @@ Muestra de hogares \((n_{II})\)
 16 & 3.6 & 1242 & 19877 \\
 18 & 3.9 & 1210 & 21787 \\
 20 & 4.3 & 1185 & 23695 \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 \hypertarget{ejemplo-proporciuxf3n-de-hogares-sin-agua-potable}{%
@@ -2700,7 +2700,7 @@ La siguiente tabla muestra los resultados del ejercicio para \(\bar{n}_{II} =\) 
   >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1765}}
   >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1765}}
   >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2647}}@{}}
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\centering
 Hogares promedio por UPM \((\bar{n}_{II})\)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
@@ -2710,10 +2710,10 @@ Muestra de UPM \((n_I)\)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
 Muestra de hogares \((n_{II})\)
 \end{minipage} \\
-\midrule()
+\midrule
 \endhead
 10 & 1.3 & 436 & 4360 \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 A continuación se muestran algunos resultados que permiten establecer otros escenarios de muestreo al variar el tamaño de muestra promedio de hogares por UPM. Observe que el efecto de diseño DEFF es directamente proporcional al número de hogares entrevistados por UPM y al tamaño de muestra de hogares final; de la misma manera, es inversamente proporcional al número de UPM.
@@ -2723,7 +2723,7 @@ A continuación se muestran algunos resultados que permiten establecer otros esc
   >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1765}}
   >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1765}}
   >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2647}}@{}}
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\centering
 Hogares promedio por UPM \((\bar{n}_{II})\)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
@@ -2733,7 +2733,7 @@ Muestra de UPM \((n_I)\)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
 Muestra de hogares \((n_{II})\)
 \end{minipage} \\
-\midrule()
+\midrule
 \endhead
 5 & 1.1 & 758 & 3790 \\
 10 & 1.3 & 436 & 4360 \\
@@ -2744,7 +2744,7 @@ Muestra de hogares \((n_{II})\)
 35 & 2.2 & 205 & 7190 \\
 40 & 2.3 & 194 & 7757 \\
 45 & 2.5 & 185 & 8323 \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 \hypertarget{tamauxf1o-de-muestra-para-upm-y-personas}{%
@@ -2784,7 +2784,7 @@ La siguiente tabla muestra los resultados del ejercicio al seleccionar \(\bar{n}
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1429}}
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1429}}
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1746}}@{}}
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\centering
 Personas seleccionadas por UPM \((\bar{n} / r )\)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
@@ -2798,10 +2798,10 @@ Muestra de personas empleadas \((n)\)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
 Muestra de personas \((n/r)\)
 \end{minipage} \\
-\midrule()
+\midrule
 \endhead
 50 & 23 & 1.8 & 1219 & 28029 & 60933 \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 A continuación se muestran algunos resultados que permiten establecer otros escenarios de muestreo cuando se varía el tamaño de muestra promedio de hogares por UPM. Siguiendo las recomendaciones internacionales, se desestimarían los escenarios con efectos de diseño mayores a 3.
@@ -2813,7 +2813,7 @@ A continuación se muestran algunos resultados que permiten establecer otros esc
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1429}}
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1429}}
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1746}}@{}}
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\centering
 Personas seleccionadas por UPM \((\bar{n} / r )\)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
@@ -2827,14 +2827,14 @@ Muestra de personas empleadas \((n)\)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
 Muestra de personas \((n/r)\)
 \end{minipage} \\
-\midrule()
+\midrule
 \endhead
 25 & 12 & 1.4 & 1857 & 21360 & 46435 \\
 50 & 23 & 1.8 & 1219 & 28029 & 60933 \\
 75 & 34 & 2.3 & 1006 & 34695 & 75424 \\
 100 & 46 & 2.7 & 899 & 41360 & 89913 \\
 125 & 58 & 3.1 & 835 & 48023 & 104398 \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 \hypertarget{ejemplo-proporciuxf3n-de-personas-analfabetas-pobres}{%
@@ -2851,7 +2851,7 @@ La siguiente tabla muestra los resultados del ejercicio al seleccionar un promed
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1429}}
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1429}}
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1746}}@{}}
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\centering
 Personas seleccionadas por UPM \((\bar{n} / r)\)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
@@ -2865,10 +2865,10 @@ Muestra de personas analfabetas \((n)\)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
 Muestra de personas \((n/r)\)
 \end{minipage} \\
-\midrule()
+\midrule
 \endhead
 100 & 14 & 1.6 & 327 & 4574 & 32671 \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 Es posible plantear otros escenarios a medida que se evalúe el efecto que conlleva el cambio del número de hogares que se seleccionan en cada UPM. A continuación se muestran algunos resultados que permite establecer estos escenarios cuando se varía el tamaño de muestra promedio de hogares por UPM.
@@ -2880,7 +2880,7 @@ Es posible plantear otros escenarios a medida que se evalúe el efecto que conll
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1429}}
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1429}}
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1746}}@{}}
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\centering
 Personas seleccionadas por UPM \((\bar{n} / r )\)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
@@ -2894,14 +2894,14 @@ Muestra de personas analfabetas \((n)\)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
 Muestra de personas \((n/r)\)
 \end{minipage} \\
-\midrule()
+\midrule
 \endhead
 25 & 3.5 & 1.1 & 917 & 3211 & 22936 \\
 50 & 7.0 & 1.3 & 524 & 3665 & 26179 \\
 75 & 10.5 & 1.4 & 392 & 4120 & 29429 \\
 100 & 14.0 & 1.6 & 327 & 4574 & 32671 \\
 125 & 17.5 & 1.7 & 287 & 5029 & 35921 \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 \hypertarget{tamauxf1o-de-muestra-para-otros-paruxe1metros-de-interuxe9s}{%
@@ -4835,7 +4835,7 @@ En donde \(\hat{\theta}_{hg}\) es el estimador del parámetro retirando el \(g\)
   >{\centering\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1781}}
   >{\centering\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1781}}
   >{\centering\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1781}}@{}}
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\centering
 \(k\)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
@@ -4851,7 +4851,7 @@ UPM
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
 \(d_k^{(4)}\)
 \end{minipage} \\
-\midrule()
+\midrule
 \endhead
 1 & Estrato1 & UPM1 & 0 & 1,03 & 1,03 & 1,03 \\
 2 & Estrato1 & UPM1 & 0 & 1,03 & 1,03 & 1,03 \\
@@ -4861,7 +4861,7 @@ UPM
 6 & Estrato2 & UPM3 & 1,03 & 1,03 & 0 & 1,03 \\
 7 & Estrato2 & UPM4 & 1,03 & 1,03 & 1,03 & 0 \\
 8 & Estrato2 & UPM4 & 1,03 & 1,03 & 1,03 & 0 \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 \hypertarget{el-muxe9todo-de-las-ruxe9plicas-repetidas-balanceadas}{%
@@ -4906,9 +4906,9 @@ Bajo esta metodología BRR, el estimador de la varianza toma la siguiente forma:
 En donde \(\hat{\theta}_a\) es el estimador del parámetro de interés en la réplica \(a\). A continuación se ejemplifica la estructura final de una base de datos de pesos replicados con esta técnica en el mismo conjunto reducido, considerando que hay dos estratos.
 
 \begin{longtable}[]{@{}ccccc@{}}
-\toprule()
+\toprule
 \(k\) & Estrato & UPM & \(d_k^{(1)}\) & \(d_k^{(2)}\) \\
-\midrule()
+\midrule
 \endhead
 1 & Estrato1 & UPM1 & 2 & 0 \\
 2 & Estrato1 & UPM1 & 2 & 0 \\
@@ -4918,7 +4918,7 @@ En donde \(\hat{\theta}_a\) es el estimador del parámetro de interés en la ré
 6 & Estrato2 & UPM3 & 2 & 0 \\
 7 & Estrato2 & UPM4 & 0 & 2 \\
 8 & Estrato2 & UPM4 & 0 & 2 \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 Una desventaja de este método BRR es que las unidades en dominios con muestra pequeña pueden estar ausentes en algunas combinaciones de pesos replicados por el diseño ortogonal. Lo anterior conlleva una pérdida de precisión en el cálculo del error estándar. Una solución a este problema es modificar los pesos en los pesos replicados. Para la aplicación de la Réplicas Repetidas Balanceadas es recomendable usar el método de Fay, en donde se siguen los lineamientos basados en la matriz de Hadamard, aunque las UPM no son retiradas completamente, sino que su peso se modifica de la siguiente manera:
@@ -4939,9 +4939,9 @@ En donde \(0<\rho<1\). Algunos estudios por simulación han mostrado una buena e
 En donde \(\hat{\theta}_a\) es el estimador del parámetro de interés en la réplica \(a\). A continuación se ejemplifica la estructura final de una base de datos de pesos replicados con el ajuste de Fay en el mismo conjunto reducido.
 
 \begin{longtable}[]{@{}ccccc@{}}
-\toprule()
+\toprule
 \(k\) & Estrato & UPM & \(d_k^{(1)}\) & \(d_k^{(2)}\) \\
-\midrule()
+\midrule
 \endhead
 1 & Estrato1 & UPM1 & 1.5 & 0.5 \\
 2 & Estrato1 & UPM1 & 1.5 & 0.5 \\
@@ -4951,7 +4951,7 @@ En donde \(\hat{\theta}_a\) es el estimador del parámetro de interés en la ré
 6 & Estrato2 & UPM3 & 1.5 & 0.5 \\
 7 & Estrato2 & UPM4 & 0.5 & 1.5 \\
 8 & Estrato2 & UPM4 & 0.5 & 1.5 \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 En general, para la aplicación de estos métodos, los pesos de muestreo se ajustan para generar los pesos replicados y, posteriormente, se repiten los ajustes por ausencia de respuesta y calibración para estos nuevos pesos. Con esta metodología se estiman los errores de muestreo y la varianza de muestreo, incluyendo el impacto de la ausencia de respuesta, el cual se espera que sea pequeño, pero relevante en el momento de calcular estimadores más precisos. Retomando las observaciones hechas anteriormente, en el caso en el que la encuesta cuente con estratos en donde se encuentre una sola UPM, el método de los pesos replicados repetidas balanceadas no es aplicable puesto que al eliminar una unidad, algunos estratos quedarán vacíos.
@@ -5000,7 +5000,7 @@ En donde \(\hat{\theta}_b\) es el estimador del parámetro de interés en la ré
   >{\centering\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1781}}
   >{\centering\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1781}}
   >{\centering\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1781}}@{}}
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\centering
 \(k\)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
@@ -5016,7 +5016,7 @@ UPM
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
 \(d_k^{(4)}\)
 \end{minipage} \\
-\midrule()
+\midrule
 \endhead
 1 & Estrato1 & UPM1 & 2 & 0 & 1 & 1 \\
 2 & Estrato1 & UPM1 & 2 & 0 & 1 & 1 \\
@@ -5026,7 +5026,7 @@ UPM
 6 & Estrato2 & UPM3 & 1 & 1 & 2 & 0 \\
 7 & Estrato2 & UPM4 & 1 & 1 & 0 & 2 \\
 8 & Estrato2 & UPM4 & 1 & 1 & 0 & 2 \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 \citet{Rao_Wu_1984} y \citet{Rao_Wu_1988} aconsejan seleccionar una muestra con reemplazo de \(n_I - 1\) de las \(n_I\) UPM de la muestra, teniendo en cuenta la probabilidad de selección del diseño complejo en la primera etapa. Dado que la selección es con reemplazo, una UPM puede ser seleccionada más de una vez en esta nueva muestra. Por otro lado, también es posible realizar una selección sin reemplazo; en este caso, \citet{Preston_2009} recomiendan seleccionar una muestra con reemplazo de \(n_I/2\) de las \(n_I\) UPM de la muestra, teniendo en cuenta la probabilidad de selección del diseño complejo en la primera etapa.
@@ -5151,9 +5151,9 @@ La idea de que no pueden existir estimaciones negativas de la varianza se ha ins
 Nótese que se debe diferenciar entre estimador (que es una función de variables aleatorias) y parámetro (que es un valor real desconocido). En efecto, para la varianza del estimador HT (parámetro desconocido y siempre positivo) hay estimadores (función de variables aleatorias) que pueden arrojar estimaciones negativas. Es posible que las estimaciones de la varianza arrojen resultados negativos, que no pueden ser utilizados ni interpretados. Considere el siguiente diseño de muestreo de tamaño fijo e igual a \(n=2\), el cual induce seis posibles muestras.
 
 \begin{longtable}[]{@{}rrrrrr@{}}
-\toprule()
+\toprule
 \(s\) & \(I_1\) & \(I_2\) & \(I_3\) & \(I_4\) & \(p(s)\) \\
-\midrule()
+\midrule
 \endhead
 \(s_1\) & 1 & 1 & 0 & 0 & 0.31 \\
 \(s_2\) & 1 & 0 & 1 & 0 & 0.20 \\
@@ -5161,7 +5161,7 @@ Nótese que se debe diferenciar entre estimador (que es una función de variable
 \(s_4\) & 0 & 1 & 1 & 0 & 0.03 \\
 \(s_5\) & 0 & 1 & 0 & 1 & 0.01 \\
 \(s_6\) & 0 & 0 & 1 & 1 & 0.31 \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 En el anterior ejemplo, la probabilidad de obtener una muestra compuesta por los dos primeros elementos se fijó en 0.31; mientras que la probabilidad de obtener una muestra compuesta por el primer y el tercer elemento se fijó en 0.20 y así sucesivamente. Para esta configuración se obtienen las estimaciones puntuales para cada una de las seis posibles muestras, así como las dos posibles estimaciones de la varianza. Nótese que para ambos escenarios existen estimaciones negativas.
@@ -5176,7 +5176,7 @@ En el anterior ejemplo, la probabilidad de obtener una muestra compuesta por los
   >{\raggedleft\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1552}}
   >{\raggedleft\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.2069}}
   >{\raggedleft\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.2069}}@{}}
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\raggedleft
 \(s\)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
@@ -5196,7 +5196,7 @@ En el anterior ejemplo, la probabilidad de obtener una muestra compuesta por los
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
 \(\widehat{Var}_2(\hat{t}_{y, \pi})\)
 \end{minipage} \\
-\midrule()
+\midrule
 \endhead
 \(s_1\) & 1 & 1 & 0 & 0 & 0.31 & 9.560440 & 38.099984 & -0.9287681 \\
 \(s_2\) & 1 & 0 & 1 & 0 & 0.20 & 5.883191 & -4.744190 & 2.4710422 \\
@@ -5204,7 +5204,7 @@ En el anterior ejemplo, la probabilidad de obtener una muestra compuesta por los
 \(s_4\) & 0 & 1 & 1 & 0 & 0.03 & 7.751323 & -100.252974 & 71.6674365 \\
 \(s_5\) & 0 & 1 & 0 & 1 & 0.01 & 6.801242 & -165.715154 & 323.3238494 \\
 \(s_6\) & 0 & 0 & 1 & 1 & 0.31 & 3.123994 & 3.426730 & -0.1793659 \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 A pesar de los resultados negativos para las varianzas, tanto el estimador del total como los dos estimadores de su varianza siguen siendo insesgados. En efecto al multiplicar la estimación puntual por la probabilidad del diseño de muestreo se obtienen los valores poblacionales. La varianza del estimador HT para este diseño en particular es 6.744442, la cual corresponde con la esperanza de ambos estimadores de varianza. Para evitar estas estimativas negativas, \citet{Gutierrez_2016} afirma que es necesario garantizar que la covarianza (\(\Delta_{kl}\)) sea negativa para cada par de elementos en la población (\(k \neq l\)), lo cual no sucede con este esquema de muestreo, puesto que:
@@ -5227,27 +5227,27 @@ Por otro lado, la idea de que al aumentar el tamaño de la muestra debería dism
 Para poder mostrar este hecho, vamos a utilizar un ejemplo reducido. Supongamos una población de \(N = 3\) elementos \(U=\{1, 2, 3\}\) y comparemos dos diseños de muestreo, el primero con un tamaño de muestra fijo de \(n=1\) y el segundo con un tamaño de muestra fijo de \(n=2\). En ambos casos la variable de interés es dicotómica que denota la presencia o ausencia del fenómeno en los individuos de la población. En el primer caso, el diseño de muestreo de tamaño de muestra \(n=1\) es el siguiente:
 
 \begin{longtable}[]{@{}rrrrr@{}}
-\toprule()
+\toprule
 \(s\) & \(I_1\) & \(I_2\) & \(I_3\) & \(p(s)\) \\
-\midrule()
+\midrule
 \endhead
 \(s_1\) & 1 & 0 & 0 & 0.5 \\
 \(s_2\) & 0 & 1 & 0 & 0.1 \\
 \(s_3\) & 0 & 0 & 1 & 0.4 \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 En este esquema de muestreo, la varianza del estimador de Horvitz-Thompson es igual a \(Var(\hat t_{y, \pi}) = 1.5\). Sin embargo, en un segundo caso, considere el siguiente diseño de muestreo de tamaño de muestra \(n=2\):
 
 \begin{longtable}[]{@{}rrrrr@{}}
-\toprule()
+\toprule
 \(s\) & \(I_1\) & \(I_2\) & \(I_3\) & \(p(s)\) \\
-\midrule()
+\midrule
 \endhead
 \(s_1\) & 1 & 1 & 0 & 0.7 \\
 \(s_2\) & 1 & 0 & 1 & 0.2 \\
 \(s_3\) & 0 & 1 & 1 & 0.1 \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 Nótese que en este esquema de muestreo, la varianza del estimador de Horvitz-Thompson es igual a \(Var(\hat t_{y, \pi}) = 2.3\). Por tanto, no es exacto afirmar que siempre que un diseño de muestreo contemple un tamaño de muestra más grande se tendrá obligatoriamente una reducción de la varianza.
@@ -6386,9 +6386,9 @@ Una vez que se tienen los conjuntos de datos completos, es posible estimar \(\ha
 Para ejemplificar los anteriores escenarios, en esta sección se muestran los resultados empíricos de una simulación que asumió un conjunto de \(n = 100\) datos con una pendiente \(\beta = 100\) y con una dispersión de \(\sigma = 2\). A su vez, el conjunto de datos tendrá \(n_0 = 40\) valores faltantes en la variable respuesta. A continuación se muestran las primeras diez filas de esta base de datos simulados. Nótese que las dos primeras columnas corresponden a los valores verdaderos de la covariable y la variable de interés, respectivamente. La tercera columna identifica cuáles de estos valores son faltantes y la cuarta columna representaría la información disponible en la base de datos de la muestra \(s\).
 
 \begin{longtable}[]{@{}cccc@{}}
-\toprule()
+\toprule
 x & y & faltantes & y (no imputado) \\
-\midrule()
+\midrule
 \endhead
 11 & 991 & Si & NA \\
 12 & 1282 & Si & NA \\
@@ -6400,7 +6400,7 @@ x & y & faltantes & y (no imputado) \\
 13 & 1272 & Si & NA \\
 15 & 1459 & Si & NA \\
 11 & 1182 & No & 1182 \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 Con el 40\% de valores faltantes, es necesario realizar una imputación para obtener registros completos en la base de datos. Para este ejemplo, la figura \ref{fig:figim1} relaciona las variables con (izquierda) y sin (derecha) valores faltantes se presentan a continuación.
@@ -6412,9 +6412,9 @@ Con el 40\% de valores faltantes, es necesario realizar una imputación para obt
 Al aplicar una imputación ingenua, por ejemplo basada en un modelo de regresión simple, se obtendría un conjunto de datos completo, ejemplificado (solo las primeras diez filas de la base) en la siguiente tabla:
 
 \begin{longtable}[]{@{}cccc@{}}
-\toprule()
+\toprule
 x & y (original) & faltantes & y (imputado) \\
-\midrule()
+\midrule
 \endhead
 11 & 991 & Si & 1047 \\
 12 & 1282 & Si & 1221 \\
@@ -6426,7 +6426,7 @@ x & y (original) & faltantes & y (imputado) \\
 13 & 1272 & Si & 1290 \\
 15 & 1459 & Si & 1485 \\
 11 & 1182 & No & 1182 \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 En general, usar un enfoque simple no afecta la estimación puntual del parámetro de interés, sino la estimación del error estándar, puesto que la variación natural de los datos se subestima dramáticamente. Por ejemplo, la figura \ref{fig:figim2} muestra que con la imputación simple, \emph{todos} los valores faltantes imputados están sobre la línea de regresión.
@@ -6444,7 +6444,7 @@ Si se considera la imputación múltiple con el enfoque \emph{bootstrap}, tambi�
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2000}}
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2000}}
   >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2000}}@{}}
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\centering
 x
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
@@ -6458,7 +6458,7 @@ y2 (imputado)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
 y3 (imputado)
 \end{minipage} \\
-\midrule()
+\midrule
 \endhead
 11 & 991 & Si & 1047 & 950 & 1040 \\
 12 & 1282 & Si & 1221 & 1254 & 1198 \\
@@ -6470,7 +6470,7 @@ y3 (imputado)
 13 & 1272 & Si & 1304 & 1302 & 1292 \\
 15 & 1459 & Si & 1485 & 1493 & 1478 \\
 11 & 1182 & No & 1182 & 1182 & 1182 \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 Existe una buena dispersión en los valores imputados y la gráfica \ref{fig:figim3} muestra cómo este enfoque es mucho más realista al considerar la variación natural del fenómeno de interés en los valores imputados.
@@ -6496,15 +6496,15 @@ Asumiendo el anterior enfoque bayesiano de imputación múltiple, se llega a res
 En resumen, a partir de esta simulación de Monte Carlo, se concluye rápidamente que imputar de manera determinista puede conllevar a la subestimación de la dispersión de la variable de interés. La siguiente tabla muestra que los tres métodos de imputación arrojaron estimaciones puntuales insesgadas. Sin embargo, el error estándar de la estimación simple es gravemente subestimado. De esta forma, la amplitud de los intervalos de confianza al 95\% inducidos por la estimación simple es inferior al de los otros dos métodos, causando que la cobertura del método simple sea deficiente, pues su nivel nominal en realidad no es del 95\%, sino del 83\%.
 
 \begin{longtable}[]{@{}cccc@{}}
-\toprule()
+\toprule
 Propiedades & Ingenuo & Bootstrap & Bayesiano \\
-\midrule()
+\midrule
 \endhead
 Esperanza & 100.00 & 100.01 & 100.01 \\
 Error estándar & 0.24 & 0.41 & 0.42 \\
 Amplitud & 0.96 & 1.60 & 1.66 \\
 Cobertura & 0.83 & 0.97 & 0.95 \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 \hypertarget{ejemplo-de-imputaciuxf3n-en-una-encuesta-de-ingresos-y-gastos}{%
@@ -6780,9 +6780,9 @@ Para algunos componentes concretos, el número de ceros puede ser bastante alto 
 Un indicador fiable, no solo para medir la desigualdad en el consumo sino también para realizar un seguimiento de los cambios en el proceso de detección de valores atípicos y la imputación posterior, es el coeficiente de Gini. Por ejemplo, considere la siguiente tabla que muestra la presencia de ceros en cada división COICOP junto con el Gini para algunas de las categorías anteriormente mencionadas. Nótese que la incidencia de ceros es mucho menor en la categoría de vivienda que en las categorías de educación o recreación.
 
 \begin{longtable}[]{@{}ccc@{}}
-\toprule()
+\toprule
 Categoría & Ceros & Gini \\
-\midrule()
+\midrule
 \endhead
 Alimentos & 27 & 36 \\
 Alcohol & 4333 & 90 \\
@@ -6797,15 +6797,15 @@ Educación & 4802 & 90 \\
 Restaurantes & 1421 & 65 \\
 Seguros & 4837 & 90 \\
 Cuidado personal & 129 & 51 \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 Esta metodología también se puede aplicar para grupos. La siguiente tabla muestra la presencia de ceros estructurales para algunos artículos de la sección Alimentos. Una vez más, dependiendo del país, sería esperable encontrar una mayor incidencia de ceros en algunos artículos. En este caso particular, nótese que hay una mayor cantidad de ceros en artículos como té o café, que en artículos como cereal, azúcar o leche.
 
 \begin{longtable}[]{@{}ccc@{}}
-\toprule()
+\toprule
 Artículos & Ceros & Gini \\
-\midrule()
+\midrule
 \endhead
 Cereales & 87 & 37 \\
 Carne & 481 & 47 \\
@@ -6823,7 +6823,7 @@ Cacao & 4421 & 78 \\
 Agua & 5287 & 86 \\
 Refresco & 4859 & 86 \\
 Otras bebidas & 3353 & 79 \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 Como se resaltó anteriormente, para datos muy sesgados, los métodos para la detección de valores atípicos podrían resultar problemáticos, ya que el intervalo en el que los puntos de datos no se consideran valores atípicos es simétrico alrededor de la mediana. Por ejemplo, la figura \ref{fig:figou2} muestra el comportamiento estructural de algunas divisiones, es notable que todas las distribuciones de gasto y consumo en estos conceptos están extremadamente sesgadas.
@@ -6841,9 +6841,9 @@ Para ajustarse a este problema es posible utilizar la transformación de Box-Cox
 Luego de haber transformado apropiadamente los datos, es posible utilizar la metodología de Boxplot, uno de los métodos más básicos (aunque muy poderoso), para identificar valores atípicos. Como se mencionó en la sección anterior, la gráfica mostrará el mínimo de la muestra, el primer cuartil, la mediana, el tercer cuartil y el máximo. La caja va del primer al tercer cuartil (que contiene por definición el 50\% de los datos más internos), así como la mediana que generalmente está marcada por una línea media. Para la aplicación específica de la detección de valores atípicos dentro de las divisiones COICOP es posible que la constante predeterminada \(c\) varíe entre divisiones. Por ejemplo, la siguiente tabla muestra el número de valores atípicos detectados en cada división por este método.
 
 \begin{longtable}[]{@{}cc@{}}
-\toprule()
+\toprule
 División & Valores atípicos \\
-\midrule()
+\midrule
 \endhead
 Alimentos & 222 \\
 Alcohol & 0 \\
@@ -6858,15 +6858,15 @@ Educación & 0 \\
 Restaurantes & 31 \\
 Seguros & 0 \\
 Cuidado personal & 400 \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 Por otro lado, también es posible tener en cuenta la relación entre el gasto en cada división y el ingreso reportado por el hogar en la encuesta. En general, no se puede suponer que esta relación es homogénea entre todos los encuestados, máxime si se tiene en cuenta que la selección de las unidades muestrales se hace en todos los grupos socioeconómicos del país. Sin embargo, sí es posible hacer este supuesto dentro de clases homogéneas, como por ejemplo el cruce entre los quintiles (o deciles) del ingreso y las regiones del país. De esta forma, dentro de cada grupo se supondría que la relación entre el gasto y el ingreso es uniforme. Por ejemplo, en la siguiente tabla se muestra el número de valores atípicos detectados en cada división mediante el método Hidiroglou-Bertholot.
 
 \begin{longtable}[]{@{}cc@{}}
-\toprule()
+\toprule
 División & Valores atípicos \\
-\midrule()
+\midrule
 \endhead
 Alimentos & 74 \\
 Alcohol & 141 \\
@@ -6881,7 +6881,7 @@ Educación & 117 \\
 Restaurantes & 48 \\
 Seguros & 100 \\
 Cuidado personal & 247 \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 Es necesario tener en cuenta que, como la lógica detrás de estos dos métodos difiere, cada uno identificará un número diferente de valores atípicos. Esto es una ventaja, porque los métodos son complementarios. Por ejemplo, en divisiones como ropa, vivienda, salud, recreación y educación, donde el método Boxplot no encontró ningún valor atípico posible, el método HB sí lo encontró. Es así como, teniendo en cuenta los resultados de estos dos métodos, se puede especificar una regla lógica para asignar una marca a los registros de la base de datos que deban ser revisados por considerarse sospechosos. Por ejemplo, es posible que haya categorías en las que la regla lógica sea una conjunción de los resultados de los métodos, mientras que podría haber otras en las que la regla lógica sea una disyunción entre los resultados.
@@ -6889,9 +6889,9 @@ Es necesario tener en cuenta que, como la lógica detrás de estos dos métodos 
 Al final, se debe imputar cualquier valor que se considere como un valor atípico. Como se vio en los capítulos anteriores, la imputación puede estar apoyada por un enfoque basado en modelos. Por ejemplo, para imputar el gasto percápita anualizado, es posible utilizar el método de regresión con el vecino más cercano, donde se define un modelo lineal para las unidades encuestadas (sin incluir los valores atípicos). Una vez estimados los coeficientes de regresión, se calcula un valor previsto para esas unidades de valores atípicos y se identifica a un solo donante como el hogar cuyo gasto total en esa División está más cerca de la predicción. En la siguiente tabla se presentan algunos resúmenes de la distribución de los gastos a nivel de división antes de imputar los valores atípicos.
 
 \begin{longtable}[]{@{}cccc@{}}
-\toprule()
+\toprule
 División & Mínimo & Mediana & Máximo \\
-\midrule()
+\midrule
 \endhead
 Alimentos & 0 & 164587 & 1819370 \\
 Alcohol & 0 & 0 & 5475960 \\
@@ -6906,15 +6906,15 @@ Educación & 0 & 0 & 1800000 \\
 Restaurante & 0 & 22100 & 2184000 \\
 Seguro & 0 & 0 & 2932400 \\
 Cuidado personal & 0 & 18540 & 1223734 \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 Por último, en la tabla que se muestra a continuación se examinan algunos resúmenes sobre la distribución de los gastos a nivel de división habiendo imputado los valores atípicos de forma diferencial y con independencia ne cada división. Se nota cómo la imputación pasa realmente cambia la perspectiva del consumo mínimo y máximo. Esto significa que la detección de valores atípicos se centró en ambos lados de la distribución del gasto.
 
 \begin{longtable}[]{@{}cccc@{}}
-\toprule()
+\toprule
 División & Mínimo & Mediana & Máximo \\
-\midrule()
+\midrule
 \endhead
 Alimentos & 4560 & 166280 & 1616504 \\
 Alcohol & 0 & 0 & 930400 \\
@@ -6929,7 +6929,7 @@ Educación & 0 & 0 & 494000 \\
 Restaurantes & 0 & 22133 & 520000 \\
 Seguro & 0 & 0 & 723000 \\
 Cuidado personal & 400 & 18855 & 658960 \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 \hypertarget{agregaciuxf3n-de-encuestas}{%
@@ -7237,15 +7237,15 @@ Var(\hat{t}_y)
 En algunos casos, el tamaño de las encuestas puede variar significativamente entre dos meses consecutivos. La pandemia por COVID-19 mostró cómo esta clase de eventos adversos puede afectar gravemente el tamaño de muestra de los levantamientos regulares. Por ejemplo, considere el siguiente esquema trimestral:
 
 \begin{longtable}[]{@{}cccc@{}}
-\toprule()
+\toprule
 Panel / Mes & M1 & M2 & M3 \\
-\midrule()
+\midrule
 \endhead
 Panel & P1 & P2 & P3 \\
 Viviendas & 5000 & 4500 & 2500 \\
 Panel & P4 & P5 & P6 \\
 Viviendas & 5500 & 5100 & 3000 \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 En este caso, habiendo evaluado, analizado y ejecutado exhaustivamente los ajustes al factor de expansión, el principio detrás de esta agregación trimestral es intuitivo y simple: \emph{cada elemento dentro de la base de datos agregada se
@@ -7646,13 +7646,13 @@ Por ejemplo, considere una encuesta continua de hogares que cuenta con un esquem
 
 \begin{longtable}[]{@{}ccccc@{}}
 \caption{\emph{Rotación de páneles para un diseño 4(0)1.}}\tabularnewline
-\toprule()
+\toprule
 Trimestre & Panel 1 & Panel 2 & Panel 3 & Panel 4 \\
-\midrule()
+\midrule
 \endfirsthead
-\toprule()
+\toprule
 Trimestre & Panel 1 & Panel 2 & Panel 3 & Panel 4 \\
-\midrule()
+\midrule
 \endhead
 T1 & \(a_1\) & \(b_1\) & \(c_1\) & \(d_1\) \\
 T2 & \(b_1\) & \(c_1\) & \(d_1\) & \(a_2\) \\
@@ -7660,7 +7660,7 @@ T3 & \(c_1\) & \(d_1\) & \(a_2\) & \(b_2\) \\
 T4 & \(d_1\) & \(a_2\) & \(b_2\) & \(c_2\) \\
 T5 & \(a_2\) & \(b_2\) & \(c_2\) & \(d_2\) \\
 T6 & \(b_2\) & \(c_2\) & \(d_2\) & \(a_3\) \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 Nótese que entre el primer y el segundo periodo de medición hay un traslape del 75\% de hogares. En particular, entre T1 y T2, la muestra se conserva en tres cuartas partes puesto que \(b_1\), \(c_1\) y \(d_1\) se repiten. Esto mismo sucede en cada trimestre del esquema rotacional. Por otro lado, entre el primer y el tercer periodo habrá un traslape del 50\%. Nótese que entre T1 y T3, la mitad de la muestra se conserva puesto que \(c_1\) y \(d_1\) se repiten. Este mismo patrón se encuentra a lo largo del esquema rotacional. Además, entre el primer y el cuarto periodo se tendrá un 25\% de traslape. Nótese, por ejemplo, que entre T1 y T4, \(d_1\) se repite. Finalmente, entre T1 y T5 no se tiene ningún tipo de traslape.
@@ -7675,19 +7675,19 @@ Como se mencionó en capítulos anteriores, la pandemia por COVID-19 hizo que el
 
 \begin{longtable}[]{@{}cccccc@{}}
 \caption{\emph{Rotación de páneles en el diseño 4(0)1 para 2020.}}\tabularnewline
-\toprule()
+\toprule
 Año & Trimestre & Panel 1 & Panel 2 & Panel 3 & Panel 4 \\
-\midrule()
+\midrule
 \endfirsthead
-\toprule()
+\toprule
 Año & Trimestre & Panel 1 & Panel 2 & Panel 3 & Panel 4 \\
-\midrule()
+\midrule
 \endhead
 2020 & T1 & \(a_1\) & \(b_1\) & \(c_1\) & \(d_1\) \\
 & T2 & \(b_1\) & \(c_1\) & \(d_1\) & \(a_2\) \\
 & T3 & \(b_1\) & \(c_1\) & \(d_1\) & \(a_2\) \\
 & T4 & \(c_1\) & \(d_1\) & \(a_2\) & \(b_2\) \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 En este ejemplo, el traslape de la muestra de hogares entre el segundo y el tercer trimestre de 2020 fue completo. Además, entre el primer y el tercer trimestre del 2020 hubo un 75\% de traslape; mientras que entre el primer trimestre y el último del 2020 hubo un 50\% de traslape.
@@ -7970,7 +7970,7 @@ Al considerar el problema de la estimación de los cambios brutos entre dos peri
   >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}@{}}
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\raggedright
 Estado (T1/T2)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -7986,7 +7986,7 @@ j
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 G
 \end{minipage} \\
-\midrule()
+\midrule
 \endhead
 1 & \(X_{11}\) & \(X_{12}\) & \(\cdots\) & \(X_{1j}\) & \(\cdots\) & \(X_{1G}\) \\
 2 & \(X_{21}\) & \(X_{22}\) & \(\cdots\) & \(X_{2j}\) & \(\cdots\) & \(X_{2G}\) \\
@@ -7994,7 +7994,7 @@ G
 i & \(X_{i1}\) & \(X_{i2}\) & \(\cdots\) & \(X_{ij}\) & \(\cdots\) & \(X_{iG}\) \\
 \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\ddots\) & \(\vdots\) & \(\ddots\) & \(\vdots\) \\
 G & \(X_{G1}\) & \(X_{G2}\) & \(\cdots\) & \(X_{Gj}\) & \(\cdots\) & \(X_{GG}\) \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 En donde \(X_{ij}\) es el número de unidades en la población finita clasificadas como \(i\) en el tiempo \(t-1\) y \(j\) en el tiempo \(t\) (\(i,j=1,\ldots, G\)). Siguiendo las consideraciones de \citet{Feinberg_Stasny_1983} se asume que los datos son el resultado de un proceso de dos etapas. En la primera etapa (proceso no observable), los individuos son ubicados dentro de las celdas de una matriz \(G\times G\) de acuerdo con las probabilidades de una cadena de Markov, con los siguientes parámetros:
@@ -8023,7 +8023,7 @@ Las anteriores relaciones se ilustran en la siguiente tabla, en donde \(N_{ij}\)
   >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1481}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1235}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2222}}@{}}
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\raggedright
 Estado (T1/T2)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -8037,14 +8037,14 @@ Inactivo
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Complemento fila
 \end{minipage} \\
-\midrule()
+\midrule
 \endhead
 Formal & \(N_{11}\) & \(N_{12}\) & \(N_{13}\) & \(N_{14}\) & \(R_1\) \\
 Informal & \(N_{21}\) & \(N_{22}\) & \(N_{23}\) & \(N_{24}\) & \(R_2\) \\
 Desocupado & \(N_{31}\) & \(N_{32}\) & \(N_{33}\) & \(N_{34}\) & \(R_3\) \\
 Inactivo & \(N_{41}\) & \(N_{42}\) & \(N_{43}\) & \(N_{44}\) & \(R_4\) \\
 Complemento columna & \(C_1\) & \(C_2\) & \(C_3\) & \(C_4\) & \(M\) \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 En la segunda etapa (proceso observable), cada individuo en la celda \(ij\) de la matriz puede ser no respondiente en el tiempo \(t-1\) y perder la clasificación por fila, o ser no respondiente en el tiempo \(t\) y perder la clasificación columna, o bien, ser no respondiente en ambos tiempos y perder ambas clasificaciones. Por ende, se genera una estructura probabilística con los siguientes parámetros:
@@ -8088,7 +8088,7 @@ Considere que se dispone de información sobre la situación laboral de 41274 pe
   >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1519}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1266}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2278}}@{}}
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\raggedright
 Estado (T1/T2)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -8102,14 +8102,14 @@ Inactivo
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Complemento fila
 \end{minipage} \\
-\midrule()
+\midrule
 \endhead
 Formal & 11483 & 718 & 592 & 1828 & 451 \\
 Informal & 703 & 2513 & 495 & 2769 & 198 \\
 Desocupado & 191 & 181 & 503 & 794 & 81 \\
 Inactivo & 364 & 641 & 388 & 15386 & 382 \\
 Complemento columna & 160 & 65 & 48 & 257 & 83 \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 Como se supone que la muestra proviene de un muestreo complejo sobre la población del país, para utilizar el método de estimación propuesto en esta sección, se necesita primero estimar el tamaño de la población en cada celda de la tabla anterior. Estas estimaciones se dan en la siguiente tabla donde el tamaño de población estimado es 15,597,572.
@@ -8121,7 +8121,7 @@ Como se supone que la muestra proviene de un muestreo complejo sobre la poblaci�
   >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1446}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1325}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.2169}}@{}}
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\raggedright
 Estado (T1/T2)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -8135,27 +8135,27 @@ Inactivo
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Complemento fila
 \end{minipage} \\
-\midrule()
+\midrule
 \endhead
 Formal & 3,269,673 & 201,639 & 175,719 & 503,740 & 155,902 \\
 Informal & 232,095 & 641,565 & 146,416 & 725,006 & 58,649 \\
 Desocupado & 55,243 & 50,337 & 157,642 & 233,597 & 26,695 \\
 Inactivo & 102,490 & 161,363 & 98,898 & 4,299,066 & 118,393 \\
 Complemento columna & 47,104 & 26,276 & 19,746 & 100,775 & 25,545 \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 La escogencia del mejor modelo se llevó a cabo utilizando la estadística de ajuste \(\chi^2\), calculada sobre la distancia entre los valores observados y los valores predichos por el modelo. En estos términos, el mejor modelo fue el C, puesto que minimizaba esta distancia con un valor de \(\chi^2 = 0,706\). La distribución nula del estadístico es chi-cuadrado con \(G^2-D\) grados de libertad, con \(D\) indicando el número de parámetros estimados. Para el conjunto de datos considerado en este documento, la siguiente tabla presenta los valores críticos de la distribución nula y los valores del estadístico de prueba para cada modelo. Se concluye que el modelo más apropiado para el conjunto de datos es el modelo C.
 
 \begin{longtable}[]{@{}lllll@{}}
-\toprule()
+\toprule
 & Modelo A & Modelo B & Modelo C & Modelo D \\
-\midrule()
+\midrule
 \endhead
 Grados de libertad & 7 & 4 & 1 & 1 \\
 Valor crítico & 14.07 & 9.49 & 3.84 & 3.84 \\
 Valor \(\chi^2_{RS}\) & 15.6706 & 18.3659 & 0.2418 & 3.9137 \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 Recuérdese que este modelo considera que la probabilidad inicial de que un individuo sea respondiente en el primer trimestre de 2020 es la misma para todas las clasificaciones contempladas en la encuesta, es decir \(\psi(i,j)=\psi\). Sin embargo, las probabilidades de transición entre respondientes y no respondientes dependerán de la clasificación del individuo en el primer trimestre de 2020; es decir \(\rho_{MM}(i,j)=\rho_{MM}(i)\) y \(\rho_{RR}(i,j)=\rho_{RR}(i)\). Bajo estos supuestos, la siguiente tabla ilustra la estimación poblacional, insesgada con respecto al diseño de muestreo complejo de la encuesta, de los cambios brutos para el nivel de ocupación.
@@ -8166,7 +8166,7 @@ Recuérdese que este modelo considera que la probabilidad inicial de que un indi
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2333}}@{}}
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\raggedright
 Estado (T1/T2)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -8178,13 +8178,13 @@ Desocupado
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Inactivo
 \end{minipage} \\
-\midrule()
+\midrule
 \endhead
 Formal & 4.627.632 (102.470) & 287.124 (18.979) & 252.084 (20.399) & 713.284 (30.358) \\
 Informal & 327.066 (33.292) & 911.996 (45.645) & 210.372 (16.508) & 1.022.351 (50.332) \\
 Desocupado & 79.346 (10.592) & 72.944 (8.858) & 230.949 (21.180) & 335.746 (28.023) \\
 Inactivo & 143.303 (11.192) & 227.545 (15.849) & 140.923 (10.550) & 6.014.907 (123.559) \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 El modelo C considera que los parámetros de la primera etapa del proceso (no observable) están definidos como las probabilidades de transición de una clasificación a otra en los periodos de observación. Estas estimaciones definen las matrices de transición laboral, que para los periodos estudiados corresponden a las entradas de la siguiente tabla. En particular se resalta el hecho de que el 12,1\% de los trabajadores formales pasaron directamente a la inactividad; mientras que el cambio fue mayor en los trabajadores informales y en los desocupados, de los cuales el 41,3\% y el 46,6\% pasaron a la inactividad, respectivamente. Además, en los periodos estudiados, el 92,1\% de los individuos inactivos siguió en este estado.
@@ -8195,7 +8195,7 @@ El modelo C considera que los parámetros de la primera etapa del proceso (no ob
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2083}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2083}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2083}}@{}}
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\raggedright
 Estado (T1/T2)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -8207,13 +8207,13 @@ Desocupado
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Inactivo
 \end{minipage} \\
-\midrule()
+\midrule
 \endhead
 Formal & 0.787 (0.010) & 0.048 (0.003) & 0.042 (0.003) & 0.121 (0.004) \\
 Informal & 0.132 (0.012) & 0.368 (0.013) & 0.085 (0.005) & 0.413 (0.013) \\
 Desocupado & 0.110 (0.012) & 0.101 (0.010) & 0.321 (0.021) & 0.466 (0.025) \\
 Inactivo & 0.021 (0.001) & 0.034 (0.002) & 0.021 (0.001) & 0.921 (0.010) \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 Por otro lado, las probabilidades iniciales de clasificación en el primer periodo de interés se encuentran en la siguiente tabla, en la que también se observan las probabilidades de transición de los no respondientes y las probabilidades de transición de los respondientes, diferenciadas por condición de ocupación en el primer trimestre de 2020. Nótese que la probabilidad inicial de respuesta se estimó en \(\hat{\psi}=0.981 (0.002)\) para todas las clasificaciones de la condición de ocupación. Se puede notar que, dado que \(1-\hat{\rho}_{MM}\) indica la probabilidad de que un individuo responda en el segundo trimestre de 2020 dado que no respondió en el primer trimestre de 2020, condicionado a cada condición de ocupación, entonces las personas informales e inactivas son más propensos a no responder en ambos periodos, por lo que habría indicios de un patrón de ausencia de respuesta no ignorable que el modelo ha logrado identificar correctamente.
@@ -8223,7 +8223,7 @@ Por otro lado, las probabilidades iniciales de clasificación en el primer perio
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2113}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2676}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2676}}@{}}
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\raggedright
 Trimestre I-2020
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -8233,13 +8233,13 @@ Trimestre I-2020
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 \(\hat{\rho}_{MM}\)
 \end{minipage} \\
-\midrule()
+\midrule
 \endhead
 Formal & 0.376 (0.004) & 0.963 (0.004) & 0.304 (0.104) \\
 Informal & 0.158 (0.003) & 0.967 (0.004) & 0.000 (0.261) \\
 Desocupado & 0.046 (0.002) & 0.949 (0.008) & 0.000 (0.188) \\
 Inactivo & 0.418 (0.004) & 0.975 (0.002) & 0.017 (0.086) \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 Por último, sería deseable establecer si hay diferencias importantes en el impacto que la pandemia causó en el mercado laboral entre hombre y mujeres. Para realizar estas comparaciones se ajustó el modelo C en cada una de las subpoblaciones, encontrando ajustes precisos y satisfactorios con \(\chi^2_{hombres} = 0,350\) y \(\chi^2_{hombres} = 0,470\). La estimación de la probabilidad inicial de respuesta en ambos casos se calculó en \(\hat{\psi}=0.981 (0.002)\), y las estimaciones de las probabilidades \(\hat{\eta}\) y \(\hat{\rho}_{RR}\) no tuvieron cambios significativos entre los grupos. Sin embargo, la estimación de las probabilidades \(\hat{\rho}_{MM}\) mostró diferencias entre hombres y mujeres que fueron clasificados como trabajadores formales y inactivos en el primer trimestre del 2020. En particular, para el grupo de trabajadores formales, \(\hat{\rho}_{MM}^{hombre} = 0,253\), mientras que \(\hat{\rho}_{MM}^{mujer} = 0,331\), lo cual indica que las mujeres formales eran más propensas a no responder en el segundo trimestre de 2020, comparadas con los hombres. Por otro lado, para el grupo de inactivos, \(\hat{\rho}_{MM}^{hombre} = 0,112\), mientras que \(\hat{\rho}_{MM}^{mujer} = 0,000\), lo cual indica que las mujeres desocupadas definitivamente tuvieron una menor probabilidad a no responder en el segundo trimestre de 2020 que los hombres.
@@ -8252,7 +8252,7 @@ La estimación de las matrices de transición para ambos subgrupos poblacionales
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2083}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2083}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2083}}@{}}
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\raggedright
 \(p_{ij}\) (Hombres)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -8264,13 +8264,13 @@ Desocupado
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Inactivo
 \end{minipage} \\
-\midrule()
+\midrule
 \endhead
 Formal & 0.791 (0.013) & 0.056 (0.004) & 0.049 (0.005) & 0.102 (0.005) \\
 Informal & 0.138 (0.011) & 0.403 (0.018) & 0.095 (0.008) & 0.362 (0.017) \\
 Desocupado & 0.146 (0.025) & 0.118 (0.017) & 0.343 (0.031) & 0.392 (0.037) \\
 Inactivo & 0.031 (0.004) & 0.036 (0.003) & 0.030 (0.003) & 0.902 (0.021) \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 \begin{longtable}[]{@{}
@@ -8279,7 +8279,7 @@ Inactivo & 0.031 (0.004) & 0.036 (0.003) & 0.030 (0.003) & 0.902 (0.021) \\
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2083}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2083}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2083}}@{}}
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\raggedright
 \(p_{ij}\) (Mujeres)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -8291,13 +8291,13 @@ Desocupado
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Inactivo
 \end{minipage} \\
-\midrule()
+\midrule
 \endhead
 Formal & 0.781 (0.010) & 0.039 (0.003) & 0.033 (0.003) & 0.145 (0.007) \\
 Informal & 0.125 (0.012) & 0.331 (0.017) & 0.073 (0.007) & 0.469 (0.018) \\
 Desocupado & 0.078 (0.012) & 0.086 (0.012) & 0.301 (0.028) & 0.534 (0.036) \\
 Inactivo & 0.017 (0.001) & 0.034 (0.002) & 0.017 (0.001) & 0.931 (0.013) \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 \hypertarget{criterios-de-calidad-y-difusiuxf3n}{%
@@ -8421,6 +8421,10 @@ CV(\hat{L}) = \dfrac{SE(\hat{L})}{\hat{L}} = \dfrac{CV(\hat{P})}{\hat{L}}
 \]
 
 De manera similar, para mantener la simetría, cuando \(P>0,5\) se realiza un ajuste definiendo \(\hat{L} = -\log(1-\hat{P})\). Por lo tanto, para proporciones centrales, los coeficientes de variación de \(\hat{P}\) y \(\hat{L}\) serán comparables, puesto que \(\hat{L}\) toma valores cercanos a uno cuando \(P \in (0,2\ \ ,\ \ 0,8)\), y en este caso el \(CV(\hat{L})\) será similar a \(CV(\hat{P})\).
+
+A continuación se presenta un ejemplo sencillo. Considere una proporción estimada \(\hat{P} = 0.1\%\), con un error estándar \(SE(\hat{P}) = 0.2\%\); por ende, el intervalo de confianza clásico está dado por \((-0.10\%, 0.30\%)\), junto con un coeficiente de variación \(CV(\hat{P}) = 99.70\%\), razón por la cual la cifra no sería publicable en primera instancia. Sin embargo, a partir de la amplitud del intervalo de confianza es fácil observar que esta estimación es buena, informativa y precisa. Por lo tanto, utilizando la transformación logit, el intervalo de confianza de la transformación estaría dado por \((0.01\%, 0.71\%)\) y el \(CV(\hat{L})= \dfrac{CV(\hat{P})}{\hat{L}}=\dfrac{99,7}{-\log(0,001)}\cong 14.5\%\), y por lo tanto se concluye que la cifra sí podría publicarse.
+
+Aún más, este enfoque representa una excelente aproximación al enfoque clásico cuando las proporciones estimadas no son pequeñas. Por ejemplo, considere una proporción estimada del \(\hat{P} = 30\%\), con un con un \(CV(\hat{P}) = 4.83\%\) y un intervalo de confianza clásico dao por \((27.16\%, 32.84\%)\). Utilizando la transformación logit, el intervalo de confianza estaría dado por \((27.24\%, 32.91\%)\) y el coeficiente de variación logit sería de \(CV(\hat{L}) = 4.01\%\).
 
 \begin{figure}
 \centering
@@ -8709,6 +8713,273 @@ Por ejemplo, la figura \ref{fig:figCSj1} muestra una propuesta preliminar, para 
 \includegraphics[width=0.5\linewidth]{Pics/CSj1} \caption{Ejemplo de un diagrama de flujo para la publicación, supresión y revisión de estimaciones de proporciones o razones en encuestas de hogares.}\label{fig:figCSj1}
 \end{figure}
 
+\hypertarget{comparabilidad-rediseuxf1o-impacto-y-empalme}{%
+\chapter{Comparabilidad: rediseño, impacto y empalme}\label{comparabilidad-rediseuxf1o-impacto-y-empalme}}
+
+Entre los objetivos más importantes de las Oficinas Nacionales de Estadística se encuentra el ser garantes de la comparabilidad de las estadísticas oficiales publicadas regularmente. Como se ha visto a los largo de todo este libro, entendemos una estrategia de muestreo como una dupla compuesta por un diseño de muestreo y un estimador. Desde un punto de vista estadístico esta dupla crea una medida de probabilidad discreta que induce las estimaciones de las estadísticas oficiales que serán publicadas y diseminadas por las ONE mediante la realización de las encuestas de hogares. Esta medida de probabilidad no solo induce la estimación puntual del parámetro de interés, sino que a su vez induce una estimación de su varianza y error de muestreo, que a su vez redunda en una inferencia completa y correcta.
+
+La estabilidad en el tiempo de la medida de probabilidad de las encuestas de hogares trae grandes ventajas, pues además de poder realizar comparaciones transversales entre subgrupos poblacionales de interés (región, zona, sexo, edad, escolaridad, discapacidad, etnia, entre muchos otros), será también posible realizar comparaciones temporales de dichos subgrupos. Uno de los ejemplos más ampliamente difundidos son los parámetros del mercado de trabajo (tasa de desocupación, tasa de participación, tasa de informalidad, entre otros), cuya importancia es tal que las ONE disponen de levantamientos continuos para poder estimarlos y diseminar su publicación regularmente (de forma trimestral, o incluso mensual). La comparación temporal de estas cifras permite el planteamiento de políticas públicas oportunas.
+
+Por ende, el cambio de alguno de los componentes de la estrategia de muestreo afectará de alguna manera la comparabilidad de las estadísticas oficiales en algunos puntos del tiempo y, si el efecto es significativo, incluso podrá poner en tela de juicio la idoneidad de la inferencia para la estimación de los parámetros de interés. Por ejemplo, considere que, debido a la coyuntura socioeconómica de un país, efectivamente hay un cambio negativo en el mercado de trabajo en un periodo de interés; pero este cambio no podrá ser debidamente captado si existe algún cambio simultaneo en el diseño de muestreo (que a su vez viene inducido por la forma en que se recolecta la información) o en el estimador de muestreo (debido cualquier cambio en el ajuste a los factores de expansión incluyendo los modelos de ausencia de respuesta y calibraciones).
+
+Por la evolución natural de las encuestas, la adopción de nuevas metodologías de medición, el cambio en la forma de recolección de la información o incluso la adopción de nuevas proyecciones censales por la realización decenal de los censos de población y vivienda, es casi una tarea imposible no realizar ningún cambio en la vida de las encuestas de hogares. En este capítulo describiremos cuál es la mejor manera de realizar estos cambios para minimizar su impacto, cómo medir este efecto en el tiempo y, llegado el caso, cómo hacer comparables las series de tiempo que han sufrido una discontinuidad en un punto del tiempo debido a un cambio en la medida de probabilidad.
+
+\hypertarget{rediseuxf1o-de-las-encuestas}{%
+\section{Rediseño de las encuestas}\label{rediseuxf1o-de-las-encuestas}}
+
+Aunque la comparabilidad de las estimaciones es un baluarte fundamental en la diseminación y publicación de las estadísticas oficiales provenientes de las encuestas de hogares, es casi imposible mantener intacta la medida de probabilidad de la inferencia a lo largo del tiempo. Las encuestas de hogares son frecuentemente rediseñadas para reflejar los cambios relacionados con la población de interés. Estos rediseños son necesarios para mantener la eficiencia de la estrategia de muestreo e incorporar mejoras metodológicas optimas. A continuación, se enumeran algunos casos en los que puede existir un cambio que afecte la comparabilidad:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \emph{Cambios en la forma de medición de los constructos}; es posible encontrar que la forma en que se miden los constructos cambien a través del tiempo. Por ejemplo, la concepción y definición de las fuentes del ingreso \citep{CEPAL_2018} para mediciones de pobreza monetaria o la actualización de los estándares de la Organización Internacional del Trabajo \citep[\citet{CIET13}]{CIET19} en cuanto a la definición de los indicadores del mercado laboral, son algunos casos en los que los cuestionarios deben sufrir modificaciones para poder tener una inferencia oportuna.
+\item
+  \emph{Cambios en la definición de las subpoblaciones}; la generación de nuevos estándares sobre la clasificación de las subpoblaciones puede repercutir significativamente en la comparabilidad de las series. Por ejemplo, la adopción de estándares sobre la identificación de razas, etnias o pueblos originarios, además de cambios en la identifiación de migrantes y extranjeros; nuevos estándares sobre identificación de poblaciones con preferencias sexuales y de género diversas; nuevos estándares en la clasificación de las ocupaciones, entre otras.
+\item
+  \emph{Cambio en la forma de recolección de la información primaria}; con el pasar de los años y la adopción de nuevos procesos tecnológicos en las ONE de la región, es muy probable encontrar que las entrevistas que habitualmente se recolecataban de manera presencial con cuestionarios en papel, poco a poco van migrando a una forma de recolección presencial con dispositivos de captura digitales, e inclusive es posible encontrar cambios más drásticos en los que la recolección puede cambiarse a operativos telefónicos o mixtos. Esta nueva forma de recolección de la información puede traer cambios en la comparabilidad de las series.
+\item
+  \emph{Cambios en la división territorial del país}; aunque este tipo de cambios no son tan frecuentes, es posible encontrar nuevas definiciones territoriales dentro de los países; por ejemplo, la creación de nuevas divisiones administrativas mayores (regiones, estados o departamentos) y/o menores (municipios, distritos, cantones o provincias). Estos cambios en la división administrativa y territorial de los países pueden redundar en discontinuidades, sobretodo en las estadísticas generadas a nivel subnacional.
+\item
+  \emph{Cambios debido a la realización de nuevos censos en el país}; la mera realización de los censos puede traer consigo consecuencias inesperadas en la comparabilidad de las series. Por ejemplo:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    La forma en la que se desarrollan los censos tiene una repercusión directa sobre la construcción de los marcos de muestreo, que inducen el diseño de muestreo de la encuesta. Si el censo anterior fue un censo de hecho y el actual es un censo de derecho (o viceversa) la definición y construcción cartográfica de las áreas de enumeración o empadronamiento serán diferentes en su tamaño y composición. Dado que estas áreas son el principal insumo de la creación de las Unidades Primarias de Muestreo, los cambios en la cartografía de los marcos de muestreo serán significativas y acabaran redundando en el quiebre de las series temporales.
+  \item
+    La actualización de las proyecciones demográficas trae consigo un cambio en los totales de control usados en los estimadores de calibración. Ante un cambio significativo en la población proyectada y la observada en el censo, es muy probable que las estadísticas oficiales de nivel (totales y tamaños, en particular) se vean afectadas por estos cambios y las estadísticas ya no sean comparables, pues se observará un incremento (o decremento) de las proyecciones de la población civil no instucionalizada \citep{CPSrediseno}.
+  \end{itemize}
+\item
+  \emph{Mejoras deliberadas}; cualquier otro cambio en la estrategia de muestreo puede traer discrepancias en las series de tiempo. Por ejemplo, una nueva forma de administración del marco de muestreo con nuevos tamaños en las UPM, o la adopción de una nueva estrategia de estratificación socioeconómica de las UPM del marco tendrán un efecto en las cifras. Asimismo, el cambio y mejora en el diseño de muestreo, la adopción de un nuevo estimadores o los cambios realizado en los ajustes de los pesos de muestreo y factores de expansión pueden tener connotaciones inesperadas en la comparabilidad de las cifras.
+\end{enumerate}
+
+\hypertarget{el-impacto-de-los-rediseuxf1os}{%
+\section{El impacto de los rediseños}\label{el-impacto-de-los-rediseuxf1os}}
+
+Como los rediseños de las encuestas son inevitables, es muy recomendable definir de antemano los cambios que se surtirán y planear un experimento controlado a lo largo de un periodo suficiente de tiempo (por ejemplo, un año para eventos con estacionalidad como las estadísticas del trabajo) en donde la operación estadística transcurra en paralelo con dos acercamientos: el regular (sin cambios) y el nuevo (con los cambios del rediseño). Esta opción implica que la ONE debe tener a su disponibilidad la suficiente cantidad de recursos presupuestales, logísticos y humanos durante el tiempo en el cual transcurran ambos procesos. Por lo anterior, no todas las ONE de la región podrán asumir esta carga y se vuelve una opción inviable. Sin embargo, las autoridades de las ONE deberían realizar todos los esfuerzos posibles para conseguir los recursos suficientes y garantizar que se pueda medir el impacto de los cambios propuestos.
+
+Con base en lo anteriomente mencionado, es necesario tener en cuenta que sin este tipo de experimentos paralelos, será muy difícil medir el verdadero cambio, identificar la fuente de la discontinuidad en la serie y corregir el sesgo generado. Tal como lo afirma \citet{Rubincausal}, la aleatorización es la única forma de conseguir que no existan sesgos de selección en los experimentos controlados y es el único supuesto científicamente aceptado para medir este tipo de efectos. Con esta perspectiva en mente, los experimentos controlados deberán seleccionar aleatoriamente las UPM que participarían en ambas recolecciones. Esto no supone una carga adicional para las ONE, garantes de la aleatorización en las encuestas de hogares.
+
+\citet{Brakel2008} menciona que hay varias posibilidades para llevar a cabo este tipo de experimentos paralelos; por una parte es posible tener dos operaciones estadísticas en campo con el mismo tamaño de muestra, o que la nueva operación tenga un tamaño de muestra menor e inclusive esté restringida a alguna subpoblación de interés. En cualquier caso, son la forma correcta para evitar efectos de confusión. De lo contrario, incluso ante cambios nulos, no se podrá discernir si esto es el resultado de la coyuntura de interés, o del rediseño de la encuesta. La figura @ref(fig:fig20\_1) muestra un ejemplo simulado del resultado esperado de un experimento paralelo. La línea negra representa la serie regular, la linea azul representa la nueva serie con los cambios del rediseño y la distancia entre ambas, representa el impacto del rediseño en cada punto del tiempo.
+
+\begin{figure}
+\centering
+\includegraphics{20Empalme_files/figure-latex/fig20_1-1.pdf}
+\caption{(\#fig:fig20\_1)Series de tiempo para el rediseño de una encuesta. La línea negra representa la serie regular; la línea azul representa la serie nueva. Fuente: elaboración propia.}
+\end{figure}
+
+Sin embargo, en algunos casos se hace imposible realizar dos levantamientos paralelos. Un claro ejemplo de este escenario lo tenemos en la pandemia por COVID-19, su efecto en las condiciones socioeconómicas de los hogares y su efecto en el modo de recolección de las encuestas. Como lo afirma \citet{CEPAL_continua}, desde la emergencia sanitaria derivada de la pandemia, las oficinas nacionales de estadística (ONE) tuvieron que interrumpir abruptamente la recopilación de información primaria como parte de muchas de sus operaciones estadísticas, incluidas las encuestas de hogares. A pesar de esto, las ONE pudieron seguir con sus levantamientos migrando de un modo de recolección presencial a telefónico.
+Este rediseño repentino (cambio en la metodología de recolección) fue necesario para que se siguieran produciendo cifras de empleo y pobreza, indicadores particularmente importantes en el contexto de la pandemia, dado el profundo impacto que las mismas restricciones de movimiento y cuarentenas tuvieron en la condición de ocupación de las personas de la región y, por ende, en la afectación de sus ingresos. Nótese que en este caso, no fue posible que las ONE pudiesen realizar experimentos paralelos.
+
+\citet{CEPAL_continua} afirma que la pandemia obligó a que los países cambiaran varios aspectos en la metodología del levantamiento y análisis de la información, que pueden ser resumidos a continuación:
+
+\begin{itemize}
+\tightlist
+\item
+  Cambió el modo de levantamiento de presencial a telefónico (o mixto, en algunos casos), así como las definiciones de la estructura de elegibilidad de las viviendas seleccionadas y sus correspondientes códigos de disposición.
+\item
+  Cambió el esquema de supervisión de los encuestadores y, en algunos casos, se suprimieron las actualizaciones cartográficas del número de hogares particulares en las unidades primarias de muestreo seleccionadas.
+\item
+  Se introdujo un nuevo esquema de ajuste de factores de expansión, buscando eliminar el sesgo de cobertura (no todos los hogares en los levantamientos anteriores contaron con números telefónicos de contacto) y de ausencia de respuesta (algunos hogares contactados telefónicamente no contestaron el cuestionario).
+\item
+  Se revisitaron los esquemas de calibración de los factores de expansión y en aras de la flexibilidad de la metodología de estimación se restringió el número de restricciones de calibración.
+\end{itemize}
+
+En algunos casos especiales, ante la imposibilidad de ejecutar dos encuestas paralelas, es posible obtener dos series paralelas. Por ejemplo, suponga un cambio en la forma de medición de las estadísticas del mercado de trabajo en un país; en particular, la adopción del estándar CIET 19 \citep{19CIET}. En algunos países es posible adoptar este estándar mediante la adición de nuevas preguntas al cuestionario original basado en la CIET 13 \citep{13CIET}. Otro caso especial puede deberse a la actualización de las proyecciones de población y los totales de control en los estimadores de calibración. Dado que el cambio solo afecta los procesos computacionales, es posible tener dos series paralelas, sin necesidad de tener dos levantamientos paralelos.
+
+Ya sea que se tenga la posibilidad de contar con dos series en paralelo o no, existirán diferentes métodos que permitirán establecer si existe o no un impacto significativo debido a un cambio en la encuesta. En general, es posible enlistar las siguientes posibilidades:
+1. Cuando se tienen las dos series en paralelo es posible cuantificar el impacto a través de estudios de causalidad basado en modelos econométricos.
+2. Cuando solo se cuenta con una serie es posible acercarse al efecto del cambio utilizando modelos de series temporales en los que se involucran parámetros que indiquen a partir de qué momento se inició el cambio y su efecto en la serie (análisis de intervenciones).
+
+En ambos casos, es necesario primero realizar este tipo de análisis para cuantificar el efecto del cambio. Luego, si el efecto resulta ser estadísticamente significativo, es necesario realizar el empalme de las series de tiempo que proporcione una serie ajustada comparable con ambas series: la regular y la nueva. Esta se conoce como la serie empalmada.
+
+Por ejemplo, para el caso en el que el indicador de interés sea un total, \citet{Gbur} propone la utilización de un modelo lineal para determinar los efectos del rediseño. Este modelo puede escribirse de la siguiente manera:
+
+\[
+\hat \theta_{tdg} = \hat N_{tdg} \ \theta_{td} + \hat N_{tdg} \ \beta_{t} + \varepsilon_{tdg} 
+\]
+
+En donde \(\hat \theta_{tdg} = \sum_{k \in s_t} w_{ktg} \ y_{ktg}\) representa la estimación del indicador de interés en el tiempo \(t\) para el dominio \(d\). El subscrito \(g = 1, 2\), solo toma dos valores e indica si la variable de interés fue observada bajo las condiciones del rediseño o no (tratamiento/control). Además, \(\hat N_{tdg} = \sum_{k \in s_t} w_{ktg}\) es la suma de los factores de expansión en el tiempo \(t\), del dominio \(d\) en el tratamiento \(g\). Este modelo relaciona el estimador directo \(\hat \theta_{tdg}\) con el indicador verdadero \(\theta_{tdg}\) y el efecto del rediseño en el tiempo \(y\), denotado por \(\beta_{t}\). Por supuesto, \(\varepsilon_{tdg}\) denota los errores aleatorios con vector de medias nulo y matriz de varianzas \(\boldsymbol V\), cuyas entradas (varianzas y covarianzas) son estimadas a partir de los principios de la estimación directa. Nótese que se supone independencia en la selección de los hogares o personas en cada grupo del tratamiento.
+
+Evidentemente si \(\beta_{t}\) es estadísticamente igual de cero, entonces se afirma que no existe un efecto del rediseño en la serie regular, por ende se garantiza la comparabilidad entre las estimaciones de la serie regular y la serie nueva. Sin emabargo, en caso contrario, es necesario realizar un proceso de empalme de series como los que se especifican en la siguiente sección.
+
+\hypertarget{empalme-de-series-de-tiempo}{%
+\section{Empalme de series de tiempo}\label{empalme-de-series-de-tiempo}}
+
+A continuación se realiza un recuento de algunas técnicas que permiten empalmar dos series. Cada uno de los escenarios que se enlistan a continuación deberá ser adoptado a las necesidades de cada ONE y de cada encuesta. En términos de notación, \(\hat \theta^{R}_t\) representa la estimación regular en el tiempo \(t\), \(\hat \theta^{N}_t\) denota la nueva estimación en el tiempo \(t\) y \(\hat \theta^{E}_t\) corresponde a la estimación empalmada en el tiempo \(t\).
+
+\hypertarget{factor-suavizado}{%
+\subsection{Factor suavizado}\label{factor-suavizado}}
+
+\citet{DiNatale} presenta el siguiente ajuste que suaviza sistemáticamente el cambio entre la nueva serie en tiempo del rediseño (\(t_b\)) y la serie regular en el punto inmediatamente anterior \(t_b-1\). Es necesario identificar el punto donde ocurrió el cambio \(t_b\), así como el punto que indicará el comienzo del empalme \(t_1\). Luego, se debe calcular el factor de ajuste que representa el cambio (porcentual).
+\[
+\gamma_t=\left(\frac{\hat \theta^{N}_{t_b}}{\hat \theta^{R}_{t_b-1}} -1\right)  \times \psi_t
+\]
+Así, suponiendo que \(\psi_t = \frac{t}{t_b-1} \in (0,1)\) es un factor que aumenta a medida que el tiempo se acerca al punto de quiebre \(t_b\), entonces la serie empalmada queda definida como
+\[
+\hat \theta^{E}_t=\hat \theta^{R}_t* (1+\gamma_t),
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \text{con } t=1,2,\cdots,t_b-1.
+\]
+
+En la Figura @ref(fig:fig20\_2) es posible observar cómo se empalman las series regular y nueva a partir del ajuste proporcional. Nótese que la estructura de la serie se mantiene integralmente.
+
+\begin{figure}
+\centering
+\includegraphics{20Empalme_files/figure-latex/fig20_2-1.pdf}
+\caption{(\#fig:fig20\_2)Empalme de series de tiempo con el método del factor suavizado. La línea negra corresponde a la serie regular; la línea azul representa la serie nueva; la línea roja denota la serie empalmada. Fuente: elaboración propia.}
+\end{figure}
+
+\hypertarget{ajuste-sintuxe9tico-aditivo-y-multiplicativo}{%
+\subsection{Ajuste sintético aditivo y multiplicativo}\label{ajuste-sintuxe9tico-aditivo-y-multiplicativo}}
+
+En este caso se supone que la serie regular y la serie nueva se observan desde \(t_b\) y que la serie empalmada sigue un ajuste aditivo dado por la siguiente expresión:
+
+\[
+\hat \theta^{E}_t=\hat \theta^{R}_t + \left(\hat \theta^{N}_{t_b} - \hat \theta^{R}_{t_b}\right) \times \psi_t
+,
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \text{con } t=1,2,\cdots,t_b-1.
+\]
+
+Este método tiene la desventaja de que la serie empalmada podría producir valores por fuera del rango del indicador de interés; por ejemplo, podria producir valores negativos. Por tanto, para evitar estos inconvenientes, es posible acudir a un empalme sintético multiplicativo, dado a continuación:
+
+\[
+\hat \theta^{E}_t=\hat \theta^{R}_t  \left(\dfrac{\hat \theta^{N}_{t_b}}{\hat \theta^{R}_{t_b}}\right)  \times \psi_t 
+,
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \text{con } t=1,2,\cdots,t_b-1.
+\]
+
+\citet{Brakel2008} afirma que con los anteriores métodos la serie empalmada puede ser mayor que uno o menor que cero, lo cual es especialmente contraproducente en el caso de las proporciones y tasas. La Figura @ref(fig:fig20\_3) muestra el empalme de las series usando el ajuste sintético multiplicativo.
+
+\[
+\hat \theta^{E}_t=\hat \theta^{R}_t + \left(\hat \theta^{N}_{t_b} - \hat \theta^{R}_{t_b}\right) \times \left( \dfrac{\hat \theta^{R}_t(1-\hat \theta^{R}_t)}{\hat \theta^{R}_{t_b}(1-\hat \theta^{R}_{t_b})}\right) 
+,
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \text{con } t=1,2,\cdots,t_b-1.
+\]
+
+\begin{figure}
+\centering
+\includegraphics{20Empalme_files/figure-latex/fig20_3-1.pdf}
+\caption{(\#fig:fig20\_3)Empalme de series de tiempo con el ajuste sintético multiplicativo. La línea negra corresponde a la serie regular; la línea azul representa la serie nueva; la línea roja denota la serie empalmada. Fuente: elaboración propia.}
+\end{figure}
+
+\hypertarget{modelos-estructurales}{%
+\subsection{Modelos estructurales}\label{modelos-estructurales}}
+
+En el caso en el que no se tenga la oportunidad de tener un experimento paralelo y, por lo tanto, se carezca de dos series paralelas, es posible ajustar un modelo estructural de series de tiempo con una intervención justo en el momento del rediseño. Para simplificar la notación, en esta sección se supone que la serie no tiene estacionalidad, ni ciclos; aunque si los tuviera el espíritu del ajuste se mantiene. Por ende, siguiendo a \citet{Brakel2008}, el modelo estructural para la serie está dado por el nivel \(L_t\) más el impacto \(\beta\) en el momento del rediseño \(t_b\) y se escribe de la siguiente manera:
+
+\[
+\hat \theta_{t}=L_t+\beta\delta_t+e_t
+\]
+En donde \(\delta_t\) es una variable indicadora del tiempo en el que se implementó el rediseño en la encuesta
+
+\[
+\delta_t =
+\begin{cases}
+1 & \text{si $t\geq t_b$}\\
+0 & \text{si $t< t_b$}
+\end{cases}
+\]
+
+Además, \(L_t\) es una tendencia estocástica autorregresiva que depende de una pendiente:
+\[
+\begin{aligned}
+L_t & = L_{t-1}+R_{t-1}+w_t \\
+R_t & = R_{t-1}+\eta_t
+\end{aligned}
+\]
+Note que \(R_t\) es la pendiente, y \(e_t\), \(w_t\) y \(\eta_t\) son ruidos de las diferentes ecuaciones. Este modelo debe ser escrito en la forma de \textbf{estado-espacio}, para que por medio de la apliccación del filtro de Kalman, se logre la estimación de los parámetros y la extracción de los diferentes componentes de la serie (nivel, pendiente y efecto). El modelo de estado espacio está conformado por las ecuaciones de observación (medición) y estado (transición) que, respectivamente, están dadas por las siguientes expresiones:
+
+\[
+\begin{aligned}
+\hat \theta_{t}&=Z_t\alpha_t+\epsilon_t\\
+\alpha_t&=T\alpha_{t-1}+\omega_t
+\end{aligned}
+\]
+En donde \(\alpha_t\) se conoce como el vector de estado. Para nuestro modelo estructural, \(\alpha_t\) está dado por \(\alpha_t=(L_t, R_t,\beta)'\). De esta forma, la ecuación de transición está definida por:
+
+\[
+\alpha_t=\begin{bmatrix}
+L_t\\
+R_t\\
+\beta
+\end{bmatrix}=\begin{bmatrix}
+1&1&0\\
+0&1&0\\
+0&0&1
+\end{bmatrix}
+\begin{bmatrix}
+L_{t-1}\\
+R_{t-1}\\
+\beta
+\end{bmatrix}+
+\begin{bmatrix}
+w_t\\
+\eta_t\\
+0
+\end{bmatrix}
+\]
+
+Mientras que la ecuación de medición queda como sigue:
+
+\[
+\hat \theta_{t}=\begin{bmatrix}
+1&0&\delta_t
+\end{bmatrix}\begin{bmatrix}
+L_t\\
+R_t\\
+\beta
+\end{bmatrix}+e_t
+\]
+
+Para emplamar la serie antes del punto \(t_b\), se toma la serie regular y añadiendo gradualmente el efecto \(\hat{\beta}\). Por ende, la serie empalmada será:
+
+\[
+x^{adj,2}_t=
+\begin{cases}
+x_t+\hat{\beta}*\psi_t&\text{si $t<t_0$}\\
+x_t&\text{si no}
+\end{cases}
+\]
+
+Los resultados de la aplicación del modelo son bastante satisfactorios, puesto que además de extraer la estructura de la serie, el modelo estructural es capaz de estimar correctamente el impacto de la intervención, sin necesidad de tener las dos series en paralelo. La Figura @ref(fig:fig20\_4) muestra el empalme de las series usando este acercamiento. Este tipo de modelos tienen bastantes ventajas metodológicas; por ejemplo, es posible ajustar más de un punto de intervención e incluso es posible incluir intervenciones de todo tipo (efecto en un solo tiempo, el mismo efecto o efecto creciente a partir de un tiempo). También es posible extraer la tendencia para suavizar la serie, la cual puede incluir componentes de estacionalidad o ciclos; además, es posible incluir otras series como covariables (con relaciones cambiantes en el tiempo).
+
+\begin{figure}
+\centering
+\includegraphics{20Empalme_files/figure-latex/fig20_4-1.pdf}
+\caption{(\#fig:fig20\_4)Empalme de series de tiempo usando un modelo estructural. La línea negra corresponde a la serie regular; la línea azul representa la serie nueva; la línea roja denota la serie empalmada. Fuente: elaboración propia.}
+\end{figure}
+
+Por último, en el caso en el que se disponga de ambas series en paralelo, también es posible proponer un modelo estructural bivariado. Asumiendo que las dos series no tienen componente estacional, podemos formular el modelo estructural bivariado para el vector \((\hat \theta^{R}_t,\hat \theta^{N}_t)'\) está dado por:
+
+\[
+\begin{aligned}
+\hat \theta^{R}_t &= L_t+e_{1,t} \\
+\hat \theta^{N}_t &= L_t+\beta\delta_t+e_{2,t}
+\end{aligned}
+\]
+
+Para este modelo estructural, la ecuación de transición toma la misma forma que en el modelo univariado, mientras que la ecuación de medición queda como:
+
+\[
+\begin{bmatrix}\hat \theta^{R}_t\\\hat \theta^{N}_t\end{bmatrix}=\begin{bmatrix}
+1&0&0\\
+1&0&\delta_t
+\end{bmatrix}\begin{bmatrix}
+L_t\\
+R_t\\
+\beta
+\end{bmatrix}+e_t
+\]
+
+Al igual que en el modelo estructural univariado, los resultados de la aplicación logran extraer la estructura de la serie y estimar correctamente el impacto de la intervención. La Figura @ref(fig:fig20\_5) muestra el empalme de las series usando este acercamiento.
+
+\begin{figure}
+\centering
+\includegraphics{20Empalme_files/figure-latex/fig20_5-1.pdf}
+\caption{(\#fig:fig20\_5)Empalme de series de tiempo usando un modelo estructural. La línea negra corresponde a la serie regular; la línea azul representa la serie nueva; la línea roja denota la serie empalmada. Fuente: elaboración propia.}
+\end{figure}
+
 \hypertarget{appendix-appendix}{%
 \appendix}
 
@@ -8857,7 +9128,7 @@ La \emph{Encuesta de Hogares por Muestreo} es una investigación que desarrolla 
   >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.0685}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1575}}@{}}
 \caption{\emph{Características de las algunas encuestas repetidas en América Latina.}}\tabularnewline
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\raggedright
 País
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -8871,9 +9142,9 @@ Rotación
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Muestra de viviendas
 \end{minipage} \\
-\midrule()
+\midrule
 \endfirsthead
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\raggedright
 País
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -8887,7 +9158,7 @@ Rotación
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Muestra de viviendas
 \end{minipage} \\
-\midrule()
+\midrule
 \endhead
 Argentina & Encuesta Permanente de Hogares & Panel & Trimestral & 50\% & 25000 \\
 Bolivia & Encuesta Continua de Hogares & Panel & Mensual & 25\% & 10000 \\
@@ -8910,7 +9181,7 @@ República Dominicana & Encuesta Nacional de Hogares de Propósitos Múltiples &
 República Dominicana & Encuesta Nacional de Fuerza de Trabajo & Panel & Semestral & 25\% & 10000 \\
 Uruguay & Encuesta Continua de Hogares & Repetida & Mensual & - & 53000 \\
 Venezuela & Encuesta de Hogares por Muestreo & Repetida & Semestral & - & 45000 \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 \newpage
@@ -8921,7 +9192,7 @@ Venezuela & Encuesta de Hogares por Muestreo & Repetida & Semestral & - & 45000 
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.0932}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1610}}@{}}
 \caption{\emph{Características de las algunas encuestas transversales en América Latina.}}\tabularnewline
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\raggedright
 País
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -8931,9 +9202,9 @@ Año
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Tamaño de Muestra
 \end{minipage} \\
-\midrule()
+\midrule
 \endfirsthead
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\raggedright
 País
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -8943,7 +9214,7 @@ Año
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Tamaño de Muestra
 \end{minipage} \\
-\midrule()
+\midrule
 \endhead
 Argentina & Encuesta Nacional de Gastos de los Hogares & 2017-2018 & 45000 \\
 Bolivia & Encuesta de Hogares & 2017 & 11136 \\
@@ -8963,7 +9234,7 @@ Perú & Encuesta Nacional de Hogares sobre Condiciones de Vida y Pobreza & 2017 
 República Dominicana & Encuesta Nacional de Ingresos y Gastos de los hogares & 2006-2007 & 8358 \\
 Uruguay & Encuesta Nacional de Gastos e Ingresos de los Hogares & 2016-2017 & 7500 \\
 Venezuela & IV Encuesta Nacional de Presupuestos Familiares & 2008-2009 & 45768 \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 \elandscape

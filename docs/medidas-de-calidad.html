@@ -23,7 +23,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-09-29" />
+<meta name="date" content="2022-10-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -408,6 +408,17 @@ div.csl-indent {
 <li class="chapter" data-level="19.2" data-path="criterios-de-calidad-en-subpoblaciones.html"><a href="criterios-de-calidad-en-subpoblaciones.html"><i class="fa fa-check"></i><b>19.2</b> Criterios de calidad en subpoblaciones</a></li>
 <li class="chapter" data-level="19.3" data-path="secuencia-lógica-para-crear-reglas-de-supresión.html"><a href="secuencia-lógica-para-crear-reglas-de-supresión.html"><i class="fa fa-check"></i><b>19.3</b> Secuencia lógica para crear reglas de supresión</a></li>
 </ul></li>
+<li class="chapter" data-level="20" data-path="comparabilidad-rediseño-impacto-y-empalme.html"><a href="comparabilidad-rediseño-impacto-y-empalme.html"><i class="fa fa-check"></i><b>20</b> Comparabilidad: rediseño, impacto y empalme</a>
+<ul>
+<li class="chapter" data-level="20.1" data-path="rediseño-de-las-encuestas.html"><a href="rediseño-de-las-encuestas.html"><i class="fa fa-check"></i><b>20.1</b> Rediseño de las encuestas</a></li>
+<li class="chapter" data-level="20.2" data-path="el-impacto-de-los-rediseños.html"><a href="el-impacto-de-los-rediseños.html"><i class="fa fa-check"></i><b>20.2</b> El impacto de los rediseños</a></li>
+<li class="chapter" data-level="20.3" data-path="empalme-de-series-de-tiempo.html"><a href="empalme-de-series-de-tiempo.html"><i class="fa fa-check"></i><b>20.3</b> Empalme de series de tiempo</a>
+<ul>
+<li class="chapter" data-level="20.3.1" data-path="empalme-de-series-de-tiempo.html"><a href="empalme-de-series-de-tiempo.html#factor-suavizado"><i class="fa fa-check"></i><b>20.3.1</b> Factor suavizado</a></li>
+<li class="chapter" data-level="20.3.2" data-path="empalme-de-series-de-tiempo.html"><a href="empalme-de-series-de-tiempo.html#ajuste-sintético-aditivo-y-multiplicativo"><i class="fa fa-check"></i><b>20.3.2</b> Ajuste sintético aditivo y multiplicativo</a></li>
+<li class="chapter" data-level="20.3.3" data-path="empalme-de-series-de-tiempo.html"><a href="empalme-de-series-de-tiempo.html#modelos-estructurales"><i class="fa fa-check"></i><b>20.3.3</b> Modelos estructurales</a></li>
+</ul></li>
+</ul></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
 <li class="chapter" data-level="A" data-path="una-perspectiva-regional-de-las-encuestas-de-hogares.html"><a href="una-perspectiva-regional-de-las-encuestas-de-hogares.html"><i class="fa fa-check"></i><b>A</b> Una perspectiva regional de las encuestas de hogares</a>
 <ul>
@@ -543,6 +554,8 @@ SE(\hat{L}) = \sqrt{AVar(\hat{L})} = \dfrac{\sqrt{Var(\hat{P})}}{\hat{P}} = CV(\
 CV(\hat{L}) = \dfrac{SE(\hat{L})}{\hat{L}} = \dfrac{CV(\hat{P})}{\hat{L}}
 \]</span></p>
 <p>De manera similar, para mantener la simetría, cuando <span class="math inline">\(P&gt;0,5\)</span> se realiza un ajuste definiendo <span class="math inline">\(\hat{L} = -\log(1-\hat{P})\)</span>. Por lo tanto, para proporciones centrales, los coeficientes de variación de <span class="math inline">\(\hat{P}\)</span> y <span class="math inline">\(\hat{L}\)</span> serán comparables, puesto que <span class="math inline">\(\hat{L}\)</span> toma valores cercanos a uno cuando <span class="math inline">\(P \in (0,2\ \ ,\ \ 0,8)\)</span>, y en este caso el <span class="math inline">\(CV(\hat{L})\)</span> será similar a <span class="math inline">\(CV(\hat{P})\)</span>.</p>
+<p>A continuación se presenta un ejemplo sencillo. Considere una proporción estimada <span class="math inline">\(\hat{P} = 0.1\%\)</span>, con un error estándar <span class="math inline">\(SE(\hat{P}) = 0.2\%\)</span>; por ende, el intervalo de confianza clásico está dado por <span class="math inline">\((-0.10\%, 0.30\%)\)</span>, junto con un coeficiente de variación <span class="math inline">\(CV(\hat{P}) = 99.70\%\)</span>, razón por la cual la cifra no sería publicable en primera instancia. Sin embargo, a partir de la amplitud del intervalo de confianza es fácil observar que esta estimación es buena, informativa y precisa. Por lo tanto, utilizando la transformación logit, el intervalo de confianza de la transformación estaría dado por <span class="math inline">\((0.01\%, 0.71\%)\)</span> y el <span class="math inline">\(CV(\hat{L})= \dfrac{CV(\hat{P})}{\hat{L}}=\dfrac{99,7}{-\log(0,001)}\cong 14.5\%\)</span>, y por lo tanto se concluye que la cifra sí podría publicarse.</p>
+<p>Aún más, este enfoque representa una excelente aproximación al enfoque clásico cuando las proporciones estimadas no son pequeñas. Por ejemplo, considere una proporción estimada del <span class="math inline">\(\hat{P} = 30\%\)</span>, con un con un <span class="math inline">\(CV(\hat{P}) = 4.83\%\)</span> y un intervalo de confianza clásico dao por <span class="math inline">\((27.16\%, 32.84\%)\)</span>. Utilizando la transformación logit, el intervalo de confianza estaría dado por <span class="math inline">\((27.24\%, 32.91\%)\)</span> y el coeficiente de variación logit sería de <span class="math inline">\(CV(\hat{L}) = 4.01\%\)</span>.</p>
 <div class="figure"><span style="display:block;" id="fig:fig1fig"></span>
 <img src="19Calidad_files/figure-html/fig1fig-1.svg" alt="Relación entre el tamaño de muestra y la precisión de un indicador utilizando la transformación Logit." width="672" />
 <p class="caption">

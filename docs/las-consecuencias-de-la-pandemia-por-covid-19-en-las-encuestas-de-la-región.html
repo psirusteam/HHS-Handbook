@@ -23,7 +23,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-09-29" />
+<meta name="date" content="2022-10-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -408,6 +408,17 @@ div.csl-indent {
 <li class="chapter" data-level="19.2" data-path="criterios-de-calidad-en-subpoblaciones.html"><a href="criterios-de-calidad-en-subpoblaciones.html"><i class="fa fa-check"></i><b>19.2</b> Criterios de calidad en subpoblaciones</a></li>
 <li class="chapter" data-level="19.3" data-path="secuencia-lógica-para-crear-reglas-de-supresión.html"><a href="secuencia-lógica-para-crear-reglas-de-supresión.html"><i class="fa fa-check"></i><b>19.3</b> Secuencia lógica para crear reglas de supresión</a></li>
 </ul></li>
+<li class="chapter" data-level="20" data-path="comparabilidad-rediseño-impacto-y-empalme.html"><a href="comparabilidad-rediseño-impacto-y-empalme.html"><i class="fa fa-check"></i><b>20</b> Comparabilidad: rediseño, impacto y empalme</a>
+<ul>
+<li class="chapter" data-level="20.1" data-path="rediseño-de-las-encuestas.html"><a href="rediseño-de-las-encuestas.html"><i class="fa fa-check"></i><b>20.1</b> Rediseño de las encuestas</a></li>
+<li class="chapter" data-level="20.2" data-path="el-impacto-de-los-rediseños.html"><a href="el-impacto-de-los-rediseños.html"><i class="fa fa-check"></i><b>20.2</b> El impacto de los rediseños</a></li>
+<li class="chapter" data-level="20.3" data-path="empalme-de-series-de-tiempo.html"><a href="empalme-de-series-de-tiempo.html"><i class="fa fa-check"></i><b>20.3</b> Empalme de series de tiempo</a>
+<ul>
+<li class="chapter" data-level="20.3.1" data-path="empalme-de-series-de-tiempo.html"><a href="empalme-de-series-de-tiempo.html#factor-suavizado"><i class="fa fa-check"></i><b>20.3.1</b> Factor suavizado</a></li>
+<li class="chapter" data-level="20.3.2" data-path="empalme-de-series-de-tiempo.html"><a href="empalme-de-series-de-tiempo.html#ajuste-sintético-aditivo-y-multiplicativo"><i class="fa fa-check"></i><b>20.3.2</b> Ajuste sintético aditivo y multiplicativo</a></li>
+<li class="chapter" data-level="20.3.3" data-path="empalme-de-series-de-tiempo.html"><a href="empalme-de-series-de-tiempo.html#modelos-estructurales"><i class="fa fa-check"></i><b>20.3.3</b> Modelos estructurales</a></li>
+</ul></li>
+</ul></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
 <li class="chapter" data-level="A" data-path="una-perspectiva-regional-de-las-encuestas-de-hogares.html"><a href="una-perspectiva-regional-de-las-encuestas-de-hogares.html"><i class="fa fa-check"></i><b>A</b> Una perspectiva regional de las encuestas de hogares</a>
 <ul>
@@ -548,6 +559,8 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
   font-weight: initial;
   padding-top: 4px;
   padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
   border-bottom-color: #FFFFFF;
   border-bottom-width: 0;
 }
@@ -558,6 +571,8 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
   font-weight: initial;
   padding-top: 0;
   padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
   border-top-color: #FFFFFF;
   border-top-width: 0;
 }
@@ -636,7 +651,10 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
 }
 
 #yyqpcrtavw .gt_group_heading {
-  padding: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -708,7 +726,26 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
   border-right-style: solid;
   border-right-width: 2px;
   border-right-color: #D3D3D3;
-  padding-left: 12px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#yyqpcrtavw .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#yyqpcrtavw .gt_row_group_first td {
+  border-top-width: 2px;
 }
 
 #yyqpcrtavw .gt_summary_row {
@@ -722,13 +759,22 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
 }
 
 #yyqpcrtavw .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#yyqpcrtavw .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#yyqpcrtavw .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
   padding-right: 5px;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
 }
 
 #yyqpcrtavw .gt_grand_summary_row {
@@ -781,7 +827,10 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
 #yyqpcrtavw .gt_footnote {
   margin: 0px;
   font-size: 90%;
-  padding: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 #yyqpcrtavw .gt_sourcenotes {
@@ -800,7 +849,10 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
 
 #yyqpcrtavw .gt_sourcenote {
   font-size: 90%;
-  padding: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 #yyqpcrtavw .gt_left {
@@ -835,87 +887,113 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
 #yyqpcrtavw .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
-  font-size: 65%;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+#yyqpcrtavw .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#yyqpcrtavw .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#yyqpcrtavw .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#yyqpcrtavw .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#yyqpcrtavw .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#yyqpcrtavw .gt_indent_5 {
+  text-indent: 25px;
 }
 </style>
 <table class="gt_table">
   <thead class="gt_header">
     <tr>
-      <th colspan="3" class="gt_heading gt_title gt_font_normal" style>Un vistazo a la población</th>
+      <td colspan="3" class="gt_heading gt_title gt_font_normal" style>Un vistazo a la población</td>
     </tr>
     <tr>
-      <th colspan="3" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style>20 filas de un total de 50000</th>
+      <td colspan="3" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style>20 filas de un total de 50000</td>
     </tr>
   </thead>
   <thead class="gt_col_headings">
     <tr>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1"></th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">y0</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">y1</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col"></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">y0</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">y1</th>
     </tr>
   </thead>
   <tbody class="gt_table_body">
-    <tr><td class="gt_row gt_left gt_stub" style="font-family: Courier;">1</td>
+    <tr><th scope="row" class="gt_row gt_right gt_stub" style="font-family: Courier;">1</th>
 <td class="gt_row gt_left">Employed</td>
 <td class="gt_row gt_left">Employed</td></tr>
-    <tr><td class="gt_row gt_left gt_stub" style="font-family: Courier;">2</td>
+    <tr><th scope="row" class="gt_row gt_right gt_stub" style="font-family: Courier;">2</th>
 <td class="gt_row gt_left">Employed</td>
 <td class="gt_row gt_left">Unemployed</td></tr>
-    <tr><td class="gt_row gt_left gt_stub" style="font-family: Courier;">3</td>
+    <tr><th scope="row" class="gt_row gt_right gt_stub" style="font-family: Courier;">3</th>
 <td class="gt_row gt_left">Employed</td>
 <td class="gt_row gt_left">Employed</td></tr>
-    <tr><td class="gt_row gt_left gt_stub" style="font-family: Courier;">4</td>
+    <tr><th scope="row" class="gt_row gt_right gt_stub" style="font-family: Courier;">4</th>
 <td class="gt_row gt_left">Employed</td>
 <td class="gt_row gt_left">Employed</td></tr>
-    <tr><td class="gt_row gt_left gt_stub" style="font-family: Courier;">5</td>
+    <tr><th scope="row" class="gt_row gt_right gt_stub" style="font-family: Courier;">5</th>
 <td class="gt_row gt_left">Employed</td>
 <td class="gt_row gt_left">Unemployed</td></tr>
-    <tr><td class="gt_row gt_left gt_stub" style="font-family: Courier;">6</td>
+    <tr><th scope="row" class="gt_row gt_right gt_stub" style="font-family: Courier;">6</th>
 <td class="gt_row gt_left">Employed</td>
 <td class="gt_row gt_left">Unemployed</td></tr>
-    <tr><td class="gt_row gt_left gt_stub" style="font-family: Courier;">7</td>
+    <tr><th scope="row" class="gt_row gt_right gt_stub" style="font-family: Courier;">7</th>
 <td class="gt_row gt_left">Employed</td>
 <td class="gt_row gt_left">Employed</td></tr>
-    <tr><td class="gt_row gt_left gt_stub" style="font-family: Courier;">8</td>
+    <tr><th scope="row" class="gt_row gt_right gt_stub" style="font-family: Courier;">8</th>
 <td class="gt_row gt_left">Unemployed</td>
 <td class="gt_row gt_left">Unemployed</td></tr>
-    <tr><td class="gt_row gt_left gt_stub" style="font-family: Courier;">9</td>
+    <tr><th scope="row" class="gt_row gt_right gt_stub" style="font-family: Courier;">9</th>
 <td class="gt_row gt_left">Employed</td>
 <td class="gt_row gt_left">Unemployed</td></tr>
-    <tr><td class="gt_row gt_left gt_stub" style="font-family: Courier;">10</td>
+    <tr><th scope="row" class="gt_row gt_right gt_stub" style="font-family: Courier;">10</th>
 <td class="gt_row gt_left">Employed</td>
 <td class="gt_row gt_left">Unemployed</td></tr>
-    <tr><td class="gt_row gt_left gt_stub" style="font-family: Courier; font-size: x-small; background-color: #E4E4E4;">11..49990</td>
+    <tr><th scope="row" class="gt_row gt_right gt_stub" style="font-family: Courier; font-size: x-small; background-color: #E4E4E4;">11..49990</th>
 <td class="gt_row gt_left" style="background-color: #E4E4E4;"></td>
 <td class="gt_row gt_left" style="background-color: #E4E4E4;"></td></tr>
-    <tr><td class="gt_row gt_left gt_stub" style="font-family: Courier;">49991</td>
+    <tr><th scope="row" class="gt_row gt_right gt_stub" style="font-family: Courier;">49991</th>
 <td class="gt_row gt_left">Unemployed</td>
 <td class="gt_row gt_left">Unemployed</td></tr>
-    <tr><td class="gt_row gt_left gt_stub" style="font-family: Courier;">49992</td>
+    <tr><th scope="row" class="gt_row gt_right gt_stub" style="font-family: Courier;">49992</th>
 <td class="gt_row gt_left">Unemployed</td>
 <td class="gt_row gt_left">Unemployed</td></tr>
-    <tr><td class="gt_row gt_left gt_stub" style="font-family: Courier;">49993</td>
+    <tr><th scope="row" class="gt_row gt_right gt_stub" style="font-family: Courier;">49993</th>
 <td class="gt_row gt_left">Employed</td>
 <td class="gt_row gt_left">Unemployed</td></tr>
-    <tr><td class="gt_row gt_left gt_stub" style="font-family: Courier;">49994</td>
+    <tr><th scope="row" class="gt_row gt_right gt_stub" style="font-family: Courier;">49994</th>
 <td class="gt_row gt_left">Unemployed</td>
 <td class="gt_row gt_left">Unemployed</td></tr>
-    <tr><td class="gt_row gt_left gt_stub" style="font-family: Courier;">49995</td>
+    <tr><th scope="row" class="gt_row gt_right gt_stub" style="font-family: Courier;">49995</th>
 <td class="gt_row gt_left">Employed</td>
 <td class="gt_row gt_left">Employed</td></tr>
-    <tr><td class="gt_row gt_left gt_stub" style="font-family: Courier;">49996</td>
+    <tr><th scope="row" class="gt_row gt_right gt_stub" style="font-family: Courier;">49996</th>
 <td class="gt_row gt_left">Employed</td>
 <td class="gt_row gt_left">Employed</td></tr>
-    <tr><td class="gt_row gt_left gt_stub" style="font-family: Courier;">49997</td>
+    <tr><th scope="row" class="gt_row gt_right gt_stub" style="font-family: Courier;">49997</th>
 <td class="gt_row gt_left">Employed</td>
 <td class="gt_row gt_left">Employed</td></tr>
-    <tr><td class="gt_row gt_left gt_stub" style="font-family: Courier;">49998</td>
+    <tr><th scope="row" class="gt_row gt_right gt_stub" style="font-family: Courier;">49998</th>
 <td class="gt_row gt_left">Employed</td>
 <td class="gt_row gt_left">Employed</td></tr>
-    <tr><td class="gt_row gt_left gt_stub" style="font-family: Courier;">49999</td>
+    <tr><th scope="row" class="gt_row gt_right gt_stub" style="font-family: Courier;">49999</th>
 <td class="gt_row gt_left">Employed</td>
 <td class="gt_row gt_left">Employed</td></tr>
-    <tr><td class="gt_row gt_left gt_stub" style="font-family: Courier;">50000</td>
+    <tr><th scope="row" class="gt_row gt_right gt_stub" style="font-family: Courier;">50000</th>
 <td class="gt_row gt_left">Employed</td>
 <td class="gt_row gt_left">Employed</td></tr>
   </tbody>
@@ -972,6 +1050,8 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
   font-weight: initial;
   padding-top: 4px;
   padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
   border-bottom-color: #FFFFFF;
   border-bottom-width: 0;
 }
@@ -982,6 +1062,8 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
   font-weight: initial;
   padding-top: 0;
   padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
   border-top-color: #FFFFFF;
   border-top-width: 0;
 }
@@ -1060,7 +1142,10 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
 }
 
 #rjweqtravs .gt_group_heading {
-  padding: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1132,7 +1217,26 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
   border-right-style: solid;
   border-right-width: 2px;
   border-right-color: #D3D3D3;
-  padding-left: 12px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#rjweqtravs .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#rjweqtravs .gt_row_group_first td {
+  border-top-width: 2px;
 }
 
 #rjweqtravs .gt_summary_row {
@@ -1146,13 +1250,22 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
 }
 
 #rjweqtravs .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#rjweqtravs .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#rjweqtravs .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
   padding-right: 5px;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
 }
 
 #rjweqtravs .gt_grand_summary_row {
@@ -1205,7 +1318,10 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
 #rjweqtravs .gt_footnote {
   margin: 0px;
   font-size: 90%;
-  padding: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 #rjweqtravs .gt_sourcenotes {
@@ -1224,7 +1340,10 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
 
 #rjweqtravs .gt_sourcenote {
   font-size: 90%;
-  padding: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 #rjweqtravs .gt_left {
@@ -1259,23 +1378,49 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
 #rjweqtravs .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
-  font-size: 65%;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+#rjweqtravs .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#rjweqtravs .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#rjweqtravs .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#rjweqtravs .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#rjweqtravs .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#rjweqtravs .gt_indent_5 {
+  text-indent: 25px;
 }
 </style>
 <table class="gt_table">
   <thead class="gt_header">
     <tr>
-      <th colspan="3" class="gt_heading gt_title gt_font_normal" style>Flujos netos verdaderos en la población finita</th>
+      <td colspan="3" class="gt_heading gt_title gt_font_normal" style>Flujos netos verdaderos en la población finita</td>
     </tr>
     <tr>
-      <th colspan="3" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style>Antes de la pandemia por COVID-19</th>
+      <td colspan="3" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style>Antes de la pandemia por COVID-19</td>
     </tr>
   </thead>
   <thead class="gt_col_headings">
     <tr>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">y0</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">n</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">prop</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">y0</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">n</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">prop</th>
     </tr>
   </thead>
   <tbody class="gt_table_body">
@@ -1338,6 +1483,8 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
   font-weight: initial;
   padding-top: 4px;
   padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
   border-bottom-color: #FFFFFF;
   border-bottom-width: 0;
 }
@@ -1348,6 +1495,8 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
   font-weight: initial;
   padding-top: 0;
   padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
   border-top-color: #FFFFFF;
   border-top-width: 0;
 }
@@ -1426,7 +1575,10 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
 }
 
 #cbithhjhgb .gt_group_heading {
-  padding: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1498,7 +1650,26 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
   border-right-style: solid;
   border-right-width: 2px;
   border-right-color: #D3D3D3;
-  padding-left: 12px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#cbithhjhgb .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#cbithhjhgb .gt_row_group_first td {
+  border-top-width: 2px;
 }
 
 #cbithhjhgb .gt_summary_row {
@@ -1512,13 +1683,22 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
 }
 
 #cbithhjhgb .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#cbithhjhgb .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#cbithhjhgb .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
   padding-right: 5px;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
 }
 
 #cbithhjhgb .gt_grand_summary_row {
@@ -1571,7 +1751,10 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
 #cbithhjhgb .gt_footnote {
   margin: 0px;
   font-size: 90%;
-  padding: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 #cbithhjhgb .gt_sourcenotes {
@@ -1590,7 +1773,10 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
 
 #cbithhjhgb .gt_sourcenote {
   font-size: 90%;
-  padding: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 #cbithhjhgb .gt_left {
@@ -1625,23 +1811,49 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
 #cbithhjhgb .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
-  font-size: 65%;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+#cbithhjhgb .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#cbithhjhgb .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#cbithhjhgb .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#cbithhjhgb .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#cbithhjhgb .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#cbithhjhgb .gt_indent_5 {
+  text-indent: 25px;
 }
 </style>
 <table class="gt_table">
   <thead class="gt_header">
     <tr>
-      <th colspan="3" class="gt_heading gt_title gt_font_normal" style>Flujos netos verdaderos en la población finita</th>
+      <td colspan="3" class="gt_heading gt_title gt_font_normal" style>Flujos netos verdaderos en la población finita</td>
     </tr>
     <tr>
-      <th colspan="3" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style>En medio de la pandemia por COVID-19</th>
+      <td colspan="3" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style>En medio de la pandemia por COVID-19</td>
     </tr>
   </thead>
   <thead class="gt_col_headings">
     <tr>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">y1</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">n</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">prop</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">y1</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">n</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">prop</th>
     </tr>
   </thead>
   <tbody class="gt_table_body">
@@ -1705,6 +1917,8 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
   font-weight: initial;
   padding-top: 4px;
   padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
   border-bottom-color: #FFFFFF;
   border-bottom-width: 0;
 }
@@ -1715,6 +1929,8 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
   font-weight: initial;
   padding-top: 0;
   padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
   border-top-color: #FFFFFF;
   border-top-width: 0;
 }
@@ -1793,7 +2009,10 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
 }
 
 #sdijeyqodm .gt_group_heading {
-  padding: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1865,7 +2084,26 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
   border-right-style: solid;
   border-right-width: 2px;
   border-right-color: #D3D3D3;
-  padding-left: 12px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#sdijeyqodm .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#sdijeyqodm .gt_row_group_first td {
+  border-top-width: 2px;
 }
 
 #sdijeyqodm .gt_summary_row {
@@ -1879,13 +2117,22 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
 }
 
 #sdijeyqodm .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#sdijeyqodm .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#sdijeyqodm .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
   padding-right: 5px;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
 }
 
 #sdijeyqodm .gt_grand_summary_row {
@@ -1938,7 +2185,10 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
 #sdijeyqodm .gt_footnote {
   margin: 0px;
   font-size: 90%;
-  padding: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 #sdijeyqodm .gt_sourcenotes {
@@ -1957,7 +2207,10 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
 
 #sdijeyqodm .gt_sourcenote {
   font-size: 90%;
-  padding: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 #sdijeyqodm .gt_left {
@@ -1992,34 +2245,60 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
 #sdijeyqodm .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
-  font-size: 65%;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+#sdijeyqodm .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#sdijeyqodm .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#sdijeyqodm .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#sdijeyqodm .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#sdijeyqodm .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#sdijeyqodm .gt_indent_5 {
+  text-indent: 25px;
 }
 </style>
 <table class="gt_table">
   <thead class="gt_header">
     <tr>
-      <th colspan="2" class="gt_heading gt_title gt_font_normal" style>Flujos brutos verdaderos en la población finita</th>
+      <td colspan="2" class="gt_heading gt_title gt_font_normal" style>Flujos brutos verdaderos en la población finita</td>
     </tr>
     <tr>
-      <th colspan="2" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style>Cambio en el estado laboral</th>
+      <td colspan="2" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style>Cambio en el estado laboral</td>
     </tr>
   </thead>
   <thead class="gt_col_headings">
     <tr>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">Employed</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">Unemployed</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">Employed</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">Unemployed</th>
     </tr>
   </thead>
   <tbody class="gt_table_body">
     <tr class="gt_group_heading_row">
       <td colspan="2" class="gt_group_heading">Employed</td>
     </tr>
-    <tr><td class="gt_row gt_right">25000</td>
+    <tr class="gt_row_group_first"><td class="gt_row gt_right">25000</td>
 <td class="gt_row gt_right">15000</td></tr>
     <tr class="gt_group_heading_row">
       <td colspan="2" class="gt_group_heading">Unemployed</td>
     </tr>
-    <tr><td class="gt_row gt_right">0</td>
+    <tr class="gt_row_group_first"><td class="gt_row gt_right">0</td>
 <td class="gt_row gt_right">10000</td></tr>
   </tbody>
   
@@ -2077,6 +2356,8 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
   font-weight: initial;
   padding-top: 4px;
   padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
   border-bottom-color: #FFFFFF;
   border-bottom-width: 0;
 }
@@ -2087,6 +2368,8 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
   font-weight: initial;
   padding-top: 0;
   padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
   border-top-color: #FFFFFF;
   border-top-width: 0;
 }
@@ -2165,7 +2448,10 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
 }
 
 #mefjryzote .gt_group_heading {
-  padding: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2237,7 +2523,26 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
   border-right-style: solid;
   border-right-width: 2px;
   border-right-color: #D3D3D3;
-  padding-left: 12px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mefjryzote .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#mefjryzote .gt_row_group_first td {
+  border-top-width: 2px;
 }
 
 #mefjryzote .gt_summary_row {
@@ -2251,13 +2556,22 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
 }
 
 #mefjryzote .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#mefjryzote .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#mefjryzote .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
   padding-right: 5px;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
 }
 
 #mefjryzote .gt_grand_summary_row {
@@ -2310,7 +2624,10 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
 #mefjryzote .gt_footnote {
   margin: 0px;
   font-size: 90%;
-  padding: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 #mefjryzote .gt_sourcenotes {
@@ -2329,7 +2646,10 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
 
 #mefjryzote .gt_sourcenote {
   font-size: 90%;
-  padding: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 #mefjryzote .gt_left {
@@ -2364,16 +2684,42 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
 #mefjryzote .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
-  font-size: 65%;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+#mefjryzote .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#mefjryzote .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#mefjryzote .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#mefjryzote .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#mefjryzote .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#mefjryzote .gt_indent_5 {
+  text-indent: 25px;
 }
 </style>
 <table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">Estado</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">n</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">prop</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">Estado</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">n</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">prop</th>
     </tr>
   </thead>
   <tbody class="gt_table_body">
@@ -2436,6 +2782,8 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
   font-weight: initial;
   padding-top: 4px;
   padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
   border-bottom-color: #FFFFFF;
   border-bottom-width: 0;
 }
@@ -2446,6 +2794,8 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
   font-weight: initial;
   padding-top: 0;
   padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
   border-top-color: #FFFFFF;
   border-top-width: 0;
 }
@@ -2524,7 +2874,10 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
 }
 
 #hzccrsbrsz .gt_group_heading {
-  padding: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2596,7 +2949,26 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
   border-right-style: solid;
   border-right-width: 2px;
   border-right-color: #D3D3D3;
-  padding-left: 12px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hzccrsbrsz .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#hzccrsbrsz .gt_row_group_first td {
+  border-top-width: 2px;
 }
 
 #hzccrsbrsz .gt_summary_row {
@@ -2610,13 +2982,22 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
 }
 
 #hzccrsbrsz .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#hzccrsbrsz .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#hzccrsbrsz .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
   padding-right: 5px;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
 }
 
 #hzccrsbrsz .gt_grand_summary_row {
@@ -2669,7 +3050,10 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
 #hzccrsbrsz .gt_footnote {
   margin: 0px;
   font-size: 90%;
-  padding: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 #hzccrsbrsz .gt_sourcenotes {
@@ -2688,7 +3072,10 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
 
 #hzccrsbrsz .gt_sourcenote {
   font-size: 90%;
-  padding: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 #hzccrsbrsz .gt_left {
@@ -2723,16 +3110,42 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
 #hzccrsbrsz .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
-  font-size: 65%;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+#hzccrsbrsz .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#hzccrsbrsz .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#hzccrsbrsz .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#hzccrsbrsz .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#hzccrsbrsz .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#hzccrsbrsz .gt_indent_5 {
+  text-indent: 25px;
 }
 </style>
 <table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">Estado</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">n</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">prop</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">Estado</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">n</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">prop</th>
     </tr>
   </thead>
   <tbody class="gt_table_body">
@@ -2798,6 +3211,8 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
   font-weight: initial;
   padding-top: 4px;
   padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
   border-bottom-color: #FFFFFF;
   border-bottom-width: 0;
 }
@@ -2808,6 +3223,8 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
   font-weight: initial;
   padding-top: 0;
   padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
   border-top-color: #FFFFFF;
   border-top-width: 0;
 }
@@ -2886,7 +3303,10 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
 }
 
 #udnipfjoev .gt_group_heading {
-  padding: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2958,7 +3378,26 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
   border-right-style: solid;
   border-right-width: 2px;
   border-right-color: #D3D3D3;
-  padding-left: 12px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#udnipfjoev .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#udnipfjoev .gt_row_group_first td {
+  border-top-width: 2px;
 }
 
 #udnipfjoev .gt_summary_row {
@@ -2972,13 +3411,22 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
 }
 
 #udnipfjoev .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#udnipfjoev .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#udnipfjoev .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
   padding-right: 5px;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
 }
 
 #udnipfjoev .gt_grand_summary_row {
@@ -3031,7 +3479,10 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
 #udnipfjoev .gt_footnote {
   margin: 0px;
   font-size: 90%;
-  padding: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 #udnipfjoev .gt_sourcenotes {
@@ -3050,7 +3501,10 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
 
 #udnipfjoev .gt_sourcenote {
   font-size: 90%;
-  padding: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 #udnipfjoev .gt_left {
@@ -3085,16 +3539,42 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
 #udnipfjoev .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
-  font-size: 65%;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+#udnipfjoev .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#udnipfjoev .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#udnipfjoev .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#udnipfjoev .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#udnipfjoev .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#udnipfjoev .gt_indent_5 {
+  text-indent: 25px;
 }
 </style>
 <table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">Estado</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">n</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">prop</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">Estado</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">n</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">prop</th>
     </tr>
   </thead>
   <tbody class="gt_table_body">
@@ -3158,6 +3638,8 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
   font-weight: initial;
   padding-top: 4px;
   padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
   border-bottom-color: #FFFFFF;
   border-bottom-width: 0;
 }
@@ -3168,6 +3650,8 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
   font-weight: initial;
   padding-top: 0;
   padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
   border-top-color: #FFFFFF;
   border-top-width: 0;
 }
@@ -3246,7 +3730,10 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
 }
 
 #qnsxxdlyoy .gt_group_heading {
-  padding: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3318,7 +3805,26 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
   border-right-style: solid;
   border-right-width: 2px;
   border-right-color: #D3D3D3;
-  padding-left: 12px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#qnsxxdlyoy .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#qnsxxdlyoy .gt_row_group_first td {
+  border-top-width: 2px;
 }
 
 #qnsxxdlyoy .gt_summary_row {
@@ -3332,13 +3838,22 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
 }
 
 #qnsxxdlyoy .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#qnsxxdlyoy .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#qnsxxdlyoy .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
   padding-right: 5px;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
 }
 
 #qnsxxdlyoy .gt_grand_summary_row {
@@ -3391,7 +3906,10 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
 #qnsxxdlyoy .gt_footnote {
   margin: 0px;
   font-size: 90%;
-  padding: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 #qnsxxdlyoy .gt_sourcenotes {
@@ -3410,7 +3928,10 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
 
 #qnsxxdlyoy .gt_sourcenote {
   font-size: 90%;
-  padding: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 #qnsxxdlyoy .gt_left {
@@ -3445,16 +3966,42 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
 #qnsxxdlyoy .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
-  font-size: 65%;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+#qnsxxdlyoy .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#qnsxxdlyoy .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#qnsxxdlyoy .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#qnsxxdlyoy .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#qnsxxdlyoy .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#qnsxxdlyoy .gt_indent_5 {
+  text-indent: 25px;
 }
 </style>
 <table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">Estado</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">n</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">prop</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">Estado</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">n</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">prop</th>
     </tr>
   </thead>
   <tbody class="gt_table_body">
@@ -3518,6 +4065,8 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
   font-weight: initial;
   padding-top: 4px;
   padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
   border-bottom-color: #FFFFFF;
   border-bottom-width: 0;
 }
@@ -3528,6 +4077,8 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
   font-weight: initial;
   padding-top: 0;
   padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
   border-top-color: #FFFFFF;
   border-top-width: 0;
 }
@@ -3606,7 +4157,10 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
 }
 
 #pabqlxluqb .gt_group_heading {
-  padding: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3678,7 +4232,26 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
   border-right-style: solid;
   border-right-width: 2px;
   border-right-color: #D3D3D3;
-  padding-left: 12px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pabqlxluqb .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#pabqlxluqb .gt_row_group_first td {
+  border-top-width: 2px;
 }
 
 #pabqlxluqb .gt_summary_row {
@@ -3692,13 +4265,22 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
 }
 
 #pabqlxluqb .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#pabqlxluqb .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#pabqlxluqb .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
   padding-right: 5px;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
 }
 
 #pabqlxluqb .gt_grand_summary_row {
@@ -3751,7 +4333,10 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
 #pabqlxluqb .gt_footnote {
   margin: 0px;
   font-size: 90%;
-  padding: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 #pabqlxluqb .gt_sourcenotes {
@@ -3770,7 +4355,10 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
 
 #pabqlxluqb .gt_sourcenote {
   font-size: 90%;
-  padding: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 #pabqlxluqb .gt_left {
@@ -3805,16 +4393,42 @@ Figura 13.7: Distribuciones del estimador de Horvtiz-Thompson y de dos estimador
 #pabqlxluqb .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
-  font-size: 65%;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+#pabqlxluqb .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#pabqlxluqb .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#pabqlxluqb .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#pabqlxluqb .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#pabqlxluqb .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#pabqlxluqb .gt_indent_5 {
+  text-indent: 25px;
 }
 </style>
 <table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1">Estado</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1">Respuesta</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">Freq</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col">Estado</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col">Respuesta</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">Freq</th>
     </tr>
   </thead>
   <tbody class="gt_table_body">

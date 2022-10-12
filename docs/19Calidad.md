@@ -118,6 +118,9 @@ $$
 
 De manera similar, para mantener la simetría, cuando $P>0,5$ se realiza un ajuste definiendo $\hat{L} = -\log(1-\hat{P})$. Por lo tanto, para proporciones centrales, los coeficientes de variación de $\hat{P}$ y $\hat{L}$ serán comparables, puesto que $\hat{L}$ toma valores cercanos a uno cuando $P \in (0,2\ \ ,\ \ 0,8)$, y en este caso el $CV(\hat{L})$ será similar a $CV(\hat{P})$.
 
+A continuación se presenta un ejemplo sencillo. Considere una proporción estimada $\hat{P} = 0.1\%$, con un error estándar $SE(\hat{P}) = 0.2\%$; por ende, el intervalo de confianza clásico está dado por $(-0.10\%, 0.30\%)$, junto con un coeficiente de variación $CV(\hat{P}) = 99.70\%$, razón por la cual la cifra no sería publicable en primera instancia. Sin embargo, a partir de la amplitud del intervalo de confianza es fácil observar que esta estimación es buena, informativa y precisa. Por lo tanto, utilizando la transformación logit, el intervalo de confianza de la transformación estaría dado por $(0.01\%, 0.71\%)$ y el $CV(\hat{L})= \dfrac{CV(\hat{P})}{\hat{L}}=\dfrac{99,7}{-\log(0,001)}\cong 14.5\%$, y por lo tanto se concluye que la cifra sí podría publicarse.
+
+Aún más, este enfoque representa una excelente aproximación al enfoque clásico cuando las proporciones estimadas no son pequeñas. Por ejemplo, considere una proporción estimada del $\hat{P} = 30\%$, con un con un $CV(\hat{P}) = 4.83\%$ y un intervalo de confianza clásico dao por $(27.16\%, 32.84\%)$. Utilizando la transformación logit, el intervalo de confianza estaría dado por $(27.24\%, 32.91\%)$ y el coeficiente de variación logit sería de $CV(\hat{L}) = 4.01\%$. 
 
 ![(\#fig:fig1fig)Relación entre el tamaño de muestra y la precisión de un indicador utilizando la transformación Logit.](19Calidad_files/figure-latex/fig1fig-1.pdf) 
 

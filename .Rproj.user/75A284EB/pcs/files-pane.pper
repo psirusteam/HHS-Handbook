@@ -1,17 +1,17 @@
 {
     "sortOrder": [
         {
+            "columnIndex": 2,
+            "ascending": true
+        },
+        {
             "columnIndex": 3,
             "ascending": false
         },
         {
             "columnIndex": 4,
             "ascending": false
-        },
-        {
-            "columnIndex": 2,
-            "ascending": true
         }
     ],
-    "path": "~/Library/CloudStorage/OneDrive-UnitedNations/CEPAL/Vademecum/5. Handbooks/CEPALmetodologías/HHS-Handbook/docs"
+    "path": "~/Library/CloudStorage/OneDrive-UnitedNations/CEPAL/Vademecum/5. Handbooks/CEPALmetodologías/HHS-Handbook"
 }
