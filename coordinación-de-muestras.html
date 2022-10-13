@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>1.3 Coordinación de muestras | 06Diseno.knit</title>
+  <meta name="description" content="" />
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="1.3 Coordinación de muestras | 06Diseno.knit" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="1.3 Coordinación de muestras | 06Diseno.knit" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="el-diseño-de-muestreo-estándar-en-una-encuesta-de-hogares.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Diseño y análisis de encuestas de hogares</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="diseño-y-mecanismo-de-selección-de-la-muestra.html"><a href="diseño-y-mecanismo-de-selección-de-la-muestra.html"><i class="fa fa-check"></i><b>1</b> Diseño y mecanismo de selección de la muestra</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html"><i class="fa fa-check"></i><b>1.1</b> Diseños de muestreo</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-aleatorio-simple"><i class="fa fa-check"></i><b>1.1.1</b> Muestreo aleatorio simple</a></li>
+<li class="chapter" data-level="1.1.2" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-proporcional-al-tamaño"><i class="fa fa-check"></i><b>1.1.2</b> Muestreo proporcional al tamaño</a></li>
+<li class="chapter" data-level="1.1.3" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-estratificado"><i class="fa fa-check"></i><b>1.1.3</b> Muestreo estratificado</a></li>
+<li class="chapter" data-level="1.1.4" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-de-conglomerados"><i class="fa fa-check"></i><b>1.1.4</b> Muestreo de conglomerados</a></li>
+<li class="chapter" data-level="1.1.5" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-en-varias-etapas"><i class="fa fa-check"></i><b>1.1.5</b> Muestreo en varias etapas</a></li>
+<li class="chapter" data-level="1.1.6" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-en-dos-fases"><i class="fa fa-check"></i><b>1.1.6</b> Muestreo en dos fases</a></li>
+<li class="chapter" data-level="1.1.7" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-balanceado"><i class="fa fa-check"></i><b>1.1.7</b> Muestreo balanceado</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="el-diseño-de-muestreo-estándar-en-una-encuesta-de-hogares.html"><a href="el-diseño-de-muestreo-estándar-en-una-encuesta-de-hogares.html"><i class="fa fa-check"></i><b>1.2</b> El diseño de muestreo estándar en una encuesta de hogares</a></li>
+<li class="chapter" data-level="1.3" data-path="coordinación-de-muestras.html"><a href="coordinación-de-muestras.html"><i class="fa fa-check"></i><b>1.3</b> Coordinación de muestras</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="coordinación-de-muestras.html"><a href="coordinación-de-muestras.html#tipos-de-coordinación"><i class="fa fa-check"></i><b>1.3.1</b> Tipos de coordinación</a></li>
+<li class="chapter" data-level="1.3.2" data-path="coordinación-de-muestras.html"><a href="coordinación-de-muestras.html#coordinación-de-muestras-aleatorias-simples"><i class="fa fa-check"></i><b>1.3.2</b> Coordinación de muestras aleatorias simples</a></li>
+<li class="chapter" data-level="1.3.3" data-path="coordinación-de-muestras.html"><a href="coordinación-de-muestras.html#coordinación-de-muestras-proporcionales"><i class="fa fa-check"></i><b>1.3.3</b> Coordinación de muestras proporcionales</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a Diseño y análisis de encuestas de hogares</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="coordinación-de-muestras" class="section level2 hasAnchor" number="1.3">
+<h2><span class="header-section-number">1.3</span> Coordinación de muestras<a href="coordinación-de-muestras.html#coordinación-de-muestras" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>En la realidad, las Oficinas Nacionales de Estadística no realizan una sola encuesta, sino varias en un mismo año. Más aún, una misma encuesta continua puede tener muchos levantamientos en un mismo año. Es por esta razón que, en la administración de los marcos de muestreo, uno de los tópicos más importantes es la coordinación de muestras en el tiempo y entre encuestas. Cuando se define un marco de muestreo nuevo, debido a la realización de un censo de población y vivienda, debe existir una planificación rigurosa que le permita conocer de antemano a los equipos técnicos de las ONE cuáles UPM serán seleccionadas a lo largo del siguiente periodo intercensal y esta relación debe estar supeditada a todas las operaciones estadísticas basadas en encuestas de hogares.</p>
+<p>A pesar de que esta planeación pueda parecer muy exigente, puesto que un periodo intercensal puede durar más de diez años, es necesaria para evitar el desgaste de las UPM en las muestras maestras, y el agotamiento de los respondientes. En vez de esto, la planificación rigurosa permitirá establecer de antemano los procesos logísticos, administrativos y preseupuestales para la recolección de la información primaria para todas las encuestas que se lleven a cabo en este periodo. Esta planificaación además debe atender a estrictos parámetros estadísticos en la selección de las muestras de cada encuesta. Es decir, la sección de las UPM debe respetar el diseño propuesto en cada operación estadística, incluyendo los esquemas rotativos a lo largo del periodo intercensal.</p>
+<div id="tipos-de-coordinación" class="section level3 hasAnchor" number="1.3.1">
+<h3><span class="header-section-number">1.3.1</span> Tipos de coordinación<a href="coordinación-de-muestras.html#tipos-de-coordinación" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>En esta sección se introducirán los fundamentos de los mecanismos de selección y coordinación de muestras para lograr el objetivo de planificación. En primer lugar, se establece que una muestra es <em>positivamente coordinada</em> con otra, si comparten todos sus elementos. De la misma forma dos muestras son <em>negativamente coordinadas</em> si no comparten ningún elemento en común. Nótese que en el caso de las encuestas con esquemas rotacionales complejos, existirán muestras parcialmente coordinadas y negativamente coordinadas. Por ejemplo, en un esquema rotacional 2(2)2, cualesquiera dos muestras de periodos consecutivos tendrán un traslape del 50% y estarán parcialmente coordinadas; sin embargo, en este mismo esquema, dos muestras que estén distanciadas por dos periodos consecutivos no tendrán ningún traslape y deberán estar negativamente coordinadas.</p>
+<p>Para lograr este cometido es posible utilizar esquemas de selección secuenciales <span class="citation">[@Gutierrez_2016]</span> que utilicen números aleatorios asignados a cada UPM en el marco de muestreo. En general, existen dos tipos de números aleatorios que se pueden usar en la coordinación de muestras, incluso si se trata de muestras que vienen de diferentes diseños de muestreo. A continuación se describen cada uno de los métodos</p>
+<ul>
+<li><em>Números aleatorios permanentes</em>: cada unidad del marco recibirá un número aleatorio venido de una distribución uniforme en el intervalo unitario. Es decir a cada unidad <span class="math inline">\(i \in U_I\)</span> se le asignara el siguiente número:
+<span class="math display">\[
+\xi_i^P \sim Uniforme\ (0, 1)
+\]</span>
+Evidentemente, en este caso los números aleatorios permanentes no son equidistantes.</li>
+<li><em>Números aleatorios colocados</em>: a partir de los números aleatorios <span class="math inline">\(\xi_i\)</span> creados en el paso anterior, es posible utilizar su rango para definir su ordenamiento y mediante la siguiente función crear números aleatorios equidistantes:
+<span class="math display">\[
+\xi_i^C= \dfrac{\text{Rango}(\xi_i^P) - \varepsilon}{N}
+\]</span>
+En donde <span class="math inline">\(\varepsilon\)</span> es un único valor aleatorio entre cero y uno. Como ilustración, considere una población de tamaño <span class="math inline">\(N = 10\)</span>, para la que se han definido números aleatorios <span class="math inline">\(\xi_i^C\)</span> y, teniendo en cuenta un número aleatorio <span class="math inline">\(\varepsilon = 0.283\)</span>, también se definen <span class="math inline">\(\xi_i^P\)</span>. La tabla XXX muestra los números aleatorios resultantes.</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th align="right">Unidad</th>
+<th align="right">xi_P</th>
+<th align="right">xi_C</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">0.2875</td>
+<td align="right">0.1717</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="right">0.7883</td>
+<td align="right">0.6717</td>
+</tr>
+<tr class="odd">
+<td align="right">3</td>
+<td align="right">0.4089</td>
+<td align="right">0.2717</td>
+</tr>
+<tr class="even">
+<td align="right">4</td>
+<td align="right">0.8831</td>
+<td align="right">0.7717</td>
+</tr>
+<tr class="odd">
+<td align="right">5</td>
+<td align="right">0.9404</td>
+<td align="right">0.9717</td>
+</tr>
+<tr class="even">
+<td align="right">6</td>
+<td align="right">0.0455</td>
+<td align="right">0.0717</td>
+</tr>
+<tr class="odd">
+<td align="right">7</td>
+<td align="right">0.5281</td>
+<td align="right">0.4717</td>
+</tr>
+<tr class="even">
+<td align="right">8</td>
+<td align="right">0.8924</td>
+<td align="right">0.8717</td>
+</tr>
+<tr class="odd">
+<td align="right">9</td>
+<td align="right">0.5514</td>
+<td align="right">0.5717</td>
+</tr>
+<tr class="even">
+<td align="right">10</td>
+<td align="right">0.4566</td>
+<td align="right">0.3717</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="coordinación-de-muestras-aleatorias-simples" class="section level3 hasAnchor" number="1.3.2">
+<h3><span class="header-section-number">1.3.2</span> Coordinación de muestras aleatorias simples<a href="coordinación-de-muestras.html#coordinación-de-muestras-aleatorias-simples" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Para seleccionar una muestra aleatoria simple <span class="math inline">\(s\)</span> de tamaño <span class="math inline">\(n\)</span>, se deberá ordenar el marco de muestreo de forma ascendente de acuerdo a los números <span class="math inline">\(\xi_i^P\)</span>. De esta forma, la muestra <span class="math inline">\(s\)</span> estará compuesta por lo primeros <span class="math inline">\(n\)</span> registros del marco ordenado (o por los últimos <span class="math inline">\(n\)</span> registros).</p>
+<p>Es así como, para coordinar dos muestras <span class="math inline">\(s^1\)</span> de tamaño <span class="math inline">\(n_1\)</span> y <span class="math inline">\(s^2\)</span> de tamaño <span class="math inline">\(n_2\)</span>, <span class="citation">@Ohl95</span> menciona que es posible escoger dos constantes <span class="math inline">\(a_1\)</span> y <span class="math inline">\(a_2\)</span> en el intervalo <span class="math inline">\((0, 1)\)</span>. Luego, a partir del marco ordenado con los números aleatorios permanentes (o colocados), definir la muestra <span class="math inline">\(s_1\)</span> como las primeras <span class="math inline">\(n_1\)</span> unidades a la derecha (o izquierda) de <span class="math inline">\(a_1\)</span> y la muestra <span class="math inline">\(s_2\)</span> como las primeras <span class="math inline">\(n_2\)</span> unidades a la derecha (o izquierda) de <span class="math inline">\(a_2\)</span>. Si se quieren muestras positivamente coordinadas, entonces <span class="math inline">\(a_1 = a_2\)</span>; por el contrario, si se quieren muestras negativamente coordinadas, se deberán escoger las constantes de forma apropiada. Por ejemplo sumar 0.5 (en módulo uno) a la constante <span class="math inline">\(a_1\)</span>; es decir, <span class="math inline">\(a_2 = (a_1 + 1/2) \mod{1}\)</span>. En general, si se quieren coordinar negativamente <span class="math inline">\(Q\)</span> diferentes muestras, <span class="citation">@Grafstrom_Matei_2015</span> aconsejan añadir la cantidad de <span class="math inline">\(1/Q\)</span> (en módulo uno) a la constante <span class="math inline">\(a_1\)</span>.</p>
+<p>Continuando con el ejemplo reducido, la tabla XXXX muestra la selección de dos muestras negativamente coordinadas de tamaño <span class="math inline">\(n_1 = n_2 =3\)</span>, con <span class="math inline">\(a_1 = 0\)</span> y <span class="math inline">\(a_2 = 0.5\)</span>.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="right">Unidad</th>
+<th align="right">xi_P</th>
+<th align="right">s_1</th>
+<th align="right">s_2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">6</td>
+<td align="right">0.0455</td>
+<td align="right">1</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="right">1</td>
+<td align="right">0.2875</td>
+<td align="right">1</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="right">3</td>
+<td align="right">0.4089</td>
+<td align="right">1</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="right">10</td>
+<td align="right">0.4566</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="right">7</td>
+<td align="right">0.5281</td>
+<td align="right">0</td>
+<td align="right">1</td>
+</tr>
+<tr class="even">
+<td align="right">9</td>
+<td align="right">0.5514</td>
+<td align="right">0</td>
+<td align="right">1</td>
+</tr>
+<tr class="odd">
+<td align="right">2</td>
+<td align="right">0.7883</td>
+<td align="right">0</td>
+<td align="right">1</td>
+</tr>
+<tr class="even">
+<td align="right">4</td>
+<td align="right">0.8831</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="right">8</td>
+<td align="right">0.8924</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="right">5</td>
+<td align="right">0.9404</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="coordinación-de-muestras-proporcionales" class="section level3 hasAnchor" number="1.3.3">
+<h3><span class="header-section-number">1.3.3</span> Coordinación de muestras proporcionales<a href="coordinación-de-muestras.html#coordinación-de-muestras-proporcionales" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Es posible utilizar varios algoritmos de selección proporcionales a la medida de tamaño de las UPM correspondiente generalmente al número de hogares que la habita. El primero de ellos es el método de Poisson secuencial <span class="citation">[@Ohl95]</span>, que define los siguientes números aleatorios permanentes para cada UPM:</p>
+<p><span class="math display">\[
+\xi_i^{pps} = \frac{\xi_i^P}{N_I \times p_i}
+\]</span>
+En donde <span class="math inline">\(N_I\)</span> es el número de UPM en el marco de muestreo y <span class="math inline">\(p_i = Ni/N\)</span> es la proporción de hogares en la <span class="math inline">\(i\)</span>-ésima UPM. De esta forma, al ordenar el marco mediante los números <span class="math inline">\(\xi_i^{pps}\)</span> y seleccionar los primeros elementos, se obtendrá una muestra secuencial de Poisson. En cuanto a la coordinación de muestras, es posible aplicar los mismos principios de la sección anterior. Es decir, para coordinar dos muestras <span class="math inline">\(s^1\)</span> de tamaño <span class="math inline">\(n_1\)</span> y <span class="math inline">\(s^2\)</span> de tamaño <span class="math inline">\(n_2\)</span>, es posible escoger dos constantes <span class="math inline">\(a_1\)</span> y <span class="math inline">\(a_2\)</span> en el intervalo <span class="math inline">\((0, 1)\)</span>. Luego, a partir del marco ordenado, definir la muestra <span class="math inline">\(s_1\)</span> como las primeras <span class="math inline">\(n_1\)</span> unidades a la derecha (o izquierda) de <span class="math inline">\(a_1\)</span> y la muestra <span class="math inline">\(s_2\)</span> como las primeras <span class="math inline">\(n_2\)</span> unidades a la derecha (o izquierda) de <span class="math inline">\(a_2\)</span>. La tabla XXXXX ejemplifica la selección de dos muestras proporcionales al tamaño de las UPM cuya coordinación es negativa.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="right">Unidad</th>
+<th align="right">xi_P</th>
+<th align="right">N_I</th>
+<th align="right">xi_pps</th>
+<th align="right">s_1</th>
+<th align="right">s_2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">6</td>
+<td align="right">0.0455</td>
+<td align="right">198</td>
+<td align="right">0.0405</td>
+<td align="right">1</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="right">1</td>
+<td align="right">0.2875</td>
+<td align="right">173</td>
+<td align="right">0.2928</td>
+<td align="right">1</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="right">3</td>
+<td align="right">0.4089</td>
+<td align="right">184</td>
+<td align="right">0.3913</td>
+<td align="right">1</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="right">10</td>
+<td align="right">0.4566</td>
+<td align="right">179</td>
+<td align="right">0.4494</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="right">9</td>
+<td align="right">0.5514</td>
+<td align="right">195</td>
+<td align="right">0.4981</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="right">7</td>
+<td align="right">0.5281</td>
+<td align="right">155</td>
+<td align="right">0.6001</td>
+<td align="right">0</td>
+<td align="right">1</td>
+</tr>
+<tr class="odd">
+<td align="right">2</td>
+<td align="right">0.7883</td>
+<td align="right">162</td>
+<td align="right">0.8568</td>
+<td align="right">0</td>
+<td align="right">1</td>
+</tr>
+<tr class="even">
+<td align="right">5</td>
+<td align="right">0.9404</td>
+<td align="right">190</td>
+<td align="right">0.8715</td>
+<td align="right">0</td>
+<td align="right">1</td>
+</tr>
+<tr class="odd">
+<td align="right">8</td>
+<td align="right">0.8924</td>
+<td align="right">166</td>
+<td align="right">0.9463</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="right">4</td>
+<td align="right">0.8831</td>
+<td align="right">159</td>
+<td align="right">0.9780</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+</tbody>
+</table>
+<p>En Brasil, el IBGE utiliza el algorimo de Paretto <span class="citation">[@Rosen_1997]</span> para la selección de muestras coordinadas en la PNADC <span class="citation">[@Costa_2007]</span>. Este algoritmo hace uso de los principios de la función de distribución de Paretto con parámetros <span class="math inline">\((1,1)\)</span> y crea los siguientes números aleatorios permanentes:</p>
+<p><span class="math display">\[
+\xi_i^{par} = \frac{\xi_i^P/(1-\xi_i^P)}{\pi_i/(1-\pi_i)}
+\]</span></p>
+<p>En donde <span class="math inline">\(\pi_i = n_I * p_i\)</span> es la probabilidad de inclusión de la <span class="math inline">\(i\)</span>-ésima UPM y deberá garatizarse que sea menor que uno. Por consiguiente, al ordenar el marco mediante los números <span class="math inline">\(\xi_i^{par}\)</span> y seleccionar los primeros elementos, se obtendrá una muestra secuencial de Poisson. Como corresponde, es posible aplicar los mismos principios de la coordinación de muestras en estos algoritmos secuenciales. La tabla XXXXX ejemplifica la selección de dos muestras de Paretto de tamaño <span class="math inline">\(n_I = 3\)</span>, cuya coordinación es negativa.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="right">Unidad</th>
+<th align="right">xi_P</th>
+<th align="right">xi_P_par</th>
+<th align="right">s_1</th>
+<th align="right">s_2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">6</td>
+<td align="right">0.0455</td>
+<td align="right">0.0937</td>
+<td align="right">1</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="right">1</td>
+<td align="right">0.2875</td>
+<td align="right">0.9662</td>
+<td align="right">1</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="right">3</td>
+<td align="right">0.4089</td>
+<td align="right">1.5148</td>
+<td align="right">1</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="right">10</td>
+<td align="right">0.4566</td>
+<td align="right">1.9165</td>
+<td align="right">0</td>
+<td align="right">1</td>
+</tr>
+<tr class="odd">
+<td align="right">9</td>
+<td align="right">0.5514</td>
+<td align="right">2.4720</td>
+<td align="right">0</td>
+<td align="right">1</td>
+</tr>
+<tr class="even">
+<td align="right">7</td>
+<td align="right">0.5281</td>
+<td align="right">3.1199</td>
+<td align="right">0</td>
+<td align="right">1</td>
+</tr>
+<tr class="odd">
+<td align="right">2</td>
+<td align="right">0.7883</td>
+<td align="right">9.7679</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="right">4</td>
+<td align="right">0.8831</td>
+<td align="right">20.3317</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="right">8</td>
+<td align="right">0.8924</td>
+<td align="right">21.0230</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="right">5</td>
+<td align="right">0.9404</td>
+<td align="right">32.9658</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- </div> -->
+
+
+
+
+
+
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="el-diseño-de-muestreo-estándar-en-una-encuesta-de-hogares.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/psirusteam/HHS-Handbook/%s",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": false,
+"toc": {
+"collapse": "section"
+},
+"tconfig": null
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

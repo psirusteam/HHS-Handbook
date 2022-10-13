@@ -225,10 +225,9 @@ Para ejemplificar los anteriores escenarios, en esta sección se muestran los re
 
 Con el 40% de valores faltantes, es necesario realizar una imputación para obtener registros completos en la base de datos. Para este ejemplo, la figura \@ref(fig:figim1) relaciona las variables con (izquierda) y sin (derecha) valores faltantes se presentan a continuación. 
 
-<div class="figure">
-<img src="Pics/im1.png" alt="Relación de la variable de interés para los datos completos (izquierda) y con ausencia de valores (derecha)." width="50%" />
-<p class="caption">(\#fig:figim1)Relación de la variable de interés para los datos completos (izquierda) y con ausencia de valores (derecha).</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{Pics/im1} \caption{Relación de la variable de interés para los datos completos (izquierda) y con ausencia de valores (derecha).}(\#fig:figim1)
+\end{figure}
 
 
 Al aplicar una imputación ingenua, por ejemplo basada en un modelo de regresión simple, se obtendría un conjunto de datos completo, ejemplificado (solo las primeras diez filas de la base) en la siguiente tabla:
@@ -249,10 +248,9 @@ Al aplicar una imputación ingenua, por ejemplo basada en un modelo de regresió
 
 En general, usar un enfoque simple no afecta la estimación puntual del parámetro de interés, sino la estimación del error estándar, puesto que la variación natural de los datos se subestima dramáticamente. Por ejemplo, la figura \@ref(fig:figim2) muestra que con la imputación simple, *todos* los valores faltantes imputados están sobre la línea de regresión. 
 
-<div class="figure">
-<img src="Pics/im2.png" alt="Relación de la variable de interés con la covariable auxiliar para el enfoque de imputación ingenua." width="50%" />
-<p class="caption">(\#fig:figim2)Relación de la variable de interés con la covariable auxiliar para el enfoque de imputación ingenua.</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{Pics/im2} \caption{Relación de la variable de interés con la covariable auxiliar para el enfoque de imputación ingenua.}(\#fig:figim2)
+\end{figure}
 
 Si se considera la imputación múltiple con el enfoque *bootstrap*, también se obtedrá un conjunto de datos aumentado por cada una de las $M$ realizaciones que se ejecuten. Por ejemplo, a continuación se ilustra el conjunto de datos obtenido con $M=3$ realizaciones. Nótese que los valores de la variable de interés cambian en cada realización; estas realizaciones se conocen en la literatura como *valores plausibles*.
 
@@ -273,10 +271,9 @@ Si se considera la imputación múltiple con el enfoque *bootstrap*, también se
 
 Existe una buena dispersión en los valores imputados y la gráfica \@ref(fig:figim3) muestra cómo este enfoque es mucho más realista al considerar la variación natural del fenómeno de interés en los valores imputados. 
 
-<div class="figure">
-<img src="Pics/im3.png" alt="Relación de la variable de interés con la covariable auxiliar para el enfoque de imputación múltiple Bootstrap" width="50%" />
-<p class="caption">(\#fig:figim3)Relación de la variable de interés con la covariable auxiliar para el enfoque de imputación múltiple Bootstrap</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{Pics/im3} \caption{Relación de la variable de interés con la covariable auxiliar para el enfoque de imputación múltiple Bootstrap}(\#fig:figim3)
+\end{figure}
 
 Por otro lado, bajo distribuciones previas no informativas, es bien sabido que la distribución posterior de $\sigma^2$ es:
 
@@ -354,10 +351,9 @@ $$
 
 El donante $l$ al elemento $k$ será aquel hogar en el conjunto $r_i$ con la menor distancia $D_{lk}$. Como regla general, todo los donantes deben estar ubicados en la misma provincia que la unidad faltante. La figura \@ref(fig:fig10) muestra un diagrama de caja junto con el histograma de los ingresos (antes de la imputación), así como la relación lineal entre los valores pronosticados derivados del modelo y los valores imputados tomados de los donantes. 
 
-<div class="figure">
-<img src="Pics/10.png" alt="Distribución de los ingresos (izquierda y centro) y Relación entre los valores predichos e imputados para los hogares con datos de ingresos faltantes (derecha)." width="50%" />
-<p class="caption">(\#fig:fig10)Distribución de los ingresos (izquierda y centro) y Relación entre los valores predichos e imputados para los hogares con datos de ingresos faltantes (derecha).</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{Pics/10} \caption{Distribución de los ingresos (izquierda y centro) y Relación entre los valores predichos e imputados para los hogares con datos de ingresos faltantes (derecha).}(\#fig:fig10)
+\end{figure}
 
 Por último, nótese que si la base de datos contiene hogares que reportaron un ingreso nulo en todo el año, es posible que esos valores se consideren como faltantes porque se asume que la probabilidad de que un hogar no genere ningún tipo de ingreso durante todo un año es bastante baja. Además, los hogares con ingresos superiores a un límite también pueden ser considerados como valores atípicos y luego ser imputados. 
 
@@ -374,17 +370,15 @@ Las covariables incluidas en la matriz $\mathbf{x}$ podrían ser las mismas util
 
 Por regla general, todo los donantes deben estar en la misma provincia que la unidad con el valor faltante. Por ejemplo, considere el artículo arroz, para el cual algunos hogares no proveyeron ninguna respuesta asociada al filtro de compra. Como este es un artículo de consumo masivo en nuestra región, se supondría que la mayoría de hogares respondiera que efectivamente ha comprado arroz en el periodo de referencia. De esta manera, al utilizar la regresión logística como modelo para la ausencia de respuesta del filtro del arroz, es posible encontrar que la distribución de las probabilidades estimadas de compra de arroz esté sesgada hacia el valor uno y alejada del valor cero, como lo muestra la figura \@ref(fig:fig11). Está claro que la distribución de los valores imputados también debería estar cargada hacia el uno, reflejando la realidad de la compra de un artículo esencial como el arroz.
 
-<div class="figure">
-<img src="Pics/11.png" alt="Distribución de las probabilidades estimadas de compra de arroz (izquierda) y valores imputados para los hogares con valores faltantes en el filtro (derecha)." width="50%" />
-<p class="caption">(\#fig:fig11)Distribución de las probabilidades estimadas de compra de arroz (izquierda) y valores imputados para los hogares con valores faltantes en el filtro (derecha).</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{Pics/11} \caption{Distribución de las probabilidades estimadas de compra de arroz (izquierda) y valores imputados para los hogares con valores faltantes en el filtro (derecha).}(\#fig:fig11)
+\end{figure}
 
 Por otro lado, el filtro para algunos artículos de bajo consumo estará más sesgado hacia el valor cero. La figura \@ref(fig:fig12) muestra la distribución de las probabilidades estimadas de compra de un artículo de bajo consumo, así como los valores imputados.
 
-<div class="figure">
-<img src="Pics/12.png" alt="Distribución de la probabilidad estimada de compra de un artículo de bajo consumo (izquierda) y sus valores imputados para los hogares que no respondieron el filtro (derecha)." width="50%" />
-<p class="caption">(\#fig:fig12)Distribución de la probabilidad estimada de compra de un artículo de bajo consumo (izquierda) y sus valores imputados para los hogares que no respondieron el filtro (derecha).</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{Pics/12} \caption{Distribución de la probabilidad estimada de compra de un artículo de bajo consumo (izquierda) y sus valores imputados para los hogares que no respondieron el filtro (derecha).}(\#fig:fig12)
+\end{figure}
 
 
 ### Imputación del gasto 
@@ -395,8 +389,7 @@ Observe que el grupo de donantes está restringido a los que tienen un valor de 
 
 Volviendo a los ejemplos anteriores, la figura \@ref(fig:fig13) muestra la distribución de los gastos imputados en consumo de salmón. Se nota que la cantidad de dinero gastado en este artículo es baja y que la relación entre los valores pronosticados del modelo y los valores imputados es fuertemente lineal. 
 
-<div class="figure">
-<img src="Pics/13.png" alt="Distribución de los gastos imputados sobre el salmón (izquierda) y relación entre los valores predichos e imputados para los hogares con valores faltantes en el gasto (derecha)." width="50%" />
-<p class="caption">(\#fig:fig13)Distribución de los gastos imputados sobre el salmón (izquierda) y relación entre los valores predichos e imputados para los hogares con valores faltantes en el gasto (derecha).</p>
-</div>
+\begin{figure}
+\includegraphics[width=0.5\linewidth]{Pics/13} \caption{Distribución de los gastos imputados sobre el salmón (izquierda) y relación entre los valores predichos e imputados para los hogares con valores faltantes en el gasto (derecha).}(\#fig:fig13)
+\end{figure}
 

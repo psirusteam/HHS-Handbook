@@ -23,7 +23,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-10-12" />
+<meta name="date" content="2022-10-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -180,6 +180,12 @@ div.csl-indent {
 <li class="chapter" data-level="6.1.7" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-balanceado"><i class="fa fa-check"></i><b>6.1.7</b> Muestreo balanceado</a></li>
 </ul></li>
 <li class="chapter" data-level="6.2" data-path="el-diseño-de-muestreo-estándar-en-una-encuesta-de-hogares.html"><a href="el-diseño-de-muestreo-estándar-en-una-encuesta-de-hogares.html"><i class="fa fa-check"></i><b>6.2</b> El diseño de muestreo estándar en una encuesta de hogares</a></li>
+<li class="chapter" data-level="6.3" data-path="coordinación-de-muestras.html"><a href="coordinación-de-muestras.html"><i class="fa fa-check"></i><b>6.3</b> Coordinación de muestras</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="coordinación-de-muestras.html"><a href="coordinación-de-muestras.html#tipos-de-coordinación"><i class="fa fa-check"></i><b>6.3.1</b> Tipos de coordinación</a></li>
+<li class="chapter" data-level="6.3.2" data-path="coordinación-de-muestras.html"><a href="coordinación-de-muestras.html#coordinación-de-muestras-aleatorias-simples"><i class="fa fa-check"></i><b>6.3.2</b> Coordinación de muestras aleatorias simples</a></li>
+<li class="chapter" data-level="6.3.3" data-path="coordinación-de-muestras.html"><a href="coordinación-de-muestras.html#coordinación-de-muestras-proporcionales"><i class="fa fa-check"></i><b>6.3.3</b> Coordinación de muestras proporcionales</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="el-efecto-de-diseño.html"><a href="el-efecto-de-diseño.html"><i class="fa fa-check"></i><b>7</b> El efecto de diseño</a>
 <ul>
@@ -503,7 +509,7 @@ y_{k}^{(t)}, \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
 y_{k}^{(t)} - R(y_{k}^{(t)} - y_{k}^{(t-1)}), \ \ \ \ \ k \in s_M
 \end{cases}
 \]</span></p>
-<p>En donde $R = <em>s w_k / </em>{s_M} w_k $ es el inverso de la proporción de traslape real en el levantamiento. Siguiendo con el ejemplo, <span class="math inline">\(y_{k}^{(t)}\)</span> representa una variable dicotómica sobre la población económicamente activa que toma el valor uno, si la persona estuvo ocupada en el periodo actual, o cero, si no. En este caso, el total de control correspondiente sigue estando definido por el total nacional estimado de personas ocupadas en el periodo anterior. Por lo tanto, al sumar sobre la muestra expandida, se presenta la siguiente relación <span class="math inline">\(\hat{t}_{y^{(t-1)}} = \hat{t}_{y^{(t)}} - \hat{\Delta}_M)\)</span>; es decir, que la estimación del periodo anterior es igual a la estimación del mes actual menos una diferencia de estimaciones en la muestra traslapada.</p>
+<p>En donde <span class="math inline">\(R = \sum_s w_k / \sum_{s_M} w_k\)</span> es el inverso de la proporción de traslape real en el levantamiento. Siguiendo con el ejemplo, <span class="math inline">\(y_{k}^{(t)}\)</span> representa una variable dicotómica sobre la población económicamente activa que toma el valor uno, si la persona estuvo ocupada en el periodo actual, o cero, si no. En este caso, el total de control correspondiente sigue estando definido por el total nacional estimado de personas ocupadas en el periodo anterior. Por lo tanto, al sumar sobre la muestra expandida, se presenta la siguiente relación <span class="math inline">\(\hat{t}_{y^{(t-1)}} = \hat{t}_{y^{(t)}} - \hat{\Delta}_M)\)</span>; es decir, que la estimación del periodo anterior es igual a la estimación del mes actual menos una diferencia de estimaciones en la muestra traslapada.</p>
 <p>Es posible usar ambas covariables <span class="math inline">\(x_k^{(c)}\)</span> y <span class="math inline">\(x_k^{(l)}\)</span> en el sistema de calibración, aunque es probable sea encontrar pesos resultantes negativos o menores que uno. Para evitar estos inconvenientes numéricos, y dado que para ambas variables se tiene el mismo total de control, es posible definir una combinación lineal convexa y crear una nueva covariable de calibración, de la siguiente manera:</p>
 <p><span class="math display">\[
 x_k = (1-\alpha) x_k^{(l)} + \alpha x_k^{(c)}

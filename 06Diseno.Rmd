@@ -178,5 +178,95 @@ A pesar de que la medida de tamaño permite que las UPM con mayor cantidad de ho
 
 ## Coordinación de muestras
 
+En la realidad, las Oficinas Nacionales de Estadística no realizan una sola encuesta, sino varias en un mismo año. Más aún, una misma encuesta continua puede tener muchos levantamientos en un mismo año. Es por esta razón que, en la administración de los marcos de muestreo, uno de los tópicos más importantes es la coordinación de muestras en el tiempo y entre encuestas. Cuando se define un marco de muestreo nuevo, debido a la realización de un censo de población y vivienda, debe existir una planificación rigurosa que le permita conocer de antemano a los equipos técnicos de las ONE cuáles UPM serán seleccionadas a lo largo del siguiente periodo intercensal y esta relación debe estar supeditada a todas las operaciones estadísticas basadas en encuestas de hogares. 
+
+A pesar de que esta planeación pueda parecer muy exigente, puesto que un periodo intercensal puede durar más de diez años, es necesaria para evitar el desgaste de las UPM en las muestras maestras, y el agotamiento de los respondientes. En vez de esto, la planificación rigurosa permitirá establecer de antemano los procesos logísticos, administrativos y preseupuestales para la recolección de la información primaria para todas las encuestas que se lleven a cabo en este periodo. Esta planificaación además debe atender a estrictos parámetros estadísticos en la selección de las muestras de cada encuesta. Es decir, la sección de las UPM debe respetar el diseño propuesto en cada operación estadística, incluyendo los esquemas rotativos a lo largo del periodo intercensal. 
+
+### Tipos de coordinación 
+
+En esta sección se introducirán los fundamentos de los mecanismos de selección y coordinación de muestras para lograr el objetivo de planificación. En primer lugar, se establece que una muestra es *positivamente coordinada* con otra, si comparten todos sus elementos. De la misma forma dos muestras son *negativamente coordinadas* si no comparten ningún elemento en común. Nótese que en el caso de las encuestas con esquemas rotacionales complejos, existirán muestras parcialmente coordinadas y negativamente coordinadas. Por ejemplo, en un esquema rotacional 2(2)2, cualesquiera dos muestras de periodos consecutivos tendrán un traslape del 50% y estarán parcialmente coordinadas; sin embargo, en este mismo esquema, dos muestras que estén distanciadas por dos periodos consecutivos no tendrán ningún traslape y deberán estar negativamente coordinadas. 
+
+Para lograr este cometido es posible utilizar esquemas de selección secuenciales [@Gutierrez_2016] que utilicen números aleatorios asignados a cada UPM en el marco de muestreo. En general, existen dos tipos de números aleatorios que se pueden usar en la coordinación de muestras, incluso si se trata de muestras que vienen de diferentes diseños de muestreo. A continuación se describen cada uno de los métodos
+
+- *Números aleatorios permanentes*: cada unidad del marco recibirá un número aleatorio venido de una distribución uniforme en el intervalo unitario. Es decir a cada unidad $i \in U_I$ se le asignara el siguiente número: 
+$$
+\xi_i^P \sim Uniforme\ (0, 1)
+$$ 
+Evidentemente, en este caso los números aleatorios permanentes no son equidistantes.
+- *Números aleatorios colocados*: a partir de los números aleatorios $\xi_i$ creados en el paso anterior, es posible utilizar su rango para definir su ordenamiento y mediante la siguiente función crear números aleatorios equidistantes: 
+$$
+\xi_i^C= \dfrac{\text{Rango}(\xi_i^P) - \varepsilon}{N}
+$$
+En donde $\varepsilon$ es un único valor aleatorio entre cero y uno. Como ilustración, considere una población de tamaño $N = 10$, para la que se han definido números aleatorios $\xi_i^C$ y, teniendo en cuenta un número aleatorio $\varepsilon = 0.283$, también se definen $\xi_i^P$. La tabla XXX muestra los números aleatorios resultantes.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(dplyr)
+library(knitr)
+library(printr)
+
+set.seed(123)
+N <- 10
+Unidad <- c(1:N)
+eps <- 0.283
+xi_P <- c(0.2875, 0.7883, 0.4089, 0.8831, 
+          0.9404, 0.0455, 0.5281, 0.8924,
+          0.5514, 0.4566)
+xi_C <- (rank(xi_P) - eps) / N
+tabla <- data.frame(Unidad = Unidad, xi_P = xi_P, xi_C = xi_C) %>% arrange(xi_P)
+kable(tabla %>% arrange(Unidad))
+```
+
+
+### Coordinación de muestras aleatorias simples
+
+Para seleccionar una muestra aleatoria simple $s$ de tamaño $n$, se deberá ordenar el marco de muestreo de forma ascendente de acuerdo a los números $\xi_i^P$. De esta forma, la muestra $s$ estará compuesta por lo primeros $n$ registros del marco ordenado (o por los últimos $n$ registros). 
+
+Es así como, para coordinar dos muestras $s^1$ de tamaño $n_1$ y $s^2$ de tamaño $n_2$, @Ohl95 menciona que es posible escoger dos constantes $a_1$ y $a_2$ en el intervalo $(0, 1)$. Luego, a partir del marco ordenado con los números aleatorios permanentes (o colocados), definir la muestra $s_1$ como las primeras $n_1$ unidades a la derecha (o izquierda) de $a_1$ y la muestra $s_2$ como las primeras $n_2$ unidades a la derecha (o izquierda) de $a_2$. Si se quieren muestras positivamente coordinadas, entonces $a_1 = a_2$; por el contrario, si se quieren muestras negativamente coordinadas, se deberán escoger las constantes de forma apropiada. Por ejemplo sumar 0.5 (en módulo uno) a la constante $a_1$; es decir, $a_2 = (a_1 + 1/2) \mod{1}$. En general, si se quieren coordinar negativamente $Q$ diferentes muestras, @Grafstrom_Matei_2015 aconsejan añadir la cantidad de $1/Q$ (en módulo uno) a la constante $a_1$.
+
+Continuando con el ejemplo reducido, la tabla XXXX muestra la selección de dos muestras negativamente coordinadas de tamaño $n_1 = n_2 =3$, con $a_1 = 0$ y $a_2 = 0.5$.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+tabla$s_1 <- c(rep(1, 3), rep(0, 7))
+tabla$s_2 <- c(rep(0, 4), rep(1, 3), rep(0, 3) )
+tabla %>% select(Unidad, xi_P, s_1, s_2)
+```
+
+### Coordinación de muestras proporcionales
+
+Es posible utilizar varios algoritmos de selección proporcionales a la medida de tamaño de las UPM correspondiente generalmente al número de hogares que la habita. El primero de ellos es el método de Poisson secuencial [@Ohl95], que define los siguientes números aleatorios permanentes para cada UPM:
+
+$$
+\xi_i^{pps} = \frac{\xi_i^P}{N_I \times p_i}
+$$
+En donde $N_I$ es el número de UPM en el marco de muestreo y $p_i = Ni/N$ es la proporción de hogares en la $i$-ésima UPM. De esta forma, al ordenar el marco mediante los números $\xi_i^{pps}$ y seleccionar los primeros elementos, se obtendrá una muestra secuencial de Poisson. En cuanto a la coordinación de muestras, es posible aplicar los mismos principios de la sección anterior. Es decir, para coordinar dos muestras $s^1$ de tamaño $n_1$ y $s^2$ de tamaño $n_2$, es posible escoger dos constantes $a_1$ y $a_2$ en el intervalo $(0, 1)$. Luego, a partir del marco ordenado, definir la muestra $s_1$ como las primeras $n_1$ unidades a la derecha (o izquierda) de $a_1$ y la muestra $s_2$ como las primeras $n_2$ unidades a la derecha (o izquierda) de $a_2$. La tabla XXXXX ejemplifica la selección de dos muestras proporcionales al tamaño de las UPM cuya coordinación es negativa.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+tabla$N_I <- c(198, 173, 184, 179, 155, 195, 162, 159, 166, 190)
+tabla$p <- round(tabla$N_I / sum(tabla$N_I ), 4)
+tabla$xi_pps <- round(tabla$xi_P / (N*tabla$p), 4)
+tabla <- tabla %>% arrange(xi_pps)
+tabla$s_1 <- c(rep(1, 3), rep(0, 7))
+tabla$s_2 <- c(rep(0, 5), rep(1, 3), rep(0, 2))
+tabla %>% select(Unidad, xi_P, N_I, xi_pps, s_1, s_2)
+```
+
+
+En Brasil, el IBGE utiliza el algorimo de Paretto [@Rosen_1997] para la selección de muestras coordinadas en la PNADC [@Costa_2007]. Este algoritmo hace uso de los principios de la función de distribución de Paretto con parámetros $(1,1)$ y crea los siguientes números aleatorios permanentes:
+
+$$
+\xi_i^{par} = \frac{\xi_i^P/(1-\xi_i^P)}{\pi_i/(1-\pi_i)}
+$$
+
+En donde $\pi_i = n_I * p_i$ es la probabilidad de inclusión de la $i$-ésima UPM y deberá garatizarse que sea menor que uno. Por consiguiente, al ordenar el marco mediante los números $\xi_i^{par}$ y seleccionar los primeros elementos, se obtendrá una muestra secuencial de Poisson. Como corresponde, es posible aplicar los mismos principios de la coordinación de muestras en estos algoritmos secuenciales. La tabla XXXXX ejemplifica la selección de dos muestras de Paretto de tamaño $n_I = 3$, cuya coordinación es negativa.
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+tabla$pi <- 3 * tabla$p
+tabla$xi_P_par <- round((tabla$xi_P * (1-tabla$pi))/(tabla$pi*(1-tabla$xi_P)), 4)
+tabla <- tabla %>% arrange(xi_P_par)
+tabla$s_1 <- c(rep(1, 3), rep(0, 7))
+tabla$s_2 <- c(rep(0, 3), rep(1, 3), rep(0, 4))
+tabla %>% select(Unidad, xi_P, xi_P_par, s_1, s_2) 
+```
 
 

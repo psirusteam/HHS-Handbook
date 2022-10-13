@@ -115,7 +115,7 @@
 
 \title{Diseño y análisis estadístico en las encuestas de hogares de América Latina}
 \author{Andrés Gutiérrez\footnote{Experto Regional en Estadísticas Sociales - Comisión Económica para América Latina y el Caribe (CEPAL) - \href{mailto:andres.gutierrez@cepal.org}{\nolinkurl{andres.gutierrez@cepal.org}}}}
-\date{2022-10-07}
+\date{2022-10-13}
 
 \begin{document}
 \maketitle
@@ -1946,6 +1946,167 @@ Por lo tanto, en la primera etapa se ha identificado todos los sectores cartogr�
 
 A pesar de que la medida de tamaño permite que las UPM con mayor cantidad de hogares tengan una mayor probabilidad de ser escogidas, esta diferencia en las probabilidades de selección se compensa en la segunda etapa de muestreo, debido a que cada hogar tendrá igual probabilidad de ser elegido en la muestra dentro del estrato. Es pertinente observar que, para la segunda etapa se requiere contar con un listado exhaustivo de todos los hogares dentro de todas las UPM seleccionadas. Este proceso de selección requerirá de un empadronamiento previo que, no solo actualice el número de hogares, sino que permita identificarlos y ubicarlos dentro de la UPM. De esta manera, y de forma aleatoria simple, se elige una muestra de hogares y su tamaño no varía entre UPM.
 
+\hypertarget{coordinaciuxf3n-de-muestras}{%
+\section{Coordinación de muestras}\label{coordinaciuxf3n-de-muestras}}
+
+En la realidad, las Oficinas Nacionales de Estadística no realizan una sola encuesta, sino varias en un mismo año. Más aún, una misma encuesta continua puede tener muchos levantamientos en un mismo año. Es por esta razón que, en la administración de los marcos de muestreo, uno de los tópicos más importantes es la coordinación de muestras en el tiempo y entre encuestas. Cuando se define un marco de muestreo nuevo, debido a la realización de un censo de población y vivienda, debe existir una planificación rigurosa que le permita conocer de antemano a los equipos técnicos de las ONE cuáles UPM serán seleccionadas a lo largo del siguiente periodo intercensal y esta relación debe estar supeditada a todas las operaciones estadísticas basadas en encuestas de hogares.
+
+A pesar de que esta planeación pueda parecer muy exigente, puesto que un periodo intercensal puede durar más de diez años, es necesaria para evitar el desgaste de las UPM en las muestras maestras, y el agotamiento de los respondientes. En vez de esto, la planificación rigurosa permitirá establecer de antemano los procesos logísticos, administrativos y preseupuestales para la recolección de la información primaria para todas las encuestas que se lleven a cabo en este periodo. Esta planificaación además debe atender a estrictos parámetros estadísticos en la selección de las muestras de cada encuesta. Es decir, la sección de las UPM debe respetar el diseño propuesto en cada operación estadística, incluyendo los esquemas rotativos a lo largo del periodo intercensal.
+
+\hypertarget{tipos-de-coordinaciuxf3n}{%
+\subsection{Tipos de coordinación}\label{tipos-de-coordinaciuxf3n}}
+
+En esta sección se introducirán los fundamentos de los mecanismos de selección y coordinación de muestras para lograr el objetivo de planificación. En primer lugar, se establece que una muestra es \emph{positivamente coordinada} con otra, si comparten todos sus elementos. De la misma forma dos muestras son \emph{negativamente coordinadas} si no comparten ningún elemento en común. Nótese que en el caso de las encuestas con esquemas rotacionales complejos, existirán muestras parcialmente coordinadas y negativamente coordinadas. Por ejemplo, en un esquema rotacional 2(2)2, cualesquiera dos muestras de periodos consecutivos tendrán un traslape del 50\% y estarán parcialmente coordinadas; sin embargo, en este mismo esquema, dos muestras que estén distanciadas por dos periodos consecutivos no tendrán ningún traslape y deberán estar negativamente coordinadas.
+
+Para lograr este cometido es posible utilizar esquemas de selección secuenciales \citep{Gutierrez_2016} que utilicen números aleatorios asignados a cada UPM en el marco de muestreo. En general, existen dos tipos de números aleatorios que se pueden usar en la coordinación de muestras, incluso si se trata de muestras que vienen de diferentes diseños de muestreo. A continuación se describen cada uno de los métodos
+
+\begin{itemize}
+\tightlist
+\item
+  \emph{Números aleatorios permanentes}: cada unidad del marco recibirá un número aleatorio venido de una distribución uniforme en el intervalo unitario. Es decir a cada unidad \(i \in U_I\) se le asignara el siguiente número:
+  \[
+  \xi_i^P \sim Uniforme\ (0, 1)
+  \]
+  Evidentemente, en este caso los números aleatorios permanentes no son equidistantes.
+\item
+  \emph{Números aleatorios colocados}: a partir de los números aleatorios \(\xi_i\) creados en el paso anterior, es posible utilizar su rango para definir su ordenamiento y mediante la siguiente función crear números aleatorios equidistantes:
+  \[
+  \xi_i^C= \dfrac{\text{Rango}(\xi_i^P) - \varepsilon}{N}
+  \]
+  En donde \(\varepsilon\) es un único valor aleatorio entre cero y uno. Como ilustración, considere una población de tamaño \(N = 10\), para la que se han definido números aleatorios \(\xi_i^C\) y, teniendo en cuenta un número aleatorio \(\varepsilon = 0.283\), también se definen \(\xi_i^P\). La tabla XXX muestra los números aleatorios resultantes.
+\end{itemize}
+
+\begin{tabular}{r|r|r}
+\hline
+Unidad & xi\_P & xi\_C\\
+\hline
+1 & 0.2875 & 0.1717\\
+\hline
+2 & 0.7883 & 0.6717\\
+\hline
+3 & 0.4089 & 0.2717\\
+\hline
+4 & 0.8831 & 0.7717\\
+\hline
+5 & 0.9404 & 0.9717\\
+\hline
+6 & 0.0455 & 0.0717\\
+\hline
+7 & 0.5281 & 0.4717\\
+\hline
+8 & 0.8924 & 0.8717\\
+\hline
+9 & 0.5514 & 0.5717\\
+\hline
+10 & 0.4566 & 0.3717\\
+\hline
+\end{tabular}
+
+\hypertarget{coordinaciuxf3n-de-muestras-aleatorias-simples}{%
+\subsection{Coordinación de muestras aleatorias simples}\label{coordinaciuxf3n-de-muestras-aleatorias-simples}}
+
+Para seleccionar una muestra aleatoria simple \(s\) de tamaño \(n\), se deberá ordenar el marco de muestreo de forma ascendente de acuerdo a los números \(\xi_i^P\). De esta forma, la muestra \(s\) estará compuesta por lo primeros \(n\) registros del marco ordenado (o por los últimos \(n\) registros).
+
+Es así como, para coordinar dos muestras \(s^1\) de tamaño \(n_1\) y \(s^2\) de tamaño \(n_2\), \citet{Ohl95} menciona que es posible escoger dos constantes \(a_1\) y \(a_2\) en el intervalo \((0, 1)\). Luego, a partir del marco ordenado con los números aleatorios permanentes (o colocados), definir la muestra \(s_1\) como las primeras \(n_1\) unidades a la derecha (o izquierda) de \(a_1\) y la muestra \(s_2\) como las primeras \(n_2\) unidades a la derecha (o izquierda) de \(a_2\). Si se quieren muestras positivamente coordinadas, entonces \(a_1 = a_2\); por el contrario, si se quieren muestras negativamente coordinadas, se deberán escoger las constantes de forma apropiada. Por ejemplo sumar 0.5 (en módulo uno) a la constante \(a_1\); es decir, \(a_2 = (a_1 + 1/2) \mod{1}\). En general, si se quieren coordinar negativamente \(Q\) diferentes muestras, \citet{Grafstrom_Matei_2015} aconsejan añadir la cantidad de \(1/Q\) (en módulo uno) a la constante \(a_1\).
+
+Continuando con el ejemplo reducido, la tabla XXXX muestra la selección de dos muestras negativamente coordinadas de tamaño \(n_1 = n_2 =3\), con \(a_1 = 0\) y \(a_2 = 0.5\).
+
+\begin{tabular}{r|r|r|r}
+\hline
+Unidad & xi\_P & s\_1 & s\_2\\
+\hline
+6 & 0.0455 & 1 & 0\\
+\hline
+1 & 0.2875 & 1 & 0\\
+\hline
+3 & 0.4089 & 1 & 0\\
+\hline
+10 & 0.4566 & 0 & 0\\
+\hline
+7 & 0.5281 & 0 & 1\\
+\hline
+9 & 0.5514 & 0 & 1\\
+\hline
+2 & 0.7883 & 0 & 1\\
+\hline
+4 & 0.8831 & 0 & 0\\
+\hline
+8 & 0.8924 & 0 & 0\\
+\hline
+5 & 0.9404 & 0 & 0\\
+\hline
+\end{tabular}
+
+\hypertarget{coordinaciuxf3n-de-muestras-proporcionales}{%
+\subsection{Coordinación de muestras proporcionales}\label{coordinaciuxf3n-de-muestras-proporcionales}}
+
+Es posible utilizar varios algoritmos de selección proporcionales a la medida de tamaño de las UPM correspondiente generalmente al número de hogares que la habita. El primero de ellos es el método de Poisson secuencial \citep{Ohl95}, que define los siguientes números aleatorios permanentes para cada UPM:
+
+\[
+\xi_i^{pps} = \frac{\xi_i^P}{N_I \times p_i}
+\]
+En donde \(N_I\) es el número de UPM en el marco de muestreo y \(p_i = Ni/N\) es la proporción de hogares en la \(i\)-ésima UPM. De esta forma, al ordenar el marco mediante los números \(\xi_i^{pps}\) y seleccionar los primeros elementos, se obtendrá una muestra secuencial de Poisson. En cuanto a la coordinación de muestras, es posible aplicar los mismos principios de la sección anterior. Es decir, para coordinar dos muestras \(s^1\) de tamaño \(n_1\) y \(s^2\) de tamaño \(n_2\), es posible escoger dos constantes \(a_1\) y \(a_2\) en el intervalo \((0, 1)\). Luego, a partir del marco ordenado, definir la muestra \(s_1\) como las primeras \(n_1\) unidades a la derecha (o izquierda) de \(a_1\) y la muestra \(s_2\) como las primeras \(n_2\) unidades a la derecha (o izquierda) de \(a_2\). La tabla XXXXX ejemplifica la selección de dos muestras proporcionales al tamaño de las UPM cuya coordinación es negativa.
+
+\begin{tabular}{r|r|r|r|r|r}
+\hline
+Unidad & xi\_P & N\_I & xi\_pps & s\_1 & s\_2\\
+\hline
+6 & 0.0455 & 198 & 0.0405 & 1 & 0\\
+\hline
+1 & 0.2875 & 173 & 0.2928 & 1 & 0\\
+\hline
+3 & 0.4089 & 184 & 0.3913 & 1 & 0\\
+\hline
+10 & 0.4566 & 179 & 0.4494 & 0 & 0\\
+\hline
+9 & 0.5514 & 195 & 0.4981 & 0 & 0\\
+\hline
+7 & 0.5281 & 155 & 0.6001 & 0 & 1\\
+\hline
+2 & 0.7883 & 162 & 0.8568 & 0 & 1\\
+\hline
+5 & 0.9404 & 190 & 0.8715 & 0 & 1\\
+\hline
+8 & 0.8924 & 166 & 0.9463 & 0 & 0\\
+\hline
+4 & 0.8831 & 159 & 0.9780 & 0 & 0\\
+\hline
+\end{tabular}
+
+En Brasil, el IBGE utiliza el algorimo de Paretto \citep{Rosen_1997} para la selección de muestras coordinadas en la PNADC \citep{Costa_2007}. Este algoritmo hace uso de los principios de la función de distribución de Paretto con parámetros \((1,1)\) y crea los siguientes números aleatorios permanentes:
+
+\[
+\xi_i^{par} = \frac{\xi_i^P/(1-\xi_i^P)}{\pi_i/(1-\pi_i)}
+\]
+
+En donde \(\pi_i = n_I * p_i\) es la probabilidad de inclusión de la \(i\)-ésima UPM y deberá garatizarse que sea menor que uno. Por consiguiente, al ordenar el marco mediante los números \(\xi_i^{par}\) y seleccionar los primeros elementos, se obtendrá una muestra secuencial de Poisson. Como corresponde, es posible aplicar los mismos principios de la coordinación de muestras en estos algoritmos secuenciales. La tabla XXXXX ejemplifica la selección de dos muestras de Paretto de tamaño \(n_I = 3\), cuya coordinación es negativa.
+
+\begin{tabular}{r|r|r|r|r}
+\hline
+Unidad & xi\_P & xi\_P\_par & s\_1 & s\_2\\
+\hline
+6 & 0.0455 & 0.0937 & 1 & 0\\
+\hline
+1 & 0.2875 & 0.9662 & 1 & 0\\
+\hline
+3 & 0.4089 & 1.5148 & 1 & 0\\
+\hline
+10 & 0.4566 & 1.9165 & 0 & 1\\
+\hline
+9 & 0.5514 & 2.4720 & 0 & 1\\
+\hline
+7 & 0.5281 & 3.1199 & 0 & 1\\
+\hline
+2 & 0.7883 & 9.7679 & 0 & 0\\
+\hline
+4 & 0.8831 & 20.3317 & 0 & 0\\
+\hline
+8 & 0.8924 & 21.0230 & 0 & 0\\
+\hline
+5 & 0.9404 & 32.9658 & 0 & 0\\
+\hline
+\end{tabular}
+
 \hypertarget{el-efecto-de-diseuxf1o}{%
 \chapter{El efecto de diseño}\label{el-efecto-de-diseuxf1o}}
 
@@ -3528,14 +3689,7 @@ Como se indicó anteriormente, la estimación de un promedio poblacional \(\bar{
 \hat{\Delta} = \hat{t}_{y^{(t)}} - \hat{t}_{y^{(t-1)}}
 \]
 
-Además, es posible mejorar la estimación del total actual \(t_y^{(t)}\) al tener en cuenta la información inducida por el traslape de la encuesta en el segundo periodo, así:
-
-\[
-\tilde{t}_{y^{(t)}} = \alpha \hat{t}_{y^{(t)}} 
-+ (1 -\alpha) (\tilde{t}_{y^{(t-1)}} + \hat{\Delta})
-\]
-
-En donde \(0 < \alpha < 1\). Por otro lado, si el interés está en estimar algunas características asociadas con la pobreza, es posible utilizar estimadores más complejos. Siendo \(y_k\) el ingreso del individuo \(k\) y \(l\) el umbral de pobreza, entonces el siguiente estimador puede ser utilizado
+Además, si el interés está en estimar algunas características asociadas con la pobreza, es posible utilizar estimadores más complejos. Siendo \(y_k\) el ingreso del individuo \(k\) y \(l\) el umbral de pobreza, entonces el siguiente estimador puede ser utilizado
 
 \[
 \hat{F}_{\alpha}=\frac{1}{N}\sum_{k\in s} d_k 
@@ -3733,6 +3887,60 @@ En donde \(u_h\) es una función de los totales marginales de las filas de la ta
 \end{enumerate}
 \end{quote}
 \end{quote}
+
+\hypertarget{estimadores-compuestos}{%
+\section{Estimadores compuestos}\label{estimadores-compuestos}}
+
+Es posible mejorar la estimación del total actual \(t_y^{(t)}\) al tener en cuenta la información inducida por el traslape\footnote{En esta sección, la notación para la parte traslapada \(s_M\) de la muestra actual usará el superíndice \(M\) (\emph{matched}); mientras que se utilizará el superíndice \(U\) (\emph{unmatched}) para refereirse a la parte no traslapada \(s_U\) de la muestra actual.} de la encuesta en el segundo periodo, así:
+
+\[
+\hat{t}_{y^{(t)}}^K = (1-K) \hat{t}_{y^{(t)}} 
++ K (\hat{t}_{y^{(t-1)}} + \hat{\Delta}_M)
+\]
+
+En donde \(0 < \alpha < 1\) y \(\hat{\Delta}_M=\hat{t}_{y^{(t)}}^M - \hat{t}_{y^{(t-1)}}^M\) es la diferencia de las estimaciones actual y previa en la muestra traslapada. Por otro lado, es posible añadir un término que dé cuenta de la diferencia entre las estimaciones actuales de las muestras con y sin traslape. De esta forma, un estimador compuesto es el siguiente:
+
+\[
+\hat{t}_{y^{(t)}}^{AK} = \hat{t}_{y^{(t)}}^K + A  (\hat{t}_{y^{(t)}}^U - \hat{t}_{y^{(t)}}^M)
+\]
+
+\citet{Steel_McLaren_2008} afirman que esta clase de estimadores pueden generar ganancias en eficiencia porque aprovechan la correlación entre las estimaciones del mismo panel a lo largo del tiempo y puede otorgar una ventaja adicional a la estimación tradicional que utiliza únicamente la muestra actual como un todo, sin detenerse en su composición: parte traslapada y parte no traslapada. Estos estimadores pueden usar diferentes valores para las constantes \(A\) y \(K\), las cuales pueden ser escogidas con el objetivo de minimizar la varianza del estimador, o pueden ser escogidas de forma separada para aumentar la eficiencia del estimador con respecto a estimadores de niveles, como totales o proporciones del periodo actual, o de cambios temporales. \citet{Gurney_Daly_1965} utilizan \(A=0.4\) y \(K=0.2\) en una aplicación con paneles rotativos.
+
+Estos estimadores también pueden ser escritos como estimadores de regresión o calibración. En efecto, \citet{Gambino_Kennedy_Singh_2001} proponen que, además de las covariables y restricciones de calibración usuales, es posible usar la siguiente covariable de calibración para estimar indicadores de nivel:
+
+\[
+x_k^{(l)} = 
+\begin{cases}
+\hat {\bar y} ^{(t-1)}, \ \ \ \ \ k \in s_U \\
+y_{k}^{(t-1)}, \ \ \ \ \ k \in s_M 
+\end{cases}
+\]
+
+Por ejemplo, si el interés está en la estimación de la proporción actual de personas ocupadas, entonces \(x_k^{(l)}\) representará la covariable que se deberá añadir al sistema de calibración, \(\hat {\bar y} ^{(t-1)}\) será la proporción estimada de personas ocupadas en el periodo anterior, mientras que \(y_{k}^{(t-1)}\) representará una variable dicotómica sobre la población económicamente activa que toma el valor uno, si la persona estuvo ocupada en el periodo anterior, o cero, si no. En este caso, el total de control correspondiente estará definido por el total nacional estimado de personas ocupadas en el periodo anterior. Por lo tanto, como es de esperarse, la suma ponderada (con los pesos de calibración) de esta covariable deberá ser igual a su total de control.
+
+Para estimadores de cambio, \citet{Gambino_Kennedy_Singh_2001} proponen la siguiente covariable:
+
+\[
+x_k^{(c)} = 
+\begin{cases}
+y_{k}^{(t)}, \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ k \in s_U \\
+y_{k}^{(t)} - R(y_{k}^{(t)} - y_{k}^{(t-1)}), \ \ \ \ \ k \in s_M 
+\end{cases}
+\]
+
+En donde \(R = \sum_s w_k / \sum_{s_M} w_k\) es el inverso de la proporción de traslape real en el levantamiento. Siguiendo con el ejemplo, \(y_{k}^{(t)}\) representa una variable dicotómica sobre la población económicamente activa que toma el valor uno, si la persona estuvo ocupada en el periodo actual, o cero, si no. En este caso, el total de control correspondiente sigue estando definido por el total nacional estimado de personas ocupadas en el periodo anterior. Por lo tanto, al sumar sobre la muestra expandida, se presenta la siguiente relación \(\hat{t}_{y^{(t-1)}} = \hat{t}_{y^{(t)}} - \hat{\Delta}_M)\); es decir, que la estimación del periodo anterior es igual a la estimación del mes actual menos una diferencia de estimaciones en la muestra traslapada.
+
+Es posible usar ambas covariables \(x_k^{(c)}\) y \(x_k^{(l)}\) en el sistema de calibración, aunque es probable sea encontrar pesos resultantes negativos o menores que uno. Para evitar estos inconvenientes numéricos, y dado que para ambas variables se tiene el mismo total de control, es posible definir una combinación lineal convexa y crear una nueva covariable de calibración, de la siguiente manera:
+
+\[
+x_k = (1-\alpha) x_k^{(l)} + \alpha x_k^{(c)}
+\]
+
+\citet{Fuller_Rao_2001} mencionan que en algunas aplicaciones particulares, se ha encontrado mayor eficiencia (menor varianza) al utilizar valores de \(\alpha = 0.65\) o \(\alpha = 0.75\); aunque se recomienda usar \(\alpha = 2/3\) en los sistemas de producción de las ONE.
+
+\citet{Gambino_Kennedy_Singh_2001} afirman que existe una facilidad en la implementación de estos estimadores puesto que se corresponde con la manera usual de un sistema tradicional de ponderación en las encuestas de hogares; es decir, se crea una columna nueva en la base de datos definiendo el nuevo factor de expansión, y esto se logra simplemente con la adición de nuevas covariables a la matriz de calibración.
+
+En América Latina, El Instituto Nacional de Estadística del Uruguay, decidió rediseñar en 2021 la Encuesta Continua de Hogares en 2019, la cual estaba definida desde el 2006 con base en la selección de muestras mensuales independientes. En la metodología nueva, se implementó un sistema de panel rotativo, en donde la muestra de un mes está compuesta por seis grupos de rotación y la recolección de la información tiene un carácter mixto: para la recolección de la información en la primera visita, de forma presencial y, para el seguimiento durante los siguientes cinco meses, de forma telefónica. Además, el INE implementó un sistema de estimación basado en los estimadores compuestos con mejoras en la eficiencia estadística \citep{INEURY}
 
 \hypertarget{construcciuxf3n-de-los-factores-de-expansiuxf3n}{%
 \chapter{Construcción de los factores de expansión}\label{construcciuxf3n-de-los-factores-de-expansiuxf3n}}
@@ -8733,7 +8941,7 @@ Aunque la comparabilidad de las estimaciones es un baluarte fundamental en la di
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  \emph{Cambios en la forma de medición de los constructos}; es posible encontrar que la forma en que se miden los constructos cambien a través del tiempo. Por ejemplo, la concepción y definición de las fuentes del ingreso \citep{CEPAL_2018} para mediciones de pobreza monetaria o la actualización de los estándares de la Organización Internacional del Trabajo \citep[\citet{CIET13}]{CIET19} en cuanto a la definición de los indicadores del mercado laboral, son algunos casos en los que los cuestionarios deben sufrir modificaciones para poder tener una inferencia oportuna.
+  \emph{Cambios en la forma de medición de los constructos}; es posible encontrar que la forma en que se miden los constructos cambien a través del tiempo. Por ejemplo, la concepción y definición de las fuentes del ingreso \citep{CEPAL_2018} para mediciones de pobreza monetaria o la actualización de los estándares de la Organización Internacional del Trabajo \citep{ILO_2013} en cuanto a la definición de los indicadores del mercado laboral, son algunos casos en los que los cuestionarios deben sufrir modificaciones para poder tener una inferencia oportuna.
 \item
   \emph{Cambios en la definición de las subpoblaciones}; la generación de nuevos estándares sobre la clasificación de las subpoblaciones puede repercutir significativamente en la comparabilidad de las series. Por ejemplo, la adopción de estándares sobre la identificación de razas, etnias o pueblos originarios, además de cambios en la identifiación de migrantes y extranjeros; nuevos estándares sobre identificación de poblaciones con preferencias sexuales y de género diversas; nuevos estándares en la clasificación de las ocupaciones, entre otras.
 \item
@@ -8748,7 +8956,7 @@ Aunque la comparabilidad de las estimaciones es un baluarte fundamental en la di
   \item
     La forma en la que se desarrollan los censos tiene una repercusión directa sobre la construcción de los marcos de muestreo, que inducen el diseño de muestreo de la encuesta. Si el censo anterior fue un censo de hecho y el actual es un censo de derecho (o viceversa) la definición y construcción cartográfica de las áreas de enumeración o empadronamiento serán diferentes en su tamaño y composición. Dado que estas áreas son el principal insumo de la creación de las Unidades Primarias de Muestreo, los cambios en la cartografía de los marcos de muestreo serán significativas y acabaran redundando en el quiebre de las series temporales.
   \item
-    La actualización de las proyecciones demográficas trae consigo un cambio en los totales de control usados en los estimadores de calibración. Ante un cambio significativo en la población proyectada y la observada en el censo, es muy probable que las estadísticas oficiales de nivel (totales y tamaños, en particular) se vean afectadas por estos cambios y las estadísticas ya no sean comparables, pues se observará un incremento (o decremento) de las proyecciones de la población civil no instucionalizada \citep{CPSrediseno}.
+    La actualización de las proyecciones demográficas trae consigo un cambio en los totales de control usados en los estimadores de calibración. Ante un cambio significativo en la población proyectada y la observada en el censo, es muy probable que las estadísticas oficiales de nivel (totales y tamaños, en particular) se vean afectadas por estos cambios y las estadísticas ya no sean comparables, pues se observará un incremento (o decremento) de las proyecciones de la población civil no instucionalizada \citep{BLS_2014}.
   \end{itemize}
 \item
   \emph{Mejoras deliberadas}; cualquier otro cambio en la estrategia de muestreo puede traer discrepancias en las series de tiempo. Por ejemplo, una nueva forma de administración del marco de muestreo con nuevos tamaños en las UPM, o la adopción de una nueva estrategia de estratificación socioeconómica de las UPM del marco tendrán un efecto en las cifras. Asimismo, el cambio y mejora en el diseño de muestreo, la adopción de un nuevo estimadores o los cambios realizado en los ajustes de los pesos de muestreo y factores de expansión pueden tener connotaciones inesperadas en la comparabilidad de las cifras.
@@ -8759,7 +8967,7 @@ Aunque la comparabilidad de las estimaciones es un baluarte fundamental en la di
 
 Como los rediseños de las encuestas son inevitables, es muy recomendable definir de antemano los cambios que se surtirán y planear un experimento controlado a lo largo de un periodo suficiente de tiempo (por ejemplo, un año para eventos con estacionalidad como las estadísticas del trabajo) en donde la operación estadística transcurra en paralelo con dos acercamientos: el regular (sin cambios) y el nuevo (con los cambios del rediseño). Esta opción implica que la ONE debe tener a su disponibilidad la suficiente cantidad de recursos presupuestales, logísticos y humanos durante el tiempo en el cual transcurran ambos procesos. Por lo anterior, no todas las ONE de la región podrán asumir esta carga y se vuelve una opción inviable. Sin embargo, las autoridades de las ONE deberían realizar todos los esfuerzos posibles para conseguir los recursos suficientes y garantizar que se pueda medir el impacto de los cambios propuestos.
 
-Con base en lo anteriomente mencionado, es necesario tener en cuenta que sin este tipo de experimentos paralelos, será muy difícil medir el verdadero cambio, identificar la fuente de la discontinuidad en la serie y corregir el sesgo generado. Tal como lo afirma \citet{Rubincausal}, la aleatorización es la única forma de conseguir que no existan sesgos de selección en los experimentos controlados y es el único supuesto científicamente aceptado para medir este tipo de efectos. Con esta perspectiva en mente, los experimentos controlados deberán seleccionar aleatoriamente las UPM que participarían en ambas recolecciones. Esto no supone una carga adicional para las ONE, garantes de la aleatorización en las encuestas de hogares.
+Con base en lo anteriomente mencionado, es necesario tener en cuenta que sin este tipo de experimentos paralelos, será muy difícil medir el verdadero cambio, identificar la fuente de la discontinuidad en la serie y corregir el sesgo generado. Tal como lo afirma \citet{Imbens_Rubin_2015}, la aleatorización es la única forma de conseguir que no existan sesgos de selección en los experimentos controlados y es el único supuesto científicamente aceptado para medir este tipo de efectos. Con esta perspectiva en mente, los experimentos controlados deberán seleccionar aleatoriamente las UPM que participarían en ambas recolecciones. Esto no supone una carga adicional para las ONE, garantes de la aleatorización en las encuestas de hogares.
 
 \citet{Brakel2008} menciona que hay varias posibilidades para llevar a cabo este tipo de experimentos paralelos; por una parte es posible tener dos operaciones estadísticas en campo con el mismo tamaño de muestra, o que la nueva operación tenga un tamaño de muestra menor e inclusive esté restringida a alguna subpoblación de interés. En cualquier caso, son la forma correcta para evitar efectos de confusión. De lo contrario, incluso ante cambios nulos, no se podrá discernir si esto es el resultado de la coyuntura de interés, o del rediseño de la encuesta. La figura @ref(fig:fig20\_1) muestra un ejemplo simulado del resultado esperado de un experimento paralelo. La línea negra representa la serie regular, la linea azul representa la nueva serie con los cambios del rediseño y la distancia entre ambas, representa el impacto del rediseño en cada punto del tiempo.
 
@@ -8786,7 +8994,7 @@ Este rediseño repentino (cambio en la metodología de recolección) fue necesar
   Se revisitaron los esquemas de calibración de los factores de expansión y en aras de la flexibilidad de la metodología de estimación se restringió el número de restricciones de calibración.
 \end{itemize}
 
-En algunos casos especiales, ante la imposibilidad de ejecutar dos encuestas paralelas, es posible obtener dos series paralelas. Por ejemplo, suponga un cambio en la forma de medición de las estadísticas del mercado de trabajo en un país; en particular, la adopción del estándar CIET 19 \citep{19CIET}. En algunos países es posible adoptar este estándar mediante la adición de nuevas preguntas al cuestionario original basado en la CIET 13 \citep{13CIET}. Otro caso especial puede deberse a la actualización de las proyecciones de población y los totales de control en los estimadores de calibración. Dado que el cambio solo afecta los procesos computacionales, es posible tener dos series paralelas, sin necesidad de tener dos levantamientos paralelos.
+En algunos casos especiales, ante la imposibilidad de ejecutar dos encuestas paralelas, es posible obtener dos series paralelas. Por ejemplo, suponga un cambio en la forma de medición de las estadísticas del mercado de trabajo en un país; en particular, la adopción del estándar CIET 19 \citep{ILO_2013}. En algunos países es posible adoptar este estándar mediante la adición de nuevas preguntas al cuestionario original basado en la CIET 13 \citep{ILO_1982}. Otro caso especial puede deberse a la actualización de las proyecciones de población y los totales de control en los estimadores de calibración. Dado que el cambio solo afecta los procesos computacionales, es posible tener dos series paralelas, sin necesidad de tener dos levantamientos paralelos.
 
 Ya sea que se tenga la posibilidad de contar con dos series en paralelo o no, existirán diferentes métodos que permitirán establecer si existe o no un impacto significativo debido a un cambio en la encuesta. En general, es posible enlistar las siguientes posibilidades:
 1. Cuando se tienen las dos series en paralelo es posible cuantificar el impacto a través de estudios de causalidad basado en modelos econométricos.

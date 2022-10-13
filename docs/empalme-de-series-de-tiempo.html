@@ -23,7 +23,7 @@
 <meta name="author" content="Andrés Gutiérrez" />
 
 
-<meta name="date" content="2022-10-12" />
+<meta name="date" content="2022-10-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -180,6 +180,12 @@ div.csl-indent {
 <li class="chapter" data-level="6.1.7" data-path="diseños-de-muestreo.html"><a href="diseños-de-muestreo.html#muestreo-balanceado"><i class="fa fa-check"></i><b>6.1.7</b> Muestreo balanceado</a></li>
 </ul></li>
 <li class="chapter" data-level="6.2" data-path="el-diseño-de-muestreo-estándar-en-una-encuesta-de-hogares.html"><a href="el-diseño-de-muestreo-estándar-en-una-encuesta-de-hogares.html"><i class="fa fa-check"></i><b>6.2</b> El diseño de muestreo estándar en una encuesta de hogares</a></li>
+<li class="chapter" data-level="6.3" data-path="coordinación-de-muestras.html"><a href="coordinación-de-muestras.html"><i class="fa fa-check"></i><b>6.3</b> Coordinación de muestras</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="coordinación-de-muestras.html"><a href="coordinación-de-muestras.html#tipos-de-coordinación"><i class="fa fa-check"></i><b>6.3.1</b> Tipos de coordinación</a></li>
+<li class="chapter" data-level="6.3.2" data-path="coordinación-de-muestras.html"><a href="coordinación-de-muestras.html#coordinación-de-muestras-aleatorias-simples"><i class="fa fa-check"></i><b>6.3.2</b> Coordinación de muestras aleatorias simples</a></li>
+<li class="chapter" data-level="6.3.3" data-path="coordinación-de-muestras.html"><a href="coordinación-de-muestras.html#coordinación-de-muestras-proporcionales"><i class="fa fa-check"></i><b>6.3.3</b> Coordinación de muestras proporcionales</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="el-efecto-de-diseño.html"><a href="el-efecto-de-diseño.html"><i class="fa fa-check"></i><b>7</b> El efecto de diseño</a>
 <ul>
@@ -479,7 +485,7 @@ div.csl-indent {
 <p>A continuación se realiza un recuento de algunas técnicas que permiten empalmar dos series. Cada uno de los escenarios que se enlistan a continuación deberá ser adoptado a las necesidades de cada ONE y de cada encuesta. En términos de notación, <span class="math inline">\(\hat \theta^{R}_t\)</span> representa la estimación regular en el tiempo <span class="math inline">\(t\)</span>, <span class="math inline">\(\hat \theta^{N}_t\)</span> denota la nueva estimación en el tiempo <span class="math inline">\(t\)</span> y <span class="math inline">\(\hat \theta^{E}_t\)</span> corresponde a la estimación empalmada en el tiempo <span class="math inline">\(t\)</span>.</p>
 <div id="factor-suavizado" class="section level3 hasAnchor" number="20.3.1">
 <h3><span class="header-section-number">20.3.1</span> Factor suavizado<a href="empalme-de-series-de-tiempo.html#factor-suavizado" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><span class="citation">(<a href="#ref-DiNatale" role="doc-biblioref"><strong>DiNatale?</strong></a>)</span> presenta el siguiente ajuste que suaviza sistemáticamente el cambio entre la nueva serie en tiempo del rediseño (<span class="math inline">\(t_b\)</span>) y la serie regular en el punto inmediatamente anterior <span class="math inline">\(t_b-1\)</span>. Es necesario identificar el punto donde ocurrió el cambio <span class="math inline">\(t_b\)</span>, así como el punto que indicará el comienzo del empalme <span class="math inline">\(t_1\)</span>. Luego, se debe calcular el factor de ajuste que representa el cambio (porcentual).
+<p><span class="citation">DiNatale (<a href="#ref-DiNatale" role="doc-biblioref">2003</a>)</span> presenta el siguiente ajuste que suaviza sistemáticamente el cambio entre la nueva serie en tiempo del rediseño (<span class="math inline">\(t_b\)</span>) y la serie regular en el punto inmediatamente anterior <span class="math inline">\(t_b-1\)</span>. Es necesario identificar el punto donde ocurrió el cambio <span class="math inline">\(t_b\)</span>, así como el punto que indicará el comienzo del empalme <span class="math inline">\(t_1\)</span>. Luego, se debe calcular el factor de ajuste que representa el cambio (porcentual).
 <span class="math display">\[
 \gamma_t=\left(\frac{\hat \theta^{N}_{t_b}}{\hat \theta^{R}_{t_b-1}} -1\right)  \times \psi_t
 \]</span>
@@ -510,7 +516,7 @@ Así, suponiendo que <span class="math inline">\(\psi_t = \frac{t}{t_b-1} \in (0
 ,
 \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \text{con } t=1,2,\cdots,t_b-1.
 \]</span></p>
-<p><span class="citation">(<a href="#ref-Brakel2008" role="doc-biblioref"><strong>Brakel2008?</strong></a>)</span> afirma que con los anteriores métodos la serie empalmada puede ser mayor que uno o menor que cero, lo cual es especialmente contraproducente en el caso de las proporciones y tasas. La Figura @ref(fig:fig20_3) muestra el empalme de las series usando el ajuste sintético multiplicativo.</p>
+<p><span class="citation">Brakel, Smith, y Compton (<a href="#ref-Brakel2008" role="doc-biblioref">2008</a>)</span> afirma que con los anteriores métodos la serie empalmada puede ser mayor que uno o menor que cero, lo cual es especialmente contraproducente en el caso de las proporciones y tasas. La Figura @ref(fig:fig20_3) muestra el empalme de las series usando el ajuste sintético multiplicativo.</p>
 <p><span class="math display">\[
 \hat \theta^{E}_t=\hat \theta^{R}_t + \left(\hat \theta^{N}_{t_b} - \hat \theta^{R}_{t_b}\right) \times \left( \dfrac{\hat \theta^{R}_t(1-\hat \theta^{R}_t)}{\hat \theta^{R}_{t_b}(1-\hat \theta^{R}_{t_b})}\right)
 ,
@@ -525,7 +531,7 @@ Así, suponiendo que <span class="math inline">\(\psi_t = \frac{t}{t_b-1} \in (0
 </div>
 <div id="modelos-estructurales" class="section level3 hasAnchor" number="20.3.3">
 <h3><span class="header-section-number">20.3.3</span> Modelos estructurales<a href="empalme-de-series-de-tiempo.html#modelos-estructurales" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>En el caso en el que no se tenga la oportunidad de tener un experimento paralelo y, por lo tanto, se carezca de dos series paralelas, es posible ajustar un modelo estructural de series de tiempo con una intervención justo en el momento del rediseño. Para simplificar la notación, en esta sección se supone que la serie no tiene estacionalidad, ni ciclos; aunque si los tuviera el espíritu del ajuste se mantiene. Por ende, siguiendo a <span class="citation">(<a href="#ref-Brakel2008" role="doc-biblioref"><strong>Brakel2008?</strong></a>)</span>, el modelo estructural para la serie está dado por el nivel <span class="math inline">\(L_t\)</span> más el impacto <span class="math inline">\(\beta\)</span> en el momento del rediseño <span class="math inline">\(t_b\)</span> y se escribe de la siguiente manera:</p>
+<p>En el caso en el que no se tenga la oportunidad de tener un experimento paralelo y, por lo tanto, se carezca de dos series paralelas, es posible ajustar un modelo estructural de series de tiempo con una intervención justo en el momento del rediseño. Para simplificar la notación, en esta sección se supone que la serie no tiene estacionalidad, ni ciclos; aunque si los tuviera el espíritu del ajuste se mantiene. Por ende, siguiendo a <span class="citation">Brakel, Smith, y Compton (<a href="#ref-Brakel2008" role="doc-biblioref">2008</a>)</span>, el modelo estructural para la serie está dado por el nivel <span class="math inline">\(L_t\)</span> más el impacto <span class="math inline">\(\beta\)</span> en el momento del rediseño <span class="math inline">\(t_b\)</span> y se escribe de la siguiente manera:</p>
 <p><span class="math display">\[
 \hat \theta_{t}=L_t+\beta\delta_t+e_t
 \]</span>
@@ -630,6 +636,15 @@ R_t\\
 
 
 
+<h3>Referencias<a href="referencias.html#referencias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-Brakel2008" class="csl-entry">
+Brakel, Jan van den, Paul Smith, y Simon Compton. 2008. <span>«Quality procedures for survey transitions - experiments, time series and discontinuities»</span>. <em>Survey Research Methods</em> 2 (3): 123-41.
+</div>
+<div id="ref-DiNatale" class="csl-entry">
+DiNatale, M. L. 2003. <span>«Creating Comparability in CPS Employment Series»</span>, 3.
+</div>
+</div>
             </section>
 
           </div>

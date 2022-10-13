@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.9.4)  7 OCT 2022 15:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.13)  13 OCT 2022 01:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **Dise√±o-y-an√°lisis-de-encuestas-de-hogares.tex
 (./Dise√±o-y-an√°lisis-de-encuestas-de-hogares.tex
 LaTeX2e <2022-06-01> patch level 5
-L3 programming layer <2022-08-30> (/Users/psirusteam/Library/TinyTeX/texmf-dist/tex/latex/base/book.cls
+L3 programming layer <2022-09-28> (/Users/psirusteam/Library/TinyTeX/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2021/10/04 v1.4n Standard LaTeX document class
 (/Users/psirusteam/Library/TinyTeX/texmf-dist/tex/latex/base/bk12.clo
 File: bk12.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
@@ -148,7 +148,9 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 227.
 (/Users/psirusteam/Library/TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+\stockwidth=\dimen148
+\stockheight=\dimen149
 ) (/Users/psirusteam/Library/TinyTeX/texmf-dist/tex/latex/graphics/mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
@@ -168,7 +170,7 @@ File: x11nam.def 2022/06/12 v2.14 Predefined colors according to Unix/X11 (UK)
 )) (/Users/psirusteam/Library/TinyTeX/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
 (/Users/psirusteam/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2022-06-20 v7.00s Hypertext links for LaTeX
+Package: hyperref 2022-09-22 v7.00t Hypertext links for LaTeX
 (/Users/psirusteam/Library/TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
 ) (/Users/psirusteam/Library/TinyTeX/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
@@ -182,8 +184,8 @@ Package pdftexcmds Info: \pdfdraftmode found.
 ) (/Users/psirusteam/Library/TinyTeX/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks23
-) (/Users/psirusteam/Library/TinyTeX/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
-Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+) (/Users/psirusteam/Library/TinyTeX/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 ) (/Users/psirusteam/Library/TinyTeX/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 ) (/Users/psirusteam/Library/TinyTeX/texmf-dist/tex/generic/pdfescape/pdfescape.sty
@@ -205,11 +207,11 @@ Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
 \c@section@level=\count272
 )
-\@linkdim=\dimen148
+\@linkdim=\dimen150
 \Hy@linkcounter=\count273
 \Hy@pagecounter=\count274
 (/Users/psirusteam/Library/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2022-06-20 v7.00s Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2022-09-22 v7.00t Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 ) (/Users/psirusteam/Library/TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.sty
@@ -219,7 +221,7 @@ Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
 \Hy@SavedSpaceFactor=\count275
 (/Users/psirusteam/Library/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
-File: puenc.def 2022-06-20 v7.00s Hyperref: PDF Unicode definition (HO)
+File: puenc.def 2022-09-22 v7.00t Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
@@ -230,29 +232,29 @@ Package hyperref Info: Hyper index ON on input line 4170.
 Package hyperref Info: Plain pages OFF on input line 4177.
 Package hyperref Info: Backreferencing OFF on input line 4182.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4408.
+Package hyperref Info: Bookmarks ON on input line 4410.
 \c@Hy@tempcnt=\count276
 (/Users/psirusteam/Library/TinyTeX/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 4746.
-\XeTeXLinkMargin=\dimen149
+LaTeX Info: Redefining \url on input line 4748.
+\XeTeXLinkMargin=\dimen151
 (/Users/psirusteam/Library/TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 (/Users/psirusteam/Library/TinyTeX/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
 \Fld@menulength=\count277
-\Field@Width=\dimen150
-\Fld@charsize=\dimen151
-Package hyperref Info: Hyper figures OFF on input line 6024.
-Package hyperref Info: Link nesting OFF on input line 6029.
-Package hyperref Info: Hyper index ON on input line 6032.
-Package hyperref Info: backreferencing OFF on input line 6039.
-Package hyperref Info: Link coloring OFF on input line 6044.
-Package hyperref Info: Link coloring with OCG OFF on input line 6049.
-Package hyperref Info: PDF/A mode OFF on input line 6054.
+\Field@Width=\dimen152
+\Fld@charsize=\dimen153
+Package hyperref Info: Hyper figures OFF on input line 6027.
+Package hyperref Info: Link nesting OFF on input line 6032.
+Package hyperref Info: Hyper index ON on input line 6035.
+Package hyperref Info: backreferencing OFF on input line 6042.
+Package hyperref Info: Link coloring OFF on input line 6047.
+Package hyperref Info: Link coloring with OCG OFF on input line 6052.
+Package hyperref Info: PDF/A mode OFF on input line 6057.
 (/Users/psirusteam/Library/TinyTeX/texmf-dist/tex/latex/base/atbegshi-ltx.sty
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
@@ -263,7 +265,7 @@ package with kernel methods
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 (/Users/psirusteam/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2022-06-20 v7.00s Hyperref driver for pdfTeX
+File: hpdftex.def 2022-09-22 v7.00t Hyperref driver for pdfTeX
 (/Users/psirusteam/Library/TinyTeX/texmf-dist/tex/latex/base/atveryend-ltx.sty
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
 with kernel methods
@@ -291,14 +293,14 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@cnth=\count284
 \Gm@cntv=\count285
 \c@Gm@tempcnt=\count286
-\Gm@bindingoffset=\dimen152
-\Gm@wd@mp=\dimen153
-\Gm@odd@mp=\dimen154
-\Gm@even@mp=\dimen155
-\Gm@layoutwidth=\dimen156
-\Gm@layoutheight=\dimen157
-\Gm@layouthoffset=\dimen158
-\Gm@layoutvoffset=\dimen159
+\Gm@bindingoffset=\dimen154
+\Gm@wd@mp=\dimen155
+\Gm@odd@mp=\dimen156
+\Gm@even@mp=\dimen157
+\Gm@layoutwidth=\dimen158
+\Gm@layoutheight=\dimen159
+\Gm@layouthoffset=\dimen160
+\Gm@layoutvoffset=\dimen161
 \Gm@dimlist=\toks24
 ) (/Users/psirusteam/Library/TinyTeX/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
@@ -307,7 +309,7 @@ Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
 \LTpre=\skip55
 \LTpost=\skip56
 \LTchunksize=\count287
-\LTcapwidth=\dimen160
+\LTcapwidth=\dimen162
 \LT@head=\box53
 \LT@firsthead=\box54
 \LT@foot=\box55
@@ -320,28 +322,28 @@ Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
 \LT@p@ftn=\toks25
 ) (/Users/psirusteam/Library/TinyTeX/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen161
-\lightrulewidth=\dimen162
-\cmidrulewidth=\dimen163
-\belowrulesep=\dimen164
-\belowbottomsep=\dimen165
-\aboverulesep=\dimen166
-\abovetopsep=\dimen167
-\cmidrulesep=\dimen168
-\cmidrulekern=\dimen169
-\defaultaddspace=\dimen170
+\heavyrulewidth=\dimen163
+\lightrulewidth=\dimen164
+\cmidrulewidth=\dimen165
+\belowrulesep=\dimen166
+\belowbottomsep=\dimen167
+\aboverulesep=\dimen168
+\abovetopsep=\dimen169
+\cmidrulesep=\dimen170
+\cmidrulekern=\dimen171
+\defaultaddspace=\dimen172
 \@cmidla=\count292
 \@cmidlb=\count293
-\@aboverulesep=\dimen171
-\@belowrulesep=\dimen172
+\@aboverulesep=\dimen173
+\@belowrulesep=\dimen174
 \@thisruleclass=\count294
 \@lastruleclass=\count295
-\@thisrulewidth=\dimen173
+\@thisrulewidth=\dimen175
 ) (/Users/psirusteam/Library/TinyTeX/texmf-dist/tex/latex/tools/array.sty
 Package: array 2022/03/10 v2.5f Tabular extension package (FMi)
-\col@sep=\dimen174
+\col@sep=\dimen176
 \ar@mcellbox=\box58
-\extrarowheight=\dimen175
+\extrarowheight=\dimen177
 \NC@list=\toks26
 \extratabsurround=\skip57
 \backup@length=\skip58
@@ -350,8 +352,8 @@ Package: array 2022/03/10 v2.5f Tabular extension package (FMi)
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count296
 \calc@Bcount=\count297
-\calc@Adimen=\dimen176
-\calc@Bdimen=\dimen177
+\calc@Adimen=\dimen178
+\calc@Bdimen=\dimen179
 \calc@Askip=\skip59
 \calc@Bskip=\skip60
 LaTeX Info: Redefining \setlength on input line 80.
@@ -364,7 +366,7 @@ Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 ) (/Users/psirusteam/Library/TinyTeX/texmf-dist/tex/latex/mdwtools/footnote.sty
 Package: footnote 1997/01/28 1.13 Save footnotes around boxes
 \fn@notes=\box60
-\fn@width=\dimen178
+\fn@width=\dimen180
 ) (/Users/psirusteam/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
 (/Users/psirusteam/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty
@@ -376,20 +378,20 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 107.
 )
-\Gin@req@height=\dimen179
-\Gin@req@width=\dimen180
+\Gin@req@height=\dimen181
+\Gin@req@width=\dimen182
 ) (/Users/psirusteam/Library/TinyTeX/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2022/08/29 3.79 The Babel package
+Package: babel 2022/10/04 3.81 The Babel package
 \babel@savecnt=\count300
-\U@D=\dimen181
+\U@D=\dimen183
 \l@unhyphenated=\language3
 (/Users/psirusteam/Library/TinyTeX/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
 \bbl@dirlevel=\count301
 Package babel Info: You haven't specified a language. I'll use 'nil'
-(babel)             as the main language. Reported on input line 4411.
+(babel)             as the main language. Reported on input line 4432.
 (/Users/psirusteam/Library/TinyTeX/texmf-dist/tex/generic/babel/nil.ldf
-Language: nil 2022/08/29 3.79 Nil language
+Language: nil 2022/10/04 3.81 Nil language
 \l@nil=\language4
 ))
 \everypar=\toks27
@@ -421,14 +423,14 @@ Package: amsthm 2020/05/29 v2.20.6
 Package: caption 2022/03/01 v3.6b Customizing captions (AR)
 (/Users/psirusteam/Library/TinyTeX/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
-\caption@tempdima=\dimen182
-\captionmargin=\dimen183
-\caption@leftmargin=\dimen184
-\caption@rightmargin=\dimen185
-\caption@width=\dimen186
-\caption@indent=\dimen187
-\caption@parindent=\dimen188
-\caption@hangindent=\dimen189
+\caption@tempdima=\dimen184
+\captionmargin=\dimen185
+\caption@leftmargin=\dimen186
+\caption@rightmargin=\dimen187
+\caption@width=\dimen188
+\caption@indent=\dimen189
+\caption@parindent=\dimen190
+\caption@hangindent=\dimen191
 Package caption Info: Standard document class detected.
 )
 \c@caption@flags=\count302
@@ -444,7 +446,7 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count304
 ) (/Users/psirusteam/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2022-08-30 L3 backend support: PDF output (pdfTeX)
+File: l3backend-pdftex.def 2022-09-28 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count305
 \l__pdf_internal_box=\box61
 ) (./Dise√±o-y-an√°lisis-de-encuestas-de-hogares.aux)
@@ -574,7 +576,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 [13] [14
 
 ]
-<Pics/CClicence.png, id=462, 97.0827pt x 33.9669pt>
+<Pics/CClicence.png, id=466, 97.0827pt x 33.9669pt>
 File: Pics/CClicence.png Graphic file (type png)
 <use Pics/CClicence.png>
 Package pdftex.def Info: Pics/CClicence.png  used on input line 135.
@@ -609,7 +611,7 @@ Overfull \hbox (135.22815pt too wide) has occurred while \output is active
 
 [25] [26]
 \bbl@ensure@spanish {Cap\'\i tulo} 2.
-<Pics/Picture9.png, id=599, 677.4108pt x 352.6776pt>
+<Pics/Picture9.png, id=603, 677.4108pt x 352.6776pt>
 File: Pics/Picture9.png Graphic file (type png)
 <use Pics/Picture9.png>
 Package pdftex.def Info: Pics/Picture9.png  used on input line 308.
@@ -620,7 +622,7 @@ Package pdftex.def Info: Pics/Picture9.png  used on input line 308.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 324.
 [28 <./Pics/Picture9.png>] [29] [30] [31]
-<Pics/Picture6.png, id=679, 590.6868pt x 333.4056pt>
+<Pics/Picture6.png, id=683, 590.6868pt x 333.4056pt>
 File: Pics/Picture6.png Graphic file (type png)
 <use Pics/Picture6.png>
 Package pdftex.def Info: Pics/Picture6.png  used on input line 407.
@@ -715,7 +717,7 @@ LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 13
 (/Users/psirusteam/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-<05Estratificar_files/figure-latex/MedRes-1.pdf, id=1016, 469.755pt x 252.945pt>
+<05Estratificar_files/figure-latex/MedRes-1.pdf, id=1020, 469.755pt x 252.945pt>
 File: 05Estratificar_files/figure-latex/MedRes-1.pdf Graphic file (type pdf)
 <use 05Estratificar_files/figure-latex/MedRes-1.pdf>
 Package pdftex.def Info: 05Estratificar_files/figure-latex/MedRes-1.pdf  used on input line 1410.
@@ -811,7 +813,7 @@ Underfull \hbox (badness 1348) in paragraph at lines 1632--1633
  []
 
 [74]
-<Pics/Estratificar.png, id=1109, 1740.5025pt x 806.01125pt>
+<Pics/Estratificar.png, id=1113, 1740.5025pt x 806.01125pt>
 File: Pics/Estratificar.png Graphic file (type png)
 <use Pics/Estratificar.png>
 Package pdftex.def Info: Pics/Estratificar.png  used on input line 1696.
@@ -828,663 +830,634 @@ Overfull \hbox (302.52054pt too wide) in paragraph at lines 1696--1696
 ] [78] [79] [80] [81] [82] [83] [84]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[85] [86] [87] [88]
+[85] [86] [87]
+Underfull \vbox (badness 2073) has occurred while \output is active []
+
+[88] [89]
+Underfull \vbox (badness 1708) has occurred while \output is active []
+
+[90] [91] [92]
 \bbl@ensure@spanish {Cap\'\i tulo} 7.
-[89
+[93
 
-] [90] [91] [92] [93] [94] [95] [96]
+] [94] [95] [96] [97] [98] [99] [100]
 \bbl@ensure@spanish {Cap\'\i tulo} 8.
-[97
+[101
 
-] [98] [99] [100]
+] [102] [103] [104]
 Overfull \hbox (35.44478pt too wide) has occurred while \output is active
-[]\T1/lmr/m/sl/12 III.  ALGUNOS ESCENARIOS DE INTER…S EN LA ASIGNACI”N DEL TAMA—O DE MUESTRA[] \T1/lmr/m/n/12 101
+[]\T1/lmr/m/sl/12 III.  ALGUNOS ESCENARIOS DE INTER…S EN LA ASIGNACI”N DEL TAMA—O DE MUESTRA[] \T1/lmr/m/n/12 105
  []
 
-[101] [102] [103] [104] [105] [106] [107] [108] [109] [110]
+[105] [106] [107] [108] [109] [110] [111] [112] [113] [114]
 Underfull \vbox (badness 4608) has occurred while \output is active []
 
-[111] [112] [113] [114]
-Underfull \hbox (badness 1436) in paragraph at lines 3038--3038
+[115] [116] [117] [118]
+Underfull \hbox (badness 1436) in paragraph at lines 3199--3199
 []\T1/lmr/bx/n/14.4 TamaÒo de muestra para la estimaciÛn del impacto en dos
  []
 
 
-Underfull \hbox (badness 3108) in paragraph at lines 3060--3061
+Underfull \hbox (badness 3108) in paragraph at lines 3221--3222
 []\T1/lmr/m/n/12 Por ejemplo, en una encuesta de fuerza laboral intemediada por alguna intervenciÛn
  []
 
-[115]
-Overfull \hbox (7.55618pt too wide) detected at line 3092
+[119]
+Overfull \hbox (7.55618pt too wide) detected at line 3253
 []
  []
 
-[116] [117] [118] [119] [120]
+[120] [121] [122] [123] [124]
 Overfull \hbox (1.92873pt too wide) has occurred while \output is active
-[]\T1/lmr/m/sl/12 IX.  ALGUNAS CONSIDERACIONES ADICIONALES SOBRE EL TAMA—O DE MUESTRA[] \T1/lmr/m/n/12 121
+[]\T1/lmr/m/sl/12 IX.  ALGUNAS CONSIDERACIONES ADICIONALES SOBRE EL TAMA—O DE MUESTRA[] \T1/lmr/m/n/12 125
  []
 
-[121] [122]
+[125] [126]
 Overfull \hbox (1.92873pt too wide) has occurred while \output is active
-[]\T1/lmr/m/sl/12 IX.  ALGUNAS CONSIDERACIONES ADICIONALES SOBRE EL TAMA—O DE MUESTRA[] \T1/lmr/m/n/12 123
+[]\T1/lmr/m/sl/12 IX.  ALGUNAS CONSIDERACIONES ADICIONALES SOBRE EL TAMA—O DE MUESTRA[] \T1/lmr/m/n/12 127
  []
 
-[123] [124
+[127] [128
 
 ]
 \bbl@ensure@spanish {Cap\'\i tulo} 9.
-[125] [126]
-Underfull \hbox (badness 1590) in paragraph at lines 3316--3316
+[129] [130]
+Underfull \hbox (badness 1590) in paragraph at lines 3477--3477
 []\T1/lmr/bx/n/17.28 El estimador de Horvitz-Thompson para totales y
  []
 
 
 Overfull \hbox (45.09576pt too wide) has occurred while \output is active
-[]\T1/lmr/m/sl/12 I.  EL ESTIMADOR DE HORVITZ-THOMPSON PARA TOTALES Y TAMA—OS POBLACIONALES[] \T1/lmr/m/n/12 127
- []
-
-[127]
-Underfull \hbox (badness 1163) in paragraph at lines 3329--3330
-[]\T1/lmr/m/n/12 Como se ver· m·s adelante, en presencia de esquemas de estratificaciÛn y selecciÛn de
- []
-
-[128]
-Overfull \hbox (45.09576pt too wide) has occurred while \output is active
-[]\T1/lmr/m/sl/12 I.  EL ESTIMADOR DE HORVITZ-THOMPSON PARA TOTALES Y TAMA—OS POBLACIONALES[] \T1/lmr/m/n/12 129
- []
-
-[129] [130]
-Overfull \hbox (45.09576pt too wide) has occurred while \output is active
 []\T1/lmr/m/sl/12 I.  EL ESTIMADOR DE HORVITZ-THOMPSON PARA TOTALES Y TAMA—OS POBLACIONALES[] \T1/lmr/m/n/12 131
  []
 
-[131] [132] [133] [134]
-<Pics/c5.png, id=1641, 1445.4pt x 859.21pt>
+[131]
+Underfull \hbox (badness 1163) in paragraph at lines 3490--3491
+[]\T1/lmr/m/n/12 Como se ver· m·s adelante, en presencia de esquemas de estratificaciÛn y selecciÛn de
+ []
+
+[132]
+Overfull \hbox (45.09576pt too wide) has occurred while \output is active
+[]\T1/lmr/m/sl/12 I.  EL ESTIMADOR DE HORVITZ-THOMPSON PARA TOTALES Y TAMA—OS POBLACIONALES[] \T1/lmr/m/n/12 133
+ []
+
+[133] [134]
+Overfull \hbox (45.09576pt too wide) has occurred while \output is active
+[]\T1/lmr/m/sl/12 I.  EL ESTIMADOR DE HORVITZ-THOMPSON PARA TOTALES Y TAMA—OS POBLACIONALES[] \T1/lmr/m/n/12 135
+ []
+
+[135] [136] [137] [138]
+<Pics/c5.png, id=1685, 1445.4pt x 859.21pt>
 File: Pics/c5.png Graphic file (type png)
 <use Pics/c5.png>
-Package pdftex.def Info: Pics/c5.png  used on input line 3599.
+Package pdftex.def Info: Pics/c5.png  used on input line 3753.
 (pdftex.def)             Requested size: 500.47206pt x 297.50284pt.
-<Pics/c6.png, id=1642, 1445.4pt x 859.21pt>
+<Pics/c6.png, id=1686, 1445.4pt x 859.21pt>
 File: Pics/c6.png Graphic file (type png)
 <use Pics/c6.png>
-Package pdftex.def Info: Pics/c6.png  used on input line 3607.
+Package pdftex.def Info: Pics/c6.png  used on input line 3761.
 (pdftex.def)             Requested size: 500.47206pt x 297.50284pt.
-[135] [136 <./Pics/c5.png> <./Pics/c6.png>]
-<Pics/c7.png, id=1658, 1445.4pt x 859.21pt>
+<Pics/c7.png, id=1687, 1445.4pt x 859.21pt>
 File: Pics/c7.png Graphic file (type png)
 <use Pics/c7.png>
-Package pdftex.def Info: Pics/c7.png  used on input line 3615.
+Package pdftex.def Info: Pics/c7.png  used on input line 3769.
 (pdftex.def)             Requested size: 500.47206pt x 297.50284pt.
-<Pics/c8.png, id=1659, 1445.4pt x 858.20625pt>
+[139] [140 <./Pics/c5.png> <./Pics/c6.png>]
+<Pics/c8.png, id=1703, 1445.4pt x 858.20625pt>
 File: Pics/c8.png Graphic file (type png)
 <use Pics/c8.png>
-Package pdftex.def Info: Pics/c8.png  used on input line 3623.
+Package pdftex.def Info: Pics/c8.png  used on input line 3777.
 (pdftex.def)             Requested size: 500.47206pt x 297.15527pt.
-
-Underfull \vbox (badness 1478) has occurred while \output is active []
-
-[137 <./Pics/c7.png>] [138 <./Pics/c8.png>] [139]
-Underfull \hbox (badness 1348) in paragraph at lines 3720--3721
+[141 <./Pics/c7.png>] [142 <./Pics/c8.png>] [143]
+Underfull \hbox (badness 1348) in paragraph at lines 3874--3875
 \T1/lmr/m/n/12 la ponderaciÛn muestral aprecia el mÈtodo de calibraciÛn puesto
  []
 
-[140] [141] [142
+[144] [145]
+Underfull \hbox (badness 1577) in paragraph at lines 3931--3932
+[]\T1/lmr/m/n/12 En donde $\OML/lmm/m/it/12 R \OT1/lmr/m/n/12 = [][] \OML/lmm/m/it/12 w[]= [][] w[]$ \T1/lmr/m/n/12 es el inverso de la proporciÛn de traslape real en el
+ []
 
-]
+[146]
 \bbl@ensure@spanish {Cap\'\i tulo} 10.
-[143] [144] [145] [146] [147] [148] [149] [150] [151] [152] [153] [154] [155] [156] [157] [158] [159] [160] [161] [162] [163] [164]
-\bbl@ensure@spanish {Cap\'\i tulo} 11.
-[165
+[147
 
-] [166] [167]
-Underfull \hbox (badness 1377) in paragraph at lines 4529--4530
+] [148] [149] [150] [151] [152] [153] [154] [155] [156] [157] [158] [159] [160] [161] [162] [163] [164] [165] [166] [167] [168]
+\bbl@ensure@spanish {Cap\'\i tulo} 11.
+[169
+
+] [170] [171]
+Underfull \hbox (badness 1377) in paragraph at lines 4737--4738
 []\T1/lmr/m/n/12 En particular, considere cualquier estimador del total poblacional dado por la siguiente
  []
 
-[168] [169] [170] [171] [172] [173] [174] [175] [176] [177] [178] [179] [180]
-<Pics/GVFmds.png, id=2105, 933.4875pt x 647.41875pt>
+[172] [173] [174] [175] [176] [177] [178] [179] [180] [181] [182] [183] [184]
+<Pics/GVFmds.png, id=2172, 933.4875pt x 647.41875pt>
 File: Pics/GVFmds.png Graphic file (type png)
 <use Pics/GVFmds.png>
-Package pdftex.def Info: Pics/GVFmds.png  used on input line 5045.
+Package pdftex.def Info: Pics/GVFmds.png  used on input line 5253.
 (pdftex.def)             Requested size: 250.23602pt x 173.55078pt.
-[181] [182 <./Pics/GVFmds.png>]
-Underfull \hbox (badness 1430) in paragraph at lines 5106--5107
+[185] [186 <./Pics/GVFmds.png>]
+Underfull \hbox (badness 1430) in paragraph at lines 5314--5315
 []\T1/lmr/m/n/12 En otra aplicaciÛn pr·ctica, [][]Fuquene et al.[][] ([][]2019[][]) estiman la prevalencia de migrantes
  []
 
-[183] [184]
+[187] [188]
 Overfull \hbox (213.12813pt too wide) has occurred while \output is active
-[]\T1/lmr/m/sl/12 VI.  CONSIDERACIONES ADICIONALES SOBRE LA ESTIMACI”N DE LA VARIANZA DE LOS ESTIMADORES DE MUESTREO[] \T1/lmr/m/n/12 185
+[]\T1/lmr/m/sl/12 VI.  CONSIDERACIONES ADICIONALES SOBRE LA ESTIMACI”N DE LA VARIANZA DE LOS ESTIMADORES DE MUESTREO[] \T1/lmr/m/n/12 189
  []
 
-[185] [186]
+[189] [190]
 \bbl@ensure@spanish {Cap\'\i tulo} 12.
-[187
+[191
 
-] [188] [189] [190]
-Underfull \hbox (badness 1014) in paragraph at lines 5410--5412
+] [192] [193] [194]
+Underfull \hbox (badness 1014) in paragraph at lines 5618--5620
 []\T1/lmr/m/n/12 NÛtese que el indicador $\OML/lmm/m/it/12 R$ \T1/lmr/m/n/12 mide la desviaciÛn de la representatividad dÈbil y no de la
  []
 
-[191]
+[195]
 Underfull \vbox (badness 5431) has occurred while \output is active []
 
-[192]
-<12Ausencia_files/figure-latex/mcar-1.pdf, id=2253, 469.755pt x 216.81pt>
+[196]
+<12Ausencia_files/figure-latex/mcar-1.pdf, id=2320, 469.755pt x 216.81pt>
 File: 12Ausencia_files/figure-latex/mcar-1.pdf Graphic file (type pdf)
 <use 12Ausencia_files/figure-latex/mcar-1.pdf>
-Package pdftex.def Info: 12Ausencia_files/figure-latex/mcar-1.pdf  used on input line 5463.
+Package pdftex.def Info: 12Ausencia_files/figure-latex/mcar-1.pdf  used on input line 5671.
 (pdftex.def)             Requested size: 469.75386pt x 216.80946pt.
 
 Underfull \vbox (badness 2744) has occurred while \output is active []
 
-[193 <./12Ausencia_files/figure-latex/mcar-1.pdf>]
-<12Ausencia_files/figure-latex/mar-1.pdf, id=2270, 469.755pt x 216.81pt>
+[197 <./12Ausencia_files/figure-latex/mcar-1.pdf>]
+<12Ausencia_files/figure-latex/mar-1.pdf, id=2337, 469.755pt x 216.81pt>
 File: 12Ausencia_files/figure-latex/mar-1.pdf Graphic file (type pdf)
 <use 12Ausencia_files/figure-latex/mar-1.pdf>
-Package pdftex.def Info: 12Ausencia_files/figure-latex/mar-1.pdf  used on input line 5474.
+Package pdftex.def Info: 12Ausencia_files/figure-latex/mar-1.pdf  used on input line 5682.
 (pdftex.def)             Requested size: 469.75386pt x 216.80946pt.
-<12Ausencia_files/figure-latex/nmar-1.pdf, id=2272, 469.755pt x 216.81pt>
+<12Ausencia_files/figure-latex/nmar-1.pdf, id=2339, 469.755pt x 216.81pt>
 File: 12Ausencia_files/figure-latex/nmar-1.pdf Graphic file (type pdf)
 <use 12Ausencia_files/figure-latex/nmar-1.pdf>
-Package pdftex.def Info: 12Ausencia_files/figure-latex/nmar-1.pdf  used on input line 5485.
+Package pdftex.def Info: 12Ausencia_files/figure-latex/nmar-1.pdf  used on input line 5693.
 (pdftex.def)             Requested size: 469.75386pt x 216.80946pt.
-[194 <./12Ausencia_files/figure-latex/mar-1.pdf>] [195 <./12Ausencia_files/figure-latex/nmar-1.pdf>] [196]
-<Pics/j1.png, id=2313, 923.45pt x 693.59125pt>
+[198 <./12Ausencia_files/figure-latex/mar-1.pdf>] [199 <./12Ausencia_files/figure-latex/nmar-1.pdf>] [200]
+<Pics/j1.png, id=2381, 923.45pt x 693.59125pt>
 File: Pics/j1.png Graphic file (type png)
 <use Pics/j1.png>
-Package pdftex.def Info: Pics/j1.png  used on input line 5556.
+Package pdftex.def Info: Pics/j1.png  used on input line 5764.
 (pdftex.def)             Requested size: 250.23663pt x 187.94946pt.
-[197]
-<Pics/j3.png, id=2323, 924.45375pt x 694.595pt>
+[201]
+<Pics/j3.png, id=2390, 924.45375pt x 694.595pt>
 File: Pics/j3.png Graphic file (type png)
 <use Pics/j3.png>
-Package pdftex.def Info: Pics/j3.png  used on input line 5582.
+Package pdftex.def Info: Pics/j3.png  used on input line 5790.
 (pdftex.def)             Requested size: 250.24062pt x 188.0201pt.
-[198 <./Pics/j1.png> <./Pics/j3.png>]
-<Pics/j4.png, id=2332, 922.44624pt x 693.59125pt>
+[202 <./Pics/j1.png> <./Pics/j3.png>]
+<Pics/j4.png, id=2399, 922.44624pt x 693.59125pt>
 File: Pics/j4.png Graphic file (type png)
 <use Pics/j4.png>
-Package pdftex.def Info: Pics/j4.png  used on input line 5600.
+Package pdftex.def Info: Pics/j4.png  used on input line 5808.
 (pdftex.def)             Requested size: 250.23207pt x 188.15056pt.
-[199 <./Pics/j4.png>]
-<Pics/j2.png, id=2343, 924.45375pt x 692.5875pt>
+[203 <./Pics/j4.png>]
+<Pics/j2.png, id=2409, 924.45375pt x 692.5875pt>
 File: Pics/j2.png Graphic file (type png)
 <use Pics/j2.png>
-Package pdftex.def Info: Pics/j2.png  used on input line 5615.
+Package pdftex.def Info: Pics/j2.png  used on input line 5823.
 (pdftex.def)             Requested size: 250.24062pt x 187.47668pt.
-[200 <./Pics/j2.png>]
-<Pics/j5.png, id=2352, 924.45375pt x 692.5875pt>
+[204 <./Pics/j2.png>]
+<Pics/j5.png, id=2418, 924.45375pt x 692.5875pt>
 File: Pics/j5.png Graphic file (type png)
 <use Pics/j5.png>
-Package pdftex.def Info: Pics/j5.png  used on input line 5638.
+Package pdftex.def Info: Pics/j5.png  used on input line 5846.
 (pdftex.def)             Requested size: 250.24062pt x 187.47668pt.
-[201 <./Pics/j5.png>] [202
+[205 <./Pics/j5.png>] [206
 
 ]
 \bbl@ensure@spanish {Cap\'\i tulo} 13.
-[203] [204] [205]
-<Pics/el3a.png, id=2387, 367.3725pt x 194.7275pt>
+[207] [208] [209]
+<Pics/el3a.png, id=2454, 367.3725pt x 194.7275pt>
 File: Pics/el3a.png Graphic file (type png)
 <use Pics/el3a.png>
-Package pdftex.def Info: Pics/el3a.png  used on input line 5757.
+Package pdftex.def Info: Pics/el3a.png  used on input line 5965.
 (pdftex.def)             Requested size: 250.24722pt x 132.64468pt.
-<Pics/el3b.png, id=2389, 367.3725pt x 194.7275pt>
+<Pics/el3b.png, id=2456, 367.3725pt x 194.7275pt>
 File: Pics/el3b.png Graphic file (type png)
 <use Pics/el3b.png>
-Package pdftex.def Info: Pics/el3b.png  used on input line 5768.
+Package pdftex.def Info: Pics/el3b.png  used on input line 5976.
 (pdftex.def)             Requested size: 250.24722pt x 132.64468pt.
-[206] [207 <./Pics/el3a.png> <./Pics/el3b.png>] [208]
-<Pics/c9.png, id=2417, 1445.4pt x 859.21pt>
+[210] [211 <./Pics/el3a.png> <./Pics/el3b.png>] [212]
+<Pics/c9.png, id=2485, 1445.4pt x 859.21pt>
 File: Pics/c9.png Graphic file (type png)
 <use Pics/c9.png>
-Package pdftex.def Info: Pics/c9.png  used on input line 5840.
+Package pdftex.def Info: Pics/c9.png  used on input line 6048.
 (pdftex.def)             Requested size: 250.23602pt x 148.75142pt.
-<Pics/c10.png, id=2419, 1445.4pt x 858.20625pt>
+<Pics/c10.png, id=2487, 1445.4pt x 858.20625pt>
 File: Pics/c10.png Graphic file (type png)
 <use Pics/c10.png>
-Package pdftex.def Info: Pics/c10.png  used on input line 5851.
+Package pdftex.def Info: Pics/c10.png  used on input line 6059.
 (pdftex.def)             Requested size: 250.23602pt x 148.57764pt.
-[209 <./Pics/c9.png>]
-<Pics/c12.png, id=2428, 1445.4pt x 858.20625pt>
+[213 <./Pics/c9.png>]
+<Pics/c12.png, id=2496, 1445.4pt x 858.20625pt>
 File: Pics/c12.png Graphic file (type png)
 <use Pics/c12.png>
-Package pdftex.def Info: Pics/c12.png  used on input line 5874.
+Package pdftex.def Info: Pics/c12.png  used on input line 6082.
 (pdftex.def)             Requested size: 250.23602pt x 148.57764pt.
-[210 <./Pics/c10.png> <./Pics/c12.png>]
-<Pics/calnr1.png, id=2442, 1571.8725pt x 1030.85126pt>
+[214 <./Pics/c10.png> <./Pics/c12.png>]
+<Pics/calnr1.png, id=2510, 1571.8725pt x 1030.85126pt>
 File: Pics/calnr1.png Graphic file (type png)
 <use Pics/calnr1.png>
-Package pdftex.def Info: Pics/calnr1.png  used on input line 5903.
+Package pdftex.def Info: Pics/calnr1.png  used on input line 6111.
 (pdftex.def)             Requested size: 250.23354pt x 164.1059pt.
-<Pics/calnr2.png, id=2444, 1573.88pt x 998.73125pt>
+<Pics/calnr2.png, id=2512, 1573.88pt x 998.73125pt>
 File: Pics/calnr2.png Graphic file (type png)
 <use Pics/calnr2.png>
-Package pdftex.def Info: Pics/calnr2.png  used on input line 5914.
+Package pdftex.def Info: Pics/calnr2.png  used on input line 6122.
 (pdftex.def)             Requested size: 250.24092pt x 158.79446pt.
 
-Overfull \hbox (67.5106pt too wide) has occurred while \output is active
-[]\T1/lmr/m/sl/12 III.  LAS CONSECUENCIAS DE LA PANDEMIA POR COVID-19 EN LAS ENCUESTAS DE LA REGI”N[] \T1/lmr/m/n/12 211
- []
-
-[211] [212 <./Pics/calnr1.png> <./Pics/calnr2.png>]
-Overfull \hbox (67.5106pt too wide) has occurred while \output is active
-[]\T1/lmr/m/sl/12 III.  LAS CONSECUENCIAS DE LA PANDEMIA POR COVID-19 EN LAS ENCUESTAS DE LA REGI”N[] \T1/lmr/m/n/12 213
- []
-
-[213] [214]
 Overfull \hbox (67.5106pt too wide) has occurred while \output is active
 []\T1/lmr/m/sl/12 III.  LAS CONSECUENCIAS DE LA PANDEMIA POR COVID-19 EN LAS ENCUESTAS DE LA REGI”N[] \T1/lmr/m/n/12 215
  []
 
-[215] [216]
-<13SesgoUnidad_files/figure-latex/unnamed-chunk-14-1.pdf, id=2493, 433.62pt x 289.08pt>
+[215] [216 <./Pics/calnr1.png> <./Pics/calnr2.png>]
+Overfull \hbox (67.5106pt too wide) has occurred while \output is active
+[]\T1/lmr/m/sl/12 III.  LAS CONSECUENCIAS DE LA PANDEMIA POR COVID-19 EN LAS ENCUESTAS DE LA REGI”N[] \T1/lmr/m/n/12 217
+ []
+
+[217] [218]
+Overfull \hbox (67.5106pt too wide) has occurred while \output is active
+[]\T1/lmr/m/sl/12 III.  LAS CONSECUENCIAS DE LA PANDEMIA POR COVID-19 EN LAS ENCUESTAS DE LA REGI”N[] \T1/lmr/m/n/12 219
+ []
+
+[219] [220]
+<13SesgoUnidad_files/figure-latex/unnamed-chunk-14-1.pdf, id=2560, 433.62pt x 289.08pt>
 File: 13SesgoUnidad_files/figure-latex/unnamed-chunk-14-1.pdf Graphic file (type pdf)
 <use 13SesgoUnidad_files/figure-latex/unnamed-chunk-14-1.pdf>
-Package pdftex.def Info: 13SesgoUnidad_files/figure-latex/unnamed-chunk-14-1.pdf  used on input line 6110.
+Package pdftex.def Info: 13SesgoUnidad_files/figure-latex/unnamed-chunk-14-1.pdf  used on input line 6318.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
 
 Underfull \vbox (badness 3657) has occurred while \output is active []
 
 
 Overfull \hbox (67.5106pt too wide) has occurred while \output is active
-[]\T1/lmr/m/sl/12 III.  LAS CONSECUENCIAS DE LA PANDEMIA POR COVID-19 EN LAS ENCUESTAS DE LA REGI”N[] \T1/lmr/m/n/12 217
+[]\T1/lmr/m/sl/12 III.  LAS CONSECUENCIAS DE LA PANDEMIA POR COVID-19 EN LAS ENCUESTAS DE LA REGI”N[] \T1/lmr/m/n/12 221
  []
 
-[217] [218 <./13SesgoUnidad_files/figure-latex/unnamed-chunk-14-1.pdf>]
-<13SesgoUnidad_files/figure-latex/unnamed-chunk-17-1.pdf, id=2506, 433.62pt x 289.08pt>
+[221] [222 <./13SesgoUnidad_files/figure-latex/unnamed-chunk-14-1.pdf>]
+<13SesgoUnidad_files/figure-latex/unnamed-chunk-17-1.pdf, id=2573, 433.62pt x 289.08pt>
 File: 13SesgoUnidad_files/figure-latex/unnamed-chunk-17-1.pdf Graphic file (type pdf)
 <use 13SesgoUnidad_files/figure-latex/unnamed-chunk-17-1.pdf>
-Package pdftex.def Info: 13SesgoUnidad_files/figure-latex/unnamed-chunk-17-1.pdf  used on input line 6148.
+Package pdftex.def Info: 13SesgoUnidad_files/figure-latex/unnamed-chunk-17-1.pdf  used on input line 6356.
 (pdftex.def)             Requested size: 433.63878pt x 289.09251pt.
 
 Overfull \hbox (67.5106pt too wide) has occurred while \output is active
-[]\T1/lmr/m/sl/12 III.  LAS CONSECUENCIAS DE LA PANDEMIA POR COVID-19 EN LAS ENCUESTAS DE LA REGI”N[] \T1/lmr/m/n/12 219
+[]\T1/lmr/m/sl/12 III.  LAS CONSECUENCIAS DE LA PANDEMIA POR COVID-19 EN LAS ENCUESTAS DE LA REGI”N[] \T1/lmr/m/n/12 223
  []
 
-[219 <./13SesgoUnidad_files/figure-latex/unnamed-chunk-17-1.pdf>] [220
+[223 <./13SesgoUnidad_files/figure-latex/unnamed-chunk-17-1.pdf>] [224
 
 ]
 \bbl@ensure@spanish {Cap\'\i tulo} 14.
-[221] [222] [223] [224] [225] [226] [227]
-<Pics/im1.png, id=2575, 1194.4625pt x 897.3525pt>
+[225] [226] [227] [228] [229] [230] [231]
+<Pics/im1.png, id=2642, 1194.4625pt x 897.3525pt>
 File: Pics/im1.png Graphic file (type png)
 <use Pics/im1.png>
-Package pdftex.def Info: Pics/im1.png  used on input line 6409.
+Package pdftex.def Info: Pics/im1.png  used on input line 6617.
 (pdftex.def)             Requested size: 250.24307pt x 187.99773pt.
-[228 <./Pics/im1.png>]
-<Pics/im2.png, id=2585, 1192.455pt x 898.35625pt>
+[232 <./Pics/im1.png>]
+<Pics/im2.png, id=2652, 1192.455pt x 898.35625pt>
 File: Pics/im2.png Graphic file (type png)
 <use Pics/im2.png>
-Package pdftex.def Info: Pics/im2.png  used on input line 6435.
+Package pdftex.def Info: Pics/im2.png  used on input line 6643.
 (pdftex.def)             Requested size: 250.24098pt x 188.5233pt.
-[229 <./Pics/im2.png>]
-<Pics/im3.png, id=2594, 1194.4625pt x 897.3525pt>
+[233 <./Pics/im2.png>]
+<Pics/im3.png, id=2660, 1194.4625pt x 897.3525pt>
 File: Pics/im3.png Graphic file (type png)
 <use Pics/im3.png>
-Package pdftex.def Info: Pics/im3.png  used on input line 6479.
+Package pdftex.def Info: Pics/im3.png  used on input line 6687.
 (pdftex.def)             Requested size: 250.24307pt x 187.99773pt.
-[230 <./Pics/im3.png>] [231] [232]
-<Pics/10.png, id=2623, 1445.4pt x 857.2025pt>
+[234 <./Pics/im3.png>] [235] [236]
+<Pics/10.png, id=2690, 1445.4pt x 857.2025pt>
 File: Pics/10.png Graphic file (type png)
 <use Pics/10.png>
-Package pdftex.def Info: Pics/10.png  used on input line 6582.
+Package pdftex.def Info: Pics/10.png  used on input line 6790.
 (pdftex.def)             Requested size: 250.23602pt x 148.40385pt.
-[233]
-<Pics/11.png, id=2631, 1416.29124pt x 751.80875pt>
+[237]
+<Pics/11.png, id=2698, 1416.29124pt x 751.80875pt>
 File: Pics/11.png Graphic file (type png)
 <use Pics/11.png>
-Package pdftex.def Info: Pics/11.png  used on input line 6602.
+Package pdftex.def Info: Pics/11.png  used on input line 6810.
 (pdftex.def)             Requested size: 250.23187pt x 132.83038pt.
-[234 <./Pics/10.png>]
-<Pics/12.png, id=2638, 1418.29875pt x 740.7675pt>
+[238 <./Pics/10.png>]
+<Pics/12.png, id=2706, 1418.29875pt x 740.7675pt>
 File: Pics/12.png Graphic file (type png)
 <use Pics/12.png>
-Package pdftex.def Info: Pics/12.png  used on input line 6608.
+Package pdftex.def Info: Pics/12.png  used on input line 6816.
 (pdftex.def)             Requested size: 250.2403pt x 130.69875pt.
-[235 <./Pics/11.png> <./Pics/12.png>]
-<Pics/13.png, id=2649, 1412.27625pt x 742.775pt>
+[239 <./Pics/11.png> <./Pics/12.png>]
+<Pics/13.png, id=2716, 1412.27625pt x 742.775pt>
 File: Pics/13.png Graphic file (type png)
 <use Pics/13.png>
-Package pdftex.def Info: Pics/13.png  used on input line 6621.
+Package pdftex.def Info: Pics/13.png  used on input line 6829.
 (pdftex.def)             Requested size: 250.23363pt x 131.6083pt.
-[236 <./Pics/13.png>]
+[240 <./Pics/13.png>]
 \bbl@ensure@spanish {Cap\'\i tulo} 15.
-[237
+[241
 
-] [238] [239]
-Underfull \hbox (badness 10000) in paragraph at lines 6716--6718
+] [242] [243]
+Underfull \hbox (badness 10000) in paragraph at lines 6924--6926
 
  []
 
-[240]
-Overfull \hbox (180.58618pt too wide) has occurred while \output is active
-[]\T1/lmr/m/sl/12 II.  EJEMPLO: DETECCI”N DE VALORES ATÕPICOS EN UNA ENCUESTA DE PRESUPEUSTOS FAMILIARES Y GASTOS[] \T1/lmr/m/n/12 241
- []
-
-[241] [242]
-<Pics/ou2.png, id=2710, 1433.355pt x 854.19125pt>
-File: Pics/ou2.png Graphic file (type png)
-<use Pics/ou2.png>
-Package pdftex.def Info: Pics/ou2.png  used on input line 6832.
-(pdftex.def)             Requested size: 250.22849pt x 149.12076pt.
-<Pics/ou1.png, id=2712, 1426.32875pt x 851.18pt>
-File: Pics/ou1.png Graphic file (type png)
-<use Pics/ou1.png>
-Package pdftex.def Info: Pics/ou1.png  used on input line 6838.
-(pdftex.def)             Requested size: 250.24243pt x 149.33537pt.
-
-Overfull \hbox (180.58618pt too wide) has occurred while \output is active
-[]\T1/lmr/m/sl/12 II.  EJEMPLO: DETECCI”N DE VALORES ATÕPICOS EN UNA ENCUESTA DE PRESUPEUSTOS FAMILIARES Y GASTOS[] \T1/lmr/m/n/12 243
- []
-
-[243] [244 <./Pics/ou2.png> <./Pics/ou1.png>]
+[244]
 Overfull \hbox (180.58618pt too wide) has occurred while \output is active
 []\T1/lmr/m/sl/12 II.  EJEMPLO: DETECCI”N DE VALORES ATÕPICOS EN UNA ENCUESTA DE PRESUPEUSTOS FAMILIARES Y GASTOS[] \T1/lmr/m/n/12 245
  []
 
 [245] [246]
+<Pics/ou2.png, id=2776, 1433.355pt x 854.19125pt>
+File: Pics/ou2.png Graphic file (type png)
+<use Pics/ou2.png>
+Package pdftex.def Info: Pics/ou2.png  used on input line 7040.
+(pdftex.def)             Requested size: 250.22849pt x 149.12076pt.
+<Pics/ou1.png, id=2778, 1426.32875pt x 851.18pt>
+File: Pics/ou1.png Graphic file (type png)
+<use Pics/ou1.png>
+Package pdftex.def Info: Pics/ou1.png  used on input line 7046.
+(pdftex.def)             Requested size: 250.24243pt x 149.33537pt.
+
 Overfull \hbox (180.58618pt too wide) has occurred while \output is active
 []\T1/lmr/m/sl/12 II.  EJEMPLO: DETECCI”N DE VALORES ATÕPICOS EN UNA ENCUESTA DE PRESUPEUSTOS FAMILIARES Y GASTOS[] \T1/lmr/m/n/12 247
  []
 
-[247] [248
+[247] [248 <./Pics/ou2.png> <./Pics/ou1.png>]
+Overfull \hbox (180.58618pt too wide) has occurred while \output is active
+[]\T1/lmr/m/sl/12 II.  EJEMPLO: DETECCI”N DE VALORES ATÕPICOS EN UNA ENCUESTA DE PRESUPEUSTOS FAMILIARES Y GASTOS[] \T1/lmr/m/n/12 249
+ []
+
+[249] [250]
+Overfull \hbox (180.58618pt too wide) has occurred while \output is active
+[]\T1/lmr/m/sl/12 II.  EJEMPLO: DETECCI”N DE VALORES ATÕPICOS EN UNA ENCUESTA DE PRESUPEUSTOS FAMILIARES Y GASTOS[] \T1/lmr/m/n/12 251
+ []
+
+[251] [252
 
 ]
 \bbl@ensure@spanish {Cap\'\i tulo} 16.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[249] [250] [251] [252] [253] [254] [255] [256] [257] [258] [259]
+[253] [254] [255] [256] [257] [258] [259] [260] [261] [262] [263]
 
-LaTeX Warning: Command \' invalid in math mode on input line 7612.
+LaTeX Warning: Command \' invalid in math mode on input line 7820.
 
-[260]
+[264]
 \bbl@ensure@spanish {Cap\'\i tulo} 17.
-[261
+[265
 
-] [262]
-<Pics/el1.png, id=2859, 2400.97pt x 650.43pt>
+] [266]
+<Pics/el1.png, id=2924, 2400.97pt x 650.43pt>
 File: Pics/el1.png Graphic file (type png)
 <use Pics/el1.png>
-Package pdftex.def Info: Pics/el1.png  used on input line 7671.
+Package pdftex.def Info: Pics/el1.png  used on input line 7879.
 (pdftex.def)             Requested size: 250.22255pt x 67.78604pt.
 
-Overfull \hbox (14.09518pt too wide) has occurred while \output is active
-[]\T1/lmr/m/sl/12 II.  GENERACI”N DE BASES LONGITUDINALES PARA DOS PERIODOS CONSECUTIVOS[] \T1/lmr/m/n/12 263
- []
-
-[263 <./Pics/el1.png>] [264]
-
-LaTeX Warning: Command \' invalid in math mode on input line 7761.
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 7766.
-
-
-Overfull \hbox (14.09518pt too wide) has occurred while \output is active
-[]\T1/lmr/m/sl/12 II.  GENERACI”N DE BASES LONGITUDINALES PARA DOS PERIODOS CONSECUTIVOS[] \T1/lmr/m/n/12 265
- []
-
-[265]
-
-LaTeX Warning: Command \' invalid in math mode on input line 7774.
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 7791.
-
-[266]
 Overfull \hbox (14.09518pt too wide) has occurred while \output is active
 []\T1/lmr/m/sl/12 II.  GENERACI”N DE BASES LONGITUDINALES PARA DOS PERIODOS CONSECUTIVOS[] \T1/lmr/m/n/12 267
  []
 
-[267] [268]
+[267 <./Pics/el1.png>] [268]
 
-LaTeX Warning: Command \' invalid in math mode on input line 7872.
+LaTeX Warning: Command \' invalid in math mode on input line 7969.
 
-[269] [270] [271] [272
+
+LaTeX Warning: Command \' invalid in math mode on input line 7974.
+
+
+Overfull \hbox (14.09518pt too wide) has occurred while \output is active
+[]\T1/lmr/m/sl/12 II.  GENERACI”N DE BASES LONGITUDINALES PARA DOS PERIODOS CONSECUTIVOS[] \T1/lmr/m/n/12 269
+ []
+
+[269]
+
+LaTeX Warning: Command \' invalid in math mode on input line 7982.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 7999.
+
+[270]
+Overfull \hbox (14.09518pt too wide) has occurred while \output is active
+[]\T1/lmr/m/sl/12 II.  GENERACI”N DE BASES LONGITUDINALES PARA DOS PERIODOS CONSECUTIVOS[] \T1/lmr/m/n/12 271
+ []
+
+[271] [272]
+
+LaTeX Warning: Command \' invalid in math mode on input line 8080.
+
+[273] [274] [275] [276
 
 ]
 \bbl@ensure@spanish {Cap\'\i tulo} 18.
 
-Underfull \hbox (badness 1052) in paragraph at lines 7943--7944
+Underfull \hbox (badness 1052) in paragraph at lines 8151--8152
 \T1/lmr/m/n/12 Existen ventajas marcadas a la hora de analizar datos que provienen de levantamientos
  []
 
-[273]
-Overfull \hbox (0.12416pt too wide) in alignment at lines 7972--7990
+[277]
+Overfull \hbox (0.12416pt too wide) in alignment at lines 8180--8198
  [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (0.12416pt too wide) in alignment at lines 7990--7998
+Overfull \hbox (0.12416pt too wide) in alignment at lines 8198--8206
  [] [] [] [] [] [] [] 
  []
 
-[274] [275] [276] [277]
-Underfull \hbox (badness 1412) in paragraph at lines 8161--8162
+[278] [279] [280] [281]
+Underfull \hbox (badness 1412) in paragraph at lines 8369--8370
 \T1/lmr/m/n/12 respondiente en el primer trimestre de 2020 es la misma para todas las clasificaciones
  []
 
 
-Overfull \hbox (1.27147pt too wide) in paragraph at lines 8185--8185
+Overfull \hbox (1.27147pt too wide) in paragraph at lines 8393--8393
 []|\T1/lmr/m/n/12 Desocupado|  
  []
 
-[278] [279] [280]
+[282] [283] [284]
 \bbl@ensure@spanish {Cap\'\i tulo} 19.
-[281
+[285
 
-] [282] [283] [284]
-<19Calidad_files/figure-latex/fig1fig-1.pdf, id=3043, 469.755pt x 289.08pt>
+] [286] [287] [288]
+<19Calidad_files/figure-latex/fig1fig-1.pdf, id=3108, 469.755pt x 289.08pt>
 File: 19Calidad_files/figure-latex/fig1fig-1.pdf Graphic file (type pdf)
 <use 19Calidad_files/figure-latex/fig1fig-1.pdf>
-Package pdftex.def Info: 19Calidad_files/figure-latex/fig1fig-1.pdf  used on input line 8431.
+Package pdftex.def Info: 19Calidad_files/figure-latex/fig1fig-1.pdf  used on input line 8639.
 (pdftex.def)             Requested size: 469.75386pt x 289.07928pt.
-[285 <./19Calidad_files/figure-latex/fig1fig-1.pdf>] [286] [287] [288] [289] [290] [291] [292] [293]
-<Pics/CSj1.png, id=3130, 583.17876pt x 770.88pt>
+[289 <./19Calidad_files/figure-latex/fig1fig-1.pdf>] [290] [291] [292] [293] [294] [295] [296] [297]
+<Pics/CSj1.png, id=3196, 583.17876pt x 770.88pt>
 File: Pics/CSj1.png Graphic file (type png)
 <use Pics/CSj1.png>
-Package pdftex.def Info: Pics/CSj1.png  used on input line 8713.
+Package pdftex.def Info: Pics/CSj1.png  used on input line 8921.
 (pdftex.def)             Requested size: 250.23695pt x 330.77794pt.
-[294] [295 <./Pics/CSj1.png>] [296
+[298] [299 <./Pics/CSj1.png>] [300
 
 ]
 \bbl@ensure@spanish {Cap\'\i tulo} 20.
-[297]
-
-Package natbib Warning: Citation `CIET19' on page 298 undefined on input line 8736.
-
-
-Package natbib Warning: Citation `CIET13' on page 298 undefined on input line 8736.
-
-[298]
-
-Package natbib Warning: Citation `CPSrediseno' on page 299 undefined on input line 8751.
-
-
-Package natbib Warning: Citation `Rubincausal' on page 299 undefined on input line 8762.
-
-
-Package natbib Warning: Citation `Brakel2008' on page 299 undefined on input line 8764.
-
-[299]
-<20Empalme_files/figure-latex/fig20_1-1.pdf, id=3169, 469.755pt x 325.215pt>
+[301] [302] [303]
+<20Empalme_files/figure-latex/fig20_1-1.pdf, id=3246, 469.755pt x 325.215pt>
 File: 20Empalme_files/figure-latex/fig20_1-1.pdf Graphic file (type pdf)
 <use 20Empalme_files/figure-latex/fig20_1-1.pdf>
-Package pdftex.def Info: 20Empalme_files/figure-latex/fig20_1-1.pdf  used on input line 8768.
+Package pdftex.def Info: 20Empalme_files/figure-latex/fig20_1-1.pdf  used on input line 8976.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-[300 <./20Empalme_files/figure-latex/fig20_1-1.pdf>]
-
-Package natbib Warning: Citation `19CIET' on page 301 undefined on input line 8789.
-
-
-Package natbib Warning: Citation `13CIET' on page 301 undefined on input line 8789.
-
-
-Package natbib Warning: Citation `Gbur' on page 301 undefined on input line 8797.
-
-[301]
-
-Package natbib Warning: Citation `DiNatale' on page 302 undefined on input line 8815.
-
-<20Empalme_files/figure-latex/fig20_2-1.pdf, id=3186, 469.755pt x 325.215pt>
+[304 <./20Empalme_files/figure-latex/fig20_1-1.pdf>] [305]
+<20Empalme_files/figure-latex/fig20_2-1.pdf, id=3272, 469.755pt x 325.215pt>
 File: 20Empalme_files/figure-latex/fig20_2-1.pdf Graphic file (type pdf)
 <use 20Empalme_files/figure-latex/fig20_2-1.pdf>
-Package pdftex.def Info: 20Empalme_files/figure-latex/fig20_2-1.pdf  used on input line 8829.
+Package pdftex.def Info: 20Empalme_files/figure-latex/fig20_2-1.pdf  used on input line 9037.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-[302] [303 <./20Empalme_files/figure-latex/fig20_2-1.pdf>]
-
-Package natbib Warning: Citation `Brakel2008' on page 304 undefined on input line 8852.
-
-<20Empalme_files/figure-latex/fig20_3-1.pdf, id=3203, 469.755pt x 325.215pt>
+[306] [307 <./20Empalme_files/figure-latex/fig20_2-1.pdf>]
+<20Empalme_files/figure-latex/fig20_3-1.pdf, id=3293, 469.755pt x 325.215pt>
 File: 20Empalme_files/figure-latex/fig20_3-1.pdf Graphic file (type pdf)
 <use 20Empalme_files/figure-latex/fig20_3-1.pdf>
-Package pdftex.def Info: 20Empalme_files/figure-latex/fig20_3-1.pdf  used on input line 8862.
+Package pdftex.def Info: 20Empalme_files/figure-latex/fig20_3-1.pdf  used on input line 9070.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-
-Package natbib Warning: Citation `Brakel2008' on page 304 undefined on input line 8869.
-
-[304 <./20Empalme_files/figure-latex/fig20_3-1.pdf>] [305]
-<20Empalme_files/figure-latex/fig20_4-1.pdf, id=3217, 469.755pt x 325.215pt>
+[308 <./20Empalme_files/figure-latex/fig20_3-1.pdf>] [309]
+<20Empalme_files/figure-latex/fig20_4-1.pdf, id=3310, 469.755pt x 325.215pt>
 File: 20Empalme_files/figure-latex/fig20_4-1.pdf Graphic file (type pdf)
 <use 20Empalme_files/figure-latex/fig20_4-1.pdf>
-Package pdftex.def Info: 20Empalme_files/figure-latex/fig20_4-1.pdf  used on input line 8949.
+Package pdftex.def Info: 20Empalme_files/figure-latex/fig20_4-1.pdf  used on input line 9157.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-[306 <./20Empalme_files/figure-latex/fig20_4-1.pdf>]
-<20Empalme_files/figure-latex/fig20_5-1.pdf, id=3225, 469.755pt x 325.215pt>
+[310 <./20Empalme_files/figure-latex/fig20_4-1.pdf>]
+<20Empalme_files/figure-latex/fig20_5-1.pdf, id=3318, 469.755pt x 325.215pt>
 File: 20Empalme_files/figure-latex/fig20_5-1.pdf Graphic file (type pdf)
 <use 20Empalme_files/figure-latex/fig20_5-1.pdf>
-Package pdftex.def Info: 20Empalme_files/figure-latex/fig20_5-1.pdf  used on input line 8979.
+Package pdftex.def Info: 20Empalme_files/figure-latex/fig20_5-1.pdf  used on input line 9187.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-[307 <./20Empalme_files/figure-latex/fig20_5-1.pdf>] [308
+[311 <./20Empalme_files/figure-latex/fig20_5-1.pdf>] [312
 
 ]
 \bbl@ensure@spanish {Ap\'endice} A.
-[309] [310] [311] [312] [313] [314] [315] [316]
-Overfull \hbox (4.56363pt too wide) in paragraph at lines 9139--9140
+[313] [314] [315] [316] [317] [318] [319] [320]
+Overfull \hbox (4.56363pt too wide) in paragraph at lines 9347--9348
 []\T1/lmr/m/n/12 Periodicidad  
  []
 
 
-Overfull \hbox (3.30792pt too wide) in paragraph at lines 9141--9142
+Overfull \hbox (3.30792pt too wide) in paragraph at lines 9349--9350
 []\T1/lmr/m/n/12 RotaciÛn  
  []
 
 
-Overfull \hbox (4.56363pt too wide) in paragraph at lines 9155--9156
+Overfull \hbox (4.56363pt too wide) in paragraph at lines 9363--9364
 []\T1/lmr/m/n/12 Periodicidad  
  []
 
 
-Overfull \hbox (3.30792pt too wide) in paragraph at lines 9157--9158
+Overfull \hbox (3.30792pt too wide) in paragraph at lines 9365--9366
 []\T1/lmr/m/n/12 RotaciÛn  
  []
 
 
-Overfull \hbox (3.63431pt too wide) in paragraph at lines 9165--9165
+Overfull \hbox (3.63431pt too wide) in paragraph at lines 9373--9373
 []|\T1/lmr/m/n/12 Repetida|  
  []
 
 
-Overfull \hbox (3.63431pt too wide) in paragraph at lines 9167--9167
+Overfull \hbox (3.63431pt too wide) in paragraph at lines 9375--9375
 []|\T1/lmr/m/n/12 Repetida|  
  []
 
 
-Overfull \hbox (3.63431pt too wide) in paragraph at lines 9168--9168
+Overfull \hbox (3.63431pt too wide) in paragraph at lines 9376--9376
 []|\T1/lmr/m/n/12 Repetida|  
  []
 
 
-Overfull \hbox (3.63431pt too wide) in paragraph at lines 9169--9169
+Overfull \hbox (3.63431pt too wide) in paragraph at lines 9377--9377
 []|\T1/lmr/m/n/12 Repetida|  
  []
 
 
-Overfull \hbox (3.63431pt too wide) in paragraph at lines 9172--9172
+Overfull \hbox (3.63431pt too wide) in paragraph at lines 9380--9380
 []|\T1/lmr/m/n/12 Repetida|  
  []
 
 
-Overfull \hbox (3.63431pt too wide) in paragraph at lines 9173--9173
+Overfull \hbox (3.63431pt too wide) in paragraph at lines 9381--9381
 []|\T1/lmr/m/n/12 Repetida|  
  []
 
 
-Overfull \hbox (3.63431pt too wide) in paragraph at lines 9174--9174
+Overfull \hbox (3.63431pt too wide) in paragraph at lines 9382--9382
 []|\T1/lmr/m/n/12 Repetida|  
  []
 
 
-Overfull \hbox (3.63431pt too wide) in paragraph at lines 9175--9175
+Overfull \hbox (3.63431pt too wide) in paragraph at lines 9383--9383
 []|\T1/lmr/m/n/12 Repetida|  
  []
 
 
-Overfull \hbox (3.63431pt too wide) in paragraph at lines 9177--9177
+Overfull \hbox (3.63431pt too wide) in paragraph at lines 9385--9385
 []|\T1/lmr/m/n/12 Repetida|  
  []
 
 
-Overfull \hbox (3.63431pt too wide) in paragraph at lines 9178--9178
+Overfull \hbox (3.63431pt too wide) in paragraph at lines 9386--9386
 []|\T1/lmr/m/n/12 Repetida|  
  []
 
 
-Overfull \hbox (3.63431pt too wide) in paragraph at lines 9180--9180
+Overfull \hbox (3.63431pt too wide) in paragraph at lines 9388--9388
 []|\T1/lmr/m/n/12 Repetida|  
  []
 
 
-Overfull \hbox (3.63431pt too wide) in paragraph at lines 9182--9182
+Overfull \hbox (3.63431pt too wide) in paragraph at lines 9390--9390
 []|\T1/lmr/m/n/12 Repetida|  
  []
 
 
-Overfull \hbox (3.63431pt too wide) in paragraph at lines 9183--9183
+Overfull \hbox (3.63431pt too wide) in paragraph at lines 9391--9391
 []|\T1/lmr/m/n/12 Repetida|  
  []
 
-[317
+[321
 
-] [318]
+] [322]
 \bbl@ensure@spanish {Ap\'endice} B.
-[319
+[323
 
 
-] [320] [321] [322
+] [324] [325] [326
 
-] (./Dise√±o-y-an√°lisis-de-encuestas-de-hogares.bbl [323] [324
+] (./Dise√±o-y-an√°lisis-de-encuestas-de-hogares.bbl [327] [328
 
-] [325] [326]
-Underfull \hbox (badness 2310) in paragraph at lines 214--218
+] [329] [330]
+Underfull \hbox (badness 2310) in paragraph at lines 230--234
 []\T1/lmr/m/n/12 Estevao, V. and S‰rndal, C.-E. (2006).  Survey estimates by calibration on complex
  []
 
-[327] [328] [329] [330] [331] [332]
-Underfull \hbox (badness 1275) in paragraph at lines 875--880
+[331] [332] [333] [334] [335] [336] [337]
+Underfull \hbox (badness 1275) in paragraph at lines 947--952
 []\T1/lmr/m/n/12 Shlomo, N., Skinner, C., and Schouten, B. (2012).  Estimation of an indicator of the
  []
 
 
-Underfull \hbox (badness 1960) in paragraph at lines 875--880
+Underfull \hbox (badness 1960) in paragraph at lines 947--952
 \T1/lmr/m/n/12 representativeness of survey response.  \T1/lmr/m/it/12 Journal of Statistical Planning and Inference\T1/lmr/m/n/12 ,
  []
 
-[333])
-
-Package natbib Warning: There were undefined citations.
-
-[334] (./Dise√±o-y-an√°lisis-de-encuestas-de-hogares.aux) ) 
+[338]) [339] (./Dise√±o-y-an√°lisis-de-encuestas-de-hogares.aux) ) 
 Here is how much of TeX's memory you used:
- 17867 strings out of 477035
- 300856 string characters out of 5827137
- 684218 words of memory out of 5000000
- 37322 multiletter control sequences out of 15000+600000
- 580405 words of font info for 103 fonts, out of 8000000 for 9000
+ 17955 strings out of 477031
+ 302613 string characters out of 5827042
+ 685481 words of memory out of 5000000
+ 37383 multiletter control sequences out of 15000+600000
+ 584668 words of font info for 104 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 86i,19n,91p,2027b,900s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 86i,19n,91p,2027b,940s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{Hfootnote.15} has been referenced but does not exist, replaced by a fixed one
+
 
 pdfTeX warning (dest): name{Hfootnote.14} has been referenced but does not exist, replaced by a fixed one
 
@@ -1527,11 +1500,11 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
-{/Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}</Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbsy10.pfb></Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmex10.pfb></Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmib10.pfb></Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb></Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb></Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb></Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb></Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb></Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri12.pfb></Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmro12.pfb></Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt12.pfb></Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Dise√±o-y-an√°lisis-de-encuestas-de-hogares.pdf (334 pages, 7838388 bytes).
+{/Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}</Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbsy10.pfb></Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmex10.pfb></Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmib10.pfb></Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb></Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb></Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb></Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb></Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb></Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri12.pfb></Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmro12.pfb></Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt12.pfb></Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></Users/psirusteam/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Dise√±o-y-an√°lisis-de-encuestas-de-hogares.pdf (339 pages, 7874425 bytes).
 PDF statistics:
- 4295 PDF objects out of 4296 (max. 8388607)
- 3775 compressed objects within 38 object streams
- 1366 named destinations out of 1440 (max. 500000)
- 1141 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 4408 PDF objects out of 5155 (max. 8388607)
+ 3880 compressed objects within 39 object streams
+ 1396 named destinations out of 1440 (max. 500000)
+ 1157 words of extra memory for PDF output out of 10000 (max. 10000000)
 
