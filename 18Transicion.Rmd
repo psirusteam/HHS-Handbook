@@ -1,4 +1,4 @@
-# Análisis de flujos brutos
+# Análisis de flujos brutos y matrices de transición
 
 Existen ventajas marcadas a la hora de analizar datos que provienen de levantamientos longitudinales. @Lynn_2009 menciona que la más común de ellas es la posibilidad de realizar análisis de los fujos brutos. Con los levantamientos longitudinales es posible establecer el estado de una unidad observacional en varios periodos consecutivos. Esto permite descomponer los cambios netos que uno podría encontrar en las encuestas transversales. Por ejemplo, a partir de los levantamientos transversales (puntuales en un trimestre), en una encuesta con diseño rotativo es posible estimar el cambio en las diferentes clasificaciones del mercado de trabajo, de un periodo a otro. En efecto, usando la parte longitudinal de la encuesta en ambos periodos, es posible descomponer estas clasificaciones. A partir de este análisis es posible identificar si son exactamente los mismos ocupados los que entran al mercado de trabajo en dos ciclos económicos de interés. 
 

@@ -262,7 +262,7 @@ definición-de-la-población-longitudinal
 ausencia-de-respuesta-y-atrición
 calibración-de-los-pesos-longitudinales
 generación-de-bases-longitudinales-anuales
-análisis-de-flujos-brutos
+análisis-de-flujos-brutos-y-matrices-de-transición
 matrices-de-transición
 modelos-de-markov
 estimación-de-las-matrices-de-transición

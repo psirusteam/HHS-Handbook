@@ -37,12 +37,15 @@ output:
 # Prefacio {-}
 
 
-![(\#fig:unnamed-chunk-1)Licencia de Creative Commons](Pics/CClicence.png){width=100px}
+<div class="figure">
+<img src="Pics/CClicence.png" alt="Licencia de Creative Commons" width="100px" />
+<p class="caption">(\#fig:unnamed-chunk-1)Licencia de Creative Commons</p>
+</div>
 
 La versión online de este libro está licenciada bajo una [Licencia Internacional de Creative Commons para compartir con atribución no comercial 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/). 
 
 La coordinación sustantiva de la colección Metodologías de la CEPAL está a cargo de Rolando Ocampo, Director de la División de Estadísticas de la Comisión Económica para América Latina y el Caribe (CEPAL). 
 
-Esta publicación es el resultado de un proceso de varios años de investigación e interacción con los países miembros en diversas asistencias técnicas concernientes con el diseño, rediseño y análisis posterior de las encuestas de hogares. Dicho proceso fue llevado a cabo por la División de Estadísticas de la CEPAL, bajo la coordinación de Rolando Ocampo, Director de la División de Estadísticas y de Xavier Mancero, Jefe de la Unidad de Estadísticas Sociales. 
+Esta publicación es el resultado de un proceso de varios años de investigación e interacción con los países miembros en diversas asistencias técnicas concernientes con el diseño, rediseño y análisis posterior de las encuestas de hogares. Dicho proceso fue llevado a cabo por Andrés Gutiérrez, Asesor Regional en Estadísticas Sociales de la División de Estadísticas de la CEPAL, bajo la coordinación de Rolando Ocampo, Director de la División de Estadísticas y de Xavier Mancero, Jefe de la Unidad de Estadísticas Sociales. 
 
-La redacción del documento estuvo a cargo de Andrés Gutiérrez, Asesor Regional en Estadísticas Sociales de la CEPAL. Las metodologías presentadas en este documento se han beneficiado de los valiosos aportes y sugerencias de funcionarios de la CEPAL, así como del personal de las Oficinas Nacionales de Estadística de los países beneficiarios de las asistencias técnicas durante los años entre 2017 y 2022. El autor agradece a Simone Ceccini, y a Hanwen Zhang por la lectura detallada de este documento y sus comentarios.
+La redacción del documento estuvo a cargo de Andrés Gutiérrez. Las metodologías presentadas en este documento se han beneficiado de los valiosos aportes y sugerencias de funcionarios de la CEPAL, así como del personal de las Oficinas Nacionales de Estadística de los países beneficiarios de las asistencias técnicas durante los años entre 2017 y 2022. Se agradece a Simone Ceccini, y a Hanwen Zhang por la lectura detallada de este documento y sus comentarios.

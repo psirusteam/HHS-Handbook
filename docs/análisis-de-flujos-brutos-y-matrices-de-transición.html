@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>6.3 Coordinación de muestras | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
+  <title>Capítulo 18 Análisis de flujos brutos y matrices de transición | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="6.3 Coordinación de muestras | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
+  <meta property="og:title" content="Capítulo 18 Análisis de flujos brutos y matrices de transición | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="6.3 Coordinación de muestras | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
+  <meta name="twitter:title" content="Capítulo 18 Análisis de flujos brutos y matrices de transición | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   
   <meta name="twitter:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="el-diseño-de-muestreo-estándar-en-una-encuesta-de-hogares.html"/>
-<link rel="next" href="el-efecto-de-diseño.html"/>
+<link rel="prev" href="generación-de-bases-longitudinales-anuales.html"/>
+<link rel="next" href="matrices-de-transición.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -467,379 +467,15 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="coordinación-de-muestras" class="section level2 hasAnchor" number="6.3">
-<h2><span class="header-section-number">6.3</span> Coordinación de muestras<a href="coordinación-de-muestras.html#coordinación-de-muestras" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>En la realidad, las Oficinas Nacionales de Estadística no realizan una sola encuesta, sino varias en un mismo año. Más aún, una misma encuesta continua puede tener muchos levantamientos en un mismo año. Es por esta razón que, en la administración de los marcos de muestreo, uno de los tópicos más importantes es la coordinación de muestras en el tiempo y entre encuestas. Cuando se define un marco de muestreo nuevo, debido a la realización de un censo de población y vivienda, debe existir una planificación rigurosa que le permita conocer de antemano a los equipos técnicos de las ONE cuáles UPM serán seleccionadas a lo largo del siguiente periodo intercensal y esta relación debe estar supeditada a todas las operaciones estadísticas basadas en encuestas de hogares.</p>
-<p>A pesar de que esta planeación pueda parecer muy exigente, puesto que un periodo intercensal puede durar más de diez años, es necesaria para evitar el desgaste de las UPM en las muestras maestras, y el agotamiento de los respondientes. En vez de esto, la planificación rigurosa permitirá establecer de antemano los procesos logísticos, administrativos y preseupuestales para la recolección de la información primaria para todas las encuestas que se lleven a cabo en este periodo. Esta planificaación además debe atender a estrictos parámetros estadísticos en la selección de las muestras de cada encuesta. Es decir, la sección de las UPM debe respetar el diseño propuesto en cada operación estadística, incluyendo los esquemas rotativos a lo largo del periodo intercensal.</p>
-<div id="tipos-de-coordinación" class="section level3 hasAnchor" number="6.3.1">
-<h3><span class="header-section-number">6.3.1</span> Tipos de coordinación<a href="coordinación-de-muestras.html#tipos-de-coordinación" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>En esta sección se introducirán los fundamentos de los mecanismos de selección y coordinación de muestras para lograr el objetivo de planificación. En primer lugar, se establece que una muestra es <em>positivamente coordinada</em> con otra, si comparten todos sus elementos. De la misma forma dos muestras son <em>negativamente coordinadas</em> si no comparten ningún elemento en común. Nótese que en el caso de las encuestas con esquemas rotacionales complejos, existirán muestras parcialmente coordinadas y negativamente coordinadas. Por ejemplo, en un esquema rotacional 2(2)2, cualesquiera dos muestras de periodos consecutivos tendrán un traslape del 50% y estarán parcialmente coordinadas; sin embargo, en este mismo esquema, dos muestras que estén distanciadas por dos periodos consecutivos no tendrán ningún traslape y deberán estar negativamente coordinadas.</p>
-<p>Para lograr este cometido es posible utilizar esquemas de selección secuenciales <span class="citation">(<a href="#ref-Gutierrez_2016" role="doc-biblioref">H. A. Gutiérrez 2016</a>)</span> que utilicen números aleatorios asignados a cada UPM en el marco de muestreo. En general, existen dos tipos de números aleatorios que se pueden usar en la coordinación de muestras, incluso si se trata de muestras que vienen de diferentes diseños de muestreo. A continuación se describen cada uno de los métodos</p>
-<ul>
-<li><em>Números aleatorios permanentes</em>: cada unidad del marco recibirá un número aleatorio venido de una distribución uniforme en el intervalo unitario. Es decir a cada unidad <span class="math inline">\(i \in U_I\)</span> se le asignara el siguiente número:
-<span class="math display">\[
-\xi_i^P \sim Uniforme\ (0, 1)
-\]</span>
-Evidentemente, en este caso los números aleatorios permanentes no son equidistantes.</li>
-<li><em>Números aleatorios colocados</em>: a partir de los números aleatorios <span class="math inline">\(\xi_i\)</span> creados en el paso anterior, es posible utilizar su rango para definir su ordenamiento y mediante la siguiente función crear números aleatorios equidistantes:
-<span class="math display">\[
-\xi_i^C= \dfrac{\text{Rango}(\xi_i^P) - \varepsilon}{N}
-\]</span>
-En donde <span class="math inline">\(\varepsilon\)</span> es un único valor aleatorio entre cero y uno. Como ilustración, considere una población de tamaño <span class="math inline">\(N = 10\)</span>, para la que se han definido números aleatorios <span class="math inline">\(\xi_i^C\)</span> y, teniendo en cuenta un número aleatorio <span class="math inline">\(\varepsilon = 0.283\)</span>, también se definen <span class="math inline">\(\xi_i^P\)</span>. La tabla <a href="coordinación-de-muestras.html#tab:tabcoor1">6.1</a> muestra los números aleatorios resultantes.</li>
-</ul>
-<table>
-<caption><span id="tab:tabcoor1">Tabla 6.1: </span>Ejemplo reducido de la conformación de números aleatorios permanentes y colocados.</caption>
-<thead>
-<tr class="header">
-<th align="right">Unidad</th>
-<th align="right">xi_P</th>
-<th align="right">xi_C</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="right">1</td>
-<td align="right">0.2875</td>
-<td align="right">0.1717</td>
-</tr>
-<tr class="even">
-<td align="right">2</td>
-<td align="right">0.7883</td>
-<td align="right">0.6717</td>
-</tr>
-<tr class="odd">
-<td align="right">3</td>
-<td align="right">0.4089</td>
-<td align="right">0.2717</td>
-</tr>
-<tr class="even">
-<td align="right">4</td>
-<td align="right">0.8831</td>
-<td align="right">0.7717</td>
-</tr>
-<tr class="odd">
-<td align="right">5</td>
-<td align="right">0.9404</td>
-<td align="right">0.9717</td>
-</tr>
-<tr class="even">
-<td align="right">6</td>
-<td align="right">0.0455</td>
-<td align="right">0.0717</td>
-</tr>
-<tr class="odd">
-<td align="right">7</td>
-<td align="right">0.5281</td>
-<td align="right">0.4717</td>
-</tr>
-<tr class="even">
-<td align="right">8</td>
-<td align="right">0.8924</td>
-<td align="right">0.8717</td>
-</tr>
-<tr class="odd">
-<td align="right">9</td>
-<td align="right">0.5514</td>
-<td align="right">0.5717</td>
-</tr>
-<tr class="even">
-<td align="right">10</td>
-<td align="right">0.4566</td>
-<td align="right">0.3717</td>
-</tr>
-</tbody>
-</table>
+<div id="análisis-de-flujos-brutos-y-matrices-de-transición" class="section level1 hasAnchor" number="18">
+<h1><span class="header-section-number">Capítulo 18</span> Análisis de flujos brutos y matrices de transición<a href="análisis-de-flujos-brutos-y-matrices-de-transición.html#análisis-de-flujos-brutos-y-matrices-de-transición" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Existen ventajas marcadas a la hora de analizar datos que provienen de levantamientos longitudinales. <span class="citation">Lynn (<a href="#ref-Lynn_2009" role="doc-biblioref">2009</a>)</span> menciona que la más común de ellas es la posibilidad de realizar análisis de los fujos brutos. Con los levantamientos longitudinales es posible establecer el estado de una unidad observacional en varios periodos consecutivos. Esto permite descomponer los cambios netos que uno podría encontrar en las encuestas transversales. Por ejemplo, a partir de los levantamientos transversales (puntuales en un trimestre), en una encuesta con diseño rotativo es posible estimar el cambio en las diferentes clasificaciones del mercado de trabajo, de un periodo a otro. En efecto, usando la parte longitudinal de la encuesta en ambos periodos, es posible descomponer estas clasificaciones. A partir de este análisis es posible identificar si son exactamente los mismos ocupados los que entran al mercado de trabajo en dos ciclos económicos de interés.</p>
+<p>Un problema común que se encuentra en este tipo de encuesta es la ausencia de respuesta, que rara vez se puede considerar como aleatoria o ignorable. Si la ausencia de respuesta depende del estado ocupacional (por ejemplo, las tasas de ausencia de respuesta son más altas entre los desempleados), las estimaciones ingenuas de los cambios brutos podrían estar sesgadas. Si el enfoque corrige la ausencia de respuesta pero ignora las complejas características del diseño de muestreo, también habrá problemas de sesgo.</p>
 </div>
-<div id="coordinación-de-muestras-aleatorias-simples" class="section level3 hasAnchor" number="6.3.2">
-<h3><span class="header-section-number">6.3.2</span> Coordinación de muestras aleatorias simples<a href="coordinación-de-muestras.html#coordinación-de-muestras-aleatorias-simples" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Para seleccionar una muestra aleatoria simple <span class="math inline">\(s\)</span> de tamaño <span class="math inline">\(n\)</span>, se deberá ordenar el marco de muestreo de forma ascendente de acuerdo a los números <span class="math inline">\(\xi_i^P\)</span>. De esta forma, la muestra <span class="math inline">\(s\)</span> estará compuesta por lo primeros <span class="math inline">\(n\)</span> registros del marco ordenado (o por los últimos <span class="math inline">\(n\)</span> registros).</p>
-<p>Es así como, para coordinar dos muestras <span class="math inline">\(s^1\)</span> de tamaño <span class="math inline">\(n_1\)</span> y <span class="math inline">\(s^2\)</span> de tamaño <span class="math inline">\(n_2\)</span>, <span class="citation">Ohlsson (<a href="#ref-Ohl95" role="doc-biblioref">1995</a>)</span> menciona que es posible escoger dos constantes <span class="math inline">\(a_1\)</span> y <span class="math inline">\(a_2\)</span> en el intervalo <span class="math inline">\((0, 1)\)</span>. Luego, a partir del marco ordenado con los números aleatorios permanentes (o colocados), definir la muestra <span class="math inline">\(s_1\)</span> como las primeras <span class="math inline">\(n_1\)</span> unidades a la derecha (o izquierda) de <span class="math inline">\(a_1\)</span> y la muestra <span class="math inline">\(s_2\)</span> como las primeras <span class="math inline">\(n_2\)</span> unidades a la derecha (o izquierda) de <span class="math inline">\(a_2\)</span>. Si se quieren muestras positivamente coordinadas, entonces <span class="math inline">\(a_1 = a_2\)</span>; por el contrario, si se quieren muestras negativamente coordinadas, se deberán escoger las constantes de forma apropiada. Por ejemplo sumar 0.5 (en módulo uno) a la constante <span class="math inline">\(a_1\)</span>; es decir, <span class="math inline">\(a_2 = (a_1 + 1/2) \mod{1}\)</span>. En general, si se quieren coordinar negativamente <span class="math inline">\(Q\)</span> diferentes muestras, <span class="citation">Grafstrom y Matei (<a href="#ref-Grafstrom_Matei_2015" role="doc-biblioref">2015</a>)</span> aconsejan añadir la cantidad de <span class="math inline">\(1/Q\)</span> (en módulo uno) a la constante <span class="math inline">\(a_1\)</span>.</p>
-<p>Continuando con el ejemplo reducido, la tabla <a href="coordinación-de-muestras.html#tab:tabcoor2">6.2</a> muestra la selección de dos muestras negativamente coordinadas de tamaño <span class="math inline">\(n_1 = n_2 =3\)</span>, con <span class="math inline">\(a_1 = 0\)</span> y <span class="math inline">\(a_2 = 0.5\)</span>.</p>
-<table>
-<caption><span id="tab:tabcoor2">Tabla 6.2: </span>Ejemplo de la selección de dos muestras aleatorias simples coordinadas negativamente.</caption>
-<thead>
-<tr class="header">
-<th align="right">Unidad</th>
-<th align="right">xi_P</th>
-<th align="right">s_1</th>
-<th align="right">s_2</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="right">6</td>
-<td align="right">0.0455</td>
-<td align="right">1</td>
-<td align="right">0</td>
-</tr>
-<tr class="even">
-<td align="right">1</td>
-<td align="right">0.2875</td>
-<td align="right">1</td>
-<td align="right">0</td>
-</tr>
-<tr class="odd">
-<td align="right">3</td>
-<td align="right">0.4089</td>
-<td align="right">1</td>
-<td align="right">0</td>
-</tr>
-<tr class="even">
-<td align="right">10</td>
-<td align="right">0.4566</td>
-<td align="right">0</td>
-<td align="right">0</td>
-</tr>
-<tr class="odd">
-<td align="right">7</td>
-<td align="right">0.5281</td>
-<td align="right">0</td>
-<td align="right">1</td>
-</tr>
-<tr class="even">
-<td align="right">9</td>
-<td align="right">0.5514</td>
-<td align="right">0</td>
-<td align="right">1</td>
-</tr>
-<tr class="odd">
-<td align="right">2</td>
-<td align="right">0.7883</td>
-<td align="right">0</td>
-<td align="right">1</td>
-</tr>
-<tr class="even">
-<td align="right">4</td>
-<td align="right">0.8831</td>
-<td align="right">0</td>
-<td align="right">0</td>
-</tr>
-<tr class="odd">
-<td align="right">8</td>
-<td align="right">0.8924</td>
-<td align="right">0</td>
-<td align="right">0</td>
-</tr>
-<tr class="even">
-<td align="right">5</td>
-<td align="right">0.9404</td>
-<td align="right">0</td>
-<td align="right">0</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="coordinación-de-muestras-proporcionales" class="section level3 hasAnchor" number="6.3.3">
-<h3><span class="header-section-number">6.3.3</span> Coordinación de muestras proporcionales<a href="coordinación-de-muestras.html#coordinación-de-muestras-proporcionales" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Es posible utilizar varios algoritmos de selección proporcionales a la medida de tamaño de las UPM correspondiente generalmente al número de hogares que la habita. El primero de ellos es el método de Poisson secuencial <span class="citation">(<a href="#ref-Ohl95" role="doc-biblioref">Ohlsson 1995</a>)</span>, que define los siguientes números aleatorios permanentes para cada UPM:</p>
-<p><span class="math display">\[
-\xi_i^{pps} = \frac{\xi_i^P}{N_I \times p_i}
-\]</span>
-En donde <span class="math inline">\(N_I\)</span> es el número de UPM en el marco de muestreo y <span class="math inline">\(p_i = Ni/N\)</span> es la proporción de hogares en la <span class="math inline">\(i\)</span>-ésima UPM. De esta forma, al ordenar el marco mediante los números <span class="math inline">\(\xi_i^{pps}\)</span> y seleccionar los primeros elementos, se obtendrá una muestra secuencial de Poisson. En cuanto a la coordinación de muestras, es posible aplicar los mismos principios de la sección anterior. Es decir, para coordinar dos muestras <span class="math inline">\(s^1\)</span> de tamaño <span class="math inline">\(n_1\)</span> y <span class="math inline">\(s^2\)</span> de tamaño <span class="math inline">\(n_2\)</span>, es posible escoger dos constantes <span class="math inline">\(a_1\)</span> y <span class="math inline">\(a_2\)</span> en el intervalo <span class="math inline">\((0, 1)\)</span>. Luego, a partir del marco ordenado, definir la muestra <span class="math inline">\(s_1\)</span> como las primeras <span class="math inline">\(n_1\)</span> unidades a la derecha (o izquierda) de <span class="math inline">\(a_1\)</span> y la muestra <span class="math inline">\(s_2\)</span> como las primeras <span class="math inline">\(n_2\)</span> unidades a la derecha (o izquierda) de <span class="math inline">\(a_2\)</span>. La tabla <a href="coordinación-de-muestras.html#tab:tabcoor3">6.3</a> ejemplifica la selección de dos muestras proporcionales al tamaño de las UPM cuya coordinación es negativa.</p>
-<table>
-<caption><span id="tab:tabcoor3">Tabla 6.3: </span>Ejemplo de la selección de dos muestras secuenciales de Poisson coordinadas negativamente.</caption>
-<thead>
-<tr class="header">
-<th align="right">Unidad</th>
-<th align="right">xi_P</th>
-<th align="right">N_I</th>
-<th align="right">xi_pps</th>
-<th align="right">s_1</th>
-<th align="right">s_2</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="right">6</td>
-<td align="right">0.0455</td>
-<td align="right">198</td>
-<td align="right">0.0405</td>
-<td align="right">1</td>
-<td align="right">0</td>
-</tr>
-<tr class="even">
-<td align="right">1</td>
-<td align="right">0.2875</td>
-<td align="right">173</td>
-<td align="right">0.2928</td>
-<td align="right">1</td>
-<td align="right">0</td>
-</tr>
-<tr class="odd">
-<td align="right">3</td>
-<td align="right">0.4089</td>
-<td align="right">184</td>
-<td align="right">0.3913</td>
-<td align="right">1</td>
-<td align="right">0</td>
-</tr>
-<tr class="even">
-<td align="right">10</td>
-<td align="right">0.4566</td>
-<td align="right">179</td>
-<td align="right">0.4494</td>
-<td align="right">0</td>
-<td align="right">0</td>
-</tr>
-<tr class="odd">
-<td align="right">9</td>
-<td align="right">0.5514</td>
-<td align="right">195</td>
-<td align="right">0.4981</td>
-<td align="right">0</td>
-<td align="right">0</td>
-</tr>
-<tr class="even">
-<td align="right">7</td>
-<td align="right">0.5281</td>
-<td align="right">155</td>
-<td align="right">0.6001</td>
-<td align="right">0</td>
-<td align="right">1</td>
-</tr>
-<tr class="odd">
-<td align="right">2</td>
-<td align="right">0.7883</td>
-<td align="right">162</td>
-<td align="right">0.8568</td>
-<td align="right">0</td>
-<td align="right">1</td>
-</tr>
-<tr class="even">
-<td align="right">5</td>
-<td align="right">0.9404</td>
-<td align="right">190</td>
-<td align="right">0.8715</td>
-<td align="right">0</td>
-<td align="right">1</td>
-</tr>
-<tr class="odd">
-<td align="right">8</td>
-<td align="right">0.8924</td>
-<td align="right">166</td>
-<td align="right">0.9463</td>
-<td align="right">0</td>
-<td align="right">0</td>
-</tr>
-<tr class="even">
-<td align="right">4</td>
-<td align="right">0.8831</td>
-<td align="right">159</td>
-<td align="right">0.9780</td>
-<td align="right">0</td>
-<td align="right">0</td>
-</tr>
-</tbody>
-</table>
-<p>En Brasil, el IBGE utiliza el algorimo de Paretto <span class="citation">(<a href="#ref-Rosen_1997" role="doc-biblioref">Rosén 1997</a>)</span> para la selección de muestras coordinadas en la PNADC <span class="citation">(<a href="#ref-Costa_2007" role="doc-biblioref">Costa 2007</a>)</span>. Este algoritmo hace uso de los principios de la función de distribución de Paretto con parámetros <span class="math inline">\((1,1)\)</span> y crea los siguientes números aleatorios permanentes:</p>
-<p><span class="math display">\[
-\xi_i^{par} = \frac{\xi_i^P/(1-\xi_i^P)}{\pi_i/(1-\pi_i)}
-\]</span></p>
-<p>En donde <span class="math inline">\(\pi_i = n_I * p_i\)</span> es la probabilidad de inclusión de la <span class="math inline">\(i\)</span>-ésima UPM y deberá garatizarse que sea menor que uno. Por consiguiente, al ordenar el marco mediante los números <span class="math inline">\(\xi_i^{par}\)</span> y seleccionar los primeros elementos, se obtendrá una muestra secuencial de Poisson. Como corresponde, es posible aplicar los mismos principios de la coordinación de muestras en estos algoritmos secuenciales. La tabla <a href="coordinación-de-muestras.html#tab:tabcoor4">6.4</a> ejemplifica la selección de dos muestras de Paretto de tamaño <span class="math inline">\(n_I = 3\)</span>, cuya coordinación es negativa.</p>
-<table>
-<caption><span id="tab:tabcoor4">Tabla 6.4: </span>Ejemplo de la selección de dos muestras de Paretto coordinadas negativamente.</caption>
-<thead>
-<tr class="header">
-<th align="right">Unidad</th>
-<th align="right">xi_P</th>
-<th align="right">xi_P_par</th>
-<th align="right">s_1</th>
-<th align="right">s_2</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="right">6</td>
-<td align="right">0.0455</td>
-<td align="right">0.0937</td>
-<td align="right">1</td>
-<td align="right">0</td>
-</tr>
-<tr class="even">
-<td align="right">1</td>
-<td align="right">0.2875</td>
-<td align="right">0.9662</td>
-<td align="right">1</td>
-<td align="right">0</td>
-</tr>
-<tr class="odd">
-<td align="right">3</td>
-<td align="right">0.4089</td>
-<td align="right">1.5148</td>
-<td align="right">1</td>
-<td align="right">0</td>
-</tr>
-<tr class="even">
-<td align="right">10</td>
-<td align="right">0.4566</td>
-<td align="right">1.9165</td>
-<td align="right">0</td>
-<td align="right">1</td>
-</tr>
-<tr class="odd">
-<td align="right">9</td>
-<td align="right">0.5514</td>
-<td align="right">2.4720</td>
-<td align="right">0</td>
-<td align="right">1</td>
-</tr>
-<tr class="even">
-<td align="right">7</td>
-<td align="right">0.5281</td>
-<td align="right">3.1199</td>
-<td align="right">0</td>
-<td align="right">1</td>
-</tr>
-<tr class="odd">
-<td align="right">2</td>
-<td align="right">0.7883</td>
-<td align="right">9.7679</td>
-<td align="right">0</td>
-<td align="right">0</td>
-</tr>
-<tr class="even">
-<td align="right">4</td>
-<td align="right">0.8831</td>
-<td align="right">20.3317</td>
-<td align="right">0</td>
-<td align="right">0</td>
-</tr>
-<tr class="odd">
-<td align="right">8</td>
-<td align="right">0.8924</td>
-<td align="right">21.0230</td>
-<td align="right">0</td>
-<td align="right">0</td>
-</tr>
-<tr class="even">
-<td align="right">5</td>
-<td align="right">0.9404</td>
-<td align="right">32.9658</td>
-<td align="right">0</td>
-<td align="right">0</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-<!-- </div> -->
 <h3>Referencias<a href="referencias.html#referencias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-Costa_2007" class="csl-entry">
-Costa, Gustavo. 2007. <span>«Coordenação de Amostras PPT em Pesquisas Repetidas, Utilizando o Método de Amostragem de Pareto»</span>. Tesis doctoral, IBGE-ENCE.
-</div>
-<div id="ref-Grafstrom_Matei_2015" class="csl-entry">
-Grafstrom, Anton, y Alina Matei. 2015. <span>«Coordination of Conditional Poisson Samples»</span>. <em>Journal of Official Statistics</em> 31 (4): 649-72. <a href="https://doi.org/10.1515/jos-2015-0039">https://doi.org/10.1515/jos-2015-0039</a>.
-</div>
-<div id="ref-Gutierrez_2016" class="csl-entry">
-———. 2016. <em>Estrategias de muestreo: diseño de encuestas y estimación de parámetros</em>. Segunda edición. Ediciones de la U.
-</div>
-<div id="ref-Ohl95" class="csl-entry">
-Ohlsson, E. 1995. <span>«Coordination of Samples using Permanent Random Numbers»</span>. <em>Chapter 9 in Business Survey Methods</em>, 153-69.
-</div>
-<div id="ref-Rosen_1997" class="csl-entry">
-Rosén, Bengt. 1997. <span>«On sampling with probability proportional to size»</span>. <em>Journal of Statistical Planning and Inference</em> 62 (2): 159-91. <a href="https://doi.org/10.1016/S0378-3758(96)00186-3">https://doi.org/10.1016/S0378-3758(96)00186-3</a>.
+<div id="ref-Lynn_2009" class="csl-entry">
+Lynn, P. 2009. <em>Methodology of longitudinal surveys</em>. Wiley series en survey methodology. Wiley.
 </div>
 </div>
             </section>
@@ -847,8 +483,8 @@ Rosén, Bengt. 1997. <span>«On sampling with probability proportional to size»
           </div>
         </div>
       </div>
-<a href="el-diseño-de-muestreo-estándar-en-una-encuesta-de-hogares.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="el-efecto-de-diseño.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="generación-de-bases-longitudinales-anuales.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="matrices-de-transición.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -879,7 +515,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/psirusteam/HHS-Handbook/06Diseno.Rmd",
+"link": "https://github.com/psirusteam/HHS-Handbook/18Transicion.Rmd",
 "text": "Edit"
 },
 "history": {

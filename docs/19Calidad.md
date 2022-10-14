@@ -122,7 +122,10 @@ A continuación se presenta un ejemplo sencillo. Considere una proporción estim
 
 Aún más, este enfoque representa una excelente aproximación al enfoque clásico cuando las proporciones estimadas no son pequeñas. Por ejemplo, considere una proporción estimada del $\hat{P} = 30\%$, con un con un $CV(\hat{P}) = 4.83\%$ y un intervalo de confianza clásico dao por $(27.16\%, 32.84\%)$. Utilizando la transformación logit, el intervalo de confianza estaría dado por $(27.24\%, 32.91\%)$ y el coeficiente de variación logit sería de $CV(\hat{L}) = 4.01\%$. 
 
-![(\#fig:fig1fig)Relación entre el tamaño de muestra y la precisión de un indicador utilizando la transformación Logit.](19Calidad_files/figure-docx/fig1fig-1.png)
+<div class="figure">
+<img src="19Calidad_files/figure-html/fig1fig-1.svg" alt="Relación entre el tamaño de muestra y la precisión de un indicador utilizando la transformación Logit." width="672" />
+<p class="caption">(\#fig:fig1fig)Relación entre el tamaño de muestra y la precisión de un indicador utilizando la transformación Logit.</p>
+</div>
 
 La figura \@ref(fig:fig1fig) muestra que, al igual que con el coeficiente de variación original, el tamaño de muestra aumentará a medida que se requiera mayor precisión en la estimación; pero a diferencia del coeficiente de variación original, el tamaño de muestra será idéntico para los fenómenos que induzcan proporciones simétricas. Además, el tamaño de muestra necesario para estimar eficientemente una proporción $P\leq 0.5$ con una precisión mayor a un determinado umbral del coeficiente de variación $CVE$ es:  
 
@@ -376,5 +379,8 @@ Teniendo en cuenta las particularidades de la región, en este documento se reco
 
 Por ejemplo, la figura \@ref(fig:figCSj1) muestra una propuesta preliminar, para la estimación de proporciones o razones, en cuanto a los criterios de supresión de cifras. En una primera instancia se realiza la estimación clásica de los parámetros de interés y se genera una tabla que adjunte el cálculo de todos los criterios descritos anteriormente. Luego, dependiendo de la naturaleza del fenómeno investigado, se deben establecer los criterios que se van a tener en cuenta y los umbrales en cada caso. El próximo paso es decidir, para cada cifra de la tabla generada, si se va a publicar o suprimir, y en algunos casos si se revisará la cifra con mayor detenimiento. Por ejemplo, en el diagrama propuesto se definen seis criterios como condiciones necesarias para la publicación inmediata de una cifra; los primeros cuatro, son condiciones necesarias para la revisión temática. Si alguno de los primeros cuatro criterios no se satisface, entonces la cifra es suprimida. 
 
-![(\#fig:figCSj1)Ejemplo de un diagrama de flujo para la publicación, supresión y revisión de estimaciones de proporciones o razones en encuestas de hogares.](Pics/CSj1.png){width=50%}
+<div class="figure">
+<img src="Pics/CSj1.png" alt="Ejemplo de un diagrama de flujo para la publicación, supresión y revisión de estimaciones de proporciones o razones en encuestas de hogares." width="50%" />
+<p class="caption">(\#fig:figCSj1)Ejemplo de un diagrama de flujo para la publicación, supresión y revisión de estimaciones de proporciones o razones en encuestas de hogares.</p>
+</div>
 
