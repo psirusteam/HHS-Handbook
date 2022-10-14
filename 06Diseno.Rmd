@@ -142,7 +142,9 @@ El método del cubo [@Tille2006] permite seleccionar muestras balanceadas, mante
 
 El método del cubo se compone de dos fases: la fase de vuelo y la fase de aterrizaje. En la primera, para que las restricciones sean satisfechas exactamente, se deben redondear a cero (0) o uno (1) las probabilidades de inclusión. La fase de aterrizaje consiste en el manejo adecuado del redondeo apelando a la programación lineal. Por ejemplo, aplicando el método simplex sujeto a una función de costo relacionada con la varianza del estimador. 
 
-En las encuestas de hogares es posible utilizar el algoritmo de selección del método del cubo en cada uno de los estratos conformados en el diseño de muestreo para seleccionar UPM. El método del cubo es un algoritmo de selección, que a diferencia de los algoritmos de selección tradicionales permite reproducir de forma exacta el número total de personas por grupos de edad y sexo a nivel de la UPM para este caso concreto. En Perú, la Encuesta Demográfica y de Salud Familiar utiliza este tipo de muestreo en la selección de las UPM. De esta manera, como variables de balanceo se podrían definir las siguientes:
+En las encuestas de hogares es posible utilizar el algoritmo de selección del método del cubo en cada uno de los estratos conformados en el diseño de muestreo para seleccionar UPM. El método del cubo es un algoritmo de selección, que a diferencia de los algoritmos de selección tradicionales permite reproducir de forma exacta el número total de personas por grupos de edad y sexo a nivel de la UPM para este caso concreto. 
+
+En Perú, la Encuesta Demográfica y de Salud Familiar utiliza este tipo de muestreo en la selección de las UPM. De esta manera, como variables de balanceo se podrían definir las siguientes:
 
 * Una columna de unos para que exista balanceo en el número de UPM.
 * El vector de probabilidades de inclusión iniciales.
@@ -176,6 +178,20 @@ Por lo tanto, en la primera etapa se ha identificado todos los sectores cartogr�
 
 A pesar de que la medida de tamaño permite que las UPM con mayor cantidad de hogares tengan una mayor probabilidad de ser escogidas, esta diferencia en las probabilidades de selección se compensa en la segunda etapa de muestreo, debido a que cada hogar tendrá igual probabilidad de ser elegido en la muestra dentro del estrato. Es pertinente observar que, para la segunda etapa se requiere contar con un listado exhaustivo de todos los hogares dentro de todas las UPM seleccionadas. Este proceso de selección requerirá de un empadronamiento previo que, no solo actualice el número de hogares, sino que permita identificarlos y ubicarlos dentro de la UPM. De esta manera, y de forma aleatoria simple, se elige una muestra de hogares y su tamaño no varía entre UPM. 
 
+Por otro lado, @Duncan_Kalton_1987[pág. 105] afirman que la composición de la población de interés cambia durante el tiempo, puesto que lo individuos nacen, mueren, migran, e incluso pasan a ser parte de organizaciones que hacen que pierdan su estatus^[Nótese que la población objetivo de la mayoría de encuestas de hogares en la región se refiere a la población civil no institucionalizada, que excluye miembros de organizaciones militares, personas en cárceles, hospitales, etc.] de la unidad de observación. De igual forma, se debe tener en cuenta los nuevos hogares que pueden crearse o desintegrarse. 
+
+Además de tener un aumento en los flujos migratorios internacionales, la realidad de los países latinoamericanos ha mostrado una migración importante desde las áreas rurales hacia las áreas urbanas y esto repercute en una desactualización constante del marco de muestreo que fue construido varios años atrás. Aunque también se debe mencionar que hay fuertes movimientos entre ciudades, lo cual tiene un fuerte impacto sobre el marco de muestreo. Este problema de actualización del marco lo enfrentan todos los países de la región y puede ser abordado a partir del ajuste constante a los pesos de muestreo de las UPM cada vez que se realiza un operativo de campo en donde haya evidencia de un cambio en el número de hogares para las UPM seleccionadas en la muestra de la primera etapa.
+
+Como las UPM se seleccionan con un muestreo proporcional al tamaño de la UPM y las viviendas se seleccionan en campo mediante un muestreo simple (aleatorio simple o sistemático), previa actualización del empadronamiento y conteo de viviendas; entonces esta actualización podría usarse para reajustar los pesos de las UPM en los nuevos levantamientos. De esta forma se reflejaría el cambio que tiene la población (dinámica, por definición) de interés. Sin embargo, se recomienda no modificar las probabilidades de selección de las UPM para garantizar el insesgamiento de los estimadores de muestreo. 
+
+Por ejemplo, si en un país se define un esquema de muestreo que selecciona 12 viviendas dentro de cada una de las UPM seleccionadas en la primera etapa, entonces la probabilidad de selección de la $i$-ésima UPM $U_i$ estaría dada por 
+
+$$
+\pi_{Ii}=Pr(U_i \in s_I)=n_I\frac{n_i}{N_i}=n_I\frac{12}{N_i}
+$$
+
+En donde $n_I$ hace referencia al número de UPM que se seleccionarán en la primera etapa, $N_i$ representa el número de viviendas en la UPM y $n_i=12$ es el número de viviendas seleccionadas dentro de la UPM. Ahora, si el número de viviendas se actualizara en la UPM, la probabilidad de inclusión cambiaría, lo cual generaría sesgo en la estimación. Por ende, las probabilidades de inclusión de las UPM deberían seguir estables entre los ciclos censales. El problema de subcobertura puede abordarse con el post-ajuste de los factores de expansión en la etapa de estimación. 
+
 ## Coordinación de muestras
 
 En la realidad, las Oficinas Nacionales de Estadística no realizan una sola encuesta, sino varias en un mismo año. Más aún, una misma encuesta continua puede tener muchos levantamientos en un mismo año. Es por esta razón que, en la administración de los marcos de muestreo, uno de los tópicos más importantes es la coordinación de muestras en el tiempo y entre encuestas. Cuando se define un marco de muestreo nuevo, debido a la realización de un censo de población y vivienda, debe existir una planificación rigurosa que le permita conocer de antemano a los equipos técnicos de las ONE cuáles UPM serán seleccionadas a lo largo del siguiente periodo intercensal y esta relación debe estar supeditada a todas las operaciones estadísticas basadas en encuestas de hogares. 
@@ -197,9 +213,9 @@ Evidentemente, en este caso los números aleatorios permanentes no son equidista
 $$
 \xi_i^C= \dfrac{\text{Rango}(\xi_i^P) - \varepsilon}{N}
 $$
-En donde $\varepsilon$ es un único valor aleatorio entre cero y uno. Como ilustración, considere una población de tamaño $N = 10$, para la que se han definido números aleatorios $\xi_i^C$ y, teniendo en cuenta un número aleatorio $\varepsilon = 0.283$, también se definen $\xi_i^P$. La tabla XXX muestra los números aleatorios resultantes.
+En donde $\varepsilon$ es un único valor aleatorio entre cero y uno. Como ilustración, considere una población de tamaño $N = 10$, para la que se han definido números aleatorios $\xi_i^C$ y, teniendo en cuenta un número aleatorio $\varepsilon = 0.283$, también se definen $\xi_i^P$. La tabla \@ref(tab:tabcoor1) muestra los números aleatorios resultantes.
 
-```{r echo=FALSE, message=FALSE, warning=FALSE}
+```{r tabcoor1, echo=FALSE, message=FALSE, warning=FALSE}
 library(dplyr)
 library(knitr)
 library(printr)
@@ -213,7 +229,7 @@ xi_P <- c(0.2875, 0.7883, 0.4089, 0.8831,
           0.5514, 0.4566)
 xi_C <- (rank(xi_P) - eps) / N
 tabla <- data.frame(Unidad = Unidad, xi_P = xi_P, xi_C = xi_C) %>% arrange(xi_P)
-kable(tabla %>% arrange(Unidad))
+kable(tabla %>% arrange(Unidad), caption = "Ejemplo reducido de la conformación de números aleatorios permanentes y colocados.")
 ```
 
 
@@ -223,12 +239,12 @@ Para seleccionar una muestra aleatoria simple $s$ de tamaño $n$, se deberá ord
 
 Es así como, para coordinar dos muestras $s^1$ de tamaño $n_1$ y $s^2$ de tamaño $n_2$, @Ohl95 menciona que es posible escoger dos constantes $a_1$ y $a_2$ en el intervalo $(0, 1)$. Luego, a partir del marco ordenado con los números aleatorios permanentes (o colocados), definir la muestra $s_1$ como las primeras $n_1$ unidades a la derecha (o izquierda) de $a_1$ y la muestra $s_2$ como las primeras $n_2$ unidades a la derecha (o izquierda) de $a_2$. Si se quieren muestras positivamente coordinadas, entonces $a_1 = a_2$; por el contrario, si se quieren muestras negativamente coordinadas, se deberán escoger las constantes de forma apropiada. Por ejemplo sumar 0.5 (en módulo uno) a la constante $a_1$; es decir, $a_2 = (a_1 + 1/2) \mod{1}$. En general, si se quieren coordinar negativamente $Q$ diferentes muestras, @Grafstrom_Matei_2015 aconsejan añadir la cantidad de $1/Q$ (en módulo uno) a la constante $a_1$.
 
-Continuando con el ejemplo reducido, la tabla XXXX muestra la selección de dos muestras negativamente coordinadas de tamaño $n_1 = n_2 =3$, con $a_1 = 0$ y $a_2 = 0.5$.
+Continuando con el ejemplo reducido, la tabla \@ref(tab:tabcoor2) muestra la selección de dos muestras negativamente coordinadas de tamaño $n_1 = n_2 =3$, con $a_1 = 0$ y $a_2 = 0.5$.
 
-```{r echo=FALSE, message=FALSE, warning=FALSE}
+```{r tabcoor2, echo=FALSE, message=FALSE, warning=FALSE}
 tabla$s_1 <- c(rep(1, 3), rep(0, 7))
 tabla$s_2 <- c(rep(0, 4), rep(1, 3), rep(0, 3) )
-tabla %>% select(Unidad, xi_P, s_1, s_2)
+kable(tabla %>% select(Unidad, xi_P, s_1, s_2), caption = "Ejemplo de la selección de dos muestras aleatorias simples coordinadas negativamente.")
 ```
 
 ### Coordinación de muestras proporcionales
@@ -238,16 +254,16 @@ Es posible utilizar varios algoritmos de selección proporcionales a la medida d
 $$
 \xi_i^{pps} = \frac{\xi_i^P}{N_I \times p_i}
 $$
-En donde $N_I$ es el número de UPM en el marco de muestreo y $p_i = Ni/N$ es la proporción de hogares en la $i$-ésima UPM. De esta forma, al ordenar el marco mediante los números $\xi_i^{pps}$ y seleccionar los primeros elementos, se obtendrá una muestra secuencial de Poisson. En cuanto a la coordinación de muestras, es posible aplicar los mismos principios de la sección anterior. Es decir, para coordinar dos muestras $s^1$ de tamaño $n_1$ y $s^2$ de tamaño $n_2$, es posible escoger dos constantes $a_1$ y $a_2$ en el intervalo $(0, 1)$. Luego, a partir del marco ordenado, definir la muestra $s_1$ como las primeras $n_1$ unidades a la derecha (o izquierda) de $a_1$ y la muestra $s_2$ como las primeras $n_2$ unidades a la derecha (o izquierda) de $a_2$. La tabla XXXXX ejemplifica la selección de dos muestras proporcionales al tamaño de las UPM cuya coordinación es negativa.
+En donde $N_I$ es el número de UPM en el marco de muestreo y $p_i = Ni/N$ es la proporción de hogares en la $i$-ésima UPM. De esta forma, al ordenar el marco mediante los números $\xi_i^{pps}$ y seleccionar los primeros elementos, se obtendrá una muestra secuencial de Poisson. En cuanto a la coordinación de muestras, es posible aplicar los mismos principios de la sección anterior. Es decir, para coordinar dos muestras $s^1$ de tamaño $n_1$ y $s^2$ de tamaño $n_2$, es posible escoger dos constantes $a_1$ y $a_2$ en el intervalo $(0, 1)$. Luego, a partir del marco ordenado, definir la muestra $s_1$ como las primeras $n_1$ unidades a la derecha (o izquierda) de $a_1$ y la muestra $s_2$ como las primeras $n_2$ unidades a la derecha (o izquierda) de $a_2$. La tabla \@ref(tab:tabcoor3) ejemplifica la selección de dos muestras proporcionales al tamaño de las UPM cuya coordinación es negativa.
 
-```{r echo=FALSE, message=FALSE, warning=FALSE}
+```{r tabcoor3, echo=FALSE, message=FALSE, warning=FALSE}
 tabla$N_I <- c(198, 173, 184, 179, 155, 195, 162, 159, 166, 190)
 tabla$p <- round(tabla$N_I / sum(tabla$N_I ), 4)
 tabla$xi_pps <- round(tabla$xi_P / (N*tabla$p), 4)
 tabla <- tabla %>% arrange(xi_pps)
 tabla$s_1 <- c(rep(1, 3), rep(0, 7))
 tabla$s_2 <- c(rep(0, 5), rep(1, 3), rep(0, 2))
-tabla %>% select(Unidad, xi_P, N_I, xi_pps, s_1, s_2)
+kable(tabla %>% select(Unidad, xi_P, N_I, xi_pps, s_1, s_2), caption = "Ejemplo de la selección de dos muestras secuenciales de Poisson coordinadas negativamente.")
 ```
 
 
@@ -257,16 +273,16 @@ $$
 \xi_i^{par} = \frac{\xi_i^P/(1-\xi_i^P)}{\pi_i/(1-\pi_i)}
 $$
 
-En donde $\pi_i = n_I * p_i$ es la probabilidad de inclusión de la $i$-ésima UPM y deberá garatizarse que sea menor que uno. Por consiguiente, al ordenar el marco mediante los números $\xi_i^{par}$ y seleccionar los primeros elementos, se obtendrá una muestra secuencial de Poisson. Como corresponde, es posible aplicar los mismos principios de la coordinación de muestras en estos algoritmos secuenciales. La tabla XXXXX ejemplifica la selección de dos muestras de Paretto de tamaño $n_I = 3$, cuya coordinación es negativa.
+En donde $\pi_i = n_I * p_i$ es la probabilidad de inclusión de la $i$-ésima UPM y deberá garatizarse que sea menor que uno. Por consiguiente, al ordenar el marco mediante los números $\xi_i^{par}$ y seleccionar los primeros elementos, se obtendrá una muestra secuencial de Poisson. Como corresponde, es posible aplicar los mismos principios de la coordinación de muestras en estos algoritmos secuenciales. La tabla \@ref(tab:tabcoor4) ejemplifica la selección de dos muestras de Paretto de tamaño $n_I = 3$, cuya coordinación es negativa.
 
 
-```{r echo=FALSE, message=FALSE, warning=FALSE}
+```{r tabcoor4, echo=FALSE, message=FALSE, warning=FALSE}
 tabla$pi <- 3 * tabla$p
 tabla$xi_P_par <- round((tabla$xi_P * (1-tabla$pi))/(tabla$pi*(1-tabla$xi_P)), 4)
 tabla <- tabla %>% arrange(xi_P_par)
 tabla$s_1 <- c(rep(1, 3), rep(0, 7))
 tabla$s_2 <- c(rep(0, 3), rep(1, 3), rep(0, 4))
-tabla %>% select(Unidad, xi_P, xi_P_par, s_1, s_2) 
+kable(tabla %>% select(Unidad, xi_P, xi_P_par, s_1, s_2), caption = "Ejemplo de la selección de dos muestras de Paretto coordinadas negativamente.")
 ```
 
 

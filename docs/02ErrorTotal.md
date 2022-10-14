@@ -8,12 +8,12 @@ Este capítulo describe muy someramente el paradigma de los errores que se comet
 
 @Beland_Dale_Dufour_Hamel_2005 describen los principales elementos del diseño de una encuesta de hogares y esta es una tarea que deben afrontar los equipos técnicos de las ONE en términos de aprender de las experiencias del pasado para mejorar los procesos operativos, metodológicos y logísticos en las siguientes aplicaciones de las encuestas. Es así como ante la nueva oleada de censos que se avecina en la próxima década, será natural actualizar los marcos de muestreo y con ello se viene un reto para los equipos técnicos encargados de la encuestas de hogares en América Latina que consiste en evaluar el impacto del cambio de los marcos de muestreo y sus efectos en la comparabilidad de las cifras oficiales.
 
-En una encuesta, el interés no se centra en las características particulares de un individuo sino en las características de la población a la cual ese individuo pertenece. De esta forma, la inferencia siempre se realiza teniendo en mente agregados (indicadores) poblacionales. Las siguientes son las dos fuentes principales de error  cuando se realiza una encuesta:  
+En una encuesta, el interés no se centra en las características particulares de un individuo sino en las características de la población a la cual ese individuo pertenece. De esta forma, la inferencia siempre se realiza teniendo en mente agregados (indicadores) poblacionales. La figura \@ref(fig:errortotal) presenta las dos fuentes principales de error cuando se realiza una encuesta:  
 
 1. **Error de muestreo**:  ocurre porque no se incluyeron a todas las personas de la población y se seleccionó una muestra.
 1. **Error no muestral**: se refiere a las posibles desviaciones de las respuestas provistas por un entrevistado con respecto al verdadero atributo que se desea medir.
 
-![*El paradignma del error total. Fuente: adaptación de @Groves_Fowler_Couper_Lepkowski_Singer_Tourangeau_2009*](Pics/Picture9.png)
+![(\#fig:errortotal)El paradigma del error total. Fuente: adaptación de Groves et al. (2009)](Pics/Picture9.png)
 
 Por ejemplo, en una encuesta de fuerza laboral mensual, puede haber confusión en el respondiente si no se hace hincapíe en el periodo de referencia; no es lo mismo indagar por la semana pasada, que por el mes pasado y el respondiente debe ser guiado para evitar equivocaciones. Además pueden existir no respondientes en algún subgrupo de interés, o incluso el marco puede estar desactualizado. Uno de los objetivos de la planeación concienzuda de la encuesta es minimizar los errores no muestrales. Es necesario minimizar las discrepancias encontradas entre la respuesta verdadera a una pregunta y la respuesta final.
 
@@ -81,9 +81,12 @@ Un camino intermedio entre la recolección de información presencial (cara a ca
 
 ## El ciclo de vida de una encuesta
 
-Atendiendo al modelo de @Groves_Fowler_Couper_Lepkowski_Singer_Tourangeau_2009, se puede afirmar que en todas la encuestas se tienen dos niveles de inferencia: el individual y el grupal. El proceso de inferencia individual trata con los mismos respondientes que proveen la información primaria en el estudio; mientras que el el proceso de inferencia grupal, basado en una aproximación inductiva, va desde lo particular (la muestra) a lo general (la población). 
+Atendiendo al modelo de @Groves_Fowler_Couper_Lepkowski_Singer_Tourangeau_2009, se puede afirmar que en todas la encuestas se tienen dos niveles de inferencia: el individual y el grupal (Figura \@ref(fig:figinferencias)). El proceso de inferencia individual trata con los mismos respondientes que proveen la información primaria en el estudio; mientras que el el proceso de inferencia grupal, basado en una aproximación inductiva, va desde lo particular (la muestra) a lo general (la población). 
 
-![*Los niveles de inferencia en una encuestas. Fuente: adaptación de @Groves_Fowler_Couper_Lepkowski_Singer_Tourangeau_2009*](Pics/Picture6.png)
+
+![(\#fig:figinferencias)Dos niveles de inferencia en una encuesta. Fuente: adaptación de Groves et al. (2009)](Pics/Picture6.png)
+
+
 
 ### Inferencia individual  
 

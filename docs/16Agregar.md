@@ -1,4 +1,3 @@
-
 # Agregación de encuestas
 
 Para producir indicadores sociales de forma agregada (anual, semestral o

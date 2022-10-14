@@ -372,6 +372,7 @@ En donde $\hat{\theta}_{hg}$ es el estimador del parámetro retirando el $g$-és
 |  7  | Estrato2 | UPM4 |     1,03    |     1,03    |     1,03    |      0      |
 |  8  | Estrato2 | UPM4 |     1,03    |     1,03    |     1,03    |      0      |
 
+Table: Ejemplo reducido de la creación de pesos replicados con la técnica de Jackknife.
 
 ### El método de las réplicas repetidas balanceadas 
 
@@ -425,6 +426,7 @@ En donde $\hat{\theta}_a$ es el estimador del parámetro de interés en la répl
 |  7  | Estrato2 | UPM4 |      0      |      2      |
 |  8  | Estrato2 | UPM4 |      0      |      2      |
 
+Table: Ejemplo reducido de la creación de pesos replicados con la técnica de las réplicas repetidas balanceadas.
 
 Una desventaja de este método BRR es que las unidades en dominios con muestra pequeña pueden estar ausentes en algunas combinaciones de pesos replicados por el diseño ortogonal. Lo anterior conlleva una pérdida de precisión en el cálculo del error estándar. Una solución a este problema es modificar los pesos en los pesos replicados. Para la aplicación de la Réplicas Repetidas Balanceadas es recomendable usar el método de Fay, en donde se siguen los lineamientos basados en la matriz de Hadamard, aunque las UPM no son retiradas completamente, sino que su peso se modifica de la siguiente manera:
 
@@ -453,6 +455,8 @@ En donde $\hat{\theta}_a$ es el estimador del parámetro de interés en la répl
 |  6  | Estrato2 | UPM3 |     1.5     |     0.5     |
 |  7  | Estrato2 | UPM4 |     0.5     |     1.5     |
 |  8  | Estrato2 | UPM4 |     0.5     |     1.5     |
+
+Table: Ejemplo reducido de la creación de pesos replicados con el ajuste de Fay.
 
 En general, para la aplicación de estos métodos, los pesos de muestreo se ajustan para generar los pesos replicados y, posteriormente, se repiten los ajustes por ausencia de respuesta  y calibración para estos nuevos pesos. Con esta metodología se estiman los errores de muestreo y la varianza de muestreo, incluyendo el impacto de la ausencia de respuesta, el cual se espera que sea pequeño, pero relevante en el momento de calcular estimadores más precisos. Retomando las observaciones hechas anteriormente, en el caso en el que la encuesta cuente con estratos en donde se encuentre una sola UPM, el método de los pesos replicados repetidas balanceadas no es aplicable puesto que al eliminar una unidad, algunos estratos quedarán vacíos. 
 
@@ -503,6 +507,8 @@ En donde $\hat{\theta}_b$ es el estimador del parámetro de interés en la répl
 |  6  | Estrato2 | UPM3 |      1      |      1      |      2      |      0      |
 |  7  | Estrato2 | UPM4 |      1      |      1      |      0      |      2      |
 |  8  | Estrato2 | UPM4 |      1      |      1      |      0      |      2      |
+
+Table: Ejemplo reducido de la creación de pesos replicados con la técnica de Bootstrap.
 
 @Rao_Wu_1984 y @Rao_Wu_1988 aconsejan seleccionar una muestra con reemplazo de $n_I - 1$ de las $n_I$ UPM de la muestra, teniendo en cuenta la probabilidad de selección del diseño complejo en la primera etapa. Dado que la selección es con reemplazo, una UPM puede ser seleccionada más de una vez en esta nueva muestra. Por otro lado, también es posible realizar una selección sin reemplazo; en este caso, @Preston_2009 recomiendan seleccionar una muestra con reemplazo de $n_I/2$ de las $n_I$ UPM de la muestra, teniendo en cuenta la probabilidad de selección del diseño complejo en la primera etapa.
 

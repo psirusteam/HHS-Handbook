@@ -103,25 +103,11 @@ $$
 
 Por último, se debe corroborar que la suma de los pesos ajustados por la ausencia de respuesta esté cercana al tamaño de la población que se quiere representar. La figura \@ref(fig:figel3a) permite ilustrar el soporte común entre respondientes y no respondientes para un modelo de *propensity score*; nótese que ambas distribuciones son similares, por lo que es posible concluir que efectivamente las covariables usadas están representando bien la estructura estocástica en respondientes y no respondientes. 
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.5\linewidth]{Pics/el3a} 
-
-}
-
-\caption{Distribución de las probabilidades estimadas de respuesta: respondientes (arriba), no respondientes (medio), ambos (abajo).}(\#fig:figel3a)
-\end{figure}
+![(\#fig:figel3a)Distribución de las probabilidades estimadas de respuesta: respondientes (arriba), no respondientes (medio), ambos (abajo).](Pics/el3a.png){width=50%}
 
 Además, la figura \@ref(fig:figel3b) muestra la propiedad de balanceo en el modelo; véase cómo ambas distribuciones se alejan de los extremos (ceros y uno) y presentan una caracterización similar. 
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.5\linewidth]{Pics/el3b} 
-
-}
-
-\caption{Balanceo entre respondientes y no respondientes}(\#fig:figel3b)
-\end{figure}
+![(\#fig:figel3b)Balanceo entre respondientes y no respondientes](Pics/el3b.png){width=50%}
 
 ### Calibración 
 
@@ -174,26 +160,12 @@ Para mostrar cómo el ajuste a los factores de expansión, con las dos metodolog
 
 En primera instancia, cabe mencionar que la población se definió a partir del ingreso del hogar, y se creó usando variables auxiliares disponibles (sexo). De esta forma, se le dio una probabilidad de respuesta diferencial entre los grupos correspondientes al cruce de las categorías de estas dos variables. Como resultado de las simulaciones, se generaron estimaciones para el estimador de Horvitz-Thompson sin ajuste de ningún tipo y para un estimador de calibración que tuvo en cuenta los conteos poblacionales censales para cada las dos categorías de la variables sexo. La figura \@ref(fig:fightcal) muestra el comportamiento de ambas estimaciones. La línea roja refleja el parámetro desconocido, los puntos negros indican las estimaciones del estimador de calibración en cada iteración de la simulación, mientras que los puntos grises muestran las estimaciones del estimador de Horvitz-Thompson en cada iteración de la simulación
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.5\linewidth]{Pics/c9} 
-
-}
-
-\caption{Estimaciones de Horvtiz-Thompson y de calibración.}(\#fig:fightcal)
-\end{figure}
+![(\#fig:fightcal)Estimaciones de Horvtiz-Thompson y de calibración.](Pics/c9.png){width=50%}
 
 
 En conjunto con la gráfica anterior, la figura \@ref(fig:fightcaldist) muestra la distribución sesgada del estimador de Horvitz-Thompson (gris) en comparación con el insesgamiento del estimador de calibración (negro). Bajo este esquema de respuesta, incluir en la calibración las variables pertinentes corrige el sesgo generado por la ausencia de respuesta. En este estudió se encontró que el estimador ingenuo (HT) produjo sesgo para la estimación de los tamaños de hombres y mujeres, para el tamaño de la población, para los ingresos de hombres y mujeres y para los ingresos de la población.
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.5\linewidth]{Pics/c10} 
-
-}
-
-\caption{Distribuciones del estimador de Horvtiz-Thompson y del estimador de calibración}(\#fig:fightcaldist)
-\end{figure}
+![(\#fig:fightcaldist)Distribuciones del estimador de Horvtiz-Thompson y del estimador de calibración](Pics/c10.png){width=50%}
 
 Como se mencionó anteriormente, hay mejores formas de calibrar, puesto que el problema de la calibración se reduce a cómo introducir la información auxiliar en la estructura de estimación de la encuesta, es posible que existan variables que reduzcan el sesgo, pero no todas las variables inducirán el mismo nivel de precisión. Al momento de escoger, se deberían seleccionar aquellas variables que reduzcan el sesgo y que además reduzcan la varianza. Por tanto, las variables auxiliares que se usen como insumo en los procesos de calibración deben:
 
@@ -204,14 +176,7 @@ Como se mencionó anteriormente, hay mejores formas de calibrar, puesto que el p
 
 En particular al introducir otras covariables en la calibración (grupo de edad, escolaridad, región, área), además de la corrección del sesgo se evidencia un aumento de la precisión en las nuevas estimaciones, tal como lo muestra las distribuciones de los estimadores en la figura \@ref(fig:fightcal2dist), en donde se consideran tres estimadores: el estimador de Horvitz-Thompson (gris claro), el estimador de calibración con restricción de sexo (negro) y el estimador de calibración con todas las restricciones (gris oscuro).
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.5\linewidth]{Pics/c12} 
-
-}
-
-\caption{Distribuciones del estimador de Horvtiz-Thompson y de dos estimadores de calibración}(\#fig:fightcal2dist)
-\end{figure}
+![(\#fig:fightcal2dist)Distribuciones del estimador de Horvtiz-Thompson y de dos estimadores de calibración](Pics/c12.png){width=50%}
 
 
 ## Las consecuencias de la pandemia por COVID-19 en las encuestas de la región
@@ -227,25 +192,11 @@ Haciendo cálculos gruesos, si suponemos que la cobertura de la submuestra que s
 
 La figura \@ref(fig:fight3dist) presenta tres posibles escenarios que los INE pudieron encontrar en esta búsqueda. En el diagrama de la izquierda se verifica la ausencia de sesgo, en el diagrama del centro y en el de la derecha se confirma que la magnitud del sesgo es significativa. Nótese que la línea horizontal azul correspondería a la estimación publicada en el mes en el que se seleccionó la muestra maestra, mientras que la línea roja horizontal representa el promedio de las simulaciones con la muestra efectiva. Cada uno de los resultados de las simulaciones está representado por las fluctuaciones punteadas.
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.5\linewidth]{Pics/calnr1} 
-
-}
-
-\caption{Distribuciones del estimador de Horvtiz-Thompson en tres escenarios de interés.}(\#fig:fight3dist)
-\end{figure}
+![(\#fig:fight3dist)Distribuciones del estimador de Horvtiz-Thompson en tres escenarios de interés.](Pics/calnr1.png){width=50%}
 
 La figura \@ref(fig:fight4dist) muestra un escenario simulado en donde se contempla el uso del estimador ajustado con la técnica de *propensity score* (línea verde) y el estimador de calibración en dos etapas (línea azul) comparado con el estimador sin ningún tipo de ajuste (línea negra). Lo que se esperaría es que es estimador ingenuo subestime los tamaños poblacionales y los indicadores de interés; mientras que los estimadores ajustados, siempre que el mecanismo de ausencia de respuesta sea MAR o MCAR, elimina este sesgo. 
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.5\linewidth]{Pics/calnr2} 
-
-}
-
-\caption{Distribuciones del estimador de Horvtiz-Thompson y de dos estimadores ajustados.}(\#fig:fight4dist)
-\end{figure}
+![(\#fig:fight4dist)Distribuciones del estimador de Horvtiz-Thompson y de dos estimadores ajustados.](Pics/calnr2.png){width=50%}
 
 Los caminos que se deben seguir luego de corroborar la presencia (o ausencia) de sesgo dependerán de la estrategia de levantamiento de información que los países hayan decidido hacer. En el escenario más optimista, ante la ausencia de sesgo, se estaría en una buena posición para replicar los procesos usuales de inferencia. Sin embargo, ante la sospecha de que sí existe sesgo - posición parsimoniosa y recomendada por @CEPAL_sesgos2020 -, y dependiendo de la información auxiliar disponible, los INE pudieron disponer de las dos alternativas metodológicas que se describieron anteriormente. 
 
@@ -270,85 +221,51 @@ Si tuviéramos acceso a toda la población, nos encontraríamos con que en $t_0$
 
 
 
-El siguiente conjunto de datos muestra una versión reducida de 20 individuos de esta población finita.
+El siguiente conjunto de datos en la tabla \@ref(tab:tabsesgo1) muestra una versión reducida de los primeros 10 individuos de esta población finita.
 
-\begin{longtable}{l|ll}
-\caption*{
-{\large Un vistazo a la población} \\ 
-{\small 20 filas de un total de 50000}
-} \\ 
-\toprule
-\multicolumn{1}{l}{} & y0 & y1 \\ 
-\midrule
-1 & Employed & Employed \\ 
-2 & Employed & Unemployed \\ 
-3 & Employed & Employed \\ 
-4 & Employed & Employed \\ 
-5 & Employed & Unemployed \\ 
-6 & Employed & Unemployed \\ 
-7 & Employed & Employed \\ 
-8 & Unemployed & Unemployed \\ 
-9 & Employed & Unemployed \\ 
-10 & Employed & Unemployed \\ 
-11..49990 &  &  \\ 
-49991 & Unemployed & Unemployed \\ 
-49992 & Unemployed & Unemployed \\ 
-49993 & Employed & Unemployed \\ 
-49994 & Unemployed & Unemployed \\ 
-49995 & Employed & Employed \\ 
-49996 & Employed & Employed \\ 
-49997 & Employed & Employed \\ 
-49998 & Employed & Employed \\ 
-49999 & Employed & Employed \\ 
-50000 & Employed & Employed \\ 
-\bottomrule
-\end{longtable}
 
-Las siguientes tablas muestran los flujos netos de la población finita en los dos períodos considerados. Tenga en cuenta que $y_0$ representa la característica de interés en el período previo a la pandemia; mientras tanto, $y_1$ representa la característica de interés en el período de la pandemia por COVID-19.
+Table: (\#tab:tabsesgo1)Un vistazo a la población del ejemplo. 10 primeras filas de un total de 50000.
 
-\begin{longtable}{lrr}
-\caption*{
-{\large Flujos netos verdaderos en la población finita} \\ 
-{\small Antes de la pandemia por COVID-19}
-} \\ 
-\toprule
-y0 & n & prop \\ 
-\midrule
-Employed & 40000 & 0.8 \\ 
-Unemployed & 10000 & 0.2 \\ 
-\bottomrule
-\end{longtable}
-\begin{longtable}{lrr}
-\caption*{
-{\large Flujos netos verdaderos en la población finita} \\ 
-{\small En medio de la pandemia por COVID-19}
-} \\ 
-\toprule
-y1 & n & prop \\ 
-\midrule
-Employed & 25000 & 0.5 \\ 
-Unemployed & 25000 & 0.5 \\ 
-\bottomrule
-\end{longtable}
+|y0         |y1         |
+|:----------|:----------|
+|Ocupado    |Ocupado    |
+|Ocupado    |Desocupado |
+|Ocupado    |Ocupado    |
+|Ocupado    |Ocupado    |
+|Ocupado    |Desocupado |
+|Ocupado    |Desocupado |
+|Ocupado    |Ocupado    |
+|Desocupado |Desocupado |
+|Ocupado    |Desocupado |
+|Ocupado    |Desocupado |
 
-La siguiente tabla muestra los flujos brutos de la población finita entre los dos periodos considerados. Como se puede observar, 25000 personas permanecieron ocupadas en los dos periodos, y 15000 personas cambiaron su situación laboral de ocupadas a desocupadas; de los desempleados en el primer período, ninguno pudo conseguir trabajo, mientras que 10000 personas permanecieron desempleadas en ambos períodos.
+Las tablas \@ref(tab:tabsesgo2) y \@ref(tab:tabsesgo3) muestran los flujos netos de la población finita en los dos períodos considerados. Tenga en cuenta que $y_0$ representa la característica de interés en el período previo a la pandemia; mientras tanto, $y_1$ representa la característica de interés en el período de la pandemia por COVID-19.
 
-\begin{longtable}{rr}
-\caption*{
-{\large Flujos brutos verdaderos en la población finita} \\ 
-{\small Cambio en el estado laboral}
-} \\ 
-\toprule
-Employed & Unemployed \\ 
-\midrule
-\multicolumn{2}{l}{Employed} \\ 
-\midrule
-25000 & 15000 \\ 
-\midrule
-\multicolumn{2}{l}{Unemployed} \\ 
-0 & 10000 \\ 
-\bottomrule
-\end{longtable}
+
+Table: (\#tab:tabsesgo2)Flujos netos verdaderos en la población del ejemplo antes de la pandemia por COVID-19
+
+|y0         |     n| prop|
+|:----------|-----:|----:|
+|Desocupado | 10000|  0.2|
+|Ocupado    | 40000|  0.8|
+
+
+Table: (\#tab:tabsesgo3)Flujos netos verdaderos en la población del ejemplo en medio de la pandemia por COVID-19
+
+|y1         |     n| prop|
+|:----------|-----:|----:|
+|Desocupado | 25000|  0.5|
+|Ocupado    | 25000|  0.5|
+
+La tabla \@ref(tab:tabsesgo4) muestra los flujos brutos de la población finita entre los dos periodos considerados. Como se puede observar, 25000 personas permanecieron ocupadas en los dos periodos, y 15000 personas cambiaron su situación laboral de ocupadas a desocupadas; de los desempleados en el primer período, ninguno pudo conseguir trabajo, mientras que 10000 personas permanecieron desempleadas en ambos períodos.
+
+
+Table: (\#tab:tabsesgo4)Flujos brutos verdaderos del cambio en el estado laboral en la población de ejemplo.
+
+|y0         | Desocupado| Ocupado|
+|:----------|----------:|-------:|
+|Desocupado |      10000|       0|
+|Ocupado    |      15000|   25000|
 
 
 La medición y observación de la situación laboral se realiza a través de una encuesta por muestreo en ambos períodos. De esta forma, supongamos que se selecciona una muestra aleatoria simple sin reemplazo $s_0$ de tamaño $n_0 = 4000$ de $U$. Para simplificar, supongamos que se pretende observar la misma muestra en ambos períodos (tipo panel).
@@ -358,24 +275,23 @@ Como el lector debe considerar, la muestra anterior a la pandemia tenía un modo
 
 
 
-La muestra telefónica es más pequeña (2305) que la muestra realizada cara a cara (4000). Los investigadores sospechan que los sesgos de selección no son despreciables en la muestra telefónica. Las siguientes tablas muestran los resultados basados en las muestras (no ponderados) para la encuesta cara a cara y la encuesta telefónica, respectivamente.
+La muestra telefónica es más pequeña (2305) que la muestra realizada cara a cara (4000). Los investigadores sospechan que los sesgos de selección no son despreciables en la muestra telefónica. Las tablas \@ref(tab:tabsesgo5) y \@ref(tab:tabsesgo6) muestran los resultados basados en las muestras (no ponderados) para la encuesta cara a cara y la encuesta telefónica, respectivamente.
 
-\begin{longtable}{lrr}
-\toprule
-Estado & n & prop \\ 
-\midrule
-Employed & 3180 & 0.795 \\ 
-Unemployed & 820 & 0.205 \\ 
-\bottomrule
-\end{longtable}
-\begin{longtable}{lrr}
-\toprule
-Estado & n & prop \\ 
-\midrule
-Employed & 1396 & 0.6056399 \\ 
-Unemployed & 909 & 0.3943601 \\ 
-\bottomrule
-\end{longtable}
+
+Table: (\#tab:tabsesgo5)Resultados observados en la muestra presencial del ejemplo.
+
+|           |Estado     |    n|  prop|
+|:----------|:----------|----:|-----:|
+|Desocupado |Desocupado |  820| 0.205|
+|Ocupado    |Ocupado    | 3180| 0.795|
+
+
+Table: (\#tab:tabsesgo6)Resultados observados en la muestra telefónica del ejemplo.
+
+|           |Estado     |    n|      prop|
+|:----------|:----------|----:|---------:|
+|Desocupado |Desocupado |  909| 0.3943601|
+|Ocupado    |Ocupado    | 1396| 0.6056399|
 
 El primer paso en la búsqueda de sesgos de selección es calcular la tasa de respuesta. En este caso, de 4000 encuestados seleccionados originalmente, solo 2305 respondió a la entrevista telefónica. Lo que equivale a una tasa de respuesta de tan solo el 58 %. 
 
@@ -383,46 +299,41 @@ Luego, se debe evaluar la naturaleza de la ausencia de repuesta. Este paso está
 
 
 
-Como se ve en la siguiente tabla, de los 2305 encuestados en la encuesta telefónica, 96.1822126% estaban empleados en el período anterior, y aproximadamente 3.8177874% estaban desempleados, lo que indica un patrón sólido que puede indicar un proceso MAR. 
+Como se ve en la tabla \@ref(tab:tabsesgo7), de los 2305 encuestados en la encuesta telefónica, 3.8177874% estaban empleados en el período anterior, y aproximadamente 96.1822126% estaban desempleados, lo que podría ser indicio de un patrón de ausencia de respuesta MAR. 
 
-\begin{longtable}{lrr}
-\toprule
-Estado & n & prop \\ 
-\midrule
-Employed & 2217 & 0.96182213 \\ 
-Unemployed & 88 & 0.03817787 \\ 
-\bottomrule
-\end{longtable}
 
+Table: (\#tab:tabsesgo7)Proporción observada del estado de ocupación en la muestra telefónica del ejemplo. 
+
+|           |Estado     |    n|      prop|
+|:----------|:----------|----:|---------:|
+|Desocupado |Desocupado |   88| 0.0381779|
+|Ocupado    |Ocupado    | 2217| 0.9618221|
 
 
 
-Finalmente, al examinar el estado anterior de los 1695 no encuestados, se observa que casi el 56.8141593% estaban empleados en el periodo anterior, mientras que el 43.1858407% estaban desempleados. Las proporciones no son similares en ningún aspecto, lo que apunta a un posible sesgo de selección.
-
-\begin{longtable}{lrr}
-\toprule
-Estado & n & prop \\ 
-\midrule
-Employed & 963 & 0.5681416 \\ 
-Unemployed & 732 & 0.4318584 \\ 
-\bottomrule
-\end{longtable}
+Finalmente, de la tabla \@ref(tab:tabsesgo8), se deduce que al examinar el estado anterior, de los 1695 no encuestados, se observa que casi el 43.1858407% estaban empleados en el periodo anterior, mientras que el 56.8141593% estaban desempleados. Las proporciones no son similares en ningún aspecto, lo que apunta a un posible sesgo de selección.
 
 
-Para verificar la asociación entre la respuesta en la encuesta telefónica y la situación laboral en la encuesta presencial, se puede utilizar herramientas de inferencia clásica, como la estadística Ji-cuadrado de Pearson y el estadístico V de Cramer. La siguiente tabla resume el comportamiento de la respuesta en la encuesta telefónica dada la situación laboral en la encuesta presencial.
+Table: (\#tab:tabsesgo8)Proporción observada del estado de ocupación en la muestra telefónica del ejemplo.
 
-\begin{longtable}{ccr}
-\toprule
-Estado & Respuesta & Freq \\ 
-\midrule
-Employed & 0 & 963 \\ 
-Unemployed & 0 & 732 \\ 
-Employed & 1 & 2217 \\ 
-Unemployed & 1 & 88 \\ 
-\bottomrule
-\end{longtable}
+|           |Estado     |   n|      prop|
+|:----------|:----------|---:|---------:|
+|Desocupado |Desocupado | 732| 0.4318584|
+|Ocupado    |Ocupado    | 963| 0.5681416|
 
-De la tabla anterior se puede realizar la prueba de bondad de ajuste de Pearson entre las dos variables de interés (respuesta en la encuesta telefónica y situación laboral en la encuesta presencial) para determinar si existe una correlación significativa. El sistema de hipótesis es el siguiente:
+Para verificar la asociación entre la respuesta en la encuesta telefónica y la situación laboral en la encuesta presencial, se puede utilizar herramientas de inferencia clásica, como la estadística Ji-cuadrado de Pearson y el estadístico V de Cramer. La tabla \@ref(tab:tabsesgo9) resume el comportamiento de la respuesta en la encuesta telefónica dada la situación laboral en la encuesta presencial.
+
+
+Table: (\#tab:tabsesgo9)Asociación entre la respuesta telefónica y el estado de ocupación en el periodo anterior en la muestra del ejemplo.
+
+|Estado     |Respuesta | Freq|
+|:----------|:---------|----:|
+|Desocupado |0         |  732|
+|Ocupado    |0         |  963|
+|Desocupado |1         |   88|
+|Ocupado    |1         | 2217|
+
+Basado en la información provista por la tabla anterior, es posible realizar la prueba de bondad de ajuste de Pearson entre las dos variables de interés (respuesta en la encuesta telefónica y situación laboral en la encuesta presencial) para determinar si existe una correlación significativa. El sistema de hipótesis es el siguiente:
 
 * H0: Las dos variables son independientes.
 * H1: Las dos variables se relacionan entre sí.
@@ -439,15 +350,14 @@ $$
 
 
 
-Como $\phi_k$ se puede escribir como una función de las covariables disponibles, podemos afirmar que el mecanismo de respuesta sigue un enfoque MAR. Como el patrón de no respuesta es MAR, y es posible tener acceso a las covariables $\mathbf{z}$ que determinan el mecanismo de respuesta, entonces también será posible estimar las probabilidades de respuesta por $\hat{\phi}_k = f(\mathbf{z }_k, \hat{\boldsymbol{\beta}})$ para usarlo en la generación de nuevos pesos. Después de ajustar un modelo de *propensity-score*, la siguiente figura muestra el histograma de laas probabilidades de respuesta estimadas, las cuales solo toman dos valores (0.6971698 y 0.1073171 ), uno para cada categoría de la situación laboral en la encuesta presencial.
+Como $\phi_k$ se puede escribir como una función de las covariables disponibles, podemos afirmar que el mecanismo de respuesta sigue un enfoque MAR. Como el patrón de no respuesta es MAR, y es posible tener acceso a las covariables $\mathbf{z}$ que determinan el mecanismo de respuesta, entonces también será posible estimar las probabilidades de respuesta por $\hat{\phi}_k = f(\mathbf{z }_k, \hat{\boldsymbol{\beta}})$ para usarlo en la generación de nuevos pesos. Después de ajustar un modelo de *propensity-score*, la figura \@ref(fig:figsesgo1) muestra el histograma de laas probabilidades de respuesta estimadas, las cuales solo toman dos valores (0.6971698 y 0.1073171 ), uno para cada categoría de la situación laboral en la encuesta presencial.
+
+![(\#fig:figsesgo1)Histograma de los *propensity-score*](13SesgoUnidad_files/figure-docx/figsesgo1-1.png)
 
 
-\begin{center}\includegraphics{13SesgoUnidad_files/figure-latex/unnamed-chunk-14-1} \end{center}
 
 
-
-
-Luego, utilizando los datos telefónicos y el nuevo conjunto de ponderaciones $d_{4k}$, ajustado por el puntaje de propensión estimado, tenemos que el número estimado de empleados en el período COVID es $\hat{t}_y=\sum_{k\in s_{ER}}d_{4k}y_{1k} =$ 25029.77.
+Luego, utilizando los datos telefónicos y el nuevo conjunto de ponderaciones $d_{4k}$, ajustado por el puntaje de propensión estimado, tenemos que el número estimado de empleados en el período COVID es $\hat{t}_y=\sum_{k\in s_{ER}}d_{4k}y_{1k} =$ 24970.23.
 
 Por otra parte, también es posible calibrar los pesos en la muestra telefónica a nivel de la información auxiliar disponible en la muestra presencial, y luego a nivel nacional. Como el mecanismo que genera la falta de respuesta es MAR, es posible que este nuevo conjunto de pesos de calibración elimine el sesgo. Para lograr este objetivo, se encuentra un primer conjunto de pesos calibrados sujetos a la siguiente restricción:
 
@@ -483,10 +393,9 @@ $$
 w_{1k} = d_k \times g_{0k} \times g_{1k} \cong d_k \times \hat \phi_k
 $$
 
-Por lo tanto, bajo este escenario, los pesos $g_k$ pueden verse como una estimación de las probabilidades de respuesta $\phi_k$. La siguiente figura muestra el histograma de los puntajes de propensión pronosticados. Solo toman dos valores (0.6928125 y 0.11 ), uno para cada categoría del estatus laboral en la encuesta cara a cara.
+Por lo tanto, bajo este escenario, los pesos $g_k$ pueden verse como una estimación de las probabilidades de respuesta $\phi_k$. La figura \@ref(fig:figsesgo2) muestra el histograma de los puntajes de propensión pronosticados. Solo toman dos valores (0.6928125 y 0.11 ), uno para cada categoría del estatus laboral en la encuesta cara a cara.
 
-
-\begin{center}\includegraphics{13SesgoUnidad_files/figure-latex/unnamed-chunk-17-1} \end{center}
+![(\#fig:figsesgo2)Histograma de los pesos ajustados](13SesgoUnidad_files/figure-docx/figsesgo2-1.png)
 
 Por último, nótese que si no se considera el mecanismo de ausencia de respuesta, sería fácil obtener estimaciones engañosas y sesgadas. Este enfoque ingenuo e incorrecto conduce al siguiente estimador sesgado
 
@@ -496,7 +405,7 @@ $$
 
 
 
-Donde $d_{1k}$ se refiere a los pesos muestrales no ajustados de la encuesta telefónica. Bajo este escenario, el número estimado de empleados en el período COVID es $\hat{t}_y^{exp}=\sum_{k\in s_1}d_{1k}y_{1k} =$ 30282.
+Donde $d_{1k}$ se refiere a los pesos muestrales no ajustados de la encuesta telefónica. Bajo este escenario, el número estimado de empleados en el período COVID es $\hat{t}_y^{exp}=\sum_{k\in s_1}d_{1k}y_{1k} =$ 19718.
 
 
 

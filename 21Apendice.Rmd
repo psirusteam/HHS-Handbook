@@ -2,7 +2,10 @@
 
 # Una perspectiva regional de las encuestas de hogares
 
-Esta sección presenta una breve descripción del estado de la situación de las encuestas de hogares en la región. Aunque no se pretende hacer un resumen exhaustivo de cada encuesta y de sus componentes metodológicos, el lector podrá enterarse de las características principales de la encuestas de hogares y sus condiciones de aplicación. Algunas de estas encuestas son estandarizadas por la División de Estadísticas de la CEPAL en su banco de datos de encuestas de hogares, llamado BADEHOG, con el cual se generan estimaciones comparables de indicadores de pobreza y desigualdad año tras año para América Latina [@BADEHOG].
+Esta sección presenta una breve descripción del estado de la situación de las encuestas de hogares en la región. Aunque no se pretende hacer un resumen exhaustivo de cada encuesta y de sus componentes metodológicos, el lector podrá enterarse de las características principales de la encuestas de hogares y sus condiciones de aplicación. 
+
+Algunas de estas encuestas son estandarizadas por la División de Estadísticas de la CEPAL en su banco de datos de encuestas de hogares, llamado BADEHOG, con el cual se generan estimaciones comparables de indicadores de pobreza y desigualdad año tras año para América Latina [@BADEHOG]. Esta iniciativa tuvo su desarrollo principal en la década de los años 90 del siglo pasado, con el fin de recopilar anualmente las encuestas de hogares de 18 países de América Latina. Estas encuestas de hogares tienen la particularidad de que miden el ingreso y se utilizan para estimar pobreza y desigualdad distributiva. Actualmente BADEHOG tiene en su haber encuestas desde 1980 en adelante. BADEHOG constituye un insumo esencial para la creación de indicadores sociales armonizados en América Latina.
+
 
 ## Descripción de algunas encuestas por países
 

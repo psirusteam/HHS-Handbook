@@ -51,6 +51,52 @@
             "volume": "4"
         },
         {
+            "ISBN": "978-92-1-161481-7",
+            "author": [
+                {
+                    "family": "Nations",
+                    "given": "United"
+                }
+            ],
+            "collection-title": "Studies in methods / united nations, department of economic and social affairs, statistics division series f",
+            "id": "UnitedNations_2005",
+            "issued": {
+                "date-parts": [
+                    [
+                        2005
+                    ]
+                ]
+            },
+            "publisher": "United Nations",
+            "publisher-place": "New York, NY",
+            "title": "Encuestas de hogares en los países en desarrollo y en transición",
+            "type": "book",
+            "volume": "96"
+        },
+        {
+            "author": [
+                {
+                    "family": "Nations",
+                    "given": "United"
+                }
+            ],
+            "collection-title": "Studies in methods / united nations, department of economic and social affairs, statistics division series f",
+            "id": "UnitedNations_2008",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "publisher": "United Nations",
+            "publisher-place": "New York, NY",
+            "title": "Diseño de muestras para encuestas de hogares: Directrices prácticas",
+            "title-short": "Diseño de muestras para encuestas de hogares",
+            "type": "book",
+            "volume": "98"
+        },
+        {
             "author": [
                 {
                     "family": "Dever",
@@ -907,6 +953,55 @@
             "volume": "33"
         },
         {
+            "author": [
+                {
+                    "family": "Ohlsson",
+                    "given": "E."
+                }
+            ],
+            "container-title": "Chapter 9 in Business Survey Methods",
+            "id": "Ohl95",
+            "issued": {
+                "date-parts": [
+                    [
+                        1995
+                    ]
+                ]
+            },
+            "page": "153-169",
+            "title": "Coordination of samples using permanent random numbers",
+            "type": "article-journal"
+        },
+        {
+            "DOI": "10.1515/jos-2015-0039",
+            "ISSN": "2001-7367",
+            "author": [
+                {
+                    "family": "Grafstrom",
+                    "given": "Anton"
+                },
+                {
+                    "family": "Matei",
+                    "given": "Alina"
+                }
+            ],
+            "container-title": "Journal of Official Statistics",
+            "id": "Grafstrom_Matei_2015",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015,
+                        12
+                    ]
+                ]
+            },
+            "page": "649-672",
+            "title": "Coordination of conditional poisson samples",
+            "type": "article-journal",
+            "volume": "31"
+        },
+        {
             "ISBN": "978-958-762-586-8",
             "author": [
                 {
@@ -928,6 +1023,26 @@
             "title": "Estrategias de muestreo: Diseño de encuestas y estimación de parámetros",
             "title-short": "Estrategias de muestreo",
             "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Costa",
+                    "given": "Gustavo"
+                }
+            ],
+            "genre": "PhD thesis",
+            "id": "Costa_2007",
+            "issued": {
+                "date-parts": [
+                    [
+                        2007
+                    ]
+                ]
+            },
+            "publisher": "IBGE-ENCE",
+            "title": "Coordenação de amostras PPT em pesquisas repetidas, utilizando o método de amostragem de pareto",
+            "type": "thesis"
         },
         {
             "DOI": "10.1007/0-387-34240-0",
@@ -3519,6 +3634,31 @@
             "volume": "39"
         },
         {
+            "DOI": "10.1016/S0378-3758(96)00186-3",
+            "ISSN": "03783758",
+            "author": [
+                {
+                    "family": "Rosén",
+                    "given": "Bengt"
+                }
+            ],
+            "container-title": "Journal of Statistical Planning and Inference",
+            "id": "Rosen_1997",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        1997,
+                        8
+                    ]
+                ]
+            },
+            "page": "159-191",
+            "title": "On sampling with probability proportional to size",
+            "type": "article-journal",
+            "volume": "62"
+        },
+        {
             "DOI": "10.1007/0-387-34240-0",
             "ISBN": "978-0-387-30814-2",
             "URL": "https://www.springer.com/gp/book/9780387308142",
@@ -3870,6 +4010,72 @@
             "volume": "55"
         },
         {
+            "author": [
+                {
+                    "family": "Imbens",
+                    "given": "G. W."
+                },
+                {
+                    "family": "Rubin",
+                    "given": "D. B."
+                }
+            ],
+            "id": "Imbens_Rubin_2015",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "publisher": "Cambridge University Press",
+            "title": "Causal inference for statistics, social, and biomedical sciences: An introduction",
+            "title-short": "Causal inference for statistics, social, and biomedical sciences",
+            "type": "book",
+            "volume": "84"
+        },
+        {
+            "author": [
+                {
+                    "family": "Gbur",
+                    "given": "Edward"
+                },
+                {
+                    "family": "Alexander",
+                    "given": "Charles"
+                }
+            ],
+            "id": "Gbur",
+            "issued": {
+                "date-parts": [
+                    [
+                        1984
+                    ]
+                ]
+            },
+            "title": "A linear model approach to the estimation of survey redesign effects",
+            "type": "paper-conference"
+        },
+        {
+            "author": [
+                {
+                    "family": "DiNatale",
+                    "given": "M. L."
+                }
+            ],
+            "id": "DiNatale",
+            "issued": {
+                "date-parts": [
+                    [
+                        2003
+                    ]
+                ]
+            },
+            "page": "3",
+            "title": "Creating comparability in CPS employment series",
+            "type": "article-journal"
+        },
+        {
             "DOI": "10.1080/01621459.1992.10475217",
             "ISSN": "0162-1459",
             "author": [
@@ -3897,6 +4103,56 @@
             "title": "Calibration estimators in survey sampling",
             "type": "article-journal",
             "volume": "87"
+        },
+        {
+            "author": [
+                {
+                    "dropping-particle": "van den",
+                    "family": "Brakel",
+                    "given": "Jan"
+                },
+                {
+                    "family": "Smith",
+                    "given": "Paul"
+                },
+                {
+                    "family": "Compton",
+                    "given": "Simon"
+                }
+            ],
+            "container-title": "Survey Research Methods",
+            "id": "Brakel2008",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "page": "123-141",
+            "title": "Quality procedures for survey transitions - experiments, time series and discontinuities",
+            "type": "article-journal",
+            "volume": "2"
+        },
+        {
+            "author": [
+                {
+                    "family": "BLS"
+                }
+            ],
+            "collection-title": "Current population survey - technical documentation",
+            "id": "BLS_2014",
+            "issued": {
+                "date-parts": [
+                    [
+                        2014
+                    ]
+                ]
+            },
+            "publisher": "Bureau of Labor Statistics",
+            "title": "Redesign of the sample for the current population survey",
+            "type": "book"
         },
         {
             "author": [
@@ -3937,6 +4193,44 @@
             },
             "publisher": "Wiley",
             "title": "Sampling techniques",
+            "type": "book"
+        },
+        {
+            "URL": "https://www.ilo.org/global/statistics-and-databases/standards-and-guidelines/resolutions-adopted-by-international-conferences-of-labour-statisticians/WCMS_087483/lang--es/index.htm",
+            "author": [
+                {
+                    "family": "ILO"
+                }
+            ],
+            "id": "ILO_1982",
+            "issued": {
+                "date-parts": [
+                    [
+                        1982
+                    ]
+                ]
+            },
+            "publisher-place": "Geneve",
+            "title": "13 CIET - resolución sobre estadísticas de la población económicamente activa, del empleo, del desempleo y del subempleo",
+            "type": "book"
+        },
+        {
+            "URL": "http://www.ilo.org/wcmsp5/groups/public/---dgreports/---stat/documents/normativeinstrument/wcms_234036.pdf",
+            "author": [
+                {
+                    "family": "ILO"
+                }
+            ],
+            "id": "ILO_2013",
+            "issued": {
+                "date-parts": [
+                    [
+                        2013
+                    ]
+                ]
+            },
+            "publisher-place": "Geneve",
+            "title": "19 CIET - resolución sobre las estadísticas del trabajo, la ocupación y la subutilización de la fuerza de trabajo",
             "type": "book"
         },
         {
@@ -4294,30 +4588,6 @@
             "title": "Designing household survey samples: Practical guidelines",
             "title-short": "Designing household survey samples",
             "type": "book"
-        },
-        {
-            "author": [
-                {
-                    "family": "Gurney",
-                    "given": "M."
-                },
-                {
-                    "family": "Daly",
-                    "given": "J."
-                }
-            ],
-            "container-title": "Proceedings of the social statistics section, american statistical association",
-            "id": "Gurney_Daly_1965",
-            "issued": {
-                "date-parts": [
-                    [
-                        1965
-                    ]
-                ]
-            },
-            "page": "242-257",
-            "title": "A multivariate approach to estimation in periodic sample surveys",
-            "type": "chapter"
         },
         {
             "ISSN": "0282423X",

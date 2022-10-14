@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>14.3 Ejemplo de imputación en una encuesta de ingresos y gastos | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
+  <title>14.2 Ejemplo de imputación en una encuesta de ingresos y gastos | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="14.3 Ejemplo de imputación en una encuesta de ingresos y gastos | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
+  <meta property="og:title" content="14.2 Ejemplo de imputación en una encuesta de ingresos y gastos | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="14.3 Ejemplo de imputación en una encuesta de ingresos y gastos | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
+  <meta name="twitter:title" content="14.2 Ejemplo de imputación en una encuesta de ingresos y gastos | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   
   <meta name="twitter:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="consideraciones-sobre-la-imputación-múltiple.html"/>
-<link rel="next" href="detección-de-datos-atípicos.html"/>
+<link rel="prev" href="modelos-para-la-imputación.html"/>
+<link rel="next" href="consideraciones-sobre-la-imputación-múltiple.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -99,10 +99,12 @@ div.csl-indent {
 <li class="chapter" data-level="1" data-path="introducción.html"><a href="introducción.html"><i class="fa fa-check"></i><b>1</b> Introducción</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="qué-es-una-encuesta.html"><a href="qué-es-una-encuesta.html"><i class="fa fa-check"></i><b>1.1</b> ¿Qué es una encuesta?</a></li>
-<li class="chapter" data-level="1.2" data-path="objetivos-de-desarrollo-sostenible-y-otros-indicadores-regionales.html"><a href="objetivos-de-desarrollo-sostenible-y-otros-indicadores-regionales.html"><i class="fa fa-check"></i><b>1.2</b> Objetivos de Desarrollo Sostenible y otros indicadores regionales</a></li>
-<li class="chapter" data-level="1.3" data-path="estadísticas-del-mercado-de-trabajo.html"><a href="estadísticas-del-mercado-de-trabajo.html"><i class="fa fa-check"></i><b>1.3</b> Estadísticas del mercado de trabajo</a></li>
-<li class="chapter" data-level="1.4" data-path="ingresos-y-gastos.html"><a href="ingresos-y-gastos.html"><i class="fa fa-check"></i><b>1.4</b> Ingresos y gastos</a></li>
-<li class="chapter" data-level="1.5" data-path="algunos-desafios-de-las-región-en-cuanto-a-la-producción-de-las-encuestas-de-hogares.html"><a href="algunos-desafios-de-las-región-en-cuanto-a-la-producción-de-las-encuestas-de-hogares.html"><i class="fa fa-check"></i><b>1.5</b> Algunos desafios de las región en cuanto a la producción de las encuestas de hogares</a></li>
+<li class="chapter" data-level="1.2" data-path="objetivos-de-desarrollo-sostenible-y-otros-indicadores-regionales.html"><a href="objetivos-de-desarrollo-sostenible-y-otros-indicadores-regionales.html"><i class="fa fa-check"></i><b>1.2</b> Objetivos de Desarrollo Sostenible y otros indicadores regionales</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="objetivos-de-desarrollo-sostenible-y-otros-indicadores-regionales.html"><a href="objetivos-de-desarrollo-sostenible-y-otros-indicadores-regionales.html#estadísticas-del-mercado-de-trabajo"><i class="fa fa-check"></i><b>1.2.1</b> Estadísticas del mercado de trabajo</a></li>
+<li class="chapter" data-level="1.2.2" data-path="objetivos-de-desarrollo-sostenible-y-otros-indicadores-regionales.html"><a href="objetivos-de-desarrollo-sostenible-y-otros-indicadores-regionales.html#ingresos-y-gastos"><i class="fa fa-check"></i><b>1.2.2</b> Ingresos y gastos</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="algunos-desafios-de-las-región-en-cuanto-a-la-producción-de-las-encuestas-de-hogares.html"><a href="algunos-desafios-de-las-región-en-cuanto-a-la-producción-de-las-encuestas-de-hogares.html"><i class="fa fa-check"></i><b>1.3</b> Algunos desafios de las región en cuanto a la producción de las encuestas de hogares</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="el-paradigma-del-error-total.html"><a href="el-paradigma-del-error-total.html"><i class="fa fa-check"></i><b>2</b> El paradigma del error total</a>
 <ul>
@@ -146,7 +148,6 @@ div.csl-indent {
 <li class="chapter" data-level="4.1" data-path="conceptos-fundamentales.html"><a href="conceptos-fundamentales.html"><i class="fa fa-check"></i><b>4.1</b> Conceptos fundamentales</a></li>
 <li class="chapter" data-level="4.2" data-path="los-censos-y-su-incidencia-en-los-marcos-de-muestreo.html"><a href="los-censos-y-su-incidencia-en-los-marcos-de-muestreo.html"><i class="fa fa-check"></i><b>4.2</b> Los censos y su incidencia en los marcos de muestreo</a></li>
 <li class="chapter" data-level="4.3" data-path="construcción-de-las-upm.html"><a href="construcción-de-las-upm.html"><i class="fa fa-check"></i><b>4.3</b> Construcción de las UPM</a></li>
-<li class="chapter" data-level="4.4" data-path="actualización-continua-del-marco-de-muestreo.html"><a href="actualización-continua-del-marco-de-muestreo.html"><i class="fa fa-check"></i><b>4.4</b> Actualización continua del marco de muestreo</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="metodologías-de-estratificación.html"><a href="metodologías-de-estratificación.html"><i class="fa fa-check"></i><b>5</b> Metodologías de estratificación</a>
 <ul>
@@ -234,7 +235,7 @@ div.csl-indent {
 <li class="chapter" data-level="8.9" data-path="algunas-consideraciones-adicionales-sobre-el-tamaño-de-muestra.html"><a href="algunas-consideraciones-adicionales-sobre-el-tamaño-de-muestra.html"><i class="fa fa-check"></i><b>8.9</b> Algunas consideraciones adicionales sobre el tamaño de muestra</a>
 <ul>
 <li class="chapter" data-level="8.9.1" data-path="algunas-consideraciones-adicionales-sobre-el-tamaño-de-muestra.html"><a href="algunas-consideraciones-adicionales-sobre-el-tamaño-de-muestra.html#asignación-del-tamaño-de-muestra-en-los-estratos-de-muestreo"><i class="fa fa-check"></i><b>8.9.1</b> Asignación del tamaño de muestra en los estratos de muestreo</a></li>
-<li class="chapter" data-level="8.9.2" data-path="algunas-consideraciones-adicionales-sobre-el-tamaño-de-muestra.html"><a href="algunas-consideraciones-adicionales-sobre-el-tamaño-de-muestra.html#ajustes-de-subcobertura"><i class="fa fa-check"></i><b>8.9.2</b> Ajustes de subcobertura</a></li>
+<li class="chapter" data-level="8.9.2" data-path="algunas-consideraciones-adicionales-sobre-el-tamaño-de-muestra.html"><a href="algunas-consideraciones-adicionales-sobre-el-tamaño-de-muestra.html#ajustes-por-subcobertura"><i class="fa fa-check"></i><b>8.9.2</b> Ajustes por subcobertura</a></li>
 <li class="chapter" data-level="8.9.3" data-path="algunas-consideraciones-adicionales-sobre-el-tamaño-de-muestra.html"><a href="algunas-consideraciones-adicionales-sobre-el-tamaño-de-muestra.html#sustituciones-y-reemplazos"><i class="fa fa-check"></i><b>8.9.3</b> Sustituciones y reemplazos</a></li>
 </ul></li>
 </ul></li>
@@ -295,30 +296,16 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="12" data-path="representatividad-y-ausencia-de-respuesta.html"><a href="representatividad-y-ausencia-de-respuesta.html"><i class="fa fa-check"></i><b>12</b> Representatividad y ausencia de respuesta</a>
 <ul>
-<li class="chapter" data-level="12.1" data-path="el-concepto-de-representatividad.html"><a href="el-concepto-de-representatividad.html"><i class="fa fa-check"></i><b>12.1</b> El concepto de representatividad</a>
-<ul>
-<li class="chapter" data-level="12.1.1" data-path="el-concepto-de-representatividad.html"><a href="el-concepto-de-representatividad.html#representatividad-fuerte"><i class="fa fa-check"></i><b>12.1.1</b> Representatividad fuerte</a></li>
-<li class="chapter" data-level="12.1.2" data-path="el-concepto-de-representatividad.html"><a href="el-concepto-de-representatividad.html#representatividad-débil"><i class="fa fa-check"></i><b>12.1.2</b> Representatividad débil</a></li>
-</ul></li>
-<li class="chapter" data-level="12.2" data-path="indicadores-de-representatividad.html"><a href="indicadores-de-representatividad.html"><i class="fa fa-check"></i><b>12.2</b> Indicadores de representatividad</a>
-<ul>
-<li class="chapter" data-level="12.2.1" data-path="indicadores-de-representatividad.html"><a href="indicadores-de-representatividad.html#indicadores-r"><i class="fa fa-check"></i><b>12.2.1</b> Indicadores <span class="math inline">\(R\)</span></a></li>
-<li class="chapter" data-level="12.2.2" data-path="indicadores-de-representatividad.html"><a href="indicadores-de-representatividad.html#el-indicador-r-en-la-práctica"><i class="fa fa-check"></i><b>12.2.2</b> El indicador <span class="math inline">\(R\)</span> en la práctica</a></li>
-</ul></li>
-<li class="chapter" data-level="12.3" data-path="clasificación-de-la-ausencia-de-respuesta.html"><a href="clasificación-de-la-ausencia-de-respuesta.html"><i class="fa fa-check"></i><b>12.3</b> Clasificación de la ausencia de respuesta</a>
-<ul>
-<li class="chapter" data-level="12.3.1" data-path="clasificación-de-la-ausencia-de-respuesta.html"><a href="clasificación-de-la-ausencia-de-respuesta.html#mcar"><i class="fa fa-check"></i><b>12.3.1</b> MCAR</a></li>
-<li class="chapter" data-level="12.3.2" data-path="clasificación-de-la-ausencia-de-respuesta.html"><a href="clasificación-de-la-ausencia-de-respuesta.html#mar"><i class="fa fa-check"></i><b>12.3.2</b> MAR</a></li>
-<li class="chapter" data-level="12.3.3" data-path="clasificación-de-la-ausencia-de-respuesta.html"><a href="clasificación-de-la-ausencia-de-respuesta.html#nmar"><i class="fa fa-check"></i><b>12.3.3</b> NMAR</a></li>
-</ul></li>
+<li class="chapter" data-level="12.1" data-path="el-concepto-de-representatividad.html"><a href="el-concepto-de-representatividad.html"><i class="fa fa-check"></i><b>12.1</b> El concepto de representatividad</a></li>
+<li class="chapter" data-level="12.2" data-path="indicadores-de-representatividad.html"><a href="indicadores-de-representatividad.html"><i class="fa fa-check"></i><b>12.2</b> Indicadores de representatividad</a></li>
+<li class="chapter" data-level="12.3" data-path="clasificación-de-la-ausencia-de-respuesta.html"><a href="clasificación-de-la-ausencia-de-respuesta.html"><i class="fa fa-check"></i><b>12.3</b> Clasificación de la ausencia de respuesta</a></li>
 <li class="chapter" data-level="12.4" data-path="ausencia-de-respuesta-de-registro-y-de-unidad.html"><a href="ausencia-de-respuesta-de-registro-y-de-unidad.html"><i class="fa fa-check"></i><b>12.4</b> Ausencia de respuesta de registro y de unidad</a></li>
-<li class="chapter" data-level="12.5" data-path="efectos-y-consecuencias-de-la-ausencia-de-respuesta.html"><a href="efectos-y-consecuencias-de-la-ausencia-de-respuesta.html"><i class="fa fa-check"></i><b>12.5</b> Efectos y consecuencias de la ausencia de respuesta</a></li>
-<li class="chapter" data-level="12.6" data-path="posibles-soluciones.html"><a href="posibles-soluciones.html"><i class="fa fa-check"></i><b>12.6</b> Posibles soluciones</a>
+<li class="chapter" data-level="12.5" data-path="posibles-soluciones.html"><a href="posibles-soluciones.html"><i class="fa fa-check"></i><b>12.5</b> Posibles soluciones</a>
 <ul>
-<li class="chapter" data-level="12.6.1" data-path="posibles-soluciones.html"><a href="posibles-soluciones.html#imputación-total"><i class="fa fa-check"></i><b>12.6.1</b> Imputación total</a></li>
-<li class="chapter" data-level="12.6.2" data-path="posibles-soluciones.html"><a href="posibles-soluciones.html#ponderación-total"><i class="fa fa-check"></i><b>12.6.2</b> Ponderación total</a></li>
-<li class="chapter" data-level="12.6.3" data-path="posibles-soluciones.html"><a href="posibles-soluciones.html#eliminación-total"><i class="fa fa-check"></i><b>12.6.3</b> Eliminación total</a></li>
-<li class="chapter" data-level="12.6.4" data-path="posibles-soluciones.html"><a href="posibles-soluciones.html#enfoque-combinado"><i class="fa fa-check"></i><b>12.6.4</b> Enfoque combinado</a></li>
+<li class="chapter" data-level="12.5.1" data-path="posibles-soluciones.html"><a href="posibles-soluciones.html#imputación-total"><i class="fa fa-check"></i><b>12.5.1</b> Imputación total</a></li>
+<li class="chapter" data-level="12.5.2" data-path="posibles-soluciones.html"><a href="posibles-soluciones.html#ponderación-total"><i class="fa fa-check"></i><b>12.5.2</b> Ponderación total</a></li>
+<li class="chapter" data-level="12.5.3" data-path="posibles-soluciones.html"><a href="posibles-soluciones.html#eliminación-total"><i class="fa fa-check"></i><b>12.5.3</b> Eliminación total</a></li>
+<li class="chapter" data-level="12.5.4" data-path="posibles-soluciones.html"><a href="posibles-soluciones.html#enfoque-combinado"><i class="fa fa-check"></i><b>12.5.4</b> Enfoque combinado</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="ausencia-de-respuesta-de-unidad.html"><a href="ausencia-de-respuesta-de-unidad.html"><i class="fa fa-check"></i><b>13</b> Ausencia de respuesta de unidad</a>
@@ -345,15 +332,15 @@ div.csl-indent {
 <li class="chapter" data-level="14.1.5" data-path="modelos-para-la-imputación.html"><a href="modelos-para-la-imputación.html#imputación-por-paquete-caliente-hot-deck"><i class="fa fa-check"></i><b>14.1.5</b> Imputación por paquete caliente (Hot-Deck)</a></li>
 <li class="chapter" data-level="14.1.6" data-path="modelos-para-la-imputación.html"><a href="modelos-para-la-imputación.html#imputación-múltiple"><i class="fa fa-check"></i><b>14.1.6</b> Imputación múltiple</a></li>
 </ul></li>
-<li class="chapter" data-level="14.2" data-path="consideraciones-sobre-la-imputación-múltiple.html"><a href="consideraciones-sobre-la-imputación-múltiple.html"><i class="fa fa-check"></i><b>14.2</b> Consideraciones sobre la imputación múltiple</a>
+<li class="chapter" data-level="14.2" data-path="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html"><a href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html"><i class="fa fa-check"></i><b>14.2</b> Ejemplo de imputación en una encuesta de ingresos y gastos</a>
 <ul>
-<li class="chapter" data-level="14.2.1" data-path="consideraciones-sobre-la-imputación-múltiple.html"><a href="consideraciones-sobre-la-imputación-múltiple.html#simulación-empírica"><i class="fa fa-check"></i><b>14.2.1</b> Simulación empírica</a></li>
+<li class="chapter" data-level="14.2.1" data-path="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html"><a href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html#imputación-del-ingreso"><i class="fa fa-check"></i><b>14.2.1</b> Imputación del ingreso</a></li>
+<li class="chapter" data-level="14.2.2" data-path="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html"><a href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html#imputación-del-filtro"><i class="fa fa-check"></i><b>14.2.2</b> Imputación del filtro</a></li>
+<li class="chapter" data-level="14.2.3" data-path="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html"><a href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html#imputación-del-gasto"><i class="fa fa-check"></i><b>14.2.3</b> Imputación del gasto</a></li>
 </ul></li>
-<li class="chapter" data-level="14.3" data-path="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html"><a href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html"><i class="fa fa-check"></i><b>14.3</b> Ejemplo de imputación en una encuesta de ingresos y gastos</a>
+<li class="chapter" data-level="14.3" data-path="consideraciones-sobre-la-imputación-múltiple.html"><a href="consideraciones-sobre-la-imputación-múltiple.html"><i class="fa fa-check"></i><b>14.3</b> Consideraciones sobre la imputación múltiple</a>
 <ul>
-<li class="chapter" data-level="14.3.1" data-path="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html"><a href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html#imputación-del-ingreso"><i class="fa fa-check"></i><b>14.3.1</b> Imputación del ingreso</a></li>
-<li class="chapter" data-level="14.3.2" data-path="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html"><a href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html#imputación-del-filtro"><i class="fa fa-check"></i><b>14.3.2</b> Imputación del filtro</a></li>
-<li class="chapter" data-level="14.3.3" data-path="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html"><a href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html#imputación-del-gasto"><i class="fa fa-check"></i><b>14.3.3</b> Imputación del gasto</a></li>
+<li class="chapter" data-level="14.3.1" data-path="consideraciones-sobre-la-imputación-múltiple.html"><a href="consideraciones-sobre-la-imputación-múltiple.html#simulación-empírica"><i class="fa fa-check"></i><b>14.3.1</b> Simulación empírica</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="15" data-path="detección-de-datos-atípicos.html"><a href="detección-de-datos-atípicos.html"><i class="fa fa-check"></i><b>15</b> Detección de datos atípicos</a>
@@ -480,8 +467,8 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos" class="section level2 hasAnchor" number="14.3">
-<h2><span class="header-section-number">14.3</span> Ejemplo de imputación en una encuesta de ingresos y gastos<a href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html#ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos" class="section level2 hasAnchor" number="14.2">
+<h2><span class="header-section-number">14.2</span> Ejemplo de imputación en una encuesta de ingresos y gastos<a href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html#ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Una vez que se ha discutido acerca de los propósitos de la imputación en una encuesta de hogares, se debe escoger un método (o métodos) de imputación y una vez establecido el mecanismo de imputación, generar el conjunto de datos rectangular y completo. En esta sección analizaremos, a la luz de las particularidades de una encuesta de hogares de ingresos y gastos, los pasos que se deben surtir para completar un proceso de imputación. Por sus características, este tipo de encuestas presenta tasas elevadas de ausencia de respuesta de registro, aunque también de individuo.</p>
 <p>En general, el levantamiento común de este tipo de encuestas se centra en un trabajo de campo masivo que visita al hogar en varias ocasiones, pidiéndole al respondiente que diligencie sendos cuestionarios, y registre toda la información asociada al gasto y a los ingresos del hogar, durante un periodo de al menos dos semanas. Por supuesto, para que esto pueda realizarse, es necesario contar con la colaboración activa de todos los miembros del hogar. En el mejor de los casos, el encuestador habrá visitado varias veces el domicilio del hogar en el periodo de observación y tendrá un formulario totalmente diligenciado. Sin embargo, en muchas otras ocasiones, a pesar del seguimiento exhaustivo del encuestado, no se obtendrá el gasto de la totalidad de las categorías de la encuesta, sino que se obtendrá información parcial que se transformará en celdas vacías por la ausencia de respuesta. En el peor de los casos se obtendrán cuestionarios diligenciados en porcentaje tan bajo, que al final serán declarados como faltantes, lo cual se transforma en ausencia de respuesta de ese hogar.</p>
 <p>El siguiente ejemplo trata de ilustrar de manera escueta cómo se debería realizar el procedimiento de imputación en una encuesta de ingresos y gastos. El lector encontrará varios pasos en esta metodología, puesto que antes de imputar las variables de interés, es necesario conocer qué covariables se relacionan fuertemente con las variables que se quieren imputar. Además de eso, es necesario primero imputar todas las covariables en primer lugar y reemplazar sus valores faltantes con información plausible que pueda ser utilizada en los modelos que se ajusten. Suponga que, para el conjunto de hogares que se consideró con fines de imputación, se observaron al menos las siguientes variables:</p>
@@ -495,8 +482,8 @@ div.csl-indent {
 <li>Número de personas empleadas en el hogar.</li>
 </ul>
 <p>El camino que se seguirá en este ejemplo será primero la imputación de los ingresos, como principal covariable del gasto y del consumo. Una vez que se imputaron las covariables, el segundo paso de este proceso se relaciona con la imputación de los filtros, que son las preguntas que se realizan para conocer si un hogar ha adquirido un bien o servicio específico. El resultado de este paso produjo el tercer paso dedicado a la imputación de los valores de gasto anualizados en cada unidad. Esta serie de pasos metodológicos ha sido recomendados por diferentes agencias de estadística, incluyendo institutos y oficinas nacionales de estadística. Por ejemplo, <span class="citation">Hayes y Watson (<a href="#ref-Hayes_Watson_2009" role="doc-biblioref">2009</a>)</span> y <span class="citation">Sun (<a href="#ref-Sun_2010" role="doc-biblioref">2010</a>)</span> siguen esta metodología en el <em>Australian Bureau of Statistics</em> para imputación en la encuesta <em>Household, Income and Labour Dynamics in Australia (HILDA)</em></p>
-<div id="imputación-del-ingreso" class="section level3 hasAnchor" number="14.3.1">
-<h3><span class="header-section-number">14.3.1</span> Imputación del ingreso<a href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html#imputación-del-ingreso" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="imputación-del-ingreso" class="section level3 hasAnchor" number="14.2.1">
+<h3><span class="header-section-number">14.2.1</span> Imputación del ingreso<a href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html#imputación-del-ingreso" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>En primer lugar, recuérdese que existen múltiples <em>fuentes de ingreso</em> en el hogar, como por ejemplo el ingreso el trabajo, la propiedad de activos, la producción de servicios para consumo propio, y las transferencias (condicionadas o no) gubernamentales. Además debe ser notado que tanto teórica como empíricamente, los ingresos han demostrado ser un potente predictor de los gastos <span class="citation">(<a href="#ref-Starick_Watson_2011" role="doc-biblioref">Starick y Watson 2011</a>)</span>.</p>
 <p>La imputación del ingreso podría estar basada en un enfoque de modelos predictivos y la técnica que se podría utilizar para imputar esta covariable es la del vecino más cercano con regresión. De esta forma, se define un modelo lineal para las unidades encuestadas y luego se estiman los coeficientes de regresión para obtener un valor pronosticado que se computa para las unidades que faltan. Así, para cada unidad con información faltante en el ingreso, se identifica un solo donante que corresponderá al hogar cuyo ingreso disponible es más cercano a la predicción del modelo de regresión. Por ende, todos los componentes de los ingresos serán imputados con la información del donante. El modelo lineal se describe como se indica a continuación y la predicción de los ingresos para los hogares faltantes se calcula utilizando una regresión lineal.</p>
 <p><span class="math display">\[\tilde{y}_k = \mathbf{x}_k \hat{\boldsymbol{\beta}}_i\]</span></p>
@@ -518,53 +505,51 @@ div.csl-indent {
 <p><span class="math display">\[
 D_{lk} = |\tilde y_k - y_l|
 \]</span></p>
-<p>El donante <span class="math inline">\(l\)</span> al elemento <span class="math inline">\(k\)</span> será aquel hogar en el conjunto <span class="math inline">\(r_i\)</span> con la menor distancia <span class="math inline">\(D_{lk}\)</span>. Como regla general, todo los donantes deben estar ubicados en la misma provincia que la unidad faltante. La figura <a href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html#fig:fig10">14.4</a> muestra un diagrama de caja junto con el histograma de los ingresos (antes de la imputación), así como la relación lineal entre los valores pronosticados derivados del modelo y los valores imputados tomados de los donantes.</p>
+<p>El donante <span class="math inline">\(l\)</span> al elemento <span class="math inline">\(k\)</span> será aquel hogar en el conjunto <span class="math inline">\(r_i\)</span> con la menor distancia <span class="math inline">\(D_{lk}\)</span>. Como regla general, todo los donantes deben estar ubicados en la misma provincia que la unidad faltante. La figura <a href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html#fig:fig10">14.1</a> muestra un diagrama de caja junto con el histograma de los ingresos (antes de la imputación), así como la relación lineal entre los valores pronosticados derivados del modelo y los valores imputados tomados de los donantes.</p>
 <div class="figure"><span style="display:block;" id="fig:fig10"></span>
 <img src="Pics/10.png" alt="Distribución de los ingresos (izquierda y centro) y Relación entre los valores predichos e imputados para los hogares con datos de ingresos faltantes (derecha)." width="50%" />
 <p class="caption">
-Figura 14.4: Distribución de los ingresos (izquierda y centro) y Relación entre los valores predichos e imputados para los hogares con datos de ingresos faltantes (derecha).
+Figura 14.1: Distribución de los ingresos (izquierda y centro) y Relación entre los valores predichos e imputados para los hogares con datos de ingresos faltantes (derecha).
 </p>
 </div>
 <p>Por último, nótese que si la base de datos contiene hogares que reportaron un ingreso nulo en todo el año, es posible que esos valores se consideren como faltantes porque se asume que la probabilidad de que un hogar no genere ningún tipo de ingreso durante todo un año es bastante baja. Además, los hogares con ingresos superiores a un límite también pueden ser considerados como valores atípicos y luego ser imputados.</p>
 </div>
-<div id="imputación-del-filtro" class="section level3 hasAnchor" number="14.3.2">
-<h3><span class="header-section-number">14.3.2</span> Imputación del filtro<a href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html#imputación-del-filtro" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="imputación-del-filtro" class="section level3 hasAnchor" number="14.2.2">
+<h3><span class="header-section-number">14.2.2</span> Imputación del filtro<a href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html#imputación-del-filtro" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>El siguiente paso, luego de haber logrado imputar con éxito las covariables determinantes del gasto, es precisamente utilizarlas para lograr imputar el gasto en bienes o servicios. Por lo general, las encuestas de ingresos y gastos preguntan si el hogar consumió o adquirió cierto bien o servicio específico. En caso de responder afirmativamente, se pregunta por la cantidad de dinero gastado en el bien o servicio y por la cantidad de artículos adquiridos en el periodo de referencia; en caso de responder negativamente, se procede a preguntar por el siguiente bien o servicio. Por supuesto, diferentes artículos tiene diferentes tasas de respuesta en sus filtros. De aquí en adelante, el valor a ser imputado en esta etapa es dicotómico: sí o no. Si el valor imputado hubiera sido no, eso significaría que el hogar no debería tener ningún gasto asociado a ese registro. Debido a la naturaleza del filtro, un modelo de regresión logística es conveniente para modelar la ausencia de respuesta en el filtro. De esta manera, la probabilidad de consumo (o compra) a un artículo <span class="math inline">\(i\)</span> en particular es <span class="math inline">\(p_k = Pr(Filtro_i = 1)\)</span> y puede ser estimada por medio del siguiente modelo de regresión logística:</p>
 <p><span class="math display">\[
 \tilde{p}_k = logit^{-1}(\mathbf{x}_k \hat{\boldsymbol{\beta}}_i) =
 \frac{exp(\mathbf{x}_k \hat{\boldsymbol{\beta}}_i)}{1+exp(\mathbf{x}_k \hat{\boldsymbol{\beta}}_i)}
 \]</span></p>
 <p>Las covariables incluidas en la matriz <span class="math inline">\(\mathbf{x}\)</span> podrían ser las mismas utilizados para la imputación de los ingresos y, por supuesto, los ingresos en sí. Es decir, las covariables incluidas serían la composición del hogar, el estado ocupación y fuerza de trabajo de los miembros del hogar, la calidad de la vivienda, la ubicación del hogar y los ingresos del hogar. Asumiendo que los similares valores de <span class="math inline">\(\tilde p\)</span> producirán valores de filtro similares, podemos “pedir prestado” un valor de filtro para imputar el que falta de un vecino con un valor similar de <span class="math inline">\(\tilde p\)</span>. Por lo tanto, el valor imputado del filtro para la unidad <span class="math inline">\(k\)</span> es dado por <span class="math inline">\(Filtro_k = Filtro_{l(k)}\)</span>; donde <span class="math inline">\(l(k)\)</span> es el elemento donante, determinado por la minimización de la distancia <span class="math inline">\(D_{lk} = |\tilde p_k - p_l|\)</span>. Se enfatiza en que el donante <span class="math inline">\(l\)</span> del elemento <span class="math inline">\(k\)</span> es el elemento en el conjunto <span class="math inline">\(r_i\)</span> con el valor más pequeño de la distancia <span class="math inline">\(D_{lk}\)</span>.</p>
-<p>Por regla general, todo los donantes deben estar en la misma provincia que la unidad con el valor faltante. Por ejemplo, considere el artículo arroz, para el cual algunos hogares no proveyeron ninguna respuesta asociada al filtro de compra. Como este es un artículo de consumo masivo en nuestra región, se supondría que la mayoría de hogares respondiera que efectivamente ha comprado arroz en el periodo de referencia. De esta manera, al utilizar la regresión logística como modelo para la ausencia de respuesta del filtro del arroz, es posible encontrar que la distribución de las probabilidades estimadas de compra de arroz esté sesgada hacia el valor uno y alejada del valor cero, como lo muestra la figura <a href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html#fig:fig11">14.5</a>. Está claro que la distribución de los valores imputados también debería estar cargada hacia el uno, reflejando la realidad de la compra de un artículo esencial como el arroz.</p>
+<p>Por regla general, todo los donantes deben estar en la misma provincia que la unidad con el valor faltante. Por ejemplo, considere el artículo arroz, para el cual algunos hogares no proveyeron ninguna respuesta asociada al filtro de compra. Como este es un artículo de consumo masivo en nuestra región, se supondría que la mayoría de hogares respondiera que efectivamente ha comprado arroz en el periodo de referencia. De esta manera, al utilizar la regresión logística como modelo para la ausencia de respuesta del filtro del arroz, es posible encontrar que la distribución de las probabilidades estimadas de compra de arroz esté sesgada hacia el valor uno y alejada del valor cero, como lo muestra la figura <a href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html#fig:fig11">14.2</a>. Está claro que la distribución de los valores imputados también debería estar cargada hacia el uno, reflejando la realidad de la compra de un artículo esencial como el arroz.</p>
 <div class="figure"><span style="display:block;" id="fig:fig11"></span>
 <img src="Pics/11.png" alt="Distribución de las probabilidades estimadas de compra de arroz (izquierda) y valores imputados para los hogares con valores faltantes en el filtro (derecha)." width="50%" />
 <p class="caption">
-Figura 14.5: Distribución de las probabilidades estimadas de compra de arroz (izquierda) y valores imputados para los hogares con valores faltantes en el filtro (derecha).
+Figura 14.2: Distribución de las probabilidades estimadas de compra de arroz (izquierda) y valores imputados para los hogares con valores faltantes en el filtro (derecha).
 </p>
 </div>
-<p>Por otro lado, el filtro para algunos artículos de bajo consumo estará más sesgado hacia el valor cero. La figura <a href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html#fig:fig12">14.6</a> muestra la distribución de las probabilidades estimadas de compra de un artículo de bajo consumo, así como los valores imputados.</p>
+<p>Por otro lado, el filtro para algunos artículos de bajo consumo estará más sesgado hacia el valor cero. La figura <a href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html#fig:fig12">14.3</a> muestra la distribución de las probabilidades estimadas de compra de un artículo de bajo consumo, así como los valores imputados.</p>
 <div class="figure"><span style="display:block;" id="fig:fig12"></span>
 <img src="Pics/12.png" alt="Distribución de la probabilidad estimada de compra de un artículo de bajo consumo (izquierda) y sus valores imputados para los hogares que no respondieron el filtro (derecha)." width="50%" />
 <p class="caption">
-Figura 14.6: Distribución de la probabilidad estimada de compra de un artículo de bajo consumo (izquierda) y sus valores imputados para los hogares que no respondieron el filtro (derecha).
+Figura 14.3: Distribución de la probabilidad estimada de compra de un artículo de bajo consumo (izquierda) y sus valores imputados para los hogares que no respondieron el filtro (derecha).
 </p>
 </div>
 </div>
-<div id="imputación-del-gasto" class="section level3 hasAnchor" number="14.3.3">
-<h3><span class="header-section-number">14.3.3</span> Imputación del gasto<a href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html#imputación-del-gasto" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="imputación-del-gasto" class="section level3 hasAnchor" number="14.2.3">
+<h3><span class="header-section-number">14.2.3</span> Imputación del gasto<a href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html#imputación-del-gasto" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Éste es el paso final del proceso de imputación y está fuertemente influenciado por los resultados de la imputación de la pregunta de filtro. En este paso, los hogares cuyo valor imputado de filtro es cero automáticamente tendrá un cero imputado como la cantidad de dinero gastado en ese artículo. Es decir, si el resultado de la imputación en el filtro es cero, esto implica directamente que el hogar no compró (o produjo) el artículo en el periodo de referencia, y por tanto la frecuencia de compra, la cantidad que registros comprados y la cantidad de dinero gastado en ese artículo debe ser cero. Las unidades restantes deben tener un valor observado o imputado de uno en el filtro, y por lo tanto los valores faltantes del gasto deben ser imputados.</p>
 <p>Observe que el grupo de donantes está restringido a los que tienen un valor de gasto distinto de cero en el artículo específico. Es decir, para aquellas unidades con un valor de filtro distinto de cero, un donante debe ser identificado. Para la imputación del gasto, la técnica del vecino más cercano con el método de regresión puede considerarse en el mismo sentido que fue implementado en la imputación de los ingresos. Por lo tanto, se considera un modelo lineal en donde las covariables incluidas en la matriz <span class="math inline">\(\mathbf{x}\)</span> son la composición del hogar, el estado de ocupación y fuerza de trabajo, la calidad de la vivienda, la ubicación del hogar y los ingresos.</p>
-<p>Volviendo a los ejemplos anteriores, la figura <a href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html#fig:fig13">14.7</a> muestra la distribución de los gastos imputados en consumo de salmón. Se nota que la cantidad de dinero gastado en este artículo es baja y que la relación entre los valores pronosticados del modelo y los valores imputados es fuertemente lineal.</p>
+<p>Volviendo a los ejemplos anteriores, la figura <a href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html#fig:fig13">14.4</a> muestra la distribución de los gastos imputados en consumo de salmón. Se nota que la cantidad de dinero gastado en este artículo es baja y que la relación entre los valores pronosticados del modelo y los valores imputados es fuertemente lineal.</p>
 <div class="figure"><span style="display:block;" id="fig:fig13"></span>
 <img src="Pics/13.png" alt="Distribución de los gastos imputados sobre el salmón (izquierda) y relación entre los valores predichos e imputados para los hogares con valores faltantes en el gasto (derecha)." width="50%" />
 <p class="caption">
-Figura 14.7: Distribución de los gastos imputados sobre el salmón (izquierda) y relación entre los valores predichos e imputados para los hogares con valores faltantes en el gasto (derecha).
+Figura 14.4: Distribución de los gastos imputados sobre el salmón (izquierda) y relación entre los valores predichos e imputados para los hogares con valores faltantes en el gasto (derecha).
 </p>
 </div>
-
 </div>
 </div>
-<!-- </div> -->
 <h3>Referencias<a href="referencias.html#referencias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Hayes_Watson_2009" class="csl-entry">
@@ -582,8 +567,8 @@ Sun, Claire. 2010. <span>«HILDA Expenditure imputation»</span>. <em>Working pa
           </div>
         </div>
       </div>
-<a href="consideraciones-sobre-la-imputación-múltiple.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="detección-de-datos-atípicos.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="modelos-para-la-imputación.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="consideraciones-sobre-la-imputación-múltiple.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

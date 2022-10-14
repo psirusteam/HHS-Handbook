@@ -83,7 +83,7 @@ $$
 
 Nótese que se esperaría que esta variable de resumen, al estar definida como una medida de bienestar sobre las UPM, tuviera un comportamiento sesgado, tal como se puede observar en la figura \@ref(fig:MedRes). Por ende, si esta característica es altamente sesgada, puede ser recomendable crear un estrato de inclusión forzosa con estas unidades. Esta práctica asegura que el error de muestreo para este estrato sea nulo. A continuación se enumeran algunas técnicas de estratificación comúnmente utilizadas en la práctica estadística. 
 
-![(\#fig:MedRes)*Histograma de la medida de resumen (y) sobre las UPM*](05Estratificar_files/figure-latex/MedRes-1.pdf) 
+![(\#fig:MedRes)*Histograma de la medida de resumen (y) sobre las UPM*](05Estratificar_files/figure-docx/MedRes-1.png)
 
 
 
@@ -238,9 +238,7 @@ Table: *Matriz de coincidencias, cuyas entradas están definidas como el porcent
 
 Por último, también se debe evaluar la coherencia de la distribución de las diferentes variables agregadas a nivel de UPM en los estratos. Por ejemplo, la proporción de personas mayores de 15 años alfabetizadas debería tener mayor incidencia en los estratos más altos, y este patrón también se debería observar para diferentes indicadores como la proporción de hogares con internet, la proporción de tenencia de refrigerador, la proporción de tenencia de televisión por cable, la proporción de tenencia de automóvil, la proporción de hogares con saneamiento adecuado, la proporción de hogares con pisos adecuados, la proporción de personas con educación superior, entre otras. La figura \@ref(fig:estrata) muestra el comportamiento esperado en los estratos de muestreo para algunas variables de interés. De esta forma, el estrato uno debería presentar condiciones económicas más adversas, el estrato dos debería tener mejores condiciones, siendo el tercer estrato el que agrupa a las UPM con menores dificultades socioeconómicas. En el área rural debiesen aparecer una menor proporción de UPM en el estrato 3, dadas las condiciones menos favorables. 
 
-\begin{figure}
-\includegraphics[width=800px]{Pics/Estratificar} \caption{Comportamiento esperado en los estratos de muestreo para algunas variables de interés.}(\#fig:estrata)
-\end{figure}
+![(\#fig:estrata)Comportamiento esperado en los estratos de muestreo para algunas variables de interés.](Pics/Estratificar.png){width=800px}
 
 Si la contribución de algunas unidades al total poblacional es no significativa, y además esas unidades son de difícil acceso, es común que en algunos países de la región se opte por redefinir el universo y crear un estrato de exclusión forzosa. En este estrato no se realiza ninguna encuesta y las respectivas estimaciones no tendrán en cuenta a esta población excluida. Por último, como algunos procedimientos de clasificación se basan en la generación de números aleatorios, se recomienda documentar los códigos computacionales que se utilizaron para que los resultados puedan ser replicados, por lo que debe fijar una semilla aleatoria al comienzo del código computacional.
 

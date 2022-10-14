@@ -189,6 +189,8 @@ Por supuesto que es posible plantear otros escenarios a medida que se evalúe el
 |          40|         140|  5.7| 1059|   42366|   148282|
 |          45|         158|  6.3| 1039|   46754|   163640|
 
+Table: Tabla de muestreo para la estimación de proporción de personas pobres en el ejemplo.
+
 
 ### Ejemplo: ingreso promedio por persona  
 
@@ -214,6 +216,7 @@ A continuación se muestran algunos resultados que permiten establecer otros esc
 |          50|         190|  7.6|  662|   33098|   125443|
 |         100|         379| 14.2|  619|   61857|   234439|
 
+Table: Tabla de muestreo para la estimación del ingreso promedio por persona en el ejemplo.
 
 
 ### Ejemplo: tasa de desocupación en adultos mayores 
@@ -239,7 +242,7 @@ En este caso la muestra en los 31617 hogares induce un operativo muy grande que 
 |          50|        11.5|  8.3| 1500|   74983|    17246|
 |         100|        23.0| 16.4| 1472|  147222|    33861|
 
- 
+Table: Tabla de muestreo para la estimación de la tasa de desocupación en adultos mayores.
 
 ## Tamaño de muestra para UPM y hogares
 
@@ -293,6 +296,8 @@ Para este tipo de operativos, en donde los cuestionarios de gasto de los hogares
 |          18|  3.9| 1210|   21787|
 |          20|  4.3| 1185|   23695|
 
+Table: Tabla de muestreo para la estimación del gasto promedio del hogar en el ejemplo.
+
 ### Ejemplo: proporción de hogares sin agua potable  
 
 Suponga que se desea obtener una muestra con un margen de error relativo máximo admisible del 10% sobre la variable de interés (necesidades básicas insatisfechas en agua) y el parámetro de interés es el porcentaje de hogares con esta carencia. En este país, se estima que la proporción de hogares con esta condición asciende a $P = 7.5$%.  En este ejemplo se supone que la correlación intraclase de la característica de interés con las UPM es de $\rho_y = 0.045$.
@@ -317,7 +322,7 @@ A continuación se muestran algunos resultados que permiten establecer otros esc
 |          40|  2.3|  194|    7757|
 |          45|  2.5|  185|    8323|
 
- 
+Table: Tabla de muestreo para la estimación de la proporción de hogares sin agua potable en el ejemplo.
 
 ## Tamaño de muestra para UPM y personas
 
@@ -359,6 +364,7 @@ A continuación se muestran algunos resultados que permiten establecer otros esc
 |         100|            46|  2.7|  899|      41360|    89913|
 |         125|            58|  3.1|  835|      48023|   104398|
 
+Table: Tabla de muestreo para la estimación del ingreso promedio en personas empleadas en el ejemplo.
 
 ### Ejemplo: proporción de personas analfabetas pobres  
 
@@ -381,6 +387,7 @@ Es posible plantear otros escenarios a medida que se evalúe el efecto que conll
 |         100|          14.0|  1.6|  327|       4574|    32671|
 |         125|          17.5|  1.7|  287|       5029|    35921|
 
+Table: Tabla de muestreo para la estimación de la proporción de personas analfabetas pobres en el ejemplo.
 
 ## Tamaño de muestra para otros parámetros de interés
 
@@ -587,7 +594,7 @@ A continuación se proporciona varios ejemplos que tipifican algunos escenarios 
 
 1. Primer escenario: si la tasa de desempleo es baja, digamos ${P}=0.05$ y el margen de error se fija en $ME = 0.0025$, entonces el intervalo de confianza esperado sería $IC=0.05\pm0.0025=(0.0475,0.0525)$. En este caso el tamaño de muestra requerido es de alrededor de 55169.
 
-2. Segundoescenario: si la tasa de desempleo es alta, digamos  ${P}=0.2$, y el margen de error de error se fija en $ME = 0.01$, entonces el intervalo de confianza sería $IC=0.2\pm0.01=(0.19,0.21)$, y el tamaño de muestra requerido es 12144.
+2. Segundo escenario: si la tasa de desempleo es alta, digamos  ${P}=0.2$, y el margen de error de error se fija en $ME = 0.01$, entonces el intervalo de confianza sería $IC=0.2\pm0.01=(0.19,0.21)$, y el tamaño de muestra requerido es 12144.
 
 Nótese que ambos escenarios dan lugar al mismo margen de error relativo ($MER$), definido como $MER=\frac{ME}{{P}}$. En efecto, para el primero, tenemos $MER=(0.0025/0.05)\times 100\%=5\%$, y para el segundo, tenemos  $MER=(0.01/0.2)\times 100\%=5\%$. Por lo tanto, incluso para el mismo margen de error relativo, el tamaño de la muestra debe ser mayor si el fenómeno que nos interesa tiene una baja incidencia en la población finita. De hecho, es posible definir una función de información para saber si el tamaño de su muestra es suficiente para cumplir con los requisitos de calidad para una proporción determinada. Esto es útil porque no se sabe exactamente qué valor tomará la proporción. Además, si la encuesta de hogares intenta estimar otras proporciones (como en una encuesta multipropósito), se encontrará rápidamente si su tamaño de muestra actual es adecuado para todo el estudio.
 
@@ -608,7 +615,7 @@ Ahora dirigimos nuestra atención a los cambios netos en la tasa de desempleo du
 
 5. Quinto escenario: si no esperamos cambios significativos entre ambos períodos, y las tasas de desempleo son altas, por ejemplo $\Delta \approx |0.22-0.20|=0.02$, y el margen de error se fija en $ME = 0.001$, entonces el intervalo de confianza sería $IC=0.02 \pm 0.001=(0.019,0.021)$, y el tamaño de muestra requerido estaría alrededor de 96224.
 
-6. Sextoescenario: si no esperamos cambios significativos entre períodos, y las tasas de desempleo son bajas, por ejemplo $\Delta \approx |0.05-0.03| =0.02$, y el margen de error se fija en $ME = 0.001$, entonces el intervalo de confianza sería $IC=0.02\pm0.001=(0.019,0.021)$, y el tamaño de muestra requerido debería ser de 59536.
+6. Sexto escenario: si no esperamos cambios significativos entre períodos, y las tasas de desempleo son bajas, por ejemplo $\Delta \approx |0.05-0.03| =0.02$, y el margen de error se fija en $ME = 0.001$, entonces el intervalo de confianza sería $IC=0.02\pm0.001=(0.019,0.021)$, y el tamaño de muestra requerido debería ser de 59536.
 
 7. Séptimo escenario: si esperamos cambios significativos entre períodos, y las tasas de desempleo difierenpor ejemplo $\Delta \approx|0.05-0.20|=0.15$ y el margen de error se fija en $ME = 0.0075$, entonces el intervalo de confianza sería $IC=0.15\pm0.0075=(0.1425,0.1575)$, y el tamaño de muestra requerido estaría alrededor de 22083.
 
@@ -654,7 +661,7 @@ $$
 En donde $W_h=N_h/N$, e $I \geq 0$ es el índice de asignación de Kish, que denota la importancia relativa entre las estimaciones nacionales y las de cada estrato. A medida que este índice se hace más pequeño, menor importancia se le dará a las estimaciones nacionales. La asignación de Kish proporciona un balance entre la asignación unifome y la proporcional. Cuando $I=0$, se reduce a la asignación uniforme, mientras que si $I \rightarrow \infty$ tiende a un enfoque de asignación proporcional. Usualmente se utiliza $I = 1$ para garantizar que la precisión de las características de interés en lo nacional y en los estratos sea aproximadamente la misma. 
 
 
-### Ajustes de subcobertura   
+### Ajustes por subcobertura   
 
 Debido a las características propias de las encuestas de hogares, siempre se presentará un fenómeno que puede ser descrito como una realidad: *existirá ausencia de respuesta en las encuestas de hogares*. En estos términos, los institutos nacionales de estadística deben tomar medidas preventivas al momento de adjudicar los tamaños de muestra en cada estrato, puesto que contar con un tamaño efectivo de muestra mucho menor al planeado inicialmente puede conllevar problemas de sesgo y de precisión en las estimaciones de las cifras nacionales o regionales, con las cuales se aborda la política económica y de desarrollo de los países de la región. 
 

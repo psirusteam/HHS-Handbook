@@ -31,7 +31,7 @@ Al considerar el problema de la estimación de los cambios brutos entre dos peri
 | $\vdots$ | $\vdots$ | $\vdots$ | $\ddots$ | $\vdots$ | $\ddots$ | $\vdots$ |
 | G        | $X_{G1}$ | $X_{G2}$ | $\cdots$ | $X_{Gj}$ | $\cdots$ | $X_{GG}$ |
 
-
+Table: Distribución no observable de los flujos brutos en una población.
 
 En donde $X_{ij}$ es el número de unidades en la población finita clasificadas como $i$ en el tiempo $t-1$ y $j$ en el tiempo $t$ ($i,j=1,\ldots, G$). Siguiendo las consideraciones de @Feinberg_Stasny_1983 se asume que los datos son el resultado de un proceso de dos etapas. En la primera etapa (proceso no observable), los individuos son ubicados dentro de las celdas de una matriz $G\times G$ de acuerdo con las probabilidades de una cadena de Markov, con los siguientes parámetros:
 
@@ -55,6 +55,7 @@ Las anteriores relaciones se ilustran en la siguiente tabla, en donde $N_{ij}$ (
 | Inactivo            | $N_{41}$ | $N_{42}$ | $N_{43}$   | $N_{44}$ | $R_4$            |
 | Complemento columna | $C_1$    | $C_2$    | $C_3$      | $C_4$    | $M$              |
 
+Table: Distribución observable de los flujos brutos en la población con ausencia de respuesta en ambos periodos.
 
 En la segunda etapa (proceso observable), cada individuo en la celda $ij$ de la matriz puede ser no respondiente en el tiempo $t-1$ y perder la clasificación por fila, o ser no respondiente en el tiempo $t$ y perder la clasificación columna, o bien, ser no respondiente en ambos tiempos y perder ambas clasificaciones. Por ende, se genera una estructura probabilística con los siguientes parámetros:
 
@@ -84,6 +85,7 @@ Considere que se dispone de información sobre la situación laboral de 41274 pe
 | Inactivo            | 364    | 641      | 388        | 15386    | 382              |
 | Complemento columna | 160    | 65       | 48         | 257      | 83               |
 
+Table: Distribución observada de los flujos brutos en la muestra no ponderada con ausencia de respuesta en ambos periodos.
 
 Como se supone que la muestra proviene de un muestreo complejo sobre la población del país, para utilizar el método de estimación propuesto en esta sección, se necesita primero estimar el tamaño de la población en cada celda de la tabla anterior. Estas estimaciones se dan en la siguiente tabla donde el tamaño de población estimado es 15,597,572.
 
@@ -95,6 +97,7 @@ Como se supone que la muestra proviene de un muestreo complejo sobre la poblaci�
 | Inactivo            | 102,490   | 161,363  | 98,898     | 4,299,066 | 118,393          |
 | Complemento columna | 47,104    | 26,276   | 19,746     | 100,775   | 25,545           |
 
+Table: Distribución poblacional estimada de los flujos brutos ausencia de respuesta en ambos periodos.
 
 La escogencia del mejor modelo se llevó a cabo utilizando la estadística de ajuste $\chi^2$, calculada sobre la distancia entre los valores observados y los valores predichos por el modelo. En estos términos, el mejor modelo fue el C, puesto que minimizaba esta distancia con un valor de $\chi^2 = 0,706$. La distribución nula del estadístico es chi-cuadrado con $G^2-D$ grados de libertad, con $D$ indicando el número de parámetros estimados. Para el conjunto de datos considerado en este documento, la siguiente tabla presenta los valores críticos de la distribución nula y los valores del estadístico de prueba para cada modelo. Se concluye que el modelo más apropiado para el conjunto de datos es el modelo C.
 
@@ -104,6 +107,7 @@ La escogencia del mejor modelo se llevó a cabo utilizando la estadística de aj
 | Valor crítico       | 14.07    | 9.49     | 3.84     | 3.84     |
 | Valor $\chi^2_{RS}$ | 15.6706  | 18.3659  | 0.2418   | 3.9137   |
 
+Table: Ajuste de los cuatros modelos. 
 
 Recuérdese que este modelo considera que la probabilidad inicial de que un individuo sea respondiente en el primer trimestre de 2020 es la misma para todas las clasificaciones contempladas en la encuesta, es decir $\psi(i,j)=\psi$. Sin embargo, las probabilidades de transición entre respondientes y no respondientes dependerán de la clasificación del individuo en el primer trimestre de 2020; es decir $\rho_{MM}(i,j)=\rho_{MM}(i)$ y $\rho_{RR}(i,j)=\rho_{RR}(i)$. Bajo estos supuestos, la siguiente tabla ilustra la estimación poblacional, insesgada con respecto al diseño de muestreo complejo de la encuesta, de los cambios brutos para el nivel de ocupación.
 
@@ -114,6 +118,7 @@ Recuérdese que este modelo considera que la probabilidad inicial de que un indi
 | Desocupado | 79.346 (10.592)     | 72.944 (8.858)   | 230.949 (21.180) | 335.746 (28.023)    |
 | Inactivo   | 143.303 (11.192)    | 227.545 (15.849) | 140.923 (10.550) | 6.014.907 (123.559) |
 
+Table: Distribución poblacional estimada de los flujos brutos para el proceso no observable (sin ausencia de respuesta) en ambos periodos bajo el modelo C. Los errores estándar se muestran en paréntesis.
 
 El modelo C considera que los parámetros de la primera etapa del proceso (no observable) están definidos como las probabilidades de transición de una clasificación a otra en los periodos de observación. Estas estimaciones definen las matrices de transición laboral, que para los periodos estudiados corresponden a las entradas de la siguiente tabla. En particular se resalta el hecho de que el 12,1% de los trabajadores formales pasaron directamente a la inactividad; mientras que el cambio fue mayor en los trabajadores informales y en los desocupados, de los cuales el 41,3% y el 46,6% pasaron a la inactividad, respectivamente. Además, en los periodos estudiados, el 92,1% de los individuos inactivos siguió en este estado.
 
@@ -124,6 +129,7 @@ El modelo C considera que los parámetros de la primera etapa del proceso (no ob
 | Desocupado | 0.110 (0.012) | 0.101 (0.010) | 0.321 (0.021) | 0.466 (0.025) |
 | Inactivo   | 0.021 (0.001) | 0.034 (0.002) | 0.021 (0.001) | 0.921 (0.010) |
 
+Table: Estimación de las matrices de transición laboral en ambos periodos bajo el modelo C. Los errores estándar se muestran en paréntesis.
 
 Por otro lado, las probabilidades iniciales de clasificación en el primer periodo de interés se encuentran en la siguiente tabla, en la que también se observan las probabilidades de transición de los no respondientes y las probabilidades de transición de los respondientes, diferenciadas por condición de ocupación en el primer trimestre de 2020. Nótese que la probabilidad inicial de respuesta se estimó en $\hat{\psi}=0.981 (0.002)$ para todas las clasificaciones de la condición de ocupación. Se puede notar que, dado que $1-\hat{\rho}_{MM}$ indica la probabilidad de que un individuo responda en el segundo trimestre de 2020 dado que no respondió en el primer trimestre de 2020, condicionado a cada condición de ocupación, entonces las personas informales e inactivas son más propensos a no responder en ambos periodos, por lo que habría indicios de un patrón de ausencia de respuesta no ignorable que el modelo ha logrado identificar correctamente.
 
@@ -134,6 +140,7 @@ Por otro lado, las probabilidades iniciales de clasificación en el primer perio
 | Desocupado       | 0.046 (0.002) | 0.949 (0.008)     | 0.000 (0.188)     |
 | Inactivo         | 0.418 (0.004) | 0.975 (0.002)     | 0.017 (0.086)     |
 
+Table: Estimación de los demás parámetros del modelo C. Los errores estándar se muestran en paréntesis.
 
 Por último, sería deseable establecer si hay diferencias importantes en el impacto que la pandemia causó en el mercado laboral entre hombre y mujeres. Para realizar estas comparaciones se ajustó el modelo C en cada una de las subpoblaciones, encontrando ajustes precisos y satisfactorios con $\chi^2_{hombres} = 0,350$ y $\chi^2_{hombres} = 0,470$. La estimación de la probabilidad inicial de respuesta en ambos casos se calculó en $\hat{\psi}=0.981 (0.002)$, y las estimaciones de las probabilidades $\hat{\eta}$ y $\hat{\rho}_{RR}$ no tuvieron cambios significativos entre los grupos. Sin embargo, la estimación de las probabilidades $\hat{\rho}_{MM}$ mostró diferencias entre hombres y mujeres que fueron clasificados como trabajadores formales y inactivos en el primer trimestre del 2020. En particular, para el grupo de trabajadores formales, $\hat{\rho}_{MM}^{hombre} = 0,253$, mientras que $\hat{\rho}_{MM}^{mujer} = 0,331$, lo cual indica que las mujeres formales eran más propensas a no responder en el segundo trimestre de 2020, comparadas con los hombres. Por otro lado, para el grupo de inactivos, $\hat{\rho}_{MM}^{hombre} = 0,112$, mientras que $\hat{\rho}_{MM}^{mujer} = 0,000$, lo cual indica que las mujeres desocupadas definitivamente tuvieron una menor probabilidad a no responder en el segundo trimestre de 2020 que los hombres.
 
@@ -146,7 +153,7 @@ La estimación de las matrices de transición para ambos subgrupos poblacionales
 | Desocupado | 0.146 (0.025) | 0.118 (0.017) | 0.343 (0.031) | 0.392 (0.037) |
 | Inactivo   | 0.031 (0.004) | 0.036 (0.003) | 0.030 (0.003) | 0.902 (0.021) |
 
-
+Table: Estimación de las matrices de transición laboral para los hombres bajo el modelo C. Los errores estándar se muestran en paréntesis.
 
 |$p_{ij}$ (Mujeres)     | Formal        | Informal      | Desocupado    | Inactivo      |
 |------------|---------------|---------------|---------------|---------------|
@@ -155,3 +162,4 @@ La estimación de las matrices de transición para ambos subgrupos poblacionales
 | Desocupado | 0.078 (0.012) | 0.086 (0.012) | 0.301 (0.028) | 0.534 (0.036) |
 | Inactivo   | 0.017 (0.001) | 0.034 (0.002) | 0.017 (0.001) | 0.931 (0.013) |
 
+Table: Estimación de las matrices de transición laboral para las mujeres bajo el modelo C. Los errores estándar se muestran en paréntesis.

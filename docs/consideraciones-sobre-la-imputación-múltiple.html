@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>14.2 Consideraciones sobre la imputación múltiple | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
+  <title>14.3 Consideraciones sobre la imputación múltiple | Diseño y análisis estadístico en las encuestas de hogares de América Latina</title>
   <meta name="description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="14.2 Consideraciones sobre la imputación múltiple | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
+  <meta property="og:title" content="14.3 Consideraciones sobre la imputación múltiple | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   <meta name="github-repo" content="psirusteam/HHS-Handbook" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="14.2 Consideraciones sobre la imputación múltiple | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
+  <meta name="twitter:title" content="14.3 Consideraciones sobre la imputación múltiple | Diseño y análisis estadístico en las encuestas de hogares de América Latina" />
   
   <meta name="twitter:description" content="Este es el repositorio del libro Diseño y análisis estadístico en las encuestas de hogares de América Latina." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="modelos-para-la-imputación.html"/>
-<link rel="next" href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html"/>
+<link rel="prev" href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html"/>
+<link rel="next" href="detección-de-datos-atípicos.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -99,10 +99,12 @@ div.csl-indent {
 <li class="chapter" data-level="1" data-path="introducción.html"><a href="introducción.html"><i class="fa fa-check"></i><b>1</b> Introducción</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="qué-es-una-encuesta.html"><a href="qué-es-una-encuesta.html"><i class="fa fa-check"></i><b>1.1</b> ¿Qué es una encuesta?</a></li>
-<li class="chapter" data-level="1.2" data-path="objetivos-de-desarrollo-sostenible-y-otros-indicadores-regionales.html"><a href="objetivos-de-desarrollo-sostenible-y-otros-indicadores-regionales.html"><i class="fa fa-check"></i><b>1.2</b> Objetivos de Desarrollo Sostenible y otros indicadores regionales</a></li>
-<li class="chapter" data-level="1.3" data-path="estadísticas-del-mercado-de-trabajo.html"><a href="estadísticas-del-mercado-de-trabajo.html"><i class="fa fa-check"></i><b>1.3</b> Estadísticas del mercado de trabajo</a></li>
-<li class="chapter" data-level="1.4" data-path="ingresos-y-gastos.html"><a href="ingresos-y-gastos.html"><i class="fa fa-check"></i><b>1.4</b> Ingresos y gastos</a></li>
-<li class="chapter" data-level="1.5" data-path="algunos-desafios-de-las-región-en-cuanto-a-la-producción-de-las-encuestas-de-hogares.html"><a href="algunos-desafios-de-las-región-en-cuanto-a-la-producción-de-las-encuestas-de-hogares.html"><i class="fa fa-check"></i><b>1.5</b> Algunos desafios de las región en cuanto a la producción de las encuestas de hogares</a></li>
+<li class="chapter" data-level="1.2" data-path="objetivos-de-desarrollo-sostenible-y-otros-indicadores-regionales.html"><a href="objetivos-de-desarrollo-sostenible-y-otros-indicadores-regionales.html"><i class="fa fa-check"></i><b>1.2</b> Objetivos de Desarrollo Sostenible y otros indicadores regionales</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="objetivos-de-desarrollo-sostenible-y-otros-indicadores-regionales.html"><a href="objetivos-de-desarrollo-sostenible-y-otros-indicadores-regionales.html#estadísticas-del-mercado-de-trabajo"><i class="fa fa-check"></i><b>1.2.1</b> Estadísticas del mercado de trabajo</a></li>
+<li class="chapter" data-level="1.2.2" data-path="objetivos-de-desarrollo-sostenible-y-otros-indicadores-regionales.html"><a href="objetivos-de-desarrollo-sostenible-y-otros-indicadores-regionales.html#ingresos-y-gastos"><i class="fa fa-check"></i><b>1.2.2</b> Ingresos y gastos</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="algunos-desafios-de-las-región-en-cuanto-a-la-producción-de-las-encuestas-de-hogares.html"><a href="algunos-desafios-de-las-región-en-cuanto-a-la-producción-de-las-encuestas-de-hogares.html"><i class="fa fa-check"></i><b>1.3</b> Algunos desafios de las región en cuanto a la producción de las encuestas de hogares</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="el-paradigma-del-error-total.html"><a href="el-paradigma-del-error-total.html"><i class="fa fa-check"></i><b>2</b> El paradigma del error total</a>
 <ul>
@@ -146,7 +148,6 @@ div.csl-indent {
 <li class="chapter" data-level="4.1" data-path="conceptos-fundamentales.html"><a href="conceptos-fundamentales.html"><i class="fa fa-check"></i><b>4.1</b> Conceptos fundamentales</a></li>
 <li class="chapter" data-level="4.2" data-path="los-censos-y-su-incidencia-en-los-marcos-de-muestreo.html"><a href="los-censos-y-su-incidencia-en-los-marcos-de-muestreo.html"><i class="fa fa-check"></i><b>4.2</b> Los censos y su incidencia en los marcos de muestreo</a></li>
 <li class="chapter" data-level="4.3" data-path="construcción-de-las-upm.html"><a href="construcción-de-las-upm.html"><i class="fa fa-check"></i><b>4.3</b> Construcción de las UPM</a></li>
-<li class="chapter" data-level="4.4" data-path="actualización-continua-del-marco-de-muestreo.html"><a href="actualización-continua-del-marco-de-muestreo.html"><i class="fa fa-check"></i><b>4.4</b> Actualización continua del marco de muestreo</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="metodologías-de-estratificación.html"><a href="metodologías-de-estratificación.html"><i class="fa fa-check"></i><b>5</b> Metodologías de estratificación</a>
 <ul>
@@ -234,7 +235,7 @@ div.csl-indent {
 <li class="chapter" data-level="8.9" data-path="algunas-consideraciones-adicionales-sobre-el-tamaño-de-muestra.html"><a href="algunas-consideraciones-adicionales-sobre-el-tamaño-de-muestra.html"><i class="fa fa-check"></i><b>8.9</b> Algunas consideraciones adicionales sobre el tamaño de muestra</a>
 <ul>
 <li class="chapter" data-level="8.9.1" data-path="algunas-consideraciones-adicionales-sobre-el-tamaño-de-muestra.html"><a href="algunas-consideraciones-adicionales-sobre-el-tamaño-de-muestra.html#asignación-del-tamaño-de-muestra-en-los-estratos-de-muestreo"><i class="fa fa-check"></i><b>8.9.1</b> Asignación del tamaño de muestra en los estratos de muestreo</a></li>
-<li class="chapter" data-level="8.9.2" data-path="algunas-consideraciones-adicionales-sobre-el-tamaño-de-muestra.html"><a href="algunas-consideraciones-adicionales-sobre-el-tamaño-de-muestra.html#ajustes-de-subcobertura"><i class="fa fa-check"></i><b>8.9.2</b> Ajustes de subcobertura</a></li>
+<li class="chapter" data-level="8.9.2" data-path="algunas-consideraciones-adicionales-sobre-el-tamaño-de-muestra.html"><a href="algunas-consideraciones-adicionales-sobre-el-tamaño-de-muestra.html#ajustes-por-subcobertura"><i class="fa fa-check"></i><b>8.9.2</b> Ajustes por subcobertura</a></li>
 <li class="chapter" data-level="8.9.3" data-path="algunas-consideraciones-adicionales-sobre-el-tamaño-de-muestra.html"><a href="algunas-consideraciones-adicionales-sobre-el-tamaño-de-muestra.html#sustituciones-y-reemplazos"><i class="fa fa-check"></i><b>8.9.3</b> Sustituciones y reemplazos</a></li>
 </ul></li>
 </ul></li>
@@ -295,30 +296,16 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="12" data-path="representatividad-y-ausencia-de-respuesta.html"><a href="representatividad-y-ausencia-de-respuesta.html"><i class="fa fa-check"></i><b>12</b> Representatividad y ausencia de respuesta</a>
 <ul>
-<li class="chapter" data-level="12.1" data-path="el-concepto-de-representatividad.html"><a href="el-concepto-de-representatividad.html"><i class="fa fa-check"></i><b>12.1</b> El concepto de representatividad</a>
-<ul>
-<li class="chapter" data-level="12.1.1" data-path="el-concepto-de-representatividad.html"><a href="el-concepto-de-representatividad.html#representatividad-fuerte"><i class="fa fa-check"></i><b>12.1.1</b> Representatividad fuerte</a></li>
-<li class="chapter" data-level="12.1.2" data-path="el-concepto-de-representatividad.html"><a href="el-concepto-de-representatividad.html#representatividad-débil"><i class="fa fa-check"></i><b>12.1.2</b> Representatividad débil</a></li>
-</ul></li>
-<li class="chapter" data-level="12.2" data-path="indicadores-de-representatividad.html"><a href="indicadores-de-representatividad.html"><i class="fa fa-check"></i><b>12.2</b> Indicadores de representatividad</a>
-<ul>
-<li class="chapter" data-level="12.2.1" data-path="indicadores-de-representatividad.html"><a href="indicadores-de-representatividad.html#indicadores-r"><i class="fa fa-check"></i><b>12.2.1</b> Indicadores <span class="math inline">\(R\)</span></a></li>
-<li class="chapter" data-level="12.2.2" data-path="indicadores-de-representatividad.html"><a href="indicadores-de-representatividad.html#el-indicador-r-en-la-práctica"><i class="fa fa-check"></i><b>12.2.2</b> El indicador <span class="math inline">\(R\)</span> en la práctica</a></li>
-</ul></li>
-<li class="chapter" data-level="12.3" data-path="clasificación-de-la-ausencia-de-respuesta.html"><a href="clasificación-de-la-ausencia-de-respuesta.html"><i class="fa fa-check"></i><b>12.3</b> Clasificación de la ausencia de respuesta</a>
-<ul>
-<li class="chapter" data-level="12.3.1" data-path="clasificación-de-la-ausencia-de-respuesta.html"><a href="clasificación-de-la-ausencia-de-respuesta.html#mcar"><i class="fa fa-check"></i><b>12.3.1</b> MCAR</a></li>
-<li class="chapter" data-level="12.3.2" data-path="clasificación-de-la-ausencia-de-respuesta.html"><a href="clasificación-de-la-ausencia-de-respuesta.html#mar"><i class="fa fa-check"></i><b>12.3.2</b> MAR</a></li>
-<li class="chapter" data-level="12.3.3" data-path="clasificación-de-la-ausencia-de-respuesta.html"><a href="clasificación-de-la-ausencia-de-respuesta.html#nmar"><i class="fa fa-check"></i><b>12.3.3</b> NMAR</a></li>
-</ul></li>
+<li class="chapter" data-level="12.1" data-path="el-concepto-de-representatividad.html"><a href="el-concepto-de-representatividad.html"><i class="fa fa-check"></i><b>12.1</b> El concepto de representatividad</a></li>
+<li class="chapter" data-level="12.2" data-path="indicadores-de-representatividad.html"><a href="indicadores-de-representatividad.html"><i class="fa fa-check"></i><b>12.2</b> Indicadores de representatividad</a></li>
+<li class="chapter" data-level="12.3" data-path="clasificación-de-la-ausencia-de-respuesta.html"><a href="clasificación-de-la-ausencia-de-respuesta.html"><i class="fa fa-check"></i><b>12.3</b> Clasificación de la ausencia de respuesta</a></li>
 <li class="chapter" data-level="12.4" data-path="ausencia-de-respuesta-de-registro-y-de-unidad.html"><a href="ausencia-de-respuesta-de-registro-y-de-unidad.html"><i class="fa fa-check"></i><b>12.4</b> Ausencia de respuesta de registro y de unidad</a></li>
-<li class="chapter" data-level="12.5" data-path="efectos-y-consecuencias-de-la-ausencia-de-respuesta.html"><a href="efectos-y-consecuencias-de-la-ausencia-de-respuesta.html"><i class="fa fa-check"></i><b>12.5</b> Efectos y consecuencias de la ausencia de respuesta</a></li>
-<li class="chapter" data-level="12.6" data-path="posibles-soluciones.html"><a href="posibles-soluciones.html"><i class="fa fa-check"></i><b>12.6</b> Posibles soluciones</a>
+<li class="chapter" data-level="12.5" data-path="posibles-soluciones.html"><a href="posibles-soluciones.html"><i class="fa fa-check"></i><b>12.5</b> Posibles soluciones</a>
 <ul>
-<li class="chapter" data-level="12.6.1" data-path="posibles-soluciones.html"><a href="posibles-soluciones.html#imputación-total"><i class="fa fa-check"></i><b>12.6.1</b> Imputación total</a></li>
-<li class="chapter" data-level="12.6.2" data-path="posibles-soluciones.html"><a href="posibles-soluciones.html#ponderación-total"><i class="fa fa-check"></i><b>12.6.2</b> Ponderación total</a></li>
-<li class="chapter" data-level="12.6.3" data-path="posibles-soluciones.html"><a href="posibles-soluciones.html#eliminación-total"><i class="fa fa-check"></i><b>12.6.3</b> Eliminación total</a></li>
-<li class="chapter" data-level="12.6.4" data-path="posibles-soluciones.html"><a href="posibles-soluciones.html#enfoque-combinado"><i class="fa fa-check"></i><b>12.6.4</b> Enfoque combinado</a></li>
+<li class="chapter" data-level="12.5.1" data-path="posibles-soluciones.html"><a href="posibles-soluciones.html#imputación-total"><i class="fa fa-check"></i><b>12.5.1</b> Imputación total</a></li>
+<li class="chapter" data-level="12.5.2" data-path="posibles-soluciones.html"><a href="posibles-soluciones.html#ponderación-total"><i class="fa fa-check"></i><b>12.5.2</b> Ponderación total</a></li>
+<li class="chapter" data-level="12.5.3" data-path="posibles-soluciones.html"><a href="posibles-soluciones.html#eliminación-total"><i class="fa fa-check"></i><b>12.5.3</b> Eliminación total</a></li>
+<li class="chapter" data-level="12.5.4" data-path="posibles-soluciones.html"><a href="posibles-soluciones.html#enfoque-combinado"><i class="fa fa-check"></i><b>12.5.4</b> Enfoque combinado</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="ausencia-de-respuesta-de-unidad.html"><a href="ausencia-de-respuesta-de-unidad.html"><i class="fa fa-check"></i><b>13</b> Ausencia de respuesta de unidad</a>
@@ -345,15 +332,15 @@ div.csl-indent {
 <li class="chapter" data-level="14.1.5" data-path="modelos-para-la-imputación.html"><a href="modelos-para-la-imputación.html#imputación-por-paquete-caliente-hot-deck"><i class="fa fa-check"></i><b>14.1.5</b> Imputación por paquete caliente (Hot-Deck)</a></li>
 <li class="chapter" data-level="14.1.6" data-path="modelos-para-la-imputación.html"><a href="modelos-para-la-imputación.html#imputación-múltiple"><i class="fa fa-check"></i><b>14.1.6</b> Imputación múltiple</a></li>
 </ul></li>
-<li class="chapter" data-level="14.2" data-path="consideraciones-sobre-la-imputación-múltiple.html"><a href="consideraciones-sobre-la-imputación-múltiple.html"><i class="fa fa-check"></i><b>14.2</b> Consideraciones sobre la imputación múltiple</a>
+<li class="chapter" data-level="14.2" data-path="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html"><a href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html"><i class="fa fa-check"></i><b>14.2</b> Ejemplo de imputación en una encuesta de ingresos y gastos</a>
 <ul>
-<li class="chapter" data-level="14.2.1" data-path="consideraciones-sobre-la-imputación-múltiple.html"><a href="consideraciones-sobre-la-imputación-múltiple.html#simulación-empírica"><i class="fa fa-check"></i><b>14.2.1</b> Simulación empírica</a></li>
+<li class="chapter" data-level="14.2.1" data-path="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html"><a href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html#imputación-del-ingreso"><i class="fa fa-check"></i><b>14.2.1</b> Imputación del ingreso</a></li>
+<li class="chapter" data-level="14.2.2" data-path="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html"><a href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html#imputación-del-filtro"><i class="fa fa-check"></i><b>14.2.2</b> Imputación del filtro</a></li>
+<li class="chapter" data-level="14.2.3" data-path="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html"><a href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html#imputación-del-gasto"><i class="fa fa-check"></i><b>14.2.3</b> Imputación del gasto</a></li>
 </ul></li>
-<li class="chapter" data-level="14.3" data-path="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html"><a href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html"><i class="fa fa-check"></i><b>14.3</b> Ejemplo de imputación en una encuesta de ingresos y gastos</a>
+<li class="chapter" data-level="14.3" data-path="consideraciones-sobre-la-imputación-múltiple.html"><a href="consideraciones-sobre-la-imputación-múltiple.html"><i class="fa fa-check"></i><b>14.3</b> Consideraciones sobre la imputación múltiple</a>
 <ul>
-<li class="chapter" data-level="14.3.1" data-path="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html"><a href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html#imputación-del-ingreso"><i class="fa fa-check"></i><b>14.3.1</b> Imputación del ingreso</a></li>
-<li class="chapter" data-level="14.3.2" data-path="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html"><a href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html#imputación-del-filtro"><i class="fa fa-check"></i><b>14.3.2</b> Imputación del filtro</a></li>
-<li class="chapter" data-level="14.3.3" data-path="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html"><a href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html#imputación-del-gasto"><i class="fa fa-check"></i><b>14.3.3</b> Imputación del gasto</a></li>
+<li class="chapter" data-level="14.3.1" data-path="consideraciones-sobre-la-imputación-múltiple.html"><a href="consideraciones-sobre-la-imputación-múltiple.html#simulación-empírica"><i class="fa fa-check"></i><b>14.3.1</b> Simulación empírica</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="15" data-path="detección-de-datos-atípicos.html"><a href="detección-de-datos-atípicos.html"><i class="fa fa-check"></i><b>15</b> Detección de datos atípicos</a>
@@ -480,8 +467,8 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="consideraciones-sobre-la-imputación-múltiple" class="section level2 hasAnchor" number="14.2">
-<h2><span class="header-section-number">14.2</span> Consideraciones sobre la imputación múltiple<a href="consideraciones-sobre-la-imputación-múltiple.html#consideraciones-sobre-la-imputación-múltiple" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="consideraciones-sobre-la-imputación-múltiple" class="section level2 hasAnchor" number="14.3">
+<h2><span class="header-section-number">14.3</span> Consideraciones sobre la imputación múltiple<a href="consideraciones-sobre-la-imputación-múltiple.html#consideraciones-sobre-la-imputación-múltiple" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Antes de escoger un método particular, es pertinente observar qué efectos conlleva esta escogencia en las propiedades estadísticas de los estimadores en las encuestas de hogares. En cuanto a la imputación múltiple, las propiedades estadísticas de los estimadores deben ser modificadas acordemente. Subestimar la variación de las estimaciones puede ser un error muy grave, puesto que afecta la cobertura nominal de los intervalos de confianza y a su vez influye en las pruebas de hipótesis y en el cálculo de los valores <span class="math inline">\(p\)</span>.</p>
 <p>Por ejemplo, suponga que existe una muestra aleatoria <span class="math inline">\(s\)</span> compuesta por un conjunto de <span class="math inline">\(n\)</span> datos que relacionan dos variables <span class="math inline">\(X\)</span>, <span class="math inline">\(Y\)</span>, a través del siguiente modelo de regresión simple:</p>
 <p><span class="math display">\[
@@ -549,10 +536,11 @@ q= 1,\ldots, Q.
 + \left(1+\frac{1}{Q}\right)\frac{1}{Q-1}\sum_{q=1}^Q (\hat{F}_{\alpha}^{q}-\tilde{F}_{\alpha})^2
 \]</span></p>
 <p>Una vez que se tienen los conjuntos de datos completos, es posible estimar <span class="math inline">\(\hat{V}(\hat{F}_{\alpha}^{q})\)</span> utilizando las técnicas del último conglomerado en conjunción con el Jackkinfe. La característica principal del proceso imputación es utilizar la información auxiliar para aproximar con precisión los valores faltantes. De esta forma, las estimaciones poblacionales de los parámetros de interés tendrán sesgo nulo o despreciable y la confiabilidad de la estrategia de muestreo se mantendrá como se planeó en una primera instancia. L siguiente simulación ejemplifica las ventajas de la imputación múltiple.</p>
-<div id="simulación-empírica" class="section level3 hasAnchor" number="14.2.1">
-<h3><span class="header-section-number">14.2.1</span> Simulación empírica<a href="consideraciones-sobre-la-imputación-múltiple.html#simulación-empírica" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="simulación-empírica" class="section level3 hasAnchor" number="14.3.1">
+<h3><span class="header-section-number">14.3.1</span> Simulación empírica<a href="consideraciones-sobre-la-imputación-múltiple.html#simulación-empírica" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Para ejemplificar los anteriores escenarios, en esta sección se muestran los resultados empíricos de una simulación que asumió un conjunto de <span class="math inline">\(n = 100\)</span> datos con una pendiente <span class="math inline">\(\beta = 100\)</span> y con una dispersión de <span class="math inline">\(\sigma = 2\)</span>. A su vez, el conjunto de datos tendrá <span class="math inline">\(n_0 = 40\)</span> valores faltantes en la variable respuesta. A continuación se muestran las primeras diez filas de esta base de datos simulados. Nótese que las dos primeras columnas corresponden a los valores verdaderos de la covariable y la variable de interés, respectivamente. La tercera columna identifica cuáles de estos valores son faltantes y la cuarta columna representaría la información disponible en la base de datos de la muestra <span class="math inline">\(s\)</span>.</p>
 <table>
+<caption>Ejemplo de un conjunto de datos con valores faltantes.</caption>
 <thead>
 <tr class="header">
 <th align="center">x</th>
@@ -624,15 +612,16 @@ q= 1,\ldots, Q.
 </tr>
 </tbody>
 </table>
-<p>Con el 40% de valores faltantes, es necesario realizar una imputación para obtener registros completos en la base de datos. Para este ejemplo, la figura <a href="consideraciones-sobre-la-imputación-múltiple.html#fig:figim1">14.1</a> relaciona las variables con (izquierda) y sin (derecha) valores faltantes se presentan a continuación.</p>
+<p>Con el 40% de valores faltantes, es necesario realizar una imputación para obtener registros completos en la base de datos. Para este ejemplo, la figura <a href="consideraciones-sobre-la-imputación-múltiple.html#fig:figim1">14.5</a> relaciona las variables con (izquierda) y sin (derecha) valores faltantes se presentan a continuación.</p>
 <div class="figure"><span style="display:block;" id="fig:figim1"></span>
 <img src="Pics/im1.png" alt="Relación de la variable de interés para los datos completos (izquierda) y con ausencia de valores (derecha)." width="50%" />
 <p class="caption">
-Figura 14.1: Relación de la variable de interés para los datos completos (izquierda) y con ausencia de valores (derecha).
+Figura 14.5: Relación de la variable de interés para los datos completos (izquierda) y con ausencia de valores (derecha).
 </p>
 </div>
 <p>Al aplicar una imputación ingenua, por ejemplo basada en un modelo de regresión simple, se obtendría un conjunto de datos completo, ejemplificado (solo las primeras diez filas de la base) en la siguiente tabla:</p>
 <table>
+<caption>Ejemplo de un conjunto de datos con valores imputados ingenuamente.</caption>
 <thead>
 <tr class="header">
 <th align="center">x</th>
@@ -704,15 +693,16 @@ Figura 14.1: Relación de la variable de interés para los datos completos (izqu
 </tr>
 </tbody>
 </table>
-<p>En general, usar un enfoque simple no afecta la estimación puntual del parámetro de interés, sino la estimación del error estándar, puesto que la variación natural de los datos se subestima dramáticamente. Por ejemplo, la figura <a href="consideraciones-sobre-la-imputación-múltiple.html#fig:figim2">14.2</a> muestra que con la imputación simple, <em>todos</em> los valores faltantes imputados están sobre la línea de regresión.</p>
+<p>En general, usar un enfoque simple no afecta la estimación puntual del parámetro de interés, sino la estimación del error estándar, puesto que la variación natural de los datos se subestima dramáticamente. Por ejemplo, la figura <a href="consideraciones-sobre-la-imputación-múltiple.html#fig:figim2">14.6</a> muestra que con la imputación simple, <em>todos</em> los valores faltantes imputados están sobre la línea de regresión.</p>
 <div class="figure"><span style="display:block;" id="fig:figim2"></span>
 <img src="Pics/im2.png" alt="Relación de la variable de interés con la covariable auxiliar para el enfoque de imputación ingenua." width="50%" />
 <p class="caption">
-Figura 14.2: Relación de la variable de interés con la covariable auxiliar para el enfoque de imputación ingenua.
+Figura 14.6: Relación de la variable de interés con la covariable auxiliar para el enfoque de imputación ingenua.
 </p>
 </div>
 <p>Si se considera la imputación múltiple con el enfoque <em>bootstrap</em>, también se obtedrá un conjunto de datos aumentado por cada una de las <span class="math inline">\(M\)</span> realizaciones que se ejecuten. Por ejemplo, a continuación se ilustra el conjunto de datos obtenido con <span class="math inline">\(M=3\)</span> realizaciones. Nótese que los valores de la variable de interés cambian en cada realización; estas realizaciones se conocen en la literatura como <em>valores plausibles</em>.</p>
 <table>
+<caption>Ejemplo de un conjunto de datos con múltiples (3) valores imputados.</caption>
 <colgroup>
 <col width="6%" />
 <col width="18%" />
@@ -814,11 +804,11 @@ Figura 14.2: Relación de la variable de interés con la covariable auxiliar par
 </tr>
 </tbody>
 </table>
-<p>Existe una buena dispersión en los valores imputados y la gráfica <a href="consideraciones-sobre-la-imputación-múltiple.html#fig:figim3">14.3</a> muestra cómo este enfoque es mucho más realista al considerar la variación natural del fenómeno de interés en los valores imputados.</p>
+<p>Existe una buena dispersión en los valores imputados y la gráfica <a href="consideraciones-sobre-la-imputación-múltiple.html#fig:figim3">14.7</a> muestra cómo este enfoque es mucho más realista al considerar la variación natural del fenómeno de interés en los valores imputados.</p>
 <div class="figure"><span style="display:block;" id="fig:figim3"></span>
 <img src="Pics/im3.png" alt="Relación de la variable de interés con la covariable auxiliar para el enfoque de imputación múltiple Bootstrap" width="50%" />
 <p class="caption">
-Figura 14.3: Relación de la variable de interés con la covariable auxiliar para el enfoque de imputación múltiple Bootstrap
+Figura 14.7: Relación de la variable de interés con la covariable auxiliar para el enfoque de imputación múltiple Bootstrap
 </p>
 </div>
 <p>Por otro lado, bajo distribuciones previas no informativas, es bien sabido que la distribución posterior de <span class="math inline">\(\sigma^2\)</span> es:</p>
@@ -867,8 +857,10 @@ Figura 14.3: Relación de la variable de interés con la covariable auxiliar par
 </tr>
 </tbody>
 </table>
+
 </div>
 </div>
+<!-- </div> -->
 <h3>Referencias<a href="referencias.html#referencias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Rubin_1987" class="csl-entry">
@@ -880,8 +872,8 @@ Rubin, Donald B. 1987. <em>Multiple Imputation for nonresponse in surveys</em>. 
           </div>
         </div>
       </div>
-<a href="modelos-para-la-imputación.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="ejemplo-de-imputación-en-una-encuesta-de-ingresos-y-gastos.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="detección-de-datos-atípicos.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -49,9 +49,9 @@ Como los rediseños de las encuestas son inevitables, es muy recomendable defini
 
 Con base en lo anteriomente mencionado, es necesario tener en cuenta que sin este tipo de experimentos paralelos, será muy difícil medir el verdadero cambio, identificar la fuente de la discontinuidad en la serie y corregir el sesgo generado. Tal como lo afirma @Imbens_Rubin_2015, la aleatorización es la única forma de conseguir que no existan sesgos de selección en los experimentos controlados y es el único supuesto científicamente aceptado para medir este tipo de efectos. Con esta perspectiva en mente, los experimentos controlados deberán seleccionar aleatoriamente las UPM que participarían en ambas recolecciones. Esto no supone una carga adicional para las ONE, garantes de la aleatorización en las encuestas de hogares. 
 
-@Brakel2008 menciona que hay varias posibilidades para llevar a cabo este tipo de experimentos paralelos; por una parte es posible tener dos operaciones estadísticas en campo con el mismo tamaño de muestra, o que la nueva operación tenga un tamaño de muestra menor e inclusive esté restringida a alguna subpoblación de interés. En cualquier caso, son la forma correcta para evitar efectos de confusión. De lo contrario, incluso ante cambios nulos, no se podrá discernir si esto es el resultado de la coyuntura de interés, o del rediseño de la encuesta. La figura \@ref(fig:fig20_1) muestra un ejemplo simulado del resultado esperado de un experimento paralelo. La línea negra representa la serie regular, la linea azul representa la nueva serie con los cambios del rediseño y la distancia entre ambas, representa el impacto del rediseño en cada punto del tiempo. 
+@Brakel2008 menciona que hay varias posibilidades para llevar a cabo este tipo de experimentos paralelos; por una parte es posible tener dos operaciones estadísticas en campo con el mismo tamaño de muestra, o que la nueva operación tenga un tamaño de muestra menor e inclusive esté restringida a alguna subpoblación de interés. En cualquier caso, son la forma correcta para evitar efectos de confusión. De lo contrario, incluso ante cambios nulos, no se podrá discernir si esto es el resultado de la coyuntura de interés, o del rediseño de la encuesta. La figura \@ref(fig:fig201) muestra un ejemplo simulado del resultado esperado de un experimento paralelo. La línea negra representa la serie regular, la linea azul representa la nueva serie con los cambios del rediseño y la distancia entre ambas, representa el impacto del rediseño en cada punto del tiempo. 
 
-```{r, fig20_1, fig.cap= "Series de tiempo para el rediseño de una encuesta. La línea negra representa la serie regular; la línea azul representa la serie nueva. Fuente: elaboración propia.",  echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
+```{r fig201, fig.cap= "Series de tiempo para el rediseño de una encuesta. La línea negra representa la serie regular; la línea azul representa la serie nueva. Fuente: elaboración propia.",  echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
 set.seed(124567)
 n <- 200
 x.r <- arima.sim(n = n, list(order = c(1,1,0), ar = 0.7))/120
@@ -114,9 +114,9 @@ $$
 \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \text{con } t=1,2,\cdots,t_b-1.
 $$
 
-En la Figura \@ref(fig:fig20_2) es posible observar cómo se empalman las series regular y nueva a partir del ajuste proporcional. Nótese que la estructura de la serie se mantiene integralmente. 
+En la Figura \@ref(fig:fig202) es posible observar cómo se empalman las series regular y nueva a partir del ajuste proporcional. Nótese que la estructura de la serie se mantiene integralmente. 
 
-```{r, fig20_2, fig.cap= "Empalme de series de tiempo con el método del factor suavizado. La línea negra corresponde a la serie regular; la línea azul representa la serie nueva; la línea roja denota la serie empalmada. Fuente: elaboración propia.",  echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
+```{r, fig202, fig.cap= "Empalme de series de tiempo con el método del factor suavizado. La línea negra corresponde a la serie regular; la línea azul representa la serie nueva; la línea roja denota la serie empalmada. Fuente: elaboración propia.",  echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
 
 factor <- x.n[t0]/x.n[t0-1] - 1
 x.nadale <- x.n
@@ -149,7 +149,7 @@ $$
 \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \text{con } t=1,2,\cdots,t_b-1.
 $$
 
-@Brakel2008 afirma que con los anteriores métodos la serie empalmada puede ser mayor que uno o menor que cero, lo cual es especialmente contraproducente en el caso de las proporciones y tasas. La Figura \@ref(fig:fig20_3) muestra el empalme de las series usando el ajuste sintético multiplicativo. 
+@Brakel2008 afirma que con los anteriores métodos la serie empalmada puede ser mayor que uno o menor que cero, lo cual es especialmente contraproducente en el caso de las proporciones y tasas. La Figura \@ref(fig:fig203) muestra el empalme de las series usando el ajuste sintético multiplicativo. 
 
 $$
 \hat \theta^{E}_t=\hat \theta^{R}_t + \left(\hat \theta^{N}_{t_b} - \hat \theta^{R}_{t_b}\right) \times \left( \dfrac{\hat \theta^{R}_t(1-\hat \theta^{R}_t)}{\hat \theta^{R}_{t_b}(1-\hat \theta^{R}_{t_b})}\right) 
@@ -158,7 +158,7 @@ $$
 $$
 
 
-```{r, fig20_3, fig.cap= "Empalme de series de tiempo con el ajuste sintético multiplicativo. La línea negra corresponde a la serie regular; la línea azul representa la serie nueva; la línea roja denota la serie empalmada. Fuente: elaboración propia.",  echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
+```{r, fig203, fig.cap= "Empalme de series de tiempo con el ajuste sintético multiplicativo. La línea negra corresponde a la serie regular; la línea azul representa la serie nueva; la línea roja denota la serie empalmada. Fuente: elaboración propia.",  echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
 
 n <- 120
 delta <- x.n[n] - x.r[n]
@@ -299,9 +299,9 @@ suavizado.df$y.adj2 <- suavizado.df$y
 suavizado.df$y.adj2[1:(t0-1)] <- suavizado.df$y[1:(t0-1)] + suavizado.df$beta[1:(t0-1)] *(1:(t0-1))/(t0-1)
 ```
 
-Los resultados de la aplicación del modelo son bastante satisfactorios, puesto que además de extraer la estructura de la serie, el modelo estructural es capaz de estimar correctamente el impacto de la intervención, sin necesidad de tener las dos series en paralelo. La Figura \@ref(fig:fig20_4) muestra el empalme de las series usando este acercamiento. Este tipo de modelos tienen bastantes ventajas metodológicas; por ejemplo, es posible ajustar más de un punto de intervención e incluso es posible incluir intervenciones de todo tipo (efecto en un solo tiempo, el mismo efecto o efecto creciente a partir de un tiempo). También es posible extraer la tendencia para suavizar la serie, la cual puede incluir componentes de estacionalidad o ciclos; además, es posible incluir otras series como covariables (con relaciones cambiantes en el tiempo).  
+Los resultados de la aplicación del modelo son bastante satisfactorios, puesto que además de extraer la estructura de la serie, el modelo estructural es capaz de estimar correctamente el impacto de la intervención, sin necesidad de tener las dos series en paralelo. La Figura \@ref(fig:fig204) muestra el empalme de las series usando este acercamiento. Este tipo de modelos tienen bastantes ventajas metodológicas; por ejemplo, es posible ajustar más de un punto de intervención e incluso es posible incluir intervenciones de todo tipo (efecto en un solo tiempo, el mismo efecto o efecto creciente a partir de un tiempo). También es posible extraer la tendencia para suavizar la serie, la cual puede incluir componentes de estacionalidad o ciclos; además, es posible incluir otras series como covariables (con relaciones cambiantes en el tiempo).  
 
-```{r, fig20_4, fig.cap= "Empalme de series de tiempo usando un modelo estructural. La línea negra corresponde a la serie regular; la línea azul representa la serie nueva; la línea roja denota la serie empalmada. Fuente: elaboración propia.",  echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
+```{r, fig204, fig.cap= "Empalme de series de tiempo usando un modelo estructural. La línea negra corresponde a la serie regular; la línea azul representa la serie nueva; la línea roja denota la serie empalmada. Fuente: elaboración propia.",  echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
 ggplot(suavizado.df) + 
   geom_line(aes(x=t, y=y)) + 
   geom_line(aes(x=t, y=y.adj2), col = "red")  + 
@@ -364,9 +364,9 @@ suavizado.df$y.r.adj2 <- suavizado.df$y.n
 suavizado.df$y.r.adj2[1:(t0-1)] <- suavizado.df$y.r[1:(t0-1)] + suavizado.df$beta[1:(t0-1)] *(1:(t0-1))/(t0-1)
 ```
 
-Al igual que en el modelo estructural univariado, los resultados de la aplicación logran extraer la estructura de la serie y estimar correctamente el impacto de la intervención. La Figura \@ref(fig:fig20_5) muestra el empalme de las series usando este acercamiento. 
+Al igual que en el modelo estructural univariado, los resultados de la aplicación logran extraer la estructura de la serie y estimar correctamente el impacto de la intervención. La Figura \@ref(fig:fig205) muestra el empalme de las series usando este acercamiento. 
 
-```{r, fig20_5, fig.cap= "Empalme de series de tiempo usando un modelo estructural. La línea negra corresponde a la serie regular; la línea azul representa la serie nueva; la línea roja denota la serie empalmada. Fuente: elaboración propia.",  echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
+```{r, fig205, fig.cap= "Empalme de series de tiempo usando un modelo estructural. La línea negra corresponde a la serie regular; la línea azul representa la serie nueva; la línea roja denota la serie empalmada. Fuente: elaboración propia.",  echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
 ggplot(suavizado.df) + 
     geom_line(aes(x=t, y=y.n), col = "blue") + 
   geom_line(aes(x=t, y=y.r)) +
